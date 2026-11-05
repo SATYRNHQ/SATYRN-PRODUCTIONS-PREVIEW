@@ -50,8 +50,9 @@ function showPage(name){
   pages.forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
   document.querySelectorAll('.nav-item[data-page]').forEach(n=>n.classList.toggle('active',n.dataset.page===name));
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
-  crumb.textContent=active?active.textContent.trim():({home:'Overview',settings:'Settings'}[name]||name);
-  sidebar.classList.remove('open');
+  const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
+  crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
+  if(sidebar)sidebar.classList.remove('open');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));

@@ -1442,3 +1442,51 @@ body{background-image:linear-gradient(105deg,rgba(5,10,8,.42),rgba(7,12,9,.24) 5
 @media(prefers-reduced-motion:no-preference){.glass-card,.module-panel,.finance-panel,.feature-tile{transition:background .28s ease,border-color .28s ease,box-shadow .28s ease,transform .28s ease}.glass-card:hover,.module-panel:hover,.finance-panel:hover,.feature-tile:hover{border-color:rgba(224,204,158,.29)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 55px rgba(0,0,0,.2),0 0 24px rgba(201,173,120,.045)}}
 @media(max-width:760px){.sidebar{width:250px;transform:translateX(-100%);background:rgba(7,12,9,.91)}.sidebar.open{width:250px;transform:translateX(0)}.sidebar .brand-copy,.sidebar .workspace-label,.sidebar .nav-item,.sidebar .sidebar-bottom{opacity:1;color:rgba(237,231,215,.9)!important}.main-area{margin-left:0;width:100%;padding-left:18px;padding-right:18px}}
 @media(prefers-reduced-motion:reduce){.background-slide{animation:none;transform:none}.sidebar,.nav-item,.brand-copy,.workspace-label{transition:none!important}}
+
+/* SATYRN three-zone navigation — confirmed N-13 to N-25 */
+.sidebar{display:none!important}
+.app-shell{display:block}
+.main-area{margin:0!important;width:100%!important;max-width:none;padding:104px clamp(64px,7vw,120px) 42px!important}
+.topbar{height:56px}
+.hq-top-nav,.hq-side-nav{position:fixed;z-index:40;display:flex;align-items:center;justify-content:center;gap:clamp(16px,2.2vw,34px);pointer-events:auto}
+.hq-top-nav{top:15px;left:50%;transform:translateX(-50%);padding:5px 17px;border:1px solid rgba(215,197,151,.14);border-radius:5px;background:rgba(10,14,12,.36);backdrop-filter:blur(18px)}
+.hq-side-nav{top:43%;transform:translateY(-50%);flex-direction:column;gap:23px;width:50px}
+.hq-time-nav{left:10px}
+.hq-money-nav{right:10px}
+.edge-nav-item{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:44px;min-height:36px;padding:4px 2px;border:0;border-radius:0;background:transparent!important;color:#b9a879;text-align:center;cursor:pointer;overflow:visible;transition:color .3s ease,filter .3s ease}
+.edge-nav-item .nav-icon{display:grid;place-items:center;width:34px;height:32px;font:600 21px/1 var(--font);color:#c8b98f;text-shadow:0 0 8px rgba(211,190,139,.08);transition:color .3s ease,text-shadow .3s ease}
+.edge-nav-item:hover .nav-icon,.edge-nav-item.active .nav-icon{color:#f0dfb6;text-shadow:0 0 12px rgba(223,198,139,.32)}
+.edge-nav-item:after{content:"";position:absolute;opacity:0;transition:opacity .3s ease;background:linear-gradient(90deg,transparent,#d8c18a,transparent)}
+.hq-top-nav .edge-nav-item:after{height:1px;width:22px;bottom:-4px;left:50%;transform:translateX(-50%)}
+.hq-time-nav .edge-nav-item:after{height:22px;width:1px;right:-6px;top:50%;transform:translateY(-50%)}
+.hq-money-nav .edge-nav-item:after{height:22px;width:1px;left:-6px;top:50%;transform:translateY(-50%)}
+.edge-nav-item:hover:after{opacity:.85}
+.edge-nav-item.active:before{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#ead8ac;box-shadow:0 0 8px rgba(234,216,172,.45)}
+.hq-top-nav .edge-nav-item.active:before{top:-3px}
+.hq-time-nav .edge-nav-item.active:before{left:0;top:50%;transform:translateY(-50%)}
+.hq-money-nav .edge-nav-item.active:before{right:0;top:50%;transform:translateY(-50%)}
+.edge-nav-item .nav-label{position:absolute;opacity:0;visibility:hidden;white-space:nowrap;color:#f0e7d1;font:500 10px var(--font);letter-spacing:.35px;text-shadow:0 0 8px rgba(222,199,151,.2);transition:opacity .3s ease,visibility .3s ease;pointer-events:none}
+.hq-top-nav .nav-label{top:38px;left:50%;transform:translateX(-50%)}
+.hq-time-nav .nav-label{left:42px;top:50%;transform:translateY(-50%)}
+.hq-money-nav .nav-label{right:42px;top:50%;transform:translateY(-50%)}
+.hq-top-nav:hover .nav-label,.hq-side-nav:hover .nav-label,.edge-nav-item:focus-visible .nav-label{opacity:1;visibility:visible}
+.home-palm .nav-icon{font-size:25px}
+.edge-placeholder{min-height:65vh}
+.edge-module-card{max-width:760px;padding:30px;background:rgba(12,17,14,.72);border:1px solid rgba(219,204,163,.2);backdrop-filter:blur(22px);border-radius:6px}
+.edge-module-card h2{font:500 28px var(--display);margin:18px 0 8px}
+.edge-module-card p{font-size:12px;line-height:1.8;color:#aeb5a9;max-width:600px}
+.edge-module-card .edge-status{margin:24px 0;padding:14px;border-left:1px solid var(--gold);background:rgba(255,255,255,.025)}
+@media(max-width:720px){
+ .main-area{padding:92px 18px 35px!important}
+ .hq-top-nav{top:8px;gap:8px;padding:4px 8px;max-width:calc(100vw - 20px)}
+ .edge-nav-item{width:34px}
+ .edge-nav-item .nav-icon{font-size:18px;width:30px}
+ .home-palm .nav-icon{font-size:22px}
+ .hq-side-nav{top:auto;bottom:12px;transform:none;flex-direction:row;gap:4px;width:auto;padding:5px 7px;border:1px solid rgba(215,197,151,.14);border-radius:5px;background:rgba(10,14,12,.7);backdrop-filter:blur(18px)}
+ .hq-time-nav{left:8px;right:auto}
+ .hq-money-nav{right:8px;left:auto}
+ .hq-side-nav .edge-nav-item{width:31px}
+ .hq-side-nav .nav-label{display:none}
+ .topbar{height:45px}
+}
+@media(prefers-reduced-motion:reduce){.edge-nav-item,.edge-nav-item:after,.edge-nav-item .nav-label{transition:none}}
