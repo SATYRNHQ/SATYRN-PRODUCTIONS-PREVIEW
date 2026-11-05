@@ -1663,3 +1663,26 @@ small,
   font-size: 0.95em !important;
   line-height: 1.5 !important;
 }
+
+
+/* Further reduce informational copy by approximately 50 percent */
+p,
+.info-text,
+.description,
+.helper-text,
+.module-description,
+.empty-state p,
+.edge-module-card p,
+.hq-record p,
+.cc-panel p,
+.ares-greeting p {
+  font-size: 0.525em !important;
+  line-height: 1.45 !important;
+}
+small,
+.caption,
+.hq-record small,
+.cc-panel small {
+  font-size: 0.475em !important;
+  line-height: 1.4 !important;
+}
