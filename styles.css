@@ -1640,3 +1640,26 @@ h1,h2,h3,h4,h5,h6,
   font-size: 0.5em !important;
   line-height: 1.2 !important;
 }
+
+
+/* Bring informational copy back to a comfortable reading size */
+p,
+.info-text,
+.description,
+.helper-text,
+.module-description,
+.empty-state p,
+.edge-module-card p,
+.hq-record p,
+.cc-panel p,
+.ares-greeting p {
+  font-size: 1.05em !important;
+  line-height: 1.55 !important;
+}
+small,
+.caption,
+.hq-record small,
+.cc-panel small {
+  font-size: 0.95em !important;
+  line-height: 1.5 !important;
+}
