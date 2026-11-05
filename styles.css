@@ -1585,3 +1585,26 @@ body.cc-welcome-active{overflow:hidden}
 /* Global readability increase — larger typography throughout the HQ */
 body{zoom:1.55}
 @media(max-width:720px){body{zoom:1.22}}
+
+
+/* Readability refinement — informational copy larger than compact metadata */
+p,
+.info-text,
+.description,
+.helper-text,
+.module-description,
+.empty-state p,
+.edge-module-card p,
+.hq-record p,
+.cc-panel p,
+.ares-greeting p {
+  font-size: 1.35em !important;
+  line-height: 1.7 !important;
+}
+small,
+.caption,
+.hq-record small,
+.cc-panel small {
+  font-size: 1.2em !important;
+  line-height: 1.65 !important;
+}
