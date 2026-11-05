@@ -1686,3 +1686,9 @@ small,
   font-size: 0.475em !important;
   line-height: 1.4 !important;
 }
+
+
+/* Global typography scale: reduce all text sizes by approximately 30 percent */
+html {
+  font-size: 70% !important;
+}
