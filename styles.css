@@ -1631,3 +1631,12 @@ small,
   font-size: 2.4em !important;
   line-height: 1.6 !important;
 }
+
+
+/* Heading hierarchy refinement: reduce headings by 50% */
+h1,h2,h3,h4,h5,h6,
+.title,.section-title,.page-title,.card-title,
+.cc-window-top h1,.cc-expanded-head h2 {
+  font-size: 0.5em !important;
+  line-height: 1.2 !important;
+}
