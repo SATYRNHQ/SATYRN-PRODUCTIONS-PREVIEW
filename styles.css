@@ -1580,3 +1580,8 @@ body.cc-welcome-active{overflow:hidden}
 @media(prefers-reduced-motion:reduce){
  .cc-mini-card,.cc-welcome-backdrop,.cc-welcome-window,.cc-expanded-backdrop,.cc-expanded-card,.cc-close{transition:none!important}
 }
+
+
+/* Global readability increase — larger typography throughout the HQ */
+body{zoom:1.55}
+@media(max-width:720px){body{zoom:1.22}}
