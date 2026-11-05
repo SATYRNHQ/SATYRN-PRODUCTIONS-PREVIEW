@@ -87,6 +87,21 @@
             <span class="cc-mini-progress"><i></i></span>
           </button>
         </div>
+  <div class="cc-expanded-backdrop" id="ccExpandedBackdrop" aria-hidden="true"></div>
+  <section class="cc-expanded-card" id="ccExpandedCard" aria-hidden="true" aria-labelledby="ccExpandedTitle">
+    <div class="cc-expanded-head"><div><span class="cc-kicker">SATYRN · EXECUTIVE OVERVIEW</span><h2 id="ccExpandedTitle">Command <em>Center.</em></h2><p>Dein aktueller Überblick – live synchronisiert, sobald Daten gepflegt sind.</p></div><button class="cc-close" id="ccExpandedClose" type="button" aria-label="Command Center schließen">×</button></div>
+    <div class="cc-expanded-primary">
+      <article class="cc-panel cc-panel-feature"><span class="cc-kicker">01 · CURRENT FOCUS</span><h3>HQ Dashboard finalisieren</h3><p>Die Executive-Home-Ansicht abschließen und die neue Command-Center-Interaktion gemeinsam testen.</p><div class="cc-inline-meta"><span>Aktuelle Priorität</span><strong>Design-Review</strong></div><div class="cc-inline-meta"><span>Nächster Meilenstein</span><strong>Preview testen</strong></div></article>
+      <article class="cc-panel cc-panel-feature"><span class="cc-kicker">02 · TODAY'S PROGRESS</span><div class="cc-progress-number">50<span>%</span></div><p>3 von 5 Aufgaben · 1 von 2 Arbeitsblöcken</p><div class="cc-progress-track"><i></i></div><div class="cc-progress-foot"><span>3 / 6 eindeutige Arbeitseinheiten</span><strong>In Bewegung</strong></div><small>Verknüpfte Aufgabe und Arbeitsblock werden nur einmal gezählt.</small></article>
+    </div>
+    <div class="cc-expanded-secondary">
+      <details class="cc-panel cc-panel-compact" data-cc-detail="welcome"><summary><span class="cc-kicker">03 · WELCOME BACK</span><strong>Willkommen zurück</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p id="ccExpandedDate"></p><p>Dein HQ ist bereit. Der heutige Schwerpunkt ist der gemeinsame Preview-Check.</p></div></details>
+      <details class="cc-panel cc-panel-compact" data-cc-detail="finance"><summary><span class="cc-kicker">04 · FINANCIAL SNAPSHOT</span><strong>Finanzübersicht</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p>Gemeinsamer Sparstand, Einnahmen und Ausgaben werden aus den jeweiligen Finanzbereichen übernommen – keine doppelte Datenhaltung.</p><span class="cc-data-note">Noch keine Finanzdaten hinterlegt</span></div></details>
+      <details class="cc-panel cc-panel-compact" data-cc-detail="next"><summary><span class="cc-kicker">05 · NEXT UP</span><strong>Termine, Deadlines & Experiences</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p>Der nächste Schritt: Command Center Preview gemeinsam testen.</p><span class="cc-data-note">Keine weiteren Einträge in dieser Demo</span></div></details>
+    </div>
+    <div class="cc-expanded-foot"><span class="cc-preview-tag">PREVIEW · BEISPIELDATEN</span><span>ESC zum Schließen</span></div>
+  </section>
+
 
         <section class="hq-overview" aria-label="SATYRN command center">
           <div class="headline-zone">
@@ -310,20 +325,7 @@
       <div class="cc-welcome-footer"><span>Ein Überblick. Ein klarer nächster Schritt.</span><button class="cc-primary" id="ccWelcomeDismiss" type="button">Zum Dashboard <span>→</span></button></div>
     </section>
   </div>
-  <div class="cc-expanded-backdrop" id="ccExpandedBackdrop" aria-hidden="true"></div>
-  <section class="cc-expanded-card" id="ccExpandedCard" aria-hidden="true" aria-labelledby="ccExpandedTitle">
-    <div class="cc-expanded-head"><div><span class="cc-kicker">SATYRN · EXECUTIVE OVERVIEW</span><h2 id="ccExpandedTitle">Command <em>Center.</em></h2><p>Dein aktueller Überblick – live synchronisiert, sobald Daten gepflegt sind.</p></div><button class="cc-close" id="ccExpandedClose" type="button" aria-label="Command Center schließen">×</button></div>
-    <div class="cc-expanded-primary">
-      <article class="cc-panel cc-panel-feature"><span class="cc-kicker">01 · CURRENT FOCUS</span><h3>HQ Dashboard finalisieren</h3><p>Die Executive-Home-Ansicht abschließen und die neue Command-Center-Interaktion gemeinsam testen.</p><div class="cc-inline-meta"><span>Aktuelle Priorität</span><strong>Design-Review</strong></div><div class="cc-inline-meta"><span>Nächster Meilenstein</span><strong>Preview testen</strong></div></article>
-      <article class="cc-panel cc-panel-feature"><span class="cc-kicker">02 · TODAY'S PROGRESS</span><div class="cc-progress-number">50<span>%</span></div><p>3 von 5 Aufgaben · 1 von 2 Arbeitsblöcken</p><div class="cc-progress-track"><i></i></div><div class="cc-progress-foot"><span>3 / 6 eindeutige Arbeitseinheiten</span><strong>In Bewegung</strong></div><small>Verknüpfte Aufgabe und Arbeitsblock werden nur einmal gezählt.</small></article>
-    </div>
-    <div class="cc-expanded-secondary">
-      <details class="cc-panel cc-panel-compact" data-cc-detail="welcome"><summary><span class="cc-kicker">03 · WELCOME BACK</span><strong>Willkommen zurück</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p id="ccExpandedDate"></p><p>Dein HQ ist bereit. Der heutige Schwerpunkt ist der gemeinsame Preview-Check.</p></div></details>
-      <details class="cc-panel cc-panel-compact" data-cc-detail="finance"><summary><span class="cc-kicker">04 · FINANCIAL SNAPSHOT</span><strong>Finanzübersicht</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p>Gemeinsamer Sparstand, Einnahmen und Ausgaben werden aus den jeweiligen Finanzbereichen übernommen – keine doppelte Datenhaltung.</p><span class="cc-data-note">Noch keine Finanzdaten hinterlegt</span></div></details>
-      <details class="cc-panel cc-panel-compact" data-cc-detail="next"><summary><span class="cc-kicker">05 · NEXT UP</span><strong>Termine, Deadlines & Experiences</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p>Der nächste Schritt: Command Center Preview gemeinsam testen.</p><span class="cc-data-note">Keine weiteren Einträge in dieser Demo</span></div></details>
-    </div>
-    <div class="cc-expanded-foot"><span class="cc-preview-tag">PREVIEW · BEISPIELDATEN</span><span>ESC zum Schließen</span></div>
-  </section>
+
 
   <div class="toast" id="toast" role="status"></div>
   <script src="app.js"></script>

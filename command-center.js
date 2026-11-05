@@ -25,6 +25,7 @@
     if (!onHome() || welcome.classList.contains('is-open')) return;
     lastFocus = document.activeElement;
     expandedOpen = true;
+    miniWrap.classList.add('is-expanded-source');
     expanded.classList.add('is-open');
     expandedBackdrop.classList.add('is-open');
     expanded.setAttribute('aria-hidden','false');
@@ -36,6 +37,7 @@
   function closeExpanded(restoreFocus=true) {
     if (!expandedOpen) return;
     expandedOpen = false;
+    miniWrap.classList.remove('is-expanded-source');
     expanded.classList.remove('is-open');
     expandedBackdrop.classList.remove('is-open');
     expanded.setAttribute('aria-hidden','true');
