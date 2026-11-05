@@ -1388,3 +1388,20 @@ body:has(#page-home.active-page) .money-zone .info-icon {
 
 .nav-item.nav-subitem{padding-left:34px!important;font-size:11px!important;opacity:.88}
 .nav-item.nav-subitem .nav-icon{font-size:13px!important}
+
+
+.finance-intelligence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.fi-scenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.fi-scenarios>div{padding:12px;background:rgba(255,255,255,.035);border:1px solid rgba(198,166,107,.14);display:flex;flex-direction:column;gap:8px}
+.fi-scenarios small{font-size:9px;color:#b8a57d}.fi-scenarios b{font-size:14px;color:#eee4d0}
+.fi-note{font-size:9px;line-height:1.6;color:#92948e;margin:10px 0 0}
+.fi-trend-line,.fi-calendar-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,.07)}
+.fi-trend-line span,.fi-calendar-row small{font-size:10px;color:#a7a69e}
+.fi-trend-line b,.fi-calendar-row strong{font-size:11px;color:#e6d7b7;text-align:right}
+.fi-calendar-row>div{display:flex;flex-direction:column;gap:5px;min-width:0}
+.fi-calendar-row b{font-size:11px;color:#eee8dc}
+.fi-calendar-row button{background:rgba(198,166,107,.08);border:1px solid rgba(198,166,107,.22);color:#d8c49a;padding:7px 9px;font-size:9px;cursor:pointer;white-space:nowrap}
+.fi-safety-status{display:inline-block;padding:7px 10px;margin-bottom:8px;background:rgba(198,166,107,.12);border:1px solid rgba(198,166,107,.25);color:#e1c58e;font-size:10px;letter-spacing:1px}
+.fi-trend-block{margin-top:12px;padding-top:4px}
+@media(max-width:900px){.finance-intelligence-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.fi-scenarios{grid-template-columns:1fr}.fi-calendar-row{align-items:flex-start;flex-wrap:wrap}}
