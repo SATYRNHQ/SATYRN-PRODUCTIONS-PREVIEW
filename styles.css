@@ -1608,3 +1608,26 @@ small,
   font-size: 1.2em !important;
   line-height: 1.65 !important;
 }
+
+
+/* Strong readability pass: informational text is doubled from the previous pass */
+p,
+.info-text,
+.description,
+.helper-text,
+.module-description,
+.empty-state p,
+.edge-module-card p,
+.hq-record p,
+.cc-panel p,
+.ares-greeting p {
+  font-size: 2.7em !important;
+  line-height: 1.65 !important;
+}
+small,
+.caption,
+.hq-record small,
+.cc-panel small {
+  font-size: 2.4em !important;
+  line-height: 1.6 !important;
+}
