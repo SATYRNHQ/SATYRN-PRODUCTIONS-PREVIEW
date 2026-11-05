@@ -113,6 +113,6 @@
   renderIdeas();renderSessions();renderAcademy();renderBeats();renderContent();renderSongs();renderUpgrades();
 
   /* ARES context-aware local helper: transparent rules, no external AI claim. */
-  window.satyrnAresReply=localAresReply;
+  window.satyrnAresReply=window.satyrnAresReply||((m)=>'Ich bin ARES im lokalen Vorschau-Modus. Eine echte KI-Anbindung ist noch nicht eingerichtet.');
   window.SATYRN_LOCAL_CONTEXT={getSummary:()=>({tasks:read('satyrn-tasks',[]),beats:store.beats,content:store.content,songs:store.songs,ideas:store.ideas,sessions:store.sessions,upgrades:store.upgrades})};
 })();
