@@ -46,45 +46,49 @@ const navItems = [...document.querySelectorAll('[data-page]')];
 const crumb = document.getElementById('crumb');
 const sidebars = [...document.querySelectorAll('.hq-side-nav')];
 const headbar = document.querySelector('.hq-top-nav');
-function showPage(name){
+function showPage(name, clickedItem){
   changeBackground();
   pages.forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
   document.querySelectorAll('.nav-item[data-page]').forEach(n=>n.classList.toggle('active',n.dataset.page===name));
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
   const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
   crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
+  const clickedSidebar=clickedItem?.closest('.hq-side-nav');
   sidebars.forEach(nav=>{
-    nav.classList.remove('open','expanded');
-    nav.classList.add('nav-dismissed');
+    nav.classList.remove('open');
+    if(nav===clickedSidebar){nav.classList.remove('nav-dismissed');nav.classList.add('expanded');}
+    else{nav.classList.remove('expanded');nav.classList.add('nav-dismissed');}
   });
   headbar?.classList.add('nav-dismissed');
   headbar?.classList.remove('labels-visible');
-  if(document.activeElement?.closest('.hq-side-nav'))document.activeElement.blur();
   window.scrollTo({top:0,behavior:'smooth'});
 }
-navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));
+navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page,item)));
 headbar?.addEventListener('pointerenter',()=>{headbar.classList.remove('nav-dismissed');headbar.classList.add('labels-visible')});
 headbar?.addEventListener('pointerleave',()=>{headbar.classList.remove('labels-visible');headbar.classList.add('nav-dismissed')});
 headbar?.addEventListener('focusin',event=>{if(event.target.matches(':focus-visible')){headbar.classList.remove('nav-dismissed');headbar.classList.add('labels-visible')}});
 
-// Mirrored sidebar expansion with one shared grace period.
-let sidebarCollapseTimer;
+// Each sidebar stays open while the pointer is over it, including after a page is opened.
+const sidebarCollapseTimers=new Map();
 sidebars.forEach(nav=>{
   nav.addEventListener('pointerenter',()=>{
-    clearTimeout(sidebarCollapseTimer);
-    if(!nav.classList.contains('nav-dismissed'))nav.classList.add('expanded');
+    clearTimeout(sidebarCollapseTimers.get(nav));
+    nav.classList.remove('nav-dismissed');
+    nav.classList.add('expanded');
   });
   nav.addEventListener('pointerleave',()=>{
-    nav.classList.remove('nav-dismissed');
-    clearTimeout(sidebarCollapseTimer);
-    sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),600);
+    clearTimeout(sidebarCollapseTimers.get(nav));
+    const timer=window.setTimeout(()=>{
+      nav.classList.remove('expanded');
+      nav.classList.add('nav-dismissed');
+      sidebarCollapseTimers.delete(nav);
+    },600);
+    sidebarCollapseTimers.set(nav,timer);
   });
-  nav.addEventListener('focusin',()=>{clearTimeout(sidebarCollapseTimer);if(!nav.classList.contains('nav-dismissed'))nav.classList.add('expanded')});
-  nav.addEventListener('focusout',event=>{
-    if(!nav.contains(event.relatedTarget)){
-      clearTimeout(sidebarCollapseTimer);
-      sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),600);
-    }
+  nav.addEventListener('focusin',()=>{
+    clearTimeout(sidebarCollapseTimers.get(nav));
+    nav.classList.remove('nav-dismissed');
+    nav.classList.add('expanded');
   });
 });
 
