@@ -45,6 +45,7 @@ const pages = [...document.querySelectorAll('.page')];
 const navItems = [...document.querySelectorAll('[data-page]')];
 const crumb = document.getElementById('crumb');
 const sidebars = [...document.querySelectorAll('.hq-side-nav')];
+const headbar = document.querySelector('.hq-top-nav');
 function showPage(name){
   changeBackground();
   pages.forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
@@ -56,10 +57,13 @@ function showPage(name){
     nav.classList.remove('open','expanded');
     nav.classList.add('nav-dismissed');
   });
+  headbar?.classList.add('nav-dismissed');
   if(document.activeElement?.closest('.hq-side-nav'))document.activeElement.blur();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));
+headbar?.addEventListener('pointerenter',()=>headbar.classList.remove('nav-dismissed'));
+headbar?.addEventListener('focusin',()=>headbar.classList.remove('nav-dismissed'));
 
 // Mirrored sidebar expansion with one shared grace period.
 let sidebarCollapseTimer;
