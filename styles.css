@@ -1756,23 +1756,22 @@ body{background-color:var(--hq-obsidian)}
   transform:translateY(-50%)!important;display:flex!important;flex-direction:column!important;
   align-items:stretch!important;justify-content:center!important;gap:8px!important;
   width:56px!important;min-height:240px;padding:12px 5px!important;
-  border:1px solid transparent;border-radius:0 14px 14px 0;
-  background:transparent!important;backdrop-filter:none!important;box-shadow:none!important;
-  transition:width .45s cubic-bezier(.22,.61,.36,1);
+  border:1px solid rgba(198,166,106,.2)!important;border-radius:0 14px 14px 0;
+  background:rgba(8,13,11,.38)!important;
+  -webkit-backdrop-filter:blur(18px) saturate(112%)!important;backdrop-filter:blur(18px) saturate(112%)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.12),inset 0 0 18px rgba(32,59,45,.06)!important;
+  transition:width .45s cubic-bezier(.22,.61,.36,1),background .45s ease,box-shadow .45s ease;
 }
 .hq-side-nav:before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  border:1px solid rgba(198,166,106,.2);border-radius:inherit;
-  background:rgba(8,13,11,.48);box-shadow:0 8px 24px rgba(0,0,0,.12),inset 0 0 18px rgba(32,59,45,.07);
-  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
-  opacity:1;
-  transition:background .45s ease,box-shadow .45s ease,backdrop-filter .45s ease;
+  border:0;border-radius:inherit;background:transparent;box-shadow:none;
+  opacity:1;transition:opacity .45s ease;
 }
 .hq-side-nav>*{position:relative;z-index:1}
-.hq-side-nav.expanded:before,.hq-side-nav.open:before,.hq-side-nav:focus-within:before{
-  background:rgba(8,13,11,.62);
-  box-shadow:0 12px 32px rgba(0,0,0,.2),inset 0 0 20px rgba(32,59,45,.09);
-  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+.hq-side-nav.expanded,.hq-side-nav.open,.hq-side-nav:focus-within{
+  background:rgba(8,13,11,.55)!important;
+  box-shadow:0 12px 32px rgba(0,0,0,.2),inset 0 0 20px rgba(32,59,45,.09)!important;
+  -webkit-backdrop-filter:blur(20px) saturate(118%)!important;backdrop-filter:blur(20px) saturate(118%)!important;
 }
 .hq-time-nav{left:0!important;right:auto!important;border-left:0}
 .hq-money-nav{right:0!important;left:auto!important;border-radius:14px 0 0 14px;border-right:0}
