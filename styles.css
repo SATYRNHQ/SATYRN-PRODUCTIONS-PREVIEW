@@ -1999,3 +1999,15 @@ body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
 
 /* Remove the legacy header strip behind the active global headbar. */
 .topbar{display:none!important}
+
+
+/* Headbar: no hover/focus frame around the icons; keep label and underline effects. */
+.hq-top-nav .edge-nav-item:hover,
+.hq-top-nav .edge-nav-item:focus,
+.hq-top-nav .edge-nav-item:focus-visible,
+.hq-top-nav .edge-nav-item.active{
+  border-color:transparent!important;
+  outline:none!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
