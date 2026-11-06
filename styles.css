@@ -1867,3 +1867,14 @@ body:has(#page-home.active-page) .time-zone,
 body:has(#page-home.active-page) .money-zone{
   display:none!important;
 }
+
+
+/* Keep a sidebar collapsed after navigation while the pointer remains over it. */
+.hq-side-nav.nav-dismissed,
+.hq-side-nav.nav-dismissed:focus-within{
+  width:56px!important;padding:12px 5px!important;
+}
+.hq-side-nav.nav-dismissed .nav-label,
+.hq-side-nav.nav-dismissed:focus-within .nav-label{
+  max-width:0!important;opacity:0!important;
+}
