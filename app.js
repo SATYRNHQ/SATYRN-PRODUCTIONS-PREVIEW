@@ -66,13 +66,13 @@ sidebars.forEach(nav=>{
   });
   nav.addEventListener('pointerleave',()=>{
     clearTimeout(sidebarCollapseTimer);
-    sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),180);
+    sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),600);
   });
   nav.addEventListener('focusin',()=>{clearTimeout(sidebarCollapseTimer);nav.classList.add('expanded')});
   nav.addEventListener('focusout',event=>{
     if(!nav.contains(event.relatedTarget)){
       clearTimeout(sidebarCollapseTimer);
-      sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),180);
+      sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),600);
     }
   });
 });
