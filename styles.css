@@ -1947,7 +1947,9 @@ body:has(#page-home.active-page) .money-zone{
 }
 .hq-top-nav .home-palm .nav-label{display:none!important}
 .hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
-  opacity:0!important;visibility:hidden!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  transition:opacity .65s ease-in-out,visibility 0s linear .65s!important;
 }
 .hq-top-nav .home-palm{
   align-self:center;
