@@ -1785,7 +1785,7 @@ body{background-color:var(--hq-obsidian)}
   transform:none!important;display:block!important;max-width:0;overflow:hidden;
   opacity:0;visibility:hidden;white-space:nowrap;
   font:600 10px var(--font)!important;letter-spacing:.35px!important;color:#d5d9ce!important;
-  text-shadow:none!important;transition:max-width .42s ease,opacity .85s ease,visibility .85s ease;
+  text-shadow:none!important;transition:max-width .9s ease,opacity 1.6s ease,visibility 1.6s ease;
 }
 .hq-side-nav.expanded .nav-label,.hq-side-nav.open .nav-label,.hq-side-nav:focus-within .nav-label{
   max-width:132px;opacity:1;visibility:visible;
