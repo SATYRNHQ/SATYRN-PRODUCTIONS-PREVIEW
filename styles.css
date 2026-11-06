@@ -1995,3 +1995,7 @@ body:has(#page-home.active-page) .hq-top-nav{
 body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
   opacity:.78!important;
 }
+
+
+/* Remove the legacy header strip behind the active global headbar. */
+.topbar{display:none!important}
