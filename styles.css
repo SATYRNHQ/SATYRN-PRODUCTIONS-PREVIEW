@@ -1972,3 +1972,21 @@ body:has(#page-home.active-page) .money-zone{
 .hq-top-nav:not(.nav-dismissed) .edge-nav-item:focus-visible .nav-label{
   opacity:1!important;
 }
+
+
+/* Final headbar fade: keep labels renderable while opacity animates, like the sidebars. */
+.hq-top-nav .edge-nav-item .nav-label,
+.hq-top-nav.nav-dismissed .edge-nav-item .nav-label,
+.hq-top-nav.nav-dismissed:hover .edge-nav-item .nav-label,
+.hq-top-nav.nav-dismissed .edge-nav-item:focus-visible .nav-label{
+  visibility:visible!important;
+  transition:opacity .9s ease-in-out!important;
+}
+.hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
+  opacity:0!important;
+}
+.hq-top-nav:not(.nav-dismissed):hover .edge-nav-item .nav-label,
+.hq-top-nav:not(.nav-dismissed) .edge-nav-item:focus-visible .nav-label{
+  opacity:1!important;
+}
+.hq-top-nav .home-palm .nav-label{display:none!important}
