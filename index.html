@@ -17,49 +17,29 @@
   <div class="ambient"></div>
   <div class="grain"></div>
   <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <a class="brand" href="#" data-page="home" aria-label="SATYRN HQ Home">
-        <span class="brand-mark">S</span>
-        <span class="brand-copy"><strong>SATYRN</strong><small>PRODUCTIONS HQ</small></span>
-      </a>
-      <div class="workspace-label">WORKSPACE</div>
-      <nav class="main-nav" aria-label="Hauptnavigation">
-        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span>Overview</button>
-        <button class="nav-item" data-page="studio"><span class="nav-icon">◈</span>Studio</button>
-        <button class="nav-item" data-page="beats"><span class="nav-icon">♫</span>Beat Library</button>
-        <button class="nav-item" data-page="content"><span class="nav-icon">▧</span>Content</button>
-        <button class="nav-item" data-page="projects"><span class="nav-icon">◇</span>Projects</button>
-        <button class="nav-item" data-page="finance"><span class="nav-icon">€</span>Finanzen</button>
-        <button class="nav-item nav-subitem" data-page="upgrades"><span class="nav-icon">⬡</span>Upgrade Center</button>
-        <button class="nav-item" data-page="lyrics"><span class="nav-icon">✎</span>Lyrics</button>
-      </nav>
-      <div class="sidebar-bottom">
-        <div class="workspace-label">SYSTEM</div>
-        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
-        <div class="profile-card">
-          <div class="avatar">S</div>
-          <div><strong>SATYRN</strong><small>Creator workspace</small></div>
-          <span class="status-dot"></span>
-        </div>
+    <nav class="hq-top-nav" aria-label="Globale Navigation">
+      <div class="headbar-group headbar-left">
+        <button class="nav-item edge-nav-item" data-page="dashboard"><span class="nav-icon">▦</span><span class="nav-label">Dashboard</span></button>
+        <button class="nav-item edge-nav-item" data-page="dreams"><span class="nav-icon">✧</span><span class="nav-label">Dreams</span></button>
+        <button class="nav-item edge-nav-item" data-page="opportunities"><span class="nav-icon">✳</span><span class="nav-label">Opportunities</span></button>
       </div>
-    </aside>
-
-    <nav class="hq-top-nav" aria-label="SATYRN HQ">
-      <button class="nav-item edge-nav-item home-palm active" data-page="home" aria-label="Home"><span class="nav-icon">🌴</span><span class="nav-label">Home</span></button>
-      <button class="nav-item edge-nav-item" data-page="dreams"><span class="nav-icon">✧</span><span class="nav-label">Dreams</span></button>
-      <button class="nav-item edge-nav-item" data-page="opportunities"><span class="nav-icon">✳</span><span class="nav-label">Opportunities</span></button>
-      <button class="nav-item edge-nav-item" data-page="projects"><span class="nav-icon">◇</span><span class="nav-label">Projects</span></button>
-      <button class="nav-item edge-nav-item" data-page="network"><span class="nav-icon">◎</span><span class="nav-label">Network</span></button>
-      <button class="nav-item edge-nav-item" data-page="settings"><span class="nav-icon">⚙</span><span class="nav-label">Settings</span></button>
+      <button class="nav-item edge-nav-item home-palm" data-page="home" aria-label="Home">
+        <span class="nav-icon" aria-hidden="true">🌴</span><span class="nav-label">Home</span>
+      </button>
+      <div class="headbar-group headbar-right">
+        <button class="nav-item edge-nav-item" data-page="projects"><span class="nav-icon">◇</span><span class="nav-label">Projects</span></button>
+        <button class="nav-item edge-nav-item" data-page="network"><span class="nav-icon">◎</span><span class="nav-label">Network</span></button>
+        <button class="nav-item edge-nav-item" data-page="settings"><span class="nav-icon">⚙</span><span class="nav-label">Settings</span></button>
+      </div>
     </nav>
-    <nav class="hq-side-nav hq-time-nav" aria-label="Time and planning">
+    <nav class="hq-side-nav hq-time-nav" aria-label="Zeit und Planung">
       <button class="nav-item edge-nav-item" data-page="calendar"><span class="nav-icon">▦</span><span class="nav-label">Calendar</span></button>
       <button class="nav-item edge-nav-item" data-page="time-tracking"><span class="nav-icon">◷</span><span class="nav-label">Time Tracking</span></button>
       <button class="nav-item edge-nav-item" data-page="deadlines"><span class="nav-icon">⌛</span><span class="nav-label">Deadlines</span></button>
       <button class="nav-item edge-nav-item" data-page="focus"><span class="nav-icon">◎</span><span class="nav-label">Focus Mode</span></button>
       <button class="nav-item edge-nav-item" data-page="important"><span class="nav-icon">✦</span><span class="nav-label">Important</span></button>
     </nav>
-    <nav class="hq-side-nav hq-money-nav" aria-label="Finance">
+    <nav class="hq-side-nav hq-money-nav" aria-label="Finanzen">
       <button class="nav-item edge-nav-item" data-page="savings"><span class="nav-icon">◈</span><span class="nav-label">Savings</span></button>
       <button class="nav-item edge-nav-item" data-page="finance"><span class="nav-icon">↗</span><span class="nav-label">Income</span></button>
       <button class="nav-item edge-nav-item" data-page="expenses"><span class="nav-icon">↘</span><span class="nav-label">Expenses</span></button>
@@ -76,6 +56,11 @@
           <button class="ares-top" id="openAres"><span class="ares-helmet"><svg class="helmet-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 31c0-12 6-21 15-24 1 5 5 8 11 10l-2 7 5 5-7 2-2 7H16l-2-5-4-2Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M22 8c-1 8-5 13-11 16M16 38h20M23 26h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span>ASK ARES</span><kbd>⌘ K</kbd></button>
         </div>
       </header>
+
+      <section class="page edge-placeholder" id="page-dashboard">
+        <div class="page-intro"><div class="eyebrow">SATYRN HQ · EXECUTIVE OVERVIEW</div><h1>Dashboard <em>.</em></h1><p>Dein zentraler Überblick über Fortschritt, Prioritäten und den aktuellen Status von SATYRN.</p></div>
+        <div class="edge-module-card glass-card"><span class="card-kicker">DASHBOARD FOUNDATION</span><h2>Executive Dashboard</h2><p>Dieser Bereich wird als eigenständiges Dashboard vorbereitet. Die bestehende Home-Seite bleibt dein zentraler Home Hub.</p><p class="edge-status">Erste Interface-Version · Inhalte und Kennzahlen werden in einem späteren Schritt gemeinsam festgelegt.</p><button class="primary-button" type="button" data-page="home">Zurück zu Home <span>↗</span></button></div>
+      </section>
 
       <section class="page active-page" id="page-home">
 
