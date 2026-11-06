@@ -2006,3 +2006,36 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   .cc-welcome-grid{gap:8px;margin-block:12px}
   .cc-panel-feature{min-height:145px}.cc-panel-compact{min-height:105px}.cc-panel{padding:12px}
 }
+
+
+/* Navigation readability — larger icons and labels across the HQ */
+.hq-top-nav .edge-nav-item .nav-icon{
+  width:30px!important;height:32px!important;font-size:23px!important;
+}
+.hq-top-nav .edge-nav-item .nav-label{
+  font-size:11.5px!important;letter-spacing:.55px!important;
+}
+.hq-top-nav .edge-nav-item{gap:5px!important}
+.hq-top-nav .home-palm .nav-icon{font-size:31px!important}
+.hq-side-nav .edge-nav-item .nav-icon{
+  flex-basis:33px!important;width:33px!important;height:34px!important;font-size:22px!important;
+}
+.hq-side-nav .edge-nav-item .nav-label{
+  font-size:12px!important;letter-spacing:.4px!important;
+}
+.hq-side-nav.expanded,.hq-side-nav.open,.hq-side-nav:focus-within{
+  width:205px!important;
+}
+.hq-side-nav .nav-label{max-width:150px!important}
+.hq-side-nav.nav-dismissed,.hq-side-nav.nav-dismissed:focus-within{width:56px!important}
+@media(max-width:1100px){
+  .hq-top-nav .edge-nav-item .nav-icon{width:27px!important;height:29px!important;font-size:21px!important}
+  .hq-top-nav .edge-nav-item .nav-label{font-size:10.5px!important}
+  .hq-side-nav.expanded,.hq-side-nav.open,.hq-side-nav:focus-within{width:190px!important}
+}
+@media(max-width:720px){
+  .hq-top-nav .edge-nav-item .nav-icon{width:25px!important;height:25px!important;font-size:19px!important}
+  .hq-top-nav .edge-nav-item .nav-label{font-size:8.5px!important;letter-spacing:.05px!important}
+  .hq-top-nav .home-palm .nav-icon{font-size:26px!important}
+  .hq-side-nav .edge-nav-item .nav-icon{flex-basis:27px!important;font-size:19px!important}
+}
