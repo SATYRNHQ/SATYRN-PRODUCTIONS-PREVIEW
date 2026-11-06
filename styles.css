@@ -2170,3 +2170,54 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   .hq-side-nav .edge-nav-item .nav-icon{flex-basis:32px!important;width:32px!important;min-width:32px!important;height:34px!important;font-size:23px!important}
   .hq-side-nav .edge-nav-item .nav-label{font-size:13px!important}
 }
+
+
+/* Responsive navigation correction: keep desktop/tablet scale consistent.
+   The old max-width media queries were shrinking labels and hiding sidebar names. */
+@media (min-width:721px){
+  .hq-top-nav .edge-nav-item{
+    min-height:72px!important;
+    padding:8px 12px!important;
+    gap:10px!important;
+  }
+  .hq-top-nav .edge-nav-item .nav-icon{
+    width:clamp(42px,3.2vw,54px)!important;
+    min-width:clamp(42px,3.2vw,54px)!important;
+    height:clamp(42px,3.2vw,54px)!important;
+    font-size:clamp(32px,2.5vw,42px)!important;
+  }
+  .hq-top-nav .edge-nav-item .nav-label{
+    display:inline-block!important;
+    font-size:clamp(14px,1.1vw,18px)!important;
+    line-height:1.2!important;
+    visibility:visible!important;
+    opacity:1!important;
+  }
+  .hq-top-nav .home-palm .nav-icon{
+    width:clamp(54px,4vw,66px)!important;
+    min-width:clamp(54px,4vw,66px)!important;
+    height:clamp(54px,4vw,66px)!important;
+    font-size:clamp(42px,3.2vw,52px)!important;
+  }
+  .hq-side-nav.expanded,.hq-side-nav.open,.hq-side-nav:focus-within{
+    width:clamp(236px,18vw,280px)!important;
+  }
+  .hq-side-nav .edge-nav-item{
+    min-height:62px!important;
+    height:62px!important;
+    gap:14px!important;
+  }
+  .hq-side-nav .edge-nav-item .nav-icon{
+    flex:0 0 50px!important;
+    width:50px!important;
+    min-width:50px!important;
+    height:50px!important;
+    font-size:36px!important;
+  }
+  .hq-side-nav .edge-nav-item .nav-label{
+    display:block!important;
+    font-size:clamp(15px,1.15vw,18px)!important;
+    max-width:190px!important;
+    line-height:1.25!important;
+  }
+}
