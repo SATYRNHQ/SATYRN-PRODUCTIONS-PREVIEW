@@ -1763,16 +1763,16 @@ body{background-color:var(--hq-obsidian)}
 .hq-side-nav:before{
   content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   border:1px solid rgba(198,166,106,.2);border-radius:inherit;
-  background:transparent;box-shadow:none;
-  -webkit-backdrop-filter:none;backdrop-filter:none;
+  background:rgba(8,13,11,.48);box-shadow:0 8px 24px rgba(0,0,0,.12),inset 0 0 18px rgba(32,59,45,.07);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
   opacity:1;
   transition:background .45s ease,box-shadow .45s ease,backdrop-filter .45s ease;
 }
 .hq-side-nav>*{position:relative;z-index:1}
 .hq-side-nav.expanded:before,.hq-side-nav.open:before,.hq-side-nav:focus-within:before{
-  background:rgba(8,13,11,.94);
-  box-shadow:0 12px 38px rgba(0,0,0,.28),inset 0 0 24px rgba(32,59,45,.12);
-  -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
+  background:rgba(8,13,11,.62);
+  box-shadow:0 12px 32px rgba(0,0,0,.2),inset 0 0 20px rgba(32,59,45,.09);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
 }
 .hq-time-nav{left:0!important;right:auto!important;border-left:0}
 .hq-money-nav{right:0!important;left:auto!important;border-radius:14px 0 0 14px;border-right:0}
