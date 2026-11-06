@@ -1941,3 +1941,28 @@ body:has(#page-home.active-page) .money-zone{
   min-height:58px!important;
   gap:0!important;
 }
+
+
+/* Center the palm precisely inside its radial shadow on the headbar. */
+.hq-top-nav .home-palm{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  align-self:center!important;
+  margin:0!important;
+  padding:0!important;
+  position:relative!important;
+  box-sizing:border-box!important;
+  background-position:center center!important;
+  background-size:100% 100%!important;
+}
+.hq-top-nav .home-palm .nav-icon{
+  display:grid!important;
+  place-items:center!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:1!important;
+  transform:none!important;
+}
