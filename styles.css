@@ -1956,3 +1956,19 @@ body:has(#page-home.active-page) .money-zone{
   min-height:58px!important;
   gap:0!important;
 }
+
+
+/* Keep headbar label fading deterministic on both hover-leave and navigation clicks. */
+.hq-top-nav .edge-nav-item .nav-label{
+  visibility:visible!important;
+  transition:opacity .65s ease-in-out!important;
+}
+.hq-top-nav.nav-dismissed .edge-nav-item .nav-label,
+.hq-top-nav.nav-dismissed:hover .edge-nav-item .nav-label,
+.hq-top-nav.nav-dismissed .edge-nav-item:focus-visible .nav-label{
+  opacity:0!important;
+}
+.hq-top-nav:not(.nav-dismissed):hover .edge-nav-item .nav-label,
+.hq-top-nav:not(.nav-dismissed) .edge-nav-item:focus-visible .nav-label{
+  opacity:1!important;
+}
