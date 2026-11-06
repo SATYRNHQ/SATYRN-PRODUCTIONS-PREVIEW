@@ -2221,3 +2221,54 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
     line-height:1.25!important;
   }
 }
+
+
+/* TEMP TEST: double desktop navigation scale */
+@media (min-width:721px){
+  .hq-top-nav .edge-nav-item{
+    min-height:116px!important;
+    padding:14px 18px!important;
+    gap:16px!important;
+  }
+  .hq-top-nav .edge-nav-item .nav-icon{
+    width:clamp(84px,6.4vw,108px)!important;
+    min-width:clamp(84px,6.4vw,108px)!important;
+    height:clamp(84px,6.4vw,108px)!important;
+    font-size:clamp(64px,5vw,84px)!important;
+  }
+  .hq-top-nav .edge-nav-item .nav-label{
+    font-size:clamp(28px,2.2vw,36px)!important;
+    line-height:1.1!important;
+  }
+  .hq-top-nav .home-palm .nav-icon{
+    width:clamp(108px,8vw,132px)!important;
+    min-width:clamp(108px,8vw,132px)!important;
+    height:clamp(108px,8vw,132px)!important;
+    font-size:clamp(84px,6.4vw,104px)!important;
+  }
+  .hq-top-nav{
+    min-height:138px!important;
+    padding-block:16px!important;
+  }
+  .hq-side-nav.expanded,.hq-side-nav.open,.hq-side-nav:focus-within{
+    width:clamp(360px,30vw,440px)!important;
+  }
+  .hq-side-nav .edge-nav-item{
+    min-height:116px!important;
+    height:116px!important;
+    gap:28px!important;
+    padding:12px 14px!important;
+  }
+  .hq-side-nav .edge-nav-item .nav-icon{
+    flex:0 0 100px!important;
+    width:100px!important;
+    min-width:100px!important;
+    height:100px!important;
+    font-size:72px!important;
+  }
+  .hq-side-nav .edge-nav-item .nav-label{
+    font-size:clamp(30px,2.3vw,36px)!important;
+    max-width:280px!important;
+    line-height:1.15!important;
+  }
+}
