@@ -66,7 +66,6 @@ navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.p
 headbar?.addEventListener('pointerenter',()=>{headbar.classList.remove('nav-dismissed');headbar.classList.add('labels-visible')});
 headbar?.addEventListener('pointerleave',()=>{headbar.classList.remove('labels-visible');headbar.classList.add('nav-dismissed')});
 headbar?.addEventListener('focusin',event=>{if(event.target.matches(':focus-visible')){headbar.classList.remove('nav-dismissed');headbar.classList.add('labels-visible')}});
-headbar?.addEventListener('focusout',event=>{if(!headbar.contains(event.relatedTarget)){headbar.classList.remove('labels-visible');headbar.classList.add('nav-dismissed')}});
 
 // Mirrored sidebar expansion with one shared grace period.
 let sidebarCollapseTimer;
