@@ -1933,12 +1933,17 @@ body:has(#page-home.active-page) .money-zone{
   transform:none!important;
   display:block!important;
   max-width:none!important;
-  opacity:1;visibility:visible;
+  opacity:0;visibility:hidden;
   color:#c4c9be;
   font-size:9px!important;
   line-height:1.15!important;
   letter-spacing:.5px!important;
   white-space:nowrap;
+  transition:opacity .65s ease-in-out,visibility .65s ease-in-out!important;
+}
+.hq-top-nav:hover .edge-nav-item .nav-label,
+.hq-top-nav .edge-nav-item:focus-visible .nav-label{
+  opacity:1;visibility:visible;
 }
 .hq-top-nav .home-palm .nav-label{display:none!important}
 .hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
