@@ -44,7 +44,7 @@ backgroundTimer=window.setInterval(changeBackground,20000);
 const pages = [...document.querySelectorAll('.page')];
 const navItems = [...document.querySelectorAll('[data-page]')];
 const crumb = document.getElementById('crumb');
-const sidebar = document.getElementById('sidebar');
+const sidebars = [...document.querySelectorAll('.hq-side-nav')];
 function showPage(name){
   changeBackground();
   pages.forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
@@ -52,11 +52,35 @@ function showPage(name){
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
   const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
   crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
-  if(sidebar)sidebar.classList.remove('open');
+  sidebars.forEach(nav=>nav.classList.remove('open'));
   window.scrollTo({top:0,behavior:'smooth'});
 }
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));
-document.getElementById('mobileMenu').addEventListener('click',()=>sidebar.classList.toggle('open'));
+
+// Mirrored sidebar expansion with one shared grace period.
+let sidebarCollapseTimer;
+sidebars.forEach(nav=>{
+  nav.addEventListener('pointerenter',()=>{
+    clearTimeout(sidebarCollapseTimer);
+    nav.classList.add('expanded');
+  });
+  nav.addEventListener('pointerleave',()=>{
+    clearTimeout(sidebarCollapseTimer);
+    sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),180);
+  });
+  nav.addEventListener('focusin',()=>{clearTimeout(sidebarCollapseTimer);nav.classList.add('expanded')});
+  nav.addEventListener('focusout',event=>{
+    if(!nav.contains(event.relatedTarget)){
+      clearTimeout(sidebarCollapseTimer);
+      sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),180);
+    }
+  });
+});
+
+const mobileMenu=document.getElementById('mobileMenu');
+if(mobileMenu)mobileMenu.addEventListener('click',()=>{
+  sidebars.forEach(nav=>nav.classList.toggle('open'));
+});
 
 const panel=document.getElementById('aresPanel');
 function openAres(){panel.classList.add('open');panel.setAttribute('aria-hidden','false');setTimeout(()=>document.getElementById('aresInput').focus(),180)}
