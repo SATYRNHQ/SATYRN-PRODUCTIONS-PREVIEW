@@ -1985,3 +1985,37 @@ body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
   visibility:visible!important;
   opacity:1!important;
 }
+
+
+/* Distribute all seven headbar positions evenly across the full bar. */
+.hq-top-nav{
+  display:grid!important;
+  grid-template-columns:repeat(7,minmax(0,1fr))!important;
+  align-items:center!important;
+  justify-items:stretch!important;
+  gap:0!important;
+  width:min(760px,calc(100vw - 40px))!important;
+  padding:5px 14px!important;
+  box-sizing:border-box!important;
+}
+.hq-top-nav .headbar-group{display:contents!important}
+.hq-top-nav .edge-nav-item{
+  width:100%!important;
+  min-width:0!important;
+  justify-self:stretch!important;
+  margin:0!important;
+}
+.hq-top-nav .home-palm{
+  grid-column:4!important;
+  justify-self:center!important;
+  width:62px!important;
+  min-width:62px!important;
+}
+@media(max-width:720px){
+  .hq-top-nav{
+    width:calc(100vw - 20px)!important;
+    padding:4px 6px!important;
+  }
+  .hq-top-nav .edge-nav-item{padding-inline:2px!important}
+  .hq-top-nav .home-palm{width:46px!important;min-width:46px!important}
+}
