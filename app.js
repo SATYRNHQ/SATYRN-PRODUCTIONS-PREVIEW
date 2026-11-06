@@ -52,8 +52,11 @@ function showPage(name){
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
   const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
   crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
-  sidebars.forEach(nav=>nav.classList.remove('open','expanded'));
-  if(document.activeElement?.matches('.hq-side-nav [data-page]'))document.activeElement.blur();
+  sidebars.forEach(nav=>{
+    nav.classList.remove('open','expanded');
+    nav.classList.add('nav-dismissed');
+  });
+  if(document.activeElement?.closest('.hq-side-nav'))document.activeElement.blur();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));
@@ -63,13 +66,14 @@ let sidebarCollapseTimer;
 sidebars.forEach(nav=>{
   nav.addEventListener('pointerenter',()=>{
     clearTimeout(sidebarCollapseTimer);
-    nav.classList.add('expanded');
+    if(!nav.classList.contains('nav-dismissed'))nav.classList.add('expanded');
   });
   nav.addEventListener('pointerleave',()=>{
+    nav.classList.remove('nav-dismissed');
     clearTimeout(sidebarCollapseTimer);
     sidebarCollapseTimer=window.setTimeout(()=>nav.classList.remove('expanded'),600);
   });
-  nav.addEventListener('focusin',()=>{clearTimeout(sidebarCollapseTimer);nav.classList.add('expanded')});
+  nav.addEventListener('focusin',()=>{clearTimeout(sidebarCollapseTimer);if(!nav.classList.contains('nav-dismissed'))nav.classList.add('expanded')});
   nav.addEventListener('focusout',event=>{
     if(!nav.contains(event.relatedTarget)){
       clearTimeout(sidebarCollapseTimer);
