@@ -64,7 +64,7 @@ function showPage(name){
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));
 headbar?.addEventListener('pointerenter',()=>headbar.classList.remove('nav-dismissed'));
 headbar?.addEventListener('pointerleave',()=>headbar.classList.add('nav-dismissed'));
-headbar?.addEventListener('focusin',()=>headbar.classList.remove('nav-dismissed'));
+headbar?.addEventListener('focusin',event=>{if(event.target.matches(':focus-visible'))headbar.classList.remove('nav-dismissed')});
 headbar?.addEventListener('focusout',event=>{if(!headbar.contains(event.relatedTarget))headbar.classList.add('nav-dismissed')});
 
 // Mirrored sidebar expansion with one shared grace period.
