@@ -1912,3 +1912,15 @@ body:has(#page-home.active-page) .money-zone{
   opacity:.78;transition:opacity .55s ease,color .55s ease!important;
 }
 .hq-top-nav .edge-nav-item .nav-icon{transition:opacity .55s ease,color .55s ease,text-shadow .55s ease!important}
+
+
+/* Keep the complete headbar permanently visible after navigation. */
+.hq-top-nav.nav-dismissed{
+  background:linear-gradient(110deg,rgba(8,13,11,.84),rgba(17,26,21,.66),rgba(8,13,11,.84))!important;
+  box-shadow:0 12px 38px rgba(0,0,0,.18),inset 0 1px rgba(255,255,255,.025)!important;
+  border-color:rgba(198,166,106,.17)!important;
+}
+.hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
+  opacity:1!important;visibility:visible!important;color:#c4c9be!important;
+}
+.hq-top-nav.nav-dismissed .edge-nav-item .nav-icon{opacity:1!important}
