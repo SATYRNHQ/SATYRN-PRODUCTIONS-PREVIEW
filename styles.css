@@ -1582,118 +1582,6 @@ body.cc-welcome-active{overflow:hidden}
 }
 
 
-/* Global readability increase — larger typography throughout the HQ */
-body{zoom:1.55}
-@media(max-width:720px){body{zoom:1.22}}
-
-
-/* Readability refinement — informational copy larger than compact metadata */
-p,
-.info-text,
-.description,
-.helper-text,
-.module-description,
-.empty-state p,
-.edge-module-card p,
-.hq-record p,
-.cc-panel p,
-.ares-greeting p {
-  font-size: 1.35em !important;
-  line-height: 1.7 !important;
-}
-small,
-.caption,
-.hq-record small,
-.cc-panel small {
-  font-size: 1.2em !important;
-  line-height: 1.65 !important;
-}
-
-
-/* Strong readability pass: informational text is doubled from the previous pass */
-p,
-.info-text,
-.description,
-.helper-text,
-.module-description,
-.empty-state p,
-.edge-module-card p,
-.hq-record p,
-.cc-panel p,
-.ares-greeting p {
-  font-size: 2.7em !important;
-  line-height: 1.65 !important;
-}
-small,
-.caption,
-.hq-record small,
-.cc-panel small {
-  font-size: 2.4em !important;
-  line-height: 1.6 !important;
-}
-
-
-/* Heading hierarchy refinement: reduce headings by 50% */
-h1,h2,h3,h4,h5,h6,
-.title,.section-title,.page-title,.card-title,
-.cc-window-top h1,.cc-expanded-head h2 {
-  font-size: 0.5em !important;
-  line-height: 1.2 !important;
-}
-
-
-/* Bring informational copy back to a comfortable reading size */
-p,
-.info-text,
-.description,
-.helper-text,
-.module-description,
-.empty-state p,
-.edge-module-card p,
-.hq-record p,
-.cc-panel p,
-.ares-greeting p {
-  font-size: 1.05em !important;
-  line-height: 1.55 !important;
-}
-small,
-.caption,
-.hq-record small,
-.cc-panel small {
-  font-size: 0.95em !important;
-  line-height: 1.5 !important;
-}
-
-
-/* Further reduce informational copy by approximately 50 percent */
-p,
-.info-text,
-.description,
-.helper-text,
-.module-description,
-.empty-state p,
-.edge-module-card p,
-.hq-record p,
-.cc-panel p,
-.ares-greeting p {
-  font-size: 0.525em !important;
-  line-height: 1.45 !important;
-}
-small,
-.caption,
-.hq-record small,
-.cc-panel small {
-  font-size: 0.475em !important;
-  line-height: 1.4 !important;
-}
-
-
-/* Global typography scale: reduce all text sizes by approximately 30 percent */
-html {
-  font-size: 70% !important;
-}
-
-
 /* SATYRN HQ — unified dual-sidebar + centered-palm shell (first test build) */
 :root{
   --hq-obsidian:#080D0B;
@@ -2022,4 +1910,99 @@ body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
   bottom:-5px;
   background:#78b98a;
   box-shadow:0 0 5px rgba(105,205,132,.75),0 0 12px rgba(105,205,132,.42);
+}
+
+
+/* SATYRN HQ — resolution-aware layout foundation */
+html{font-size:100%!important;min-width:320px;scroll-behavior:smooth}
+body{zoom:1!important;min-width:320px;min-height:100vh;min-height:100dvh;overflow-x:hidden}
+.app-shell,.main-area,.page,.page>*{min-width:0;max-width:100%}
+.main-area{
+  width:100%!important;max-width:none!important;margin:0!important;
+  padding:clamp(96px,9vh,142px) clamp(72px,7vw,176px) clamp(30px,4vh,64px)!important;
+}
+.page{width:100%;max-width:1900px;margin-inline:auto}
+.page-intro{padding-block:clamp(30px,4vw,72px) clamp(22px,2.5vw,42px)}
+.page-intro h1{font-size:clamp(2.5rem,4.2vw,5rem)!important;line-height:1.02!important;letter-spacing:clamp(-3px,-.18vw,-1px)}
+.page-intro>p,.hero-copy>p{font-size:clamp(.9rem,.9vw,1.08rem)!important;line-height:1.7!important;max-width:min(62ch,100%)}
+.hero{min-height:clamp(300px,42vh,620px)}
+.hero h1{font-size:clamp(3.2rem,6vw,6.5rem)!important}
+.section-heading{margin-block:clamp(22px,3vh,42px) 16px}
+.section-heading h2{font-size:clamp(1.35rem,1.65vw,1.9rem)!important}
+.dashboard-grid,.feature-grid,.hq-tool-grid,.finance-grid,.studio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.2vw,22px)}
+.glass-card,.cc-panel,.feature-tile{min-width:0}
+.focus-card,.quick-card,.ares-card,.guest-card,.feature-tile{padding:clamp(16px,1.55vw,30px)}
+.focus-content{gap:clamp(12px,1.4vw,24px)}
+.focus-number{font-size:clamp(2.4rem,3.5vw,4rem)}
+.focus-content h3,.ares-card h3,.guest-content h3{font-size:clamp(1.2rem,1.8vw,2rem)!important}
+.quick-link{min-width:0}
+.quick-link b{font-size:clamp(.78rem,.82vw,.95rem)}
+.quick-link small{font-size:clamp(.68rem,.7vw,.82rem)}
+p,.info-text,.description,.helper-text,.module-description,.empty-state p,.edge-module-card p,.hq-record p,.cc-panel p,.ares-greeting p{font-size:clamp(.82rem,.82vw,.98rem)!important;line-height:1.65!important}
+small,.caption,.hq-record small,.cc-panel small{font-size:clamp(.68rem,.68vw,.82rem)!important;line-height:1.5!important}
+h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15!important}
+.cc-welcome-backdrop{padding:clamp(14px,2.5vw,42px)}
+.cc-welcome-window{
+  width:min(1440px,calc(100vw - clamp(28px,5vw,84px)));
+  max-height:calc(100vh - clamp(28px,5vh,72px));
+  max-height:calc(100dvh - clamp(28px,5vh,72px));
+  overflow:auto;padding:clamp(20px,2.4vw,42px);
+}
+.cc-window-top h2,.cc-expanded-head h2{font-size:clamp(2rem,3vw,3.2rem)!important}
+.cc-welcome-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(9px,1vw,16px);margin-block:clamp(16px,2vh,28px)}
+.cc-welcome-grid>.cc-panel:nth-child(1),.cc-welcome-grid>.cc-panel:nth-child(2){grid-column:span 3}
+.cc-welcome-grid>.cc-panel:nth-child(n+3){grid-column:span 2}
+.cc-panel{padding:clamp(13px,1.25vw,22px)}
+.cc-panel-feature{min-height:clamp(170px,20vh,250px)}
+.cc-panel-compact{min-height:clamp(125px,14vh,180px)}
+.cc-panel h3{font-size:clamp(1.15rem,1.55vw,1.7rem)!important}
+.cc-progress-number{font-size:clamp(2.7rem,4vw,4.1rem)}
+.cc-inline-meta{flex-wrap:wrap}.cc-inline-meta strong{text-align:right}
+.cc-expanded-card{width:min(900px,calc((100vw - 2 * clamp(72px,7vw,176px)) * .58));max-width:calc(100vw - 32px);min-width:0;max-height:calc(100dvh - 32px);overflow:auto}
+.edge-module-card{width:min(100%,1000px);padding:clamp(18px,2.2vw,36px)}
+.feature-tile{min-height:clamp(190px,22vh,300px)}
+.page-footer{gap:16px;flex-wrap:wrap}
+@media(min-width:1600px){
+  .main-area{padding-inline:clamp(150px,8vw,220px)!important}
+  .page{max-width:2100px}.cc-welcome-window{width:min(1580px,calc(100vw - 9vw))}
+  .cc-panel-feature{min-height:clamp(210px,22vh,310px)}
+}
+@media(max-width:1100px){
+  .main-area{padding-inline:68px!important}.cc-welcome-window{width:calc(100vw - 150px)}
+  .cc-welcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cc-welcome-grid>.cc-panel:nth-child(n){grid-column:span 1}
+  .cc-welcome-grid>.cc-panel:nth-child(5){grid-column:1/-1}
+  .cc-expanded-card{width:calc(100vw - 150px);right:0}
+}
+@media(max-width:900px){
+  .main-area{padding-inline:62px!important}
+  .dashboard-grid,.feature-grid,.hq-tool-grid,.finance-grid,.studio-grid{grid-template-columns:1fr}
+  .cc-welcome-window{width:calc(100vw - 36px)}
+  .cc-welcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cc-welcome-grid>.cc-panel:nth-child(n){grid-column:span 1}
+  .cc-welcome-grid>.cc-panel:nth-child(5){grid-column:1/-1}
+}
+@media(max-width:720px){
+  .main-area{padding:88px 16px 108px!important}
+  .page-intro{padding-top:clamp(24px,7vw,44px)}
+  .page-intro h1{font-size:clamp(2.25rem,10vw,3.6rem)!important;letter-spacing:-1.5px}
+  .hero{min-height:clamp(280px,58vh,430px)}
+  .hero h1{font-size:clamp(2.8rem,13vw,4.2rem)!important;letter-spacing:-2px}
+  .section-heading{align-items:flex-start;flex-wrap:wrap}
+  .dashboard-grid,.feature-grid,.hq-tool-grid,.finance-grid,.studio-grid{grid-template-columns:minmax(0,1fr)}
+  .cc-welcome-backdrop{padding:10px}
+  .cc-welcome-window{width:100%;max-height:calc(100dvh - 20px);padding:clamp(15px,4vw,22px)}
+  .cc-window-top{flex-direction:column;gap:9px}
+  .cc-welcome-grid{grid-template-columns:minmax(0,1fr);gap:9px;margin-block:14px}
+  .cc-welcome-grid>.cc-panel:nth-child(n){grid-column:1/-1}
+  .cc-panel-feature,.cc-panel-compact{min-height:0}
+  .cc-welcome-footer{align-items:flex-start;flex-direction:column}
+  .cc-expanded-card{top:0;left:10px;right:10px;width:auto;max-width:none;max-height:calc(100dvh - 20px);padding:16px}
+}
+@media(max-height:650px) and (min-width:721px){
+  .main-area{padding-top:92px!important}.hero{min-height:300px}
+  .cc-welcome-backdrop{padding:10px}
+  .cc-welcome-window{max-height:calc(100dvh - 20px);padding:18px 22px}
+  .cc-welcome-grid{gap:8px;margin-block:12px}
+  .cc-panel-feature{min-height:145px}.cc-panel-compact{min-height:105px}.cc-panel{padding:12px}
 }
