@@ -1892,30 +1892,17 @@ body:has(#page-home.active-page) .money-zone{
 }
 
 
-/* Headbar mirrors the sidebar's persistent glass and soft post-navigation fade. */
+
+/* Headbar: consistent layout and a real opacity fade for labels. */
 .hq-top-nav{
   transition:background .65s ease,box-shadow .65s ease,border-color .65s ease,
     -webkit-backdrop-filter .65s ease,backdrop-filter .65s ease!important;
-}
-.hq-top-nav .edge-nav-item .nav-label{
-  transition:opacity .55s ease-in-out,color .55s ease!important;
 }
 .hq-top-nav.nav-dismissed{
   background:linear-gradient(110deg,rgba(8,13,11,.38),rgba(17,26,21,.30),rgba(8,13,11,.38))!important;
   box-shadow:0 8px 24px rgba(0,0,0,.10),inset 0 1px rgba(255,255,255,.018)!important;
   border-color:rgba(198,166,106,.14)!important;
 }
-.hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
-  opacity:0!important;color:transparent!important;
-}
-.hq-top-nav.nav-dismissed .edge-nav-item .nav-icon{
-  opacity:.78;transition:opacity .55s ease,color .55s ease!important;
-}
-.hq-top-nav .edge-nav-item .nav-icon{transition:opacity .55s ease,color .55s ease,text-shadow .55s ease!important}
-
-
-
-/* Headbar labels sit beneath their icons; the centered palm stays icon-only. */
 .hq-top-nav .edge-nav-item{
   flex-direction:column!important;
   justify-content:center!important;
@@ -1926,81 +1913,31 @@ body:has(#page-home.active-page) .money-zone{
 }
 .hq-top-nav .edge-nav-item .nav-icon{
   flex:0 0 auto;
+  transition:opacity .55s ease,color .55s ease,text-shadow .55s ease!important;
 }
+.hq-top-nav.nav-dismissed .edge-nav-item .nav-icon{opacity:.78}
 .hq-top-nav .edge-nav-item .nav-label{
   position:static!important;
   top:auto!important;left:auto!important;
   transform:none!important;
   display:block!important;
   max-width:none!important;
-  opacity:0;visibility:hidden;
+  visibility:visible!important;
+  opacity:0;
   color:#c4c9be;
   font-size:9px!important;
   line-height:1.15!important;
   letter-spacing:.5px!important;
   white-space:nowrap;
-  transition:opacity .65s ease-in-out,visibility .65s ease-in-out!important;
+  transition:opacity 1s ease-in-out!important;
+  will-change:opacity;
 }
-.hq-top-nav:hover .edge-nav-item .nav-label,
-.hq-top-nav .edge-nav-item:focus-visible .nav-label{
-  opacity:1;visibility:visible;
+.hq-top-nav.labels-visible .edge-nav-item .nav-label{
+  opacity:1;
 }
 .hq-top-nav .home-palm .nav-label{display:none!important}
-.hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
-  opacity:0!important;
-  visibility:hidden!important;
-  transition:opacity .65s ease-in-out,visibility 0s linear .65s!important;
-}
 .hq-top-nav .home-palm{
   align-self:center;
   min-height:58px!important;
   gap:0!important;
 }
-
-
-/* Keep headbar label fading deterministic on both hover-leave and navigation clicks. */
-.hq-top-nav .edge-nav-item .nav-label{
-  visibility:visible!important;
-  transition:opacity .65s ease-in-out!important;
-}
-.hq-top-nav.nav-dismissed .edge-nav-item .nav-label,
-.hq-top-nav.nav-dismissed:hover .edge-nav-item .nav-label,
-.hq-top-nav.nav-dismissed .edge-nav-item:focus-visible .nav-label{
-  opacity:0!important;
-}
-.hq-top-nav:not(.nav-dismissed):hover .edge-nav-item .nav-label,
-.hq-top-nav:not(.nav-dismissed) .edge-nav-item:focus-visible .nav-label{
-  opacity:1!important;
-}
-
-
-/* Final headbar fade: keep labels renderable while opacity animates, like the sidebars. */
-.hq-top-nav .edge-nav-item .nav-label,
-.hq-top-nav.nav-dismissed .edge-nav-item .nav-label,
-.hq-top-nav.nav-dismissed:hover .edge-nav-item .nav-label,
-.hq-top-nav.nav-dismissed .edge-nav-item:focus-visible .nav-label{
-  visibility:visible!important;
-  transition:opacity .9s ease-in-out!important;
-}
-.hq-top-nav.nav-dismissed .edge-nav-item .nav-label{
-  opacity:0!important;
-}
-.hq-top-nav:not(.nav-dismissed):hover .edge-nav-item .nav-label,
-.hq-top-nav:not(.nav-dismissed) .edge-nav-item:focus-visible .nav-label{
-  opacity:1!important;
-}
-.hq-top-nav .home-palm .nav-label{display:none!important}
-
-
-/* Explicit state prevents hover selector changes from skipping the fade-out. */
-.hq-top-nav .edge-nav-item .nav-label{
-  visibility:visible!important;
-  opacity:0!important;
-  transition:opacity 1s ease-in-out!important;
-  will-change:opacity;
-}
-.hq-top-nav.labels-visible .edge-nav-item .nav-label{
-  opacity:1!important;
-  visibility:visible!important;
-}
-.hq-top-nav .home-palm .nav-label{display:none!important}
