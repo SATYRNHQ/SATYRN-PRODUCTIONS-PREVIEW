@@ -1869,12 +1869,24 @@ body:has(#page-home.active-page) .money-zone{
 }
 
 
-/* Keep a sidebar collapsed after navigation while the pointer remains over it. */
+/* Smoothly fold the sidebar after navigation; keep its frame and glass visible. */
+.hq-side-nav{
+  transition:width .75s cubic-bezier(.22,.61,.36,1),
+    padding .75s cubic-bezier(.22,.61,.36,1),
+    background-color .65s ease,box-shadow .65s ease,
+    -webkit-backdrop-filter .65s ease,backdrop-filter .65s ease!important;
+}
+.hq-side-nav .nav-label{
+  transition:opacity .55s ease-in-out,max-width .65s cubic-bezier(.22,.61,.36,1)!important;
+}
 .hq-side-nav.nav-dismissed,
 .hq-side-nav.nav-dismissed:focus-within{
   width:56px!important;padding:12px 5px!important;
+  background:rgba(8,13,11,.38)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.12),inset 0 0 18px rgba(32,59,45,.06)!important;
 }
 .hq-side-nav.nav-dismissed .nav-label,
 .hq-side-nav.nav-dismissed:focus-within .nav-label{
   max-width:0!important;opacity:0!important;
+  transition:opacity .55s ease-in-out,max-width .65s cubic-bezier(.22,.61,.36,1)!important;
 }
