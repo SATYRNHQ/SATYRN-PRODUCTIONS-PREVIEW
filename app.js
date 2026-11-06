@@ -52,7 +52,8 @@ function showPage(name){
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
   const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
   crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
-  sidebars.forEach(nav=>nav.classList.remove('open'));
+  sidebars.forEach(nav=>nav.classList.remove('open','expanded'));
+  if(document.activeElement?.matches('.hq-side-nav [data-page]'))document.activeElement.blur();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page)));
