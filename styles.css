@@ -1990,3 +1990,17 @@ body:has(#page-home.active-page) .money-zone{
   opacity:1!important;
 }
 .hq-top-nav .home-palm .nav-label{display:none!important}
+
+
+/* Explicit state prevents hover selector changes from skipping the fade-out. */
+.hq-top-nav .edge-nav-item .nav-label{
+  visibility:visible!important;
+  opacity:0!important;
+  transition:opacity 1s ease-in-out!important;
+  will-change:opacity;
+}
+.hq-top-nav.labels-visible .edge-nav-item .nav-label{
+  opacity:1!important;
+  visibility:visible!important;
+}
+.hq-top-nav .home-palm .nav-label{display:none!important}
