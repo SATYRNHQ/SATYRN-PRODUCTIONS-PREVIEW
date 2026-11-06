@@ -1847,3 +1847,11 @@ body{background-color:var(--hq-obsidian)}
 @media(prefers-reduced-motion:reduce){
   .hq-top-nav,.hq-side-nav,.hq-side-nav .edge-nav-item,.hq-side-nav .nav-label{transition:none!important}
 }
+
+
+/* Retire the legacy homepage side rails: the new global dual sidebars replace them. */
+body:has(#page-home.active-page) .side-zones,
+body:has(#page-home.active-page) .time-zone,
+body:has(#page-home.active-page) .money-zone{
+  display:none!important;
+}
