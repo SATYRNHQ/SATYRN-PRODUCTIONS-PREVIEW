@@ -1966,3 +1966,22 @@ body:has(#page-home.active-page) .money-zone{
   line-height:1!important;
   transform:none!important;
 }
+
+
+/* Keep the complete global headbar visible on the Home page as well. */
+body:has(#page-home.active-page) .hq-top-nav{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  z-index:80!important;
+}
+body:has(#page-home.active-page) .hq-top-nav .edge-nav-item{
+  display:flex!important;
+  visibility:visible!important;
+}
+body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
+  display:grid!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
