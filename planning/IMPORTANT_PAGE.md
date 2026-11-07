@@ -190,3 +190,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Mehrere Eintragskarten dürfen gleichzeitig ausgeklappt bleiben.
 - Beim Ausklappen einer Karte werden alle Informationen des Eintrags sichtbar.
 - Nach einem Neuladen der Seite sind alle Karten wieder eingeklappt; der Ausklappzustand wird nicht dauerhaft gespeichert.
+
+## Standardzustand der Prioritätsfilter
+- Beim Öffnen der Important-Seite sind standardmäßig alle vier Prioritäten aktiviert.
+- Nutzer können einzelne Prioritäten bei Bedarf ausblenden; die übrigen Filter- und Sortierregeln bleiben unverändert.
