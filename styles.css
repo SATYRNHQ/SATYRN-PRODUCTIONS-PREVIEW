@@ -2196,5 +2196,10 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
 
 
 /* Mirror the right sidebar inset on the left sidebar. */
-.hq-time-nav .edge-nav-item .nav-icon{transform:translateX(7px)!important}
-@media(max-width:720px){.hq-time-nav .edge-nav-item .nav-icon{transform:translateX(3px)!important}}
+.hq-time-nav .edge-nav-item .nav-icon{
+  align-self:center!important;
+  transform:translate(7px,3px)!important;
+}
+@media(max-width:720px){
+  .hq-time-nav .edge-nav-item .nav-icon{transform:translate(3px,2px)!important}
+}
