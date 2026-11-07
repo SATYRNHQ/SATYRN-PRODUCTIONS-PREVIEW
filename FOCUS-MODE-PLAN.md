@@ -331,6 +331,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ein Zurücksetzen auf Standardwerte ist jederzeit möglich.
 - Die Belegungen werden in einem späteren Backup-Konzept berücksichtigt, sofern die Focus-Mode-Einstellungen exportiert werden.
 
+
+### Prüfung der Tastaturbelegungen
+- Beim Öffnen von Focus Mode werden die gespeicherten Tastaturbelegungen automatisch auf Konflikte und ungültige Zuordnungen geprüft.
+- Bei Problemen erscheint eine verständliche Warnung mit den betroffenen Aktionen und Tasten.
+- Der Nutzer kann die Belegungen direkt im Tastaturkürzel-Editor korrigieren oder auf Standardwerte zurücksetzen.
+- Eine fehlerhafte individuelle Belegung darf die übrige Focus-Mode-Bedienung nicht blockieren.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
