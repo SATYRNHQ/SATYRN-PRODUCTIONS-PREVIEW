@@ -38,7 +38,8 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Timer ist jederzeit pausierbar und kann an derselben Stelle fortgesetzt werden.
 - Ein Reset-Button ist vorhanden. Vor dem Zurücksetzen erscheint eine Sicherheitsabfrage.
 - Eine Session kann vorzeitig mit **Complete Session** erfolgreich abgeschlossen werden. Die tatsächliche Dauer wird gespeichert und in History sowie Statistiken berücksichtigt.
-- Abgebrochene Sessions gelten nicht als erfolgreich, werden aber separat in der History dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten.
+- Eine Session kann unterbrochen bzw. abgebrochen werden, ohne sie endgültig abzuschließen. Sie bleibt als offene, wiederaufnehmbare Session erhalten und wird zusätzlich in der History als unterbrochen dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten.
+- **Complete Session** ist davon getrennt: Damit kann eine Session auch vor Ablauf des Timers bewusst erfolgreich beendet werden. Sie verschwindet dann aus der offenen Liste und wird in History sowie Statistiken übernommen.
 - Wenn eine Fokusphase endet, wechselt der Timer automatisch in die Pause.
 - Nach Ende der Pause wartet der Timer auf einen manuellen Start der nächsten Fokusphase.
 - Die Pause kann über **Skip Break** übersprungen werden. Danach wartet der Timer auf den manuellen Start der nächsten Fokusphase.
@@ -532,6 +533,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Abgeschlossene Sessions bleiben vollständig in der Session History erhalten.
 - Ihre Daten fließen außerdem in die Focus-Statistiken ein.
 - Die Session wird dadurch nicht gelöscht; sie ist weiterhin über History und Statistiken nachvollziehbar.
+
+
+### Unterschied zwischen Unterbrechen und vorzeitigem Abschließen
+- **Unterbrechen/Abbrechen:** Die Session bleibt offen und kann später fortgesetzt werden. Sie wird in der offenen Session-Liste als unterbrochen angezeigt und zusätzlich in der History nachvollziehbar dokumentiert.
+- **Vorzeitig abschließen (Complete Session):** Die Session gilt als erfolgreich abgeschlossen, auch wenn die geplante Dauer noch nicht erreicht wurde. Sie verschwindet aus der offenen Liste und fließt in History und Statistiken ein.
+- Eine Unterbrechung darf nicht automatisch als endgültiger Abbruch oder als erfolgreiche Session gewertet werden.
 
 ## 8. Umsetzungsregeln
 
