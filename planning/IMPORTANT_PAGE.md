@@ -16,7 +16,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 5. **Sonstiges** — ausschließlich wichtige Informationen, die in keine der vier anderen Kategorien passen. Die Kategorie ist als Auffangkategorie gedacht und soll nicht die reguläre Zuordnung ersetzen.
 
 ## Noch offen — gemeinsam festlegen
-- Konkreter Seitenaufbau und Darstellung der Einträge
+- Konkreter Seitenaufbau und Anordnung der Karten
 - Wie Prioritätsstufen benannt und vergeben werden
 - Erstellen, Bearbeiten und Löschen im Detail
 - Suche und weitere Sortiermöglichkeiten
@@ -32,6 +32,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Einträge sollen nach Kategorie filterbar sein. Der Filter soll ermöglichen, einzelne Kategorien ein- und auszublenden.
 - Einträge können eine Priorität erhalten. Die Priorität wirkt kategorienübergreifend: Höher priorisierte Einträge werden automatisch weiter oben angezeigt, unabhängig davon, welcher Kategorie sie angehören.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
+- Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
+- Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
 - Die fünf Kategorien und ihre inhaltlichen Abgrenzungen sind festgelegt: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Future Blueprints; Sonstiges.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
