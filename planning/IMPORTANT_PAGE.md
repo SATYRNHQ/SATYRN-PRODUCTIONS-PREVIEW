@@ -273,3 +273,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Kartenoberfläche
 - Important-Karten verwenden eine dunkle Glasoptik (Dark Glass) mit leichtem metallischem Rand und subtilen Lichtreflexen.
 - Die Oberfläche bleibt hochwertig und zurückhaltend; Texte und farbige Kategorie-/Prioritätsmarkierungen müssen klar lesbar bleiben.
+
+- Der metallische Kartenrand verwendet eine dezente Mischung aus Gold und Grün, passend zur gold-grün-schwarzen SATYRN-HQ-Identität.
