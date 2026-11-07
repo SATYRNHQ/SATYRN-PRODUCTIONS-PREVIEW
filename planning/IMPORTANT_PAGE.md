@@ -337,3 +337,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Statt einer reinen Zahlenreihe wird ein kompaktes Kreisdiagramm verwendet, das die Verteilung der Einträge auf Dringend, Wichtig, Vorläufig und Unbefristet zeigt.
 - Die vier Prioritäten bleiben zusätzlich mit ihren Namen und aktuellen Anzahlen erkennbar; Farben entsprechen den festgelegten Prioritätsfarben.
 - Das Diagramm aktualisiert sich automatisch bei Erstellung, Bearbeitung und Löschung von Einträgen sowie passend zur aktuell sichtbaren Ergebnisliste.
+
+## Interaktion mit dem Prioritäts-Kreisdiagramm
+- Ein Klick auf ein Segment des Kreisdiagramms aktiviert direkt den zugehörigen Prioritätsfilter.
+- Die übrigen Such- und Kategorie-Filter bleiben unverändert; die Ergebnisliste und Trefferanzahl aktualisieren sich entsprechend.
+- Das ausgewählte Segment erhält eine dezente visuelle Hervorhebung. Ein erneuter Klick auf dasselbe Segment deaktiviert diesen Prioritätsfilter wieder.
