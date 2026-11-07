@@ -117,3 +117,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Wenn ein Eintrag ein Ereignisdatum besitzt, wird es auf der Karte als kleines Kalender-Label mit Kalender-Symbol und lesbarem Datum angezeigt. Einträge ohne Ereignisdatum zeigen dieses Label nicht an.
 
 - Zusätzlich zum konkreten Kalenderdatum wird eine relative Zeitangabe angezeigt, sofern ein Ereignisdatum gesetzt ist: bei zukünftigen Ereignissen z. B. „In 3 Tagen“, bei vergangenen Ereignissen z. B. „Vor 5 Tagen“. Die Angabe wird dynamisch anhand des aktuellen Datums berechnet und aktualisiert.
+
+- Einträge mit der Priorität **Dringend** erhalten zusätzlich ein deutlich sichtbares Warnsymbol direkt neben dem Titel. Dieses Symbol ergänzt den roten Prioritätsstreifen und hebt Dringend klar von Wichtig ab; Wichtig erhält kein Warnsymbol.
