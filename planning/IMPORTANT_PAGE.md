@@ -29,3 +29,11 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Änderungsprotokoll
 - Konzept begonnen: Nutzer hat Important als erste gemeinsam zu planende Seite ausgewählt.
+
+## Bestätigte Entscheidung — Eintrag hinzufügen
+- Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
+- Ein Klick auf das Plus öffnet ein separates Eingabefenster (Modal/Overlay) innerhalb des zentralen Inhaltsbereichs.
+- In diesem Fenster kann ein neuer Important-Eintrag angelegt und bearbeitet werden.
+- Das Fenster soll die Eingabe übersichtlich bündeln; konkrete Felder und Aktionen werden gemeinsam noch festgelegt.
+- Das Fenster darf Headbar und Sidebars nicht überdecken oder deren Interaktion beeinträchtigen.
+
