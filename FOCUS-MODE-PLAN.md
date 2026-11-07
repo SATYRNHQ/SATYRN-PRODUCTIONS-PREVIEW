@@ -663,6 +663,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die erledigte Aufgabe bleibt als erledigt gekennzeichnet in der Session sichtbar und die Verknüpfung bleibt nachvollziehbar.
 - Für diese Aktion gelten die einheitlichen Sicherheitsabfragen aus dem Important-Tab.
 
+
+### Anzeige erledigter verknüpfter Aufgaben
+- Sobald eine verknüpfte Important-Aufgabe als erledigt markiert wird, wird sie automatisch aus der sichtbaren Aufgabenliste der Focus-Session ausgeblendet.
+- Die Erledigung und die frühere Verknüpfung bleiben in den zugehörigen Daten und in der History nachvollziehbar.
+- Das automatische Ausblenden verändert weder den Status noch den Ablauf der Focus-Session oder anderer verknüpfter Aufgaben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
