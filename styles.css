@@ -2179,3 +2179,24 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 58%,rgba(0,0,0,.78) 78%,transparent 100%);
   mask-image:linear-gradient(to bottom,#000 0%,#000 58%,rgba(0,0,0,.78) 78%,transparent 100%);
 }
+
+
+/* Global content safe zone: keep every page inside the space between the fixed navigation rails. */
+@media(min-width:721px){
+  .main-area{
+    padding-top:clamp(164px,13vh,184px)!important;
+    padding-left:clamp(88px,7vw,176px)!important;
+    padding-right:clamp(88px,7vw,176px)!important;
+    transition:padding .65s cubic-bezier(.22,.61,.36,1)!important;
+  }
+  /* When either sidebar opens, reserve its full expanded width on both sides. */
+  .app-shell:has(.hq-side-nav:not(.nav-dismissed)) .main-area{
+    padding-left:clamp(260px,calc(18vw + 24px),304px)!important;
+    padding-right:clamp(260px,calc(18vw + 24px),304px)!important;
+  }
+}
+@media(max-width:720px){
+  .main-area{
+    padding:140px 16px 82px!important;
+  }
+}
