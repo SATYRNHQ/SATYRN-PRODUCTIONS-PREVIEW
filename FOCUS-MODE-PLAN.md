@@ -724,6 +724,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Session-History bewahrt die damalige Hauptaufgabe sowie den Status aller verknüpften Aufgaben nachvollziehbar auf.
 - Die Hauptaufgabe kann bei Bedarf manuell unter den noch offenen verknüpften Aufgaben geändert werden.
 
+
+### Visuelle Hervorhebung der Hauptaufgabe
+- Die Hauptaufgabe wird im Focus Mode als größeres, klar hervorgehobenes Aufgabenelement dargestellt.
+- Zusätzliche verknüpfte Aufgaben erscheinen darunter kompakter und visuell zurückhaltender.
+- Die Darstellung bleibt im Premium-Dark-Design und nutzt die bestehenden Kategorie- und Prioritätsfarben aus Important.
+- Die Hervorhebung dient der Orientierung und erzeugt keine zusätzliche Priorität neben der bereits festgelegten Prioritätslogik.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
