@@ -21,7 +21,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
 - Weitere optionale Metadaten neben den bereits festgelegten Feldern
-- Genaue Formulierung und weitere Details der Löschbestätigung
+- Genaue Formulierung der Löschbestätigung
 
 ## Bestätigte Entscheidungen und Änderungsprotokoll
 - Important ist eine zentrale Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können; keine zweite Task- oder Deadline-Liste.
@@ -29,7 +29,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Jeder Eintrag muss genau einer Kategorie zugeordnet werden.
 - Alle fünf Kategorien sollen auf der Important-Seite grundsätzlich aufgelistet sein.
 - Einträge sollen nach Kategorie filterbar sein. Der Filter soll ermöglichen, einzelne Kategorien ein- und auszublenden.
-- Einträge können eine Priorität erhalten. Die Priorität wirkt kategorienübergreifend: Höher priorisierte Einträge werden automatisch weiter oben angezeigt, unabhängig davon, welcher Kategorie sie angehören.
+- **Jeder Eintrag muss zwingend genau eine Prioritätsstufe haben.** Ein Eintrag ohne Priorität kann nicht gespeichert werden. So bleibt die Übersicht klar strukturiert.
 - Die vier festgelegten Prioritätsstufen und Farben sind:
   1. **Dringend** — Rot
   2. **Wichtig** — Orange
