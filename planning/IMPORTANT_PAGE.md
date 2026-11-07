@@ -305,3 +305,12 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Visuelle Hervorhebung neu gespeicherter Einträge
 - Neu gespeicherte Einträge erhalten keine zusätzliche temporäre Hervorhebung; die normale Prioritäts- und Kartenoptik reicht aus.
+
+## Such- und Filterzustand beim erneuten Öffnen
+- Beim erneuten Öffnen bzw. Zurückkehren zur Important-Seite starten Suche und Filter immer im Standardzustand: Suchfeld leer, alle fünf Kategorien und alle vier Prioritäten aktiviert.
+- Der zuvor verwendete Such- und Filterzustand wird nicht beibehalten.
+
+## Kennzeichnung neu erstellter Einträge
+- Neu erstellte Einträge erhalten am Kartenrand eine kleine Kennzeichnung mit dem Text „Neu“.
+- Die Kennzeichnung leuchtet dezent und passend zur gold-grün-schwarzen SATYRN-HQ-Optik.
+- Sie ist eine kleine Orientierungshilfe und darf Prioritätsstreifen, Titel oder andere Karteninformationen nicht verdrängen oder überdecken.
