@@ -21,7 +21,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
 - Ob und wie Einträge weitere optionale Metadaten erhalten
-- Konkrete Gestaltung und Formulierung der Löschbestätigung
+- Genaue Formulierung und weitere Details der Löschbestätigung
 
 ## Bestätigte Entscheidungen und Änderungsprotokoll
 - Important ist eine zentrale Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können; keine zweite Task- oder Deadline-Liste.
@@ -46,7 +46,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
 - Einträge sollen nach dem Erstellen jederzeit bearbeitet werden können.
 - Einträge sollen gelöscht werden können.
-- **Vor dem endgültigen Löschen eines Eintrags soll eine Sicherheitsabfrage erscheinen**, damit ein Eintrag nicht versehentlich gelöscht wird. Die genaue Gestaltung und Formulierung dieser Abfrage wird später festgelegt.
+- **Vor dem endgültigen Löschen eines Eintrags soll eine Sicherheitsabfrage erscheinen.** Diese wird als kleines, zentriertes Bestätigungsfenster innerhalb des zentralen Inhaltsbereichs dargestellt. Sie bietet die Aktionen **„Abbrechen“** und einen deutlich roten **„Endgültig löschen“**-Button. Die genaue Formulierung der Abfrage wird später festgelegt.
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
 - Die fünf Kategorien und ihre inhaltlichen Abgrenzungen sind festgelegt: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Future Blueprints; Sonstiges.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
