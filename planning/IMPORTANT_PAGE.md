@@ -211,3 +211,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Filter-Gruppenaktionen
 - Beide Filtergruppen erhalten jeweils einen kleinen Button „Alle“.
 - Der Button aktiviert alle Checkboxen innerhalb seiner jeweiligen Gruppe (Kategorien oder Priorität).
+
+- Neben „Alle“ erhält jede Filtergruppe auch einen Button „Keine“, der sämtliche Checkboxen dieser Gruppe deaktiviert.
