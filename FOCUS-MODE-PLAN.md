@@ -706,6 +706,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Priorität der offenen Session wird nach dem Hinzufügen anhand der höchsten Priorität aller aktuell verknüpften Aufgaben neu berechnet.
 - Das Hinzufügen von Aufgaben startet oder beendet die Session nicht und verändert keine bestehenden Notizen, Zeitdaten oder Unteraufgaben.
 
+
+### Auswahl und Bestätigung beim Hinzufügen weiterer Important-Aufgaben
+- Weitere Important-Aufgaben werden während einer Focus-Session über ein kleines Auswahlfenster hinzugefügt.
+- Das Auswahlfenster zeigt offene Important-Aufgaben; bereits mit dieser Session verknüpfte Aufgaben werden ausgeblendet, damit keine doppelten Verknüpfungen entstehen.
+- Der Nutzer kann mehrere Aufgaben auswählen und die Auswahl anschließend mit „Hinzufügen“ bestätigen.
+- Erst nach dieser Bestätigung werden die ausgewählten Aufgaben mit der Session verknüpft.
+- Das Auswahlfenster kann ohne Änderungen geschlossen werden; bestehende Verknüpfungen und Session-Daten bleiben unverändert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
