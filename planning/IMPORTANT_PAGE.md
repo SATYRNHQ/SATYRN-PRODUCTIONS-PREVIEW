@@ -258,3 +258,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die nebeneinanderliegenden Filterbereiche „Kategorien“ und „Priorität“ erhalten jeweils eine dezente eigene Hintergrundfläche bzw. Umrandung, passend zum dunklen SATYRN-HQ-Design.
 
 - Die Überschrift „Kategorien“ erhält ein kleines passendes Symbol; die Überschrift „Priorität“ ebenfalls. Beide Symbole bleiben dezent und fügen sich in das SATYRN-HQ-Design ein.
+
+## Scroll-Verhalten des Filterbereichs
+- Suchfeld, Filterbereiche und Trefferanzahl scrollen normal mit der Seite nach oben aus dem Sichtfeld.
+- Sie bleiben nicht sticky oder dauerhaft am oberen Rand fixiert.
