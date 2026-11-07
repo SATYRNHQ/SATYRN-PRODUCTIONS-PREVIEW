@@ -862,6 +862,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der aktuelle Session-Zustand bleibt während des Wechsels erhalten; Timer und Session werden nicht neu gestartet oder zurückgesetzt.
 - Bei mehreren offenen Sessions führt die Aktion genau zur Session, aus der die Aufgabe geöffnet wurde.
 
+
+### Zurück-zur-Session-Zugriff seitenübergreifend verfügbar
+- Die Rückkehr zur zuletzt verlassenen Focus-Session bleibt auch beim Wechsel auf andere SATYRN-HQ-Seiten verfügbar.
+- Eine dezente, seitenübergreifende Aktion „Zurück zur Focus-Session“ führt zur exakt zugehörigen offenen Session.
+- Die Aktion wird nur angezeigt, solange eine passende offene Session existiert, und verändert deren Timer- oder Session-Zustand nicht.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
