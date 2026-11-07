@@ -376,6 +376,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Sie werden dezent eingeblendet und blockieren den aktuell geöffneten Arbeitsbereich nicht.
 - Beim Seitenwechsel dürfen keine doppelten Erinnerungen oder parallelen Timer entstehen.
 
+
+### Erscheinungsbild der Erinnerungen
+- Inaktivitäts- und Pausenerinnerungen erscheinen als kleine Benachrichtigung oben rechts auf der Website.
+- Gestaltung im dunklen Premium-SATYRN-HQ-Stil mit dezenter Akzentfarbe und passender Uhr- oder Fokus-Ikone.
+- Kurzer, verständlicher Hinweistext sowie die passenden Aktionen, z. B. „Jetzt fokussieren“ und „Später erinnern“.
+- Dezente Ein- und Ausblendanimation.
+- Wenn keine Aktion erfolgt, verschwindet die Benachrichtigung nach etwa 10 Sekunden automatisch.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
