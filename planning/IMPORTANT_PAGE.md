@@ -105,6 +105,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Priorität wird auf jeder Eintragskarte durch einen schmalen, gut sichtbaren farbigen Streifen am linken Kartenrand dargestellt. Die Karte selbst behält einen neutralen Hintergrund; die Prioritätsfarbe wird nicht flächig auf die gesamte Karte gelegt.
 - Zusätzlich zum farbigen Prioritätsstreifen wird die jeweilige Priorität auf jeder Eintragskarte ausdrücklich als Textlabel angezeigt (z. B. „Dringend“, „Wichtig“, „Vorläufig“ oder „Unbefristet“). Das Label verwendet die zugehörige Prioritätsfarbe und bleibt klar vom Kategorie-Label unterscheidbar.
 - Das Prioritäts-Textlabel wird auf der Eintragskarte in einer eigenen Zeile direkt unter dem Titel angezeigt, nicht neben dem Kategorie-Label.
+- Das Prioritäts-Textlabel wird als kleines farbiges Badge mit dezentem, zur jeweiligen Prioritätsfarbe passendem Hintergrund gestaltet; es steht in der eigenen Zeile direkt unter dem Titel.
 - Die Kategorie wird zusätzlich als kleines farbiges Label direkt neben dem Eintragstitel angezeigt. Die Kategorie-Farbe dient der schnellen Orientierung und bleibt visuell klar von der Prioritätsfarbe des linken Kartenstreifens unterscheidbar; die konkrete Farbpalette und das Label-Design werden später festgelegt.
 - Jede Eintragskarte erhält zusätzlich zum farbigen Kategorie-Label ein kleines, zur jeweiligen Kategorie passendes Symbol. Symbol und Label unterstützen gemeinsam die schnelle visuelle Orientierung; die konkreten Symbole werden bei der späteren Designausarbeitung festgelegt.
 
