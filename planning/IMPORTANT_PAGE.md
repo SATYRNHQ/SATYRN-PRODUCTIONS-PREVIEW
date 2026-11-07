@@ -108,6 +108,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Das Prioritäts-Textlabel wird als kleines farbiges Badge mit dezentem, zur jeweiligen Prioritätsfarbe passendem Hintergrund gestaltet; es steht in der eigenen Zeile direkt unter dem Titel.
 - Die Kategorie wird zusätzlich als kleines farbiges Label direkt neben dem Eintragstitel angezeigt. Die Kategorie-Farbe dient der schnellen Orientierung und bleibt visuell klar von der Prioritätsfarbe des linken Kartenstreifens unterscheidbar; die konkrete Farbpalette und das Label-Design werden später festgelegt.
 - Das Kategorie-Label direkt neben dem Titel wird ebenfalls als kleines Badge mit dezentem, zur jeweiligen Kategorie-Farbe passendem Hintergrund gestaltet. Es bleibt optisch klar vom Prioritäts-Badge in der Zeile darunter unterscheidbar.
+- Kategorie- und Prioritäts-Badges erhalten abgerundete Ecken statt einer kantigen, technischen Form.
 - Jede Eintragskarte erhält zusätzlich zum farbigen Kategorie-Label ein kleines, zur jeweiligen Kategorie passendes Symbol. Symbol und Label unterstützen gemeinsam die schnelle visuelle Orientierung; die konkreten Symbole werden bei der späteren Designausarbeitung festgelegt.
 
 ## Bestätigte Kategorie-Farben und Symbole
