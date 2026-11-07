@@ -148,3 +148,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Auf einer Eintragskarte werden höchstens drei Verknüpfungs-Labels direkt angezeigt. Weitere Verknüpfungen werden kompakt als „+X weitere“ zusammengefasst und können bei Bedarf aufgeklappt werden.
 
 - Beim Aufklappen von „+X weitere“ werden die zusätzlichen Verknüpfungs-Labels direkt innerhalb derselben Eintragskarte eingeblendet, nicht in einem separaten Pop-up.
+
+- Verknüpfungen werden intern über eine stabile, eindeutige ID des Zieleintrags gespeichert, nicht über dessen angezeigten Namen. Dadurch bleiben Verknüpfungen bei einer späteren Umbenennung bestehen. Wird ein Zieleintrag innerhalb des HQ verschoben, soll die Verknüpfung ebenfalls erhalten bleiben, solange seine ID unverändert bleibt.
