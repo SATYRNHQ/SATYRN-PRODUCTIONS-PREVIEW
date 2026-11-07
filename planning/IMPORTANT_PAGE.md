@@ -223,3 +223,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Suchverhalten
 - Die Suche filtert Einträge automatisch bereits während des Tippens; Enter ist nicht erforderlich.
+
+## Suchumfang
+- Die Live-Suche durchsucht neben Titel und Beschreibung auch die Namen der verknüpften Einträge, beispielsweise Projekte und Geschäftspartner.
