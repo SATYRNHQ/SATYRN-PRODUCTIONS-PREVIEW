@@ -16,9 +16,10 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 5. **Sonstiges** — ausschließlich wichtige Informationen, die in keine der vier anderen Kategorien passen. Die Kategorie ist als Auffangkategorie gedacht und soll nicht die reguläre Zuordnung ersetzen.
 
 ## Noch offen — gemeinsam festlegen
-- Seitenaufbau und Informationshierarchie
-- Erstellen, Bearbeiten und Löschen
-- Weitere Filter, Suche und Sortierung
+- Konkreter Seitenaufbau und Darstellung der Einträge
+- Wie Prioritätsstufen benannt und vergeben werden
+- Erstellen, Bearbeiten und Löschen im Detail
+- Suche und weitere Sortiermöglichkeiten
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
 - Ob und wie Einträge weitere optionale Metadaten erhalten
@@ -27,7 +28,10 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Important ist eine zentrale Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können; keine zweite Task- oder Deadline-Liste.
 - Es können sowohl einzelne wichtige Ereignisse und Hinweise als auch langfristige unternehmensinterne Grundinformationen gesammelt werden.
 - Jeder Eintrag muss genau einer Kategorie zugeordnet werden.
-- Einträge sollen nach Kategorie filterbar sein.
+- Alle fünf Kategorien sollen auf der Important-Seite grundsätzlich aufgelistet sein.
+- Einträge sollen nach Kategorie filterbar sein. Der Filter soll ermöglichen, einzelne Kategorien ein- und auszublenden.
+- Einträge können eine Priorität erhalten. Die Priorität wirkt kategorienübergreifend: Höher priorisierte Einträge werden automatisch weiter oben angezeigt, unabhängig davon, welcher Kategorie sie angehören.
+- Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
 - Die fünf Kategorien und ihre inhaltlichen Abgrenzungen sind festgelegt: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Future Blueprints; Sonstiges.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
