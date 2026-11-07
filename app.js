@@ -41,8 +41,12 @@ function changeBackground(){
 changeBackground();
 backgroundTimer=window.setInterval(changeBackground,20000);
 
-const pages = [...document.querySelectorAll('.page')];
-const navItems = [...document.querySelectorAll('[data-page]')];
+// GLOBAL NAVIGATION CONTRACT:
+// The headbar and both sidebars are one shared app-shell layer, never page-owned UI.
+// Keep their markup outside every .page section in index.html. Their styling and
+// interaction rules must remain global and identical on every current/future page.
+// New pages belong inside .main-area as .page sections with unique page-* IDs.
+const pages = () => [...document.querySelectorAll('.page')];
 const crumb = document.getElementById('crumb');
 const sidebars = [...document.querySelectorAll('.hq-side-nav')];
 // Start both sidebars in their intended compact frame state before the first hover.
@@ -50,7 +54,8 @@ sidebars.forEach(nav=>nav.classList.add('nav-dismissed'));
 const headbar = document.querySelector('.hq-top-nav');
 function showPage(name, clickedItem){
   changeBackground();
-  pages.forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
+  // Query pages at navigation time so pages added later are included automatically.
+  pages().forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
   document.querySelectorAll('.nav-item[data-page]').forEach(n=>n.classList.toggle('active',n.dataset.page===name));
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
   const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
@@ -65,7 +70,13 @@ function showPage(name, clickedItem){
   headbar?.classList.remove('labels-visible');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page,item)));
+// Delegated navigation also covers page controls added after initial page load.
+document.addEventListener('click',event=>{
+  const item=event.target.closest('[data-page]');
+  if(!item || !item.dataset.page)return;
+  if(!item.closest('.hq-top-nav,.hq-side-nav,.main-area'))return;
+  showPage(item.dataset.page,item);
+});
 let headbarCollapseTimer;
 headbar?.addEventListener('pointerenter',()=>{
   clearTimeout(headbarCollapseTimer);
