@@ -2023,7 +2023,7 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
 
 
 
-/* Headbar gently expands on hover; icon and label share one centered stack. */
+/* Headbar hover: the frame grows, while icon and label coordinates stay fixed. */
 .hq-top-nav{
   transition:min-height .55s cubic-bezier(.22,.61,.36,1),
     padding .55s cubic-bezier(.22,.61,.36,1),
@@ -2031,84 +2031,17 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
     -webkit-backdrop-filter .65s ease,backdrop-filter .65s ease!important;
 }
 .hq-top-nav.labels-visible{
-  min-height:101px!important;
-  padding-top:10px!important;
-  padding-bottom:10px!important;
-}
-.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){
-  min-height:79px!important;
-  justify-content:center!important;
-  gap:5px!important;
-}
-.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-icon{
-  position:static!important;
-  left:auto!important;
-  top:auto!important;
-  transform:scale(1.5)!important;
-  margin:0!important;
-}
-.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-label{
-  position:static!important;
-  left:auto!important;
-  bottom:auto!important;
-  transform:none!important;
-  margin:0!important;
-  opacity:1!important;
-}
-.hq-top-nav.labels-visible .home-palm{
-  min-height:79px!important;
-}
-@media(max-width:720px){
-  .hq-top-nav.labels-visible{
-    min-height:96px!important;
-    padding-top:8px!important;
-    padding-bottom:8px!important;
-  }
-  .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){
-    min-height:78px!important;
-  }
-}
-
-
-/* Headbar hover: keep every label clearly below its icon and fully inside the frame. */
-.hq-top-nav.labels-visible{
   min-height:118px!important;
   padding-top:10px!important;
   padding-bottom:10px!important;
   align-items:center!important;
 }
-.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){
-  min-height:96px!important;
-  height:96px!important;
-  display:flex!important;
-  flex-direction:column!important;
-  align-items:center!important;
-  justify-content:center!important;
-  gap:8px!important;
-  padding:8px 10px!important;
-  overflow:visible!important;
-}
-.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-icon{
-  position:static!important;
-  flex:0 0 auto!important;
-  margin:0!important;
-  transform:scale(1.5)!important;
-}
-.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-label{
-  position:static!important;
-  display:block!important;
-  flex:0 0 auto!important;
-  margin:0!important;
-  transform:none!important;
-  line-height:1.15!important;
-  white-space:nowrap!important;
-  opacity:1!important;
-}
-.hq-top-nav.labels-visible .home-palm{min-height:96px!important;height:96px!important}
 @media(max-width:720px){
-  .hq-top-nav.labels-visible{min-height:110px!important;padding-top:7px!important;padding-bottom:7px!important}
-  .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){min-height:94px!important;height:94px!important;gap:7px!important;padding:7px 3px!important}
-  .hq-top-nav.labels-visible .home-palm{min-height:94px!important;height:94px!important}
+  .hq-top-nav.labels-visible{
+    min-height:110px!important;
+    padding-top:7px!important;
+    padding-bottom:7px!important;
+  }
 }
 
 
@@ -2216,10 +2149,33 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   }
 }
 
-/* Center palm: extend the OUTER headbar contour around the center without adding an inner frame. */
+/* Integrated outer contour: a soft raised shoulder around the center palm.
+   The shape sits above the bar's fill/border but behind all navigation content. */
 .hq-top-nav{
-  border-radius:22px!important;
+  position:fixed!important;
+  isolation:isolate;
   overflow:visible!important;
+}
+.hq-top-nav:before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:50%;
+  width:142px;
+  height:116px;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(198,166,106,.17);
+  border-radius:48% / 42%;
+  background:linear-gradient(110deg,rgba(8,13,11,.84),rgba(17,26,21,.66),rgba(8,13,11,.84));
+  -webkit-backdrop-filter:blur(24px) saturate(115%);
+  backdrop-filter:blur(24px) saturate(115%);
+  pointer-events:none;
+}
+.hq-top-nav>.headbar-group,
+.hq-top-nav>.home-palm{
+  position:relative!important;
+  z-index:2!important;
 }
 .hq-top-nav .home-palm{
   border:0!important;
