@@ -220,3 +220,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Suchfeld-Steuerung
 - Das Suchfeld erhält einen kleinen X-Button, mit dem der aktuelle Suchtext sofort vollständig gelöscht werden kann.
+
+## Suchverhalten
+- Die Suche filtert Einträge automatisch bereits während des Tippens; Enter ist nicht erforderlich.
