@@ -131,3 +131,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
   3. **Priorität** — Auswahl einer der vier verpflichtenden Prioritätsstufen.
   4. **Verknüpfungen** — Auswahl mehrerer passender Einträge bzw. Bereiche aus dem HQ.
 - Die Bereiche sollen die Orientierung erleichtern und optisch sauber voneinander getrennt sein. Erstellen und Bearbeiten verwenden dieselbe Formularstruktur.
+
+- **Layout-Empfehlung:** Das große Formular nutzt ein hybrides Zwei-Spalten-Layout. Oben stehen **Grundinformationen** und **Priorität** nebeneinander. Darunter folgen **Inhalt** und **Verknüpfungen** jeweils über die gesamte verfügbare Breite. So wird die Fensterbreite sinnvoll genutzt, während die Beschreibung und die Auswahl mehrerer Verknüpfungen genügend Platz behalten. Auf schmaleren Ansichten wechseln die Bereiche automatisch in eine Spalte.
