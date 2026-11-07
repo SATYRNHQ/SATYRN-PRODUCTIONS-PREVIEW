@@ -346,3 +346,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Gesamtzahl im Zentrum des Kreisdiagramms
 - In der Mitte des Prioritäts-Kreisdiagramms wird die Gesamtzahl der aktuell angezeigten Einträge dargestellt.
 - Die Zahl aktualisiert sich dynamisch entsprechend der aktiven Suche sowie Kategorie- und Prioritätsfilter.
+
+## Hover-Informationen im Prioritäts-Kreisdiagramm
+- Beim Darüberfahren mit der Maus über ein Segment erscheint eine dezente Zusatzinformation mit Prioritätsname und aktueller Anzahl, z. B. „Dringend – 3 Einträge“.
+- Die Anzeige verwendet die jeweilige Prioritätsfarbe und bleibt kompakt, gut lesbar und unaufdringlich.
