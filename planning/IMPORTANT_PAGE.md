@@ -88,3 +88,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Das Drei-Punkte-Menü ist **dauerhaft sichtbar** und erscheint nicht erst beim Darüberfahren mit der Maus (Hover).
 
 - Auf der Important-Seite gibt es eine Suchleiste, mit der sämtliche Einträge anhand ihres Titels oder Beschreibungstextes durchsucht werden können.
+
+- Zusätzlich zum Kategorienfilter gibt es einen Prioritätsfilter, mit dem einzelne Prioritätsstufen ein- und ausgeblendet werden können. Suchbegriff, Kategorienfilter und Prioritätsfilter wirken gemeinsam; die festgelegte Prioritäts- und Ereignisdatums-Sortierung bleibt für die sichtbaren Einträge bestehen.
