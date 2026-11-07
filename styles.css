@@ -2148,3 +2148,16 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
     padding-bottom:16px!important;
   }
 }
+
+/* Headbar click targets: only the icon artwork is clickable, not the wide
+   surrounding navigation slot or its label. */
+.hq-top-nav .edge-nav-item{
+  pointer-events:none!important;
+}
+.hq-top-nav .edge-nav-item .nav-icon{
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
+.hq-top-nav .edge-nav-item .nav-label{
+  pointer-events:none!important;
+}
