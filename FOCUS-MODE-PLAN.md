@@ -235,6 +235,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Löschen** bestätigt die Aktion und entfernt die Session aus der History und den gespeicherten Daten.
 - Die Löschaktion wird visuell dezent animiert; es gibt keinen zusätzlichen Papierkorb- oder Wiederherstellungsbereich.
 
+### Sessions duplizieren
+- Einzelne Sessions können aus der History heraus dupliziert werden.
+- Beim Duplizieren werden die Session-Einstellungen als neue Vorbereitung übernommen, z. B. Fokusziel, Kategorie, Priorität, Fokus-/Pausendauer und Unteraufgaben.
+- Die Duplikation startet **keinen Timer** und erzeugt keine rückwirkend abgeschlossene Session.
+- Die neue Session kann vor dem Start angepasst werden.
+- Historische Notizen und Distraction-Log-Einträge werden nicht in die neue Session kopiert.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
