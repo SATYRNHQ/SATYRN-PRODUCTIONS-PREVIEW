@@ -290,3 +290,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Beim erstmaligen Öffnen der Important-Seite erscheinen die Karten direkt vollständig sichtbar; sie erhalten keine zusätzliche Einblendanimation.
 - Beim Ausklappen und Einklappen einer Karte wird die Höhenänderung dagegen sauber und flüssig animiert. Die Inhalte entfalten sich ohne Springen oder Überlappen; darunterliegende Karten verschieben sich ebenfalls flüssig an ihre neue Position.
 - Die Animation bleibt dezent und funktional, ohne übertriebene Effekte.
+
+## Position neu erstellter Einträge
+- Direkt nach dem Speichern wird ein neu erstellter Eintrag zunächst ganz oben innerhalb seiner gewählten Prioritätsgruppe angezeigt.
+- Anschließend gilt die festgelegte dynamische Sortierung anhand des Ereignisdatums innerhalb der Prioritätsgruppe.
