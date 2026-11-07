@@ -121,3 +121,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Einträge mit der Priorität **Dringend** erhalten zusätzlich ein deutlich sichtbares Warnsymbol direkt neben dem Titel. Dieses Symbol ergänzt den roten Prioritätsstreifen und hebt Dringend klar von Wichtig ab; Wichtig erhält kein Warnsymbol.
 
 - Eine Änderungsinformation wird nur angezeigt, wenn ein Eintrag nach seiner ursprünglichen Erstellung tatsächlich bearbeitet wurde. Dann erscheint beispielsweise „Zuletzt geändert: 06.11.2026“. Bei unveränderten, neu erstellten Einträgen wird keine Erstellungs- oder Änderungsinformation eingeblendet.
+
+- Das Erstellen- und Bearbeiten-Fenster verwenden dieselbe große, breite Fenstergröße und dasselbe Layout. Beim Bearbeiten werden die vorhandenen Eintragsdaten in den gleichen Formularfeldern vorausgefüllt; es gibt kein separates oder anders gestaltetes Bearbeitungsfenster.
