@@ -888,6 +888,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Klick auf den Button führt weiterhin direkt zur zugehörigen Focus-Session.
 - Auf Touch-Geräten ohne Hover wird das Info-Fenster durch Antippen des Buttons bzw. eines separaten Info-Bereichs zugänglich gemacht, ohne den direkten Rücksprung unklar zu machen.
 
+
+### Sichtbarkeit des Focus-Rückkehrbuttons
+- Der seitenübergreifende Button „Zurück zur Focus-Session“ wird nur angezeigt, wenn sich der Nutzer außerhalb der Focus-Seite befindet und eine passende offene Session existiert.
+- Auf der Focus-Seite selbst wird dieser zusätzliche Rückkehrbutton ausgeblendet.
+- Beim Wechsel auf eine andere SATYRN-HQ-Seite wird er wieder eingeblendet, solange die zugehörige Session offen ist.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
