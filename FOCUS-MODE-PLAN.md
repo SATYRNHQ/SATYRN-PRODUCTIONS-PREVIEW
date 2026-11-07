@@ -496,6 +496,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Es gibt keinen automatischen zeitlichen Ablauf, der eine solche Session allein wegen ihres Alters löscht oder verwirft.
 - Beim Wiederöffnen werden weiterhin die tatsächliche verstrichene Zeit, der gespeicherte Status und die verfügbaren Aktionen korrekt angezeigt.
 
+
+### Mehrere offene Sessions pro Kategorie
+- Mehrere offene bzw. unterbrochene Sessions dürfen gleichzeitig bestehen.
+- Pro Kategorie/Bereich sind maximal zwei offene Sessions erlaubt.
+- Die Begrenzung gilt getrennt für jede Kategorie, z. B. Music Production, Mixing & Mastering, Content Creation, Business, Learning und Organisation.
+- Eine dritte offene Session in derselben Kategorie kann erst angelegt werden, wenn eine der beiden bestehenden Sessions abgeschlossen oder verworfen wurde.
+- Sessions in anderen Kategorien bleiben davon unberührt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
