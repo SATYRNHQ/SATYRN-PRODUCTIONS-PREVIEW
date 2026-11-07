@@ -76,3 +76,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Das Fenster kann zusätzlich über ein **X-Symbol oben rechts** geschlossen werden.
 - Das Fenster kann außerdem jederzeit mit der **Escape-Taste** geschlossen werden.
 - Sowohl das X-Symbol als auch Escape schließen das Fenster ohne Speichern; nicht gespeicherte Änderungen werden verworfen.
+- **Wenn beim Schließen über X oder Escape ungespeicherte Änderungen vorhanden sind, erscheint zuerst eine Sicherheitsabfrage.** Der Nutzer kann wählen, ob er im Formular bleiben und weiterbearbeiten oder die Änderungen verwerfen und das Fenster schließen möchte.
+- Die Sicherheitsabfrage erscheint nur, wenn tatsächlich ungespeicherte Änderungen vorliegen. Ohne Änderungen wird das Fenster direkt geschlossen.
