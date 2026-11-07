@@ -105,3 +105,11 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Priorität wird auf jeder Eintragskarte durch einen schmalen, gut sichtbaren farbigen Streifen am linken Kartenrand dargestellt. Die Karte selbst behält einen neutralen Hintergrund; die Prioritätsfarbe wird nicht flächig auf die gesamte Karte gelegt.
 - Die Kategorie wird zusätzlich als kleines farbiges Label direkt neben dem Eintragstitel angezeigt. Die Kategorie-Farbe dient der schnellen Orientierung und bleibt visuell klar von der Prioritätsfarbe des linken Kartenstreifens unterscheidbar; die konkrete Farbpalette und das Label-Design werden später festgelegt.
 - Jede Eintragskarte erhält zusätzlich zum farbigen Kategorie-Label ein kleines, zur jeweiligen Kategorie passendes Symbol. Symbol und Label unterstützen gemeinsam die schnelle visuelle Orientierung; die konkreten Symbole werden bei der späteren Designausarbeitung festgelegt.
+
+## Bestätigte Kategorie-Farben und Symbole
+- **Unternehmensinformationen:** Stahlblau, Symbol `building-2`.
+- **Geschäftspartner & Kooperationen:** Gold, Symbol `handshake`.
+- **Strategic Moves:** Violett, Symbol `landmark`.
+- **Future Blueprints:** Türkis, Symbol `telescope`.
+- **Sonstiges:** Silbergrau, Symbol `layers`.
+- Die Kategorie-Farben und Symbole werden für die Kategorie-Labels und die visuelle Orientierung auf den Eintragskarten verwendet. Sie bleiben klar unterscheidbar von den vier Prioritätsfarben.
