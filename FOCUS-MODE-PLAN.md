@@ -596,6 +596,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Sessions können weiterhin pausiert, unterbrochen, fortgesetzt oder abgeschlossen werden.
 - Die gelöschte Important-Aufgabe wird dadurch nicht wiederhergestellt und die Focus-Session bleibt eigenständig bearbeitbar.
 
+
+### Kennzeichnung ehemals verknüpfter Aufgaben
+- Wird eine Important-Aufgabe gelöscht und eine offene Focus-Session dadurch entkoppelt, bleibt der ursprüngliche Aufgabenname als Information in der Session erhalten.
+- Die Session zeigt deutlich eine Kennzeichnung wie **„Ursprünglich verknüpft mit: [Aufgabenname] – Aufgabe gelöscht / nicht mehr verknüpft“**.
+- Die Kennzeichnung ist rein informativ; sie stellt keine aktive Verknüpfung dar und die gelöschte Aufgabe wird nicht wiederhergestellt.
+- Die Session bleibt unabhängig bearbeitbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
