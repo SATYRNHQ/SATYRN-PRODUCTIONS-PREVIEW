@@ -384,6 +384,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Dezente Ein- und Ausblendanimation.
 - Wenn keine Aktion erfolgt, verschwindet die Benachrichtigung nach etwa 10 Sekunden automatisch.
 
+
+### Benachrichtigungsübersicht
+- Automatisch ausgeblendete Focus-Mode-Erinnerungen bleiben in einer Benachrichtigungsübersicht erhalten.
+- Die Übersicht ist über ein kleines Glocken-Symbol erreichbar und kann von jeder SATYRN-HQ-Seite geöffnet werden.
+- Einzelne Benachrichtigungen können dort erneut geöffnet bzw. aufgerufen werden.
+- Einzelne Benachrichtigungen können vom Nutzer gelöscht werden.
+- Das automatische Ausblenden nach 10 Sekunden löscht eine Benachrichtigung nicht.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
