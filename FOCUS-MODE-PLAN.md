@@ -631,6 +631,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bisherige Verknüpfung bleibt als historische Information sichtbar (z. B. „Ursprünglich verknüpft mit: [Aufgabenname] – nicht mehr verknüpft“).
 - Nach dem Trennen kann die Priorität der freien Session manuell festgelegt werden.
 
+
+### Sicherheitsabfrage beim manuellen Trennen einer Important-Verknüpfung
+- Beim manuellen Trennen einer Focus-Session von einer Important-Aufgabe erscheint eine Sicherheitsabfrage.
+- Gestaltung, Aufbau, Formulierungsstil und Verhalten entsprechen dem bestehenden Sicherheitsabfrage-System im Important-Tab.
+- Die Abfrage macht klar, welche Verknüpfung getrennt wird, und bietet die entsprechenden Bestätigen-/Abbrechen-Aktionen.
+- Bei Abbrechen bleibt die Verknüpfung unverändert; bei Bestätigen wird nur die Verknüpfung gelöst, nicht die Important-Aufgabe gelöscht.
+- Diese Vorgabe gilt einheitlich für alle Sicherheitsabfragen im Focus Mode: Sie sollen dem Sicherheitsabfrage-System im Important-Tab folgen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
