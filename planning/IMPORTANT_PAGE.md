@@ -248,3 +248,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Hinweistext: „Passe deine Suche oder Filter an, um Ergebnisse zu finden.“
 
 - Unter dem Hinweistext erscheint zusätzlich ein Button „Filter zurücksetzen“, der Suche, Kategorien und Prioritäten auf den Standardzustand zurücksetzt.
+
+## Anordnung des oberen Seitenbereichs
+- Suchfeld und Button „Filter zurücksetzen“ stehen in der obersten Zeile.
+- Darunter stehen Kategorienfilter und Prioritätsfilter nebeneinander in zwei klar getrennten Bereichen.
+- Die Trefferanzahl wird unter den Filterbereichen und oberhalb der Eintragskarten angezeigt.
+- Bei schmalen Fenstern dürfen die beiden Filterbereiche untereinander umbrechen, damit die Bedienung übersichtlich bleibt.
