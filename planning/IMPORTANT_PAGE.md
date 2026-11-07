@@ -181,3 +181,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Beim Darüberfahren mit der Maus leuchtet die Eintragskarte ausschließlich ganz leicht auf. Der dezente Hover-Effekt orientiert sich an der SATYRN-HQ-Farbwelt Gold und Grün; die Karte wird dabei nicht angehoben oder verschoben. Der Effekt darf weder vom Inhalt ablenken noch die Prioritäts- und Kategoriekennzeichnung überlagern.
 
 - Eintragskarten lassen sich zusätzlich durch Anklicken ihrer freien Kartenfläche insgesamt aus- und wieder einklappen. Das Aus- und Einklappen ist damit nicht ausschließlich an den Textlink „Mehr anzeigen“ gebunden. Der bestehende „Mehr anzeigen“-/„Weniger anzeigen“-Mechanismus für lange Beschreibungen bleibt ebenfalls erhalten. Interaktive Elemente innerhalb der Karte (z. B. Drei-Punkte-Menü, Verknüpfungs-Labels und deren Aktionen) lösen beim Anklicken ausschließlich ihre eigene Funktion aus und dürfen nicht versehentlich das Ein- oder Ausklappen der Karte auslösen.
+
+- Mehrere Eintragskarten dürfen gleichzeitig ausgeklappt bleiben. Das Ausklappen einer Karte klappt bereits geöffnete andere Karten nicht automatisch ein.
