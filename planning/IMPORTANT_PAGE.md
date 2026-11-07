@@ -338,3 +338,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Das Diagramm erhält auf der Homepage eine eigene, klar erkennbare Überschrift, die auf den Important-Bereich verweist.
 - Die Größe und Darstellung bleiben wie festgelegt: großes, präsentes Kreisdiagramm mit Prioritätsnamen und Anzahlen daneben, innerhalb einer dezenten Dark-Glass-Fläche.
 - Sowohl die Important-Überschrift als auch das Kreisdiagramm sind anklickbar und führen direkt zur Important-Seite. Das Diagramm dient auf der Homepage als Übersicht und Navigation; seine Segmente lösen dort keine separaten Filteraktionen aus.
+
+## Homepage — Dringende Important-Einträge
+- Statt der zuletzt erstellten Important-Einträge zeigt die Homepage eine Vorschau der Important-Einträge mit der Priorität **Dringend**.
+- Die Vorschau enthält ausschließlich Einträge der Prioritätsstufe Dringend; andere Prioritäten werden dort nicht als dringende Einträge dargestellt.
+- Die Vorschau gehört zum Important-Homepage-Bereich und ergänzt das Prioritäts-Kreisdiagramm.
