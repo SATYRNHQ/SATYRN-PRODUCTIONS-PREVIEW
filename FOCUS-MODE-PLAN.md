@@ -211,6 +211,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 
+### History search
+- Search field to find sessions by task name or focus goal.
+- Search results update while typing.
+- Search works together with the status, category, and time-period filters.
+
 ### History filters
 - Filter by session status: **All Sessions**, **Completed**, **Abandoned**, and **Paused**.
 - Filter by category.
