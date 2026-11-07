@@ -555,6 +555,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Session-Ziel, Kategorie, Priorität, Notizen, Distraction Log und Unteraufgaben bleiben erhalten.
 - Die Session wird nach dem Fortsetzen wieder als laufend bzw. bei manuellem Pausieren als pausiert angezeigt.
 
+
+### Hinweis beim Fortsetzen
+- Beim Fortsetzen einer unterbrochenen Session erscheint ein kleiner, dezenter Hinweis mit der Dauer der Unterbrechung, z. B. **„Session vor 2 Stunden unterbrochen“**.
+- Der Hinweis ist informativ und blockiert den Start bzw. die Wiederaufnahme nicht.
+- Die Anzeige verwendet die tatsächliche Zeit seit der letzten Unterbrechung.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
