@@ -419,6 +419,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Es gibt keine zusätzlichen Filter oder Filtersteuerungen für diese Kategorien.
 - Ungelesen-Zähler, Einzel-Löschen, „Alle als gelesen markieren“ und „Alle löschen“ funktionieren weiterhin über alle Kategorien hinweg.
 
+
+### Sortierung der Benachrichtigungen
+- Innerhalb jeder Benachrichtigungskategorie stehen die neuesten Einträge immer oben.
+- Die Sortierung aktualisiert sich automatisch, sobald eine neue Benachrichtigung eingeht.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
