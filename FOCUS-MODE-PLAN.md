@@ -731,6 +731,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Darstellung bleibt im Premium-Dark-Design und nutzt die bestehenden Kategorie- und Prioritätsfarben aus Important.
 - Die Hervorhebung dient der Orientierung und erzeugt keine zusätzliche Priorität neben der bereits festgelegten Prioritätslogik.
 
+
+### Automatischer Wechsel der Hauptaufgabe
+- Sobald die aktuelle Hauptaufgabe als erledigt markiert wird, wird automatisch die nächste noch offene zusätzliche Aufgabe zur Hauptaufgabe.
+- Die neue Hauptaufgabe erhält unmittelbar die hervorgehobene Darstellung; die übrigen offenen Aufgaben bleiben zusätzliche Aufgaben.
+- Der automatische Wechsel erledigt, entfernt oder verändert keine der übrigen Aufgaben.
+- Sind keine offenen zusätzlichen Aufgaben mehr vorhanden, gibt es keine Hauptaufgabe mehr in dieser Session.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
