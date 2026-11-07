@@ -241,3 +241,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Aktivierte Filter werden dezent in ihrer jeweiligen Kategorie- bzw. Prioritätsfarbe hervorgehoben.
 - Beim Darüberfahren mit der Maus (Hover) erhalten Filter ebenfalls einen leichten, farblich passenden Leuchteffekt.
 - Der Effekt bleibt subtil und fügt sich in den SATYRN-HQ-Stil ein.
+
+## Keine-Ergebnisse-Zustand
+- Wenn Suche und/oder Filter keine Einträge ergeben, erscheint ein eigener, dezenter Empty-State mit passender Grafik.
+- Überschrift: „Keine Einträge gefunden“.
+- Hinweistext: „Passe deine Suche oder Filter an, um Ergebnisse zu finden.“
