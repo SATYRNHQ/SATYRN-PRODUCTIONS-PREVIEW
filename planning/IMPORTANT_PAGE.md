@@ -20,7 +20,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Suche und weitere Sortiermöglichkeiten
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
-- Ob und wie Einträge weitere optionale Metadaten erhalten
+- Weitere optionale Metadaten neben den bereits festgelegten Feldern
 - Genaue Formulierung und weitere Details der Löschbestätigung
 
 ## Bestätigte Entscheidungen und Änderungsprotokoll
@@ -44,6 +44,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
 - Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
+- **Jeder Eintrag muss einen Titel haben.** Das Titelfeld ist beim Erstellen verpflichtend; ein Eintrag kann nicht ohne Titel gespeichert werden.
+- Eine Beschreibung ist optional.
+- Das Ereignisdatum ist optional und bezeichnet, wann das Ereignis stattfindet; es ist kein Erstellungsdatum.
 - Einträge sollen nach dem Erstellen jederzeit bearbeitet werden können.
 - Einträge sollen gelöscht werden können.
 - **Vor dem endgültigen Löschen eines Eintrags soll eine Sicherheitsabfrage erscheinen.** Diese wird als kleines, zentriertes Bestätigungsfenster innerhalb des zentralen Inhaltsbereichs dargestellt. Sie bietet die Aktionen **„Abbrechen“** und einen deutlich roten **„Endgültig löschen“**-Button. Die genaue Formulierung der Abfrage wird später festgelegt.
@@ -54,8 +57,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Strategic Moves umfasst auch verworfene und später rückgängig gemachte Entscheidungen, damit die Entwicklung und Gründe nachvollziehbar bleiben.
 - Future Blueprints umfasst konkrete zukünftige Vorhaben, ausgearbeitete Ideen und Pläne, die SATYRN später umsetzen möchte; laufende Aufgaben und Termine gehören in die dafür vorgesehenen HQ-Bereiche.
 - Sonstiges ist ausschließlich für wichtige Informationen vorgesehen, die in keine der anderen vier Kategorien passen.
-- Das Ereignisdatum ist optional und bezeichnet, wann das Ereignis stattfindet; es ist kein Erstellungsdatum.
-- Die Beschreibung ist optional.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
