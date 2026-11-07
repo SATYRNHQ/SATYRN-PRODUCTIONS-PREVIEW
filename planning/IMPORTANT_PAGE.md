@@ -17,7 +17,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Noch offen — gemeinsam festlegen
 - Konkreter Seitenaufbau und Anordnung der Karten
-- Wie Prioritätsstufen benannt und vergeben werden
+- Regeln für die automatische Sortierung innerhalb der Prioritätsstufen und mögliche Gleichstände
 - Erstellen, Bearbeiten und Löschen im Detail
 - Suche und weitere Sortiermöglichkeiten
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
@@ -31,6 +31,12 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Alle fünf Kategorien sollen auf der Important-Seite grundsätzlich aufgelistet sein.
 - Einträge sollen nach Kategorie filterbar sein. Der Filter soll ermöglichen, einzelne Kategorien ein- und auszublenden.
 - Einträge können eine Priorität erhalten. Die Priorität wirkt kategorienübergreifend: Höher priorisierte Einträge werden automatisch weiter oben angezeigt, unabhängig davon, welcher Kategorie sie angehören.
+- Die vier festgelegten Prioritätsstufen und Farben sind:
+  1. **Dringend** — Rot
+  2. **Wichtig** — Orange
+  3. **Vorläufig** — Blau
+  4. **Unbefristet** — Grün
+- Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
 - Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
