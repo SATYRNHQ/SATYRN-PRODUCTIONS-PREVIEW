@@ -2164,3 +2164,8 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
     top:49px!important;
   }
 }
+
+
+/* Lower the global headbar slightly while preserving all icon/label coordinates. */
+.hq-top-nav{top:24px!important}
+@media(max-width:720px){.hq-top-nav{top:14px!important}}
