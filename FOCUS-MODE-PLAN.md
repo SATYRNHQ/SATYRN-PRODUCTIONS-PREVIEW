@@ -338,6 +338,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Nutzer kann die Belegungen direkt im Tastaturkürzel-Editor korrigieren oder auf Standardwerte zurücksetzen.
 - Eine fehlerhafte individuelle Belegung darf die übrige Focus-Mode-Bedienung nicht blockieren.
 
+
+### Inaktivitäts-Erinnerungen
+- Wenn Focus Mode nicht aktiv genutzt wird und keine Session läuft, kann er dezent an einen möglichen Neustart erinnern.
+- Erinnerungszeitpunkte: nach 5 Minuten, nach 15 Minuten, nach 30 Minuten und anschließend im Stundenrhythmus.
+- Die Erinnerungen sollen unaufdringlich sein und keine laufende Session unterbrechen.
+- Die Erinnerungsfunktion soll in den Focus-Mode-Einstellungen deaktivierbar sein.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
