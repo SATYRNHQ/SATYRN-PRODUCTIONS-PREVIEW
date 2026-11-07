@@ -1875,14 +1875,10 @@ body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
   opacity:1!important;
 }
 
-/* Home uses the exact same headbar layout and collapsed state as every other workspace. */
+/* Home uses the shared headbar layout and state rules used by every workspace. */
 body:has(#page-home.active-page) .hq-top-nav{
   display:grid!important;
-  grid-template-columns:minmax(0,1fr) 74px minmax(0,1fr)!important;
   align-items:center!important;
-}
-body:has(#page-home.active-page) .hq-top-nav .edge-nav-item .nav-icon{
-  opacity:.78!important;
 }
 
 
