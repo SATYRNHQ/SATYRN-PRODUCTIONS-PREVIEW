@@ -351,6 +351,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Erinnerung soll dezent und seitenübergreifend innerhalb der Website erscheinen, ohne den aktuellen Arbeitsbereich zu blockieren.
 - Die Erinnerungslogik darf nicht mehrfach parallel laufen, nur weil der Nutzer zwischen Website-Seiten wechselt.
 
+
+### Aktion in Inaktivitäts-Erinnerungen
+- Jede Focus-Mode-Inaktivitäts-Erinnerung enthält einen Button „Jetzt fokussieren“.
+- Der Button führt direkt zur Focus-Mode-Seite.
+- Die Erinnerung selbst bleibt dezent und blockiert nicht die aktuell geöffnete Seite.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
