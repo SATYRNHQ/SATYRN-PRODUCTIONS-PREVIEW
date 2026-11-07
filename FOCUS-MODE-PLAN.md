@@ -287,6 +287,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Kategorienfarben sind über Session Setup, Queue, History und Statistiken hinweg konsistent.
 - Ruhige, übersichtliche Darstellung; während des Fokus möglichst wenig Ablenkung.
 
+### Theme-Umfang
+- Es wird kein separates Theme-Menü und kein alternatives Focus-Mode-Theme vorgesehen.
+- Focus Mode verwendet das reguläre Premium-SATYRN-HQ-Design.
+- Die Ablenkungsreduktion erfolgt über den bereits geplanten Distraction-Free-Modus und nicht über ein zusätzliches Theme.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
