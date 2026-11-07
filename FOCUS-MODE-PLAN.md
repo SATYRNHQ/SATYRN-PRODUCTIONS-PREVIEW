@@ -894,6 +894,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Auf der Focus-Seite selbst wird dieser zusätzliche Rückkehrbutton ausgeblendet.
 - Beim Wechsel auf eine andere SATYRN-HQ-Seite wird er wieder eingeblendet, solange die zugehörige Session offen ist.
 
+
+### Darstellung der Session-Vorbereitung
+- Die Session-Vorbereitung erscheint als eigenes Modal/Fenster innerhalb der Focus-Seite – nach demselben Interaktionsprinzip wie das Erstellen einer neuen Aufgabe auf der Important-Seite.
+- Die Vorbereitung ist kein dauerhaft eingeblendeter Seitenbereich.
+- Das Fenster enthält die für die Session relevanten Einstellungen und übernommenen Aufgabendaten; der Timer startet erst nach ausdrücklicher Bestätigung.
+- Gestaltung und Bedienung orientieren sich an der bestehenden Important-Erstellungsmaske, bleiben aber auf die Focus-Session zugeschnitten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
