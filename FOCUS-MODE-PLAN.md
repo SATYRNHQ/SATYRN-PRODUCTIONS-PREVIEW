@@ -790,6 +790,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Aufgabe bleibt bis zum tatsächlichen Session-Start in der Vorbereitung bearbeitbar; die Hauptaufgabe kann dort bei Bedarf geändert werden.
 - Die automatische Vorauswahl hebt die Pflicht zur Prüfung bzw. Anpassung der Focus- und Pausendauer vor dem Start nicht auf.
 
+
+### Kategorie beim Schnellstart aus Important übernehmen
+- Beim Schnellstart einer Focus-Session über eine Important-Aufgabe wird auch deren Kategorie automatisch übernommen.
+- Die übernommene Kategorie ist in der Focus-Vorbereitung weiterhin änderbar.
+- Die bestehende Synchronisierung und Farbzuordnung für verknüpfte Aufgaben bleibt bestehen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
