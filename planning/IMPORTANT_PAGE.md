@@ -146,3 +146,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Verknüpfungen werden auf der Eintragskarte als kleine, anklickbare Labels dargestellt. Jedes Label zeigt das passende Bereichssymbol und den Namen des verknüpften Eintrags; ein Klick führt direkt zum jeweiligen Zielbereich bzw. Eintrag.
 
 - Auf einer Eintragskarte werden höchstens drei Verknüpfungs-Labels direkt angezeigt. Weitere Verknüpfungen werden kompakt als „+X weitere“ zusammengefasst und können bei Bedarf aufgeklappt werden.
+
+- Beim Aufklappen von „+X weitere“ werden die zusätzlichen Verknüpfungs-Labels direkt innerhalb derselben Eintragskarte eingeblendet, nicht in einem separaten Pop-up.
