@@ -700,6 +700,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei einer Session ohne verknüpfte Important-Aufgaben wird dieser Hinweis nicht angezeigt.
 
 
+
+
+### Hauptaufgabe bei der Session-Erstellung
+- Die Auswahl einer Hauptaufgabe ist beim Erstellen einer Focus-Session optional.
+- Eine Session kann direkt ohne Hauptaufgabe gestartet werden und zunächst als Free Focus laufen.
+- Wenn mehrere Important-Aufgaben mit der Session verknüpft sind, kann eine davon als Hauptaufgabe festgelegt werden. Die bestehenden Regeln für zusätzliche Aufgaben und den automatischen Wechsel gelten dann.
+- Es wird keine Aufgabe automatisch zur Hauptaufgabe gemacht, nur weil die Session ohne Hauptaufgabe gestartet wurde.
+
 ### Hauptaufgabe und zusätzliche Important-Aufgaben
 - Eine Focus-Session mit mehreren verknüpften Important-Aufgaben kann genau eine davon als Hauptaufgabe festlegen; die übrigen sind zusätzliche Aufgaben.
 - Die Hauptaufgabe wird in der Session klar hervorgehoben, bleibt aber Teil derselben Verknüpfungs- und Synchronisierungslogik.
