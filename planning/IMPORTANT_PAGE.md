@@ -22,7 +22,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Seitenaufbau und Informationshierarchie
 - Prioritäten und Status (falls benötigt)
 - Erstellen, Bearbeiten und Löschen
-- Filter, Suche und Sortierung
+- Weitere Filter, Suche und Sortierung
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
 
@@ -32,6 +32,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Beschreibung festgelegt: Ein zusätzlicher Beschreibungstext ist optional und kann leer bleiben.
 - Kategorie festgelegt: Jeder Important-Eintrag muss genau einer Kategorie zugeordnet werden. Die Kategorien selbst werden gemeinsam sorgfältig entwickelt; die im bisherigen Repository vorhandenen Vorschläge gelten nicht als beschlossen.
 - Zweck festgelegt: Important ist primär eine Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können. Es soll keine zweite Task- oder Deadline-Liste sein.
+- Informationsumfang erweitert: Important darf sowohl einzelne wichtige Ereignisse und Hinweise als auch langfristige unternehmensinterne Grundinformationen enthalten.
+- Kategorienfilter festgelegt: Die Einträge sollen nach Kategorie filterbar sein. Die Kategorien müssen deshalb alle vorgesehenen Informationsarten sinnvoll abdecken.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
