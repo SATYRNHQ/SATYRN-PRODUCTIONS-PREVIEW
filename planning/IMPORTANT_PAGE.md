@@ -16,9 +16,17 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Im bestehenden lokalen Tool-Kontext ist eine mögliche Eingabestruktur angelegt: Titel, Kategorie (Entscheidung, Erinnerung, Risiko, Idee, Sonstiges), Wiedervorlage-Datum und Details.
 - Diese vorhandenen Felder sind lediglich Bestand und noch keine bestätigte Produktentscheidung.
 
+## Vorgeschlagene Kategorien — noch in Abstimmung
+Die folgenden fünf Kategorien wurden vom Nutzer als bevorzugte Richtung vorgeschlagen, sind aber noch nicht endgültig bestätigt:
+1. Unternehmensinformationen
+2. Geschäftspartner & Kooperationen
+3. Entscheidungen
+4. Umsetzbare Pläne
+5. Sonstiges
+
 ## Noch offen — gemeinsam festlegen
-- Welche konkreten Arten wichtiger Informationen gesammelt werden sollen
-- Konkrete Kategorien und ihre Definitionen
+- Definition und Abgrenzung der fünf vorgeschlagenen Kategorien
+- Ob Kategorien ergänzt, zusammengelegt oder umbenannt werden müssen
 - Seitenaufbau und Informationshierarchie
 - Prioritäten und Status (falls benötigt)
 - Erstellen, Bearbeiten und Löschen
@@ -34,6 +42,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Zweck festgelegt: Important ist primär eine Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können. Es soll keine zweite Task- oder Deadline-Liste sein.
 - Informationsumfang erweitert: Important darf sowohl einzelne wichtige Ereignisse und Hinweise als auch langfristige unternehmensinterne Grundinformationen enthalten.
 - Kategorienfilter festgelegt: Die Einträge sollen nach Kategorie filterbar sein. Die Kategorien müssen deshalb alle vorgesehenen Informationsarten sinnvoll abdecken.
+- Abgrenzung zum Calendar: Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
+- Kategorienrichtung vorgeschlagen: Unternehmensinformationen; Geschäftspartner & Kooperationen; Entscheidungen; Umsetzbare Pläne; Sonstiges. Die genaue Bedeutung und endgültige Auswahl sind noch offen.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
