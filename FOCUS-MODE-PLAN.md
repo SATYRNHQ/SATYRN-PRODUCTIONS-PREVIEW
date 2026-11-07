@@ -478,6 +478,11 @@ Eigene Kategorien sollen später ergänzt werden können.
   - **Session verwerfen**: Die Session wird als abgebrochen behandelt und entsprechend in der History dokumentiert; vor dem Verwerfen erscheint eine Sicherheitsabfrage.
 - Die Meldung startet oder verwirft niemals eine Session ohne ausdrückliche Auswahl.
 
+
+### Anzeige der Unterbrechungsdauer
+- In der Wiederaufnahme-Meldung wird angezeigt, wie lange die letzte Aktivität zurückliegt, z. B. „Letzte Aktivität vor 2 Stunden“.
+- Die Zeitangabe dient nur zur Orientierung und verändert weder den gespeicherten Session-Status noch die Timerberechnung.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
