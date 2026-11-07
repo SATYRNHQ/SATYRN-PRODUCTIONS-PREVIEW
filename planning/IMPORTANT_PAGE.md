@@ -97,3 +97,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 - Die Verknüpfungen zu anderen HQ-Bereichen können direkt beim Erstellen und Bearbeiten eines Important-Eintrags über ein eigenes Auswahlfeld hinzugefügt bzw. geändert werden. Die konkrete Auswahl der Bereiche und die Bedienung des Auswahlfeldes werden später definiert.
 - Pro Important-Eintrag können mehrere Verknüpfungen gleichzeitig bestehen, auch zu mehreren Einträgen desselben HQ-Bereichs (z. B. zwei Projects und ein Business-Bereich), sofern diese später als auswählbare Ziele angeboten werden.
+- Wenn noch keine Important-Einträge vorhanden sind, wird statt einer leeren Fläche eine dezente Willkommens-/Empty-State-Ansicht angezeigt. Sie enthält den Hinweis „Noch keine wichtigen Informationen vorhanden“ und eine Möglichkeit, direkt den ersten Eintrag zu erstellen.
