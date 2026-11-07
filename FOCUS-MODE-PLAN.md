@@ -263,6 +263,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Import werden vorhandene Daten nicht stillschweigend überschrieben. Es gibt eine klare Auswahl zwischen dem Zusammenführen mit vorhandenen Daten und dem vollständigen Ersetzen nach deutlicher Sicherheitsabfrage.
 - Importierte Datensätze werden auf gültige Struktur geprüft; ungültige Dateien werden mit verständlicher Fehlermeldung abgelehnt.
 
+### Automatische Backup-Erinnerung
+- Focus Mode erinnert regelmäßig daran, ein JSON-Backup der Focus-Daten zu exportieren.
+- Standardintervall: einmal pro Woche.
+- Die Erinnerung erscheint dezent innerhalb der Website und startet keinen Export automatisch.
+- Nach einem erfolgreichen JSON-Export wird die Erinnerung als erledigt markiert und das nächste Erinnerungsintervall beginnt.
+- Die Erinnerung kann in den Focus-Mode-Einstellungen deaktiviert werden.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
