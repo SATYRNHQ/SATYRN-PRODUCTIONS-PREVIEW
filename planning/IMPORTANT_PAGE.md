@@ -262,3 +262,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Scroll-Verhalten des Filterbereichs
 - Suchfeld, Filterbereiche und Trefferanzahl scrollen normal mit der Seite nach oben aus dem Sichtfeld.
 - Sie bleiben nicht sticky oder dauerhaft am oberen Rand fixiert.
+
+## Kartenbreite
+- Jede Important-Eintragskarte nutzt die volle verfügbare Breite des zentralen Inhaltsbereichs.
+- Karten werden untereinander in einer Spalte angezeigt.
