@@ -185,3 +185,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Mehrere Eintragskarten dürfen gleichzeitig ausgeklappt bleiben. Das Ausklappen einer Karte klappt bereits geöffnete andere Karten nicht automatisch ein.
 
 - Beim Ausklappen einer Karte werden sämtliche zu diesem Eintrag gehörenden Informationen vollständig sichtbar: insbesondere die komplette Beschreibung, alle Verknüpfungen (auch über die zunächst angezeigten drei hinaus), Datums-/Änderungsangaben und weitere vorhandene Eintragsdetails.
+
+## Karten-Ausklappzustand
+- Mehrere Eintragskarten dürfen gleichzeitig ausgeklappt bleiben.
+- Beim Ausklappen einer Karte werden alle Informationen des Eintrags sichtbar.
+- Nach einem Neuladen der Seite sind alle Karten wieder eingeklappt; der Ausklappzustand wird nicht dauerhaft gespeichert.
