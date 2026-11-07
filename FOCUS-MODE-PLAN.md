@@ -762,6 +762,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wenn eine notierte Aufgabe später bearbeitet werden soll, wird dafür eine eigene Focus-Session gestartet und die Aufgabe dort verknüpft.
 - Bereits bestehende Verknüpfungen und alle festgelegten Synchronisierungs-, Prioritäts- und Hauptaufgabenregeln bleiben unverändert.
 
+
+### Verknüpfte Aufgaben ohne Hauptaufgabe
+- Eine Focus-Session darf ohne ausgewählte Hauptaufgabe gestartet werden.
+- Bereits mit der Session verknüpfte, offene Important-Aufgaben werden auch dann als zusätzliche Aufgaben angezeigt.
+- Es gibt in diesem Fall keine hervorgehobene Hauptaufgabe; alle verknüpften Aufgaben erscheinen in der zusätzlichen Aufgabenliste.
+- Die bestehenden Regeln für Reihenfolge, Erledigen, Synchronisierung und spätere Auswahl einer Hauptaufgabe gelten weiterhin.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
