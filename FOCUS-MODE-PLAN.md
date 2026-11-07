@@ -784,6 +784,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die übernommenen Angaben können vor dem Start in der Vorbereitung angepasst werden.
 - Die Focus- und Pausendauer müssen vor dem Start ausdrücklich ausgewählt bzw. bestätigt werden; es wird keine Session mit ungeprüften Standardzeiten sofort gestartet.
 - Die bestehende Prioritäts-, Kategorie- und Synchronisierungslogik für verknüpfte Aufgaben gilt weiterhin.
+
+### Hauptaufgabe beim Schnellstart aus Important
+- Wird eine Focus-Session über das Drei-Punkte-Menü einer Important-Aufgabe vorbereitet, wird diese Aufgabe automatisch als Hauptaufgabe vorausgewählt.
+- Die Aufgabe bleibt bis zum tatsächlichen Session-Start in der Vorbereitung bearbeitbar; die Hauptaufgabe kann dort bei Bedarf geändert werden.
+- Die automatische Vorauswahl hebt die Pflicht zur Prüfung bzw. Anpassung der Focus- und Pausendauer vor dem Start nicht auf.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
