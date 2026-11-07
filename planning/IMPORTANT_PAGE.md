@@ -13,11 +13,11 @@ Die fünf Kategorien sind die vom Nutzer bevorzugte Richtung; ihre endgültige A
 1. **Unternehmensinformationen** — umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
 2. **Geschäftspartner & Kooperationen** — umfasst bestehende und potenzielle Geschäftspartner, auch wenn noch keine Zusammenarbeit besteht, sowie Kooperationsvereinbarungen, gemeinsame Projekte, Geschäftsbeziehungen und wichtige Informationen zu einzelnen Partnern.
 3. **Strategic Moves** — umfasst getroffene, verworfene und später rückgängig gemachte unternehmerische Entscheidungen sowie deren Hintergründe, damit Entscheidungswege nachvollziehbar bleiben.
-4. **Umsetzbare Pläne** — Definition noch offen.
+4. **Future Blueprints** — umfasst konkrete zukünftige Vorhaben, ausgearbeitete Ideen und Pläne, die SATYRN später umsetzen möchte; keine laufenden Aufgaben oder Termine.
 5. **Sonstiges** — Definition noch offen.
 
 ## Noch offen — gemeinsam festlegen
-- Definition und Abgrenzung der übrigen Kategorien
+- Definition und Abgrenzung der Kategorie Sonstiges
 - Ob Kategorien ergänzt, zusammengelegt oder umbenannt werden müssen
 - Seitenaufbau und Informationshierarchie
 - Erstellen, Bearbeiten und Löschen
@@ -31,10 +31,11 @@ Die fünf Kategorien sind die vom Nutzer bevorzugte Richtung; ihre endgültige A
 - Jeder Eintrag muss genau einer Kategorie zugeordnet werden.
 - Einträge sollen nach Kategorie filterbar sein.
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
-- Kategorienrichtung: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Umsetzbare Pläne; Sonstiges. Die genaue Bedeutung und endgültige Auswahl bleiben, soweit nicht unten ausdrücklich definiert, offen.
+- Kategorienrichtung: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Future Blueprints; Sonstiges. Die genaue Bedeutung und endgültige Auswahl bleiben, soweit nicht unten ausdrücklich definiert, offen.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
 - Geschäftspartner & Kooperationen umfasst bestehende und potenzielle Partner, Kooperationsvereinbarungen, gemeinsame Projekte und Geschäftsbeziehungen sowie wichtige Informationen zu einzelnen Partnern.
 - Strategic Moves umfasst auch verworfene und später rückgängig gemachte Entscheidungen, damit die Entwicklung und Gründe nachvollziehbar bleiben.
+- Future Blueprints umfasst konkrete zukünftige Vorhaben, ausgearbeitete Ideen und Pläne, die SATYRN später umsetzen möchte; laufende Aufgaben und Termine gehören in die dafür vorgesehenen HQ-Bereiche.
 - Das Ereignisdatum ist optional und bezeichnet, wann das Ereignis stattfindet; es ist kein Erstellungsdatum.
 - Die Beschreibung ist optional.
 
