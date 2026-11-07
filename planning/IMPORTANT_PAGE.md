@@ -92,3 +92,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Zusätzlich zum Kategorienfilter gibt es einen Prioritätsfilter, mit dem einzelne Prioritätsstufen ein- und ausgeblendet werden können. Suchbegriff, Kategorienfilter und Prioritätsfilter wirken gemeinsam; die festgelegte Prioritäts- und Ereignisdatums-Sortierung bleibt für die sichtbaren Einträge bestehen.
 
 - Suchleiste sowie Kategorien- und Prioritätsfilter sind direkt oben auf der Important-Seite sichtbar und nicht erst in einem separaten Filter-Menü verborgen.
+
+- Important-Einträge sollen später mit passenden anderen HQ-Bereichen (z. B. Projects oder Business) verknüpft werden können. Die konkrete Auswahl der verknüpfbaren Bereiche und die Darstellung der Verknüpfungen werden noch festgelegt.
