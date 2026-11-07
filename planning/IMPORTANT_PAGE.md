@@ -279,3 +279,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Kartenoberfläche erhält einen sehr dezenten inneren Lichtverlauf: von dunklem Schwarz oben links zu einem kaum sichtbaren Grün-Gold-Schimmer unten rechts.
 
 - Die Karten erhalten einen leichten, weichen Schatten, der sie dezent vom Seitenhintergrund abhebt, ohne einen starken schwebenden Effekt zu erzeugen.
+
+## Abstand zwischen Karten
+- Die Important-Karten erhalten einen mittleren Abstand: klar voneinander getrennt, aber ohne unnötig viel Leerraum.
