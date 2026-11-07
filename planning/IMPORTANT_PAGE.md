@@ -17,15 +17,13 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Diese vorhandenen Felder sind lediglich Bestand und noch keine bestätigte Produktentscheidung.
 
 ## Noch offen — gemeinsam festlegen
-- Zweck und Abgrenzung zu Tasks, Deadlines, Calendar und Home-Aktivitäten
-- Welche Arten von Einträgen auf Important erscheinen
-- Seitenaufbau und Informationshierarchie
+- Welche konkreten Arten wichtiger Informationen gesammelt werden sollen
 - Konkrete Kategorien und ihre Definitionen
-- Prioritäten und Status
-- Wiedervorlage, Fälligkeiten und Archivierung
-- Erstellen, Bearbeiten, Erledigen und Löschen
+- Seitenaufbau und Informationshierarchie
+- Prioritäten und Status (falls benötigt)
+- Erstellen, Bearbeiten und Löschen
 - Filter, Suche und Sortierung
-- Verknüpfungen zu Projekten, Aufgaben oder anderen HQ-Bereichen
+- Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
 
 ## Änderungsprotokoll
@@ -33,6 +31,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Datum des Eintrags festgelegt: Es handelt sich um das Datum, an dem das Ereignis stattfindet — nicht um das Erstellungsdatum des Eintrags.
 - Beschreibung festgelegt: Ein zusätzlicher Beschreibungstext ist optional und kann leer bleiben.
 - Kategorie festgelegt: Jeder Important-Eintrag muss genau einer Kategorie zugeordnet werden. Die Kategorien selbst werden gemeinsam sorgfältig entwickelt; die im bisherigen Repository vorhandenen Vorschläge gelten nicht als beschlossen.
+- Zweck festgelegt: Important ist primär eine Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können. Es soll keine zweite Task- oder Deadline-Liste sein.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
