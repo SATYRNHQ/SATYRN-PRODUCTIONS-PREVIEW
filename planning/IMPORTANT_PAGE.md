@@ -343,3 +343,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Statt der zuletzt erstellten Important-Einträge zeigt die Homepage eine Vorschau der Important-Einträge mit der Priorität **Dringend**.
 - Die Vorschau enthält ausschließlich Einträge der Prioritätsstufe Dringend; andere Prioritäten werden dort nicht als dringende Einträge dargestellt.
 - Die Vorschau gehört zum Important-Homepage-Bereich und ergänzt das Prioritäts-Kreisdiagramm.
+- Vorläufig festgelegt: Auf der Homepage werden maximal die **drei dringendsten Important-Einträge** hervorgehoben. Die genaue Auswahl-/Sortierlogik und die konkrete Darstellung werden erst bei der späteren gemeinsamen Planung der Homepage festgelegt.
