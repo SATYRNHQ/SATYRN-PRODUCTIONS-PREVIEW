@@ -90,3 +90,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Auf der Important-Seite gibt es eine Suchleiste, mit der sämtliche Einträge anhand ihres Titels oder Beschreibungstextes durchsucht werden können.
 
 - Zusätzlich zum Kategorienfilter gibt es einen Prioritätsfilter, mit dem einzelne Prioritätsstufen ein- und ausgeblendet werden können. Suchbegriff, Kategorienfilter und Prioritätsfilter wirken gemeinsam; die festgelegte Prioritäts- und Ereignisdatums-Sortierung bleibt für die sichtbaren Einträge bestehen.
+
+- Suchleiste sowie Kategorien- und Prioritätsfilter sind direkt oben auf der Important-Seite sichtbar und nicht erst in einem separaten Filter-Menü verborgen.
