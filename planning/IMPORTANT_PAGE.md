@@ -113,3 +113,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - **Future Blueprints:** Türkis, Symbol `telescope`.
 - **Sonstiges:** Silbergrau, Symbol `layers`.
 - Die Kategorie-Farben und Symbole werden für die Kategorie-Labels und die visuelle Orientierung auf den Eintragskarten verwendet. Sie bleiben klar unterscheidbar von den vier Prioritätsfarben.
+
+- Wenn ein Eintrag ein Ereignisdatum besitzt, wird es auf der Karte als kleines Kalender-Label mit Kalender-Symbol und lesbarem Datum angezeigt. Einträge ohne Ereignisdatum zeigen dieses Label nicht an.
