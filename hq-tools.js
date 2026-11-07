@@ -7,7 +7,7 @@ calendar:['Calendar','events','Termin|Datum|Uhrzeit|Kategorie|Notiz / Ort','text
 'time-tracking':['Time Tracking','time','Tätigkeit / Projekt|Datum|Dauer Minuten|Bereich|Ergebnis / Notiz','text|date|number|select:Beats,Mixing,Artist Production,Content,Lernen,Business|textarea'],
 deadlines:['Deadlines','deadlines','Aufgabe / Deadline|Fällig am|Priorität|Status|Nächster Schritt','text|date|select:Niedrig,Normal,Hoch,Kritisch|select:Offen,In Arbeit,Erledigt|textarea'],
 focus:['Focus Mode','focuslog','Fokusziel|Geplante Minuten|Was soll fertig werden?','text|number|textarea'],
-important:['Important','important','Wichtiger Punkt|Kategorie|Wiedervorlage|Details','text|select:Entscheidung,Erinnerung,Risiko,Idee,Sonstiges|date|textarea'],
+
 savings:['Savings & Reserves','savings','Sparziel|Zielbetrag €|Aktueller Stand €|Zieldatum|Zweck','text|number|number|date|textarea'],
 'net-worth':['Net Worth','assets','Position|Typ|Wert €|Stand vom|Details','text|select:Betriebsvermögen,Privatvermögen,Verbindlichkeit|number|date|textarea'],
 budget:['Budget Planner','budgets','Budget-Kategorie|Monatslimit €|Bisher ausgegeben €|Monat YYYY-MM|Notiz','text|number|number|text|textarea'],
