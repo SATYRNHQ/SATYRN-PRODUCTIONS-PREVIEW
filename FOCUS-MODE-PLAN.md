@@ -223,7 +223,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Search works together with the status, category, and time-period filters.
 
 ### History filters
-- Filter by session status: **All Sessions**, **Completed**, **Abandoned**, and **Paused**.
+- Filter by session status: **All Sessions**, **Completed**, **Interrupted**, **Abandoned**, and **Paused**.
 - Filter by category.
 - Filter by time period/date range.
 - Filters can be combined so sessions can be narrowed down by status, category, and period together.
@@ -539,6 +539,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Unterbrechen/Abbrechen:** Die Session bleibt offen und kann später fortgesetzt werden. Sie wird in der offenen Session-Liste als unterbrochen angezeigt und zusätzlich in der History nachvollziehbar dokumentiert.
 - **Vorzeitig abschließen (Complete Session):** Die Session gilt als erfolgreich abgeschlossen, auch wenn die geplante Dauer noch nicht erreicht wurde. Sie verschwindet aus der offenen Liste und fließt in History und Statistiken ein.
 - Eine Unterbrechung darf nicht automatisch als endgültiger Abbruch oder als erfolgreiche Session gewertet werden.
+
+
+### Eigener History-Status für unterbrochene Sessions
+- Unterbrochene Sessions erhalten in der History einen eigenen Status **Unterbrochen**.
+- Dieser Status ist klar von **Pausiert** getrennt.
+- **Pausiert** bedeutet: Die Session wurde regulär pausiert und kann fortgesetzt werden.
+- **Unterbrochen** bedeutet: Die Session wurde verlassen oder unterbrochen und bleibt zur späteren Wiederaufnahme offen.
+- Der Status ist in der History als eigener Filter verfügbar.
 
 ## 8. Umsetzungsregeln
 
