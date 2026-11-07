@@ -115,3 +115,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Kategorie-Farben und Symbole werden für die Kategorie-Labels und die visuelle Orientierung auf den Eintragskarten verwendet. Sie bleiben klar unterscheidbar von den vier Prioritätsfarben.
 
 - Wenn ein Eintrag ein Ereignisdatum besitzt, wird es auf der Karte als kleines Kalender-Label mit Kalender-Symbol und lesbarem Datum angezeigt. Einträge ohne Ereignisdatum zeigen dieses Label nicht an.
+
+- Zusätzlich zum konkreten Kalenderdatum wird eine relative Zeitangabe angezeigt, sofern ein Ereignisdatum gesetzt ist: bei zukünftigen Ereignissen z. B. „In 3 Tagen“, bei vergangenen Ereignissen z. B. „Vor 5 Tagen“. Die Angabe wird dynamisch anhand des aktuellen Datums berechnet und aktualisiert.
