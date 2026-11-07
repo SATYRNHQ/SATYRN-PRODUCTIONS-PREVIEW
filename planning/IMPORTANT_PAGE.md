@@ -358,3 +358,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Sichtbarkeit des Prioritäts-Kreisdiagramms
 - Das Prioritäts-Kreisdiagramm bleibt dauerhaft sichtbar.
 - Es gibt keine zusätzliche Schaltfläche zum Ein- oder Ausblenden.
+
+## Größe des Prioritäts-Kreisdiagramms
+- Das Prioritäts-Kreisdiagramm wird groß und deutlich präsent dargestellt, nicht nur als kleines Neben-Element.
+- Die zugehörigen Prioritätsnamen und Anzahlen bleiben daneben gut lesbar; die Statistik erhält weiterhin eine gemeinsame dezente Dark-Glass-Fläche über der Kartenliste.
