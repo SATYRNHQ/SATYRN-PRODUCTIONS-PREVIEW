@@ -331,3 +331,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Important-Seite erhält eine kompakte Statistik mit der Anzahl der Einträge je Prioritätsstufe: Dringend, Wichtig, Vorläufig und Unbefristet.
 - Die Zahlen aktualisieren sich automatisch, wenn Einträge erstellt, bearbeitet oder gelöscht werden.
 - Die Statistik orientiert sich visuell an den jeweiligen Prioritätsfarben und bleibt dezent, damit Suche, Filter und Eintragskarten im Mittelpunkt stehen.
+
+## Darstellung und Position der Prioritätsstatistik
+- Die Prioritätsstatistik steht unterhalb der Filterbereiche und direkt oberhalb der Eintragskarten.
+- Statt einer reinen Zahlenreihe wird ein kompaktes Kreisdiagramm verwendet, das die Verteilung der Einträge auf Dringend, Wichtig, Vorläufig und Unbefristet zeigt.
+- Die vier Prioritäten bleiben zusätzlich mit ihren Namen und aktuellen Anzahlen erkennbar; Farben entsprechen den festgelegten Prioritätsfarben.
+- Das Diagramm aktualisiert sich automatisch bei Erstellung, Bearbeitung und Löschung von Einträgen sowie passend zur aktuell sichtbaren Ergebnisliste.
