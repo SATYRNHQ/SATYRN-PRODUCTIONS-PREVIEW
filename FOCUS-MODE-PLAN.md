@@ -582,6 +582,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ist keine Important-Aufgabe verknüpft (Free Focus bzw. eigenes Fokusziel), kann die Priorität für die Session individuell ausgewählt werden.
 - Es gibt keine automatische Standard-Hochstufung auf eine hohe Priorität.
 
+
+### Synchronisierung geänderter Prioritäten aus Important
+- Wird die Priorität einer verknüpften Aufgabe in Important geändert, wird die Priorität aller dazugehörigen offenen Focus-Sessions automatisch aktualisiert.
+- Die Aktualisierung gilt für laufende, pausierte und unterbrochene offene Sessions.
+- Bereits abgeschlossene Sessions behalten ihre zum Abschluss gespeicherte Priorität und werden rückwirkend nicht verändert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
