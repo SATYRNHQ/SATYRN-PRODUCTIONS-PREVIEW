@@ -526,6 +526,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Danach folgen pausierte Sessions, anschließend unterbrochene bzw. wiederherstellbare Sessions.
 - Innerhalb desselben Status steht die zuletzt aktive Session weiter oben.
 
+
+### Umgang mit abgeschlossenen Sessions
+- Sobald eine Session abgeschlossen wird, verschwindet sie aus der Liste der offenen Sessions.
+- Abgeschlossene Sessions bleiben vollständig in der Session History erhalten.
+- Ihre Daten fließen außerdem in die Focus-Statistiken ein.
+- Die Session wird dadurch nicht gelöscht; sie ist weiterhin über History und Statistiken nachvollziehbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
