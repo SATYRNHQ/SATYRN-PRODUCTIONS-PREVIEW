@@ -179,8 +179,6 @@
       if(action.dataset.reset){$('importantSearch').value='';setAll('cat',true);setAll('pri',true);return}
       if(action.dataset.addLink){const l=availableLinks.find(x=>x.id===action.dataset.addLink);if(l)linkSelections.push({...l});renderSelectedLinks();renderLinkResults();return}
       if(action.dataset.unlink){linkSelections=linkSelections.filter(x=>x.id!==action.dataset.unlink);renderSelectedLinks();renderLinkResults();return}
-      if(action.dataset.cancelDiscard){$('importantDiscardPrompt').hidden=true;return}
-      if(action.dataset.confirmDiscard){$('importantDiscardPrompt').hidden=true;closeModal();return}
       if(action.dataset.confirmDelete){confirmDelete();return}
       if(action.dataset.cancelDelete){$('importantDeletePrompt').hidden=true;return}
       if(action.dataset.modalClose!==undefined){requestClose();return}
@@ -200,6 +198,21 @@
   $('importantLinkSearch').addEventListener('focus',renderLinkResults);
   $('importantForm').addEventListener('submit',event=>{event.preventDefault();save()});
   $('importantCancel').addEventListener('click',requestClose);
+  // Discard confirmation uses direct handlers so its buttons never depend on
+  // the archive's delegated card-action handler.
+  $('importantDiscardPrompt').querySelector('[data-cancel-discard]').addEventListener('click',event=>{
+    event.preventDefault();
+    event.stopPropagation();
+    $('importantDiscardPrompt').hidden=true;
+    $('importantModal').hidden=false;
+    const active=$('importantTitle');
+    if(active)active.focus();
+  });
+  $('importantDiscardPrompt').querySelector('[data-confirm-discard]').addEventListener('click',event=>{
+    event.preventDefault();
+    event.stopPropagation();
+    closeModal();
+  });
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!$('importantModal').hidden){if(!$('importantDiscardPrompt').hidden){$('importantDiscardPrompt').hidden=true;return}requestClose()}});
   $('importantModalBackdrop').addEventListener('click',()=>{});
   renderFilters();render();
