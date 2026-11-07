@@ -412,6 +412,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei Abbruch bleiben alle Benachrichtigungen unverändert erhalten.
 - Bei Bestätigung werden alle Benachrichtigungen aus der Übersicht entfernt und der Ungelesen-Zähler entsprechend aktualisiert.
 
+
+### Benachrichtigungskategorien
+- Benachrichtigungen werden in der Übersicht visuell nach Kategorien getrennt dargestellt, z. B. Focus-Erinnerungen, Pausenerinnerungen und Systemmeldungen.
+- Die Kategorien erscheinen als getrennte Abschnitte innerhalb derselben Übersicht.
+- Es gibt keine zusätzlichen Filter oder Filtersteuerungen für diese Kategorien.
+- Ungelesen-Zähler, Einzel-Löschen, „Alle als gelesen markieren“ und „Alle löschen“ funktionieren weiterhin über alle Kategorien hinweg.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
