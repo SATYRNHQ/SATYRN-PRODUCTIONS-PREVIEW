@@ -483,6 +483,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - In der Wiederaufnahme-Meldung wird angezeigt, wie lange die letzte Aktivität zurückliegt, z. B. „Letzte Aktivität vor 2 Stunden“.
 - Die Zeitangabe dient nur zur Orientierung und verändert weder den gespeicherten Session-Status noch die Timerberechnung.
 
+
+### Sicherheitsabfrage beim Verwerfen
+- Vor dem Verwerfen einer wiederhergestellten Session erscheint eine separate Sicherheitsabfrage, z. B. „Möchtest du diese Session wirklich endgültig abbrechen?“
+- **Abbrechen** schließt die Abfrage und erhält die Session unverändert.
+- **Session verwerfen** bestätigt den Abbruch; die Session wird mit ihrem tatsächlichen Verlauf als abgebrochen in der History gespeichert.
+- Es gibt kein stilles oder versehentliches Verwerfen durch bloßes Schließen der Meldung.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
