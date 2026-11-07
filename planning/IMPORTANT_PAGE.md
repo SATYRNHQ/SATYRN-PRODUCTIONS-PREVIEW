@@ -29,6 +29,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Änderungsprotokoll
 - Konzept begonnen: Nutzer hat Important als erste gemeinsam zu planende Seite ausgewählt.
+- Datum des Eintrags festgelegt: Es handelt sich um das Datum, an dem das Ereignis stattfindet — nicht um das Erstellungsdatum des Eintrags.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
@@ -37,3 +38,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Important-Seite bleibt darunter geöffnet und sichtbar; das Eingabefenster ersetzt also nicht die Seite und navigiert nicht auf eine neue Ansicht.
 - Das Overlay dient zum Anlegen und Bearbeiten eines Important-Eintrags; konkrete Felder und Aktionen werden gemeinsam noch festgelegt.
 - Das Overlay darf Headbar und Sidebars nicht überdecken oder deren Interaktion beeinträchtigen.
+
+## Bestätigte Entscheidung — Ereignisdatum
+- Ein Important-Eintrag kann ein optionales Datum für das Ereignis enthalten.
+- Das Datum bezeichnet, wann das betreffende Ereignis stattfindet.
+- Ein Eintrag muss auch ohne Datum angelegt und gespeichert werden können.
+- Das Ereignisdatum ist ausdrücklich kein automatisch erforderliches Erstellungsdatum.
