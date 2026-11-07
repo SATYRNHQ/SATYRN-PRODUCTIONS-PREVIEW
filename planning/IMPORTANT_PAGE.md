@@ -326,3 +326,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Geöffnete Karten beim Seitenwechsel
 - Beim Wechsel von der Important-Seite zu einer anderen HQ-Seite werden alle aktuell ausgeklappten Important-Karten geschlossen.
 - Bei der Rückkehr zur Important-Seite starten alle Karten eingeklappt.
+
+## Prioritätsstatistik
+- Die Important-Seite erhält eine kompakte Statistik mit der Anzahl der Einträge je Prioritätsstufe: Dringend, Wichtig, Vorläufig und Unbefristet.
+- Die Zahlen aktualisieren sich automatisch, wenn Einträge erstellt, bearbeitet oder gelöscht werden.
+- Die Statistik orientiert sich visuell an den jeweiligen Prioritätsfarben und bleibt dezent, damit Suche, Filter und Eintragskarten im Mittelpunkt stehen.
