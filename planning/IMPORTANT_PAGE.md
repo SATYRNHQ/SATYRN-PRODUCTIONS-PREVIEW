@@ -78,3 +78,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Sowohl das X-Symbol als auch Escape schließen das Fenster ohne Speichern; nicht gespeicherte Änderungen werden verworfen.
 - **Wenn beim Schließen über X oder Escape ungespeicherte Änderungen vorhanden sind, erscheint zuerst eine Sicherheitsabfrage.** Der Nutzer kann wählen, ob er im Formular bleiben und weiterbearbeiten oder die Änderungen verwerfen und das Fenster schließen möchte.
 - Die Sicherheitsabfrage erscheint nur, wenn tatsächlich ungespeicherte Änderungen vorliegen. Ohne Änderungen wird das Fenster direkt geschlossen.
+- **Ein Klick auf den abgedunkelten Hintergrund außerhalb des Overlays schließt das Fenster nicht.** Das Overlay wird ausschließlich über die vorgesehenen Bedienelemente (X, Escape oder Abbrechen) geschlossen; bei ungespeicherten Änderungen gilt die bestätigte Sicherheitsabfrage.
