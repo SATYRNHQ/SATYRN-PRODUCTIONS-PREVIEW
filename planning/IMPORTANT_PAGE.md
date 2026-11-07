@@ -256,3 +256,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Bei schmalen Fenstern dürfen die beiden Filterbereiche untereinander umbrechen, damit die Bedienung übersichtlich bleibt.
 
 - Die nebeneinanderliegenden Filterbereiche „Kategorien“ und „Priorität“ erhalten jeweils eine dezente eigene Hintergrundfläche bzw. Umrandung, passend zum dunklen SATYRN-HQ-Design.
+
+- Die Überschrift „Kategorien“ erhält ein kleines passendes Symbol; die Überschrift „Priorität“ ebenfalls. Beide Symbole bleiben dezent und fügen sich in das SATYRN-HQ-Design ein.
