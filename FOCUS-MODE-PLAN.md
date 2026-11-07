@@ -796,6 +796,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die übernommene Kategorie ist in der Focus-Vorbereitung weiterhin änderbar.
 - Die bestehende Synchronisierung und Farbzuordnung für verknüpfte Aufgaben bleibt bestehen.
 
+
+### Beschreibung als Session-Ziel übernehmen
+- Beim Schnellstart aus Important wird die Aufgabenbeschreibung automatisch auch als Session-Ziel übernommen.
+- Das Session-Ziel bleibt in der Focus-Vorbereitung ein eigenes, bearbeitbares Feld und kann unabhängig von der ursprünglichen Important-Beschreibung angepasst werden.
+- Die ursprüngliche Beschreibung der verknüpften Important-Aufgabe bleibt als Aufgabendetail erhalten und wird durch Änderungen am Session-Ziel nicht überschrieben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
