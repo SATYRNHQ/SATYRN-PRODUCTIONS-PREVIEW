@@ -114,7 +114,7 @@
     $('importantDescription').value=e?.description||'';$('importantDate').value=e?.date||'';
     document.querySelectorAll('input[name="importantPriority"]').forEach(x=>x.checked=x.value===(e?.priority||''));
     linkSelections=(e?.links||[]).map(x=>({...x}));renderSelectedLinks();
-    $('importantLinkSearch').value='';$('importantLinkResults').hidden=true;$('importantDiscardPrompt').hidden=true;
+    $('importantLinkSearch').value='';$('importantLinkResults').hidden=true;$('importantLinkClose').hidden=true;$('importantDiscardPrompt').hidden=true;
     setModal(true);initialSnapshot=snapshot();
   }
   function renderSelectedLinks(){
@@ -128,6 +128,7 @@
     const list=availableLinks.filter(l=>!linkSelections.some(s=>s.id===l.id)&&(!q||(l.name+' '+l.area).toLowerCase().includes(q)));
     $('importantLinkResults').innerHTML=list.length?list.map(l=>'<button type="button" data-add-link="'+l.id+'"><span>'+l.area+'</span><b>'+l.name+'</b><small>BEISPIELZIEL</small></button>').join(''):'<p>Keine passenden HQ-Einträge gefunden.</p>';
     $('importantLinkResults').hidden=false;
+    $('importantLinkClose').hidden=false;
   }
   function save(){
     const title=$('importantTitle').value.trim(),category=$('importantCategory').value,priority=document.querySelector('input[name="importantPriority"]:checked')?.value;
@@ -195,6 +196,9 @@
   $('importantSearchClear').addEventListener('click',()=>{$('importantSearch').value='';render();$('importantSearch').focus()});
   $('importantLinkSearch').addEventListener('input',renderLinkResults);
   $('importantLinkSearch').addEventListener('focus',renderLinkResults);
+  $('importantLinkClose').addEventListener('click',()=>{$('importantLinkResults').hidden=true;$('importantLinkClose').hidden=true;$('importantLinkSearch').blur()});
+  $('importantLinkSearch').addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();$('importantLinkResults').hidden=true;$('importantLinkClose').hidden=true;$('importantLinkSearch').blur()}});
+  document.addEventListener('click',event=>{if(!event.target.closest('.imp-link-picker')){$('importantLinkResults').hidden=true;$('importantLinkClose').hidden=true}});
   $('importantForm').addEventListener('submit',event=>{event.preventDefault();save()});
   $('importantCancel').addEventListener('click',requestClose);
   // Discard confirmation uses direct handlers so its buttons never depend on
