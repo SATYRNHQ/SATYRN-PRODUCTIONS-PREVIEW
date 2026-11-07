@@ -512,6 +512,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Wechsel wird die bisherige Session nicht automatisch beendet oder verworfen; ihr Zustand bleibt erhalten.
 - Die jeweils ausgewählte Session wird im großen Timer-Bereich angezeigt und kann dort gesteuert werden.
 
+
+### Nur ein laufender Timer gleichzeitig
+- Es darf zu jedem Zeitpunkt maximal ein Timer aktiv laufen – auch dann, wenn mehrere offene Sessions vorhanden sind.
+- Andere offene Sessions behalten ihren jeweiligen Zustand (z. B. pausiert oder unterbrochen).
+- Beim Starten einer anderen Session wird ein aktuell laufender Timer automatisch pausiert, bevor der neue Timer startet.
+- Es werden niemals zwei Sessions parallel zeitlich hochgezählt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
