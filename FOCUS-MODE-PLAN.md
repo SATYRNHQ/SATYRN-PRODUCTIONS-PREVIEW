@@ -876,6 +876,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Fenster bietet weiterhin den direkten Rücksprung zur exakt zugehörigen Session.
 - Die Anzeige aktualisiert sich passend zum Session-Zustand und bleibt kompakt, damit sie andere Seiten nicht stört.
 
+
+### Hauptaufgabentitel im Focus-Rückkehrfenster
+- Das kleine Info-Fenster des seitenübergreifenden Focus-Rückkehrbuttons zeigt zusätzlich ausschließlich den Titel der aktuellen Hauptaufgabe.
+- Beschreibung und weitere Aufgabendetails werden dort nicht angezeigt.
+- Ist keine Hauptaufgabe ausgewählt, wird an dieser Stelle kein Aufgabentitel angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
