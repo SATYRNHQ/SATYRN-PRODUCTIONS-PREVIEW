@@ -2149,28 +2149,38 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   }
 }
 
-/* Integrated outer contour: a soft raised shoulder around the center palm.
-   The shape sits above the bar's fill/border but behind all navigation content. */
+/* Palm contour: extend ONLY the outer headbar frame above and below the center.
+   The caps blend into the bar and stay behind all navigation content. */
 .hq-top-nav{
   position:fixed!important;
-  isolation:isolate;
+  isolation:isolate!important;
   overflow:visible!important;
 }
-.hq-top-nav:before{
+.hq-top-nav:before,
+.hq-top-nav:after{
   content:"";
   position:absolute;
-  z-index:1;
+  z-index:0;
   left:50%;
-  top:50%;
-  width:142px;
-  height:116px;
-  transform:translate(-50%,-50%);
-  border:1px solid rgba(198,166,106,.17);
-  border-radius:48% / 42%;
-  background:linear-gradient(110deg,rgba(8,13,11,.84),rgba(17,26,21,.66),rgba(8,13,11,.84));
-  -webkit-backdrop-filter:blur(24px) saturate(115%);
-  backdrop-filter:blur(24px) saturate(115%);
+  width:88px;
+  height:24px;
+  transform:translateX(-50%);
+  background:linear-gradient(110deg,rgba(8,13,11,.38),rgba(17,26,21,.30),rgba(8,13,11,.38));
+  border-left:1px solid rgba(198,166,106,.14);
+  border-right:1px solid rgba(198,166,106,.14);
   pointer-events:none;
+}
+.hq-top-nav:before{
+  top:-12px;
+  border-top:1px solid rgba(198,166,106,.14);
+  border-bottom:0;
+  border-radius:50% 50% 0 0 / 100% 100% 0 0;
+}
+.hq-top-nav:after{
+  bottom:-12px;
+  border-bottom:1px solid rgba(198,166,106,.14);
+  border-top:0;
+  border-radius:0 0 50% 50% / 0 0 100% 100%;
 }
 .hq-top-nav>.headbar-group,
 .hq-top-nav>.home-palm{
