@@ -20,7 +20,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Zweck und Abgrenzung zu Tasks, Deadlines, Calendar und Home-Aktivitäten
 - Welche Arten von Einträgen auf Important erscheinen
 - Seitenaufbau und Informationshierarchie
-- Kategorien, Prioritäten und Status
+- Konkrete Kategorien und ihre Definitionen
+- Prioritäten und Status
 - Wiedervorlage, Fälligkeiten und Archivierung
 - Erstellen, Bearbeiten, Erledigen und Löschen
 - Filter, Suche und Sortierung
@@ -31,6 +32,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Konzept begonnen: Nutzer hat Important als erste gemeinsam zu planende Seite ausgewählt.
 - Datum des Eintrags festgelegt: Es handelt sich um das Datum, an dem das Ereignis stattfindet — nicht um das Erstellungsdatum des Eintrags.
 - Beschreibung festgelegt: Ein zusätzlicher Beschreibungstext ist optional und kann leer bleiben.
+- Kategorie festgelegt: Jeder Important-Eintrag muss genau einer Kategorie zugeordnet werden. Die Kategorien selbst werden gemeinsam sorgfältig entwickelt; die im bisherigen Repository vorhandenen Vorschläge gelten nicht als beschlossen.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
