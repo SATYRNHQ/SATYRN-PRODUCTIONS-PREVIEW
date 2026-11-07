@@ -2068,3 +2068,45 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
     min-height:78px!important;
   }
 }
+
+
+/* Headbar hover: keep every label clearly below its icon and fully inside the frame. */
+.hq-top-nav.labels-visible{
+  min-height:118px!important;
+  padding-top:10px!important;
+  padding-bottom:10px!important;
+  align-items:center!important;
+}
+.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){
+  min-height:96px!important;
+  height:96px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  padding:8px 10px!important;
+  overflow:visible!important;
+}
+.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-icon{
+  position:static!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+  transform:scale(1.5)!important;
+}
+.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-label{
+  position:static!important;
+  display:block!important;
+  flex:0 0 auto!important;
+  margin:0!important;
+  transform:none!important;
+  line-height:1.15!important;
+  white-space:nowrap!important;
+  opacity:1!important;
+}
+.hq-top-nav.labels-visible .home-palm{min-height:96px!important;height:96px!important}
+@media(max-width:720px){
+  .hq-top-nav.labels-visible{min-height:110px!important;padding-top:7px!important;padding-bottom:7px!important}
+  .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){min-height:94px!important;height:94px!important;gap:7px!important;padding:7px 3px!important}
+  .hq-top-nav.labels-visible .home-palm{min-height:94px!important;height:94px!important}
+}
