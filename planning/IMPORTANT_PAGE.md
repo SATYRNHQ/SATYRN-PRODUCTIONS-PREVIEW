@@ -337,3 +337,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Es berücksichtigt ausschließlich die Important-Einträge und zeigt deren Verteilung auf Dringend, Wichtig, Vorläufig und Unbefristet.
 - Das Diagramm erhält auf der Homepage eine eigene, klar erkennbare Überschrift, die auf den Important-Bereich verweist.
 - Die Größe und Darstellung bleiben wie festgelegt: großes, präsentes Kreisdiagramm mit Prioritätsnamen und Anzahlen daneben, innerhalb einer dezenten Dark-Glass-Fläche.
+- Sowohl die Important-Überschrift als auch das Kreisdiagramm sind anklickbar und führen direkt zur Important-Seite. Das Diagramm dient auf der Homepage als Übersicht und Navigation; seine Segmente lösen dort keine separaten Filteraktionen aus.
