@@ -144,3 +144,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Ausgewählte Verknüpfungen werden auch direkt auf der Important-Eintragskarte angezeigt, damit die zugehörigen HQ-Bereiche bzw. konkreten Einträge bereits in der Übersicht erkennbar sind.
 
 - Verknüpfungen werden auf der Eintragskarte als kleine, anklickbare Labels dargestellt. Jedes Label zeigt das passende Bereichssymbol und den Namen des verknüpften Eintrags; ein Klick führt direkt zum jeweiligen Zielbereich bzw. Eintrag.
+
+- Auf einer Eintragskarte werden höchstens drei Verknüpfungs-Labels direkt angezeigt. Weitere Verknüpfungen werden kompakt als „+X weitere“ zusammengefasst und können bei Bedarf aufgeklappt werden.
