@@ -2110,3 +2110,57 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){min-height:94px!important;height:94px!important;gap:7px!important;padding:7px 3px!important}
   .hq-top-nav.labels-visible .home-palm{min-height:94px!important;height:94px!important}
 }
+
+
+/* Keep headbar icon and label at identical coordinates before and during hover.
+   Only the surrounding frame grows; the label never switches into a new layout. */
+.hq-top-nav .edge-nav-item:not(.home-palm){
+  position:relative!important;
+  min-height:87px!important;
+  height:87px!important;
+}
+.hq-top-nav .edge-nav-item:not(.home-palm) .nav-icon{
+  position:absolute!important;
+  left:50%!important;
+  top:43.5px!important;
+  margin:0!important;
+  transform:translate(-50%,-50%) scale(1.5)!important;
+}
+.hq-top-nav .edge-nav-item:not(.home-palm) .nav-label{
+  position:absolute!important;
+  left:50%!important;
+  top:68px!important;
+  bottom:auto!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+  line-height:1.15!important;
+  white-space:nowrap!important;
+}
+.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){
+  min-height:87px!important;
+  height:87px!important;
+  justify-content:center!important;
+  gap:0!important;
+}
+.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-icon{
+  position:absolute!important;left:50%!important;top:43.5px!important;
+  transform:translate(-50%,-50%) scale(1.5)!important;
+}
+.hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-label{
+  position:absolute!important;left:50%!important;top:68px!important;bottom:auto!important;
+  transform:translateX(-50%)!important;
+}
+@media(max-width:720px){
+  .hq-top-nav .edge-nav-item:not(.home-palm),
+  .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm){
+    min-height:66px!important;height:66px!important;
+  }
+  .hq-top-nav .edge-nav-item:not(.home-palm) .nav-icon,
+  .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-icon{
+    top:29px!important;
+  }
+  .hq-top-nav .edge-nav-item:not(.home-palm) .nav-label,
+  .hq-top-nav.labels-visible .edge-nav-item:not(.home-palm) .nav-label{
+    top:49px!important;
+  }
+}
