@@ -59,7 +59,7 @@ function renderFocus(p,restore){
     if(action==='pause'){if(running){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));stopInterval();setClock()}return}
     if(action==='reset'){stopInterval();phase='focus';remaining=selectedMinutes()*60;total=remaining;currentGoal='';deadline=0;setClock();return}
     if(action==='apply'){if(running){N('Pausiere die Session zuerst.');return}if(phase==='break'){N('Beende zuerst deine Pause.');return}remaining=selectedMinutes()*60;total=remaining;currentGoal='';setClock();N('Session-Einstellungen übernommen.')}
-  });
+  };
   const custom=el('focusCustomMinutes');custom.addEventListener('change',()=>{if(mode==='custom'&&!running){remaining=selectedMinutes()*60;total=remaining;setClock()}});
   setClock();
 }
