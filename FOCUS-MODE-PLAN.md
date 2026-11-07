@@ -675,6 +675,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Sie werden dort als erledigt gekennzeichnet und bleiben mit ihrer ursprünglichen Verknüpfung nachvollziehbar.
 - Das erneute Einblenden in der History fügt sie nicht zurück zur aktiven Aufgabenliste der Focus-Session hinzu.
 
+
+### Synchronisierung bearbeiteter Important-Aufgaben
+- Änderungen an einer verknüpften Important-Aufgabe, insbesondere Titel und Beschreibung, werden automatisch in den offenen verknüpften Focus-Sessions übernommen.
+- Die Synchronisierung gilt für laufende, pausierte und unterbrochene Sessions.
+- Bereits abgeschlossene Sessions behalten den Aufgabenstand, der zum Abschlusszeitpunkt galt.
+- Wird eine Aufgabe umbenannt oder ihre Beschreibung geändert, bleiben Session-Notizen, Distraction Log, Unteraufgaben und Zeitdaten unverändert.
+- Bei mehreren verknüpften Aufgaben wird jede Aufgabe mit ihren jeweils aktuellen Angaben separat dargestellt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
