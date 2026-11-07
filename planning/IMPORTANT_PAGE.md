@@ -226,3 +226,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Suchumfang
 - Die Live-Suche durchsucht neben Titel und Beschreibung auch die Namen der verknüpften Einträge, beispielsweise Projekte und Geschäftspartner.
+
+## Trefferanzahl
+- Oberhalb der Eintragskarten wird die aktuelle Anzahl der angezeigten Treffer angezeigt, z. B. „12 Einträge gefunden“.
+- Die Zahl aktualisiert sich automatisch passend zu Suche und aktiven Kategorie- sowie Prioritätsfiltern.
