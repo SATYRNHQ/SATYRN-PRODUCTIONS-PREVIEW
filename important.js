@@ -27,7 +27,7 @@
   function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
   function uid(){return crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2)}
   function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-  function read(){try{return JSON.parse(localStorage.getItem(KEY)||'null')}catch{return null}}
+  function read(){try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');if(raw&&!Array.isArray(raw)&&Array.isArray(raw.entries))return raw.entries;if(Array.isArray(raw))return raw.length?raw:null;return null}catch{return null}}
   let saved=read(), entries=Array.isArray(saved)?saved:examples.map(x=>({...x}));
   let realExists=Array.isArray(saved)&&saved.some(x=>!x.example);
   if(realExists)entries=entries.filter(x=>!x.example);
@@ -36,7 +36,7 @@
   let editingId=null,linkSelections=[],initialSnapshot='',pendingClose=false,menuFor=null,freshId=null;
   const root=$('importantApp');
   if(!root)return;
-  const store=()=>{try{localStorage.setItem(KEY,JSON.stringify(entries));return true}catch{toast('Speichern im Browser nicht möglich. Bitte Speicherplatz prüfen.');return false}};
+  const store=()=>{try{localStorage.setItem(KEY,JSON.stringify({version:2,entries}));return true}catch{toast('Speichern im Browser nicht möglich. Bitte Speicherplatz prüfen.');return false}};
   function toast(msg){const t=$('toast');if(t){t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}}
   const cat=id=>categories.find(x=>x.id===id)||categories[4],pri=id=>priorities.find(x=>x.id===id)||priorities[3];
   const fmt=d=>{if(!d)return '';const [y,m,day]=d.split('-');return day+'.'+m+'.'+y};
