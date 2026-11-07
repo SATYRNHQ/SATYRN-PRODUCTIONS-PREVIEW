@@ -746,6 +746,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Erledigte oder entfernte Aufgaben werden aus der aktiven Reihenfolge genommen; die verbleibende Reihenfolge rückt entsprechend zusammen.
 - Die Sortierung verändert keine Prioritäten oder Daten der verknüpften Important-Aufgaben.
 
+
+### Hauptaufgabe manuell wechseln
+- Der Nutzer kann jederzeit selbst eine andere offene zusätzliche Aufgabe zur Hauptaufgabe machen.
+- Der Wechsel erfolgt über eine Auswahl der offenen Zusatzaufgaben und muss vor der Übernahme bestätigt werden.
+- Bei Abbrechen bleibt die bisherige Hauptaufgabe unverändert.
+- Nach Bestätigung wird die ausgewählte Aufgabe zur hervorgehobenen Hauptaufgabe; die bisherige Hauptaufgabe wird entsprechend der Aufgabenreihenfolge als zusätzliche Aufgabe einsortiert.
+- Die manuelle Änderung beeinflusst nicht den Erledigungsstatus oder die Priorität der Aufgaben.
+- Die Sicherheitsabfrage folgt dem einheitlichen Sicherheitsabfrage-System aus dem Important-Tab.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
