@@ -442,6 +442,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die verbleibende Zeit wird anhand der tatsächlichen verstrichenen Zeit berechnet, damit ein geschlossenes Fenster den Timer nicht künstlich anhält.
 - Auch Session-Status, gewähltes Fokusziel und zugehörige Session-Daten bleiben erhalten.
 
+
+### Verhalten bei Verbindungsverlust
+- Focus Mode soll während eines vorübergehenden Internet- bzw. Verbindungsverlusts lokal weiterlaufen.
+- Session-Zustand, Timerfortschritt und währenddessen erfasste Daten werden lokal zwischengespeichert.
+- Sobald die Verbindung wieder verfügbar ist, werden die zwischengespeicherten Änderungen mit dem zentralen Datenstand synchronisiert.
+- Während der Offline-Phase soll die Bedienung der laufenden Session möglichst uneingeschränkt bleiben.
+- Die Synchronisierung darf keine doppelten Sessions oder verlorenen Änderungen verursachen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
