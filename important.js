@@ -27,16 +27,17 @@
   function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
   function uid(){return crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(16).slice(2)}
   function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-  function read(){try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');if(raw&&!Array.isArray(raw)&&Array.isArray(raw.entries))return raw.entries;if(Array.isArray(raw))return raw.length?raw:null;return null}catch{return null}}
-  let saved=read(), entries=Array.isArray(saved)?saved:examples.map(x=>({...x}));
-  let realExists=Array.isArray(saved)&&saved.some(x=>!x.example);
-  if(realExists)entries=entries.filter(x=>!x.example);
+  function read(){try{const raw=JSON.parse(localStorage.getItem(KEY)||'null');if(raw&&!Array.isArray(raw)&&Array.isArray(raw.entries))return raw;if(Array.isArray(raw))return {entries:raw,examplesRestored:false};return null}catch{return null}}
+  const saved=read();
+  let entries=saved?saved.entries:examples.map(x=>({...x}));
+  // Restore the original demo cards once for existing users without touching personal entries.
+  if(saved&&!saved.examplesRestored){const present=new Set(entries.map(x=>x.id));entries=[...examples.filter(x=>!present.has(x.id)).map(x=>({...x})),...entries];}
   let categoryOn=new Set(categories.map(x=>x.id)),priorityOn=new Set(priorities.map(x=>x.id));
   let expanded=new Set(),newItems=new Set(entries.filter(x=>!x.example&&x.isNew).map(x=>x.id));
   let editingId=null,linkSelections=[],initialSnapshot='',pendingClose=false,menuFor=null,freshId=null;
   const root=$('importantApp');
   if(!root)return;
-  const store=()=>{try{localStorage.setItem(KEY,JSON.stringify({version:2,entries}));return true}catch{toast('Speichern im Browser nicht möglich. Bitte Speicherplatz prüfen.');return false}};
+  const store=()=>{try{localStorage.setItem(KEY,JSON.stringify({version:2,examplesRestored:true,entries}));return true}catch{toast('Speichern im Browser nicht möglich. Bitte Speicherplatz prüfen.');return false}};
   function toast(msg){const t=$('toast');if(t){t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}}
   const cat=id=>categories.find(x=>x.id===id)||categories[4],pri=id=>priorities.find(x=>x.id===id)||priorities[3];
   const fmt=d=>{if(!d)return '';const [y,m,day]=d.split('-');return day+'.'+m+'.'+y};
@@ -139,7 +140,7 @@
       newItems.delete(old.id);old.isNew=false;
     }else{
       const item={id:uid(),title,category,priority,description,date,links:linkSelections.map(x=>({...x})),created:now,isNew:true};
-      entries=entries.filter(x=>!x.example);entries.unshift(item);newItems.add(item.id);freshId=item.id;
+      entries.unshift(item);newItems.add(item.id);freshId=item.id;
       categoryOn.add(category);priorityOn.add(priority);
     }
     if(!store())return;
