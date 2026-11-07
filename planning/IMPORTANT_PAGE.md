@@ -85,3 +85,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Ausgeklappte Beschreibungen können wieder eingeklappt werden. Dafür wechselt die Bedienoption beispielsweise von **„Mehr anzeigen“** zu **„Weniger anzeigen“**.
 - Beim Ausklappen wächst die jeweilige Karte dynamisch in der Höhe, sodass der vollständige Beschreibungstext innerhalb der Karte angezeigt wird. Die übrigen Karten werden im Layout entsprechend nach unten verschoben; Inhalte überlagern sich nicht.
 - Oben rechts auf jeder Eintragskarte befindet sich ein Drei-Punkte-Menü (⋮), über das die Aktionen **„Bearbeiten“** und **„Löschen“** erreichbar sind. Beim Löschen bleibt die bereits festgelegte Sicherheitsabfrage vor dem endgültigen Entfernen bestehen.
+- Das Drei-Punkte-Menü ist **dauerhaft sichtbar** und erscheint nicht erst beim Darüberfahren mit der Maus (Hover).
