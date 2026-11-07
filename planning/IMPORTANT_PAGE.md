@@ -254,3 +254,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Darunter stehen Kategorienfilter und Prioritätsfilter nebeneinander in zwei klar getrennten Bereichen.
 - Die Trefferanzahl wird unter den Filterbereichen und oberhalb der Eintragskarten angezeigt.
 - Bei schmalen Fenstern dürfen die beiden Filterbereiche untereinander umbrechen, damit die Bedienung übersichtlich bleibt.
+
+- Die nebeneinanderliegenden Filterbereiche „Kategorien“ und „Priorität“ erhalten jeweils eine dezente eigene Hintergrundfläche bzw. Umrandung, passend zum dunklen SATYRN-HQ-Design.
