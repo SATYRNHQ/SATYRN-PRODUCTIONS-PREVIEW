@@ -133,3 +133,10 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Bereiche sollen die Orientierung erleichtern und optisch sauber voneinander getrennt sein. Erstellen und Bearbeiten verwenden dieselbe Formularstruktur.
 
 - **Layout-Empfehlung:** Das große Formular nutzt ein hybrides Zwei-Spalten-Layout. Oben stehen **Grundinformationen** und **Priorität** nebeneinander. Darunter folgen **Inhalt** und **Verknüpfungen** jeweils über die gesamte verfügbare Breite. So wird die Fensterbreite sinnvoll genutzt, während die Beschreibung und die Auswahl mehrerer Verknüpfungen genügend Platz behalten. Auf schmaleren Ansichten wechseln die Bereiche automatisch in eine Spalte.
+
+## Verknüpfungsauswahl im Formular (bestätigt)
+- Im Abschnitt „Verknüpfungen“ gibt es ein Suchfeld mit Dropdown.
+- Über die Suche können sowohl HQ-Bereiche als auch konkrete Einträge gefunden werden.
+- Mehrere Verknüpfungen können gleichzeitig ausgewählt werden.
+- Mehrere Einträge aus demselben HQ-Bereich sind zulässig.
+- Ausgewählte Verknüpfungen bleiben sichtbar und können einzeln wieder entfernt werden.
