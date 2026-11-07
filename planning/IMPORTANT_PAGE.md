@@ -35,6 +35,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
   2. **Wichtig** — Orange
   3. **Vorläufig** — Blau
   4. **Unbefristet** — Grün
+- Die Prioritätsstufen werden im Erstellen-/Bearbeiten-Fenster als vier auswählbare Felder dargestellt. Die Namen selbst erscheinen jeweils in ihrer zugehörigen Farbe: Dringend rot, Wichtig orange, Vorläufig blau und Unbefristet grün.
+- Die vier Auswahlfelder werden nebeneinander angeordnet, sofern die verfügbare Breite ausreicht; bei schmalen Ansichten dürfen sie sinnvoll umbrechen.
+- Die Priorität ist beim Erstellen verpflichtend und kann beim späteren Bearbeiten geändert werden.
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Innerhalb derselben Prioritätsstufe werden Einträge anhand ihres **Ereignisdatums** sortiert, nicht anhand des Erstellungsdatums.
 - Zukünftige Ereignisse stehen vor bereits vergangenen Ereignissen. Unter den zukünftigen Ereignissen steht das nächstliegende Datum zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird dynamisch anhand des aktuellen Datums bestimmt.
