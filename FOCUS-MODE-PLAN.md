@@ -463,6 +463,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der neue Zustand wird zeitnah an alle anderen geöffneten Tabs übertragen.
 - Vorhandene Zustände dürfen dabei nicht unbemerkt überschrieben werden; widersprüchliche Aktionen müssen konsistent aufgelöst werden.
 
+
+### Wiederaufnahme-Hinweis beim Öffnen
+- Beim Öffnen von Focus Mode wird automatisch geprüft, ob eine gespeicherte laufende oder unterbrochene Session vorhanden ist.
+- Falls eine Session wiederaufgenommen werden kann, erscheint eine dezente Meldung mit der Möglichkeit, sie fortzusetzen.
+- Die Session wird nicht ohne Zustimmung automatisch fortgesetzt.
+- Die Wiederaufnahme stellt den gespeicherten Zustand und die anhand der tatsächlichen verstrichenen Zeit berechnete Restzeit wieder her.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
