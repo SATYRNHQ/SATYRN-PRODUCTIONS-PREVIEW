@@ -17,7 +17,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Noch offen — gemeinsam festlegen
 - Konkreter Seitenaufbau und Anordnung der Karten
-- Regeln für die automatische Sortierung innerhalb der Prioritätsstufen und mögliche Gleichstände
+- Chronologische Sortierrichtung und welches Datum dafür maßgeblich ist
+- Konkrete visuelle Umsetzung der Unterscheidung zwischen Dringend und Wichtig
 - Erstellen, Bearbeiten und Löschen im Detail
 - Suche und weitere Sortiermöglichkeiten
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
@@ -37,6 +38,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
   3. **Vorläufig** — Blau
   4. **Unbefristet** — Grün
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
+- Innerhalb derselben Prioritätsstufe sollen die Einträge chronologisch sortiert werden. Sortierrichtung und maßgebliches Datum sind noch zu klären.
+- Dringend und Wichtig müssen visuell klar voneinander unterscheidbar sein. Als Gestaltungsrichtung ist ein kräftiger roter Akzent mit Ausrufezeichen für Dringend und ein zurückhaltenderer orangefarbener Akzent ohne Warnsymbol für Wichtig vorgeschlagen; die konkrete Umsetzung ist noch nicht final bestätigt.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
 - Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
