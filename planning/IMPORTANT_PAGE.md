@@ -142,3 +142,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Ausgewählte Verknüpfungen bleiben sichtbar und können einzeln wieder entfernt werden.
 
 - Ausgewählte Verknüpfungen werden auch direkt auf der Important-Eintragskarte angezeigt, damit die zugehörigen HQ-Bereiche bzw. konkreten Einträge bereits in der Übersicht erkennbar sind.
+
+- Verknüpfungen werden auf der Eintragskarte als kleine, anklickbare Labels dargestellt. Jedes Label zeigt das passende Bereichssymbol und den Namen des verknüpften Eintrags; ein Klick führt direkt zum jeweiligen Zielbereich bzw. Eintrag.
