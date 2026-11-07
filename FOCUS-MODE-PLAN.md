@@ -357,6 +357,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Button führt direkt zur Focus-Mode-Seite.
 - Die Erinnerung selbst bleibt dezent und blockiert nicht die aktuell geöffnete Seite.
 
+
+### Erinnerung zurückstellen
+- Jede Inaktivitäts-Erinnerung bietet neben „Jetzt fokussieren“ auch „Später erinnern“.
+- Beim Zurückstellen wird die aktuelle Erinnerung vorübergehend ausgeblendet und zu einem später festzulegenden Zeitpunkt erneut angezeigt.
+- Die genaue Dauer für das Zurückstellen wird in der weiteren Planung festgelegt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
