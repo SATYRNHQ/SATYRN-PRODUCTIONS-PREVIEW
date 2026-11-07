@@ -691,6 +691,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Synchronisierung gilt für laufende, pausierte und unterbrochene Sessions; abgeschlossene Sessions behalten den Stand zum Abschlusszeitpunkt.
 - Eigene Focus-Notizen, das Distraction Log und andere Session-Daten bleiben davon unberührt.
 
+
+### Hinweis, wenn alle verknüpften Important-Aufgaben erledigt sind
+- Sobald alle mit einer offenen Focus-Session verknüpften Important-Aufgaben erledigt sind, erkennt Focus Mode dies automatisch.
+- Es erscheint eine dezente Benachrichtigung, dass alle verknüpften Aufgaben abgeschlossen sind.
+- Die Benachrichtigung beendet oder verändert die Focus-Session nicht automatisch; der Nutzer entscheidet selbst, ob er weiterarbeitet oder die Session abschließt.
+- Die Benachrichtigung folgt dem einheitlichen Toast-/Benachrichtigungssystem und den Gestaltungsregeln des Focus Mode.
+- Bei einer Session ohne verknüpfte Important-Aufgaben wird dieser Hinweis nicht angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
