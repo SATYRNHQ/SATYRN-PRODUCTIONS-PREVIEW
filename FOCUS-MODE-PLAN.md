@@ -609,6 +609,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der ursprüngliche Aufgabenname und der Hinweis **„Aufgabe gelöscht / nicht mehr verknüpft“** bleiben in den Session-Details sichtbar.
 - Die Kennzeichnung bleibt rein historisch und erzeugt keine neue Verknüpfung.
 
+
+### Manuelles erneutes Verknüpfen einer Session
+- Eine entkoppelte offene Focus-Session kann jederzeit manuell mit einer anderen bestehenden Important-Aufgabe verknüpft werden.
+- Es findet keine automatische Neuverknüpfung statt.
+- Vor dem Verknüpfen wählt der Nutzer die gewünschte Important-Aufgabe ausdrücklich aus.
+- Nach erfolgreicher Verknüpfung übernimmt die offene Session die aktuelle Priorität der ausgewählten Important-Aufgabe.
+- Die bisherige historische Information über die frühere Verknüpfung bleibt nachvollziehbar erhalten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
