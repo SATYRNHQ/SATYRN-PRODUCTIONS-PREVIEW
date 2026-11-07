@@ -802,6 +802,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Session-Ziel bleibt in der Focus-Vorbereitung ein eigenes, bearbeitbares Feld und kann unabhängig von der ursprünglichen Important-Beschreibung angepasst werden.
 - Die ursprüngliche Beschreibung der verknüpften Important-Aufgabe bleibt als Aufgabendetail erhalten und wird durch Änderungen am Session-Ziel nicht überschrieben.
 
+
+### Unteraufgaben beim Schnellstart aus Important übernehmen
+- Beim Schnellstart einer Focus-Session aus einer Important-Aufgabe werden deren Unteraufgaben automatisch in die Session übernommen.
+- Unteraufgaben werden in der Vorbereitung angezeigt und bleiben entsprechend der bestehenden Focus-Regeln bearbeitbar.
+- Die bestehende Synchronisierung von Änderungen an verknüpften Important-Unteraufgaben gilt weiterhin für offene Sessions; abgeschlossene Sessions behalten ihren Snapshot.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
