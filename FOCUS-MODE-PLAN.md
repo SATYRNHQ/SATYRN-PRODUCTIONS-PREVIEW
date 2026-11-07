@@ -370,6 +370,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Erinnerung enthält ebenfalls eine Aktion, mit der direkt eine neue Fokussitzung gestartet werden kann.
 - Die Pausenerinnerungen bleiben dezent und können in den Focus-Mode-Einstellungen angepasst oder deaktiviert werden.
 
+
+### Website-weite Pausenerinnerungen
+- Erinnerungen nach 30 und 60 Minuten Pause können auf jeder Seite innerhalb von SATYRN HQ erscheinen, nicht nur im Focus Mode.
+- Sie werden dezent eingeblendet und blockieren den aktuell geöffneten Arbeitsbereich nicht.
+- Beim Seitenwechsel dürfen keine doppelten Erinnerungen oder parallelen Timer entstehen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
