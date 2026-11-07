@@ -324,6 +324,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Konflikte, etwa wenn dieselbe Tastenkombination mehreren Aktionen zugewiesen wird, werden erkannt und verständlich angezeigt.
 - Sicherheits- und Eingabefeld-Regeln bleiben bestehen: keine versehentlichen Auslösungen beim Tippen und keine Umgehung von Sicherheitsabfragen.
 
+
+### Speicherung eigener Tastaturbelegungen
+- Individuelle Tastaturbelegungen werden dauerhaft im Browser gespeichert und bleiben nach einem Browser-Neustart erhalten.
+- Änderungen gelten auch für zukünftige Focus-Mode-Sitzungen.
+- Ein Zurücksetzen auf Standardwerte ist jederzeit möglich.
+- Die Belegungen werden in einem späteren Backup-Konzept berücksichtigt, sofern die Focus-Mode-Einstellungen exportiert werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
