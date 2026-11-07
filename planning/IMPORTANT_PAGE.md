@@ -327,38 +327,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Beim Wechsel von der Important-Seite zu einer anderen HQ-Seite werden alle aktuell ausgeklappten Important-Karten geschlossen.
 - Bei der Rückkehr zur Important-Seite starten alle Karten eingeklappt.
 
-## Prioritätsstatistik
-- Die Important-Seite erhält eine kompakte Statistik mit der Anzahl der Einträge je Prioritätsstufe: Dringend, Wichtig, Vorläufig und Unbefristet.
-- Die Zahlen aktualisieren sich automatisch, wenn Einträge erstellt, bearbeitet oder gelöscht werden.
-- Die Statistik orientiert sich visuell an den jeweiligen Prioritätsfarben und bleibt dezent, damit Suche, Filter und Eintragskarten im Mittelpunkt stehen.
 
-## Darstellung und Position der Prioritätsstatistik
-- Die Prioritätsstatistik steht unterhalb der Filterbereiche und direkt oberhalb der Eintragskarten.
-- Statt einer reinen Zahlenreihe wird ein kompaktes Kreisdiagramm verwendet, das die Verteilung der Einträge auf Dringend, Wichtig, Vorläufig und Unbefristet zeigt.
-- Die vier Prioritäten bleiben zusätzlich mit ihren Namen und aktuellen Anzahlen erkennbar; Farben entsprechen den festgelegten Prioritätsfarben.
-- Das Diagramm aktualisiert sich automatisch bei Erstellung, Bearbeitung und Löschung von Einträgen sowie passend zur aktuell sichtbaren Ergebnisliste.
-
-## Interaktion mit dem Prioritäts-Kreisdiagramm
-- Ein Klick auf ein Segment des Kreisdiagramms aktiviert direkt den zugehörigen Prioritätsfilter.
-- Die übrigen Such- und Kategorie-Filter bleiben unverändert; die Ergebnisliste und Trefferanzahl aktualisieren sich entsprechend.
-- Das ausgewählte Segment erhält eine dezente visuelle Hervorhebung. Ein erneuter Klick auf dasselbe Segment deaktiviert diesen Prioritätsfilter wieder.
-
-## Gesamtzahl im Zentrum des Kreisdiagramms
-- In der Mitte des Prioritäts-Kreisdiagramms wird die Gesamtzahl der aktuell angezeigten Einträge dargestellt.
-- Die Zahl aktualisiert sich dynamisch entsprechend der aktiven Suche sowie Kategorie- und Prioritätsfilter.
-
-## Hover-Informationen im Prioritäts-Kreisdiagramm
-- Beim Darüberfahren mit der Maus über ein Segment erscheint eine dezente Zusatzinformation mit Prioritätsname und aktueller Anzahl, z. B. „Dringend – 3 Einträge“.
-- Die Anzeige verwendet die jeweilige Prioritätsfarbe und bleibt kompakt, gut lesbar und unaufdringlich.
-
-## Responsive Darstellung des Prioritäts-Kreisdiagramms
-- Auf kleineren Bildschirmen und schmalen Fenstern wird das Kreisdiagramm automatisch kompakter dargestellt.
-- Diagramm, Gesamtzahl und Prioritätsbeschriftungen bleiben gut lesbar und bedienbar; nichts darf abgeschnitten werden oder überlappen.
-
-## Sichtbarkeit des Prioritäts-Kreisdiagramms
-- Das Prioritäts-Kreisdiagramm bleibt dauerhaft sichtbar.
-- Es gibt keine zusätzliche Schaltfläche zum Ein- oder Ausblenden.
-
-## Größe des Prioritäts-Kreisdiagramms
-- Das Prioritäts-Kreisdiagramm wird groß und deutlich präsent dargestellt, nicht nur als kleines Neben-Element.
-- Die zugehörigen Prioritätsnamen und Anzahlen bleiben daneben gut lesbar; die Statistik erhält weiterhin eine gemeinsame dezente Dark-Glass-Fläche über der Kartenliste.
+## Abgrenzung zur Homepage
+- Das große Prioritäts-Kreisdiagramm gehört **auf die Homepage**, nicht auf die Important-Seite und nicht in das Important-Fenster.
+- Auf der Important-Seite wird dieses Diagramm daher nicht angezeigt. Die Important-Seite behält ihre Suche, Filter, Trefferanzahl und Eintragskarten.
