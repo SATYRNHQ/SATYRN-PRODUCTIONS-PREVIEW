@@ -27,3 +27,9 @@ The Homepage Executive Overview is the reference for the overall scale, spacing,
 - Page-specific components may have their own internal layout, but should inherit the same overall content scale and visual rhythm.
 - When the global design system changes, update the shared layer once so the rule applies to every page.
 - Preserve the global headbar/sidebar dimensions and behavior; this document governs page content sizing, not navigation.
+
+
+## Typography readability
+- The minimum text size inside every page is 14px.
+- Micro-copy that previously appeared at 7px is therefore doubled to 14px.
+- This minimum applies consistently to all current and future pages; larger text remains at its existing size.
