@@ -83,3 +83,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Bestätigte Entscheidung — Eintragskarten
 - Längere Beschreibungen werden auf den Karten zunächst eingeklappt dargestellt und können bei Bedarf durch den Nutzer ausgeklappt werden. Dadurch bleibt die Übersicht kompakt, während ausführliche Informationen direkt auf der Seite zugänglich bleiben.
 - Ausgeklappte Beschreibungen können wieder eingeklappt werden. Dafür wechselt die Bedienoption beispielsweise von **„Mehr anzeigen“** zu **„Weniger anzeigen“**.
+- Beim Ausklappen wächst die jeweilige Karte dynamisch in der Höhe, sodass der vollständige Beschreibungstext innerhalb der Karte angezeigt wird. Die übrigen Karten werden im Layout entsprechend nach unten verschoben; Inhalte überlagern sich nicht.
