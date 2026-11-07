@@ -87,6 +87,12 @@
     const set=type==='cat'?categoryOn:priorityOn,all=type==='cat'?categories:priorities;
     set.clear();if(on)all.forEach(x=>set.add(x.id));renderFilters();render();
   }
+  function updateCategorySelectColor(){
+    const select=$('importantCategory');
+    if(!select)return;
+    select.classList.remove('imp-category-company','imp-category-partners','imp-category-moves','imp-category-blueprints','imp-category-other');
+    if(select.value)select.classList.add('imp-category-'+select.value);
+  }
   function setModal(open){
     $('importantModalBackdrop').hidden=!open;
     $('importantModal').hidden=!open;
@@ -103,7 +109,7 @@
   function openModal(id=null){
     editingId=id;const e=id?entries.find(x=>x.id===id):null;
     $('importantForm').reset();$('importantModalHeading').textContent=e?'Eintrag bearbeiten':'Neuen Eintrag erstellen';
-    $('importantTitle').value=e?.title||'';$('importantCategory').value=e?.category||'';
+    $('importantTitle').value=e?.title||'';$('importantCategory').value=e?.category||'';updateCategorySelectColor();
     $('importantDescription').value=e?.description||'';$('importantDate').value=e?.date||'';
     document.querySelectorAll('input[name="importantPriority"]').forEach(x=>x.checked=x.value===(e?.priority||''));
     linkSelections=(e?.links||[]).map(x=>({...x}));renderSelectedLinks();
