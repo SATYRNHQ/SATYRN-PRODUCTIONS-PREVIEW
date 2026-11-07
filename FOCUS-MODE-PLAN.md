@@ -669,6 +669,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Erledigung und die frühere Verknüpfung bleiben in den zugehörigen Daten und in der History nachvollziehbar.
 - Das automatische Ausblenden verändert weder den Status noch den Ablauf der Focus-Session oder anderer verknüpfter Aufgaben.
 
+
+### Erledigte verknüpfte Aufgaben in der History einsehen
+- Erledigte, zuvor mit einer Focus-Session verknüpfte Important-Aufgaben können in der History der jeweiligen Session wieder eingesehen werden.
+- Sie werden dort als erledigt gekennzeichnet und bleiben mit ihrer ursprünglichen Verknüpfung nachvollziehbar.
+- Das erneute Einblenden in der History fügt sie nicht zurück zur aktiven Aufgabenliste der Focus-Session hinzu.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
