@@ -275,3 +275,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Oberfläche bleibt hochwertig und zurückhaltend; Texte und farbige Kategorie-/Prioritätsmarkierungen müssen klar lesbar bleiben.
 
 - Der metallische Kartenrand verwendet eine dezente Mischung aus Gold und Grün, passend zur gold-grün-schwarzen SATYRN-HQ-Identität.
+
+- Die Kartenoberfläche erhält einen sehr dezenten inneren Lichtverlauf: von dunklem Schwarz oben links zu einem kaum sichtbaren Grün-Gold-Schimmer unten rechts.
