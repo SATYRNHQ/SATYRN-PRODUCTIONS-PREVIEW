@@ -234,3 +234,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Filter zurücksetzen
 - Es gibt einen Button „Filter zurücksetzen“.
 - Er leert den Suchtext und aktiviert alle fünf Kategorien sowie alle vier Prioritäten wieder (Standardzustand).
+
+- Der Button „Filter zurücksetzen“ steht rechts neben dem Suchfeld.
