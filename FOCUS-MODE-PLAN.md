@@ -424,6 +424,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Innerhalb jeder Benachrichtigungskategorie stehen die neuesten Einträge immer oben.
 - Die Sortierung aktualisiert sich automatisch, sobald eine neue Benachrichtigung eingeht.
 
+
+### Visuelle Unterscheidung gelesen/ungelesen
+- Ungelesene Benachrichtigungen werden etwas deutlicher hervorgehoben.
+- Gelesene Benachrichtigungen erscheinen optisch dezenter, bleiben aber gut lesbar und weiterhin aufrufbar.
+- Die Darstellung bleibt konsistent mit dem Premium-SATYRN-HQ-Design.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
