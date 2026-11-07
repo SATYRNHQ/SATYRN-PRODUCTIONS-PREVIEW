@@ -78,8 +78,6 @@
   function render(){
     const list=matching();$('importantCount').textContent=list.length+' Einträge gefunden';
     $('importantCards').innerHTML=list.length?list.map(card).join(''):'';
-    $('importantEmpty').hidden=list.length>0;
-    $('importantEmpty').classList.toggle('no-data',entries.length===0);
     $('importantCards').hidden=list.length===0;
     $('importantNoResults').hidden=entries.length===0||list.length>0;
     $('importantWelcome').hidden=entries.length>0;
