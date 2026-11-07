@@ -655,6 +655,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Sind keine Important-Aufgaben mehr verknüpft, kann die Priorität der freien Focus-Session manuell festgelegt werden.
 - Abgeschlossene Sessions behalten weiterhin die Priorität, die sie zum Abschlusszeitpunkt hatten.
 
+
+### Verknüpfte Important-Aufgaben einzeln erledigen
+- Innerhalb einer Focus-Session können einzelne verknüpfte Important-Aufgaben unabhängig voneinander als erledigt markiert werden.
+- Die Erledigung wird mit dem Important-Tab synchronisiert; die Aufgabe erhält dort ebenfalls den Status erledigt.
+- Das Erledigen einer einzelnen Aufgabe schließt weder die Focus-Session noch die übrigen verknüpften Aufgaben ab.
+- Die erledigte Aufgabe bleibt als erledigt gekennzeichnet in der Session sichtbar und die Verknüpfung bleibt nachvollziehbar.
+- Für diese Aktion gelten die einheitlichen Sicherheitsabfragen aus dem Important-Tab.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
