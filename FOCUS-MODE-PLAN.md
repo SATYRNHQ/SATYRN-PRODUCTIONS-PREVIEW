@@ -699,6 +699,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Benachrichtigung folgt dem einheitlichen Toast-/Benachrichtigungssystem und den Gestaltungsregeln des Focus Mode.
 - Bei einer Session ohne verknüpfte Important-Aufgaben wird dieser Hinweis nicht angezeigt.
 
+
+### Important-Aufgaben während einer Focus-Session hinzufügen
+- Während einer laufenden, pausierten oder unterbrochenen Focus-Session können jederzeit weitere bestehende Important-Aufgaben hinzugefügt werden, ohne die Session verlassen zu müssen.
+- Neue Verknüpfungen werden direkt in der Session angezeigt und unterliegen den bestehenden Bestätigungs- und Synchronisierungsregeln.
+- Die Priorität der offenen Session wird nach dem Hinzufügen anhand der höchsten Priorität aller aktuell verknüpften Aufgaben neu berechnet.
+- Das Hinzufügen von Aufgaben startet oder beendet die Session nicht und verändert keine bestehenden Notizen, Zeitdaten oder Unteraufgaben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
