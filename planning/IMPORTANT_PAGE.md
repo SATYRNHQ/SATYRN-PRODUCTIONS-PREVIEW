@@ -236,3 +236,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Er leert den Suchtext und aktiviert alle fünf Kategorien sowie alle vier Prioritäten wieder (Standardzustand).
 
 - Der Button „Filter zurücksetzen“ steht rechts neben dem Suchfeld.
+
+## Visuelles Feedback der Filter
+- Aktivierte Filter werden dezent in ihrer jeweiligen Kategorie- bzw. Prioritätsfarbe hervorgehoben.
+- Beim Darüberfahren mit der Maus (Hover) erhalten Filter ebenfalls einen leichten, farblich passenden Leuchteffekt.
+- Der Effekt bleibt subtil und fügt sich in den SATYRN-HQ-Stil ein.
