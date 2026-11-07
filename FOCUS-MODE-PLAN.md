@@ -435,6 +435,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei neuen Benachrichtigungen gibt es keine zusätzliche Animation am Glocken-Symbol.
 - Das kleine Pop-up oben rechts ist bereits die sichtbare Benachrichtigung und reicht als Hinweis auf neue Einträge aus.
 
+
+### Wiederherstellung einer laufenden Session
+- Laufende Focus Sessions werden bei Seitenneuladen, versehentlichem Schließen des Tabs oder Schließen des Browsers automatisch mit ihrem aktuellen Zustand gespeichert.
+- Beim erneuten Öffnen von SATYRN HQ wird die Session wiederhergestellt und kann an derselben Stelle fortgesetzt werden.
+- Die verbleibende Zeit wird anhand der tatsächlichen verstrichenen Zeit berechnet, damit ein geschlossenes Fenster den Timer nicht künstlich anhält.
+- Auch Session-Status, gewähltes Fokusziel und zugehörige Session-Daten bleiben erhalten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
