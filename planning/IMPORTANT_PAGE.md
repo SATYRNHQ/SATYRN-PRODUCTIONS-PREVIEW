@@ -346,3 +346,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Vorläufig festgelegt: Auf der Homepage werden maximal die **drei dringendsten Important-Einträge** hervorgehoben. Die genaue Auswahl-/Sortierlogik und die konkrete Darstellung werden erst bei der späteren gemeinsamen Planung der Homepage festgelegt.
 - Auch der Button **„Abbrechen“** prüft, ob ungespeicherte Änderungen vorhanden sind. Wenn ja, erscheint dieselbe Sicherheitsabfrage wie beim Schließen über X oder Escape: weiter bearbeiten oder Änderungen verwerfen und schließen. Ohne Änderungen schließt „Abbrechen“ das Formular direkt.
 - Bestätigt: Einträge ohne Ereignisdatum stehen innerhalb ihrer jeweiligen Prioritätsgruppe immer ganz unten — auch dann, wenn sie gerade erst erstellt wurden. Das Erstellungsdatum verändert diese Sortierregel nicht.
+
+
+## Kartenübersicht — Listenstruktur
+- Die Important-Einträge erscheinen als eine durchgehende, einspaltige Kartenliste im zentralen Inhaltsbereich.
+- Die Karten werden innerhalb dieser Liste nach der festgelegten Prioritätsreihenfolge sortiert: Dringend → Wichtig → Vorläufig → Unbefristet. Es gibt keine separaten Abschnittsüberschriften oder getrennten Listenblöcke pro Priorität; die farbigen Prioritätsstreifen und -Badges kennzeichnen die jeweilige Stufe.
