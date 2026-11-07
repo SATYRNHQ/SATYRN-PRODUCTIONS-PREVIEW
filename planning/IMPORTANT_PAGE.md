@@ -12,7 +12,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 1. **Unternehmensinformationen** — umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
 2. **Geschäftspartner & Kooperationen** — umfasst bestehende und potenzielle Geschäftspartner, auch wenn noch keine Zusammenarbeit besteht, sowie Kooperationsvereinbarungen, gemeinsame Projekte, Geschäftsbeziehungen und wichtige Informationen zu einzelnen Partnern.
 3. **Strategic Moves** — umfasst getroffene, verworfene und später rückgängig gemachte unternehmerische Entscheidungen sowie deren Hintergründe, damit Entscheidungswege nachvollziehbar bleiben.
-4. **Future Blueprints** — umfasst konkrete zukünftige Vorhaben, ausgearbeitete Ideen und Pläne, die SATYRN später umsetzen möchte; keine laufenden Aufgaben oder Termine.
+4. **Future Blueprints** — umfasst konkrete zukünftige Vorhaben, ausgearbeitete Ideen und Pläne, die SATYRN später umsetzen möchte; keine aktiven Aufgaben oder Termine.
 5. **Sonstiges** — ausschließlich wichtige Informationen, die in keine der vier anderen Kategorien passen. Die Kategorie ist als Auffangkategorie gedacht und soll nicht die reguläre Zuordnung ersetzen.
 
 ## Noch offen — gemeinsam festlegen
@@ -38,6 +38,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Prioritätsstufen werden im Erstellen-/Bearbeiten-Fenster als vier auswählbare Felder dargestellt. Die Namen selbst erscheinen jeweils in ihrer zugehörigen Farbe: Dringend rot, Wichtig orange, Vorläufig blau und Unbefristet grün.
 - Die vier Auswahlfelder werden nebeneinander angeordnet, sofern die verfügbare Breite ausreicht; bei schmalen Ansichten dürfen sie sinnvoll umbrechen.
 - Die Priorität ist beim Erstellen verpflichtend und kann beim späteren Bearbeiten geändert werden.
+- Die Kategorie wird im Erstellen-/Bearbeiten-Fenster über ein Dropdown-Menü ausgewählt, das alle fünf festgelegten Kategorien enthält. Die Kategorie ist verpflichtend.
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Innerhalb derselben Prioritätsstufe werden Einträge anhand ihres **Ereignisdatums** sortiert, nicht anhand des Erstellungsdatums.
 - Zukünftige Ereignisse stehen vor bereits vergangenen Ereignissen. Unter den zukünftigen Ereignissen steht das nächstliegende Datum zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird dynamisch anhand des aktuellen Datums bestimmt.
