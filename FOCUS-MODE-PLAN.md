@@ -683,6 +683,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wird eine Aufgabe umbenannt oder ihre Beschreibung geändert, bleiben Session-Notizen, Distraction Log, Unteraufgaben und Zeitdaten unverändert.
 - Bei mehreren verknüpften Aufgaben wird jede Aufgabe mit ihren jeweils aktuellen Angaben separat dargestellt.
 
+
+### Synchronisierung von Important-Unteraufgaben
+- Änderungen an Unteraufgaben einer verknüpften Important-Aufgabe werden automatisch in allen offenen verknüpften Focus-Sessions synchronisiert.
+- Neu hinzugefügte, bearbeitete und entfernte Unteraufgaben werden entsprechend übernommen.
+- Der Erledigungsstatus einzelner Unteraufgaben wird ebenfalls synchronisiert.
+- Die Synchronisierung gilt für laufende, pausierte und unterbrochene Sessions; abgeschlossene Sessions behalten den Stand zum Abschlusszeitpunkt.
+- Eigene Focus-Notizen, das Distraction Log und andere Session-Daten bleiben davon unberührt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
