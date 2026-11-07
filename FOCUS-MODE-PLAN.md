@@ -316,6 +316,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Tastaturkürzel werden nicht ausgelöst, während der Nutzer in Eingabe-, Text- oder Suchfeldern schreibt.
 - Bereits festgelegt: Leertaste = Pause/Fortsetzen; `R` = Reset mit Sicherheitsabfrage.
 
+
+### Individuelle Tastaturbelegung
+- Zusätzlich zur Kürzel-Legende gibt es einen Editor für eigene Tastaturbelegungen.
+- Nutzer können unterstützte Aktionen auf andere Tasten bzw. Tastenkombinationen legen.
+- Der Editor zeigt die aktuelle Belegung und ermöglicht das Ändern sowie Zurücksetzen auf Standardwerte.
+- Konflikte, etwa wenn dieselbe Tastenkombination mehreren Aktionen zugewiesen wird, werden erkannt und verständlich angezeigt.
+- Sicherheits- und Eingabefeld-Regeln bleiben bestehen: keine versehentlichen Auslösungen beim Tippen und keine Umgehung von Sicherheitsabfragen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
