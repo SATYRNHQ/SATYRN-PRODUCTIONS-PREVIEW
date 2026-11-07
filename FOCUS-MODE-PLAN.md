@@ -405,6 +405,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Aktion markiert alle aktuell ungelesenen Benachrichtigungen auf einmal als gelesen.
 - Bereits gelöschte Benachrichtigungen bleiben unberücksichtigt.
 
+
+### Alle Benachrichtigungen löschen
+- Die Benachrichtigungsübersicht bietet zusätzlich die Aktion „Alle löschen“.
+- Vor dem endgültigen Löschen wird eine Sicherheitsabfrage angezeigt.
+- Bei Abbruch bleiben alle Benachrichtigungen unverändert erhalten.
+- Bei Bestätigung werden alle Benachrichtigungen aus der Übersicht entfernt und der Ungelesen-Zähler entsprechend aktualisiert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
