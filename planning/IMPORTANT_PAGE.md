@@ -73,3 +73,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - **Am unteren Rand des Erstellen-/Bearbeiten-Fensters befinden sich zwei Aktionsbuttons: „Abbrechen“ und „Speichern“.**
 - „Abbrechen“ schließt das Fenster, ohne die vorgenommenen Änderungen zu speichern.
 - „Speichern“ speichert den neuen oder bearbeiteten Eintrag. Pflichtfelder müssen dafür vollständig ausgefüllt sein.
+- Das Fenster kann zusätzlich über ein **X-Symbol oben rechts** geschlossen werden.
+- Das Fenster kann außerdem jederzeit mit der **Escape-Taste** geschlossen werden.
+- Sowohl das X-Symbol als auch Escape schließen das Fenster ohne Speichern; nicht gespeicherte Änderungen werden verworfen.
