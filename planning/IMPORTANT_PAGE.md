@@ -16,9 +16,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 5. **Sonstiges** — ausschließlich wichtige Informationen, die in keine der vier anderen Kategorien passen. Die Kategorie ist als Auffangkategorie gedacht und soll nicht die reguläre Zuordnung ersetzen.
 
 ## Noch offen — gemeinsam festlegen
-- Sortierung bereits vergangener Ereignisse innerhalb ihrer Prioritätsstufe
 - Konkrete visuelle Ausgestaltung der Karten und Prioritätsmarkierungen
-- Erstellen, Bearbeiten und Löschen im Detail
+- Details zur Bestätigung beim Löschen eines Eintrags
 - Suche und weitere Sortiermöglichkeiten
 - Verknüpfungen zu Projekten oder anderen HQ-Bereichen
 - Leere Ansicht, Beispielinhalte und responsive Verhalten
@@ -39,12 +38,14 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Innerhalb derselben Prioritätsstufe werden Einträge anhand ihres **Ereignisdatums** sortiert, nicht anhand des Erstellungsdatums.
 - Zukünftige Ereignisse stehen vor bereits vergangenen Ereignissen. Unter den zukünftigen Ereignissen steht das nächstliegende Datum zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird dynamisch anhand des aktuellen Datums bestimmt.
-- Bereits vergangene Ereignisse sollen ebenfalls angezeigt werden; ihre genaue Sortierreihenfolge ist noch offen.
+- Bereits vergangene Ereignisse bleiben sichtbar und werden so sortiert, dass das am längsten zurückliegende Ereignis zuerst erscheint; je länger ein Ereignis zurückliegt, desto weiter oben steht es innerhalb der Gruppe vergangener Ereignisse.
 - Einträge ohne Ereignisdatum stehen innerhalb ihrer jeweiligen Prioritätsstufe ganz unten.
 - **Dringend** und **Wichtig** müssen auf einen Blick klar unterscheidbar sein. Bestätigte Gestaltungsrichtung: Dringend erhält einen deutlich kräftigeren roten Akzent und ein Ausrufezeichen als Warnsymbol. Wichtig erhält einen orangefarbenen Akzent, aber ohne Warnsymbol und mit zurückhaltenderer Wirkung. Die genauen visuellen Details werden beim späteren Seitendesign festgelegt.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
 - Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
+- Einträge sollen nach dem Erstellen jederzeit bearbeitet werden können.
+- Einträge sollen gelöscht werden können. Ob vor dem endgültigen Löschen eine Bestätigung eingeblendet wird, ist noch offen.
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
 - Die fünf Kategorien und ihre inhaltlichen Abgrenzungen sind festgelegt: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Future Blueprints; Sonstiges.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
