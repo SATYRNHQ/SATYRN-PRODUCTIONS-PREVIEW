@@ -255,6 +255,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Notizen und Distraction-Log-Einträge werden ebenfalls als eigene CSV-Felder aufgenommen, soweit vorhanden.
 - Der Export lädt eine Datei herunter und verändert oder löscht keine gespeicherten Sessions.
 
+### JSON-Backup und Wiederherstellung
+- Zusätzlich zum CSV-Export gibt es einen vollständigen JSON-Export der Focus-Mode-Daten.
+- Der JSON-Export dient als Backup und enthält Sessions sowie zugehörige Daten wie Notizen, Distraction-Log-Einträge, Unteraufgaben, Favoritenstatus und Session-Einstellungen.
+- Ein JSON-Import kann ein zuvor exportiertes Backup wiederherstellen.
+- Vor dem Import wird eine Vorschau angezeigt und ausdrücklich bestätigt, welche Daten importiert werden.
+- Beim Import werden vorhandene Daten nicht stillschweigend überschrieben. Es gibt eine klare Auswahl zwischen dem Zusammenführen mit vorhandenen Daten und dem vollständigen Ersetzen nach deutlicher Sicherheitsabfrage.
+- Importierte Datensätze werden auf gültige Struktur geprüft; ungültige Dateien werden mit verständlicher Fehlermeldung abgelehnt.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
