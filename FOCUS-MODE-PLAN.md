@@ -300,6 +300,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Desktop-Version bleibt die primäre und vollständigste Ansicht.
 
 
+### Tastaturkürzel
+- Focus Mode unterstützt Tastaturkürzel für häufige Timer-Aktionen.
+- Leertaste: laufende Fokus- oder Pausenphase pausieren bzw. fortsetzen.
+- `R`: Reset-Vorgang starten; vor dem Zurücksetzen erscheint weiterhin die Sicherheitsabfrage.
+- Tastaturkürzel dürfen nicht versehentlich ausgelöst werden, während der Nutzer in einem Textfeld oder anderen Eingabefeld tippt.
+- Die Bedienung über sichtbare Buttons bleibt jederzeit möglich.
+
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
