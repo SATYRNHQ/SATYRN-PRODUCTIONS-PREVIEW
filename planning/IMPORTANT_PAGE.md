@@ -314,3 +314,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Neu erstellte Einträge erhalten am Kartenrand eine kleine Kennzeichnung mit dem Text „Neu“.
 - Die Kennzeichnung leuchtet dezent und passend zur gold-grün-schwarzen SATYRN-HQ-Optik.
 - Sie ist eine kleine Orientierungshilfe und darf Prioritätsstreifen, Titel oder andere Karteninformationen nicht verdrängen oder überdecken.
+
+## Verhalten der Kennzeichnung „Neu“
+- Die Kennzeichnung „Neu“ bleibt sichtbar, bis der Nutzer den betreffenden Eintrag zum ersten Mal öffnet.
+- Beim ersten Öffnen des Eintrags wird die Kennzeichnung entfernt; sie erscheint für diesen Eintrag danach nicht erneut.
