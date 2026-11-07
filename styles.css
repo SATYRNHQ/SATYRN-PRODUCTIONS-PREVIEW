@@ -2315,3 +2315,51 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
  .home-bottom-note{align-items:flex-start}
  .home-bottom-demo{max-width:85px;line-height:1.5;text-align:right}
 }
+
+
+/* GLOBAL PAGE DESIGN SYSTEM — shared sizing rules for every current and future page */
+:root{
+  --hq-content-max:1500px;
+  --hq-layout-gap:clamp(12px,1.15vw,16px);
+  --hq-card-radius:14px;
+  --hq-card-padding:clamp(18px,2vw,26px);
+  --hq-page-heading-size:clamp(38px,4.4vw,64px);
+}
+.main-area>.page{
+  width:100%;
+  max-width:var(--hq-content-max);
+  margin-inline:auto;
+}
+.main-area>.page>.page-intro{
+  width:100%;
+  max-width:var(--hq-content-max);
+  margin-inline:auto;
+  padding:clamp(30px,3.1vw,46px) 0 clamp(22px,2.2vw,32px);
+}
+.main-area>.page .page-intro h1{
+  font-size:var(--hq-page-heading-size);
+  line-height:1.02;
+  letter-spacing:-1.4px;
+}
+.main-area>.page :is(.module-grid,.finance-tools-grid,.home-dashboard-grid,.home-metric-grid,.feature-grid,.dashboard-grid){
+  gap:var(--hq-layout-gap);
+}
+.main-area>.page :is(.module-panel,.project-manager,.settings-list,.glass-card,.home-card,.home-metric){
+  border-radius:var(--hq-card-radius);
+}
+@media(max-width:720px){
+  :root{
+    --hq-layout-gap:10px;
+    --hq-card-padding:17px;
+    --hq-page-heading-size:clamp(36px,10vw,54px);
+  }
+  .main-area>.page{
+    max-width:100%;
+  }
+  .main-area>.page>.page-intro{
+    padding:clamp(24px,7vw,38px) 0 22px;
+  }
+  .main-area>.page .page-intro h1{
+    letter-spacing:-1.2px;
+  }
+}
