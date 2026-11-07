@@ -568,6 +568,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Dauer wird laufend bzw. bei erneuter Anzeige aktuell berechnet und kompakt dargestellt, z. B. **„pausiert seit 15 Min.“** oder **„unterbrochen seit 2 Std.“**.
 - Bei laufenden Sessions wird stattdessen der aktuelle Timerstatus angezeigt.
 
+
+### Offene Sessions umbenennen
+- Offene Sessions können jederzeit manuell umbenannt werden.
+- Das Umbenennen ändert nur den angezeigten Session-Namen bzw. das Fokusziel.
+- Notizen, Distraction Log, Unteraufgaben, Zeitdaten und bisherige Statistikdaten bleiben erhalten.
+- Die Änderung wird in der bestehenden Session gespeichert und beim Fortsetzen sowie in der History berücksichtigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
