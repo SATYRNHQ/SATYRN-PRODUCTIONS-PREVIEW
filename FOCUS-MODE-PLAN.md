@@ -714,6 +714,16 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Erst nach dieser Bestätigung werden die ausgewählten Aufgaben mit der Session verknüpft.
 - Das Auswahlfenster kann ohne Änderungen geschlossen werden; bestehende Verknüpfungen und Session-Daten bleiben unverändert.
 
+
+### Hauptaufgabe und zusätzliche Important-Aufgaben
+- Eine Focus-Session mit mehreren verknüpften Important-Aufgaben kann genau eine davon als Hauptaufgabe festlegen; die übrigen sind zusätzliche Aufgaben.
+- Die Hauptaufgabe wird in der Session klar hervorgehoben, bleibt aber Teil derselben Verknüpfungs- und Synchronisierungslogik.
+- Haupt- und zusätzliche Aufgaben können unabhängig voneinander als erledigt markiert werden.
+- Wird die Hauptaufgabe erledigt, wird sie in Important als erledigt markiert und aus der aktiven Aufgabenliste der Focus-Session ausgeblendet. Noch offene zusätzliche Aufgaben bleiben verknüpft und können später separat bearbeitet werden.
+- Das Erledigen der Hauptaufgabe beendet die Focus-Session nicht automatisch und erledigt keine zusätzlichen Aufgaben.
+- Die Session-History bewahrt die damalige Hauptaufgabe sowie den Status aller verknüpften Aufgaben nachvollziehbar auf.
+- Die Hauptaufgabe kann bei Bedarf manuell unter den noch offenen verknüpften Aufgaben geändert werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
