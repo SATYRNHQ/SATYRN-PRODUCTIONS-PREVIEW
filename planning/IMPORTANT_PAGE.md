@@ -344,3 +344,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Vorschau enthält ausschließlich Einträge der Prioritätsstufe Dringend; andere Prioritäten werden dort nicht als dringende Einträge dargestellt.
 - Die Vorschau gehört zum Important-Homepage-Bereich und ergänzt das Prioritäts-Kreisdiagramm.
 - Vorläufig festgelegt: Auf der Homepage werden maximal die **drei dringendsten Important-Einträge** hervorgehoben. Die genaue Auswahl-/Sortierlogik und die konkrete Darstellung werden erst bei der späteren gemeinsamen Planung der Homepage festgelegt.
+- Auch der Button **„Abbrechen“** prüft, ob ungespeicherte Änderungen vorhanden sind. Wenn ja, erscheint dieselbe Sicherheitsabfrage wie beim Schließen über X oder Escape: weiter bearbeiten oder Änderungen verwerfen und schließen. Ohne Änderungen schließt „Abbrechen“ das Formular direkt.
