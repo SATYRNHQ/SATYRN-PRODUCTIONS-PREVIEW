@@ -548,6 +548,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Unterbrochen** bedeutet: Die Session wurde verlassen oder unterbrochen und bleibt zur späteren Wiederaufnahme offen.
 - Der Status ist in der History als eigener Filter verfügbar.
 
+
+### Wiederaufnahme einer unterbrochenen Session
+- Beim Fortsetzen einer unterbrochenen Session wird sie exakt mit ihrem gespeicherten Zustand wiederhergestellt.
+- Timerstand und verbleibende Zeit werden korrekt weitergeführt; die tatsächliche vergangene Zeit seit der Unterbrechung wird berücksichtigt.
+- Session-Ziel, Kategorie, Priorität, Notizen, Distraction Log und Unteraufgaben bleiben erhalten.
+- Die Session wird nach dem Fortsetzen wieder als laufend bzw. bei manuellem Pausieren als pausiert angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
