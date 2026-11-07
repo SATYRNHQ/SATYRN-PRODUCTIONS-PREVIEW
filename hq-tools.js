@@ -54,7 +54,7 @@ function renderFocus(p,restore){
   p.querySelectorAll('[data-focus-mode]').forEach(b=>b.addEventListener('click',()=>{if(running||phase==='break')return;mode=b.dataset.focusMode;p.querySelectorAll('[data-focus-mode]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b?'true':'false')});el('focusCustomRow').hidden=mode!=='custom';remaining=selectedMinutes()*60;total=remaining;setClock()}));
   el('focusTaskSelect').addEventListener('change',()=>{if(el('focusTaskSelect').value)el('focusGoal').value=el('focusTaskSelect').value});
   p.querySelectorAll('[data-focus-task]').forEach(box=>box.addEventListener('change',()=>{const list=tasks(),item=list.find(t=>String(t.id)===box.dataset.focusTask);if(item){item.done=box.checked;localStorage.setItem('satyrn-tasks',JSON.stringify(list));renderFocus(p)}}));
-  p.addEventListener('click',e=>{const b=e.target.closest('[data-focus-action]');if(!b)return;const action=b.dataset.focusAction;
+  p.onclick=e=>{const b=e.target.closest('[data-focus-action]');if(!b)return;const action=b.dataset.focusAction;
     if(action==='start'){start();return}
     if(action==='pause'){if(running){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));stopInterval();setClock()}return}
     if(action==='reset'){stopInterval();phase='focus';remaining=selectedMinutes()*60;total=remaining;currentGoal='';deadline=0;setClock();return}
