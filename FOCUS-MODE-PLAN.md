@@ -814,6 +814,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bereits erledigte Unteraufgaben erscheinen in der Focus-Session direkt als erledigt; offene bleiben offen.
 - Die bestehende Synchronisierung von Statusänderungen zwischen Important und offenen verknüpften Focus-Sessions bleibt maßgeblich.
 
+
+### Geschätzte Aufgabendauer beim Schnellstart übernehmen
+- Falls für die Important-Aufgabe eine geschätzte Dauer hinterlegt ist, wird sie beim Schnellstart in die Focus-Vorbereitung übernommen.
+- Die übernommene Schätzung dient als vorausgefüllter Wert und kann vor dem Start angepasst werden.
+- Die Focus- und Pausendauer des Timers müssen weiterhin separat geprüft bzw. bestätigt werden; die Aufgabenschätzung ersetzt diese Timer-Einstellungen nicht.
+- Ist keine Schätzung hinterlegt, bleibt das entsprechende Feld leer.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
