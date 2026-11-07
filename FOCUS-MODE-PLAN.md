@@ -588,6 +588,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Aktualisierung gilt für laufende, pausierte und unterbrochene offene Sessions.
 - Bereits abgeschlossene Sessions behalten ihre zum Abschluss gespeicherte Priorität und werden rückwirkend nicht verändert.
 
+
+### Verhalten beim Löschen verknüpfter Important-Aufgaben
+- Wird eine Important-Aufgabe gelöscht, bleiben alle damit verknüpften offenen Focus-Sessions erhalten.
+- Diese Sessions werden automatisch von der gelöschten Aufgabe entkoppelt und als unabhängige Sessions weitergeführt.
+- Session-Ziel, Kategorie, Priorität, Timerstand, Notizen, Distraction Log und Unteraufgaben bleiben erhalten.
+- Die Sessions können weiterhin pausiert, unterbrochen, fortgesetzt oder abgeschlossen werden.
+- Die gelöschte Important-Aufgabe wird dadurch nicht wiederhergestellt und die Focus-Session bleibt eigenständig bearbeitbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
