@@ -292,6 +292,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Focus Mode verwendet das reguläre Premium-SATYRN-HQ-Design.
 - Die Ablenkungsreduktion erfolgt über den bereits geplanten Distraction-Free-Modus und nicht über ein zusätzliches Theme.
 
+### Smartphone- und Tablet-Unterstützung
+- Focus Mode soll grundsätzlich auch auf Smartphones nutzbar sein.
+- Die mobile Optimierung ist sinnvoll, aber keine zwingende Voraussetzung für jede einzelne Funktion.
+- Priorität haben eine gut lesbare Timeranzeige sowie einfach erreichbare Start-, Pause- und Fortsetzen-Steuerungen.
+- Komplexere Bereiche wie Statistiken, Task Queue und History dürfen auf kleineren Displays kompakter oder in aufklappbaren Ansichten dargestellt werden.
+- Die Desktop-Version bleibt die primäre und vollständigste Ansicht.
+
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
