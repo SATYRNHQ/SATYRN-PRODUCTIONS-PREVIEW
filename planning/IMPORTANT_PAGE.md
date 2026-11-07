@@ -217,3 +217,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Verhalten bei vollständig deaktivierter Filtergruppe
 - Wenn in einer Filtergruppe „Keine“ gewählt wird, werden alle Einträge ausgeblendet, die zu den deaktivierten Optionen dieser Gruppe gehören.
 - Die andere Filtergruppe bleibt unabhängig davon aktiv und funktionsfähig; beide Gruppen wirken weiterhin gemeinsam auf die angezeigten Einträge.
+
+## Suchfeld-Steuerung
+- Das Suchfeld erhält einen kleinen X-Button, mit dem der aktuelle Suchtext sofort vollständig gelöscht werden kann.
