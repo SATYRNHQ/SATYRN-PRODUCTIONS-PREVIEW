@@ -202,3 +202,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Darstellung der Kategorienfilter
 - Die fünf Kategorienfilter werden ebenfalls als kleine Checkboxen dargestellt.
 - Die Kategorienamen verwenden ihre jeweilige Kategorie-Farbe: Stahlblau, Gold, Violett, Türkis und Silbergrau.
+
+## Gruppierung der Filter
+- Kategorien- und Prioritätsfilter stehen in zwei klar getrennten Gruppen.
+- Gruppe 1: Kategorien mit fünf farbigen Checkboxen.
+- Gruppe 2: Priorität mit vier farbigen Checkboxen.
