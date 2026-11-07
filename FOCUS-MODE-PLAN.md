@@ -490,6 +490,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Session verwerfen** bestätigt den Abbruch; die Session wird mit ihrem tatsächlichen Verlauf als abgebrochen in der History gespeichert.
 - Es gibt kein stilles oder versehentliches Verwerfen durch bloßes Schließen der Meldung.
 
+
+### Langfristige Wiederaufnahme
+- Eine gespeicherte laufende oder pausierte Session bleibt auch dann zur Wiederaufnahme verfügbar, wenn SATYRN HQ erst mehrere Tage später erneut geöffnet wird.
+- Es gibt keinen automatischen zeitlichen Ablauf, der eine solche Session allein wegen ihres Alters löscht oder verwirft.
+- Beim Wiederöffnen werden weiterhin die tatsächliche verstrichene Zeit, der gespeicherte Status und die verfügbaren Aktionen korrekt angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
