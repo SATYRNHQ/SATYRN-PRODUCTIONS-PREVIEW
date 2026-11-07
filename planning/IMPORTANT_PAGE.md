@@ -294,3 +294,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Position neu erstellter Einträge
 - Direkt nach dem Speichern wird ein neu erstellter Eintrag zunächst ganz oben innerhalb seiner gewählten Prioritätsgruppe angezeigt.
 - Anschließend gilt die festgelegte dynamische Sortierung anhand des Ereignisdatums innerhalb der Prioritätsgruppe.
+
+## Löschanimation
+- Nach Bestätigung der endgültigen Löschung verschwindet die betroffene Karte mit einer kurzen, dezenten Ausblendanimation.
+- Die Animation bleibt ruhig und hochwertig; sie darf andere Karten oder deren Inhalte nicht überlagern.
