@@ -350,3 +350,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Hover-Informationen im Prioritäts-Kreisdiagramm
 - Beim Darüberfahren mit der Maus über ein Segment erscheint eine dezente Zusatzinformation mit Prioritätsname und aktueller Anzahl, z. B. „Dringend – 3 Einträge“.
 - Die Anzeige verwendet die jeweilige Prioritätsfarbe und bleibt kompakt, gut lesbar und unaufdringlich.
+
+## Responsive Darstellung des Prioritäts-Kreisdiagramms
+- Auf kleineren Bildschirmen und schmalen Fenstern wird das Kreisdiagramm automatisch kompakter dargestellt.
+- Diagramm, Gesamtzahl und Prioritätsbeschriftungen bleiben gut lesbar und bedienbar; nichts darf abgeschnitten werden oder überlappen.
