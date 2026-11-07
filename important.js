@@ -33,7 +33,7 @@
   if(realExists)entries=entries.filter(x=>!x.example);
   let categoryOn=new Set(categories.map(x=>x.id)),priorityOn=new Set(priorities.map(x=>x.id));
   let expanded=new Set(),newItems=new Set(entries.filter(x=>!x.example&&x.isNew).map(x=>x.id));
-  let editingId=null,linkSelections=[],initialSnapshot='',pendingClose=false,menuFor=null;
+  let editingId=null,linkSelections=[],initialSnapshot='',pendingClose=false,menuFor=null,freshId=null;
   const root=$('importantApp');
   if(!root)return;
   const store=()=>{try{localStorage.setItem(KEY,JSON.stringify(entries));return true}catch{toast('Speichern im Browser nicht möglich. Bitte Speicherplatz prüfen.');return false}};
@@ -44,7 +44,7 @@
   const relative=d=>{const n=daysFrom(d);if(n===null)return '';if(n===0)return 'Heute';return n>0?'In '+n+' '+(n===1?'Tag':'Tagen'):'Vor '+Math.abs(n)+' '+(n===-1?'Tag':'Tagen')};
   function sorted(list){
     return list.slice().sort((a,b)=>{
-      const p=pri(a.priority).rank-pri(b.priority).rank;if(p)return p;
+      const p=pri(a.priority).rank-pri(b.priority).rank;if(p)return p;if(a.id===freshId)return -1;if(b.id===freshId)return 1;
       if(!a.date&&!b.date)return 0;if(!a.date)return 1;if(!b.date)return -1;
       const da=daysFrom(a.date),db=daysFrom(b.date);
       const af=da>=0,bf=db>=0;
@@ -83,6 +83,7 @@
     $('importantCards').hidden=list.length===0;
     $('importantNoResults').hidden=entries.length===0||list.length>0;
     $('importantWelcome').hidden=entries.length>0;
+    freshId=null;
   }
   function setAll(type,on){
     const set=type==='cat'?categoryOn:priorityOn,all=type==='cat'?categories:priorities;
@@ -127,17 +128,18 @@
     const title=$('importantTitle').value.trim(),category=$('importantCategory').value,priority=document.querySelector('input[name="importantPriority"]:checked')?.value;
     if(!title||!category||!priority){toast('Bitte Titel, Kategorie und Priorität ausfüllen.');return}
     const now=iso(new Date()),description=$('importantDescription').value.trim(),date=$('importantDate').value;
+    const wasEditing=!!editingId;
     if(editingId){
       const old=entries.find(x=>x.id===editingId);if(!old)return;
       Object.assign(old,{title,category,priority,description,date,links:linkSelections.map(x=>({...x})),modified:now});
       newItems.delete(old.id);old.isNew=false;
     }else{
       const item={id:uid(),title,category,priority,description,date,links:linkSelections.map(x=>({...x})),created:now,isNew:true};
-      entries=entries.filter(x=>!x.example);entries.unshift(item);newItems.add(item.id);
+      entries=entries.filter(x=>!x.example);entries.unshift(item);newItems.add(item.id);freshId=item.id;
       categoryOn.add(category);priorityOn.add(priority);
     }
     if(!store())return;
-    closeModal();menuFor=null;renderFilters();render();toast(editingId?'Eintrag aktualisiert.':'Important-Eintrag gespeichert.');
+    closeModal();menuFor=null;renderFilters();render();toast(wasEditing?'Eintrag aktualisiert.':'Important-Eintrag gespeichert.');
   }
   function deleteEntry(id){
     $('importantDeleteTarget').value=id;$('importantDeletePrompt').hidden=false;
@@ -187,7 +189,9 @@
     const cardEl=event.target.closest('[data-card]');
     if(cardEl&&(event.key==='Enter'||event.key===' ')&&event.target===cardEl){event.preventDefault();toggleCard(cardEl.dataset.card)}
   });
+  root.addEventListener('change',event=>{const el=event.target;if(el.matches('[data-cat]')){const id=el.dataset.cat;categoryOn.has(id)?categoryOn.delete(id):categoryOn.add(id);render()}else if(el.matches('[data-pri]')){const id=el.dataset.pri;priorityOn.has(id)?priorityOn.delete(id):priorityOn.add(id);render()}});
   $('importantSearch').addEventListener('input',render);
+  $('importantSearchClear').addEventListener('click',()=>{$('importantSearch').value='';render();$('importantSearch').focus()});
   $('importantSearchClear').addEventListener('click',()=>{$('importantSearch').value='';render();$('importantSearch').focus()});
   $('importantLinkSearch').addEventListener('input',renderLinkResults);
   $('importantLinkSearch').addEventListener('focus',renderLinkResults);
