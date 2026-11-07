@@ -64,8 +64,19 @@ function showPage(name, clickedItem){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 navItems.forEach(item=>item.addEventListener('click',()=>showPage(item.dataset.page,item)));
-headbar?.addEventListener('pointerenter',()=>{headbar.classList.remove('nav-dismissed');headbar.classList.add('labels-visible')});
-headbar?.addEventListener('pointerleave',()=>{headbar.classList.remove('labels-visible');headbar.classList.add('nav-dismissed')});
+let headbarCollapseTimer;
+headbar?.addEventListener('pointerenter',()=>{
+  clearTimeout(headbarCollapseTimer);
+  headbar.classList.remove('nav-dismissed');
+  headbar.classList.add('labels-visible');
+});
+headbar?.addEventListener('pointerleave',()=>{
+  clearTimeout(headbarCollapseTimer);
+  headbarCollapseTimer=window.setTimeout(()=>{
+    headbar.classList.remove('labels-visible');
+    headbar.classList.add('nav-dismissed');
+  },600);
+});
 headbar?.addEventListener('focusin',event=>{if(event.target.matches(':focus-visible')){headbar.classList.remove('nav-dismissed');headbar.classList.add('labels-visible')}});
 
 // Each sidebar stays open while the pointer is over it, including after a page is opened.
