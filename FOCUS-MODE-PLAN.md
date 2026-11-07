@@ -470,6 +470,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Session wird nicht ohne Zustimmung automatisch fortgesetzt.
 - Die Wiederaufnahme stellt den gespeicherten Zustand und die anhand der tatsächlichen verstrichenen Zeit berechnete Restzeit wieder her.
 
+
+### Aktionen im Wiederaufnahme-Hinweis
+- Die Wiederaufnahme-Meldung bietet drei klare Aktionen:
+  - **Fortsetzen**: Die gespeicherte Session an der korrekten Stelle weiterführen.
+  - **Pausieren**: Die Session bleibt erhalten, der Timer wird angehalten und kann später fortgesetzt werden.
+  - **Session verwerfen**: Die Session wird als abgebrochen behandelt und entsprechend in der History dokumentiert; vor dem Verwerfen erscheint eine Sicherheitsabfrage.
+- Die Meldung startet oder verwirft niemals eine Session ohne ausdrückliche Auswahl.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
