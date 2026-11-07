@@ -1792,12 +1792,28 @@ body:has(#page-home.active-page) .money-zone{
   border-color:rgba(198,166,106,.14)!important;
 }
 .hq-top-nav .edge-nav-item{
+  position:relative!important;
+  flex:1 1 0;
   flex-direction:column!important;
   justify-content:center!important;
   align-items:center!important;
   gap:6px!important;
   min-height:87px!important;
   padding:7.5px 15px!important;
+}
+.hq-top-nav .edge-nav-item:not(.home-palm) .nav-icon{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  margin:0!important;
+  transform:translate(-50%,-50%) scale(1.5)!important;
+  transform-origin:center center!important;
+}
+.hq-top-nav .edge-nav-item:not(.home-palm) .nav-label{
+  position:absolute!important;
+  left:50%!important;
+  bottom:3px!important;
+  transform:translateX(-50%)!important;
 }
 .hq-top-nav .edge-nav-item .nav-icon{
   flex:0 0 auto;
