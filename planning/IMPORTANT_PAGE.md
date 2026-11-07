@@ -285,3 +285,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Innenabstand der Karten
 - Die Karten erhalten einen mittleren Innenabstand rundherum: Inhalte stehen angenehm vom Rand entfernt, ohne unnötig viel Platz zu verbrauchen.
+
+## Kartenanimation beim Öffnen und Ausklappen
+- Beim erstmaligen Öffnen der Important-Seite erscheinen die Karten direkt vollständig sichtbar; sie erhalten keine zusätzliche Einblendanimation.
+- Beim Ausklappen und Einklappen einer Karte wird die Höhenänderung dagegen sauber und flüssig animiert. Die Inhalte entfalten sich ohne Springen oder Überlappen; darunterliegende Karten verschieben sich ebenfalls flüssig an ihre neue Position.
+- Die Animation bleibt dezent und funktional, ohne übertriebene Effekte.
