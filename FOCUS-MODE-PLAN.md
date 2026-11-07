@@ -848,6 +848,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ein Klick öffnet direkt die zugehörige Aufgabe im Important-Bereich, damit Details oder die Fälligkeitsfrist dort bearbeitet werden können.
 - Die Focus-Session bleibt dabei erhalten und läuft unverändert weiter.
 
+
+### Änderungen in Important sofort in der Focus-Ansicht aktualisieren
+- Änderungen an einer verknüpften Important-Aufgabe werden unmittelbar in der Focus-Ansicht aktualisiert, auch wenn die Bearbeitung während einer laufenden Focus-Session erfolgt.
+- Das gilt insbesondere für Titel, Beschreibung, Kategorie, Priorität, Unteraufgaben und Fälligkeitsfrist gemäß den bestehenden Synchronisierungsregeln.
+- Die Aktualisierung darf den laufenden Timer, Session-Status, Session-Notizen, das Ablenkungsprotokoll oder die erfassten Zeitdaten nicht zurücksetzen oder verändern.
+- Die Bearbeitung in Important bleibt optional; die Focus-Session kann unverändert weiterlaufen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
