@@ -242,6 +242,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die neue Session kann vor dem Start angepasst werden.
 - Historische Notizen und Distraction-Log-Einträge werden nicht in die neue Session kopiert.
 
+### Session-Favoriten
+- Sessions können in der History als Favorit markiert und wieder aus den Favoriten entfernt werden.
+- Favoriten erhalten eine dezente visuelle Kennzeichnung (z. B. Sternsymbol).
+- Die History bietet einen Filter, um ausschließlich favorisierte Sessions anzuzeigen.
+- Favoritenstatus bleibt beim Bearbeiten einer Session erhalten und wird beim Duplizieren nicht automatisch übernommen.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
