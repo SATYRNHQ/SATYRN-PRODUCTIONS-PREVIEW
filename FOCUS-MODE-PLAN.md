@@ -504,6 +504,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eine dritte offene Session in derselben Kategorie kann erst angelegt werden, wenn eine der beiden bestehenden Sessions abgeschlossen oder verworfen wurde.
 - Sessions in anderen Kategorien bleiben davon unberührt.
 
+
+### Übersicht und Wechsel zwischen offenen Sessions
+- Alle offenen Sessions werden in der Focus-Übersicht als kompakte Liste angezeigt.
+- Jede Zeile zeigt mindestens Ziel/Aufgabe, Kategorie und aktuellen Status.
+- Zwischen offenen Sessions kann jederzeit gewechselt werden.
+- Beim Wechsel wird die bisherige Session nicht automatisch beendet oder verworfen; ihr Zustand bleibt erhalten.
+- Die jeweils ausgewählte Session wird im großen Timer-Bereich angezeigt und kann dort gesteuert werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
