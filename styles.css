@@ -1616,7 +1616,7 @@ body{background-color:var(--hq-obsidian)}
   color:#c6c1ae;background:transparent!important;border-radius:10px;
 }
 .hq-top-nav .edge-nav-item .nav-icon{
-  width:clamp(63px,4.8vw,81px);min-width:clamp(63px,4.8vw,81px);height:clamp(63px,4.8vw,81px);font-size:clamp(48px,3.75vw,63px);color:#b9c1b5;text-shadow:none;transform:scale(1)!important;transform-origin:center center;
+  width:clamp(63px,4.8vw,81px);min-width:clamp(63px,4.8vw,81px);height:clamp(63px,4.8vw,81px);font-size:clamp(48px,3.75vw,63px);color:#b9c1b5;text-shadow:none;transform:scale(1.5)!important;transform-origin:center center;
 }
 .hq-top-nav .edge-nav-item .nav-label{
   position:static;transform:none;opacity:1;visibility:visible;
@@ -1852,7 +1852,7 @@ body:has(#page-home.active-page) .money-zone{
   margin:0!important;
   padding:0!important;
   line-height:1!important;
-  transform:scale(1)!important;
+  transform:scale(1.5)!important;
   transform-origin:center center!important;
 }
 
