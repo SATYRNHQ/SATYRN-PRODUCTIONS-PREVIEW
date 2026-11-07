@@ -2216,22 +2216,14 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   }
 }
 
-/* Center palm: give the symbol a slightly larger, rounded champagne frame. */
+/* Center palm: extend the OUTER headbar contour around the center without adding an inner frame. */
+.hq-top-nav{
+  border-radius:22px!important;
+  overflow:visible!important;
+}
 .hq-top-nav .home-palm{
-  border:1px solid rgba(198,166,106,.38)!important;
-  border-radius:50%!important;
-  outline:1px solid rgba(198,166,106,.16)!important;
-  outline-offset:5px!important;
-  box-shadow:0 0 0 9px rgba(198,166,106,.035),0 0 24px rgba(65,101,75,.16),inset 0 0 18px rgba(198,166,106,.07)!important;
-}
-.hq-top-nav .home-palm.active{
-  border-color:rgba(228,213,181,.52)!important;
-  box-shadow:0 0 0 9px rgba(198,166,106,.045),0 0 28px rgba(105,155,112,.22),inset 0 0 20px rgba(198,166,106,.09)!important;
-}
-@media(max-width:720px){
-  .hq-top-nav .home-palm{
-    outline-offset:3px!important;
-    box-shadow:0 0 0 6px rgba(198,166,106,.035),0 0 18px rgba(65,101,75,.14),inset 0 0 14px rgba(198,166,106,.06)!important;
-  }
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
 }
 
