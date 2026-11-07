@@ -821,6 +821,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Focus- und Pausendauer des Timers müssen weiterhin separat geprüft bzw. bestätigt werden; die Aufgabenschätzung ersetzt diese Timer-Einstellungen nicht.
 - Ist keine Schätzung hinterlegt, bleibt das entsprechende Feld leer.
 
+
+### Fälligkeitsfrist beim Schnellstart anzeigen
+- Falls für die Important-Aufgabe eine Fälligkeitsfrist hinterlegt ist, wird sie beim Schnellstart in der Focus-Vorbereitung angezeigt.
+- Die Fälligkeitsfrist wird informativ übernommen und verändert weder Timer-Einstellungen noch Session-Ziel.
+- Die Frist bleibt mit der verknüpften Important-Aufgabe verbunden und folgt der bestehenden Synchronisierungslogik.
+- Ist keine Fälligkeitsfrist hinterlegt, wird keine angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
