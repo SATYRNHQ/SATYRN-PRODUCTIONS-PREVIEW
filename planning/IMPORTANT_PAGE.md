@@ -213,3 +213,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Der Button aktiviert alle Checkboxen innerhalb seiner jeweiligen Gruppe (Kategorien oder Priorität).
 
 - Neben „Alle“ erhält jede Filtergruppe auch einen Button „Keine“, der sämtliche Checkboxen dieser Gruppe deaktiviert.
+
+## Verhalten bei vollständig deaktivierter Filtergruppe
+- Wenn in einer Filtergruppe „Keine“ gewählt wird, werden alle Einträge ausgeblendet, die zu den deaktivierten Optionen dieser Gruppe gehören.
+- Die andere Filtergruppe bleibt unabhängig davon aktiv und funktionsfähig; beide Gruppen wirken weiterhin gemeinsam auf die angezeigten Einträge.
