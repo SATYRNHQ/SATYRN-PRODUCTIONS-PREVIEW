@@ -198,3 +198,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Darstellung der Prioritätsfilter
 - Prioritätsfilter werden als kleine Checkboxen mit farbigen Namen dargestellt.
 - Die Namen verwenden die jeweilige Prioritätsfarbe: Dringend rot, Wichtig orange, Vorläufig blau und Unbefristet grün.
+
+## Darstellung der Kategorienfilter
+- Die fünf Kategorienfilter werden ebenfalls als kleine Checkboxen dargestellt.
+- Die Kategorienamen verwenden ihre jeweilige Kategorie-Farbe: Stahlblau, Gold, Violett, Türkis und Silbergrau.
