@@ -361,7 +361,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 ### Erinnerung zurückstellen
 - Jede Inaktivitäts-Erinnerung bietet neben „Jetzt fokussieren“ auch „Später erinnern“.
 - Beim Zurückstellen wird die aktuelle Erinnerung vorübergehend ausgeblendet und zu einem später festzulegenden Zeitpunkt erneut angezeigt.
-- Die genaue Dauer für das Zurückstellen wird in der weiteren Planung festgelegt.
+- Standarddauer: 15 Minuten. Danach wird die Erinnerung erneut angezeigt, sofern Focus Mode weiterhin nicht aktiv genutzt wird.
 
 ## 8. Umsetzungsregeln
 
