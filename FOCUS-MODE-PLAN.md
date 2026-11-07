@@ -617,6 +617,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach erfolgreicher Verknüpfung übernimmt die offene Session die aktuelle Priorität der ausgewählten Important-Aufgabe.
 - Die bisherige historische Information über die frühere Verknüpfung bleibt nachvollziehbar erhalten.
 
+
+### Bestätigung beim manuellen Verknüpfen
+- Vor dem Übernehmen einer neuen manuellen Verknüpfung erscheint eine kurze Sicherheitsabfrage.
+- Die Abfrage nennt die ausgewählte Important-Aufgabe und bestätigt, dass die Session damit verknüpft wird.
+- **Abbrechen** lässt die bisherige Verknüpfung bzw. den entkoppelten Zustand unverändert.
+- **Verknüpfen** bestätigt die neue Verknüpfung.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
