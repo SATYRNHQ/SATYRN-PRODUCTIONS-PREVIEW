@@ -519,6 +519,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Starten einer anderen Session wird ein aktuell laufender Timer automatisch pausiert, bevor der neue Timer startet.
 - Es werden niemals zwei Sessions parallel zeitlich hochgezählt.
 
+
+### Sortierung der offenen Sessions
+- Die offene Session-Liste wird nach Status sortiert.
+- Eine laufende Session steht ganz oben.
+- Danach folgen pausierte Sessions, anschließend unterbrochene bzw. wiederherstellbare Sessions.
+- Innerhalb desselben Status steht die zuletzt aktive Session weiter oben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
