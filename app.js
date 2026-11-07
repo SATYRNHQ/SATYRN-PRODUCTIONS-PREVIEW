@@ -59,7 +59,7 @@ function showPage(name, clickedItem){
   document.querySelectorAll('.nav-item[data-page]').forEach(n=>n.classList.toggle('active',n.dataset.page===name));
   const active=document.querySelector(`.nav-item[data-page="${name}"]`);
   const label=active?.querySelector('.nav-label')?.textContent || active?.textContent.trim();
-  crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
+  if(crumb)crumb.textContent=label||({home:'Home',settings:'Settings'}[name]||name.replaceAll('-',' '));
   const clickedSidebar=clickedItem?.closest('.hq-side-nav');
   sidebars.forEach(nav=>{
     nav.classList.remove('open');
@@ -172,7 +172,8 @@ document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLower
 const toast=document.getElementById('toast');let toastTimer;
 function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2600)}
 document.querySelectorAll('[data-toast]').forEach(button=>button.addEventListener('click',()=>showToast(button.dataset.toast)));
-document.getElementById('notifyButton').addEventListener('click',()=>{showPage('settings');showToast('Benachrichtigungen kannst du hier steuern.')});
+const notifyButton=document.getElementById('notifyButton');
+if(notifyButton)notifyButton.addEventListener('click',()=>{showPage('settings');showToast('Benachrichtigungen kannst du hier steuern.')});
 
 const notifyToggle=document.getElementById('notifyToggle');
 notifyToggle.addEventListener('change',async()=>{
