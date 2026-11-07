@@ -282,3 +282,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Abstand zwischen Karten
 - Die Important-Karten erhalten einen mittleren Abstand: klar voneinander getrennt, aber ohne unnötig viel Leerraum.
+
+## Innenabstand der Karten
+- Die Karten erhalten einen mittleren Innenabstand rundherum: Inhalte stehen angenehm vom Rand entfernt, ohne unnötig viel Platz zu verbrauchen.
