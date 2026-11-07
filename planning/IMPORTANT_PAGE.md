@@ -266,3 +266,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Kartenbreite
 - Jede Important-Eintragskarte nutzt die volle verfügbare Breite des zentralen Inhaltsbereichs.
 - Karten werden untereinander in einer Spalte angezeigt.
+
+## Karten-Ecken
+- Die Important-Karten erhalten mittelstark abgerundete Ecken: modern und hochwertig, ohne zu weich oder übermäßig rund zu wirken.
