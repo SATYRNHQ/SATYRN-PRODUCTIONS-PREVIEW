@@ -152,3 +152,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Verknüpfungen werden intern über eine stabile, eindeutige ID des Zieleintrags gespeichert, nicht über dessen angezeigten Namen. Dadurch bleiben Verknüpfungen bei einer späteren Umbenennung bestehen. Wird ein Zieleintrag innerhalb des HQ verschoben, soll die Verknüpfung ebenfalls erhalten bleiben, solange seine ID unverändert bleibt.
 
 - Wird ein verknüpfter Zieleintrag endgültig gelöscht, werden seine Verknüpfungen automatisch aus allen anderen Einträgen entfernt. Es bleiben keine ungültigen Links oder leeren Verknüpfungs-Labels zurück; die übrigen Einträge bleiben unverändert erhalten und es erscheint dafür keine zusätzliche Fehlermeldung.
+
+- **Text der Löschbestätigung:** Überschrift „Eintrag endgültig löschen?“; Nachricht „Möchtest du diesen Important-Eintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.“; Aktionen „Abbrechen“ und „Endgültig löschen“, wobei „Endgültig löschen“ deutlich rot gestaltet wird.
