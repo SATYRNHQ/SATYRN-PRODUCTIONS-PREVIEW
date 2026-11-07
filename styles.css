@@ -2195,8 +2195,8 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
 @media(max-width:720px){.hq-money-nav .edge-nav-item .nav-icon{transform:translateX(-3px)!important}}
 
 
-/* Mirror the right sidebar inset on the left sidebar, without a vertical offset. */
-.hq-time-nav .edge-nav-item .nav-icon{transform:translateX(7px)!important}
+/* Shift left sidebar icons left to center them within the sidebar frame. */
+.hq-time-nav .edge-nav-item .nav-icon{transform:translateX(-7px)!important}
 @media(max-width:720px){
-  .hq-time-nav .edge-nav-item .nav-icon{transform:translateX(3px)!important}
+  .hq-time-nav .edge-nav-item .nav-icon{transform:translateX(-3px)!important}
 }
