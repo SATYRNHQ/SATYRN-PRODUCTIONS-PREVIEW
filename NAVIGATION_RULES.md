@@ -26,3 +26,11 @@ These rules are mandatory for every existing page and every page added in the fu
 2. Confirm its `id` matches its navigation control's `data-page` value.
 3. Confirm there are no page-specific copies or overrides of the headbar/sidebar.
 4. Check desktop, mobile, pointer hover, keyboard focus, and page switching against the shared navigation behavior.
+
+
+## Shared page layout and sizing
+- Every current and future page follows the shared sizing and spacing system in `DESIGN_SYSTEM.md`.
+- Use the shared content maximum width, page-heading scale, responsive spacing, grid gaps, and card corner radius.
+- Do not introduce page-specific content widths, arbitrary card sizing, or one-off spacing values when a shared token already covers the need.
+- Page-specific layouts may arrange content differently, but must preserve the shared overall scale and responsive behavior.
+- Implement global sizing changes in the shared design-system layer in `styles.css`, not as isolated page overrides.
