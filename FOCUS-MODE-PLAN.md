@@ -270,6 +270,16 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach einem erfolgreichen JSON-Export wird die Erinnerung als erledigt markiert und das nächste Erinnerungsintervall beginnt.
 - Die Erinnerung kann in den Focus-Mode-Einstellungen deaktiviert werden.
 
+### Focus-Mode-Einstellungen
+- Eigene Einstellungssektion innerhalb des Focus Mode.
+- Standard-Fokusdauer und Standard-Pausendauer können festgelegt werden.
+- Timer-Töne können aktiviert/deaktiviert werden; die Lautstärke bzw. Tonwiedergabe soll anpassbar sein, soweit technisch zuverlässig möglich.
+- Visuelle Benachrichtigungen und Pausen-Erinnerungen können angepasst werden.
+- Distraction-Free-Modus: automatischen Start bei Fokusbeginn ein-/ausschalten.
+- Backup-Erinnerung: aktivieren/deaktivieren und Erinnerungsintervall festlegen.
+- Tages- und Wochenziele können von hier aus angepasst werden.
+- Änderungen an Einstellungen gelten für zukünftige Sessions und verändern keine bereits gespeicherten historischen Sessions.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
