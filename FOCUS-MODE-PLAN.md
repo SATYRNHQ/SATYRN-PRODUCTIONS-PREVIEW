@@ -575,6 +575,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Notizen, Distraction Log, Unteraufgaben, Zeitdaten und bisherige Statistikdaten bleiben erhalten.
 - Die Änderung wird in der bestehenden Session gespeichert und beim Fortsetzen sowie in der History berücksichtigt.
 
+
+### Priorität einer Focus-Session
+- Ist eine Session mit einer Aufgabe aus Important verknüpft, übernimmt sie automatisch deren aktuelle Priorität.
+- Die übernommene Priorität wird mit den bestehenden Important-Prioritätsfarben dargestellt.
+- Ist keine Important-Aufgabe verknüpft (Free Focus bzw. eigenes Fokusziel), kann die Priorität für die Session individuell ausgewählt werden.
+- Es gibt keine automatische Standard-Hochstufung auf eine hohe Priorität.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
