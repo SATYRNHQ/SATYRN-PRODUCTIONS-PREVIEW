@@ -457,6 +457,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Es darf nur eine aktive Steuerungsinstanz für dieselbe Session geben; mehrere Tabs dürfen keine voneinander unabhängigen Timer oder widersprüchlichen Session-Zustände erzeugen.
 - Start-, Pause-, Fortsetzen- und Reset-Aktionen müssen tabübergreifend konsistent verarbeitet werden.
 
+
+### Gleichzeitige Aktionen in mehreren Tabs
+- Werden in mehreren Tabs nahezu gleichzeitig unterschiedliche Aktionen ausgeführt, gilt die zuletzt ausgeführte gültige Aktion.
+- Der neue Zustand wird zeitnah an alle anderen geöffneten Tabs übertragen.
+- Vorhandene Zustände dürfen dabei nicht unbemerkt überschrieben werden; widersprüchliche Aktionen müssen konsistent aufgelöst werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
