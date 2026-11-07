@@ -308,6 +308,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Bedienung über sichtbare Buttons bleibt jederzeit möglich.
 
 
+
+### Tastaturkürzel-Hilfe und Legende
+- Neben dem Focus-Mode-Titel gibt es ein kleines `?`-Symbol, das ein Hilfefenster mit einer vollständigen Legende aller verfügbaren Tastaturkürzel öffnet.
+- Die Legende zeigt übersichtlich jede Taste bzw. Tastenkombination und erklärt die zugehörige Aktion.
+- Das Hilfefenster lässt sich jederzeit wieder schließen.
+- Tastaturkürzel werden nicht ausgelöst, während der Nutzer in Eingabe-, Text- oder Suchfeldern schreibt.
+- Bereits festgelegt: Leertaste = Pause/Fortsetzen; `R` = Reset mit Sicherheitsabfrage.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
