@@ -248,6 +248,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die History bietet einen Filter, um ausschließlich favorisierte Sessions anzuzeigen.
 - Favoritenstatus bleibt beim Bearbeiten einer Session erhalten und wird beim Duplizieren nicht automatisch übernommen.
 
+### History-Export
+- Die Session History kann als CSV-Datei exportiert werden.
+- Der Export berücksichtigt die aktuell gewählten History-Filter und die Suche, damit gezielt passende Sessions exportiert werden können.
+- Exportiert werden die verfügbaren strukturierten Session-Daten, z. B. Datum, Start-/Endzeit, tatsächliche Fokusdauer, Status, Fokusziel, verknüpfte Aufgabe, Kategorie, Priorität und Favoritenstatus.
+- Notizen und Distraction-Log-Einträge werden ebenfalls als eigene CSV-Felder aufgenommen, soweit vorhanden.
+- Der Export lädt eine Datei herunter und verändert oder löscht keine gespeicherten Sessions.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
