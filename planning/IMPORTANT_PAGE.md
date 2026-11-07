@@ -194,3 +194,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Standardzustand der Prioritätsfilter
 - Beim Öffnen der Important-Seite sind standardmäßig alle vier Prioritäten aktiviert.
 - Nutzer können einzelne Prioritäten bei Bedarf ausblenden; die übrigen Filter- und Sortierregeln bleiben unverändert.
+
+## Darstellung der Prioritätsfilter
+- Prioritätsfilter werden als kleine Checkboxen mit farbigen Namen dargestellt.
+- Die Namen verwenden die jeweilige Prioritätsfarbe: Dringend rot, Wichtig orange, Vorläufig blau und Unbefristet grün.
