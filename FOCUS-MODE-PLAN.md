@@ -624,6 +624,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Abbrechen** lässt die bisherige Verknüpfung bzw. den entkoppelten Zustand unverändert.
 - **Verknüpfen** bestätigt die neue Verknüpfung.
 
+
+### Manuelles Trennen einer Important-Verknüpfung
+- Eine offene Focus-Session kann jederzeit manuell von ihrer verknüpften Important-Aufgabe getrennt werden, ohne die Important-Aufgabe selbst zu löschen.
+- Die Session bleibt vollständig erhalten und wird zu einer freien Focus-Session.
+- Die bisherige Verknüpfung bleibt als historische Information sichtbar (z. B. „Ursprünglich verknüpft mit: [Aufgabenname] – nicht mehr verknüpft“).
+- Nach dem Trennen kann die Priorität der freien Session manuell festgelegt werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
