@@ -345,6 +345,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Erinnerungen sollen unaufdringlich sein und keine laufende Session unterbrechen.
 - Die Erinnerungsfunktion soll in den Focus-Mode-Einstellungen deaktivierbar sein.
 
+
+### Website-weite Inaktivitäts-Erinnerungen
+- Focus-Mode-Inaktivitäts-Erinnerungen dürfen auch angezeigt werden, wenn der Nutzer gerade eine andere Seite innerhalb von SATYRN HQ geöffnet hat.
+- Die Erinnerung soll dezent und seitenübergreifend innerhalb der Website erscheinen, ohne den aktuellen Arbeitsbereich zu blockieren.
+- Die Erinnerungslogik darf nicht mehrfach parallel laufen, nur weil der Nutzer zwischen Website-Seiten wechselt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
