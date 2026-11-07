@@ -16,8 +16,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 5. **Sonstiges** — ausschließlich wichtige Informationen, die in keine der vier anderen Kategorien passen. Die Kategorie ist als Auffangkategorie gedacht und soll nicht die reguläre Zuordnung ersetzen.
 
 ## Noch offen — gemeinsam festlegen
-- Konkreter Seitenaufbau und Anordnung der Karten
-- Chronologische Sortierrichtung (aufsteigend oder absteigend)
 - Verhalten von Einträgen ohne Ereignisdatum innerhalb ihrer Prioritätsstufe
 - Konkrete visuelle Ausgestaltung der Karten und Prioritätsmarkierungen
 - Erstellen, Bearbeiten und Löschen im Detail
@@ -39,8 +37,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
   3. **Vorläufig** — Blau
   4. **Unbefristet** — Grün
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
-- Innerhalb derselben Prioritätsstufe sollen die Einträge chronologisch nach ihrem **Ereignisdatum** sortiert werden, nicht nach dem Erstellungsdatum.
-- Die Sortierrichtung (aufsteigend/absteigend) und der Umgang mit Einträgen ohne Ereignisdatum sind noch offen.
+- Innerhalb derselben Prioritätsstufe sollen die Einträge chronologisch nach ihrem **Ereignisdatum** sortiert werden, nicht nach dem Erstellungsdatum. Dabei stehen die aktuellsten Ereignisse zuerst (absteigend: neuestes Datum vor älteren).
+- Der Umgang mit Einträgen ohne Ereignisdatum innerhalb ihrer Prioritätsstufe ist noch offen.
 - **Dringend** und **Wichtig** müssen auf einen Blick klar unterscheidbar sein. Bestätigte Gestaltungsrichtung: Dringend erhält einen deutlich kräftigeren roten Akzent und ein Ausrufezeichen als Warnsymbol. Wichtig erhält einen orangefarbenen Akzent, aber ohne Warnsymbol und mit zurückhaltenderer Wirkung. Die genauen visuellen Details werden beim späteren Seitendesign festgelegt.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
