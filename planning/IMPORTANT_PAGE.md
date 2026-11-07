@@ -40,6 +40,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Priorität ist beim Erstellen verpflichtend und kann beim späteren Bearbeiten geändert werden.
 - Die Kategorie wird im Erstellen-/Bearbeiten-Fenster über ein Dropdown-Menü ausgewählt, das alle fünf festgelegten Kategorien enthält. Die Kategorie ist verpflichtend.
 - Das Beschreibungsfeld ist ein größeres, mehrzeiliges Textfeld, damit auch ausführliche Informationen, Hintergründe und Entscheidungsgründe eingetragen werden können. Die Beschreibung bleibt optional.
+- Das optionale Ereignisdatum wird über einen normalen Datumsauswähler mit Kalender-Popup festgelegt.
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Innerhalb derselben Prioritätsstufe werden Einträge anhand ihres **Ereignisdatums** sortiert, nicht anhand des Erstellungsdatums.
 - Zukünftige Ereignisse stehen vor bereits vergangenen Ereignissen. Unter den zukünftigen Ereignissen steht das nächstliegende Datum zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird dynamisch anhand des aktuellen Datums bestimmt.
