@@ -647,6 +647,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Einzelne Verknüpfungen können manuell getrennt werden, ohne die jeweilige Important-Aufgabe zu löschen; dabei gelten die einheitlichen Sicherheitsabfragen aus dem Important-Tab.
 - Wird eine verknüpfte Important-Aufgabe gelöscht, bleibt die Focus-Session bestehen und nur diese Verknüpfung wird gelöst; die bisher festgelegte historische Kennzeichnung bleibt erhalten.
 
+
+### Priorität bei mehreren verknüpften Important-Aufgaben
+- Sind mehrere Important-Aufgaben mit einer Focus-Session verknüpft, übernimmt die Session automatisch die höchste Priorität unter allen verknüpften Aufgaben.
+- Ändert sich die Priorität einer verknüpften Aufgabe, wird die höchste Priorität neu ermittelt und auf die offene Focus-Session übertragen.
+- Wird eine Verknüpfung gelöst oder eine verknüpfte Aufgabe gelöscht, wird die Priorität anhand der verbleibenden Verknüpfungen neu berechnet.
+- Sind keine Important-Aufgaben mehr verknüpft, kann die Priorität der freien Focus-Session manuell festgelegt werden.
+- Abgeschlossene Sessions behalten weiterhin die Priorität, die sie zum Abschlusszeitpunkt hatten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
