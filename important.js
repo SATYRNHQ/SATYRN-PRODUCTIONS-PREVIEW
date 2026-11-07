@@ -68,7 +68,7 @@
       '<span class="imp-priority-badge imp-pri-'+p.color+'">'+esc(p.name)+'</span>'+
       (e.description?'<p class="imp-description">'+esc(preview)+'</p>':'')+
       (e.date?'<div class="imp-date-line"><span>▦ '+fmt(e.date)+'</span><b>'+relative(e.date)+'</b></div>':'')+
-      (links.length?'<div class="imp-link-row">'+links.slice(0,open?links.length:3).map(l=>'<button class="imp-link-chip" type="button" data-link="'+esc(l.id)+'" title="Verknüpfung: '+esc(l.area)+'">'+(l.area==='Projects'?'◇':'◎')+' '+esc(l.name)+'</button>').join('')+(links.length>3&&!open?'<button class="imp-more-links" type="button" data-more-links>+'+(links.length-3)+' weitere</button>':'')+'</div>':'')+
+      (links.length?'<div class="imp-link-row">'+links.slice(0,open?links.length:3).map(l=>'<button class="imp-link-chip" type="button" data-page="'+(l.area==='Projects'?'projects':'network')+'" data-link="'+esc(l.id)+'" title="Verknüpfung: '+esc(l.area)+'">'+(l.area==='Projects'?'◇':'◎')+' '+esc(l.name)+'</button>').join('')+(links.length>3&&!open?'<button class="imp-more-links" type="button" data-more-links>+'+(links.length-3)+' weitere</button>':'')+'</div>':'')+
       (e.modified?'<div class="imp-modified">Zuletzt geändert: '+fmt(e.modified)+'</div>':'')+
       (e.description&&e.description.length>230?'<button class="imp-description-toggle" type="button" data-description-toggle>'+(open?'Weniger anzeigen':'Mehr anzeigen')+'</button>':'')+
       '</div><div class="imp-card-actions"><button class="imp-menu-button" type="button" aria-label="Eintragsaktionen" data-menu="'+esc(e.id)+'">⋮</button>'+(isNew?'<span class="imp-new-tag">Neu</span>':'')+'</div>'+
@@ -191,7 +191,6 @@
   });
   root.addEventListener('change',event=>{const el=event.target;if(el.matches('[data-cat]')){const id=el.dataset.cat;categoryOn.has(id)?categoryOn.delete(id):categoryOn.add(id);render()}else if(el.matches('[data-pri]')){const id=el.dataset.pri;priorityOn.has(id)?priorityOn.delete(id):priorityOn.add(id);render()}});
   $('importantSearch').addEventListener('input',render);
-  $('importantSearchClear').addEventListener('click',()=>{$('importantSearch').value='';render();$('importantSearch').focus()});
   $('importantSearchClear').addEventListener('click',()=>{$('importantSearch').value='';render();$('importantSearch').focus()});
   $('importantLinkSearch').addEventListener('input',renderLinkResults);
   $('importantLinkSearch').addEventListener('focus',renderLinkResults);
