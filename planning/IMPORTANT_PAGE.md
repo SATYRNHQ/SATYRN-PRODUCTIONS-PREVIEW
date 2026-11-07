@@ -269,3 +269,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Karten-Ecken
 - Die Important-Karten erhalten mittelstark abgerundete Ecken: modern und hochwertig, ohne zu weich oder übermäßig rund zu wirken.
+
+## Kartenoberfläche
+- Important-Karten verwenden eine dunkle Glasoptik (Dark Glass) mit leichtem metallischem Rand und subtilen Lichtreflexen.
+- Die Oberfläche bleibt hochwertig und zurückhaltend; Texte und farbige Kategorie-/Prioritätsmarkierungen müssen klar lesbar bleiben.
