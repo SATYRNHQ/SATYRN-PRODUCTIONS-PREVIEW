@@ -430,6 +430,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Gelesene Benachrichtigungen erscheinen optisch dezenter, bleiben aber gut lesbar und weiterhin aufrufbar.
 - Die Darstellung bleibt konsistent mit dem Premium-SATYRN-HQ-Design.
 
+
+### Keine zusätzliche Glocken-Animation
+- Bei neuen Benachrichtigungen gibt es keine zusätzliche Animation am Glocken-Symbol.
+- Das kleine Pop-up oben rechts ist bereits die sichtbare Benachrichtigung und reicht als Hinweis auf neue Einträge aus.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
