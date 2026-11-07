@@ -15,13 +15,11 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 4. **Future Blueprints** — umfasst konkrete zukünftige Vorhaben, ausgearbeitete Ideen und Pläne, die SATYRN später umsetzen möchte; keine aktiven Aufgaben oder Termine.
 5. **Sonstiges** — ausschließlich wichtige Informationen, die in keine der vier anderen Kategorien passen. Die Kategorie ist als Auffangkategorie gedacht und soll nicht die reguläre Zuordnung ersetzen.
 
-## Noch offen — gemeinsam festlegen
-- Konkrete visuelle Ausgestaltung der Karten und Prioritätsmarkierungen
-- Suche und weitere Sortiermöglichkeiten
-- Verknüpfungen zu Projekten oder anderen HQ-Bereichen
-- Leere Ansicht, Beispielinhalte und responsive Verhalten
-- Weitere optionale Metadaten neben den bereits festgelegten Feldern
-- Genaue Formulierung der Löschbestätigung
+## Verbleibende Arbeiten — Design- und Umsetzungsphase
+- Die in diesem Dokument festgelegten visuellen Details werden bei der späteren Umsetzung pixelgenau an das bestehende Homepage-Layout angepasst.
+- Die Empty-State-Grafik „The Digital Archive“ wird in der Designphase konkret ausgearbeitet.
+- Technische Details, die erst bei der Implementierung sichtbar werden, werden anhand der Preview geprüft und nur nach gemeinsamer Abstimmung angepasst.
+- Die Homepage-Übersicht mit Kreisdiagramm und den maximal drei dringendsten Einträgen wird ausschließlich in der späteren Homepage-Planung weiter konkretisiert.
 
 ## Bestätigte Entscheidungen und Änderungsprotokoll
 - Important ist eine zentrale Sammlung wichtiger Informationen, die dauerhaft festgehalten und später wieder nachgeschlagen werden können; keine zweite Task- oder Deadline-Liste.
@@ -266,6 +264,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Kartenbreite
 - Jede Important-Eintragskarte nutzt die volle verfügbare Breite des zentralen Inhaltsbereichs.
 - Karten werden untereinander in einer Spalte angezeigt.
+- Für Eintragstitel gibt es kein künstliches Zeichenlimit. Auch lange Titel müssen sauber umbrechen bzw. innerhalb der Karte lesbar dargestellt werden, ohne andere Inhalte zu überdecken.
 
 ## Karten-Ecken
 - Die Important-Karten erhalten mittelstark abgerundete Ecken: modern und hochwertig, ohne zu weich oder übermäßig rund zu wirken.
