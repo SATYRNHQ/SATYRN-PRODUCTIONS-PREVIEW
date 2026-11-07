@@ -392,6 +392,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Einzelne Benachrichtigungen können vom Nutzer gelöscht werden.
 - Das automatische Ausblenden nach 10 Sekunden löscht eine Benachrichtigung nicht.
 
+
+### Ungelesene Benachrichtigungen
+- Das Glocken-Symbol zeigt einen kleinen Zähler für ungelesene Benachrichtigungen.
+- Der Zähler aktualisiert sich automatisch, wenn neue Benachrichtigungen eingehen oder als gelesen markiert werden.
+- Das Öffnen bzw. Aufrufen einer Benachrichtigung markiert sie als gelesen.
+- Gelöschte Benachrichtigungen werden nicht mehr mitgezählt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
