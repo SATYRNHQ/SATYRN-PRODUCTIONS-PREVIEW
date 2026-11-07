@@ -38,9 +38,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
   4. **Unbefristet** — Grün
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Innerhalb derselben Prioritätsstufe werden Einträge anhand ihres **Ereignisdatums** sortiert, nicht anhand des Erstellungsdatums.
-- Die Sortierung zukünftiger Ereignisse richtet sich nach dem aktuellen Datum: Das nächstliegende zukünftige Ereignis steht zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird somit dynamisch anhand des aktuellen Datums bestimmt und nicht einfach nach dem größten Datum absteigend.
+- Zukünftige Ereignisse stehen vor bereits vergangenen Ereignissen. Unter den zukünftigen Ereignissen steht das nächstliegende Datum zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird dynamisch anhand des aktuellen Datums bestimmt.
+- Bereits vergangene Ereignisse sollen ebenfalls angezeigt werden; ihre genaue Sortierreihenfolge ist noch offen.
 - Einträge ohne Ereignisdatum stehen innerhalb ihrer jeweiligen Prioritätsstufe ganz unten.
-- Die genaue Reihenfolge bereits vergangener Ereignisse ist noch offen.
 - **Dringend** und **Wichtig** müssen auf einen Blick klar unterscheidbar sein. Bestätigte Gestaltungsrichtung: Dringend erhält einen deutlich kräftigeren roten Akzent und ein Ausrufezeichen als Warnsymbol. Wichtig erhält einen orangefarbenen Akzent, aber ohne Warnsymbol und mit zurückhaltenderer Wirkung. Die genauen visuellen Details werden beim späteren Seitendesign festgelegt.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
