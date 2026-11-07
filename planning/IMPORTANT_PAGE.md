@@ -342,3 +342,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Ein Klick auf ein Segment des Kreisdiagramms aktiviert direkt den zugehörigen Prioritätsfilter.
 - Die übrigen Such- und Kategorie-Filter bleiben unverändert; die Ergebnisliste und Trefferanzahl aktualisieren sich entsprechend.
 - Das ausgewählte Segment erhält eine dezente visuelle Hervorhebung. Ein erneuter Klick auf dasselbe Segment deaktiviert diesen Prioritätsfilter wieder.
+
+## Gesamtzahl im Zentrum des Kreisdiagramms
+- In der Mitte des Prioritäts-Kreisdiagramms wird die Gesamtzahl der aktuell angezeigten Einträge dargestellt.
+- Die Zahl aktualisiert sich dynamisch entsprechend der aktiven Suche sowie Kategorie- und Prioritätsfilter.
