@@ -1,5 +1,5 @@
-const CACHE_NAME = 'satyrn-hq-shell-v98';
-const APP_SHELL = ['./','./index.html','./styles.css?v=91','./app.js?v=89','./important.js?v=93','./modules.js','./finance-tools.js','./finance-intelligence.js','./hq-tools.js?v=90','./command-center.js','./manifest.webmanifest'];
+const CACHE_NAME = 'satyrn-hq-shell-v99';
+const APP_SHELL = ['./','./index.html','./styles.css?v=91','./app.js?v=89','./important.js?v=94','./modules.js','./finance-tools.js','./finance-intelligence.js','./hq-tools.js?v=90','./command-center.js','./manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
