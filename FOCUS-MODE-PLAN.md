@@ -828,6 +828,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Frist bleibt mit der verknüpften Important-Aufgabe verbunden und folgt der bestehenden Synchronisierungslogik.
 - Ist keine Fälligkeitsfrist hinterlegt, wird keine angezeigt.
 
+
+### Fälligkeitsfrist während der Focus-Session anzeigen
+- Eine vorhandene Fälligkeitsfrist bleibt auch während der laufenden Focus-Session sichtbar.
+- Sie wird direkt unter der Hauptaufgabe angezeigt; gibt es keine Hauptaufgabe, erscheint sie dezent im Aufgabenbereich der Session.
+- Die Anzeige ist informativ und verändert weder Timer noch Session-Ziel.
+- Änderungen an der Fälligkeitsfrist in der verknüpften Important-Aufgabe werden gemäß der bestehenden Synchronisierungslogik übernommen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
