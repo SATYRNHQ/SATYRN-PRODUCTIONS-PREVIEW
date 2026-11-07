@@ -209,6 +209,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jede Session ist anklickbar und öffnet eine Detailansicht.
 - Die Detailansicht zeigt – soweit für die Session vorhanden – Ziel, Kategorie, Priorität, Notizen, Distraction-Log-Einträge und Unteraufgaben.
 
+
+
+### History filters
+- Filter by session status: **All Sessions**, **Completed**, **Abandoned**, and **Paused**.
+- Filter by category.
+- Filter by time period/date range.
+- Filters can be combined so sessions can be narrowed down by status, category, and period together.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
