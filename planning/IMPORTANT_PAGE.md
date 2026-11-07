@@ -322,3 +322,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Erstes Öffnen eines neuen Eintrags
 - Wird ein neu erstellter Eintrag zum ersten Mal geöffnet, klappt sich die Karte automatisch vollständig aus.
 - Gleichzeitig wird die Kennzeichnung „Neu“ dauerhaft entfernt.
+
+## Geöffnete Karten beim Seitenwechsel
+- Beim Wechsel von der Important-Seite zu einer anderen HQ-Seite werden alle aktuell ausgeklappten Important-Karten geschlossen.
+- Bei der Rückkehr zur Important-Seite starten alle Karten eingeklappt.
