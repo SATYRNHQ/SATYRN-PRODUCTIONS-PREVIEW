@@ -170,3 +170,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Auch in der Empty-State-Ansicht bleibt das grüne Plus-Symbol oben rechts auf der Important-Seite dauerhaft sichtbar. Der Nutzer kann damit jederzeit einen neuen Eintrag starten; zusätzlich bietet die Empty-State-Ansicht eine direkte Möglichkeit, den ersten Eintrag zu erstellen.
 
 - Die Empty-State-Ansicht erhält zusätzlich eine dezente, hochwertige Grafik passend zum dunklen SATYRN-HQ-Design. Die Grafik soll den leeren Informations-/Archivbereich visuell unterstützen, aber zurückhaltend bleiben und die Überschrift, Erklärung sowie die Möglichkeit zum Erstellen des ersten Eintrags nicht überlagern oder davon ablenken.
+
+- **Empty-State-Grafik — Stilrichtung bestätigt:** Die Grafik „The Digital Archive“ orientiert sich am tatsächlichen SATYRN-HQ-Farbschema **Gold, Grün und Schwarz** statt an Stahlblau/Türkis. Vorgesehene Optik: tiefschwarzer bzw. anthrazitfarbener Hintergrund, hochwertige rauchglasartige und metallische Archiv-Elemente, dezente goldene Highlights und gezielte grüne Lichtakzente. Das Motiv bleibt abstrakt, minimalistisch und luxuriös-futuristisch, ohne Menschen, Schrift oder überladene Details. Die konkrete Ausarbeitung erfolgt in der späteren Designphase.
+
