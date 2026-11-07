@@ -769,6 +769,21 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Es gibt in diesem Fall keine hervorgehobene Hauptaufgabe; alle verknüpften Aufgaben erscheinen in der zusätzlichen Aufgabenliste.
 - Die bestehenden Regeln für Reihenfolge, Erledigen, Synchronisierung und spätere Auswahl einer Hauptaufgabe gelten weiterhin.
 
+
+### Hauptaufgabe während einer laufenden Session wechseln
+- Während einer laufenden, pausierten oder unterbrochenen Session kann eine offene zusätzliche Aufgabe manuell zur Hauptaufgabe gemacht werden.
+- Der Wechsel erfordert eine Sicherheitsabfrage im gleichen Stil wie die Bestätigungsabfragen im Important-Bereich.
+- Nach Bestätigung wird die bisherige Hauptaufgabe entsprechend der bestehenden Aufgabenreihenfolge als zusätzliche Aufgabe einsortiert; die ausgewählte Aufgabe wird hervorgehoben.
+- Aufgabenstatus, Verknüpfungen, Notizen, Ablenkungsprotokoll und Zeitdaten bleiben unverändert.
+
+### Focus-Session direkt über das Important-Drei-Punkte-Menü starten
+- Im Drei-Punkte-Menü einer Important-Aufgabe gibt es eine Aktion, um direkt eine Focus-Session mit dieser Aufgabe vorzubereiten.
+- Die Aktion öffnet die Focus-Session-Vorbereitung; die Session startet nicht sofort.
+- Titel, Beschreibung und weitere für Focus relevante Aufgabendaten werden automatisch aus Important übernommen.
+- Die Focus-Session wird automatisch mit der ausgewählten Important-Aufgabe verknüpft.
+- Die übernommenen Angaben können vor dem Start in der Vorbereitung angepasst werden.
+- Die Focus- und Pausendauer müssen vor dem Start ausdrücklich ausgewählt bzw. bestätigt werden; es wird keine Session mit ungeprüften Standardzeiten sofort gestartet.
+- Die bestehende Prioritäts-, Kategorie- und Synchronisierungslogik für verknüpfte Aufgaben gilt weiterhin.
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
