@@ -183,3 +183,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Eintragskarten lassen sich zusätzlich durch Anklicken ihrer freien Kartenfläche insgesamt aus- und wieder einklappen. Das Aus- und Einklappen ist damit nicht ausschließlich an den Textlink „Mehr anzeigen“ gebunden. Der bestehende „Mehr anzeigen“-/„Weniger anzeigen“-Mechanismus für lange Beschreibungen bleibt ebenfalls erhalten. Interaktive Elemente innerhalb der Karte (z. B. Drei-Punkte-Menü, Verknüpfungs-Labels und deren Aktionen) lösen beim Anklicken ausschließlich ihre eigene Funktion aus und dürfen nicht versehentlich das Ein- oder Ausklappen der Karte auslösen.
 
 - Mehrere Eintragskarten dürfen gleichzeitig ausgeklappt bleiben. Das Ausklappen einer Karte klappt bereits geöffnete andere Karten nicht automatisch ein.
+
+- Beim Ausklappen einer Karte werden sämtliche zu diesem Eintrag gehörenden Informationen vollständig sichtbar: insbesondere die komplette Beschreibung, alle Verknüpfungen (auch über die zunächst angezeigten drei hinaus), Datums-/Änderungsangaben und weitere vorhandene Eintragsdetails.
