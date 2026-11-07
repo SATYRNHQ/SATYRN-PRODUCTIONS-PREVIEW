@@ -363,6 +363,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Zurückstellen wird die aktuelle Erinnerung vorübergehend ausgeblendet und zu einem später festzulegenden Zeitpunkt erneut angezeigt.
 - Standarddauer: 15 Minuten. Danach wird die Erinnerung erneut angezeigt, sofern Focus Mode weiterhin nicht aktiv genutzt wird.
 
+
+### Erinnerungen nach längeren Pausen
+- Nach einer längeren Pause kann Focus Mode an den Wiedereinstieg erinnern.
+- Es gibt Erinnerungen nach 30 Minuten und nach 60 Minuten Pause.
+- Die Erinnerung enthält ebenfalls eine Aktion, mit der direkt eine neue Fokussitzung gestartet werden kann.
+- Die Pausenerinnerungen bleiben dezent und können in den Focus-Mode-Einstellungen angepasst oder deaktiviert werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
