@@ -855,6 +855,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Aktualisierung darf den laufenden Timer, Session-Status, Session-Notizen, das Ablenkungsprotokoll oder die erfassten Zeitdaten nicht zurücksetzen oder verändern.
 - Die Bearbeitung in Important bleibt optional; die Focus-Session kann unverändert weiterlaufen.
 
+
+### Zurück-zur-Session-Navigation aus Important
+- Wird eine verknüpfte Important-Aufgabe über die Fälligkeitsanzeige in Focus geöffnet, erscheint im Important-Bereich eine gut sichtbare Aktion „Zurück zur Focus-Session“.
+- Die Aktion führt direkt zur zuvor geöffneten Focus-Session zurück.
+- Der aktuelle Session-Zustand bleibt während des Wechsels erhalten; Timer und Session werden nicht neu gestartet oder zurückgesetzt.
+- Bei mehreren offenen Sessions führt die Aktion genau zur Session, aus der die Aufgabe geöffnet wurde.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
