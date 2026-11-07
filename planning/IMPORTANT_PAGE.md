@@ -140,3 +140,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Mehrere Verknüpfungen können gleichzeitig ausgewählt werden.
 - Mehrere Einträge aus demselben HQ-Bereich sind zulässig.
 - Ausgewählte Verknüpfungen bleiben sichtbar und können einzeln wieder entfernt werden.
+
+- Ausgewählte Verknüpfungen werden auch direkt auf der Important-Eintragskarte angezeigt, damit die zugehörigen HQ-Bereiche bzw. konkreten Einträge bereits in der Übersicht erkennbar sind.
