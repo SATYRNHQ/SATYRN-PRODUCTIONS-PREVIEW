@@ -2745,3 +2745,12 @@ body.important-modal-open{overflow:hidden}
 .important-page .imp-priority-option:has(input:checked){background:color-mix(in srgb,currentColor 17%,#0b100d);border-color:currentColor;box-shadow:0 0 0 1px color-mix(in srgb,currentColor 20%,transparent),0 5px 18px rgba(0,0,0,.2)}
 .important-page .imp-priority-option:hover{transform:translateY(-1px);filter:brightness(1.12)}
 .important-page .imp-priority-option input{accent-color:currentColor}
+
+
+/* Category select uses an explicit state class so its chosen color is visible */
+.important-page #importantCategory{transition:color .2s,border-color .2s,background .2s,box-shadow .2s}
+.important-page #importantCategory.imp-category-company{color:#d8c58e;border-color:rgba(216,197,142,.72);background:linear-gradient(110deg,rgba(177,148,83,.22),#0b100d 78%);box-shadow:inset 3px 0 #c6ad70}
+.important-page #importantCategory.imp-category-partners{color:#91c9b0;border-color:rgba(104,177,143,.72);background:linear-gradient(110deg,rgba(66,139,105,.22),#0b100d 78%);box-shadow:inset 3px 0 #75b99a}
+.important-page #importantCategory.imp-category-moves{color:#d6a0dc;border-color:rgba(177,119,188,.72);background:linear-gradient(110deg,rgba(133,78,145,.23),#0b100d 78%);box-shadow:inset 3px 0 #b47bc0}
+.important-page #importantCategory.imp-category-blueprints{color:#91b9e8;border-color:rgba(111,157,211,.72);background:linear-gradient(110deg,rgba(69,112,169,.23),#0b100d 78%);box-shadow:inset 3px 0 #79a6d8}
+.important-page #importantCategory.imp-category-other{color:#c4c9bf;border-color:rgba(164,174,157,.65);background:linear-gradient(110deg,rgba(133,145,127,.18),#0b100d 78%);box-shadow:inset 3px 0 #9ca697}
