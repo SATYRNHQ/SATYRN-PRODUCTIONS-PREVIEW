@@ -882,6 +882,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beschreibung und weitere Aufgabendetails werden dort nicht angezeigt.
 - Ist keine Hauptaufgabe ausgewählt, wird an dieser Stelle kein Aufgabentitel angezeigt.
 
+
+### Focus-Rückkehrfenster per Hover anzeigen
+- Das kleine Info-Fenster öffnet sich bereits beim Darüberfahren mit der Maus über den seitenübergreifenden Focus-Rückkehrbutton.
+- Der Klick auf den Button führt weiterhin direkt zur zugehörigen Focus-Session.
+- Auf Touch-Geräten ohne Hover wird das Info-Fenster durch Antippen des Buttons bzw. eines separaten Info-Bereichs zugänglich gemacht, ohne den direkten Rücksprung unklar zu machen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
