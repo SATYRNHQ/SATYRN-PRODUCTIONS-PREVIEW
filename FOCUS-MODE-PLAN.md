@@ -835,6 +835,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Anzeige ist informativ und verändert weder Timer noch Session-Ziel.
 - Änderungen an der Fälligkeitsfrist in der verknüpften Important-Aufgabe werden gemäß der bestehenden Synchronisierungslogik übernommen.
 
+
+### Überfällige Aufgaben in der Focus-Session kennzeichnen
+- Ist die Fälligkeitsfrist einer verknüpften Important-Aufgabe überschritten und die Aufgabe noch offen, wird sie in der Focus-Session dezent rot gekennzeichnet.
+- Die Kennzeichnung erscheint bei der Fälligkeitsanzeige unter der Hauptaufgabe bzw. im Aufgabenbereich, wenn keine Hauptaufgabe ausgewählt ist.
+- Die Darstellung bleibt zurückhaltend und verändert weder Priorität noch Session-Verhalten oder Timer.
+- Sobald die Aufgabe erledigt oder die Frist angepasst wird, wird die Überfällig-Kennzeichnung entsprechend aktualisiert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
