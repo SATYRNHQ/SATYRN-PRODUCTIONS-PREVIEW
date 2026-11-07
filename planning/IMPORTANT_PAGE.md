@@ -207,3 +207,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Kategorien- und Prioritätsfilter stehen in zwei klar getrennten Gruppen.
 - Gruppe 1: Kategorien mit fünf farbigen Checkboxen.
 - Gruppe 2: Priorität mit vier farbigen Checkboxen.
+
+## Filter-Gruppenaktionen
+- Beide Filtergruppen erhalten jeweils einen kleinen Button „Alle“.
+- Der Button aktiviert alle Checkboxen innerhalb seiner jeweiligen Gruppe (Kategorien oder Priorität).
