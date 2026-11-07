@@ -354,3 +354,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Responsive Darstellung des Prioritäts-Kreisdiagramms
 - Auf kleineren Bildschirmen und schmalen Fenstern wird das Kreisdiagramm automatisch kompakter dargestellt.
 - Diagramm, Gesamtzahl und Prioritätsbeschriftungen bleiben gut lesbar und bedienbar; nichts darf abgeschnitten werden oder überlappen.
+
+## Sichtbarkeit des Prioritäts-Kreisdiagramms
+- Das Prioritäts-Kreisdiagramm bleibt dauerhaft sichtbar.
+- Es gibt keine zusätzliche Schaltfläche zum Ein- oder Ausblenden.
