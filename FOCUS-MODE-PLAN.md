@@ -639,6 +639,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei Abbrechen bleibt die Verknüpfung unverändert; bei Bestätigen wird nur die Verknüpfung gelöst, nicht die Important-Aufgabe gelöscht.
 - Diese Vorgabe gilt einheitlich für alle Sicherheitsabfragen im Focus Mode: Sie sollen dem Sicherheitsabfrage-System im Important-Tab folgen.
 
+
+### Mehrere Important-Aufgaben mit einer Focus-Session verknüpfen
+- Eine Focus-Session kann gleichzeitig mit mehreren bestehenden Important-Aufgaben verknüpft werden.
+- Der Nutzer wählt die verknüpften Aufgaben manuell aus; es werden keine Aufgaben automatisch hinzugefügt.
+- Alle Verknüpfungen werden in der Session sichtbar dargestellt und bleiben bei Pause, Unterbrechung, Fortsetzung und in der History erhalten.
+- Einzelne Verknüpfungen können manuell getrennt werden, ohne die jeweilige Important-Aufgabe zu löschen; dabei gelten die einheitlichen Sicherheitsabfragen aus dem Important-Tab.
+- Wird eine verknüpfte Important-Aufgabe gelöscht, bleibt die Focus-Session bestehen und nur diese Verknüpfung wird gelöst; die bisher festgelegte historische Kennzeichnung bleibt erhalten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
