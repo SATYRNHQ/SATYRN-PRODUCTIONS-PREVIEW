@@ -755,6 +755,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die manuelle Änderung beeinflusst nicht den Erledigungsstatus oder die Priorität der Aufgaben.
 - Die Sicherheitsabfrage folgt dem einheitlichen Sicherheitsabfrage-System aus dem Important-Tab.
 
+
+### Spätere Dashboard-Analytics: durchschnittliche Erledigungsdauer nach Priorität
+- Für das spätere Dashboard soll ausgewertet werden, wie lange Aufgaben durchschnittlich bis zur Erledigung benötigen, aufgeschlüsselt nach ihrer jeweiligen Priorität.
+- Die Auswertung soll als Grundlage für Analytics und realistische Wahrscheinlichkeits-/Zeitprognosen dienen.
+- Dafür müssen mindestens Erstellungszeitpunkt, Erledigungszeitpunkt und die relevante Prioritätsinformation einer Aufgabe nachvollziehbar gespeichert werden.
+- Diese Kennzahl ist als spätere Dashboard-Anforderung vorgemerkt und gehört nicht zur aktuellen Focus-Mode-Umsetzung.
+- Die genaue Berechnung (z. B. Umgang mit zwischenzeitlichen Prioritätsänderungen und pausierten Aufgaben) wird bei der Dashboard-Planung festgelegt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
