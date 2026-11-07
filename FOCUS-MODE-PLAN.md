@@ -868,6 +868,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eine dezente, seitenübergreifende Aktion „Zurück zur Focus-Session“ führt zur exakt zugehörigen offenen Session.
 - Die Aktion wird nur angezeigt, solange eine passende offene Session existiert, und verändert deren Timer- oder Session-Zustand nicht.
 
+
+### Focus-Rückkehrbutton mit kleinem Session-Fenster
+- Die seitenübergreifende Aktion „Zurück zur Focus-Session“ zeigt ein kleines, dezentes Info-Fenster bzw. Popover.
+- Darin werden der Session-Status (läuft, pausiert oder unterbrochen) und passende zeitliche Informationen angezeigt.
+- Bei laufender Session wird die verbleibende Focus-Zeit angezeigt; bei pausierter oder unterbrochener Session die Zeit seit der letzten Pause bzw. Unterbrechung.
+- Das Fenster bietet weiterhin den direkten Rücksprung zur exakt zugehörigen Session.
+- Die Anzeige aktualisiert sich passend zum Session-Zustand und bleibt kompakt, damit sie andere Seiten nicht stört.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
