@@ -302,3 +302,6 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Aktualisierung nach dem Bearbeiten
 - Änderungen an einem Eintrag werden nach dem Speichern direkt in der betroffenen Karte und den zugehörigen Ansichten aktualisiert.
 - Dafür ist kein Neuladen der gesamten Seite erforderlich.
+
+## Visuelle Hervorhebung neu gespeicherter Einträge
+- Neu gespeicherte Einträge erhalten keine zusätzliche temporäre Hervorhebung; die normale Prioritäts- und Kartenoptik reicht aus.
