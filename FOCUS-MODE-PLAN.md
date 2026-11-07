@@ -399,6 +399,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Öffnen bzw. Aufrufen einer Benachrichtigung markiert sie als gelesen.
 - Gelöschte Benachrichtigungen werden nicht mehr mitgezählt.
 
+
+### Benachrichtigungen gesammelt als gelesen markieren
+- In der Benachrichtigungsübersicht gibt es die Aktion „Alle als gelesen markieren“.
+- Die Aktion markiert alle aktuell ungelesenen Benachrichtigungen auf einmal als gelesen.
+- Bereits gelöschte Benachrichtigungen bleiben unberücksichtigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
