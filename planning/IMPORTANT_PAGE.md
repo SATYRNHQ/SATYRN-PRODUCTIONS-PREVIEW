@@ -298,3 +298,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Löschanimation
 - Nach Bestätigung der endgültigen Löschung verschwindet die betroffene Karte mit einer kurzen, dezenten Ausblendanimation.
 - Die Animation bleibt ruhig und hochwertig; sie darf andere Karten oder deren Inhalte nicht überlagern.
+
+## Aktualisierung nach dem Bearbeiten
+- Änderungen an einem Eintrag werden nach dem Speichern direkt in der betroffenen Karte und den zugehörigen Ansichten aktualisiert.
+- Dafür ist kein Neuladen der gesamten Seite erforderlich.
