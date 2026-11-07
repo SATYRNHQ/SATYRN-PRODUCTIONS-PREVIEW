@@ -246,3 +246,5 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Wenn Suche und/oder Filter keine Einträge ergeben, erscheint ein eigener, dezenter Empty-State mit passender Grafik.
 - Überschrift: „Keine Einträge gefunden“.
 - Hinweistext: „Passe deine Suche oder Filter an, um Ergebnisse zu finden.“
+
+- Unter dem Hinweistext erscheint zusätzlich ein Button „Filter zurücksetzen“, der Suche, Kategorien und Prioritäten auf den Standardzustand zurücksetzt.
