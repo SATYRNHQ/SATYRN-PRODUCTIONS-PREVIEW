@@ -808,6 +808,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Unteraufgaben werden in der Vorbereitung angezeigt und bleiben entsprechend der bestehenden Focus-Regeln bearbeitbar.
 - Die bestehende Synchronisierung von Änderungen an verknüpften Important-Unteraufgaben gilt weiterhin für offene Sessions; abgeschlossene Sessions behalten ihren Snapshot.
 
+
+### Unteraufgabenstatus beim Schnellstart übernehmen
+- Beim Schnellstart werden auch die aktuellen Erledigt-/Offen-Status aller übernommenen Important-Unteraufgaben übernommen.
+- Bereits erledigte Unteraufgaben erscheinen in der Focus-Session direkt als erledigt; offene bleiben offen.
+- Die bestehende Synchronisierung von Statusänderungen zwischen Important und offenen verknüpften Focus-Sessions bleibt maßgeblich.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
