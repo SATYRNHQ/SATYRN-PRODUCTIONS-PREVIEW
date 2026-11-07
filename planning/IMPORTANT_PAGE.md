@@ -32,8 +32,8 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
-- Ein Klick auf das Plus öffnet ein separates Eingabefenster (Modal/Overlay) innerhalb des zentralen Inhaltsbereichs.
-- In diesem Fenster kann ein neuer Important-Eintrag angelegt und bearbeitet werden.
-- Das Fenster soll die Eingabe übersichtlich bündeln; konkrete Felder und Aktionen werden gemeinsam noch festgelegt.
-- Das Fenster darf Headbar und Sidebars nicht überdecken oder deren Interaktion beeinträchtigen.
-- Das Eingabefenster öffnet sich mittig im zentralen Inhaltsbereich und steht nach dem Klick auf das Plus klar im visuellen Fokus.
+- Ein Klick auf das Plus öffnet ein separates Eingabefenster als Overlay/Pop-up.
+- Das Overlay erscheint mittig innerhalb des zentralen Inhaltsbereichs und steht klar im visuellen Fokus.
+- Die Important-Seite bleibt darunter geöffnet und sichtbar; das Eingabefenster ersetzt also nicht die Seite und navigiert nicht auf eine neue Ansicht.
+- Das Overlay dient zum Anlegen und Bearbeiten eines Important-Eintrags; konkrete Felder und Aktionen werden gemeinsam noch festgelegt.
+- Das Overlay darf Headbar und Sidebars nicht überdecken oder deren Interaktion beeinträchtigen.
