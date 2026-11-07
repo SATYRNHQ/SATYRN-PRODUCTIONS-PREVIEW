@@ -230,3 +230,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Trefferanzahl
 - Oberhalb der Eintragskarten wird die aktuelle Anzahl der angezeigten Treffer angezeigt, z. B. „12 Einträge gefunden“.
 - Die Zahl aktualisiert sich automatisch passend zu Suche und aktiven Kategorie- sowie Prioritätsfiltern.
+
+## Filter zurücksetzen
+- Es gibt einen Button „Filter zurücksetzen“.
+- Er leert den Suchtext und aktiviert alle fünf Kategorien sowie alle vier Prioritäten wieder (Standardzustand).
