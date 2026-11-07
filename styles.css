@@ -2200,3 +2200,14 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
 @media(max-width:720px){
   .hq-time-nav .edge-nav-item .nav-icon{transform:translateX(-3px)!important}
 }
+
+
+/* Sidebar: slightly taller frame with evenly distributed items. */
+@media(min-width:721px){
+  .hq-side-nav{
+    min-height:300px!important;
+    justify-content:space-evenly!important;
+    padding-top:16px!important;
+    padding-bottom:16px!important;
+  }
+}
