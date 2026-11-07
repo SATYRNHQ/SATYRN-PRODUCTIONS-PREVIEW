@@ -36,4 +36,4 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - In diesem Fenster kann ein neuer Important-Eintrag angelegt und bearbeitet werden.
 - Das Fenster soll die Eingabe übersichtlich bündeln; konkrete Felder und Aktionen werden gemeinsam noch festgelegt.
 - Das Fenster darf Headbar und Sidebars nicht überdecken oder deren Interaktion beeinträchtigen.
-
+- Das Eingabefenster öffnet sich mittig im zentralen Inhaltsbereich und steht nach dem Klick auf das Plus klar im visuellen Fokus.
