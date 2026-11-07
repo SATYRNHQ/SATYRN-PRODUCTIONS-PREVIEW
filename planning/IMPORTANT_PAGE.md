@@ -318,3 +318,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Verhalten der Kennzeichnung „Neu“
 - Die Kennzeichnung „Neu“ bleibt sichtbar, bis der Nutzer den betreffenden Eintrag zum ersten Mal öffnet.
 - Beim ersten Öffnen des Eintrags wird die Kennzeichnung entfernt; sie erscheint für diesen Eintrag danach nicht erneut.
+
+## Erstes Öffnen eines neuen Eintrags
+- Wird ein neu erstellter Eintrag zum ersten Mal geöffnet, klappt sich die Karte automatisch vollständig aus.
+- Gleichzeitig wird die Kennzeichnung „Neu“ dauerhaft entfernt.
