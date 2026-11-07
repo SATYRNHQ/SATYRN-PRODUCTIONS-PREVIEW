@@ -30,6 +30,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Änderungsprotokoll
 - Konzept begonnen: Nutzer hat Important als erste gemeinsam zu planende Seite ausgewählt.
 - Datum des Eintrags festgelegt: Es handelt sich um das Datum, an dem das Ereignis stattfindet — nicht um das Erstellungsdatum des Eintrags.
+- Beschreibung festgelegt: Ein zusätzlicher Beschreibungstext ist optional und kann leer bleiben.
 
 ## Bestätigte Entscheidung — Eintrag hinzufügen
 - Oben rechts auf der Important-Seite befindet sich ein grünes Plus-Symbol.
@@ -44,3 +45,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Das Datum bezeichnet, wann das betreffende Ereignis stattfindet.
 - Ein Eintrag muss auch ohne Datum angelegt und gespeichert werden können.
 - Das Ereignisdatum ist ausdrücklich kein automatisch erforderliches Erstellungsdatum.
+
+## Bestätigte Entscheidung — Beschreibung
+- Ein Important-Eintrag kann einen zusätzlichen Beschreibungstext enthalten.
+- Die Beschreibung ist optional; ein Eintrag kann auch ohne Beschreibung gespeichert werden.
