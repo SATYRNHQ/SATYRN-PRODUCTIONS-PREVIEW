@@ -2188,3 +2188,8 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
     font-size:15px!important;
   }
 }
+
+
+/* Right sidebar: inset its icons a little farther from the outer right edge. */
+.hq-money-nav .edge-nav-item .nav-icon{transform:translateX(-7px)!important}
+@media(max-width:720px){.hq-money-nav .edge-nav-item .nav-icon{transform:translateX(-3px)!important}}
