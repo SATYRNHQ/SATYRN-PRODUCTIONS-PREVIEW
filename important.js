@@ -179,8 +179,6 @@
       if(action.dataset.reset){$('importantSearch').value='';setAll('cat',true);setAll('pri',true);return}
       if(action.dataset.addLink){const l=availableLinks.find(x=>x.id===action.dataset.addLink);if(l)linkSelections.push({...l});renderSelectedLinks();renderLinkResults();return}
       if(action.dataset.unlink){linkSelections=linkSelections.filter(x=>x.id!==action.dataset.unlink);renderSelectedLinks();renderLinkResults();return}
-      if(action.dataset.confirmDelete){confirmDelete();return}
-      if(action.dataset.cancelDelete){$('importantDeletePrompt').hidden=true;return}
       if(action.dataset.modalClose!==undefined){requestClose();return}
     }
     const cardEl=t.closest('[data-card]');
@@ -212,6 +210,17 @@
     event.preventDefault();
     event.stopPropagation();
     closeModal();
+  });
+  // Delete confirmation also uses direct handlers, independent of delegated clicks.
+  $('importantDeletePrompt').querySelector('[data-cancel-delete]').addEventListener('click',event=>{
+    event.preventDefault();
+    event.stopPropagation();
+    $('importantDeletePrompt').hidden=true;
+  });
+  $('importantDeletePrompt').querySelector('[data-confirm-delete]').addEventListener('click',event=>{
+    event.preventDefault();
+    event.stopPropagation();
+    confirmDelete();
   });
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!$('importantModal').hidden){if(!$('importantDiscardPrompt').hidden){$('importantDiscardPrompt').hidden=true;return}requestClose()}});
   $('importantModalBackdrop').addEventListener('click',()=>{});
