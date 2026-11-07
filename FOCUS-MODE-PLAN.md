@@ -700,21 +700,6 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei einer Session ohne verknüpfte Important-Aufgaben wird dieser Hinweis nicht angezeigt.
 
 
-### Important-Aufgaben während einer Focus-Session hinzufügen
-- Während einer laufenden, pausierten oder unterbrochenen Focus-Session können jederzeit weitere bestehende Important-Aufgaben hinzugefügt werden, ohne die Session verlassen zu müssen.
-- Neue Verknüpfungen werden direkt in der Session angezeigt und unterliegen den bestehenden Bestätigungs- und Synchronisierungsregeln.
-- Die Priorität der offenen Session wird nach dem Hinzufügen anhand der höchsten Priorität aller aktuell verknüpften Aufgaben neu berechnet.
-- Das Hinzufügen von Aufgaben startet oder beendet die Session nicht und verändert keine bestehenden Notizen, Zeitdaten oder Unteraufgaben.
-
-
-### Auswahl und Bestätigung beim Hinzufügen weiterer Important-Aufgaben
-- Weitere Important-Aufgaben werden während einer Focus-Session über ein kleines Auswahlfenster hinzugefügt.
-- Das Auswahlfenster zeigt offene Important-Aufgaben; bereits mit dieser Session verknüpfte Aufgaben werden ausgeblendet, damit keine doppelten Verknüpfungen entstehen.
-- Der Nutzer kann mehrere Aufgaben auswählen und die Auswahl anschließend mit „Hinzufügen“ bestätigen.
-- Erst nach dieser Bestätigung werden die ausgewählten Aufgaben mit der Session verknüpft.
-- Das Auswahlfenster kann ohne Änderungen geschlossen werden; bestehende Verknüpfungen und Session-Daten bleiben unverändert.
-
-
 ### Hauptaufgabe und zusätzliche Important-Aufgaben
 - Eine Focus-Session mit mehreren verknüpften Important-Aufgaben kann genau eine davon als Hauptaufgabe festlegen; die übrigen sind zusätzliche Aufgaben.
 - Die Hauptaufgabe wird in der Session klar hervorgehoben, bleibt aber Teil derselben Verknüpfungs- und Synchronisierungslogik.
@@ -762,6 +747,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Dafür müssen mindestens Erstellungszeitpunkt, Erledigungszeitpunkt und die relevante Prioritätsinformation einer Aufgabe nachvollziehbar gespeichert werden.
 - Diese Kennzahl ist als spätere Dashboard-Anforderung vorgemerkt und gehört nicht zur aktuellen Focus-Mode-Umsetzung.
 - Die genaue Berechnung (z. B. Umgang mit zwischenzeitlichen Prioritätsänderungen und pausierten Aufgaben) wird bei der Dashboard-Planung festgelegt.
+
+### Keine neuen Important-Aufgaben während einer laufenden Focus-Session
+- Während einer laufenden, pausierten oder unterbrochenen Focus-Session können keine neuen Important-Aufgaben nachträglich mit dieser Session verknüpft werden.
+- Neue Einfälle oder Aufgaben werden stattdessen in den Session-Notizen festgehalten.
+- Wenn eine notierte Aufgabe später bearbeitet werden soll, wird dafür eine eigene Focus-Session gestartet und die Aufgabe dort verknüpft.
+- Bereits bestehende Verknüpfungen und alle festgelegten Synchronisierungs-, Prioritäts- und Hauptaufgabenregeln bleiben unverändert.
 
 ## 8. Umsetzungsregeln
 
