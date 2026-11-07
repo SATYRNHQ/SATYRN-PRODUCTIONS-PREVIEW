@@ -603,6 +603,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Kennzeichnung ist rein informativ; sie stellt keine aktive Verknüpfung dar und die gelöschte Aufgabe wird nicht wiederhergestellt.
 - Die Session bleibt unabhängig bearbeitbar.
 
+
+### Ehemalige Verknüpfung in der History erhalten
+- Die Kennzeichnung einer gelöschten bzw. nicht mehr aktiven Important-Verknüpfung bleibt auch nach dem erfolgreichen Abschluss der Focus-Session in der History erhalten.
+- Der ursprüngliche Aufgabenname und der Hinweis **„Aufgabe gelöscht / nicht mehr verknüpft“** bleiben in den Session-Details sichtbar.
+- Die Kennzeichnung bleibt rein historisch und erzeugt keine neue Verknüpfung.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
