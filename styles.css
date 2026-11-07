@@ -2202,11 +2202,13 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
 }
 
 
-/* Sidebar: enforce the 25% taller desktop frame (min-height alone was overridden by fixed sizing). */
+/* Desktop sidebars: extend the frame 25% farther above and below its original center. */
 @media(min-width:721px){
   .hq-side-nav{
-    height:375px!important;
-    min-height:375px!important;
+    top:50%!important;
+    bottom:auto!important;
+    height:450px!important;
+    min-height:450px!important;
     box-sizing:border-box!important;
     justify-content:space-evenly!important;
     padding-top:16px!important;
