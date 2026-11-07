@@ -123,3 +123,11 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Eine Änderungsinformation wird nur angezeigt, wenn ein Eintrag nach seiner ursprünglichen Erstellung tatsächlich bearbeitet wurde. Dann erscheint beispielsweise „Zuletzt geändert: 06.11.2026“. Bei unveränderten, neu erstellten Einträgen wird keine Erstellungs- oder Änderungsinformation eingeblendet.
 
 - Das Erstellen- und Bearbeiten-Fenster verwenden dieselbe große, breite Fenstergröße und dasselbe Layout. Beim Bearbeiten werden die vorhandenen Eintragsdaten in den gleichen Formularfeldern vorausgefüllt; es gibt kein separates oder anders gestaltetes Bearbeitungsfenster.
+
+## Bestätigte Formularstruktur
+- Das Formular im Erstellen-/Bearbeiten-Fenster wird in klar getrennte, übersichtlich beschriftete Bereiche gegliedert:
+  1. **Grundinformationen** — Titel und Kategorie.
+  2. **Inhalt** — Beschreibung und optionales Ereignisdatum.
+  3. **Priorität** — Auswahl einer der vier verpflichtenden Prioritätsstufen.
+  4. **Verknüpfungen** — Auswahl mehrerer passender Einträge bzw. Bereiche aus dem HQ.
+- Die Bereiche sollen die Orientierung erleichtern und optisch sauber voneinander getrennt sein. Erstellen und Bearbeiten verwenden dieselbe Formularstruktur.
