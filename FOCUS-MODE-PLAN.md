@@ -211,6 +211,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 
+### Edit sessions in History
+- Individual sessions can be edited after they have been recorded.
+- Editable details include notes, focus goal, and category.
+- Editing a historical session updates its saved record and relevant statistics consistently.
+
 ### History search
 - Search field to find sessions by task name or focus goal.
 - Search results update while typing.
