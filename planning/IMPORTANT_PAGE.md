@@ -331,3 +331,9 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Abgrenzung zur Homepage
 - Das große Prioritäts-Kreisdiagramm gehört **auf die Homepage**, nicht auf die Important-Seite und nicht in das Important-Fenster.
 - Auf der Important-Seite wird dieses Diagramm daher nicht angezeigt. Die Important-Seite behält ihre Suche, Filter, Trefferanzahl und Eintragskarten.
+
+## Homepage — Important-Übersicht
+- Das große Prioritäts-Kreisdiagramm wird ausschließlich auf der Homepage angezeigt, nicht innerhalb der Important-Seite.
+- Es berücksichtigt ausschließlich die Important-Einträge und zeigt deren Verteilung auf Dringend, Wichtig, Vorläufig und Unbefristet.
+- Das Diagramm erhält auf der Homepage eine eigene, klar erkennbare Überschrift, die auf den Important-Bereich verweist.
+- Die Größe und Darstellung bleiben wie festgelegt: großes, präsentes Kreisdiagramm mit Prioritätsnamen und Anzahlen daneben, innerhalb einer dezenten Dark-Glass-Fläche.
