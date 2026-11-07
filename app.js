@@ -45,6 +45,8 @@ const pages = [...document.querySelectorAll('.page')];
 const navItems = [...document.querySelectorAll('[data-page]')];
 const crumb = document.getElementById('crumb');
 const sidebars = [...document.querySelectorAll('.hq-side-nav')];
+// Start both sidebars in their intended compact frame state before the first hover.
+sidebars.forEach(nav=>nav.classList.add('nav-dismissed'));
 const headbar = document.querySelector('.hq-top-nav');
 function showPage(name, clickedItem){
   changeBackground();
