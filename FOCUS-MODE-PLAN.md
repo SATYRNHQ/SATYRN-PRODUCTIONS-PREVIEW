@@ -227,6 +227,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Filter by time period/date range.
 - Filters can be combined so sessions can be narrowed down by status, category, and period together.
 
+
+### Sessions löschen
+- Einzelne Sessions können über ihre Detailansicht bzw. das Session-Menü gelöscht werden.
+- Das Löschen folgt demselben Prinzip wie auf der Important-Seite: Vor dem Löschen erscheint eine separate Sicherheitsabfrage.
+- **Abbrechen** schließt die Abfrage und lässt die Session unverändert bestehen.
+- **Löschen** bestätigt die Aktion und entfernt die Session aus der History und den gespeicherten Daten.
+- Die Löschaktion wird visuell dezent animiert; es gibt keinen zusätzlichen Papierkorb- oder Wiederherstellungsbereich.
+
 ## 7. Design und Konsistenz
 
 - Premium-SATYRN-HQ-Stil, passend zum bestehenden dunklen Design.
