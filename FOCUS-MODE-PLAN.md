@@ -561,6 +561,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Hinweis ist informativ und blockiert den Start bzw. die Wiederaufnahme nicht.
 - Die Anzeige verwendet die tatsächliche Zeit seit der letzten Unterbrechung.
 
+
+### Dauer von Pause und Unterbrechung in der offenen Liste
+- Bei pausierten Sessions wird angezeigt, wie lange sie bereits pausiert sind.
+- Bei unterbrochenen Sessions wird angezeigt, wie lange sie bereits unterbrochen sind.
+- Die Dauer wird laufend bzw. bei erneuter Anzeige aktuell berechnet und kompakt dargestellt, z. B. **„pausiert seit 15 Min.“** oder **„unterbrochen seit 2 Std.“**.
+- Bei laufenden Sessions wird stattdessen der aktuelle Timerstatus angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
