@@ -193,7 +193,7 @@
     const cardEl=event.target.closest('[data-card]');
     if(cardEl&&(event.key==='Enter'||event.key===' ')&&event.target===cardEl){event.preventDefault();toggleCard(cardEl.dataset.card)}
   });
-  root.addEventListener('change',event=>{const el=event.target;if(el.matches('[data-cat]')){const id=el.dataset.cat;categoryOn.has(id)?categoryOn.delete(id):categoryOn.add(id);render()}else if(el.matches('[data-pri]')){const id=el.dataset.pri;priorityOn.has(id)?priorityOn.delete(id):priorityOn.add(id);render()}});
+  root.addEventListener('change',event=>{const el=event.target;if(el.id==='importantCategory'){updateCategorySelectColor();return}if(el.matches('[data-cat]')){const id=el.dataset.cat;categoryOn.has(id)?categoryOn.delete(id):categoryOn.add(id);render()}else if(el.matches('[data-pri]')){const id=el.dataset.pri;priorityOn.has(id)?priorityOn.delete(id):priorityOn.add(id);render()}});
   $('importantSearch').addEventListener('input',render);
   $('importantSearchClear').addEventListener('click',()=>{$('importantSearch').value='';render();$('importantSearch').focus()});
   $('importantLinkSearch').addEventListener('input',renderLinkResults);
