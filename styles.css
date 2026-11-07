@@ -2373,6 +2373,8 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
 
 /* IMPORTANT PAGE — SATYRN Dark Glass archive */
 .important-page{position:relative}
+/* Keep fixed Important dialogs relative to the viewport, not the animated page. */
+.important-page.active-page{animation:none!important;transform:none!important}
 .important-page .page-intro{padding-bottom:clamp(18px,2vw,28px)!important}
 .important-page .page-intro p{max-width:760px;color:rgba(236,235,223,.62)}
 .imp-create-button{position:absolute;right:0;top:clamp(30px,3.1vw,46px);width:48px;height:48px;border:1px solid rgba(116,174,111,.55);border-radius:13px;background:linear-gradient(145deg,rgba(88,137,77,.25),rgba(16,26,19,.82));color:#a9d49a;font-size:29px!important;box-shadow:0 0 24px rgba(83,151,76,.12);cursor:pointer;transition:.2s}
