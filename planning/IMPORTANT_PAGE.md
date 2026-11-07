@@ -11,7 +11,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Vorgeschlagene Kategorien — noch in Abstimmung
 Die fünf Kategorien sind die vom Nutzer bevorzugte Richtung; ihre endgültige Auswahl und Definition werden gemeinsam bestätigt:
 1. **Unternehmensinformationen** — umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
-2. **Geschäftspartner & Kooperationen** — Definition noch offen.
+2. **Geschäftspartner & Kooperationen** — umfasst bestehende und potenzielle Geschäftspartner, auch wenn noch keine Zusammenarbeit besteht, sowie Kooperationsvereinbarungen, gemeinsame Projekte, Geschäftsbeziehungen und wichtige Informationen zu einzelnen Partnern.
 3. **Entscheidungen** — Definition noch offen.
 4. **Umsetzbare Pläne** — Definition noch offen.
 5. **Sonstiges** — Definition noch offen.
@@ -33,6 +33,7 @@ Die fünf Kategorien sind die vom Nutzer bevorzugte Richtung; ihre endgültige A
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
 - Kategorienrichtung: Unternehmensinformationen; Geschäftspartner & Kooperationen; Entscheidungen; Umsetzbare Pläne; Sonstiges. Die genaue Bedeutung und endgültige Auswahl bleiben, soweit nicht unten ausdrücklich definiert, offen.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
+- Geschäftspartner & Kooperationen umfasst bestehende und potenzielle Partner, Kooperationsvereinbarungen, gemeinsame Projekte und Geschäftsbeziehungen sowie wichtige Informationen zu einzelnen Partnern.
 - Das Ereignisdatum ist optional und bezeichnet, wann das Ereignis stattfindet; es ist kein Erstellungsdatum.
 - Die Beschreibung ist optional.
 
