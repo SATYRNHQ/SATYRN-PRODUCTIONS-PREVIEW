@@ -738,6 +738,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der automatische Wechsel erledigt, entfernt oder verändert keine der übrigen Aufgaben.
 - Sind keine offenen zusätzlichen Aufgaben mehr vorhanden, gibt es keine Hauptaufgabe mehr in dieser Session.
 
+
+### Reihenfolge zusätzlicher Aufgaben per Drag & Drop
+- Zusätzliche verknüpfte Aufgaben können per Drag & Drop frei sortiert werden.
+- Die festgelegte Reihenfolge bestimmt, welche offene Zusatzaufgabe nach Erledigung der aktuellen Hauptaufgabe automatisch zur neuen Hauptaufgabe wird.
+- Die Reihenfolge bleibt beim Pausieren, Unterbrechen und Fortsetzen der Session erhalten.
+- Erledigte oder entfernte Aufgaben werden aus der aktiven Reihenfolge genommen; die verbleibende Reihenfolge rückt entsprechend zusammen.
+- Die Sortierung verändert keine Prioritäten oder Daten der verknüpften Important-Aufgaben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
