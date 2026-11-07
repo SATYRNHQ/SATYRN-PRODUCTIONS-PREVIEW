@@ -450,6 +450,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Während der Offline-Phase soll die Bedienung der laufenden Session möglichst uneingeschränkt bleiben.
 - Die Synchronisierung darf keine doppelten Sessions oder verlorenen Änderungen verursachen.
 
+
+### Mehrere geöffnete Tabs
+- Wird SATYRN HQ in mehreren Browser-Tabs geöffnet, zeigen alle Tabs denselben aktuellen Focus-Session-Status und Timerstand an.
+- Änderungen an der Session werden zwischen den geöffneten Tabs synchron gehalten.
+- Es darf nur eine aktive Steuerungsinstanz für dieselbe Session geben; mehrere Tabs dürfen keine voneinander unabhängigen Timer oder widersprüchlichen Session-Zustände erzeugen.
+- Start-, Pause-, Fortsetzen- und Reset-Aktionen müssen tabübergreifend konsistent verarbeitet werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
