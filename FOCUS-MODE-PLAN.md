@@ -842,6 +842,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Darstellung bleibt zurückhaltend und verändert weder Priorität noch Session-Verhalten oder Timer.
 - Sobald die Aufgabe erledigt oder die Frist angepasst wird, wird die Überfällig-Kennzeichnung entsprechend aktualisiert.
 
+
+### Fälligkeitsanzeige zur Important-Aufgabe verlinken
+- Die Fälligkeitsanzeige in der Focus-Session ist anklickbar.
+- Ein Klick öffnet direkt die zugehörige Aufgabe im Important-Bereich, damit Details oder die Fälligkeitsfrist dort bearbeitet werden können.
+- Die Focus-Session bleibt dabei erhalten und läuft unverändert weiter.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
