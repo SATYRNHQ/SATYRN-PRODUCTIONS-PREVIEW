@@ -2149,8 +2149,8 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   }
 }
 
-/* Palm contour: extend ONLY the outer headbar frame above and below the center.
-   The caps blend into the bar and stay behind all navigation content. */
+/* Center watch-case contour: the headbar widens around the palm like a
+   wristwatch case. Only the outside silhouette grows; the palm and inner bar stay clear. */
 .hq-top-nav{
   position:fixed!important;
   isolation:isolate!important;
@@ -2162,25 +2162,27 @@ h1,h2,h3,h4,h5,h6,.title,.section-title,.page-title,.card-title{line-height:1.15
   position:absolute;
   z-index:0;
   left:50%;
-  width:88px;
-  height:24px;
+  width:136px;
+  height:34px;
   transform:translateX(-50%);
-  background:linear-gradient(110deg,rgba(8,13,11,.38),rgba(17,26,21,.30),rgba(8,13,11,.38));
-  border-left:1px solid rgba(198,166,106,.14);
-  border-right:1px solid rgba(198,166,106,.14);
+  background:inherit;
+  -webkit-backdrop-filter:inherit;
+  backdrop-filter:inherit;
+  border-left:1px solid rgba(198,166,106,.17);
+  border-right:1px solid rgba(198,166,106,.17);
   pointer-events:none;
 }
 .hq-top-nav:before{
-  top:-12px;
-  border-top:1px solid rgba(198,166,106,.14);
+  top:-17px;
+  border-top:1px solid rgba(198,166,106,.17);
   border-bottom:0;
-  border-radius:50% 50% 0 0 / 100% 100% 0 0;
+  border-radius:68px 68px 0 0 / 34px 34px 0 0;
 }
 .hq-top-nav:after{
-  bottom:-12px;
-  border-bottom:1px solid rgba(198,166,106,.14);
+  bottom:-17px;
+  border-bottom:1px solid rgba(198,166,106,.17);
   border-top:0;
-  border-radius:0 0 50% 50% / 0 0 100% 100%;
+  border-radius:0 0 68px 68px / 0 0 34px 34px;
 }
 .hq-top-nav>.headbar-group,
 .hq-top-nav>.home-palm{
