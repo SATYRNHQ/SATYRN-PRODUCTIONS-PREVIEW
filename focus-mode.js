@@ -166,8 +166,8 @@
   };
   const resumeSession=(s)=>{
     if(!s||!['PAUSED','INTERRUPTED'].includes(s.status))return;
-    const now=Date.now();s.status='RUNNING';s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;lastClockWall=now;lastClockMono=performance.now();
-    event(s,'resume','Session fortgesetzt',now);persist();setDistractionFree(true);ensureTick();renderAll();
+    const wasInterrupted=s.status==='INTERRUPTED',now=Date.now(),interruptionMs=wasInterrupted&&s.lastInterruptedAt?Math.max(0,now-s.lastInterruptedAt):0;s.status='RUNNING';s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;lastClockWall=now;lastClockMono=performance.now();
+    event(s,'resume',wasInterrupted?'Session fortgesetzt · Unterbrechung '+duration(interruptionMs):'Session fortgesetzt',now,wasInterrupted?{interruptionDurationMs:interruptionMs,interruptedAt:s.lastInterruptedAt}:{});s.lastInterruptedAt=null;persist();setDistractionFree(true);ensureTick();renderAll();
   };
   const createSession=(config,status='PREPARED')=>{
     const now=Date.now(),focusMs=config.focusMs,breakMs=config.breakMs;
@@ -380,10 +380,10 @@
     const snap=s.linkedTaskSnapshot;
     if(snap.source==='task'){
       const list=getLegacyTasks(),task=list.find(t=>String(t.id)===String(snap.id));
-      if(task){const ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];const byDay=new Map();(s.focusSegments||[]).forEach(seg=>{const key=seg.localDate||dateKey(seg.start),old=byDay.get(key)||{at:seg.start,durationMs:0,timezone:seg.timezone||zone()};old.at=Math.min(old.at,seg.start);old.durationMs+=seg.durationMs;byDay.set(key,old);});byDay.forEach((h,localDate)=>task.focusHistory.push({sessionId:s.id,at:h.at,localDate,durationMs:h.durationMs,timezone:h.timezone}));s.taskTimeLogged=true;try{localStorage.setItem(TASKS,JSON.stringify(list))}catch{}}
+      if(task){const ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];const byDay=new Map();(s.focusSegments||[]).forEach(seg=>{const key=seg.localDate||dateKey(seg.start),old=byDay.get(key)||{at:seg.start,durationMs:0,timezone:seg.timezone||zone()};old.at=Math.min(old.at,seg.start);old.durationMs+=seg.durationMs;byDay.set(key,old);});byDay.forEach((h,localDate)=>task.focusHistory.push({sessionId:s.id,at:h.at,localDate,durationMs:h.durationMs,timezone:h.timezone}));try{localStorage.setItem(TASKS,JSON.stringify(list));s.taskTimeLogged=true;}catch{toast('Die Aufgabenaktivität konnte nicht gespeichert werden.');}}
     }else if(snap.source==='important'){
       const raw=read(IMPORTANT,{entries:[]}),entries=Array.isArray(raw)?raw:(raw.entries||[]),task=entries.find(t=>String(t.id)===String(snap.id));
-      if(task){const ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];const byDay=new Map();(s.focusSegments||[]).forEach(seg=>{const key=seg.localDate||dateKey(seg.start),old=byDay.get(key)||{at:seg.start,durationMs:0,timezone:seg.timezone||zone()};old.at=Math.min(old.at,seg.start);old.durationMs+=seg.durationMs;byDay.set(key,old);});byDay.forEach((h,localDate)=>task.focusHistory.push({sessionId:s.id,at:h.at,localDate,durationMs:h.durationMs,timezone:h.timezone}));s.taskTimeLogged=true;try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}))}catch{}}
+      if(task){const ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];const byDay=new Map();(s.focusSegments||[]).forEach(seg=>{const key=seg.localDate||dateKey(seg.start),old=byDay.get(key)||{at:seg.start,durationMs:0,timezone:seg.timezone||zone()};old.at=Math.min(old.at,seg.start);old.durationMs+=seg.durationMs;byDay.set(key,old);});byDay.forEach((h,localDate)=>task.focusHistory.push({sessionId:s.id,at:h.at,localDate,durationMs:h.durationMs,timezone:h.timezone}));try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}));s.taskTimeLogged=true;}catch{toast('Die Aufgabenaktivität konnte nicht gespeichert werden.');}}
     }
   };
   const finish=(s,now=Date.now())=>{
