@@ -1801,3 +1801,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ändert der Nutzer die Kategorie direkt in Focus, gilt diese Auswahl als bewusste manuelle Überschreibung und bleibt bestehen, auch wenn sich die Kategorie der verknüpften Important-Aufgabe später ändert.
 - Die manuelle Überschreibung betrifft ausschließlich die Focus-Session und verändert niemals die Kategorie der Important-Aufgabe.
 - Abgeschlossene Focus-Sessions behalten ihre zum Abschluss gespeicherte Kategorie unverändert.
+
+
+### Priorität bei erledigten oder entfernten Important-Verknüpfungen
+- Solange mindestens eine offene Important-Aufgabe mit einer offenen Focus-Session verknüpft ist, wird die Session-Priorität weiterhin aus der höchsten aktuellen Priorität dieser verknüpften Aufgaben abgeleitet.
+- Sobald keine offenen verknüpften Important-Aufgaben mehr vorhanden sind, behält die Focus-Session ihre zuletzt gültige Priorität.
+- Die Priorität wird in diesem Fall nicht automatisch auf „Vorläufig“ oder einen anderen Standardwert zurückgesetzt.
+- Der Nutzer kann die Priorität der Session anschließend manuell ändern; dadurch wird keine Important-Aufgabe verändert.
+- Abgeschlossene Focus-Sessions behalten ihre beim Abschluss gespeicherte Priorität.
