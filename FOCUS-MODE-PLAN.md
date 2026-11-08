@@ -1111,6 +1111,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Fokusdauer der festen Presets bleibt durch die Preset-Auswahl vorgegeben. Für eine frei wählbare Fokusdauer wird „Custom“ verwendet.
 - Änderungen gelten für die neu vorbereitete Session und verändern nicht die gespeicherten Preset-Standardwerte.
 
+
+### Eine feste Pause pro Session-Preset
+- Jedes Session-Preset hat genau eine vorgesehene Pausendauer; es gibt keinen automatischen Wechsel zwischen Kurz- und Langpausen.
+- Die Pausendauer bleibt wie festgelegt individuell änderbar.
+- Der Focus-Modus bleibt auf konzentrierte Arbeitszeit ausgerichtet; zusätzliche oder wechselnde Pausenmodelle werden bewusst vermieden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
