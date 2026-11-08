@@ -1817,3 +1817,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Zeitabschnitte werden anhand ihrer tatsächlichen Zeitstempel erfasst; die Zuordnung zu Statistik-Tagen und -Zeiträumen erfolgt anschließend anhand der lokalen Zeitzone.
 - Sommerzeitwechsel werden korrekt berücksichtigt. Ein Tag kann daher je nach Zeitumstellung kürzer oder länger als 24 Stunden sein; die tatsächliche erfasste Fokuszeit darf dadurch weder verloren gehen noch doppelt gezählt werden.
 - Sessions, die Mitternacht oder eine Kalendergrenze überschreiten, werden für Tages-, Wochen- und Monatsstatistiken anteilig anhand ihrer erfassten Fokuszeit den jeweiligen lokalen Zeiträumen zugeordnet.
+
+
+### Sessions über Mitternacht in der History und Statistik
+- Eine Focus-Session, die über Mitternacht oder eine andere Kalendergrenze hinweg läuft, bleibt in der History ein einzelner zusammenhängender Session-Eintrag mit ihrem tatsächlichen Start- und Endzeitpunkt.
+- Für Tages-, Wochen- und Monatsstatistiken wird die tatsächlich erfasste Fokuszeit anteilig den jeweiligen lokalen Kalendertagen bzw. Zeiträumen zugeordnet.
+- Pausen und Unterbrechungen zählen weiterhin nicht als aktive Fokuszeit; sie werden auch bei der Aufteilung über Kalendergrenzen hinweg nicht eingerechnet.
+- Die Aufteilung in Statistiken erzeugt keine zusätzlichen Sessions und verändert weder den Verlauf noch die gespeicherten Zeitabschnitte.
