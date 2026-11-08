@@ -629,3 +629,5 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Projects und Important verwenden dieselben vier Prioritätsstufen: Dringend, Wichtig, Vorläufig und Unbefristet. Ältere gespeicherte Task-Prioritäten werden beim Laden in diese Stufen überführt.
 - Die Reihenfolge der Task Queue speichert Quelle und Eintrags-ID gemeinsam, damit IDs verschiedener Bereiche nicht kollidieren.
 - Erledigte Tasks können direkt in der Focus Queue markiert werden und bleiben im einklappbaren Bereich „Erledigte Aufgaben“ sichtbar.
+
+- **Ton und Browser-Benachrichtigungen:** Beim bewussten Start einer Pause und beim Ende der Pause ertönt jeweils ein kurzer Doppelton. Über die Schaltfläche **„Benachrichtigungen aktivieren“** kann die Browserberechtigung ausdrücklich angefragt werden; bei erteilter Berechtigung werden Timer-Enden und Pausenwechsel im Hintergrund gemeldet.

@@ -12,7 +12,7 @@ for(const ref of refs){assert.ok(fs.existsSync(ref.split('?')[0]),'Missing asset
 function checkFonts(css,label){for(const m of css.matchAll(/font-size\\s*:\\s*([^;{}]+)\\s*;/gi)){const v=m[1],px=[...v.matchAll(/(\\d+(?:\\.\\d+)?)px/g)].map(x=>+x[1]),rem=[...v.matchAll(/(\\d*\\.?\\d+)rem/g)].map(x=>parseFloat(x[1])),em=[...v.matchAll(/(\\d*\\.?\\d+)em/g)].map(x=>parseFloat(x[1]));assert.ok(!px.some(n=>n>0&&n<14)&&!rem.some(n=>n>0&&n<.875)&&!em.some(n=>n>0&&n<.875),label+' text below 14px: '+v);}}
 checkFonts(globalCss,'styles.css');checkFonts(focusCss,'focus-mode.css');checkFonts(reminderCss,'focus-reminders.css');
 assert.ok(!hq.includes('function renderFocus('),'Legacy Focus renderer remains');assert.ok(!globalCss.includes('.focus-dashboard'),'Legacy Focus CSS remains');
-assert.ok(focus.includes('syncPresetCards')&&focus.includes("t.isTask===true")&&focus.includes('data-fm-complete'),'Focus preset/task queue regression');
+assert.ok(focus.includes('syncPresetCards')&&focus.includes("t.isTask===true")&&focus.includes('data-fm-complete')&&focus.includes('tone();')&&focus.includes('Notification.requestPermission'),'Focus preset/task/notification regression');
 assert.ok(important.includes('BEISPIEL')&&important.includes('getAvailableLinks')&&important.includes('removeTarget'),'Important archive/link regression');
-assert.ok(sw.includes('satyrn-hq-shell-v104'),'Service worker cache version not bumped');
+assert.ok(sw.includes('satyrn-hq-shell-v106'),'Service worker cache version not bumped');
 console.log('SATYRN HQ validation passed: IDs, assets, cache versions, typography, Focus and Important.');

@@ -130,7 +130,7 @@
   const startBreak=(s)=>{
     if(!s||s.status!=='EXPIRED'||s.phase!=='focus'||s.breakDurationMs<=0)return;
     const now=Date.now();s.phase='break';s.status='RUNNING';s.phaseDurationMs=s.breakDurationMs;s.remainingMs=s.breakDurationMs;s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+s.breakDurationMs;s.lastActiveAt=now;
-    event(s,'break-start','Pause nach Bestätigung gestartet',now);persist();setDistractionFree(true);ensureTick();renderAll();
+    event(s,'break-start','Pause nach Bestätigung gestartet',now);tone();persist();setDistractionFree(true);ensureTick();renderAll();
   };
   const breakEnd=(s,now)=>{
     if(s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
@@ -210,6 +210,14 @@
     el.textContent=storageState;
     el.title=storageMessage;
     const note=$('fmStorageNote');if(note)note.textContent=storageMessage;
+  };
+  const renderNotificationPermission=()=>{
+    const button=$('fmEnableNotifications');if(!button)return;
+    if(!('Notification' in window)){button.hidden=true;return;}
+    button.hidden=Notification.permission==='granted';
+    button.disabled=Notification.permission==='denied';
+    button.textContent=Notification.permission==='denied'?'Benachrichtigungen blockiert':'Benachrichtigungen aktivieren';
+    button.title=Notification.permission==='denied'?'Bitte die Berechtigung in den Browser-Einstellungen ändern.':'Erlaube Benachrichtigungen, damit Focus Timer-Enden auch im Hintergrund melden kann.';
   };
   const statusText=s=>({RUNNING:s.phase==='break'?'BREAK':'FOCUS',PAUSED:'PAUSED',INTERRUPTED:'INTERRUPTED',COMPLETED:'COMPLETED',EXPIRED:'EXPIRED',PREPARED:'PREPARED'}[s.status]||'NO SESSION');
   const statusClass=s=>s.status==='RUNNING'?'is-'+s.phase:s.status.toLowerCase();
@@ -361,7 +369,7 @@
     $('fmHistoryPageSize').value=String(pageSize);
   };
   const renderRecentHistory=()=>{const target=$('fmRecentHistory');if(!target)return;const list=state.sessions.filter(s=>['COMPLETED','INTERRUPTED'].includes(s.status)).slice().sort((a,b)=>Math.max(...(b.timeline||[]).map(e=>e.at||0),b.createdAt||0)-Math.max(...(a.timeline||[]).map(e=>e.at||0),a.createdAt||0)).slice(0,4);target.innerHTML=list.length?list.map(s=>{const last=Math.max(...(s.timeline||[]).map(e=>e.at||0),s.createdAt||0);return '<article class="fm-recent-row"><span class="fm-recent-state '+(s.status==='COMPLETED'?'is-complete':'is-interrupted')+'">'+(s.status==='COMPLETED'?'✓':'Ⅱ')+'</span><span class="fm-recent-copy"><b>'+esc(s.name)+'</b><small>'+esc(s.goal)+' · '+dateLabel(dateKey(last))+'</small></span><strong>'+duration(totalFocus(s))+'</strong></article>';}).join(''):'<p class="fm-empty">Noch keine abgeschlossenen oder unterbrochenen Sessions.</p>';};
-  const renderAll=()=>{renderCurrent();renderQueue();renderStats();renderHistory();renderRecentHistory();renderStorage();};
+  const renderAll=()=>{renderCurrent();renderQueue();renderStats();renderHistory();renderRecentHistory();renderStorage();renderNotificationPermission();};
   const prepareConfig=()=>{
     const goal=$('fmGoal').value.trim(),name=$('fmName').value.trim()||goal;
     const preset=PRESETS.find(x=>x.id===$('fmPreset').value)||PRESETS[0];
@@ -491,7 +499,7 @@
   };
   const buildMarkup=()=>{
     const html = String.raw`<section class="fm-mobile-capture"><span class="fm-kicker">SATYRN HQ · QUICK CAPTURE</span><h2>Idee festhalten</h2><p>Die mobile Ansicht ist bewusst auf schnelles Festhalten beschränkt. Fokus-Sessions planst und startest du am Desktop.</p><textarea id="fmMobileIdea" class="fm-input" rows="5" maxlength="600" placeholder="Idee, Aufgabe oder nächsten Schritt notieren …"></textarea><button type="button" id="fmMobileSave" class="fm-button fm-primary">In Task Queue speichern <span>＋</span></button></section>
-    <div class="fm-page-head"><div><div class="eyebrow">SATYRN HQ · FOCUS WORKSPACE</div><h1>Focus <em>Center</em></h1><p>Plane deine Arbeit, starte fokussierte Sessions und behalte Fortschritt und Verlauf an einem Ort im Blick.</p></div><div class="fm-head-actions"><button type="button" class="fm-history-open" id="fmHistoryOpen">◷ <span>History</span></button><span class="fm-storage-pill" id="fmStorageState" data-state="saved">SAVED</span></div></div>
+    <div class="fm-page-head"><div><div class="eyebrow">SATYRN HQ · FOCUS WORKSPACE</div><h1>Focus <em>Center</em></h1><p>Plane deine Arbeit, starte fokussierte Sessions und behalte Fortschritt und Verlauf an einem Ort im Blick.</p></div><div class="fm-head-actions"><button type="button" class="fm-history-open" id="fmHistoryOpen">◷ <span>History</span></button><button type="button" class="fm-notification-button" id="fmEnableNotifications" hidden>Browser-Benachrichtigungen aktivieren</button><span class="fm-storage-pill" id="fmStorageState" data-state="saved">SAVED</span></div></div>
       <div class="fm-main-view" id="fmMainView">
         <section class="fm-current glass-card" aria-labelledby="fmCurrentHeading">
           <div class="fm-current-top"><div><span class="fm-kicker">01 · CURRENT SESSION</span><h2 id="fmCurrentHeading">Dein Fokus im Mittelpunkt</h2></div><div class="fm-current-meta"><label class="fm-current-select-label">Kategorie<select id="fmCurrentCategory" class="fm-meta-select"><option value="music">Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></label><label class="fm-current-select-label">Priorität<select id="fmCurrentPriority" class="fm-meta-select"><option value="urgent">Dringend</option><option value="important">Wichtig</option><option value="provisional">Vorläufig</option><option value="indefinite">Unbefristet</option></select></label></div></div>
@@ -570,6 +578,7 @@
   buildMarkup();
   const refreshLinkedOptions=()=>fillLinkedOptions();
   $('fmPreset').addEventListener('change',syncPresetCards);$('fmPresetCards').addEventListener('click',e=>{const button=e.target.closest('[data-fm-preset]');if(!button)return;$('fmPreset').value=button.dataset.fmPreset;syncPresetCards();});$('fmRecentHistory').addEventListener('click',e=>{if(e.target.closest('[data-fm-open-history]'))openHistory();});syncPresetCards();
+  $('fmEnableNotifications').addEventListener('click',async()=>{if(!('Notification' in window)){toast('Dieser Browser unterstützt keine Browser-Benachrichtigungen.');return;}try{const permission=await Notification.requestPermission();renderNotificationPermission();toast(permission==='granted'?'Browser-Benachrichtigungen aktiviert.':permission==='denied'?'Benachrichtigungen wurden im Browser blockiert.':'Keine Berechtigung erteilt.');}catch{toast('Die Benachrichtigungsberechtigung konnte nicht angefragt werden.');}});
   $('fmMobileSave').addEventListener('click',()=>{const input=$('fmMobileIdea'),title=input.value.trim();if(!title){input.focus();return;}const list=getLegacyTasks(),now=Date.now();list.unshift({id:now,title,priority:'provisional',done:false,createdAt:now});try{localStorage.setItem(TASKS,JSON.stringify(list));input.value='';refreshLinkedOptions();renderQueue();toast('Idee in der Task Queue gespeichert.');}catch{toast('Die Idee konnte nicht gespeichert werden. Bitte Browser-Speicher prüfen.');}});
   $('fmSetupNew').addEventListener('click',()=>{editingPreparedId=null;$('fmSetupForm').reset();$('fmPreset').value='pomodoro';syncPresetCards();$('fmLinkedTask').value='';$('fmSetupSubmit').textContent='Session vorbereiten ＋';$('fmGoal').focus();});
   $('fmSetupForm').addEventListener('submit',e=>{

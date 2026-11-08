@@ -361,3 +361,5 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 - Speichern und Löschen sind transaktional: Bei einem lokalen Speicherfehler bleibt der bisherige Eintragsbestand erhalten.
 - Undatierte Einträge bleiben auch direkt nach dem Speichern am Ende ihrer Prioritätsgruppe.
 - Important-Einträge erscheinen nicht automatisch als Tasks. Die Aufnahme in Focus Queue erfordert das explizite Kontrollfeld **„Als Fokusaufgabe in der Task Queue anzeigen“**.
+
+- Wird ein verknüpfter Eintrag umbenannt, wird der angezeigte Verknüpfungsname beim nächsten Rendern aus dem aktuellen Zieleintrag aktualisiert; die stabile ID bleibt unverändert.
