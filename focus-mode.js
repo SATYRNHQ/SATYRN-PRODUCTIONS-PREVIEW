@@ -199,7 +199,7 @@
     const s=current();if(s)s.distractionFree=!!on;
     focusPage.classList.toggle('focus-distraction-free',!!on);
     const toggle=$('fmDistractionToggle');if(toggle){toggle.setAttribute('aria-pressed',String(!!on));toggle.textContent=on?'Distraction-Free aktiv':'Distraction-Free-Modus';}
-    const queue=$('fmQueuePanel'),stats=$('fmStatsPanel');if(queue)queue.hidden=!!on;if(stats)stats.hidden=!!on;
+    const queue=$('fmQueuePanel'),stats=$('fmStatsPanel'),recent=$('fmRecentHistory')?.closest('.fm-recent-history');if(queue)queue.hidden=!!on;if(stats)stats.hidden=!!on;if(recent)recent.hidden=!!on;
   };
   const renderStorage=()=>{
     const el=$('fmStorageState');if(!el)return;
@@ -533,7 +533,7 @@
         <section class="fm-panel glass-card fm-recent-history"><div class="fm-panel-heading"><div><span class="fm-kicker">05 · SESSION HISTORY</span><h2>Zuletzt bearbeitet</h2></div><button type="button" class="fm-text-button" data-fm-open-history>Gesamten Verlauf öffnen ↗</button></div><div id="fmRecentHistory" class="fm-recent-history-list"><p class="fm-empty">Deine abgeschlossenen und unterbrochenen Sessions erscheinen hier.</p></div></section>
       </div>
       <section class="fm-history-view" id="fmHistoryView" hidden>
-        <div class="fm-history-heading"><div><span class="fm-kicker">SESSION ARCHIVE</span><h2>Session History</h2><p>Deine abgeschlossenen und unterbrochenen Sessions – chronologisch und vollständig.</p></div><button type="button" class="fm-button fm-subtle" id="fmHistoryBack">← Zurück zu Focus Mode</button></div>
+        <div class="fm-history-heading"><div><span class="fm-kicker">SESSION ARCHIVE</span><h2>Session History</h2><p>Deine abgeschlossenen und unterbrochenen Sessions – chronologisch und vollständig.</p></div><button type="button" class="fm-button fm-subtle" id="fmHistoryBack">← Zurück zum Focus Center</button></div>
         <div class="fm-history-kpis"><article><small>SESSIONS</small><b id="fmHistoryTotal">0</b></article><article><small>FOKUSZEIT</small><b id="fmHistoryFocus">0min</b></article><article><small>COMPLETED</small><b id="fmHistoryCompleted">0</b></article></div>
         <div class="fm-history-controls">
           <div class="fm-history-search"><input id="fmHistorySearch" class="fm-input" type="search" placeholder="Session-Name oder Fokusziel suchen …"><button type="button" id="fmHistorySearchClear" aria-label="Suche löschen">×</button></div>
