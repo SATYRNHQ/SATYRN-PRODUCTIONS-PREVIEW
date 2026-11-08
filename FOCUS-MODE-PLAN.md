@@ -1165,6 +1165,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Alle Preset-Icons verwenden einen schlichten, minimalistischen Linienstil passend zum Premium-Design von SATYRN HQ (Lucide-ähnlich).
 - Standard- und eigene Presets verwenden denselben Icon-Stil und eine einheitliche visuelle Größe.
 
+
+### Separater Bereich „Meine Presets“
+- Fest eingebaute Session-Presets und nutzerdefinierte Presets werden in der Auswahl klar getrennt dargestellt.
+- Eigene Presets erscheinen gesammelt in einem separaten Bereich mit der Überschrift „Meine Presets“.
+- Die Standard-Presets bleiben im eigenen Bereich darüber beziehungsweise davor sichtbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
