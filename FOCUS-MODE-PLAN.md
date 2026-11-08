@@ -486,6 +486,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 **Kennzahlen bei aktiver Suche und Filtern:** Die KPI-Zeile zeigt stets die Kennzahlen für die aktuell angezeigte Ergebnismenge. Aktive Suchbegriffe und Filter wirken sich daher auch auf Gesamtzahl der Sessions, tatsächliche Fokuszeit und Anzahl abgeschlossener Sessions aus.
+
+**Unterschiedliche Leerzustände:** Wenn noch keine Sessions vorhanden sind, erscheint ein ruhiger Hinweis, dass abgeschlossene oder unterbrochene Sessions künftig hier gesammelt werden. Wenn Sessions vorhanden sind, aber die aktuelle Suche oder Filter keine Treffer liefern, erscheint stattdessen eine separate Meldung wie „Keine Sessions entsprechen deiner Suche oder den ausgewählten Filtern“. Beide Zustände bleiben schlicht und verzichten auf zusätzliche Menüs oder unnötige Bedienelemente.
 ### Zeitraum-Filter
 - Der Zeitraum-Filter bietet folgende Schnelloptionen:
   - **Heute**
