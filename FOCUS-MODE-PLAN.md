@@ -1848,3 +1848,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Uhrzeit und das Datum richten sich nach der lokalen Zeitzone des Nutzers.
 - Bei vollständig vergangenen Zeiträumen wird keine Kennzeichnung für einen laufenden Zeitraum angezeigt.
 - Die Kennzeichnung ergänzt die Vergleichswerte und macht transparent, bis zu welchem Zeitpunkt die Daten berücksichtigt wurden.
+
+
+### Rekorde: längste Fokusphase und längste gesamte Session
+- Die persönlichen Rekorde unterscheiden ausdrücklich zwischen der längsten ununterbrochenen Fokusphase und der längsten gesamten Fokuszeit innerhalb einer einzelnen Session.
+- **Längste ununterbrochene Fokusphase:** Erfasst wird der längste zusammenhängende Fokuszeitabschnitt ohne dazwischenliegende Pause oder Unterbrechung.
+- **Längste gesamte Session:** Erfasst wird die höchste Summe aller tatsächlich erfassten Fokuszeitabschnitte innerhalb einer einzelnen Session. Mehrere Fokusphasen derselben Session werden addiert; Pausen und Unterbrechungszeiten zählen nicht mit.
+- Beide Rekorde zeigen jeweils die erreichte Dauer und das Datum.
+- Beide Werte werden automatisch aktualisiert, sobald eine Session bzw. ein Fokuszeitabschnitt einen neuen persönlichen Rekord erreicht.
