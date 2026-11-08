@@ -49,6 +49,16 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Für die gesamte PC-Ansicht gilt ein einheitliches Abstandssystem. Einzelne Abstände werden nicht willkürlich voneinander abweichend festgelegt.
 - Abstände passen sich bei veränderter Fensterbreite sinnvoll an. Dabei bleiben klare Gruppierung, Lesbarkeit und eine effiziente Flächennutzung erhalten.
 
+
+### Einbindung in das globale HQ-Layout
+- Focus Mode und die Session History werden im zentralen Workspace des bestehenden SATYRN-HQ-Shells dargestellt. Sie bauen keine eigene, konkurrierende Seitenstruktur auf.
+- Die globale **HEADBAR** bleibt über dem gesamten Seiteninhalt bestehen. Sie enthält die sechs Bereiche **Dashboard**, **Dreams**, **Opportunities**, **Projects**, **Network** und **Settings**; das Palm-Symbol sitzt exakt mittig und dient als Home-Schaltfläche.
+- Die linke Sidebar bleibt den zeitlichen und planerischen Themen vorbehalten. Die rechte Sidebar bleibt den finanziellen Themen vorbehalten.
+- Beide Sidebars haben dieselbe Breite und dasselbe Interaktionsverhalten: identisches Hover-Aufklappen, identische Verzögerungen beim Öffnen und Schließen, Navigation mit Icon und Bezeichnung, smaragdgrüne Kennzeichnung des aktiven Bereichs sowie abgestimmte Animationen und Übergänge.
+- Beide Sidebars lassen sich unabhängig voneinander bedienen. Das Aufklappen der einen Sidebar darf die andere nicht unbeabsichtigt verändern.
+- Die bisherige alte, konkurrierende Sidebar-Struktur wird nicht zusätzlich angezeigt. Focus Mode und Session History nutzen ausschließlich den gemeinsamen HQ-Shell und dessen zentrale Inhaltsfläche.
+- Die Inhaltsbreite von Focus Mode richtet sich nach dem tatsächlich verfügbaren zentralen Workspace zwischen den beiden Sidebars; Timer, Session Setup, Task Queue, Statistics und History werden innerhalb dieser Fläche responsiv angeordnet.
+
 ## 2. Current Session und Timer
 
 
@@ -507,3 +517,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Aktive Prioritätsauswahlen werden oberhalb der Ergebnisliste sichtbar angezeigt und können einzeln entfernt werden.
 - Der Prioritäts-Filter lässt sich mit Zeitraum-, Kategorie- und Statusfiltern kombinieren.
 - Priorität wird immer auch durch eine eindeutige Textbezeichnung vermittelt; Farbe allein reicht nicht aus.
+
+### Filter zurücksetzen
+- Oberhalb der Session-Ergebnisse gibt es eine gut auffindbare, aber visuell zurückhaltende Schaltfläche **Filter zurücksetzen**.
+- Ein Klick setzt Zeitraum-, Kategorie-, Status- und Prioritätsfilter gemeinsam auf ihre jeweiligen Standardwerte zurück.
+- Nach dem Zurücksetzen werden wieder alle verfügbaren Sessions angezeigt; die Standardsortierung **Neueste zuerst** bleibt bestehen.
+- Die Schaltfläche wird nur dann aktiv bzw. angeboten, wenn mindestens ein Filter vom Standard abweicht.
+- Die Filtersteuerung einschließlich der Zurücksetzen-Schaltfläche bleibt innerhalb der Session-History im zentralen Workspace und berücksichtigt jederzeit die globale HEADBAR und beide Sidebars.
