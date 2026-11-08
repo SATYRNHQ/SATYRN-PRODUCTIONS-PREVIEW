@@ -131,7 +131,7 @@
 #page-focus .fm-history-search input{padding-right:42px}
 #page-focus .fm-history-search button{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#a7b6ac;font-size:20px;cursor:pointer}
 #page-focus .fm-history-date-fields{display:none}
-#page-focus .fm-history-date-fields:has(input:not(:placeholder-shown)){display:grid}
+#page-focus .fm-history-date-fields[data-custom="true"]{display:grid}
 #page-focus .fm-history-filter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 #page-focus .fm-history-filter-grid section{border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:10px}
 #page-focus .fm-history-filter-grid section>b{font-size:10px;color:#d3dfd6}
