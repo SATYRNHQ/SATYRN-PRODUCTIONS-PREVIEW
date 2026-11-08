@@ -1240,6 +1240,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Direkte Eingabe, Plus-/Minus-Schaltflächen, 5-Minuten-Schritte, automatische Wiederholung mit Beschleunigung, Untergrenze 00:00, unbegrenzte Obergrenze und automatische Normalisierung gelten auch dort.
 - Nicht übernommene Änderungen werden beim Verlassen des Preset-Editors nach dem bestehenden Bestätigungsablauf behandelt.
 
+
+### Prüfung doppelter Preset-Namen
+- Beim Speichern eines eigenen Presets wird geprüft, ob bereits ein Preset mit demselben Namen existiert.
+- Doppelte Namen werden verhindert; die Oberfläche weist verständlich darauf hin und fordert zur Wahl eines anderen Namens auf.
+- Beim Bearbeiten eines Presets bleibt dessen eigener aktueller Name zulässig.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
