@@ -43,7 +43,7 @@
   const clock = ms => { const s=Math.max(0,Math.ceil((Number(ms)||0)/1000)); return String(Math.floor(s/3600)).padStart(2,'0')+':'+String(Math.floor(s%3600/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); };
   const moneyless = n => Math.max(0,Math.round(Number(n)||0));
   const read = (key,fallback) => { try { const v=JSON.parse(localStorage.getItem(key)||'null'); return v==null?fallback:v; } catch { return fallback; } };
-  let storageState='SAVED', storageMessage='Lokal im Browser gespeichert';
+  let storageState='UNSAVED', storageMessage='Lokal gespeichert · zentrale Synchronisierung ist noch nicht eingerichtet';
   let state = read(STORE,{version:1,sessions:[],queue:[],queueManual:false});
   if(!state || typeof state!=='object') state={version:1,sessions:[],queue:[],queueManual:false};
   if(!Array.isArray(state.sessions))state.sessions=[];
@@ -57,7 +57,7 @@
     storageState='SAVING'; renderStorage();
     try {
       localStorage.setItem(STORE,JSON.stringify(state));
-      storageState='SAVED';storageMessage='Lokal im Browser gespeichert · Cloud-Synchronisierung ist noch nicht eingerichtet';
+      storageState='UNSAVED';storageMessage='Lokal im Browser gespeichert · zentrale Synchronisierung ist noch nicht eingerichtet';
       renderStorage();
       return true;
     } catch(err) {
@@ -182,6 +182,7 @@
   };
   const startCountdown=s=>{
     if(!s||s.status!=='PREPARED'&&s.status!=='EXPIRED')return;
+    try{const Audio=window.AudioContext||window.webkitAudioContext;if(Audio){audioContext=audioContext||new Audio();if(audioContext.state==='suspended')audioContext.resume();}}catch{}
     editingPreparedId=null;$('fmSetupSubmit').textContent='Session vorbereiten ＋';
     if(countdownHandle){clearInterval(countdownHandle);countdownHandle=null;}
     countdownTarget=s.id;countdownValue=3;renderCurrent();
@@ -497,7 +498,7 @@
             <form id="fmSetupForm">
               <label class="fm-label" for="fmGoal">Fokusziel *</label><input id="fmGoal" class="fm-input" required maxlength="160" placeholder="z. B. Melodie und Arrangement finalisieren">
               <label class="fm-label" for="fmName">Session-Name</label><input id="fmName" class="fm-input" maxlength="100" placeholder="Optional · wird sonst vom Fokusziel übernommen">
-              <div class="fm-form-two"><div><label class="fm-label" for="fmCategory">Kategorie</label><select id="fmCategory" class="fm-input"><option value="music" selected>Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></div><div><label class="fm-label" for="fmPriority">Priorität</label><select id="fmPriority" class="fm-input"><option value="urgent">Critical</option><option value="important" selected>High</option><option value="provisional">Normal</option><option value="indefinite">Low</option></select></div></div>
+              <div class="fm-form-two"><div><label class="fm-label" for="fmCategory">Kategorie</label><select id="fmCategory" class="fm-input"><option value="music" selected>Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></div><div><label class="fm-label" for="fmPriority">Priorität</label><select id="fmPriority" class="fm-input"><option value="urgent">Dringend</option><option value="important" selected>Wichtig</option><option value="provisional">Vorläufig</option><option value="indefinite">Unbefristet</option></select></div></div>
               <label class="fm-label" for="fmLinkedTask">Aufgabe verknüpfen</label><select id="fmLinkedTask" class="fm-input"><option value="">Eigenes Fokusziel</option></select>
               <div class="fm-duration-head"><label class="fm-label" for="fmPreset">Zeit-Preset</label><span>Fokus / Pause</span></div><select id="fmPreset" class="fm-input"><option value="pomodoro" selected>Pomodoro · 25 / 5 min</option><option value="extended">Extended · 50 / 10 min</option><option value="deep">Deep Work · 90 / 15 min</option><option value="long">Long Session · 120 / 20 min</option><option value="marathon">Marathon · 180 / 30 min</option><option value="custom">Custom</option></select>
               <div class="fm-form-two fm-custom-duration" id="fmCustomDuration" hidden><div><label class="fm-label" for="fmCustomFocus">Fokus (Minuten)</label><input id="fmCustomFocus" class="fm-input" type="number" min="1" max="1440" value="45"></div><div><label class="fm-label" for="fmCustomBreak">Pause (Minuten)</label><input id="fmCustomBreak" class="fm-input" type="number" min="0" max="240" value="10"></div></div>
@@ -549,7 +550,7 @@
   $('fmSetupNew').addEventListener('click',()=>{editingPreparedId=null;$('fmSetupForm').reset();$('fmPreset').value='pomodoro';$('fmCustomDuration').hidden=true;$('fmLinkedTask').value='';$('fmSetupSubmit').textContent='Session vorbereiten ＋';$('fmGoal').focus();});
   $('fmSetupForm').addEventListener('submit',e=>{
     e.preventDefault();const config=prepareConfig();if(!config)return;
-    if(editingPreparedId){const existing=state.sessions.find(x=>x.id===editingPreparedId&&x.status==='PREPARED');if(existing){existing.name=config.name;existing.goal=config.goal;existing.category=config.category;existing.priority=config.priority;existing.preset=config.preset;existing.originalFocusMs=config.focusMs;existing.phaseDurationMs=config.focusMs;existing.remainingMs=config.focusMs;existing.breakDurationMs=config.breakMs;existing.linkedTask=config.linkedTask;existing.linkedTaskSnapshot=config.linkedTask?{...config.linkedTask}:null;existing.updatedAt=Date.now();event(existing,'prepared-edited','Vorbereitete Session angepasst');persist();loadSetup(existing);renderAll();toast('Vorbereitete Session aktualisiert.');return;}}
+    if(editingPreparedId){const existing=state.sessions.find(x=>x.id===editingPreparedId&&x.status==='PREPARED');if(existing){existing.name=config.name;existing.goal=config.goal;existing.category=config.category;existing.priority=config.priority;existing.preset=config.preset;existing.originalFocusMs=config.focusMs;existing.phaseDurationMs=config.focusMs;existing.remainingMs=config.focusMs;existing.breakDurationMs=config.breakMs;if(config.linkedTask){existing.linkedTask=config.linkedTask;existing.linkedTaskSnapshot={...config.linkedTask};}existing.updatedAt=Date.now();event(existing,'prepared-edited','Vorbereitete Session angepasst');persist();loadSetup(existing);renderAll();toast('Vorbereitete Session aktualisiert.');return;}}
     const created=createSession(config,'PREPARED');state.activeId=created.id;activeId=created.id;refreshLinkedOptions();loadSetup(created);renderAll();toast('Session vorbereitet. Der Timer wurde noch nicht gestartet.');
   });
   $('fmStartPrepared').addEventListener('click',()=>{
@@ -566,8 +567,8 @@
   $('fmDistractionForm').addEventListener('submit',e=>{e.preventDefault();const s=current(),input=$('fmDistractionInput'),text=input.value.trim();if(!s||!text){if(!s)toast('Bitte zuerst eine Session auswählen.');return;}s.distractions=s.distractions||[];s.distractions.unshift({id:uid(),at:Date.now(),text});event(s,'distraction','Ablenkung notiert');input.value='';persist();renderDistractions();});
   $('fmDistractionList').addEventListener('click',e=>{
     const edit=e.target.closest('[data-fm-edit-distraction]'),del=e.target.closest('[data-fm-delete-distraction]'),s=current();if(!s)return;
-    if(edit){const d=s.distractions.find(x=>x.id===edit.dataset.fmEditDistraction);if(!d)return;const value=prompt('Ablenkung bearbeiten:',d.text);if(value===null)return;d.text=value.trim();persist();renderDistractions();}
-    if(del&&confirm('Diesen Distraction-Log-Eintrag löschen?')){s.distractions=s.distractions.filter(x=>x.id!==del.dataset.fmDeleteDistraction);persist();renderDistractions();}
+    if(edit){const d=s.distractions.find(x=>x.id===edit.dataset.fmEditDistraction);if(!d)return;const value=prompt('Ablenkung bearbeiten:',d.text);if(value===null)return;d.text=value.trim()||'Ablenkung';event(s,'distraction-edited','Distraction-Log-Eintrag bearbeitet');persist();renderDistractions();}
+    if(del&&confirm('Diesen Distraction-Log-Eintrag löschen?')){s.distractions=s.distractions.filter(x=>x.id!==del.dataset.fmDeleteDistraction);event(s,'distraction-deleted','Distraction-Log-Eintrag gelöscht');persist();renderDistractions();}
   });
   $('fmQueueList').addEventListener('click',e=>{const b=e.target.closest('[data-fm-assign]');if(b)assignTask(b.dataset.fmAssign,b.dataset.fmSource);});
   $('fmQueueList').addEventListener('dragstart',e=>{const row=e.target.closest('[data-fm-drag]');if(!row)return;taskDragId=row.dataset.fmDrag;row.classList.add('is-dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',taskDragId);});
@@ -596,13 +597,13 @@
   $('fmHistoryNext').addEventListener('click',()=>{historyPage++;renderHistory();});
   $('fmHistoryPageNumbers').addEventListener('click',e=>{const b=e.target.closest('[data-fm-page]');if(b){historyPage=Number(b.dataset.fmPage)||1;renderHistory();}});
   $('fmHistoryList').addEventListener('click',e=>{const b=e.target.closest('[data-fm-history-detail]');if(b)showHistoryDetail(b.dataset.fmHistoryDetail);});
-  $('fmHistoryDetailDialog').addEventListener('click',e=>{if(e.target===e.currentTarget||e.target.closest('[data-fm-close-dialog]')){closeHistoryDetail();return;}const edit=e.target.closest('[data-fm-history-edit-distraction]'),del=e.target.closest('[data-fm-history-delete-distraction]'),s=state.sessions.find(x=>x.id===historyDetailId);if(!s)return;if(edit){const d=s.distractions.find(x=>x.id===edit.dataset.fmHistoryEditDistraction);if(!d)return;const value=prompt('Ablenkung bearbeiten:',d.text);if(value===null)return;d.text=value.trim();persist();showHistoryDetail(s.id);}if(del&&confirm('Diesen Distraction-Log-Eintrag löschen?')){s.distractions=s.distractions.filter(x=>x.id!==del.dataset.fmHistoryDeleteDistraction);persist();showHistoryDetail(s.id);}});
+  $('fmHistoryDetailDialog').addEventListener('click',e=>{if(e.target===e.currentTarget||e.target.closest('[data-fm-close-dialog]')){closeHistoryDetail();return;}const edit=e.target.closest('[data-fm-history-edit-distraction]'),del=e.target.closest('[data-fm-history-delete-distraction]'),s=state.sessions.find(x=>x.id===historyDetailId);if(!s)return;if(edit){const d=s.distractions.find(x=>x.id===edit.dataset.fmHistoryEditDistraction);if(!d)return;const value=prompt('Ablenkung bearbeiten:',d.text);if(value===null)return;d.text=value.trim()||'Ablenkung';event(s,'distraction-edited','Distraction-Log-Eintrag bearbeitet');persist();showHistoryDetail(s.id);}if(del&&confirm('Diesen Distraction-Log-Eintrag löschen?')){s.distractions=s.distractions.filter(x=>x.id!==del.dataset.fmHistoryDeleteDistraction);event(s,'distraction-deleted','Distraction-Log-Eintrag gelöscht');persist();showHistoryDetail(s.id);}});
   $('fmHistoryEditDialog').addEventListener('click',e=>{if(e.target===e.currentTarget||e.target.closest('[data-fm-close-edit]'))$('fmHistoryEditDialog').hidden=true;});
   $('fmHistoryEdit').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(s)editHistory(s);});
   $('fmHistoryEditForm').addEventListener('submit',e=>{e.preventDefault();const s=state.sessions.find(x=>x.id===historyDraftId);if(!s)return;s.name=$('fmHistoryEditName').value.trim();s.goal=$('fmHistoryEditGoal').value.trim();s.category=$('fmHistoryEditCategory').value;s.priority=$('fmHistoryEditPriority').value;s.notes=$('fmHistoryEditNotes').value;event(s,'details-edited','Sessiondetails nachträglich bearbeitet');persist();$('fmHistoryEditDialog').hidden=true;showHistoryDetail(s.id);renderHistory();});
   $('fmHistoryUseTemplate').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(s)useTemplate(s);closeHistoryDetail();});
-  $('fmHistoryOpenLinked').addEventListener('click',()=>{const page=$('fmHistoryOpenLinked').dataset.page;if(page&&typeof window.showPage==='function')window.showPage(page);});
-  $('fmHistoryDelete').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(!s||!confirm('Diese Session und ihr History-Protokoll endgültig löschen?'))return;state.sessions=state.sessions.filter(x=>x.id!==s.id);persist();closeHistoryDetail();renderHistory();renderStats();});
+  // The data-page attribute is handled by the shared HQ navigation delegate.
+  $('fmHistoryDelete').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(!s||!confirm('Diese Session und ihr History-Protokoll endgültig löschen?'))return;state.sessions=state.sessions.filter(x=>x.id!==s.id);if(activeId===s.id){activeId=sortedOpen()[0]?.id||null;state.activeId=activeId;}persist();closeHistoryDetail();renderAll();});
   document.addEventListener('keydown',e=>{
     const tag=(e.target?.tagName||'').toLowerCase(),typing=['input','textarea','select'].includes(tag)||e.target?.isContentEditable;
     if(typing||e.ctrlKey||e.metaKey||e.altKey)return;
