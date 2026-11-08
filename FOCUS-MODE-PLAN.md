@@ -1310,6 +1310,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Drei-Punkte-Menü eigener Presets wird auf Desktop-Geräten erst beim Darüberfahren mit der Maus sichtbar.
 - Auf Touch-Geräten ohne Hover bleibt das Menü über eine klar erkennbare, kompakte Aktion erreichbar.
 
+
+### Preset erst nach bestätigtem Löschen entfernen
+- Ein eigenes Preset bleibt in der Auswahl sichtbar, solange die Löschbestätigung noch nicht ausdrücklich bestätigt wurde.
+- Erst nach bestätigter Löschung wird das Preset entfernt.
+- Wird der Löschdialog abgebrochen, bleibt das Preset unverändert erhalten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
