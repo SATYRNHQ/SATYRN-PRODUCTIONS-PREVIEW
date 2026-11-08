@@ -130,7 +130,7 @@
   const startBreak=(s)=>{
     if(!s||s.status!=='EXPIRED'||s.phase!=='focus'||s.breakDurationMs<=0)return;
     const now=Date.now();s.phase='break';s.status='RUNNING';s.phaseDurationMs=s.breakDurationMs;s.remainingMs=s.breakDurationMs;s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+s.breakDurationMs;s.lastActiveAt=now;
-    event(s,'break-start','Pause nach Bestätigung gestartet',now);tone();persist();setDistractionFree(true);ensureTick();renderAll();
+    event(s,'break-start','Pause nach Bestätigung gestartet',now);tone();persist();setDistractionFree(false);ensureTick();renderAll();
   };
   const breakEnd=(s,now)=>{
     if(s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
@@ -170,7 +170,7 @@
   const resumeSession=(s)=>{
     if(!s||!['PAUSED','INTERRUPTED'].includes(s.status))return;
     const wasInterrupted=s.status==='INTERRUPTED',now=Date.now(),interruptionMs=wasInterrupted&&s.lastInterruptedAt?Math.max(0,now-s.lastInterruptedAt):0;s.status='RUNNING';s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;lastClockWall=now;lastClockMono=performance.now();
-    event(s,'resume',wasInterrupted?'Session fortgesetzt · Unterbrechung '+duration(interruptionMs):'Session fortgesetzt',now,wasInterrupted?{interruptionDurationMs:interruptionMs,interruptedAt:s.lastInterruptedAt}:{});s.lastInterruptedAt=null;persist();setDistractionFree(true);ensureTick();renderAll();
+    event(s,'resume',wasInterrupted?'Session fortgesetzt · Unterbrechung '+duration(interruptionMs):'Session fortgesetzt',now,wasInterrupted?{interruptionDurationMs:interruptionMs,interruptedAt:s.lastInterruptedAt}:{});s.lastInterruptedAt=null;persist();setDistractionFree(s.phase==='focus');ensureTick();renderAll();
   };
   const createSession=(config,status='PREPARED')=>{
     const now=Date.now(),focusMs=config.focusMs,breakMs=config.breakMs;
