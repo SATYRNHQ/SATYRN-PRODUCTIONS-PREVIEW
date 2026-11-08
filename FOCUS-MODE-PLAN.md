@@ -381,6 +381,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Änderungen am Wochenziel wirken nicht rückwirkend auf bereits abgeschlossene Kalenderwochen: Deren damaliger Zielwert und erreichte/verfehlte Wertung bleiben unverändert.
 - Eine Änderung am Wochenziel innerhalb der laufenden Kalenderwoche gilt ab dem Änderungszeitpunkt für diese laufende Woche. Die bis dahin in der Woche erfasste Fokuszeit bleibt vollständig angerechnet; der aktuelle Wochenfortschritt wird anhand des neuen Zielwerts neu berechnet.
 - Eine Erhöhung des Wochenziels kann die aktuelle Zielerreichung bis zur erneuten Erreichung zurücknehmen; eine Senkung kann das Wochenziel bereits erfüllen. Die endgültige Wochenwertung erfolgt erst beim Beginn der nächsten lokalen Kalenderwoche.
+- Bei einer Übererfüllung bleibt die grafische Fortschrittsleiste bei 100 % gedeckelt, während die Prozentanzeige den tatsächlichen Wert über 100 % hinaus ausweist (z. B. 150 %).
+- Die Anzeige nennt zusätzlich die tatsächlich erfasste Fokuszeit im Verhältnis zum Ziel (z. B. 3 h / 2 h), damit die Übererfüllung nachvollziehbar bleibt.
+- Die gesamte tatsächlich erfasste Fokuszeit zählt weiter: Auch der Anteil oberhalb von 100 % wird vollständig dem Wochenziel, den Statistiken und den persönlichen Rekorden nach deren jeweiligen Regeln angerechnet.
 ### Rekord für längste zusammenhängende Fokuszeit
 - In den Overall Statistics wird die längste zusammenhängende Fokuszeit als persönlicher Rekord angezeigt.
 - Angezeigt werden die erreichte Dauer und das Datum, an dem der Rekord erzielt wurde.
