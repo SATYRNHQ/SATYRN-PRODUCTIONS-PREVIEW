@@ -282,3 +282,7 @@ The following search behaviors are intended as a shared standard for every page 
 - Der Kalender im Hintergrund bleibt dabei unverändert erhalten.
 
 - 2026-11-09: Das große Calendar-Erstellungs- und Bearbeitungsformular kann per X, Escape-Taste und Klick außerhalb auf den Overlay-Bereich geschlossen werden.
+
+
+### Create/edit form popup animation
+- The create/edit form uses the same subtle, short opening and closing animation as the event detail popup.
