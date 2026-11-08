@@ -216,3 +216,10 @@ The following search behaviors are intended as a shared standard for every page 
 - 2026-11-09: Mehrtägige Termine werden im Tagesfenster nicht zusätzlich mit ihrem vollständigen Zeitraum beschriftet.
 
 - 2026-11-09: Die Prioritätsfarbe wird im Tagesfenster ebenfalls durch einen schmalen farbigen Streifen dargestellt, passend zur Monatsansicht.
+
+
+## Tagesfenster – Darstellung der Termine
+- Gewählt wurde **Variante B: einzelne kompakte Terminkarten** statt einer einfachen Zeilenliste.
+- Jeder Termin erhält eine eigene, klar abgegrenzte Karte mit abgerundeten Ecken.
+- Die Priorität wird wie bereits festgelegt durch denselben schmalen farbigen Streifen dargestellt; der Titel bleibt in normaler Textfarbe.
+- Die Karten sollen kompakt bleiben, damit auch mehrere Termine im Tagesfenster übersichtlich sichtbar sind.
