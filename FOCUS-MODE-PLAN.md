@@ -1608,3 +1608,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Gelöschte Kategorien bleiben als historische Filteroption in den Statistiken auswählbar, sofern ihnen historische Sessions zugeordnet sind.
 - Die Filteroption wird als gelöscht bzw. historisch gekennzeichnet.
 - Die Auswahl zeigt ausschließlich Sessions der ursprünglichen gelöschten Kategorie und schließt eine später neu erstellte Kategorie gleichen Namens aus.
+
+
+### Gelöschte Kategorien in Statistik-Exporten
+- Gelöschte Kategorien werden in CSV- und PDF-Statistikexporten mit ihrer historischen Kennzeichnung übernommen.
+- Exporte unterscheiden gelöschte historische Kategorien eindeutig von neu angelegten Kategorien mit gleichem Namen.
+- Kategorieangaben und zugehörige historische Sessions bleiben entsprechend den aktiven Statistikfiltern nachvollziehbar.
