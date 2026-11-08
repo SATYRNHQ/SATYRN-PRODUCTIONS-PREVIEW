@@ -938,6 +938,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Scrollen darf der Fensterinhalt nicht über die obere Headbar hinausragen bzw. vor ihr liegen: Er wird an der Headbar begrenzt und verschwindet beim Scrollen dahinter.
 - Zentrierung, Ebenenreihenfolge und Scrollverhalten sollen mit dem bestehenden Layout der Important-Seite konsistent bleiben.
 
+
+### Responsive Fensterhöhe
+- Die Höhe des Session-Vorbereitungsfensters passt sich automatisch an den verfügbaren Bildschirmplatz an.
+- Auf kleineren Monitoren bleibt das Fenster innerhalb des sichtbaren Bereichs; der Inhaltsbereich wird entsprechend scrollbar.
+- Die feste Aktionsleiste mit Starten und Abbrechen bleibt erreichbar, ohne dass das Fenster die Headbar überlagert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
