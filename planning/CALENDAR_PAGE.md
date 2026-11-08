@@ -223,3 +223,5 @@ The following search behaviors are intended as a shared standard for every page 
 - Jeder Termin erhält eine eigene, klar abgegrenzte Karte mit abgerundeten Ecken.
 - Die Priorität wird wie bereits festgelegt durch denselben schmalen farbigen Streifen dargestellt; der Titel bleibt in normaler Textfarbe.
 - Die Karten sollen kompakt bleiben, damit auch mehrere Termine im Tagesfenster übersichtlich sichtbar sind.
+
+- Die Uhrzeit wird in den Terminkarten wie in der besprochenen Veranschaulichung angeordnet; keine abweichende alternative Darstellung.
