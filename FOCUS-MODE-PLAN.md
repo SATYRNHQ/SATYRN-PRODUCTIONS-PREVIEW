@@ -360,6 +360,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Sticky-Ansicht bleibt kompakt und verdeckt keine wichtigen Inhalte oder Bedienelemente.
 - Die übrigen Bereiche der Focus-Mode-Seite scrollen normal darunter.
 
+
+### Kompakter Sticky Timer auf Smartphones
+- Beim Scrollen klappt der Sticky Timer zu einer kleinen, platzsparenden Leiste zusammen.
+- Die Leiste zeigt weiterhin die wichtigsten Zeitinformationen und den aktuellen Session-Status.
+- Wesentliche Timer-Steuerungen bleiben schnell erreichbar.
+- Am oberen Seitenbereich wird wieder die größere Timer-Ansicht dargestellt.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
