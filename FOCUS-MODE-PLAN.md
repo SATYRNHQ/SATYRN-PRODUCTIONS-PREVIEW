@@ -328,6 +328,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Aus der Vorschau kann der Nutzer den Export bestätigen oder zurückkehren, um Format bzw. Berichtsumfang zu ändern.
 - Die Vorschau verändert keine gespeicherten Sessions oder Statistikdaten.
 
+- **Identische Datengrundlage:** Vorschau und anschließender Download müssen aus demselben unveränderlichen Export-Datenstand erzeugt werden. Zwischen Vorschau und Bestätigung dürfen Kennzahlen, Datensätze, Diagramme oder Filter nicht unbemerkt voneinander abweichen. Ändern sich aktive Filter oder Quelldaten vor dem Export, muss die Vorschau aktualisiert bzw. neu erzeugt werden.
+- **Filter vollständig sichtbar:** Zeitraum bzw. Start-/Enddatum und alle aktiven Kategorien werden in der Vorschau eindeutig angezeigt. Die Vorschau verwendet exakt dieselbe Kombination aus Zeitraum- und Kategorienfiltern wie die Statistikansicht.
+- **Ungeklärte Daten transparent behandeln:** Enthält der ausgewertete Zeitraum fehlende, unvollständige oder widersprüchliche Daten, weist die Vorschau diese Datenlücken und den vorläufigen Status klar aus. Ungeklärte Werte dürfen weder als bestätigte null Minuten noch als verlässliche Vergleichswerte ausgegeben werden. CSV und PDF müssen diese Einschränkung ebenfalls nachvollziehbar kennzeichnen.
+- **Vollständigkeit der Formate:** Die CSV-Vorschau zeigt die tatsächlichen Spalten und repräsentative Datensätze des konkreten Exports; die PDF-Vorschau zeigt den vollständigen gewählten Berichtsumfang einschließlich Seiten, Kennzahlen und Diagrammen. Der spätere Download muss exakt dieser Vorschau entsprechen.
+- **Keine Nebenwirkungen:** Vorschau öffnen, aktualisieren, bestätigen oder abbrechen verändert keine Sessions, Fokuszeitabschnitte, Ziele, Kategorien oder gespeicherten Statistikdaten.
+
 
 ### Eigenständiges Vorschaufenster für Exporte
 - Die Export-Vorschau öffnet sich in einem eigenen Fenster bzw. Modal und nicht innerhalb des Export-Auswahlfensters.
