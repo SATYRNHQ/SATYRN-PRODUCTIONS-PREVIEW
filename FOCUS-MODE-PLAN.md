@@ -1010,6 +1010,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jeder Suchtreffer zeigt neben dem Aufgabennamen auch das Kategorie-Icon bzw. die Kategorie sowie die Priorität in der bestehenden Important-Farbgebung.
 - Die Angaben dienen der schnellen Unterscheidung und ändern keine Aufgabendaten.
 
+
+### Session ohne Hauptaufgabe mit zusätzlichen Important-Aufgaben
+- Die Session kann ohne Hauptaufgabe gestartet werden und trotzdem bereits verknüpfte bzw. während der Vorbereitung ausgewählte offene Important-Aufgaben als zusätzliche Aufgaben enthalten.
+- In diesem Fall wird keine Aufgabe automatisch zur Hauptaufgabe gemacht; die zusätzlichen Aufgaben bleiben in ihrer festgelegten Reihenfolge sichtbar.
+- Eine Hauptaufgabe kann bei Bedarf vor dem Start oder später während der Session nach dem bestehenden Bestätigungsablauf festgelegt werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
