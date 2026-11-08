@@ -1629,3 +1629,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Kategorie, Priorität und weitere Session-Einstellungen bleiben ebenfalls unverändert.
 - Vor dem Zurücksetzen erscheint die bereits vorgesehene Sicherheitsabfrage.
 - Der Reset verändert oder löscht keine verknüpften Important-Aufgaben.
+
+
+### Erfasste Fokuszeit beim Reset
+- Ein Reset setzt den Timer auf seinen Ausgangszustand zurück, löscht aber nicht die bereits geleistete und erfasste Fokuszeit.
+- Die bis zum Reset geleistete Fokuszeit bleibt als eigener Zeitabschnitt bzw. Eintrag innerhalb derselben Session erhalten.
+- Nach dem Reset neu geleistete Fokuszeit wird zusätzlich erfasst.
+- Statistiken und Session-Gesamtzeit berücksichtigen alle erfassten Fokuszeitabschnitte; reguläre Pausen zählen weiterhin nicht als Fokuszeit.
