@@ -403,3 +403,32 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Darstellung folgt dem bestehenden SATYRN-Farbsystem und verwendet die festgelegten Kategorienfarben konsistent.
 - Statistiken berücksichtigen die tatsächlich erfasste Fokuszeit. Pausenzeit wird nicht als Fokuszeit gezählt.
 - Erfolgreich abgeschlossene und unterbrochene Sessions bleiben in den jeweils passenden Kennzahlen unterscheidbar.
+
+## 6. Session History
+
+### Gemeinsame chronologische Übersicht
+- Abgeschlossene und unterbrochene Sessions erscheinen gemeinsam in einer chronologischen Liste.
+- Standardmäßig werden die neuesten Sessions zuerst angezeigt; ältere Einträge folgen darunter.
+- Der Status jeder Session ist direkt in der Liste eindeutig erkennbar.
+- Über Statusfilter können gezielt abgeschlossene oder unterbrochene Sessions angezeigt werden.
+- Die History wird über den bereits vorgesehenen **History**-Zugang oben rechts neben dem Seitentitel geöffnet und erhält eine eigene übersichtliche Ansicht.
+
+### Informationen in der Session-Übersicht
+- Session-Name und Fokusziel.
+- Datum und zeitliche Einordnung.
+- Kategorie und Priorität entsprechend dem bestehenden System der Important-Seite.
+- Tatsächlich investierte Fokuszeit und – sofern relevant – geplante Dauer.
+- Eindeutiger Session-Status, insbesondere **COMPLETED** oder **INTERRUPTED**.
+
+### Session-Details
+- Jeder History-Eintrag lässt sich öffnen, um die vollständigen Informationen der Session einzusehen.
+- Die Detailansicht enthält die zugehörigen Notizen und den Distraction Log.
+- Verknüpfte Aufgaben aus Important bzw. der Task Queue bleiben erkennbar und direkt erreichbar.
+- Zeitinformationen und Session-Aktivitäten werden nachvollziehbar dargestellt.
+
+### Suche und Filter
+- Sessions können anhand ihres Session-Namens oder Fokusziels gesucht werden.
+- Filter sind für Zeitraum, Kategorie, Status und Priorität vorgesehen.
+- Filter lassen sich kombinieren, damit auch größere Verlaufsdaten übersichtlich durchsuchbar bleiben.
+- Ohne aktive Filter gilt weiterhin die chronologische Standardsortierung mit den neuesten Sessions zuerst.
+
