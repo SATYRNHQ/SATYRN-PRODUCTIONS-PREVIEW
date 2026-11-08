@@ -113,6 +113,10 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 
 - Im Tagesfenster wird ein mehrtägiger Termin nicht zusätzlich mit seinem vollständigen Zeitraum beschriftet; die Tagesansicht bleibt auf den ausgewählten Tag bezogen.
 
+## Ergänzung — Prioritätsdarstellung im Tagesfenster
+
+- Im Tagesfenster wird die Priorität eines Termineintrags ebenfalls durch denselben schmalen farbigen Streifen wie in der Monatsansicht dargestellt; der Titel bleibt in normaler Textfarbe.
+
 ## Umsetzungsregeln
 - Die Seite muss innerhalb der bestehenden globalen App-Shell bleiben.
 - Keine eigene Headbar oder Sidebar und keine lokalen Kopien globaler Navigation.
@@ -205,3 +209,5 @@ The following search behaviors are intended as a shared standard for every page 
 - 2026-11-09: Die chronologische Sortierung gilt auch im Tagesfenster: ganztägige Termine zuerst, anschließend nach Startzeit.
 
 - 2026-11-09: Mehrtägige Termine werden im Tagesfenster nicht zusätzlich mit ihrem vollständigen Zeitraum beschriftet.
+
+- 2026-11-09: Die Prioritätsfarbe wird im Tagesfenster ebenfalls durch einen schmalen farbigen Streifen dargestellt, passend zur Monatsansicht.
