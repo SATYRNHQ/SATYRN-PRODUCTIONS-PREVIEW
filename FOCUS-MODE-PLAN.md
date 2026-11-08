@@ -20,6 +20,16 @@ Vorgesehene Anordnung:
 
 Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erscheinen. Stattdessen gibt es oben rechts neben dem Seitentitel eine kleine, dezente Leiste mit Uhr-/Verlauf-Icon und der Beschriftung **History**. Ein Klick öffnet die vollständige History.
 
+### Informationshierarchie und Sichtbarkeit am PC
+- **Hauptebene – Current Session:** Der Bereich mit aktivem Timer, Session-Status und Fokusziel bildet den klaren visuellen Mittelpunkt. Die wichtigste Timeraktion und die jeweils relevante nächste Aktion sind unmittelbar erreichbar.
+- Session-Wechsel, Notizen und Distraction Log sind direkt aus dem Current-Session-Bereich erreichbar, ohne eine andere Seite öffnen zu müssen.
+- **Zweite Ebene – Arbeitsbereich:** Session Setup und Task Queue werden auf dem Desktop nebeneinander in zwei Spalten angeordnet. Session Setup enthält die Einstellungen für Ziel, Kategorie, Priorität und Dauer; die Task Queue zeigt kommende Aufgaben und Sessions.
+- **Dritte Ebene – Analyse:** Statistics werden darunter kompakt dargestellt. Die vollständige Session History bleibt über den separaten History-Zugang erreichbar und nimmt nicht dauerhaft einen großen Bereich der Hauptseite ein.
+- Die Informationshierarchie vermeidet unnötige Leerflächen und hält häufig benötigte Informationen direkt sichtbar.
+- Weniger häufig benötigte Detailinformationen dürfen innerhalb ihres jeweiligen Bereichs aufklappbar sein; wichtige Aktionen und Statusinformationen dürfen dadurch nicht versteckt werden.
+- Während einer Fokusphase gilt weiterhin der bereits definierte Distraction-Free-Modus: Der Timer steht im Mittelpunkt, Task Queue und Statistiken werden eingeklappt bzw. ausgeblendet; Notizen und Distraction Log bleiben erreichbar.
+- Die Desktop-Anordnung ist die maßgebliche Layoutvariante. Auf kleineren Bildschirmen darf sie sich responsiv anpassen, ohne eine vollständige Smartphone-Bedienung von Focus Mode vorzusehen.
+
 ## 2. Current Session und Timer
 
 
