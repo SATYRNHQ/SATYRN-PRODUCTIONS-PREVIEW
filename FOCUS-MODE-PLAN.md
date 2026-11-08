@@ -1005,6 +1005,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Suche filtert bestehende offene Important-Aufgaben live anhand ihres Aufgabennamens.
 - Bereits zur geplanten Session hinzugefügte Aufgaben werden nicht erneut als auswählbare Treffer angeboten.
 
+
+### Angaben in den Suchergebnissen für Important-Aufgaben
+- Jeder Suchtreffer zeigt neben dem Aufgabennamen auch das Kategorie-Icon bzw. die Kategorie sowie die Priorität in der bestehenden Important-Farbgebung.
+- Die Angaben dienen der schnellen Unterscheidung und ändern keine Aufgabendaten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
