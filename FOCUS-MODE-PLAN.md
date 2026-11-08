@@ -327,6 +327,17 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 
 ## 3. Session Setup
 
+### Session vorbereiten und starten
+- Eine Session kann vollständig vorbereitet und gespeichert werden, ohne dass der Timer sofort startet.
+- Im Session Setup wird zuerst ein Fokusziel festgelegt: Entweder wird eine bestehende Aufgabe aus Important bzw. der Task Queue ausgewählt oder ein eigenes Fokusziel eingegeben.
+- Anschließend werden Session-Name, Kategorie, Priorität und Zeit-Preset bzw. Dauer festgelegt.
+- Über **Session vorbereiten** wird die Konfiguration als offene Session gespeichert. Die Session erscheint danach in der Liste der offenen Sessions und kann später ausgewählt werden.
+- Eine vorbereitete Session erhält den Status `PREPARED`. Sie läuft noch nicht, erfasst keine Fokuszeit und startet keinen Countdown.
+- Die vorbereitete Session kann später im Current-Session-Bereich ausgewählt und mit **Session starten** bewusst gestartet werden.
+- Erst nach dieser ausdrücklichen Startaktion beginnt der kurze Countdown `3 – 2 – 1 – FOCUS`; anschließend startet die Fokusphase.
+- Vor dem Start können die Einstellungen der vorbereiteten Session angepasst werden. Ein bloßes Auswählen oder Öffnen einer vorbereiteten Session startet sie nicht automatisch.
+- Vorbereitete Sessions zählen als offene Sessions und unterliegen der bereits festgelegten Begrenzung von maximal zwei offenen Sessions pro Kategorie.
+
 ### Aufgaben und Ziele
 - Eine Aufgabe kann direkt aus der Important-/Task-Liste ausgewählt werden.
 - Alternativ kann ein eigenes Fokusziel eingegeben werden.
