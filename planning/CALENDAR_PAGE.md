@@ -298,3 +298,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Closing without unsaved changes continues to work directly through the X button, Escape key, or outside-overlay click.
 
 - 2026-11-09: Confirmed a safety prompt whenever the create/edit form is closed with unsaved changes, allowing the user to keep editing or discard changes.
+
+
+### Save confirmation feedback
+- After successfully saving a calendar entry, show a brief, subtle confirmation message, for example **„Termin gespeichert“**.
+- Show the confirmation only after the save operation succeeds; it must not imply success when saving fails.
+
+- 2026-11-09: Confirmed brief, subtle success feedback after a calendar entry has been saved successfully.
