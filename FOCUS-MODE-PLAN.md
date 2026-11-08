@@ -1,7 +1,7 @@
 # SATYRN PRODUCTIONS HQ – Focus Mode Plan
 
- > Status: Umsetzung freigegeben – Focus Mode ist in der Preview implementiert; technische Abweichungen und offene Infrastrukturpunkte sind dokumentiert.
-> Dieses Dokument sammelt die bisher gemeinsam bestätigten Anforderungen. Der bestehende Website-Code bleibt während der Planung unangetastet.
+  > Status: Clientseitige Focus-Mode-Implementierung in der Preview committed; Deployment und Browser-QA stehen noch aus. Zentrale Synchronisierung und optionales Ordner-Backup sind noch offen.
+> Dieses Dokument sammelt die gemeinsam bestätigten Anforderungen. Die Umsetzung erfolgt ausschließlich in der Preview; die Live-Seite bleibt unverändert.
 
 ## 1. Grundaufbau und Seitenlayout
 
@@ -599,3 +599,24 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wenn Sessions desselben Datums auf mehreren Seiten vorkommen, wird die passende Datumsüberschrift auf jeder betroffenen Seite erneut angezeigt.
 - Datumsüberschriften erscheinen nur, wenn ihnen auf der jeweiligen Seite mindestens eine Session zugeordnet ist.
 - Die chronologische Reihenfolge der Sessions bleibt über alle Seiten hinweg durchgehend erhalten.
+
+
+## 12. Implementierungsstand – 08.11.2026
+
+### In der Preview clientseitig umgesetzt
+- Desktop-first Focus Mode mit Current Session, Session Setup, Task Queue, kompakten Statistiken und separater Session History.
+- Timer-Zustände, Presets, 3–2–1-Countdown, Pausenwechsel, Reset, Pause/Resume, Interrupt, Skip Break und Complete Session gemäß festgelegter Aktionsmatrix.
+- Vorbereitete Sessions, Session-Wechsel, Kategorien-/Prioritätslimits, Aufgabenverknüpfung mit Snapshot und Task-Aktivität.
+- Distraction-Free-Modus, Notizen und Distraction Log.
+- History-Suche, Filter, aktive Filter-Chips, Pagination, Detailansicht, Bearbeitung, Löschen und Vorlagen.
+- Fokus-/Pausen-Timeline mit gespeicherten lokalen Zeitangaben, Statistiken nach lokalem Kalendertag und Aufgabenaktivität.
+- Lokale Speicherung, regelmäßige Timer-Snapshots, Wiederherstellung als PAUSED sowie Browser-Schließ-/Navigationswarnungen.
+- Smartphone-Ansicht ausschließlich als Quick Idea Capture; keine vollständige Smartphone-Focus-Bedienung.
+- Task Queue und Important werden beim Seitenwechsel neu eingelesen, damit Focus-Aktivität nicht durch veraltete In-Memory-Daten überschrieben wird.
+
+### Noch offene Infrastruktur und technische Grenzen
+- **Zentrale Synchronisierung:** Das Repository wird als statische GitHub-Pages-Website ausgeliefert und enthält derzeit weder Backend/API noch Datenbankanbindung. Focus-Daten liegen deshalb lokal im Browser und synchronisieren nicht zwischen Geräten oder Browsern. Der Status bleibt folgerichtig **UNSAVED**, bis eine zentrale Synchronisierung eingerichtet ist.
+- **Optionales PC-Ordner-Backup:** Noch nicht umgesetzt. Es ist als websiteweite Backup-Funktion vorgesehen, nicht als separater Focus-Mode-JSON-Export.
+- **Browser-/System-Ruhezustand:** Erkennung und automatische Pause sind best-effort, da Browser-Lifecycle- und Betriebssystemereignisse nicht in jeder Situation zuverlässig ausgeliefert werden.
+- **Qualitätssicherung:** JavaScript-Syntax und statische Markup-/ID-Referenzen wurden geprüft. Ein vollständiger interaktiver Browser-/End-to-End-Test steht noch aus.
+- Die Preview-Implementierung ist daher noch nicht als vollständig produktionsreif oder geräteübergreifend synchronisiert zu betrachten.
