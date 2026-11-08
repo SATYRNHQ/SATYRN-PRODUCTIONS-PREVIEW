@@ -1809,3 +1809,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Priorität wird in diesem Fall nicht automatisch auf „Vorläufig“ oder einen anderen Standardwert zurückgesetzt.
 - Der Nutzer kann die Priorität der Session anschließend manuell ändern; dadurch wird keine Important-Aufgabe verändert.
 - Abgeschlossene Focus-Sessions behalten ihre beim Abschluss gespeicherte Priorität.
+
+
+### Zeitzone und Kalenderlogik der Statistiken
+- Sämtliche Tages-, Wochen- und Monatsauswertungen sowie Datumsanzeigen richten sich nach der jeweils lokalen Zeitzone des Nutzers bzw. Geräts.
+- Eine Woche beginnt am Montag und endet am Sonntag.
+- Zeitabschnitte werden anhand ihrer tatsächlichen Zeitstempel erfasst; die Zuordnung zu Statistik-Tagen und -Zeiträumen erfolgt anschließend anhand der lokalen Zeitzone.
+- Sommerzeitwechsel werden korrekt berücksichtigt. Ein Tag kann daher je nach Zeitumstellung kürzer oder länger als 24 Stunden sein; die tatsächliche erfasste Fokuszeit darf dadurch weder verloren gehen noch doppelt gezählt werden.
+- Sessions, die Mitternacht oder eine Kalendergrenze überschreiten, werden für Tages-, Wochen- und Monatsstatistiken anteilig anhand ihrer erfassten Fokuszeit den jeweiligen lokalen Zeiträumen zugeordnet.
