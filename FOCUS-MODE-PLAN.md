@@ -1583,3 +1583,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Noch keine Änderungen am Website-Code, solange die Planung nicht vollständig abgeschlossen und ausdrücklich freigegeben ist.
 - Vor der Umsetzung werden offene Detailfragen geklärt und der vollständige Plan gemeinsam bestätigt.
 - Bei der späteren Implementierung müssen bestehende Datenstrukturen und die tatsächliche Important-Integration geprüft werden; keine Annahmen über lokale Speicherformate treffen.
+
+
+### Gelöschte Dashboard-Kategorien in offenen Focus-Sessions
+- Wird eine eigene Dashboard-Kategorie gelöscht, die noch von offenen Focus-Sessions verwendet wird, bleibt sie diesen bestehenden Sessions zugeordnet.
+- Die Kategorie bleibt dort mit ihrem gespeicherten Namen, Icon und ihrer Farbe sichtbar, damit Session-Anzeige und Statistiken konsistent bleiben.
+- Für neue Focus-Sessions wird die gelöschte Kategorie nicht mehr angeboten.
+- Bereits abgeschlossene Sessions behalten ebenfalls ihre gespeicherten Kategorieangaben.
