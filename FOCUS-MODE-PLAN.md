@@ -546,14 +546,18 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 ## 6. Session History
 
-- Alle Sessions werden chronologisch dokumentiert.
-- Abgeschlossene, unterbrochene, endgültig verworfene und pausierte Sessions erhalten klar getrennte Statusanzeigen.
+- Alle Sessions werden in einer chronologischen Liste dokumentiert; standardmäßig stehen die neuesten Sessions oben.
+- Die Liste ist nach lokalen Kalendertagen gruppiert. Jeder Tag erhält eine klare, kompakte Datumsüberschrift; Sessions desselben Tages werden darunter zusammengefasst.
+- Jeder Listeneintrag zeigt kompakt die wichtigsten Informationen: Session-Ziel bzw. Aufgabenname, tatsächliche Fokusdauer, Startzeit sowie Kategorie und Status.
+- Abgeschlossene, unterbrochene, endgültig verworfene und pausierte Sessions erhalten klar unterscheidbare Statusanzeigen.
 - Unterbrochene Sessions bleiben offen und wiederaufnehmbar; endgültig verworfene Sessions sind nicht mehr fortsetzbar.
 - Pausierte Sessions bleiben offen und werden getrennt von unterbrochenen Sessions dargestellt.
 - Die tatsächliche Fokusdauer wird gespeichert.
 - History wird über die kleine Leiste oben rechts neben dem Seitentitel geöffnet, nicht als dauerhaft großer Bereich auf der Hauptseite.
-- Jede Session ist anklickbar und öffnet eine Detailansicht.
+- Jeder Session-Eintrag ist anklickbar und öffnet eine Detailansicht mit den vollständigen verfügbaren Informationen.
 - Die Detailansicht zeigt – soweit für die Session vorhanden – Ziel, Kategorie, Priorität, Notizen, Distraction-Log-Einträge und Unteraufgaben.
+- Die Listenansicht bleibt bewusst kompakt und gut scannbar; zusätzliche Details werden erst in der geöffneten Session-Detailansicht dargestellt.
+- Auf kleineren Bildschirmen bleiben Datum, Ziel/Aufgabe, Fokusdauer und Status ohne horizontales Scrollen gut erkennbar.
 
 
 
