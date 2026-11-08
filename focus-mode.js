@@ -115,13 +115,14 @@
       s.phase='break';s.status='RUNNING';s.phaseDurationMs=s.breakDurationMs;s.remainingMs=s.breakDurationMs;s.phaseStartedAt=now;s.deadline=now+s.breakDurationMs;
       event(s,'break-start','Pause gestartet',now);tone();notify('SATYRN Focus · Pause','Deine Fokusphase ist abgeschlossen. Zeit für eine Pause.');
     }else{
-      s.phase='focus';s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;
+      s.phase='focus';s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;setDistractionFree(false);
       event(s,'expired','Fokuszeit abgelaufen · nächste Fokusphase manuell starten',now);notify('SATYRN Focus · Fokusphase beendet','Starte die nächste Fokusphase, wenn du bereit bist.');
     }
     s.lastActiveAt=now;
   };
   const breakEnd=(s,now)=>{
-    s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;
+    if(s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
+    s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;setDistractionFree(false);
     event(s,'break-end','Pause beendet · nächste Fokusphase manuell starten',now);tone();notify('SATYRN Focus · Pause beendet','Du kannst die nächste Fokusphase manuell starten.');s.lastActiveAt=now;
   };
   const reconcile=(s,now=Date.now())=>{
@@ -149,14 +150,14 @@
     if(!s||s.status!=='RUNNING')return;
     reconcile(s,now);
     if(s.status!=='RUNNING')return;
-    if(s.phase==='focus')appendCurrentFocus(s,now);
+    if(s.phase==='focus')appendCurrentFocus(s,now);else if(s.phase==='break'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
     s.remainingMs=Math.max(0,s.deadline-now);s.deadline=null;s.phaseStartedAt=null;s.status=kind==='interrupt'?'INTERRUPTED':'PAUSED';s.lastActiveAt=now;
     event(s,kind,kind==='interrupt'?'Session unterbrochen':'Session pausiert',now);
     persist();
   };
   const resumeSession=(s)=>{
     if(!s||!['PAUSED','INTERRUPTED'].includes(s.status))return;
-    const now=Date.now();s.status='RUNNING';s.phaseStartedAt=s.phase==='focus'?now:null;s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;lastClockWall=now;lastClockMono=performance.now();
+    const now=Date.now();s.status='RUNNING';s.phaseStartedAt=now;s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;lastClockWall=now;lastClockMono=performance.now();
     event(s,'resume','Session fortgesetzt',now);persist();setDistractionFree(true);ensureTick();renderAll();
   };
   const createSession=(config,status='PREPARED')=>{
@@ -433,7 +434,7 @@
     if(action==='pause'){pauseSession(s,'pause');stopTick();renderAll();}
     if(action==='resume')resumeSession(s);
     if(action==='interrupt'){if(confirm('Session unterbrechen? Sie bleibt gespeichert und kann später fortgesetzt werden.'))interrupt(s);}
-    if(action==='discard'){if(confirm('Diese unterbrochene Session endgültig verwerfen? Sie wird aus den offenen Sessions entfernt, bleibt aber in der History dokumentiert.')){s.status='INTERRUPTED';s.discarded=true;s.discardedAt=Date.now();event(s,'discarded','Session verworfen',s.discardedAt);activeId=null;state.activeId=null;persist();renderAll();}}
+    if(action==='discard'){if(confirm('Diese unterbrochene Session endgültig verwerfen? Sie wird aus den offenen Sessions entfernt, bleibt aber in der History dokumentiert.')){s.status='INTERRUPTED';s.discarded=true;s.discardedAt=Date.now();event(s,'discarded','Session verworfen',s.discardedAt);activeId=sortedOpen()[0]?.id||null;state.activeId=activeId;persist();renderAll();}}
     if(action==='reset'){if(confirm('Fokusphase auf die ursprüngliche Dauer zurücksetzen? Die bereits geleistete Fokuszeit bleibt als eigener Abschnitt erhalten.'))resetSession(s);}
     if(action==='complete'){if(confirm('Session jetzt erfolgreich abschließen?'))finish(s);}
     if(action==='skip'){const now=Date.now();if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break'){s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;event(s,'skip-break','Pause übersprungen · nächste Fokusphase manuell starten',now);stopTick();persist();renderAll();}}
@@ -593,12 +594,12 @@
     const s=current();if(s?.status==='RUNNING'){const now=Date.now();pauseSession(s,'pause',now);persist();}
   });
   window.addEventListener('beforeunload',e=>{
-    const s=current();if(s?.status==='RUNNING'){e.preventDefault();e.returnValue='Deine Focus-Session läuft noch.';}
+    const s=current();if(s?.status==='RUNNING'||storageState==='SAVE ERROR'){e.preventDefault();e.returnValue=s?.status==='RUNNING'?'Deine Focus-Session läuft noch.':'Änderungen konnten nicht gespeichert werden.';}
   });
   document.addEventListener('click',e=>{
     const nav=e.target.closest('[data-page]');
     if(nav&&nav.dataset.page!=='focus'&&nav.closest('.main-area,.hq-side-nav,.hq-top-nav')){if(historyOpen)leaveHistory();}
-  });
+  },true);
   window.addEventListener('storage',e=>{if(e.key===IMPORTANT||e.key===TASKS){refreshLinkedOptions();renderQueue();}});
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshLinkedOptions();renderQueue();}});
   // Recover an interrupted browser/device lifecycle as PAUSED; downtime is never focus time.
