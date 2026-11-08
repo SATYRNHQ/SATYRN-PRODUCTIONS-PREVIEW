@@ -1281,6 +1281,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Effekt bleibt zurückhaltend und passt zur jeweiligen Preset-Farbe.
 - Auf Touch-Geräten wird kein Hover-Zustand vorausgesetzt; Auswahl und Hervorhebung funktionieren dort direkt über Antippen.
 
+
+### Trennlinie zwischen Standard- und eigenen Presets
+- Die fest eingebauten Standard-Presets und der Bereich „Meine Presets“ werden durch eine dezente horizontale Trennlinie voneinander abgegrenzt.
+- Die Trennlinie fügt sich unauffällig in das dunkle SATYRN-HQ-Design ein.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
