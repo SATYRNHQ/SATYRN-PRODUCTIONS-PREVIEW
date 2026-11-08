@@ -473,3 +473,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Kennzahlen oben dienen der schnellen Orientierung; die vollständige Auswertung und Diagramme verbleiben im Bereich Statistics.
 - Bei vielen Einträgen wird die Liste in überschaubare Seiten bzw. Abschnitte aufgeteilt. Die Navigation zeigt die aktuelle Position und ermöglicht das Weiterblättern.
 - Alle dargestellten Kennzahlen und Einträge verwenden echte gespeicherte Daten; Beispielwerte aus Designvorlagen sind keine Produktivdaten.
+
+### Zeitraum-Filter
+- Der Zeitraum-Filter bietet folgende Schnelloptionen:
+  - **Heute**
+  - **Letzte 7 Tage**
+  - **Letzte 30 Tage**
+  - **Dieser Monat**
+  - **Benutzerdefinierter Zeitraum** mit frei wählbarem Von- und Bis-Datum.
+- Ohne aktive Zeitraum-Auswahl werden Sessions aus dem gesamten verfügbaren Verlauf angezeigt.
+- Der Zeitraum-Filter lässt sich mit Kategorie-, Status- und Prioritätsfiltern kombinieren.
+- Die gewählte Zeitspanne und alle weiteren aktiven Filter bleiben sichtbar, damit jederzeit nachvollziehbar ist, welche Sessions gerade angezeigt werden.
