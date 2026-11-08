@@ -165,6 +165,8 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Während einer Pause beziehen sich **Pause** und **Resume** ausschließlich auf den Pausentimer. **Skip Break** beendet die Pause und wartet auf den manuellen Start der nächsten Fokusphase. **Interrupt** unterbricht die gesamte Session und erhält sie zur späteren Wiederaufnahme.
 - Ein Session-Reset ist während einer Pause nicht verfügbar; Reset bezieht sich auf die Fokusphase und kann nur in einem dafür vorgesehenen Fokuszustand ausgelöst werden.
 - Ein Reset-Button ist vorhanden. Vor dem Zurücksetzen erscheint eine Sicherheitsabfrage.
+- Beim Reset wird die aktuelle Fokusphase auf ihre ursprünglich konfigurierte Dauer zurückgesetzt. Die bis dahin tatsächlich geleistete Fokuszeit bleibt erhalten und wird als eigener Zeitabschnitt gespeichert; sie wird weder gelöscht noch doppelt gezählt. Anschließend beginnt die Fokusphase mit ihrer ursprünglichen Dauer erneut.
+- Notizen, Distraction Log, Unteraufgaben, Verknüpfungen sowie Kategorie, Priorität und übrige Session-Einstellungen bleiben beim Reset erhalten.
 - Eine Session kann vorzeitig mit **Complete Session** erfolgreich abgeschlossen werden. Die tatsächliche Dauer wird gespeichert und in History sowie Statistiken berücksichtigt.
 - Eine Session kann unterbrochen werden, ohne sie endgültig abzuschließen. Sie bleibt als offene, wiederaufnehmbare Session erhalten und wird in der History als unterbrochen dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten. Das endgültige Verwerfen ist eine getrennte Aktion.
 - Dieselbe Session kann beliebig oft unterbrochen und später fortgesetzt werden. Jede Unterbrechung und Wiederaufnahme wird als eigener Vorgang im zeitlichen Verlauf dokumentiert. Bereits erfasste Fokuszeit bleibt erhalten und wird bei weiteren Unterbrechungen oder Wiederaufnahmen weder gelöscht noch doppelt gezählt.
@@ -173,7 +175,7 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Wenn eine Fokusphase endet, wechselt der Timer automatisch in die eingestellte Pause. Bei der bewusst gewählten Option „Keine Pause“ wird keine Pause gestartet; der Timer wartet stattdessen auf den manuellen Start der nächsten Fokusphase.
 - Nach Ende der Pause wartet der Timer auf einen manuellen Start der nächsten Fokusphase.
 - Die Pause kann über **Skip Break** übersprungen werden. Danach wartet der Timer auf den manuellen Start der nächsten Fokusphase.
-- Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`.
+- Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`. Der Countdown zählt nicht zur Fokuszeit; die Zeitmessung beginnt erst nach seinem Abschluss mit dem tatsächlichen Start der Fokusphase.
 
 ### Sichtbare Timer-Endzustände im Focus-Fenster
 - Jeder Timer-Endzustand wird direkt im Focus-Fenster eindeutig angezeigt und mit einer kurzen, passenden Handlungsaufforderung verbunden.
@@ -281,6 +283,7 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Die Warnung erscheint nicht, wenn die Session bereits pausiert, unterbrochen oder abgeschlossen ist.
 - Wird die Seite während einer laufenden Session neu geladen, erscheint dieselbe Warnung. Der Nutzer kann das Neuladen abbrechen und zur Session zurückkehren oder fortfahren. Beim Fortfahren wird die Session automatisch pausiert und nach dem Neuladen als **PAUSED** wiederhergestellt.
 - Die Zeit, in der der Browser geschlossen bzw. Focus Mode nicht verfügbar ist, wird nicht als Fokuszeit gezählt. Alle zuletzt erfolgreich lokal gespeicherten Session-Daten bleiben erhalten.
+- Ist Focus Mode wegen eines geschlossenen Browsers, PC-Ruhezustands, Herunterfahrens oder Absturzes nicht verfügbar, wird die Session pausiert bzw. beim nächsten Öffnen als **PAUSED** wiederhergestellt. Die Ausfallzeit zählt nicht zur Fokuszeit; ein automatischer Neustart findet nicht statt. Ein lediglich minimierter Browser oder ein Tab im Hintergrund gilt dagegen nicht als Ausfall: Der Timer läuft weiter und verarbeitet auch Timer-Ende sowie den vorgesehenen automatischen Übergang von Fokus zu Pause.
 - Die wiederhergestellte Session startet nicht automatisch; die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
 - Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand, wird die Session ebenfalls automatisch pausiert und nicht abgebrochen oder abgeschlossen.
 - Die Zeit im Energiesparmodus oder Ruhezustand wird nicht als Fokuszeit gezählt. Beim Aufwachen bzw. erneuten Öffnen bleibt die Session im Status **PAUSED** und kann ausschließlich durch die bewusste Aktion **Resume** fortgesetzt werden.
@@ -458,6 +461,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 ### Gemeinsame chronologische Übersicht
 - Abgeschlossene und unterbrochene Sessions erscheinen gemeinsam in einer chronologischen Liste.
+- Eine unterbrochene Session wird zunächst mit dem Status **INTERRUPTED** geführt. Wird sie später fortgesetzt und anschließend erfolgreich abgeschlossen, wechselt ihr History-Status auf **COMPLETED**. Sämtliche vorherigen Unterbrechungen und Wiederaufnahmen bleiben dabei vollständig in der zeitlichen Timeline dokumentiert.
 - Standardmäßig werden die neuesten Sessions zuerst angezeigt; ältere Einträge folgen darunter.
 - Der Status jeder Session ist direkt in der Liste eindeutig erkennbar.
 - Über Statusfilter können gezielt abgeschlossene oder unterbrochene Sessions angezeigt werden.
