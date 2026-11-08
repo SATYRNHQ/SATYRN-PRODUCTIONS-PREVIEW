@@ -372,6 +372,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ein Klick bzw. Tippen auf die kompakte Sticky-Leiste klappt die vollständige Timer-Ansicht wieder aus, auch wenn die Seite weiter unten gescrollt ist.
 - Die ausgeklappte Ansicht bleibt am oberen Bildschirmrand erreichbar; die übrigen Inhalte scrollen weiterhin darunter.
 
+
+### Automatisches Einklappen des Sticky Timers
+- Wenn der Nutzer nach dem Ausklappen weiter nach unten scrollt, klappt der Timer automatisch wieder zur kompakten Sticky-Leiste zusammen.
+- Das Ein- und Ausklappen erfolgt flüssig und ohne den Scrollfluss zu unterbrechen.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
