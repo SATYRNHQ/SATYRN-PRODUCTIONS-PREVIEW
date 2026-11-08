@@ -1901,3 +1901,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Auch bereits erfasste Segmente aus später unterbrochenen oder endgültig verworfenen Sessions zählen. Pausen- und Unterbrechungszeiten selbst zählen weder zur Dauer noch als Fokusphase.
 - Der Durchschnitt berücksichtigt den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Segmente über Mitternacht werden für die Tageszuordnung aufgeteilt; für die durchschnittliche Phasendauer bleibt das ursprüngliche zusammenhängende Segment maßgeblich.
 - Gibt es im ausgewählten Zeitraum keine erfasste Fokusphase, wird „–“ angezeigt.
+### Anzeige der Durchschnittswerte in allen Statistik-Zeiträumen
+- Alle drei Durchschnittswerte werden in **Daily, Weekly, Monthly und Overall Statistics** angezeigt: durchschnittliche Dauer abgeschlossener Sessions, durchschnittliche tägliche Fokuszeit an aktiven Tagen und durchschnittliche Dauer einer zusammenhängenden Fokusphase.
+- In Daily, Weekly und Monthly beziehen sich die Werte jeweils ausschließlich auf den aktuell ausgewählten Tag, die aktuelle Kalenderwoche bzw. den aktuellen Kalendermonat. In Overall beziehen sie sich auf den gesamten erfassten Zeitraum.
+- Beim frei wählbaren Zeitraum werden alle drei Werte ebenfalls für genau diesen Zeitraum berechnet und angezeigt.
+- Die Werte aktualisieren sich automatisch bei neuen Fokuszeitsegmenten, Session-Abschlüssen, Änderungen an Sessions sowie beim Wechsel von Zeitraum oder Kategorie-Filter.
+- Die bestehende Definition der jeweiligen Durchschnittswerte bleibt in jeder Ansicht identisch. Bei mehreren ausgewählten Kategorien wird keine Session und kein Zeitsegment doppelt gezählt.
+- Wenn für einen Wert im ausgewählten Zeitraum keine gültige Berechnungsgrundlage existiert, wird „–“ angezeigt.
