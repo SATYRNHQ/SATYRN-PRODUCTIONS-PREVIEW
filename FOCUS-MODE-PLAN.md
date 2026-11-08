@@ -440,3 +440,18 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Session löschen:** Das endgültige Löschen einer Session erfordert eine separate, eindeutige Sicherheitsabfrage.
 - **Verknüpfte Aufgabe öffnen:** Eine mit der Session verbundene Important-Aufgabe kann direkt aus der History geöffnet werden.
 - Nachträgliche Änderungen an Session-Details verändern nicht die bereits gespeicherten Fokuszeiten, Zeitabschnitte oder den historischen Zeitverlauf.
+
+### Aufbau und visuelle Gestaltung der Session-Detailansicht
+- Die Detailansicht folgt einer klaren Informationshierarchie: **Session-Identität → Zeitübersicht → Zeitverlauf → Arbeitsdetails → Notizen und Distraction Log → Aktionen**.
+- **Kopfbereich:** Session-Name und Fokusziel stehen prominent oben. Status, Datum, Kategorie und Priorität sind direkt erkennbar, bleiben aber dem Session-Namen untergeordnet.
+- **Zeitübersicht:** Direkt unter dem Kopfbereich werden die wichtigsten Kennzahlen in drei gut lesbaren Kennzahlenfeldern dargestellt:
+  - tatsächlich investierte Fokuszeit,
+  - geplante Dauer,
+  - Anzahl der Fokusabschnitte.
+- **Zeitverlauf:** Alle Fokus- und Pausenabschnitte werden chronologisch und nachvollziehbar dargestellt. Start- und Endzeiten sowie Dauer sind pro Abschnitt erkennbar. Unterbrechungen werden im Verlauf ebenfalls eindeutig markiert, sofern sie aufgetreten sind.
+- Fokusphasen, Pausen und Unterbrechungen erhalten unterschiedliche, konsistente visuelle Kennzeichnungen entsprechend dem bereits festgelegten SATYRN-Farbkonzept. Farbe ist nicht der einzige Informationsträger; Beschriftungen und Symbole sorgen zusätzlich für eindeutige Zuordnung.
+- **Arbeitsdetails:** Kategorie, Priorität und verknüpfte Important-Aufgabe werden in einem eigenen, übersichtlichen Bereich angezeigt. Verknüpfte Aufgaben können direkt geöffnet werden.
+- **Notizen und Distraction Log:** Beide erscheinen als getrennte, aufklappbare Bereiche unterhalb der Arbeitsdetails. Inhalte bleiben bearbeitbar, soweit die jeweiligen History-Aktionen dies erlauben.
+- **Aktionen:** Am unteren Ende der Detailansicht stehen die bereits festgelegten Aktionen zur Verfügung: Session als Vorlage für eine neue Session verwenden, Details bearbeiten und Session löschen. Das Löschen erfordert weiterhin eine separate Sicherheitsabfrage.
+- Die Gestaltung bleibt ruhig, hochwertig und kompakt. Kennzahlen und Zeitverlauf sind schnell erfassbar; ausführlichere Inhalte können bei Bedarf aufgeklappt werden.
+- Die Detailansicht verwendet die bestehenden SATYRN-Farben, Kategorienfarben und Statuskennzeichnungen konsistent mit Focus Mode, Statistics und der Session-Übersicht.
