@@ -22,6 +22,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Wenn an einem Tag mehrere Einträge liegen, werden ihre Titel untereinander angezeigt.
 - Pro Tagesfeld werden höchstens **drei Termineinträge** direkt angezeigt.
 - Mehrtägige Terminbalken bleiben **immer sichtbar** und werden nicht durch das Platzlimit oder den Hinweis „+ weitere“ ausgeblendet. Dadurch können in einem Tagesfeld bei Bedarf mehr als drei sichtbare Einträge erscheinen.
+- Mehrtägige Terminbalken werden innerhalb der Tagesfelder **immer oberhalb der normalen Termine** angeordnet. Normale Termine erscheinen darunter.
 - An Wochen- und Monatsgrenzen erhält jeder sichtbare Abschnitt eines mehrtägigen Terminbalkens **abgerundete Ecken an beiden Enden**. Die Abschnitte bleiben durch ihre Position und Gestaltung als zusammengehöriger Termin erkennbar. Gibt es weitere Einträge, erscheint darunter ein Hinweis mit der Anzahl, z. B. **„+2 weitere“**. Über das Tagesfenster lassen sich alle Einträge des Tages ansehen.
 - Termine innerhalb eines Tages werden chronologisch sortiert: **Ganztägige Termine stehen zuerst**, danach folgen Termine mit Uhrzeit vom frühesten zum spätesten.
 - Termine, die sich zeitlich überschneiden, erhalten eine **dezente visuelle Kennzeichnung**, damit die Überschneidung erkennbar ist, ohne die Monatsansicht zu überladen.
@@ -155,3 +156,4 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Zusätzlich werden Prioritätsfilter für Dringend, Wichtig, Vorläufig, Unbefristet und Ohne Priorität angeboten. Mehrere Filter können gleichzeitig aktiv sein; Treffer aus den ausgewählten Kategorien werden gemeinsam angezeigt.
 - 2026-11-08: Suche und Prioritätsfilter werden kombiniert angewendet. Angezeigt werden nur Einträge, die sowohl zum Suchbegriff als auch zu mindestens einem der aktivierten Prioritätsfilter passen.
 - 2026-11-08: Zusätzlich zum Hinzufügen im Tagesfenster gibt es oben rechts in der Calendar-Ansicht ein kleines Plus-Symbol (+), angelehnt an das Important-Fenster. Das Datum wird passend zum aktuellen Kontext vorausgewählt (ausgewählter Tag, sonst heute), kann im Formular aber geändert werden; jedes beliebige Datum ist auswählbar.
+- 2026-11-08: Mehrtägige Terminbalken werden innerhalb der Tagesfelder stets oberhalb der normalen Termine dargestellt; normale Termine erscheinen darunter.
