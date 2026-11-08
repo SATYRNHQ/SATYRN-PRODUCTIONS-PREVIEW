@@ -160,3 +160,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Mehrtägige Terminbalken werden innerhalb der Tagesfelder stets oberhalb der normalen Termine dargestellt; normale Termine erscheinen darunter.
 - 2026-11-08: Die normalen Termine unterhalb der mehrtägigen Balken bleiben chronologisch sortiert: ganztägige zuerst, danach nach Startzeit.
 - 2026-11-08: Bei gleicher Startzeit werden normale Termine zusätzlich nach Priorität sortiert: Dringend, Wichtig, Vorläufig, Unbefristet, anschließend ohne Priorität.
+
+- 2026-11-08: Haben normale Termine dieselbe Startzeit und dieselbe Priorität, wird zusätzlich nach Erstellungszeit sortiert: Der älter erstellte Termin erscheint zuerst.
