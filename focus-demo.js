@@ -1,6 +1,6 @@
 /* Preview-only examples. Activated exclusively with ?demo=1. */
 (()=>{if(!new URLSearchParams(location.search).has('demo'))return;
-const K='satyrn-focus-v1',T='satyrn-tasks',now=Date.now(),day=86400000,min=60000;
+const K='satyrn-focus-demo-v1',T='satyrn-tasks-demo-v1',now=Date.now(),day=86400000,min=60000;
 const current=(()=>{try{return JSON.parse(localStorage.getItem(K)||'{}')}catch{return {}}})();
 if(!(current.sessions||[]).length){
 const zone=Intl.DateTimeFormat().resolvedOptions().timeZone||'local';
