@@ -94,6 +94,15 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Es darf weiterhin nur ein Timer gleichzeitig laufen. Ein Session-Wechsel setzt keine Session zurück und darf keine gespeicherten oder noch nicht synchronisierten Änderungen verlieren.
 - Die bestehenden Regeln für maximale Anzahl, Status, Sortierung und Wiederaufnahme offener Sessions gelten unverändert.
 
+### Timer im Hintergrund und beim Tab-Wechsel
+- Der Timer läuft zuverlässig weiter, wenn der Nutzer zu einem anderen Browser-Tab wechselt, den Browser minimiert oder in einem anderen Programm arbeitet.
+- Die Zeitmessung basiert auf verlässlichen Zeitstempeln bzw. einer absoluten Zeitreferenz und nicht darauf, dass eine Animation oder ein JavaScript-Intervall im Vordergrund kontinuierlich ausgeführt wird.
+- Beim Zurückkehren in den Focus-Tab wird der tatsächliche Timerstand unmittelbar korrekt dargestellt; Hintergrunddrosselung des Browsers darf die gemessene Dauer nicht verfälschen.
+- Timer-Ende und ein dadurch vorgesehener Wechsel in die konfigurierte Pause werden auch bei inaktivem Tab korrekt verarbeitet. Es startet dadurch keine neue Fokusphase automatisch.
+- Benachrichtigungen über Timer-Ende oder Pausenwechsel werden pro Ereignis höchstens einmal ausgelöst. Ist der Tab im Hintergrund, wird eine geeignete Browser-Benachrichtigung verwendet, sofern der Nutzer die Berechtigung erteilt hat; andernfalls wird der Zustand beim Zurückkehren klar angezeigt.
+- Beim erneuten Aktivieren des Tabs werden Timerstatus, verbleibende Zeit und verfügbare Aktionen mit dem tatsächlichen Session-Zustand abgeglichen.
+- Der Wechsel zwischen Focus Mode und anderen Programmen (z. B. FL Studio) darf den Timer weder pausieren noch zurücksetzen.
+
 ### Pausen-Erinnerung
 - Zum Beginn einer Pause gibt es einen kurzen, angenehmen Doppelton.
 - Beim Ende der Pause gibt es ebenfalls einen kurzen Doppelton.
