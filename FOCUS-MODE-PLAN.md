@@ -1830,3 +1830,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Endet eine Fokusphase vor Mitternacht und läuft die anschließende Pause nach Mitternacht weiter, wird die erfasste Fokuszeit vollständig dem Kalendertag zugeordnet, an dem sie tatsächlich stattgefunden hat.
 - Die Pause wird keinem Fokuszeitwert zugerechnet, unabhängig davon, ob sie am selben oder am folgenden Kalendertag endet.
 - Beginnt eine Fokusphase selbst vor Mitternacht und läuft nach Mitternacht weiter, wird ihre tatsächlich erfasste Fokuszeit entsprechend der lokalen Zeitgrenze auf beide Tage verteilt.
+
+
+### Vergleich unvollständiger Statistik-Zeiträume
+- Laufende, noch unvollständige Zeiträume werden nur mit einem gleich langen bzw. gleich weit fortgeschrittenen Abschnitt des vorherigen Vergleichszeitraums verglichen.
+- Daily: Der aktuelle Tag wird bis zur aktuellen lokalen Uhrzeit mit dem Vortag bis zur entsprechenden lokalen Uhrzeit verglichen. Bei vollständig vergangenen, ausgewählten Tagen werden zwei vollständige Kalendertage verglichen.
+- Weekly: In einer laufenden Woche wird die Fokuszeit von Montag bis zum aktuellen Wochentag und zur aktuellen lokalen Uhrzeit mit demselben Abschnitt der Vorwoche verglichen. Vollständig vergangene Wochen werden jeweils als ganze Kalenderwochen verglichen.
+- Monthly: In einem laufenden Monat wird vom Monatsersten bis zum aktuellen Kalendertag und zur aktuellen lokalen Uhrzeit mit dem entsprechenden Abschnitt des Vormonats verglichen. Gibt es im Vormonat diesen Kalendertag nicht, gilt dessen letzter Kalendertag als Grenze. Vollständig vergangene Monate werden als ganze Kalendermonate verglichen.
+- Die Vergleichszeiträume verwenden dieselben Kategorie-Filter und dieselbe lokale Zeitzone wie die angezeigte Auswertung.
+- Die Anzeige macht kenntlich, wenn ein Vergleich nur einen bisher verstrichenen Teil des Zeitraums umfasst. Dadurch werden unvollständige Tage, Wochen oder Monate nicht irreführend mit vollständigen Zeiträumen verglichen.
+- Für den frei gewählten Statistik-Zeitraum bleibt die bereits bestätigte Regel bestehen: Es wird kein Vergleich mit einem vorherigen Zeitraum ergänzt.
