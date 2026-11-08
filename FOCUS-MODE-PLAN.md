@@ -1194,6 +1194,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Minutenwerte für Fokus- und Pausendauer werden in 5-Minuten-Schritten eingestellt.
 - Die Stunden bleiben separat einstellbar; die Zeitanzeige verwendet weiterhin das kompakte HH:MM-Format.
 
+
+### Plus- und Minus-Steuerung der Dauer
+- Neben den Stunden- und Minutenfeldern gibt es Plus- und Minus-Schaltflächen zum bequemen Erhöhen und Verringern der Dauer.
+- Die Minuten-Schaltflächen verändern den Wert in 5-Minuten-Schritten; die Stunden lassen sich separat anpassen.
+- Die Eingabe bleibt zusätzlich direkt editierbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
