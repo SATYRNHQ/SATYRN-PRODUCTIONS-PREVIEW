@@ -60,7 +60,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 
 ## Noch nicht festgelegt
 - Die genaue Form der farblichen Kennzeichnung im Tagesfeld (z. B. farbiger Punkt, schmaler Streifen oder dezente Titel-Akzentfarbe).
-- Die genauen Formularfelder zum Erstellen und Bearbeiten eines Eintrags.
+- Das Erstellungs- und Bearbeitungsformular wird in **übersichtliche, klar voneinander getrennte Abschnitte** gegliedert. Die Angaben werden nicht als eine einzige lange, ungegliederte Feldliste dargestellt.
 - Die genaue Gestaltung des Tagesfensters und seiner Empty-State-Darstellung.
 - Bei wiederkehrenden Terminen kann beim Löschen zwischen **Nur diesen Termin löschen** und **Gesamte Serie löschen** gewählt werden.
 - Beim Bearbeiten eines einzelnen Vorkommens kann ebenfalls zwischen **Nur diesen Termin bearbeiten** und **Gesamte Serie bearbeiten** unterschieden werden.
@@ -77,6 +77,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Das Erstellungs- und Bearbeitungsformular wird in übersichtliche, klar voneinander getrennte Abschnitte gegliedert, statt alle Angaben als eine einzige lange Feldliste darzustellen.
 - 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Wochentage werden abgekürzt (Mo–So); Tageszahlen des angezeigten Monats werden gegenüber den angrenzenden Tagen aus Vor- und Folgemonat hervorgehoben; Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
 - 2026-11-08: Der heutige Tag erhält zusätzlich eine dezente farbige Hervorhebung in der Monatsansicht.
 - 2026-11-08: Wochenenden erhalten keine eigene optische Gestaltung; Samstag und Sonntag werden wie alle anderen Wochentage dargestellt.
