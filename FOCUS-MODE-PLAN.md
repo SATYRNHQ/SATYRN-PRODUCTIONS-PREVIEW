@@ -1596,3 +1596,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wird nach dem Löschen einer eigenen Kategorie eine neue Kategorie mit exakt demselben Namen erstellt, gilt sie als eigenständige neue Kategorie.
 - Bestehende offene und abgeschlossene Sessions behalten ihre ursprüngliche, gelöschte Kategorie einschließlich der gespeicherten Anzeigeangaben.
 - Die neue Kategorie wird nicht automatisch mit alten Sessions verknüpft; eine automatische Übernahme oder Zusammenführung findet nicht statt.
+
+
+### Gelöschte Kategorien in Statistiken
+- Gelöschte Kategorien bleiben in Statistiken für historische Sessions weiterhin sichtbar, damit frühere Focus-Zeiten vollständig nachvollziehbar bleiben.
+- Sie werden als gelöscht bzw. historisch gekennzeichnet und nicht mit einer später neu erstellten Kategorie gleichen Namens zusammengeführt.
+- Neue Sessions können die gelöschte Kategorie nicht mehr auswählen.
