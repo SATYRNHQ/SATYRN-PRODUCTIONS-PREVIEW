@@ -1123,6 +1123,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das ist eine bewusst auswählbare Option und nicht nur ein numerischer Wert von 0 Minuten.
 - Wird „Keine Pause“ gewählt, startet nach Ende der Fokusdauer keine automatische Pause; die Session wartet entsprechend dem bestehenden Ablauf auf die nächste bewusste Aktion.
 
+
+### Standardauswahl beim Öffnen der Session-Vorbereitung
+- Beim Öffnen der Session-Vorbereitung wird standardmäßig wieder das festgelegte Standard-Preset vorausgewählt, statt automatisch die zuletzt verwendete Dauer zu übernehmen.
+- Individuelle Presets können separat erstellt und gespeichert werden; sie bleiben unabhängig von der Standardauswahl verfügbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
