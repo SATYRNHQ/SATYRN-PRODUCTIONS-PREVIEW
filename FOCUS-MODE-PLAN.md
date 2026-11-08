@@ -1171,6 +1171,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eigene Presets erscheinen gesammelt in einem separaten Bereich mit der Überschrift „Meine Presets“.
 - Die Standard-Presets bleiben im eigenen Bereich darüber beziehungsweise davor sichtbar.
 
+
+### Alphabetische Sortierung eigener Presets
+- Eigene Presets im Bereich „Meine Presets“ werden alphabetisch nach ihrem Namen sortiert.
+- Die Sortierung aktualisiert sich automatisch, wenn ein Preset umbenannt oder neu erstellt wird.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
