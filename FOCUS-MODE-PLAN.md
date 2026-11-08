@@ -1206,6 +1206,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jeder Schritt verändert die Minuten um 5 Minuten; Stunden können entsprechend über die Stundeneingabe bzw. deren Steuerelement angepasst werden.
 - Ein kurzer Klick verändert den Wert ebenfalls einmalig.
 
+
+### Beschleunigte Wiederholung bei längerem Gedrückthalten
+- Beim Gedrückthalten wiederholen Plus und Minus die Änderung zunächst in einem angenehmen Grundtempo.
+- Nach kurzer Haltezeit erhöht sich die Wiederholgeschwindigkeit automatisch, damit auch größere Zeiträume schnell eingestellt werden können.
+- Ein kurzer Klick verändert den Wert weiterhin nur einmalig.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
