@@ -1794,3 +1794,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bis zum Reset bereits erfasste Fokuszeit bleibt als eigener Zeitabschnitt innerhalb derselben Session erhalten und wird weder gelöscht noch doppelt gezählt.
 - Session-Ziele, Notizen, Distraction Log, Subtasks, Important-Verknüpfungen, Kategorie, Priorität und übrige Session-Einstellungen bleiben unverändert.
 - Die bestehende Sicherheitsabfrage vor dem Reset bleibt bestehen.
+
+
+### Synchronisierung der Kategorie zwischen Important und Focus
+- Solange die Kategorie einer offenen Focus-Session nicht manuell in Focus überschrieben wurde, übernimmt sie Änderungen an der Kategorie der verknüpften Important-Hauptaufgabe automatisch.
+- Ändert der Nutzer die Kategorie direkt in Focus, gilt diese Auswahl als bewusste manuelle Überschreibung und bleibt bestehen, auch wenn sich die Kategorie der verknüpften Important-Aufgabe später ändert.
+- Die manuelle Überschreibung betrifft ausschließlich die Focus-Session und verändert niemals die Kategorie der Important-Aufgabe.
+- Abgeschlossene Focus-Sessions behalten ihre zum Abschluss gespeicherte Kategorie unverändert.
