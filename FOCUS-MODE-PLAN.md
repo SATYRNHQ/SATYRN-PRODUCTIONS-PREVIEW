@@ -226,6 +226,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Auch „Alle Kategorien“ bleibt als Auswahl erhalten, wenn diese Ansicht aktiv ist.
 - Die Auswahl wird nicht bei jedem Zeitraumwechsel zurückgesetzt; sie ändert sich nur durch eine bewusste neue Auswahl des Nutzers.
 
+
+### Kategorie-Filter zurücksetzen
+- Die Statistik-Filter erhalten eine gut erreichbare Aktion „Filter zurücksetzen“.
+- Aktiviert setzt sie die Kategorieauswahl auf „Alle Kategorien“ zurück.
+- Die Aktion verändert keine Sessions oder gespeicherten Daten, sondern ausschließlich den aktiven Statistik-Filter.
+- Sie ist in Daily, Weekly, Monthly und Overall konsistent verfügbar.
+
 ### Visuelle Kennzeichnung der Zeitvergleiche
 - Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
 - Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
