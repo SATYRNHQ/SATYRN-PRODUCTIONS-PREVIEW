@@ -1621,3 +1621,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Für pausierte und unterbrochene Sessions wird ein Hinweis mit Status und vergangener Zeit seit der letzten Aktivität angezeigt.
 - Laufende Sessions werden mit ihrem aktuellen Timerstatus angezeigt und nicht fälschlich als pausiert oder unterbrochen behandelt.
 - Der Nutzer entscheidet ausdrücklich, welche Session fortgesetzt, pausiert belassen oder endgültig verworfen wird; es erfolgt keine automatische Wiederaufnahme.
+
+
+### Verhalten beim Zurücksetzen einer Focus-Session
+- Beim Zurücksetzen wird ausschließlich der Timer der aktuellen Session auf den festgelegten Ausgangszustand zurückgesetzt.
+- Session-Ziel, Notizen, Distraction Log, Unteraufgaben sowie Verknüpfungen zu Important-Aufgaben bleiben erhalten.
+- Kategorie, Priorität und weitere Session-Einstellungen bleiben ebenfalls unverändert.
+- Vor dem Zurücksetzen erscheint die bereits vorgesehene Sicherheitsabfrage.
+- Der Reset verändert oder löscht keine verknüpften Important-Aufgaben.
