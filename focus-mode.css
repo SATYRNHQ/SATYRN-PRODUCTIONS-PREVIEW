@@ -241,3 +241,34 @@
   #page-focus .fm-mobile-capture textarea{min-height:130px}
   #page-focus .fm-mobile-capture button{justify-self:start}
 }
+
+/* Readability pass — typography aligned with the SATYRN HQ shell */
+#page-focus{font-size:13px}
+#page-focus .fm-page-head p{font-size:14px;line-height:1.65}
+#page-focus .fm-kicker{font-size:10px}
+#page-focus .fm-storage-pill{font-size:10px}
+#page-focus .fm-current-top h2,#page-focus .fm-panel-heading h2{font-size:21px}
+#page-focus .fm-panel-intro{font-size:12px;line-height:1.65}
+#page-focus .fm-label{font-size:12px}
+#page-focus .fm-button{font-size:12px;min-height:42px}
+#page-focus .fm-meta-chip{font-size:11px}
+#page-focus .fm-open-copy b,#page-focus .fm-queue-copy b,#page-focus .fm-history-copy b{font-size:12px}
+#page-focus .fm-open-copy small,#page-focus .fm-queue-copy small,#page-focus .fm-history-copy small{font-size:10.5px}
+#page-focus .fm-empty,#page-focus .fm-session-hint{font-size:12px;line-height:1.65}
+#page-focus .fm-stat-grid small,#page-focus .fm-stat-grid span{font-size:10px}
+#page-focus .fm-stat-grid b{font-size:clamp(18px,2vw,25px)}
+#page-focus .fm-chart-col>span,#page-focus .fm-chart-col>small{font-size:10px}
+#page-focus .fm-category-stat span,#page-focus .fm-category-stat b{font-size:11px}
+#page-focus .fm-category-stat small{font-size:10px}
+#page-focus .fm-history-heading p{font-size:12px}
+#page-focus .fm-history-kpis small{font-size:10px}
+#page-focus .fm-history-kpis b{font-size:23px}
+#page-focus .fm-history-filter-grid section>b{font-size:11px}
+#page-focus .fm-history-filter-grid label{font-size:10px}
+#page-focus .fm-history-copy small{font-size:10px}
+#page-focus .fm-dialog-head p,#page-focus .fm-timeline-item small{font-size:10px}
+#page-focus .fm-demo-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0 20px;padding:12px 16px;border:1px solid rgba(88,200,184,.25);border-radius:10px;background:linear-gradient(90deg,rgba(88,200,184,.09),rgba(88,200,184,.025));color:#dcece5}
+#page-focus .fm-demo-banner>span{font-size:10px;font-weight:700;letter-spacing:.14em;color:#70caba}
+#page-focus .fm-demo-banner strong{font-size:12px;font-weight:600}
+#page-focus .fm-demo-banner small{font-size:11px;color:#9bada3}
+@media(max-width:620px){#page-focus .fm-demo-banner{gap:7px;padding:11px 12px}#page-focus .fm-demo-banner small{width:100%}}
