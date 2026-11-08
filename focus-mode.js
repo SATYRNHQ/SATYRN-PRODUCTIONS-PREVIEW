@@ -48,7 +48,7 @@
   if(!Array.isArray(state.sessions))state.sessions=[];
   if(!Array.isArray(state.queue))state.queue=[];
   let activeId=state.activeId||null, tickHandle=null, countdownHandle=null, countdownValue=0, countdownTarget=null, editingPreparedId=null, historySearchTimer=null, historyPage=1, pageSize=20, historyQuery='', historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]}, historyOpen=false, historyDetailId=null, historyDraftId=null, taskDragId=null, savingTimer=null, lastRenderedSecond=-1;
-  let audioContext=null,lastClockWall=Date.now(),lastClockMono=performance.now();
+  let audioContext=null,lastClockWall=Date.now(),lastClockMono=performance.now(),lastPersistWall=Date.now();
   const focusPage=$('page-focus');
   if(!focusPage)return;
   const toast=msg=>{if(window.showToast)window.showToast(msg);else{const t=$('toast');if(t){t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}}};
@@ -144,7 +144,7 @@
     }
     return false;
   };
-  const ensureTick=()=>{stopTick();if(current()?.status==='RUNNING'){lastClockWall=Date.now();lastClockMono=performance.now();tickHandle=setInterval(()=>{const s=current();if(!s)return;if(detectSystemSleep(s))return;reconcile(s);const sec=Math.ceil(remain(s,Date.now())/1000);if(sec!==lastRenderedSecond){lastRenderedSecond=sec;renderCurrent();}if(s.status!=='RUNNING'){stopTick();persist();renderAll();}},250);}};
+  const ensureTick=()=>{stopTick();if(current()?.status==='RUNNING'){lastClockWall=Date.now();lastClockMono=performance.now();lastPersistWall=Date.now();tickHandle=setInterval(()=>{const s=current();if(!s)return;if(detectSystemSleep(s))return;reconcile(s);const now=Date.now(),sec=Math.ceil(remain(s,now)/1000);if(sec!==lastRenderedSecond){lastRenderedSecond=sec;renderCurrent();}if(now-lastPersistWall>=2000){lastPersistWall=now;persist();}if(s.status!=='RUNNING'){stopTick();persist();renderAll();}},250);}};
   const pauseSession=(s,kind='pause',now=Date.now())=>{
     if(!s||s.status!=='RUNNING')return;
     reconcile(s,now);
@@ -285,10 +285,10 @@
     const daySeg=segmentsInRange(todayStart,tomorrow),weekSeg=segmentsInRange(thisWeek,nextWeek),prevSeg=segmentsInRange(prevWeek,thisWeek),monthSeg=segmentsInRange(monthStart,nextMonth),prevMonthSeg=segmentsInRange(prevMonth,monthStart);
     const sum=list=>list.reduce((n,x)=>n+Math.max(0,Math.min(x.end,list===daySeg?tomorrow:list===weekSeg?nextWeek:list===prevSeg?thisWeek:list===monthSeg?nextMonth:monthStart)-Math.max(x.start,list===daySeg?todayStart:list===weekSeg?thisWeek:list===prevSeg?prevWeek:list===monthSeg?monthStart:prevMonth)),0);
     const live=current();const liveStart=live&&live.status==='RUNNING'&&live.phase==='focus'?(live.phaseStartedAt||now.getTime()):now.getTime(),liveEnd=now.getTime();const overlap=(a,b)=>Math.max(0,Math.min(liveEnd,b)-Math.max(liveStart,a));const liveAll=Math.max(0,liveEnd-liveStart),liveDay=overlap(todayStart,tomorrow),liveWeek=overlap(thisWeek,nextWeek),liveMonth=overlap(monthStart,nextMonth);const dayMs=sum(daySeg)+liveDay,weekMs=sum(weekSeg)+liveWeek,prevWeekMs=sum(prevSeg),monthMs=sum(monthSeg)+liveMonth,prevMonthMs=sum(prevMonthSeg);
-    const completedToday=state.sessions.filter(s=>s.status==='COMPLETED'&&(s.completedAt||0)>=todayStart&&(s.completedAt||0)<tomorrow),interruptedToday=state.sessions.filter(s=>s.status==='INTERRUPTED'&&(s.lastActiveAt||0)>=todayStart&&(s.lastActiveAt||0)<tomorrow);
+    const completedToday=state.sessions.filter(s=>s.status==='COMPLETED'&&(s.completedAt||0)>=todayStart&&(s.completedAt||0)<tomorrow),completedWeek=state.sessions.filter(s=>s.status==='COMPLETED'&&(s.completedAt||0)>=thisWeek&&(s.completedAt||0)<nextWeek),completedMonth=state.sessions.filter(s=>s.status==='COMPLETED'&&(s.completedAt||0)>=monthStart&&(s.completedAt||0)<nextMonth),interruptedToday=state.sessions.filter(s=>s.status==='INTERRUPTED'&&(s.lastActiveAt||0)>=todayStart&&(s.lastActiveAt||0)<tomorrow);
     const avgToday=completedToday.length?completedToday.reduce((n,x)=>n+totalFocus(x),0)/completedToday.length:0;
     $('fmStatToday').textContent=duration(dayMs);$('fmStatWeek').textContent=duration(weekMs);$('fmStatMonth').textContent=duration(monthMs);
-    $('fmStatCompleted').textContent=String(completedToday.length);$('fmStatInterrupted').textContent=String(interruptedToday.length);$('fmStatAverage').textContent=duration(avgToday);
+    $('fmStatCompleted').textContent=String(completedToday.length);$('fmStatInterrupted').textContent=String(interruptedToday.length);$('fmStatAverage').textContent=duration(avgToday);$('fmStatWeekSessions').textContent=completedWeek.length+' Sessions abgeschlossen';$('fmStatMonthSessions').textContent=completedMonth.length+' Sessions abgeschlossen';
     $('fmStatWeekCompare').textContent=(prevWeekMs?((weekMs-prevWeekMs)/prevWeekMs*100>=0?'+':'')+((weekMs-prevWeekMs)/prevWeekMs*100).toFixed(0)+' %':'Noch kein Vorwochenvergleich');
     $('fmStatMonthCompare').textContent='Ø / Tag '+duration(monthMs/Math.max(1,now.getDate()))+' · '+(prevMonthMs?((monthMs-prevMonthMs)/prevMonthMs*100>=0?'+':'')+((monthMs-prevMonthMs)/prevMonthMs*100).toFixed(0)+' % zum Vormonat':'kein Vormonatsvergleich');
     const days=[];for(let i=6;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()-i),a=dayStart(d),b=a+86400000;let ms=segmentsInRange(a,b).reduce((n,x)=>n+Math.max(0,Math.min(x.end,b)-Math.max(x.start,a)),0);if(live&&live.status==='RUNNING'&&live.phase==='focus')ms+=overlap(a,b);days.push({label:d.toLocaleDateString('de-DE',{weekday:'short'}),ms});}
@@ -400,7 +400,7 @@
     $('fmHistoryDetailTitle').textContent=s.name;
     $('fmHistoryDetailMeta').textContent=statusText(s)+' · '+dateLabel(dateKey(Math.max(...(s.timeline||[]).map(e=>e.at||0),s.createdAt||0)))+' · '+cat(s.category).name+' · '+pri(s.priority).name;
     $('fmHistoryDetailStats').innerHTML='<div><small>FOKUSZEIT</small><b>'+duration(totalFocus(s))+'</b></div><div><small>GEPLANTE DAUER</small><b>'+duration(s.originalFocusMs)+'</b></div><div><small>FOKUSABSCHNITTE</small><b>'+(s.focusSegments||[]).length+'</b></div>';
-    $('fmHistoryTimeline').innerHTML=(s.timeline||[]).concat((s.focusSegments||[]).map(seg=>({type:'focus-segment',label:'Fokusabschnitt · '+duration(seg.durationMs),at:seg.start,zone:seg.timezone}))).sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(dateKey(e.at))+' · '+timeLabel(e.at)+' · '+esc(e.zone||'')+'</small></span></div>').join('');
+    $('fmHistoryTimeline').innerHTML=(s.timeline||[]).concat((s.focusSegments||[]).map(seg=>({type:'focus-segment',label:'Fokusabschnitt · '+duration(seg.durationMs),at:seg.start,end:seg.end,zone:seg.timezone}))).sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(dateKey(e.at))+' · '+timeLabel(e.at)+' · '+esc(e.zone||'')+'</small></span></div>').join('');
     $('fmHistoryDetailNotes').textContent=s.notes||'Keine Notizen gespeichert.';
     $('fmHistoryDetailDistractions').innerHTML=(s.distractions||[]).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text)+'</b></span><span><button type="button" data-fm-history-edit-distraction="'+esc(d.id)+'">Bearbeiten</button><button type="button" data-fm-history-delete-distraction="'+esc(d.id)+'">×</button></span></div>').join('')||'<p class="fm-empty">Keine Ablenkungen protokolliert.</p>';
     $('fmHistoryDetailLink').textContent=s.linkedTaskSnapshot?(s.linkedTaskSnapshot.title+' · '+(s.linkedTaskSnapshot.source==='important'?'Important':'Task Queue')):'Kein Aufgabenlink';
@@ -488,8 +488,8 @@
           <div class="fm-panel-heading"><div><span class="fm-kicker">04 · STATISTICS</span><h2>Deine Fokusleistung</h2></div><span class="fm-count">ACTUAL FOCUS TIME</span></div>
           <div class="fm-stat-grid">
             <article><small>HEUTE</small><b id="fmStatToday">0min</b><span>Fokuszeit</span></article>
-            <article><small>DIESE WOCHE</small><b id="fmStatWeek">0min</b><span id="fmStatWeekCompare">Vorwochenvergleich</span></article>
-            <article><small>DIESER MONAT</small><b id="fmStatMonth">0min</b><span id="fmStatMonthCompare">Vormonatsvergleich</span></article>
+            <article><small>DIESE WOCHE</small><b id="fmStatWeek">0min</b><span id="fmStatWeekCompare">Vorwochenvergleich</span><span id="fmStatWeekSessions">0 Sessions abgeschlossen</span></article>
+            <article><small>DIESER MONAT</small><b id="fmStatMonth">0min</b><span id="fmStatMonthCompare">Vormonatsvergleich</span><span id="fmStatMonthSessions">0 Sessions abgeschlossen</span></article>
             <article><small>COMPLETED</small><b id="fmStatCompleted">0</b><span>Abgeschlossene Sessions</span></article>
             <article><small>INTERRUPTED</small><b id="fmStatInterrupted">0</b><span>Heute unterbrochen</span></article><article><small>Ø COMPLETED</small><b id="fmStatAverage">0min</b><span>Ø Dauer heute</span></article>
           </div>
@@ -606,7 +606,7 @@
   if(!recovered||!OPEN.has(recovered.status))activeId=sortedOpen()[0]?.id||null;
   state.sessions.forEach(s=>{
     if(s.status==='RUNNING'){
-      const now=Date.now();s.remainingMs=Math.max(0,(s.deadline||now)-now);s.deadline=null;s.phaseStartedAt=null;s.status='PAUSED';s.lastActiveAt=now;event(s,'recovered','Nach Wiederöffnung als PAUSED wiederhergestellt',now);
+      const now=Date.now();s.remainingMs=Math.max(0,s.remainingMs||0);s.deadline=null;s.phaseStartedAt=null;s.status='PAUSED';s.lastActiveAt=now;event(s,'recovered','Nach Wiederöffnung als PAUSED wiederhergestellt',now);
     }
   });
   state.activeId=activeId;persist();refreshLinkedOptions();renderAll();ensureTick();
