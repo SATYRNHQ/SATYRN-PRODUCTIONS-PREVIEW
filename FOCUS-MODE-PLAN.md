@@ -16,7 +16,7 @@ Die Focus-Mode-Seite besteht aus fünf Bereichen:
 Vorgesehene Anordnung:
 - Oben: Current Session mit zentralem Timer.
 - Mitte: Session Setup und Task Queue nebeneinander.
-- Unten: Statistics und Session History.
+- Unten: Statistics. Die vollständige Session History wird ausschließlich über den separaten History-Zugang geöffnet und erscheint nicht als dauerhafter Bereich auf der Hauptseite.
 
 Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erscheinen. Stattdessen gibt es oben rechts neben dem Seitentitel eine kleine, dezente Leiste mit Uhr-/Verlauf-Icon und der Beschriftung **History**. Ein Klick öffnet die vollständige History.
 
