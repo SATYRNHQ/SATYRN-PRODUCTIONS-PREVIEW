@@ -85,6 +85,22 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Die primäre Aktion **Pause/Resume** befindet sich unmittelbar unter oder neben der Zeitanzeige. Weitere Aktionen wie **Reset**, **Complete Session** und **Interrupt** sind klar davon getrennt und übersichtlich angeordnet.
 - Die Gestaltung wirkt ruhig, hochwertig und aufgeräumt. Der Timer bleibt eindeutig der Mittelpunkt, ohne durch zusätzliche Anzeigen oder Bedienelemente überladen zu werden.
 
+
+### Farbkonzept und visuelle Timerzustände
+- Die Timerzustände verwenden eine gemeinsame, ruhige SATYRN-Farbwelt. Jeder Zustand erhält eine eigene, eindeutig wiedererkennbare Akzentfarbe:
+  - `FOCUS`: SATYRN-Akzentfarbe (Türkis) für aktive Konzentration.
+  - `BREAK`: sanftes Grün für Erholung und Pause.
+  - `PAUSED`: warmes Amber für eine bewusst angehaltene Session.
+  - `INTERRUPTED`: gedämpftes Orange für eine unterbrochene, weiterhin offene Session.
+  - `COMPLETED`: sattes Grün für einen erfolgreich abgeschlossenen Zustand.
+  - `EXPIRED`: neutrales Grau mit Amber-Akzent für einen beendeten Zeitabschnitt, der auf die nächste Aktion wartet.
+- Die jeweilige Zustandsfarbe wird konsistent für Fortschrittsring, Statusanzeige und dezente Akzente verwendet.
+- Der dunkle, hochwertige Hintergrund und die bestehende SATYRN-Designsprache bleiben erhalten.
+- Es werden keine grellen Vollflächen oder übermäßig leuchtenden Farben eingesetzt. Die Akzente sollen ruhig, hochwertig und gut unterscheidbar wirken.
+- Farbe ist nie der einzige Informationsträger: Statusbeschriftungen, Symbole und ausreichende Kontraste machen jeden Zustand auch unabhängig von der Farbwahrnehmung eindeutig.
+- Die Farbzuordnung bleibt in Focus Mode, Session History und Statistics konsistent.
+- Die SATYRN-Akzentfarbe für `FOCUS` wird mit dem bestehenden Website-Design abgestimmt, damit kein abweichendes Farbsystem entsteht.
+
 ### Timersteuerung und Ablauf
 - Die primären Aktionen sind direkt im Focus-Fenster erreichbar. Sichtbarkeit und Verfügbarkeit richten sich nach dem aktuellen Session-Status.
 - Verfügbare Aktionen je Zustand:
