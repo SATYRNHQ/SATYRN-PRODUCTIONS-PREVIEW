@@ -558,6 +558,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Detailansicht zeigt – soweit für die Session vorhanden – Ziel, Kategorie, Priorität, Notizen, Distraction-Log-Einträge und Unteraufgaben.
 - Die Listenansicht bleibt bewusst kompakt und gut scannbar; zusätzliche Details werden erst in der geöffneten Session-Detailansicht dargestellt.
 - Auf kleineren Bildschirmen bleiben Datum, Ziel/Aufgabe, Fokusdauer und Status ohne horizontales Scrollen gut erkennbar.
+- **Schrittweises Laden:** Zu Beginn wird nur ein überschaubarer erster Abschnitt der neuesten Sessions geladen. Ältere Einträge werden bei Bedarf über eine klare Aktion wie „Weitere Sessions laden“ ergänzt; die History muss nicht den gesamten Verlauf auf einmal in der Oberfläche darstellen.
+- **Gesamter Verlauf bleibt durchsuchbar:** Suche und Filter beziehen sich unabhängig vom aktuell sichtbaren/geladenen Listenabschnitt auf sämtliche gespeicherten Sessions im gewählten Zeitraum. Treffer dürfen nicht fehlen, nur weil sie noch nicht in der Liste nachgeladen wurden.
+- **Gruppierung bleibt konsistent:** Beim Nachladen werden Sessions weiterhin nach lokalen Kalendertagen gruppiert. Ein Datumsabschnitt darf bei Bedarf fortgesetzt werden, ohne doppelte Tagesüberschriften oder doppelte Session-Einträge zu erzeugen.
+- **Zustand erhalten:** Bereits gewählte Suche und Filter bleiben beim Nachladen erhalten; neue Treffer werden passend zur aktiven Auswahl ergänzt.
+
 
 
 
