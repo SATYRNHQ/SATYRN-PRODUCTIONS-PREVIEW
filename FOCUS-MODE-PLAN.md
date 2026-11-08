@@ -1252,6 +1252,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bis dahin bleiben Änderungen Entwürfe im Editor und verändern die gespeicherten Presets nicht.
 - Wird der Editor vor dem Speichern verlassen, greift die bereits festgelegte Warnung für nicht übernommene Änderungen.
 
+
+### Bestätigung nach dem Speichern eigener Presets
+- Nach erfolgreichem Speichern eines eigenen Presets erscheint eine kurze Bestätigung, z. B. „Preset erfolgreich gespeichert“.
+- Die Bestätigung wird dezent im bestehenden SATYRN-HQ-Benachrichtigungsstil angezeigt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
