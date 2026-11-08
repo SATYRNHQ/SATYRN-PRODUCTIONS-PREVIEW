@@ -1787,3 +1787,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bis zum Ablauf bereits erfasste Fokuszeit bleibt als eigener Zeitabschnitt innerhalb derselben Session erhalten und wird nicht gelöscht oder doppelt gezählt.
 - Die Pause beginnt durch Reset nicht automatisch; der Timer startet gemäß der bestehenden Reset-Regel im zurückgesetzten Fokuszustand.
 - Die bestehende Sicherheitsabfrage vor dem Reset bleibt bestehen.
+
+
+### Reset während einer laufenden Fokusphase
+- Wird Reset während einer regulär laufenden Fokusphase ausgelöst, wird der Timer auf die ursprünglich für diese Session eingestellte Fokusdauer zurückgesetzt und die Fokusphase anschließend neu gestartet.
+- Die bis zum Reset bereits erfasste Fokuszeit bleibt als eigener Zeitabschnitt innerhalb derselben Session erhalten und wird weder gelöscht noch doppelt gezählt.
+- Session-Ziele, Notizen, Distraction Log, Subtasks, Important-Verknüpfungen, Kategorie, Priorität und übrige Session-Einstellungen bleiben unverändert.
+- Die bestehende Sicherheitsabfrage vor dem Reset bleibt bestehen.
