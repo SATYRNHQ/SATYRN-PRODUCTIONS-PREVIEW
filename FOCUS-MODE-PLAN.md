@@ -1246,6 +1246,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Doppelte Namen werden verhindert; die Oberfläche weist verständlich darauf hin und fordert zur Wahl eines anderen Namens auf.
 - Beim Bearbeiten eines Presets bleibt dessen eigener aktueller Name zulässig.
 
+
+### Explizites Speichern eigener Presets
+- Ein neu erstelltes oder bearbeitetes eigenes Preset wird erst dauerhaft übernommen, wenn der Nutzer ausdrücklich auf „Speichern“ klickt.
+- Bis dahin bleiben Änderungen Entwürfe im Editor und verändern die gespeicherten Presets nicht.
+- Wird der Editor vor dem Speichern verlassen, greift die bereits festgelegte Warnung für nicht übernommene Änderungen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
