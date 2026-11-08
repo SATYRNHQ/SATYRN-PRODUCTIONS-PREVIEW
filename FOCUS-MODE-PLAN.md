@@ -925,6 +925,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Wiederherstellung der Daten bedeutet keinen automatischen Neustart des Timers: Der Nutzer entscheidet ausdrücklich über Fortsetzen, Pausieren oder Verwerfen.
 
 
+### Abgrenzung: Timer-Ende bei geöffneter und geschlossener Website
+- Läuft SATYRN HQ geöffnet und sichtbar, gelten die regulären Timer-Ende-Regeln des Focus-Fensters: Eine konfigurierte Pause beginnt nach Ende der Fokusphase direkt; ohne konfigurierte Pause wird der Zustand **EXPIRED** angezeigt und die nächste Fokusphase wartet auf eine ausdrückliche Aktion.
+- Läuft die Fokuszeit ab, während SATYRN HQ bzw. der Focus Mode geschlossen ist, wird beim erneuten Öffnen zunächst nur der abgelaufene Zustand wiederhergestellt. Eine vorgesehene Pause beginnt in diesem Sonderfall erst nach ausdrücklicher Bestätigung des Nutzers.
+- Diese unterschiedliche Behandlung ist beabsichtigt: Beim aktiven Arbeiten soll der reguläre Ablauf ohne unnötige Unterbrechung funktionieren; nach einer Abwesenheit soll keine Pause überraschend automatisch starten.
+- In keinem Fall wird nach Ablauf einer Fokus- oder Pausenphase automatisch eine neue Fokusphase gestartet.
+
 ### Verhalten bei Verbindungsverlust
 - Focus Mode soll während eines vorübergehenden Internet- bzw. Verbindungsverlusts lokal weiterlaufen.
 - Session-Zustand, Timerfortschritt und währenddessen erfasste Daten werden lokal zwischengespeichert.
