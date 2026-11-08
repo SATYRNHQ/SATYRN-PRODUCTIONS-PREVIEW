@@ -540,7 +540,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wird die Anzahl pro Seite geändert, beginnt die Anzeige wieder auf Seite 1, damit die Navigation eindeutig bleibt.
 
 ### Suchfunktion der Session-History
-- Die Suche berücksichtigt Session-Name und Fokusziel.
+- Die Suche berücksichtigt Session-Name und Fokusziel und funktioniert unabhängig von Groß- und Kleinschreibung.
+- Umlaute und sonstige Zeichen werden bei der Suche möglichst nutzerfreundlich behandelt; die Suche soll keine unnötigen Unterschiede durch reine Groß-/Kleinschreibung erzeugen.
 - Die Trefferliste aktualisiert sich während der Eingabe automatisch, ohne dass ein zusätzlicher Such-Button erforderlich ist.
 - Die Aktualisierung erfolgt mit einer kurzen Verzögerung nach der letzten Eingabe, damit die Suche flüssig bleibt und nicht bei jedem einzelnen Tastendruck unnötig viele Suchläufe auslöst.
 - Ein sichtbares Löschsymbol ermöglicht es, den Suchbegriff mit einem Klick zu entfernen. Ohne Suchbegriff werden alle Sessions angezeigt, die den übrigen aktiven Filtern entsprechen.
