@@ -19,6 +19,11 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Wenn an einem Tag mehrere Einträge liegen, werden ihre Titel untereinander angezeigt.
 - Die Monatsansicht bleibt bewusst schlicht und übersichtlich.
 
+## Bestätigte Entscheidungen — Tagesfenster
+- Ein Klick auf einen Tag in der Monatsansicht öffnet ein kleines Fenster mit den Terminen und Ereignissen dieses Tages.
+- Innerhalb dieses Fensters können Einträge hinzugefügt und bestehende Einträge bearbeitet werden.
+- Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
+
 ## Bestätigte Entscheidungen — Wichtigkeit / Priorität
 - Beim Anlegen eines Kalendertermins bzw. Ereignisses soll eine Wichtigkeit/Priorität festgelegt werden können.
 - Calendar übernimmt dafür das bereits in Important verwendete vierstufige Prioritätssystem. Es soll kein zweites, abweichendes Wichtigkeitssystem entstehen.
@@ -33,8 +38,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 ## Noch nicht festgelegt
 - Ob die Priorität beim Erstellen verpflichtend sein muss oder optional bleibt.
 - Die genaue Form der farblichen Kennzeichnung im Tagesfeld (z. B. farbiger Punkt, schmaler Streifen oder dezente Titel-Akzentfarbe).
-- Verhalten beim Klick auf einen Tag und die genaue Darstellung der Tagesdetails.
-- Formularfelder, Bearbeiten/Löschen, Sicherheitsabfragen und Empty State.
+- Die genaue Gestaltung des Tagesfensters sowie seine Formularfelder, Sicherheitsabfragen und Empty-State-Darstellung.
 - Suche, Filter und weitere Ansichten sind noch nicht beschlossen.
 
 ## Umsetzungsregeln
@@ -48,3 +52,4 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
 - 2026-11-08: Wichtigkeit/Priorität soll pro Kalendereintrag festgelegt werden können; die vier Stufen und Farben werden aus Important übernommen.
 - 2026-11-08: Deadlines ausdrücklich aus dem aktuellen Calendar-Umfang ausgeschlossen und auf einen späteren Zeitpunkt verschoben.
+- 2026-11-08: Klick auf einen Kalendertag öffnet ein kompaktes Tagesfenster mit den Einträgen dieses Tages; Einträge können dort hinzugefügt und bearbeitet werden.
