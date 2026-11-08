@@ -136,8 +136,8 @@
   };
   const reconcile=(s,now=Date.now())=>{
     if(!s||s.status!=='RUNNING'||!s.deadline)return;
-    if(now<s.deadline){s.remainingMs=s.deadline-now;return;}
-    if(s.phase==='focus')focusEnd(s,s.deadline);else breakEnd(s,s.deadline);
+    while(s.status==='RUNNING'&&s.deadline&&now>=s.deadline){const boundary=s.deadline;if(s.phase==='focus')focusEnd(s,boundary);else breakEnd(s,boundary);}
+    if(s.status==='RUNNING'&&s.deadline)s.remainingMs=Math.max(0,s.deadline-now);
   };
   const stopTick=()=>{if(tickHandle){clearInterval(tickHandle);tickHandle=null;}};
   const detectSystemSleep=s=>{
