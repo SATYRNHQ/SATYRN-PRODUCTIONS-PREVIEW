@@ -495,12 +495,23 @@
               <button type="button" class="fm-button fm-primary fm-start" id="fmStartPrepared" hidden>Session starten</button>
               <div class="fm-next-break" id="fmNextBreak">Der Countdown startet erst nach deiner ausdrücklichen Freigabe.</div>
             </div>
+        <section class="fm-panel glass-card fm-stats-panel" id="fmStatsPanel">
+          <div class="fm-panel-heading"><div><span class="fm-kicker">02 · LIVE STATISTICS</span><h2>Deine Fokusleistung</h2></div><span class="fm-count">ACTUAL FOCUS TIME</span></div>
+          <div class="fm-stat-grid">
+            <article><small>HEUTE</small><b id="fmStatToday">0min</b><span>Fokuszeit</span></article>
+            <article><small>DIESE WOCHE</small><b id="fmStatWeek">0min</b><span id="fmStatWeekCompare">Vorwochenvergleich</span><span id="fmStatWeekSessions">0 Sessions abgeschlossen</span></article>
+            <article><small>DIESER MONAT</small><b id="fmStatMonth">0min</b><span id="fmStatMonthCompare">Vormonatsvergleich</span><span id="fmStatMonthSessions">0 Sessions abgeschlossen</span></article>
+            <article><small>COMPLETED</small><b id="fmStatCompleted">0</b><span>Abgeschlossene Sessions</span></article>
+            <article><small>INTERRUPTED</small><b id="fmStatInterrupted">0</b><span>Heute unterbrochen</span></article><article><small>Ø COMPLETED</small><b id="fmStatAverage">0min</b><span>Ø Dauer heute</span></article>
+          </div>
+          <div class="fm-stats-lower"><div><div class="fm-panel-heading"><h3>Letzte 7 Tage</h3><span>pro Tag</span></div><div id="fmWeekChart" class="fm-week-chart"></div></div><div><div class="fm-panel-heading"><h3>Kategorien</h3><span>Gesamter Verlauf</span></div><div id="fmCategoryStats" class="fm-category-stats"></div></div></div>
+        </section>
+          </div>
             <aside class="fm-session-side">
               <div class="fm-panel-heading"><div><span class="fm-kicker">OPEN SESSIONS</span><h3>Deine Sessions</h3></div><span class="fm-count" id="fmOpenCount">0 offen</span></div>
               <div class="fm-open-list" id="fmOpenSessions"></div>
               <button type="button" class="fm-button fm-subtle fm-distraction-toggle" id="fmDistractionToggle" aria-pressed="false">Distraction-Free-Modus</button>
             </aside>
-          </div>
           <div class="fm-notes-grid">
             <details class="fm-disclosure" open><summary>Session Notes <span>Automatisch gespeichert</span></summary><textarea id="fmNotes" class="fm-input fm-notes" rows="4" placeholder="Gedanken, Ideen und wichtige Zwischenschritte …"></textarea></details>
             <details class="fm-disclosure"><summary>Distraction Log <span id="fmDistractionCount">0 Einträge</span></summary><form id="fmDistractionForm" class="fm-distraction-form"><input id="fmDistractionInput" class="fm-input" maxlength="240" placeholder="Ablenkung kurz festhalten …"><button class="fm-button" id="fmDistractionAdd" type="submit">＋ Notieren</button></form><div id="fmDistractionList"></div></details>
@@ -521,23 +532,12 @@
             </form>
           </section>
           <section class="fm-panel glass-card fm-queue-panel" id="fmQueuePanel">
-            <div class="fm-panel-heading"><div><span class="fm-kicker">03 · TASK QUEUE</span><h2>Als Nächstes</h2></div><span class="fm-count" id="fmQueueCount">0 Aufgaben</span></div>
+            <div class="fm-panel-heading fm-queue-heading"><div><span class="fm-kicker">03 · TASK QUEUE</span><h2>Als Nächstes</h2></div><div class="fm-queue-heading-actions"><span class="fm-count" id="fmQueueCount">0 Aufgaben</span><button type="button" class="fm-add-task-button" id="fmTaskAddToggle" aria-label="Aufgabe hinzufügen" title="Aufgabe hinzufügen">＋</button></div></div><form id="fmQuickTaskForm" class="fm-quick-task-form" hidden><label class="fm-quick-task-title"><span class="fm-label">Neue Aufgabe</span><input id="fmQuickTaskTitle" class="fm-input" maxlength="120" required placeholder="Was möchtest du erledigen?"></label><div class="fm-quick-task-options"><label><span class="fm-label">Priorität</span><select id="fmQuickTaskPriority" class="fm-input"><option value="urgent">Dringend</option><option value="high">Wichtig</option><option value="normal" selected>Normal</option></select></label><button type="submit" class="fm-button fm-primary">Hinzufügen</button><button type="button" class="fm-text-button" id="fmQuickTaskCancel">Abbrechen</button></div></form>
             <p class="fm-panel-intro">Offene Aufgaben aus deiner Task Queue und Important. Ziehe Einträge, um eine eigene Reihenfolge zu speichern.</p>
             <div id="fmQueueList" class="fm-queue-list"></div><details class="fm-queue-done"><summary id="fmQueueDoneSummary">Erledigte Aufgaben · 0</summary><div id="fmQueueDoneList"></div></details>
             <div class="fm-queue-footer"><button type="button" id="fmQueueDefault" class="fm-text-button">Nach Priorität sortieren</button><button type="button" id="fmQueueAdd" class="fm-text-button">Eigenes Ziel vorbereiten ＋</button></div>
           </section>
         </div>
-        <section class="fm-panel glass-card fm-stats-panel" id="fmStatsPanel">
-          <div class="fm-panel-heading"><div><span class="fm-kicker">04 · STATISTICS</span><h2>Deine Fokusleistung</h2></div><span class="fm-count">ACTUAL FOCUS TIME</span></div>
-          <div class="fm-stat-grid">
-            <article><small>HEUTE</small><b id="fmStatToday">0min</b><span>Fokuszeit</span></article>
-            <article><small>DIESE WOCHE</small><b id="fmStatWeek">0min</b><span id="fmStatWeekCompare">Vorwochenvergleich</span><span id="fmStatWeekSessions">0 Sessions abgeschlossen</span></article>
-            <article><small>DIESER MONAT</small><b id="fmStatMonth">0min</b><span id="fmStatMonthCompare">Vormonatsvergleich</span><span id="fmStatMonthSessions">0 Sessions abgeschlossen</span></article>
-            <article><small>COMPLETED</small><b id="fmStatCompleted">0</b><span>Abgeschlossene Sessions</span></article>
-            <article><small>INTERRUPTED</small><b id="fmStatInterrupted">0</b><span>Heute unterbrochen</span></article><article><small>Ø COMPLETED</small><b id="fmStatAverage">0min</b><span>Ø Dauer heute</span></article>
-          </div>
-          <div class="fm-stats-lower"><div><div class="fm-panel-heading"><h3>Letzte 7 Tage</h3><span>pro Tag</span></div><div id="fmWeekChart" class="fm-week-chart"></div></div><div><div class="fm-panel-heading"><h3>Kategorien</h3><span>Gesamter Verlauf</span></div><div id="fmCategoryStats" class="fm-category-stats"></div></div></div>
-        </section>
         <section class="fm-panel glass-card fm-recent-history"><div class="fm-panel-heading"><div><span class="fm-kicker">05 · SESSION HISTORY</span><h2>Zuletzt bearbeitet</h2></div><button type="button" class="fm-text-button" data-fm-open-history>Gesamten Verlauf öffnen ↗</button></div><div id="fmRecentHistory" class="fm-recent-history-list"><p class="fm-empty">Deine abgeschlossenen und unterbrochenen Sessions erscheinen hier.</p></div></section>
       </div>
       <section class="fm-history-view" id="fmHistoryView" hidden>
@@ -598,6 +598,9 @@
   });
   $('fmQueueList').addEventListener('dragend',()=>{taskDragId=null;$('fmQueueList').querySelectorAll('.is-dragging,.is-drop-target').forEach(x=>x.classList.remove('is-dragging','is-drop-target'));});
   $('fmQueueDefault').addEventListener('click',()=>{state.queueManual=false;state.queue=[];persist();renderQueue();});
+  $('fmTaskAddToggle').addEventListener('click',()=>{const form=$('fmQuickTaskForm');form.hidden=!form.hidden;if(!form.hidden)$('fmQuickTaskTitle').focus();});
+  $('fmQuickTaskCancel').addEventListener('click',()=>{$('fmQuickTaskForm').hidden=true;$('fmQuickTaskForm').reset();});
+  $('fmQuickTaskForm').addEventListener('submit',e=>{e.preventDefault();const title=$('fmQuickTaskTitle').value.trim();if(!title)return;const tasks=getLegacyTasks();const priority=$('fmQuickTaskPriority').value;tasks.unshift({id:Date.now(),title,priority,done:false,createdAt:Date.now()});try{localStorage.setItem(TASKS,JSON.stringify(tasks));$('fmQuickTaskForm').reset();$('fmQuickTaskForm').hidden=true;state.queueManual=false;state.queue=[];persist();renderAll();toast('Aufgabe zur Task Queue hinzugefügt.');}catch(err){toast('Aufgabe konnte nicht gespeichert werden.');}});
   $('fmQueueAdd').addEventListener('click',()=>{leaveHistory();$('fmSetupNew').click();$('fmGoal').focus();$('fmGoal').scrollIntoView({behavior:'smooth',block:'center'});});
   $('fmHistoryOpen').addEventListener('click',openHistory);$('fmHistoryBack').addEventListener('click',leaveHistory);
   $('fmHistorySearch').addEventListener('input',e=>{historyQuery=e.target.value;historyPage=1;renderActiveFilters();clearTimeout(historySearchTimer);historySearchTimer=setTimeout(renderHistory,160);});
