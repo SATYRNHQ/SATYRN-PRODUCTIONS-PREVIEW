@@ -17,6 +17,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Termine und Ereignisse werden direkt im jeweiligen Tagesfeld dargestellt.
 - Die sichtbaren Kalendereinträge zeigen ausschließlich ihren **Titel**.
 - Wenn an einem Tag mehrere Einträge liegen, werden ihre Titel untereinander angezeigt.
+- Eine Schaltfläche mit der exakten Beschriftung **„Aktuelles Datum“** springt jederzeit zum heutigen Datum bzw. in den Monat, in dem das heutige Datum liegt.
 - Die Monatsansicht bleibt bewusst schlicht und übersichtlich.
 - Beim Öffnen der Calendar-Seite wird immer automatisch der **aktuelle Monat** angezeigt; ein zuvor manuell aufgerufener anderer Monat wird nicht als Startmonat beibehalten.
 
@@ -69,7 +70,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 
 ## Änderungsprotokoll
 - 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
-- 2026-11-08: Beim Öffnen der Calendar-Seite startet die Ansicht stets im aktuellen Monat.
+- 2026-11-08: Beim Öffnen der Calendar-Seite startet die Ansicht stets im aktuellen Monat. Eine Schaltfläche „Aktuelles Datum“ springt jederzeit zurück zum heutigen Datum bzw. dessen Monat.
 - 2026-11-08: Wichtigkeit/Priorität soll pro Kalendereintrag festgelegt werden können; die vier Stufen und Farben werden aus Important übernommen.
 - 2026-11-08: Deadlines ausdrücklich aus dem aktuellen Calendar-Umfang ausgeschlossen und auf einen späteren Zeitpunkt verschoben.
 - 2026-11-08: Klick auf einen Kalendertag öffnet ein kompaktes Tagesfenster mit den Einträgen dieses Tages; Einträge können dort hinzugefügt werden.
