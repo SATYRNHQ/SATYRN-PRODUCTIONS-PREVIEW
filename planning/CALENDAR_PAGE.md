@@ -232,3 +232,5 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Pop-up liegt über dem Kalender; der Kalender im Hintergrund bleibt unverändert und wird nicht durch eine Seitenansicht oder ein neues Layout ersetzt.
 - Im Pop-up werden Titel, Datum und Uhrzeit, Priorität sowie eine vorhandene Beschreibung angezeigt.
 - Das Drei-Punkte-Menü (⋯) oben rechts bietet weiterhin **Bearbeiten** und **Löschen**.
+
+- Das Termin-Detail-Pop-up lässt sich auf drei Arten schließen: Klick auf den abgedunkelten Bereich außerhalb des Fensters, Drücken der **Escape-Taste** oder Klick auf ein **X** im Pop-up.
