@@ -64,7 +64,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Das Formular erhält drei feste Abschnitte:
   1. **Allgemeines** — Titel, optionale Beschreibung und Priorität.
   2. **Datum & Uhrzeit** — Startdatum, Enddatum sowie Uhrzeit bzw. Ganztägig-Option.
-- Beim Erstellen eines neuen Termins werden Startdatum und Enddatum standardmäßig auf das **heutige Datum** gesetzt. Damit ist zunächst ein eintägiger Termin vorausgewählt; beide Datumsfelder bleiben jederzeit manuell änderbar.
+- Beim Erstellen eines neuen Termins wird das **Startdatum** standardmäßig auf das heutige Datum gesetzt. Das **Enddatum ist optional und bleibt standardmäßig leer**; solange kein Enddatum festgelegt wird, gilt der Termin als eintägig am Startdatum. Ein optionales Enddatum kann bei mehrtägigen Terminen ergänzt werden.
 - Für Termine mit Uhrzeit werden standardmäßig **09:00 Uhr als Startzeit** und **10:00 Uhr als Endzeit** vorausgewählt. Beide Uhrzeiten bleiben manuell änderbar.
 - Die Option **„Ganztägig“** wird als Checkbox direkt im Abschnitt **„Datum & Uhrzeit“** angezeigt. Bei Aktivierung werden keine Uhrzeiten benötigt.
   3. **Wiederholung** — keine Wiederholung, wöchentlich, monatlich oder jährlich.
@@ -87,7 +87,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 ## Änderungsprotokoll
 - 2026-11-08: Die drei Formularabschnitte wurden festgelegt: **Allgemeines** (Titel, optionale Beschreibung, Priorität), **Datum & Uhrzeit** (Startdatum, Enddatum, Uhrzeit bzw. Ganztägig) und **Wiederholung** (keine, wöchentlich, monatlich, jährlich).
 - 2026-11-08: Der Abschnitt **Wiederholung** ist im Formular standardmäßig eingeklappt und wird erst geöffnet, wenn eine Wiederholung aktiviert bzw. eingerichtet werden soll.
-- 2026-11-08: Beim Erstellen eines neuen Termins sind Start- und Enddatum standardmäßig auf das heutige Datum gesetzt; beide Felder bleiben änderbar.
+- 2026-11-08: Beim Erstellen eines neuen Termins ist das Startdatum standardmäßig auf heute gesetzt. Das optionale Enddatum bleibt zunächst leer; ohne Enddatum gilt der Termin als eintägig am Startdatum.
 - 2026-11-08: Bei Terminen mit Uhrzeit sind standardmäßig 09:00 Uhr als Startzeit und 10:00 Uhr als Endzeit vorausgewählt; beide Uhrzeiten bleiben änderbar.
 - 2026-11-08: Die Option „Ganztägig“ erscheint als Checkbox direkt im Abschnitt „Datum & Uhrzeit“; bei Aktivierung werden keine Uhrzeiten benötigt.
 - 2026-11-08: Das Erstellungs- und Bearbeitungsformular wird in übersichtliche, klar voneinander getrennte Abschnitte gegliedert, statt alle Angaben als eine einzige lange Feldliste darzustellen.
