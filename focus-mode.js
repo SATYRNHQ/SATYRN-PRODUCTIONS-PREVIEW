@@ -146,7 +146,7 @@
     lastClockWall=now;lastClockMono=mono;
     if(slept&&s?.status==='RUNNING'){
       const cutoff=Math.max(lastClockWall-wallGap,s.phaseStartedAt||0);
-      if(s.phase==='focus')appendCurrentFocus(s,cutoff);
+      if(s.phase==='focus')appendCurrentFocus(s,cutoff);else if(s.phase==='break'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,cutoff);
       s.remainingMs=Math.min(s.phaseDurationMs||s.originalFocusMs,Math.max(0,(s.deadline||cutoff)-cutoff));
       s.deadline=null;s.phaseStartedAt=null;s.status='PAUSED';s.lastActiveAt=cutoff;
       event(s,'system-sleep','System-Ruhezustand erkannt · Session automatisch pausiert',cutoff);
@@ -178,7 +178,7 @@
       linkedTask:linked,linkedTaskSnapshot:linked?{id:linked.id,title:linked.title,source:linked.source||'queue',category:linked.category||'',priority:linked.priority||''}:null,
       notes:'',distractions:[],focusSegments:[],timeline:[],subtasks:[],distractionFree:false
     };
-    event(s,'created',status==='PREPARED'?'Session vorbereitet':'Session erstellt',now);state.sessions.unshift(s);activeId=s.id;persist();return s;
+    event(s,'created',status==='PREPARED'?'Session vorbereitet':'Session erstellt',now);state.sessions.unshift(s);activeId=s.id;state.activeId=s.id;persist();return s;
   };
   const startCountdown=s=>{
     if(!s||s.status!=='PREPARED'&&s.status!=='EXPIRED')return;
@@ -436,9 +436,9 @@
   const renderHistoryControls=()=>{
     $('fmHistorySearch').value=historyQuery;$('fmHistoryRange').value=historyFilters.range;$('fmHistoryFrom').value=historyFilters.from;$('fmHistoryTo').value=historyFilters.to;
     $('fmHistoryFrom').closest('.fm-history-date-fields').dataset.custom=String(historyFilters.range==='custom');
-    $('fmHistoryCategoryFilters').innerHTML=CATEGORIES.map(c=>'<label><input type="checkbox" data-fm-filter-cat="'+c.id+'" '+(historyFilters.categories.length===0||historyFilters.categories.includes(c.id)?'checked':'')+'><span>'+esc(c.name)+'</span></label>').join('');
+    $('fmHistoryCategoryFilters').innerHTML=CATEGORIES.map(c=>'<label style="color:'+c.color+'"><input type="checkbox" data-fm-filter-cat="'+c.id+'" '+(historyFilters.categories.length===0||historyFilters.categories.includes(c.id)?'checked':'')+'><span>'+esc(c.name)+'</span></label>').join('');
     $('fmHistoryStatusFilters').innerHTML=['COMPLETED','INTERRUPTED'].map(x=>'<label><input type="checkbox" data-fm-filter-status="'+x+'" '+(historyFilters.statuses.length===0||historyFilters.statuses.includes(x)?'checked':'')+'><span>'+(x==='COMPLETED'?'Abgeschlossen':'Unterbrochen')+'</span></label>').join('');
-    $('fmHistoryPriorityFilters').innerHTML=PRIORITIES.map(p=>'<label><input type="checkbox" data-fm-filter-priority="'+p.id+'" '+(historyFilters.priorities.length===0||historyFilters.priorities.includes(p.id)?'checked':'')+'><span>'+esc(p.name)+'</span></label>').join('');
+    $('fmHistoryPriorityFilters').innerHTML=PRIORITIES.map(p=>'<label style="color:'+p.color+'"><input type="checkbox" data-fm-filter-priority="'+p.id+'" '+(historyFilters.priorities.length===0||historyFilters.priorities.includes(p.id)?'checked':'')+'><span>'+esc(p.name)+'</span></label>').join('');
     renderActiveFilters();
   };
   const leaveHistory=()=>{historyOpen=false;resetHistoryFilters();$('fmHistoryView').hidden=true;$('fmMainView').hidden=false;};
