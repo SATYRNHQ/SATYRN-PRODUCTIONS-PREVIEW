@@ -48,7 +48,7 @@
   if(!state || typeof state!=='object') state={version:1,sessions:[],queue:[],queueManual:false};
   if(!Array.isArray(state.sessions))state.sessions=[];
   if(!Array.isArray(state.queue))state.queue=[];
-  let activeId=state.activeId||null, tickHandle=null, countdownHandle=null, countdownValue=0, countdownTarget=null, editingPreparedId=null, historySearchTimer=null, historyPage=1, pageSize=20, historyQuery='', historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]}, historyOpen=false, historyDetailId=null, historyDetailId=null, taskDragId=null, savingTimer=null, lastRenderedSecond=-1;
+  let activeId=state.activeId||null, tickHandle=null, countdownHandle=null, countdownValue=0, countdownTarget=null, editingPreparedId=null, historySearchTimer=null, historyPage=1, pageSize=20, historyQuery='', historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]}, historyOpen=false, historyDetailId=null, taskDragId=null, savingTimer=null, lastRenderedSecond=-1;
   let audioContext=null,lastClockWall=Date.now(),lastClockMono=performance.now(),lastPersistWall=Date.now();
   const focusPage=$('page-focus');
   if(!focusPage)return;
