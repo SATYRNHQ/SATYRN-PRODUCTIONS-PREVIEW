@@ -662,7 +662,7 @@
   state.sessions.forEach(s=>{
     if(s.status==='RUNNING'){
       const now=Date.now(),snapshotAt=Number(state.lastSavedAt)||now;
-      const remainingAtSnapshot=s.deadline?Math.max(0,s.deadline-snapshotAt):Math.max(0,s.remainingMs||0);
+      const remainingAtSnapshot=state.lastSavedAt&&s.deadline?Math.max(0,s.deadline-snapshotAt):Math.max(0,s.remainingMs||0);
       s.remainingMs=remainingAtSnapshot;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;
       if(remainingAtSnapshot<=0){s.status='EXPIRED';event(s,s.phase==='break'?'break-end':'expired',s.phase==='break'?'Pause während der Unterbrechung beendet':'Fokusphase während der Unterbrechung beendet · nächste Aktion manuell bestätigen',now);}
       else{s.status='PAUSED';event(s,'recovered','Nach Wiederöffnung als PAUSED wiederhergestellt · Ausfallzeit nicht gezählt',now);}
