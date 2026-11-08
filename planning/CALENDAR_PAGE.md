@@ -286,3 +286,7 @@ The following search behaviors are intended as a shared standard for every page 
 
 ### Create/edit form popup animation
 - The create/edit form uses the same subtle, short opening and closing animation as the event detail popup.
+
+
+### Create/edit form initial focus
+- When the create/edit form opens, automatically focus the Title field so the user can start typing immediately.
