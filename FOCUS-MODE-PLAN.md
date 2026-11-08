@@ -955,6 +955,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Öffnen und Schließen des Session-Vorbereitungsmodals verwenden dieselbe Animation und dasselbe Timing wie das Modal auf der Important-Seite.
 - Bewegungsablauf und Übergänge bleiben konsistent mit dem bestehenden SATYRN-HQ-Modalverhalten.
 
+
+### Hervorgehobene Hauptaufgabe in der Session-Vorbereitung
+- Die Hauptaufgabe steht ganz oben im Session-Vorbereitungsfenster.
+- Sie wird optisch deutlich hervorgehoben und folgt derselben visuellen Hierarchie wie die Hauptaufgabe in der aktiven Focus-Ansicht.
+- Zusätzliche Aufgaben werden darunter nachgeordnet dargestellt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
