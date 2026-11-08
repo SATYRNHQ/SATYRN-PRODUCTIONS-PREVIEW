@@ -53,6 +53,7 @@ const sidebars = [...document.querySelectorAll('.hq-side-nav')];
 sidebars.forEach(nav=>nav.classList.add('nav-dismissed'));
 const headbar = document.querySelector('.hq-top-nav');
 function showPage(name, clickedItem){
+  if(name==='projects')reloadTasks();
   changeBackground();
   // Query pages at navigation time so pages added later are included automatically.
   pages().forEach(p=>p.classList.toggle('active-page',p.id===`page-${name}`));
@@ -229,6 +230,8 @@ function renderTasks(){
     row.append(check,label,priority,remove);taskList.appendChild(row);
   });
 }
+function reloadTasks(){try{tasks=JSON.parse(localStorage.getItem('satyrn-tasks')||'[]')}catch{tasks=[]}renderTasks();}
+
 if(taskForm){taskForm.addEventListener('submit',event=>{event.preventDefault();const title=taskInput.value.trim();if(!title)return;tasks.unshift({id:Date.now(),title,priority:taskPriority.value,done:false});saveTasks();renderTasks();taskInput.value='';taskInput.focus()});renderTasks()}
 
 
