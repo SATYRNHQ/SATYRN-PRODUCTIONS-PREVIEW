@@ -1873,3 +1873,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bereits erfasste Fokuszeit aus unterbrochenen oder endgültig verworfenen Sessions bleibt berücksichtigt.
 - Beide Rekorde zeigen die erreichte Fokuszeit und das zugehörige Datum bzw. den Zeitraum.
 - Die Rekorde werden automatisch aktualisiert, sobald ein neuer Bestwert erreicht wird.
+
+
+### Rekord: meiste erfolgreich abgeschlossene Sessions an einem Tag
+- Zusätzlich wird die höchste Anzahl erfolgreich abgeschlossener Focus-Sessions innerhalb eines lokalen Kalendertages erfasst.
+- Als erfolgreich abgeschlossen gelten regulär beendete Sessions sowie Sessions, die bewusst vorzeitig mit „Complete Session“ abgeschlossen wurden.
+- Unterbrochene, lediglich pausierte oder endgültig verworfene Sessions zählen nicht als erfolgreich abgeschlossene Sessions.
+- Maßgeblich ist der lokale Kalendertag, an dem die jeweilige Session erfolgreich abgeschlossen wurde.
+- Der Rekord zeigt die höchste Anzahl und das zugehörige Datum und wird automatisch aktualisiert, sobald ein neuer Bestwert erreicht wird.
