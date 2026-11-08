@@ -1642,3 +1642,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wird eine unterbrochene oder pausierte Session nach dem Schließen der Website wieder aufgenommen, wird die verbleibende Fokuszeit anhand der tatsächlich vergangenen Zeit korrekt berechnet.
 - Die Session wird nicht automatisch fortgesetzt; die Wiederaufnahme erfolgt erst nach ausdrücklicher Auswahl durch den Nutzer.
 - Bereits erfasste Fokuszeitabschnitte bleiben erhalten und werden nicht doppelt gezählt.
+
+
+### Energiesparmodus und Standby
+- Geht der PC während einer laufenden Focus-Session in den Energiesparmodus oder Standby, wird die Session beim Aufwachen anhand der tatsächlich vergangenen Zeit aktualisiert.
+- Die verstrichene Zeit wird korrekt berücksichtigt; bereits erfasste Fokuszeitabschnitte werden nicht doppelt gezählt.
+- Die Session wird nach dem Aufwachen nicht ungefragt neu gestartet; ihr zuvor gespeicherter Status bleibt erhalten und der Nutzer entscheidet über die Fortsetzung.
