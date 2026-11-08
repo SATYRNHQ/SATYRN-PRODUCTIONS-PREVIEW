@@ -387,6 +387,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Tages- und Wochenziele haben jeweils einen Mindestwert von 5 Minuten.
 - Für Tages- und Wochenziele gibt es keine künstliche maximale Dauer. Auch Werte oberhalb der theoretisch verfügbaren Zeit eines Tages bzw. einer Woche dürfen bewusst eingestellt werden; sie bleiben dann gegebenenfalls unerreichbar, werden aber korrekt als Ziel und Fortschritt dargestellt.
 - Leere, nicht numerische, negative oder anderweitig ungültige Eingaben dürfen nicht gespeichert werden. Die Eingabe wird vor dem Speichern validiert und bei einem Fehler verständlich gekennzeichnet; der zuletzt gültige Zielwert bleibt erhalten.
+- Für eine zuverlässige Wiederherstellung werden Tages- und Wochenziele einschließlich ihrer Änderungshistorie dauerhaft gespeichert.
+- Abgeschlossene Tageswertungen werden mit dem jeweils gültigen Tagesziel, dem erreichten Fokuszeitwert, dem Ergebnis (erreicht/verfehlt) und der maßgeblichen lokalen Tages-/Zeitzoneninformation gespeichert.
+- Die aktuelle und längste Streak müssen aus den gespeicherten Tageswertungen zuverlässig wiederherstellbar sein; die gespeicherten historischen Wertungen sind dabei maßgeblich und dürfen nicht durch eine spätere Neuberechnung mit aktuellen Zielwerten überschrieben werden.
+- Die für die Zuordnung von Fokuszeit und Streak relevanten Zeitzonenwechsel bzw. Gültigkeitszeiträume werden mitgesichert, damit frühere Tage und Wochen korrekt rekonstruiert werden können.
+- Beim Wiederherstellen oder Importieren eines Backups müssen Fokuszeitsegmente und Tageswertungen idempotent übernommen werden: Wiederholter Import derselben Daten darf weder Fokuszeit noch Tage oder Streak-Beiträge duplizieren.
+- Diese Punkte definieren die fachlichen Anforderungen an die Focus-Daten. Die konkrete Backup- und Wiederherstellungsarchitektur wird websiteübergreifend an einer zentralen Stelle geplant und nicht separat im Focus Mode implementiert.
 ### Rekord für längste zusammenhängende Fokuszeit
 - In den Overall Statistics wird die längste zusammenhängende Fokuszeit als persönlicher Rekord angezeigt.
 - Angezeigt werden die erreichte Dauer und das Datum, an dem der Rekord erzielt wurde.
