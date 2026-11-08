@@ -12,6 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=93">
   <link rel="stylesheet" href="focus-mode.css?v=3">
+  <link rel="stylesheet" href="focus-reminders.css?v=1">
 </head>
 <body>
   <div class="background-slideshow" id="backgroundSlideshow" aria-hidden="true"><div class="background-slide active"></div><div class="background-slide"></div></div>
@@ -365,7 +366,7 @@
   <div class="task-footnote">Tasks are saved locally in this browser. Cloud sync and ARES-assisted planning will follow in a later phase.</div>
 </div></section>
 
-      <section class="page" id="page-settings"><div class="page-intro"><div class="eyebrow">MAKE IT YOURS</div><h1>System <em>Settings.</em></h1><p>Control your workspace and how ARES works with you.</p></div><div class="settings-list glass-card"><div class="setting-row"><div><b>ARES notifications</b><small>Allow important updates from your assistant.</small></div><label class="switch"><input type="checkbox" id="notifyToggle"><span></span></label></div><div class="setting-row"><div><b>Reduced motion</b><small>Keep transitions subtle and comfortable.</small></div><label class="switch"><input type="checkbox" id="motionToggle"><span></span></label></div><div class="setting-row"><div><b>Workspace appearance</b><small>Dark atmospheric theme.</small></div><span class="setting-value">NOCTURNE <span>✦</span></span></div><div class="setting-row"><div><b>Offline workspace</b><small>Local-first capabilities will be added in a later phase.</small></div><span class="setting-value">PLANNED</span></div></div></section>
+      <section class="page" id="page-settings"><div class="page-intro"><div class="eyebrow">MAKE IT YOURS</div><h1>System <em>Settings.</em></h1><p>Control your workspace and how ARES works with you.</p></div><div class="settings-list glass-card"><div class="setting-row"><div><b>ARES notifications</b><small>Allow important updates from your assistant.</small></div><label class="switch"><input type="checkbox" id="notifyToggle"><span></span></label></div><div class="setting-row"><div><b>Focus reminders</b><small>Dezente Hinweise nach 5, 15 und 30 Minuten Inaktivität, danach stündlich. Während laufender Focus-Sessions pausiert.</small></div><label class="switch"><input type="checkbox" id="focusReminderToggle" checked><span></span></label></div><div class="setting-row"><div><b>Reduced motion</b><small>Keep transitions subtle and comfortable.</small></div><label class="switch"><input type="checkbox" id="motionToggle"><span></span></label></div><div class="setting-row"><div><b>Workspace appearance</b><small>Dark atmospheric theme.</small></div><span class="setting-value">NOCTURNE <span>✦</span></span></div><div class="setting-row"><div><b>Offline workspace</b><small>Local-first capabilities will be added in a later phase.</small></div><span class="setting-value">PLANNED</span></div></div></section>
     </main>
   </div>
 
@@ -394,6 +395,7 @@
   <script src="important.js?v=96"></script>
   <script src="focus-demo.js?v=1"></script>
   <script src="focus-mode.js?v=4"></script>
+  <script src="focus-reminders.js?v=1"></script>
   <script src="modules.js"></script>
   <script src="finance-tools.js"></script>
   <script src="finance-intelligence.js"></script>
