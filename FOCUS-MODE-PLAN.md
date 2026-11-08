@@ -553,3 +553,6 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Gibt es keine passenden Treffer, erscheint ein klarer Hinweis, dass keine Sessions gefunden wurden. Die Filter können anschließend angepasst oder zurückgesetzt werden.
 - Die Suchfunktion bleibt im zentralen Workspace eingebettet und berücksichtigt das globale Layout mit HEADBAR sowie linker und rechter Sidebar.
 
+
+
+**Zurücksetzen beim Verlassen:** Sobald die Session History verlassen wird, werden der aktuelle Suchbegriff sowie sämtliche aktiven Filter zurückgesetzt. Beim erneuten Öffnen wird wieder die vollständige Session History angezeigt. Die feste Sortierung „Neueste zuerst“ und die gewählte Seitengröße (Standard: 20 Sessions) bleiben davon unberührt.
