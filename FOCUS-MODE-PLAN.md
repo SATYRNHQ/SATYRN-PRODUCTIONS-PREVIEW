@@ -1863,3 +1863,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Rekord kann sich während einer noch offenen Session aktualisieren und wird bei späterer Fortsetzung anhand der zusätzlich erfassten Fokuszeit weiter geprüft.
 - Auch bei einer endgültig verworfenen Session bleiben die bis dahin tatsächlich erfassten Fokuszeitabschnitte für den persönlichen Rekord berücksichtigt; das Verwerfen löscht keine bereits geleistete Fokuszeit.
 - Pausen und Unterbrechungszeiten zählen weiterhin nicht zur Rekorddauer.
+
+
+### Rekorde: meiste Fokuszeit an einem Tag und in einer Woche
+- **Meiste Fokuszeit an einem Tag:** Erfasst wird die höchste Summe tatsächlich geleisteter Fokuszeit innerhalb eines lokalen Kalendertages von 00:00 bis 23:59 Uhr.
+- **Meiste Fokuszeit in einer Woche:** Erfasst wird die höchste Summe tatsächlich geleisteter Fokuszeit innerhalb einer lokalen Kalenderwoche von Montag bis Sonntag.
+- Sessions und einzelne Fokuszeitabschnitte, die Mitternacht oder eine Kalendergrenze überschreiten, werden anhand ihrer tatsächlichen Zeitstempel anteilig dem jeweiligen Tag bzw. der jeweiligen Woche zugeordnet.
+- Pausen und Unterbrechungszeiten zählen nicht zur Rekorddauer.
+- Bereits erfasste Fokuszeit aus unterbrochenen oder endgültig verworfenen Sessions bleibt berücksichtigt.
+- Beide Rekorde zeigen die erreichte Fokuszeit und das zugehörige Datum bzw. den Zeitraum.
+- Die Rekorde werden automatisch aktualisiert, sobald ein neuer Bestwert erreicht wird.
