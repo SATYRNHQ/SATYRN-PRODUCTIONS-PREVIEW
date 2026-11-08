@@ -1093,6 +1093,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die ausgewählte Kategorie und Priorität bleiben im Session-Vorbereitungsfenster sichtbar, auch wenn der Nutzer weitere Einstellungen bearbeitet.
 - Beide Auswahlbereiche bleiben an ihrer festgelegten Position untereinander; die aktuelle Auswahl samt farblicher Hervorhebung und Haken bleibt erkennbar.
 
+
+### Kategorie und Priorität bleiben ausgeklappt
+- Kategorie- und Prioritäts-Auswahl bleiben im Session-Vorbereitungsfenster immer vollständig geöffnet.
+- Beide Bereiche sind nicht einklappbar, damit die Grundeinstellungen jederzeit sichtbar und direkt änderbar bleiben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
