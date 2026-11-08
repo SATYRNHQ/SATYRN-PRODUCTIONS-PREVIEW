@@ -931,6 +931,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Start-Schaltfläche befindet sich bei dieser Zusammenfassung; erst ihre ausdrückliche Betätigung startet die Session.
 - Die Vorbereitung bleibt bis zur Bestätigung im selben Fenster bearbeitbar.
 
+
+### Scrollverhalten und Positionierung des Vorbereitungsfensters
+- Das Vorbereitungsfenster bleibt im Viewport sauber zentriert und orientiert sich an der bestehenden Modal-Positionierung der Important-Seite.
+- Bei umfangreichen Inhalten scrollt der Inhaltsbereich innerhalb des Fensters; die Aktionsleiste mit Starten und Abbrechen bleibt unten fest sichtbar.
+- Beim Scrollen darf der Fensterinhalt nicht über die obere Headbar hinausragen bzw. vor ihr liegen: Er wird an der Headbar begrenzt und verschwindet beim Scrollen dahinter.
+- Zentrierung, Ebenenreihenfolge und Scrollverhalten sollen mit dem bestehenden Layout der Important-Seite konsistent bleiben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
