@@ -354,6 +354,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Focus Mode erhält keine eigene E-Mail-Versandfunktion für CSV- oder PDF-Exporte.
 - Nutzer laden den Bericht herunter und können ihn anschließend selbst über ihr gewünschtes E-Mail- oder Freigabeprogramm teilen.
 
+
+### Sticky Timer auf Smartphones
+- Auf Smartphones bleibt der Timer beim Scrollen sichtbar am oberen Bildschirmrand.
+- Die Sticky-Ansicht bleibt kompakt und verdeckt keine wichtigen Inhalte oder Bedienelemente.
+- Die übrigen Bereiche der Focus-Mode-Seite scrollen normal darunter.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
