@@ -913,6 +913,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wo Felder oder Daten zwischen Important und Focus verknüpft sind, werden gemeinsame Regeln und kompatible Datenstrukturen verwendet, damit Übernahme und Synchronisierung konsistent funktionieren.
 - Focus-spezifische Felder bleiben eigenständig und überschreiben keine Quelldaten der Important-Aufgabe.
 
+
+### Synchronisierung erst beim Start der Session
+- Änderungen und Einstellungen, die während der Session-Vorbereitung an übernommenen/verknüpften Aufgabendaten vorgenommen werden, werden zunächst nur als Vorbereitung behandelt.
+- Die Synchronisierung bzw. Übernahme in die aktive Verknüpfung mit Important wird erst durch ausdrückliches Starten der Session wirksam.
+- Wird die Vorbereitung abgebrochen, werden keine Änderungen an der ursprünglichen Important-Aufgabe vorgenommen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
