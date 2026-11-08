@@ -69,6 +69,15 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Die Pause kann über **Skip Break** übersprungen werden. Danach wartet der Timer auf den manuellen Start der nächsten Fokusphase.
 - Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`.
 
+### Sichtbare Timer-Endzustände im Focus-Fenster
+- Jeder Timer-Endzustand wird direkt im Focus-Fenster eindeutig angezeigt und mit einer kurzen, passenden Handlungsaufforderung verbunden.
+- **Fokuszeit abgelaufen:** Wenn eine Pause konfiguriert ist, wechselt der Timer automatisch in diese Pause. Der Übergang wird visuell deutlich angezeigt.
+- **Fokuszeit abgelaufen – keine Pause:** Es wird keine Pause gestartet. Das Focus-Fenster zeigt an, dass die nächste Fokusphase manuell gestartet werden kann.
+- **Pause abgelaufen:** Der Status wechselt auf `EXPIRED`; das Fenster zeigt klar an, dass die Pause beendet ist und auf den manuellen Start der nächsten Fokusphase wartet.
+- **Skip Break:** Nach dem Überspringen der Pause wird deutlich angezeigt, dass die nächste Fokusphase manuell gestartet werden kann.
+- Eine abgelaufene Pause oder ein abgeschlossener Fokusabschnitt startet niemals selbstständig eine weitere Fokusphase.
+- Die visuelle Meldung und die angebotene Aktion müssen zum tatsächlichen Zustand passen; es darf keine mehrdeutige oder veraltete Aufforderung angezeigt werden.
+
 ### Session-Wechsel direkt im Focus-Fenster
 - Im Focus-Fenster ist eine kompakte Liste aller offenen Sessions direkt erreichbar; zum Wechseln muss nicht erst eine andere Website-Seite geöffnet werden.
 - Jede Session zeigt ihren Namen bzw. ihr Fokusziel und einen klar erkennbaren Status: laufend, pausiert oder unterbrochen.
