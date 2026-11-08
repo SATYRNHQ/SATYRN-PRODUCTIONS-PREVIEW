@@ -209,3 +209,11 @@
 
 #page-focus .focus-distraction-free .fm-work-grid{grid-template-columns:1fr}
 #page-focus .focus-distraction-free .fm-setup-panel{max-width:760px;margin-inline:auto}
+
+#page-focus .fm-queue-done{margin-top:12px;border-top:1px solid rgba(255,255,255,.06);padding-top:10px}
+#page-focus .fm-queue-done summary{cursor:pointer;font-size:9px;color:#93a79b;list-style:none}
+#page-focus .fm-queue-done summary::-webkit-details-marker{display:none}
+#page-focus .fm-queue-done-row{display:flex;align-items:center;gap:9px;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.04);opacity:.65}
+#page-focus .fm-queue-done-row>b{font-size:10px;color:#a8b5ab;text-decoration:line-through;flex:1}
+#page-focus .fm-queue-done-row>span{color:#8fc58d}
+#page-focus .fm-queue-done-row>small{font-size:8px;color:#89998f}
