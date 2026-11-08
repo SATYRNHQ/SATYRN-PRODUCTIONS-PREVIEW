@@ -10,18 +10,18 @@
   const IMPORTANT = 'satyrn-important-v1';
   const OPEN = new Set(['PREPARED','RUNNING','PAUSED','INTERRUPTED','EXPIRED']);
   const CATEGORIES = [
-    {id:'music',name:'Music Production',color:'#55c7b7'},
-    {id:'mixing',name:'Mixing & Mastering',color:'#7da8d8'},
-    {id:'content',name:'Content Creation',color:'#b99ad8'},
-    {id:'business',name:'Business',color:'#d0b16f'},
-    {id:'learning',name:'Learning',color:'#82b78d'},
-    {id:'organisation',name:'Organisation',color:'#a7aeb5'}
+    {id:'music',name:'Music Production',color:'#78c9c1'},
+    {id:'mixing',name:'Mixing & Mastering',color:'#8db5d0'},
+    {id:'content',name:'Content Creation',color:'#b69ae2'},
+    {id:'business',name:'Business',color:'#d4b46e'},
+    {id:'learning',name:'Learning',color:'#8fc58d'},
+    {id:'organisation',name:'Organisation',color:'#c1c6c4'}
   ];
   const PRIORITIES = [
-    {id:'urgent',name:'Dringend',rank:0,color:'#d97869'},
-    {id:'important',name:'Wichtig',rank:1,color:'#d6a16c'},
-    {id:'provisional',name:'Vorläufig',rank:2,color:'#80a9c9'},
-    {id:'indefinite',name:'Unbefristet',rank:3,color:'#85aa8a'}
+    {id:'urgent',name:'Dringend',rank:0,color:'#ed7772'},
+    {id:'important',name:'Wichtig',rank:1,color:'#e7a45d'},
+    {id:'provisional',name:'Vorläufig',rank:2,color:'#83aee7'},
+    {id:'indefinite',name:'Unbefristet',rank:3,color:'#8fc58d'}
   ];
   const PRESETS = [
     {id:'pomodoro',name:'Pomodoro',focus:25,break:5},
@@ -317,8 +317,8 @@
       if(q&&!hay.includes(q))return false;
       const lastEvent=(s.timeline||[]).slice().sort((a,b)=>b.at-a.at)[0],last=lastEvent?.at||s.createdAt||0,date=lastEvent?.localDate||dateKey(last);
       if(historyFilters.range==='today'&&date!==localISO(new Date()))return false;
-      if(historyFilters.range==='7'&&last<Date.now()-7*86400000)return false;
-      if(historyFilters.range==='30'&&last<Date.now()-30*86400000)return false;
+      if(historyFilters.range==='7'&&date<addDaysKey(localISO(new Date()),-6))return false;
+      if(historyFilters.range==='30'&&date<addDaysKey(localISO(new Date()),-29))return false;
       if(historyFilters.range==='month'&&date.slice(0,7)!==localISO(new Date()).slice(0,7))return false;
       if(historyFilters.range==='custom'&&((historyFilters.from&&date<historyFilters.from)||(historyFilters.to&&date>historyFilters.to)))return false;
       if(historyFilters.categories.length&&!historyFilters.categories.includes(s.category))return false;
@@ -385,7 +385,7 @@
   const finish=(s,now=Date.now())=>{
     if(!s)return;
     reconcile(s,now);
-    if(s.status==='RUNNING'&&s.phase==='focus')appendCurrentFocus(s,now);
+    if(s.status==='RUNNING'&&s.phase==='focus')appendCurrentFocus(s,now);else if(s.status==='RUNNING'&&s.phase==='break'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
     s.status='COMPLETED';s.deadline=null;s.phaseStartedAt=null;s.remainingMs=0;s.completedAt=now;s.completedLocalDate=dateInZone(now,zone());s.lastActiveAt=now;s.lastActiveLocalDate=s.completedLocalDate;
     event(s,'completed','Session erfolgreich abgeschlossen',now);
     updateTaskTime(s);
@@ -413,7 +413,7 @@
     $('fmHistoryTimeline').innerHTML=(s.timeline||[]).concat((s.focusSegments||[]).map(seg=>({type:'focus-segment',label:'Fokusabschnitt · '+duration(seg.durationMs),at:seg.start,end:seg.end,zone:seg.timezone})),(s.breakSegments||[]).map(seg=>({type:'break-segment',label:'Pausenabschnitt · '+duration(seg.durationMs),at:seg.start,end:seg.end,zone:seg.timezone}))).sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(e.localDate||dateKey(e.at))+' · '+(e.localTime||timeLabel(e.at))+(e.end?' – '+(e.localEnd||timeLabel(e.end)):'')+' · '+esc(e.zone||'')+'</small></span></div>').join('');
     $('fmHistoryDetailNotes').textContent=s.notes||'Keine Notizen gespeichert.';
     $('fmHistoryDetailDistractions').innerHTML=(s.distractions||[]).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text)+'</b></span><span><button type="button" data-fm-history-edit-distraction="'+esc(d.id)+'">Bearbeiten</button><button type="button" data-fm-history-delete-distraction="'+esc(d.id)+'">×</button></span></div>').join('')||'<p class="fm-empty">Keine Ablenkungen protokolliert.</p>';
-    $('fmHistoryDetailLink').textContent=s.linkedTaskSnapshot?(s.linkedTaskSnapshot.title+' · '+(s.linkedTaskSnapshot.source==='important'?'Important':'Task Queue')):'Kein Aufgabenlink';
+    $('fmHistoryDetailLink').textContent=s.linkedTaskSnapshot?(s.linkedTaskSnapshot.title+' · '+(s.linkedTaskSnapshot.source==='important'?'Important':'Task Queue')):'Kein Aufgabenlink';const linkedExists=s.linkedTaskSnapshot&&(s.linkedTaskSnapshot.source==='important'?getImportant().some(x=>String(x.id)===String(s.linkedTaskSnapshot.id)):getLegacyTasks().some(x=>String(x.id)===String(s.linkedTaskSnapshot.id)));$('fmHistoryOpenLinked').hidden=!linkedExists;$('fmHistoryOpenLinked').dataset.page=s.linkedTaskSnapshot?.source==='important'?'important':'projects';
     $('fmHistoryDetailDialog').hidden=false;
   };
   const resetHistoryFilters=()=>{historyQuery='';$('fmHistoryFrom').closest('.fm-history-date-fields').dataset.custom='false';historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]};historyPage=1;renderHistoryControls();renderHistory();};
@@ -520,7 +520,7 @@
         <div class="fm-history-pagination"><button type="button" id="fmHistoryPrev" class="fm-button fm-subtle">Zurück</button><span id="fmHistoryPageNumbers"></span><span id="fmHistoryPageLabel">Seite 1 / 1</span><button type="button" id="fmHistoryNext" class="fm-button fm-subtle">Weiter</button></div>
       </section>
     </div>
-    <div class="fm-dialog-backdrop" id="fmHistoryDetailDialog" hidden><section class="fm-dialog fm-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryDetailTitle"><div class="fm-dialog-head"><div><span class="fm-kicker">SESSION DETAILS</span><h2 id="fmHistoryDetailTitle"></h2><p id="fmHistoryDetailMeta"></p></div><button type="button" class="fm-dialog-close" data-fm-close-dialog>×</button></div><div class="fm-detail-stats" id="fmHistoryDetailStats"></div><h3>Zeitlicher Verlauf</h3><div class="fm-timeline" id="fmHistoryTimeline"></div><details class="fm-disclosure"><summary>Session Notes</summary><p id="fmHistoryDetailNotes"></p></details><details class="fm-disclosure"><summary>Distraction Log</summary><div id="fmHistoryDetailDistractions"></div></details><div class="fm-history-linked"><small>VERKNÜPFTE AUFGABE</small><b id="fmHistoryDetailLink">Keine Aufgabenverknüpfung</b></div><div class="fm-dialog-actions"><button type="button" class="fm-button" id="fmHistoryUseTemplate">Als Vorlage verwenden</button><button type="button" class="fm-button fm-subtle" id="fmHistoryEdit">Details bearbeiten</button><button type="button" class="fm-button fm-danger-ghost" id="fmHistoryDelete">Session löschen</button><button type="button" class="fm-button fm-subtle" data-fm-close-dialog>Schließen</button></div></section></div>
+    <div class="fm-dialog-backdrop" id="fmHistoryDetailDialog" hidden><section class="fm-dialog fm-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryDetailTitle"><div class="fm-dialog-head"><div><span class="fm-kicker">SESSION DETAILS</span><h2 id="fmHistoryDetailTitle"></h2><p id="fmHistoryDetailMeta"></p></div><button type="button" class="fm-dialog-close" data-fm-close-dialog>×</button></div><div class="fm-detail-stats" id="fmHistoryDetailStats"></div><h3>Zeitlicher Verlauf</h3><div class="fm-timeline" id="fmHistoryTimeline"></div><details class="fm-disclosure"><summary>Session Notes</summary><p id="fmHistoryDetailNotes"></p></details><details class="fm-disclosure"><summary>Distraction Log</summary><div id="fmHistoryDetailDistractions"></div></details><div class="fm-history-linked"><small>VERKNÜPFTE AUFGABE</small><b id="fmHistoryDetailLink">Keine Aufgabenverknüpfung</b><button type="button" id="fmHistoryOpenLinked" hidden>Aufgabe öffnen ↗</button></div><div class="fm-dialog-actions"><button type="button" class="fm-button" id="fmHistoryUseTemplate">Als Vorlage verwenden</button><button type="button" class="fm-button fm-subtle" id="fmHistoryEdit">Details bearbeiten</button><button type="button" class="fm-button fm-danger-ghost" id="fmHistoryDelete">Session löschen</button><button type="button" class="fm-button fm-subtle" data-fm-close-dialog>Schließen</button></div></section></div>
     <div class="fm-dialog-backdrop" id="fmHistoryEditDialog" hidden><section class="fm-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryEditHeading"><div class="fm-dialog-head"><div><span class="fm-kicker">EDIT SESSION</span><h2 id="fmHistoryEditHeading">Details bearbeiten</h2></div><button type="button" class="fm-dialog-close" data-fm-close-edit>×</button></div><form id="fmHistoryEditForm"><label class="fm-label" for="fmHistoryEditName">Session-Name</label><input id="fmHistoryEditName" class="fm-input" required><label class="fm-label" for="fmHistoryEditGoal">Fokusziel</label><input id="fmHistoryEditGoal" class="fm-input" required><div class="fm-form-two"><div><label class="fm-label" for="fmHistoryEditCategory">Kategorie</label><select id="fmHistoryEditCategory" class="fm-input"><option value="music" selected>Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></div><div><label class="fm-label" for="fmHistoryEditPriority">Priorität</label><select id="fmHistoryEditPriority" class="fm-input"><option value="urgent">Critical</option><option value="important" selected>High</option><option value="provisional">Normal</option><option value="indefinite">Low</option></select></div></div><label class="fm-label" for="fmHistoryEditNotes">Notizen</label><textarea id="fmHistoryEditNotes" class="fm-input" rows="5"></textarea><div class="fm-dialog-actions"><button class="fm-button fm-primary" type="submit">Änderungen speichern</button><button type="button" class="fm-button fm-subtle" data-fm-close-edit>Abbrechen</button></div></form></section></div>`;
     const placeholder=focusPage.innerHTML;
     const marker=placeholder.indexOf('<div class="page-intro">');
@@ -582,6 +582,7 @@
   $('fmHistoryEdit').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(s)editHistory(s);});
   $('fmHistoryEditForm').addEventListener('submit',e=>{e.preventDefault();const s=state.sessions.find(x=>x.id===historyDraftId);if(!s)return;s.name=$('fmHistoryEditName').value.trim();s.goal=$('fmHistoryEditGoal').value.trim();s.category=$('fmHistoryEditCategory').value;s.priority=$('fmHistoryEditPriority').value;s.notes=$('fmHistoryEditNotes').value;event(s,'details-edited','Sessiondetails nachträglich bearbeitet');persist();$('fmHistoryEditDialog').hidden=true;showHistoryDetail(s.id);renderHistory();});
   $('fmHistoryUseTemplate').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(s)useTemplate(s);closeHistoryDetail();});
+  $('fmHistoryOpenLinked').addEventListener('click',()=>{const page=$('fmHistoryOpenLinked').dataset.page;if(page&&typeof window.showPage==='function')window.showPage(page);});
   $('fmHistoryDelete').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(!s||!confirm('Diese Session und ihr History-Protokoll endgültig löschen?'))return;state.sessions=state.sessions.filter(x=>x.id!==s.id);persist();closeHistoryDetail();renderHistory();renderStats();});
   document.addEventListener('keydown',e=>{
     const tag=(e.target?.tagName||'').toLowerCase(),typing=['input','textarea','select'].includes(tag)||e.target?.isContentEditable;
