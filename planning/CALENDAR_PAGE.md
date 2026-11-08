@@ -65,6 +65,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
   1. **Allgemeines** — Titel, optionale Beschreibung und Priorität.
   2. **Datum & Uhrzeit** — Startdatum, Enddatum sowie Uhrzeit bzw. Ganztägig-Option.
 - Beim Erstellen eines neuen Termins werden Startdatum und Enddatum standardmäßig auf das **heutige Datum** gesetzt. Damit ist zunächst ein eintägiger Termin vorausgewählt; beide Datumsfelder bleiben jederzeit manuell änderbar.
+- Für Termine mit Uhrzeit werden standardmäßig **09:00 Uhr als Startzeit** und **10:00 Uhr als Endzeit** vorausgewählt. Beide Uhrzeiten bleiben manuell änderbar.
   3. **Wiederholung** — keine Wiederholung, wöchentlich, monatlich oder jährlich.
 - Der Abschnitt **Wiederholung** ist standardmäßig eingeklappt. Er wird erst aufgeklappt, wenn eine Wiederholung aktiviert bzw. eingerichtet werden soll; bei „Keine Wiederholung“ bleibt er geschlossen.
 - Die genaue Gestaltung des Tagesfensters und seiner Empty-State-Darstellung.
@@ -86,6 +87,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Die drei Formularabschnitte wurden festgelegt: **Allgemeines** (Titel, optionale Beschreibung, Priorität), **Datum & Uhrzeit** (Startdatum, Enddatum, Uhrzeit bzw. Ganztägig) und **Wiederholung** (keine, wöchentlich, monatlich, jährlich).
 - 2026-11-08: Der Abschnitt **Wiederholung** ist im Formular standardmäßig eingeklappt und wird erst geöffnet, wenn eine Wiederholung aktiviert bzw. eingerichtet werden soll.
 - 2026-11-08: Beim Erstellen eines neuen Termins sind Start- und Enddatum standardmäßig auf das heutige Datum gesetzt; beide Felder bleiben änderbar.
+- 2026-11-08: Bei Terminen mit Uhrzeit sind standardmäßig 09:00 Uhr als Startzeit und 10:00 Uhr als Endzeit vorausgewählt; beide Uhrzeiten bleiben änderbar.
 - 2026-11-08: Das Erstellungs- und Bearbeitungsformular wird in übersichtliche, klar voneinander getrennte Abschnitte gegliedert, statt alle Angaben als eine einzige lange Feldliste darzustellen.
 - 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Wochentage werden abgekürzt (Mo–So); Tageszahlen des angezeigten Monats werden gegenüber den angrenzenden Tagen aus Vor- und Folgemonat hervorgehoben; Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
 - 2026-11-08: Der heutige Tag erhält zusätzlich eine dezente farbige Hervorhebung in der Monatsansicht.
