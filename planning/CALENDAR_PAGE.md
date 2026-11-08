@@ -13,6 +13,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Die Hauptansicht ist eine klassische Monatsansicht.
 - Es gibt keine zusätzliche Seitenleiste mit Termindetails und keine zusätzlichen Informationskarten als zweite Hauptansicht.
 - Die Monatsansicht hat sieben Spalten und beginnt mit Montag.
+- Die Wochentage werden platzsparend abgekürzt dargestellt: **Mo, Di, Mi, Do, Fr, Sa, So**.
 - Der angezeigte Monat kann über Vor- und Zurück-Steuerung gewechselt werden.
 - Termine und Ereignisse werden direkt im jeweiligen Tagesfeld dargestellt.
 - Die sichtbaren Kalendereinträge zeigen ausschließlich ihren **Titel**.
@@ -69,7 +70,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
-- 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
+- 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Wochentage werden abgekürzt (Mo–So); Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
 - 2026-11-08: Beim Öffnen der Calendar-Seite startet die Ansicht stets im aktuellen Monat. Eine Schaltfläche „Aktuelles Datum“ springt jederzeit zurück zum heutigen Datum bzw. dessen Monat.
 - 2026-11-08: Wichtigkeit/Priorität soll pro Kalendereintrag festgelegt werden können; die vier Stufen und Farben werden aus Important übernommen.
 - 2026-11-08: Deadlines ausdrücklich aus dem aktuellen Calendar-Umfang ausgeschlossen und auf einen späteren Zeitpunkt verschoben.
