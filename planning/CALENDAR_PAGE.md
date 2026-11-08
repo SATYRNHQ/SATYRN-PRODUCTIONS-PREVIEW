@@ -180,5 +180,6 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Prioritätsfilter werden als neutrale Checkboxen mit kleinen farbigen Markierungen dargestellt. Die Checkboxen bleiben optisch zurückhaltend; die Markierungen verwenden die jeweiligen Prioritätsfarben (Dringend Rot, Wichtig Orange, Vorläufig Blau, Unbefristet Grün). „Ohne Priorität“ erhält keine zusätzliche Prioritätsfarbe.
 
 - Title search is case-insensitive: uppercase and lowercase letters are treated equally.
+- Search normalizes German umlauts and common transliterations: „ä“ matches „ae“, „ö“ matches „oe“, „ü“ matches „ue“, and „ß“ matches „ss“ (e.g. „Munchen“ finds „München“).
 - Multiple search terms are supported: entries match when they contain all entered terms, even if the terms are not adjacent (e.g. „Geburt Mama“ finds „Geburtstag Mama“).
 - Title search uses partial matching: entering part of a title (e.g. „Geburts“) also finds matching entries such as „Geburtstag Mama“.
