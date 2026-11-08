@@ -222,7 +222,7 @@
       if(s.status==='RUNNING')buttons.push('<button class="fm-button fm-primary" data-fm-action="pause">Pause</button>');
       if(s.status==='PAUSED')buttons.push('<button class="fm-button fm-primary" data-fm-action="resume">Resume</button>');
       if(s.status==='INTERRUPTED')buttons.push('<button class="fm-button fm-primary" data-fm-action="resume">Resume</button>');
-      if(s.status==='PREPARED'||s.status==='EXPIRED')start.hidden=false;else start.hidden=true;
+      if(s.status==='PREPARED'||s.status==='EXPIRED')start.hidden=false;else start.hidden=true;start.disabled=countdownTarget===s.id;
       if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break')buttons.push('<button class="fm-button" data-fm-action="skip">Skip Break</button>');
       if(s.status==='RUNNING'&&s.phase==='focus'||s.status==='PAUSED'&&s.phase==='focus')buttons.push('<button class="fm-button fm-subtle" data-fm-action="reset">Reset</button>');
       if(['RUNNING','PAUSED'].includes(s.status))buttons.push('<button class="fm-button fm-subtle" data-fm-action="complete">Complete Session</button>');
@@ -249,17 +249,18 @@
   };
   const renderQueue=()=>{
     const target=$('fmQueueList');if(!target)return;
-    const tasks=getLegacyTasks().filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,priority:t.priority==='urgent'?'urgent':t.priority==='high'?'important':'provisional',source:'task',done:false,createdAt:Number(t.id)||0}));
-    const important=getImportant().map(t=>({id:String(t.id),title:t.title,priority:t.priority||'provisional',source:'important',category:t.category,done:false,createdAt:new Date(t.created||Date.now()).getTime()}));
-    let list=[...state.queue];
-    const seen=new Set(list.map(x=>x.id));
-    [...tasks,...important].forEach(t=>{if(!seen.has(t.id))list.push(t)});
-    if(!state.queueManual)list.sort((a,b)=>pri(a.priority).rank-pri(b.priority).rank||(a.createdAt||0)-(b.createdAt||0));
-    else list.sort((a,b)=>(a.order||0)-(b.order||0));
-    $('fmQueueCount').textContent=tasks.length+important.length+' verfügbare Einträge';
-    target.innerHTML=list.length?list.map((t,i)=>{
+    const tasks=getLegacyTasks().filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,priority:t.priority==='urgent'?'urgent':t.priority==='high'?'important':'provisional',source:'task',done:false,createdAt:Number(t.id)||0,focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0}));
+    const important=getImportant().map(t=>({id:String(t.id),title:t.title,priority:t.priority||'provisional',source:'important',category:t.category,done:false,createdAt:new Date(t.created||Date.now()).getTime(),focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0}));
+    let list=[...tasks,...important];
+    if(state.queueManual){
+      const order=new Map(state.queue.map(x=>[String(x.id),Number(x.order)||0]));
+      list.sort((a,b)=>(order.has(a.id)?order.get(a.id):Number.MAX_SAFE_INTEGER)-(order.has(b.id)?order.get(b.id):Number.MAX_SAFE_INTEGER)||pri(a.priority).rank-pri(b.priority).rank);
+    }else list.sort((a,b)=>pri(a.priority).rank-pri(b.priority).rank||(a.createdAt||0)-(b.createdAt||0));
+    $('fmQueueCount').textContent=list.length+' verfügbare Einträge';
+    target.innerHTML=list.length?list.map(t=>{
       const linked=current()?.linkedTaskSnapshot?.id===t.id;
-      return '<div class="fm-queue-row" draggable="true" data-fm-drag="'+esc(t.id)+'"><span class="fm-drag-handle" aria-hidden="true">⠿</span><span class="fm-queue-copy"><b>'+esc(t.title)+'</b><small>'+esc(t.source==='important'?'Important':'Task Queue')+' · '+esc(pri(t.priority).name)+'</small></span><button type="button" class="fm-queue-assign '+(linked?'is-linked':'')+'" data-fm-assign="'+esc(t.id)+'" data-fm-source="'+t.source+'">'+(linked?'Zugeordnet':'Als Fokusziel')+'</button></div>';
+      const work=t.focusSessions?'<small class="fm-task-work">Worked in Focus · '+t.focusSessions+' Sessions · '+duration(t.focusTimeMs)+'</small>':'';
+      return '<div class="fm-queue-row" draggable="true" data-fm-drag="'+esc(t.id)+'"><span class="fm-drag-handle" aria-hidden="true">⠿</span><span class="fm-queue-copy"><b>'+esc(t.title)+'</b><small>'+esc(t.source==='important'?'Important':'Task Queue')+' · '+esc(pri(t.priority).name)+'</small>'+work+'</span><button type="button" class="fm-queue-assign '+(linked?'is-linked':'')+'" data-fm-assign="'+esc(t.id)+'" data-fm-source="'+t.source+'">'+(linked?'Zugeordnet':'Als Fokusziel')+'</button></div>';
     }).join(''):'<p class="fm-empty">Keine offenen Aufgaben gefunden. Du kannst unten ein eigenes Fokusziel vorbereiten oder auf Important Aufgaben ergänzen.</p>';
   };
   const segmentsInRange=(start,end)=>state.sessions.flatMap(s=>(s.focusSegments||[]).filter(seg=>seg.start<end&&seg.end>start).map(seg=>({...seg,session:s})));
@@ -275,11 +276,11 @@
     $('fmStatToday').textContent=duration(dayMs);$('fmStatWeek').textContent=duration(weekMs);$('fmStatMonth').textContent=duration(monthMs);
     $('fmStatCompleted').textContent=String(completedToday.length);$('fmStatInterrupted').textContent=String(interruptedToday.length);$('fmStatAverage').textContent=duration(avgToday);
     $('fmStatWeekCompare').textContent=(prevWeekMs?((weekMs-prevWeekMs)/prevWeekMs*100>=0?'+':'')+((weekMs-prevWeekMs)/prevWeekMs*100).toFixed(0)+' %':'Noch kein Vorwochenvergleich');
-    $('fmStatMonthCompare').textContent=prevMonthMs?((monthMs-prevMonthMs)/prevMonthMs*100>=0?'+':'')+((monthMs-prevMonthMs)/prevMonthMs*100).toFixed(0)+' % zum Vormonat':'Noch kein Vormonatsvergleich';
-    const days=[];for(let i=6;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()-i),a=dayStart(d),b=a+86400000;const ms=segmentsInRange(a,b).reduce((n,x)=>n+Math.max(0,Math.min(x.end,b)-Math.max(x.start,a)),0);days.push({label:d.toLocaleDateString('de-DE',{weekday:'short'}),ms});}
+    $('fmStatMonthCompare').textContent='Ø / Tag '+duration(monthMs/Math.max(1,now.getDate()))+' · '+(prevMonthMs?((monthMs-prevMonthMs)/prevMonthMs*100>=0?'+':'')+((monthMs-prevMonthMs)/prevMonthMs*100).toFixed(0)+' % zum Vormonat':'kein Vormonatsvergleich');
+    const days=[];for(let i=6;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()-i),a=dayStart(d),b=a+86400000;let ms=segmentsInRange(a,b).reduce((n,x)=>n+Math.max(0,Math.min(x.end,b)-Math.max(x.start,a)),0);if(live&&live.status==='RUNNING'&&live.phase==='focus')ms+=overlap(a,b);days.push({label:d.toLocaleDateString('de-DE',{weekday:'short'}),ms});}
     const max=Math.max(1,...days.map(x=>x.ms));
     $('fmWeekChart').innerHTML=days.map(x=>'<div class="fm-chart-col"><span>'+duration(x.ms)+'</span><i><b style="height:'+Math.max(2,x.ms/max*100)+'%"></b></i><small>'+x.label+'</small></div>').join('');
-    const categoryData=CATEGORIES.map(c=>({c,ms:state.sessions.flatMap(s=>(s.focusSegments||[]).map(seg=>({category:s.category,ms:seg.durationMs}))).filter(x=>x.category===c.id).reduce((n,x)=>n+x.ms,0)})).filter(x=>x.ms>0).sort((a,b)=>b.ms-a.ms);
+    const categoryData=CATEGORIES.map(c=>({c,ms:state.sessions.flatMap(s=>(s.focusSegments||[]).map(seg=>({category:s.category,ms:seg.durationMs}))).filter(x=>x.category===c.id).reduce((n,x)=>n+x.ms,0)+(live&&live.status==='RUNNING'&&live.phase==='focus'&&live.category===c.id?liveExtra:0)})).filter(x=>x.ms>0).sort((a,b)=>b.ms-a.ms);
     const catTotal=categoryData.reduce((n,x)=>n+x.ms,0);
     $('fmCategoryStats').innerHTML=categoryData.length?categoryData.map(x=>'<div class="fm-category-stat"><span><i style="background:'+x.c.color+'"></i>'+esc(x.c.name)+'</span><b>'+duration(x.ms)+'</b><small>'+Math.round(x.ms/catTotal*100)+' %</small></div>').join(''):'<p class="fm-empty">Kategorien-Auswertung erscheint nach den ersten Fokusabschnitten.</p>';
   };
@@ -314,7 +315,7 @@
         return heading+'<button type="button" class="fm-history-row" data-fm-history-detail="'+esc(s.id)+'"><span class="fm-history-state '+s.status.toLowerCase()+'">'+(s.status==='COMPLETED'?'✓':'Ⅱ')+'</span><span class="fm-history-copy"><b>'+esc(s.name)+'</b><small>'+esc(s.goal)+' · '+esc(cat(s.category).name)+' · '+dateLabel(date)+'</small></span><span class="fm-history-duration">'+duration(totalFocus(s))+'</span><span class="fm-history-badge">'+s.status+'</span></button>';
       }).join('');
     }
-    $('fmHistoryPageLabel').textContent='Seite '+historyPage+' / '+pages;
+    $('fmHistoryPageLabel').textContent='Seite '+historyPage+' / '+pages;$('fmHistoryFilterSummary').textContent='Neueste zuerst · '+list.length+' Treffer';
     $('fmHistoryPageNumbers').innerHTML=Array.from({length:pages},(_,i)=>i+1).map(n=>'<button type="button" class="fm-page-number '+(n===historyPage?'active':'')+'" data-fm-page="'+n+'">'+n+'</button>').join('');
     $('fmHistoryPrev').disabled=historyPage<=1;$('fmHistoryNext').disabled=historyPage>=pages;
     $('fmHistoryPageSize').value=String(pageSize);
@@ -348,8 +349,14 @@
   };
   const updateTaskTime= s=>{
     if(!s.linkedTaskSnapshot)return;
-    const task=getLegacyTasks().find(t=>String(t.id)===String(s.linkedTaskSnapshot.id));
-    if(task){task.focusTimeMs=(task.focusTimeMs||0)+totalFocus(s);task.focusSessions=(task.focusSessions||0)+1;try{localStorage.setItem(TASKS,JSON.stringify(getLegacyTasks().map(t=>t.id===task.id?task:t)))}catch{}}
+    const snap=s.linkedTaskSnapshot;
+    if(snap.source==='task'){
+      const list=getLegacyTasks(),task=list.find(t=>String(t.id)===String(snap.id));
+      if(task){task.focusTimeMs=(task.focusTimeMs||0)+totalFocus(s);task.focusSessions=(task.focusSessions||0)+1;try{localStorage.setItem(TASKS,JSON.stringify(list))}catch{}}
+    }else if(snap.source==='important'){
+      const raw=read(IMPORTANT,{entries:[]}),entries=Array.isArray(raw)?raw:(raw.entries||[]),task=entries.find(t=>String(t.id)===String(snap.id));
+      if(task){task.focusTimeMs=(task.focusTimeMs||0)+totalFocus(s);task.focusSessions=(task.focusSessions||0)+1;try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}))}catch{}}
+    }
   };
   const finish=(s,now=Date.now())=>{
     if(!s)return;
