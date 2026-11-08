@@ -114,6 +114,17 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Animationen dürfen Timersteuerung, Eingaben oder andere Bedienaktionen niemals verzögern. Die tatsächliche Zeitmessung und Zustandslogik sind unabhängig von Animationen.
 - Die Systemeinstellung für reduzierte Bewegung (`prefers-reduced-motion`) wird respektiert. Bei aktivierter Reduzierung werden Animationen minimiert oder durch unmittelbare, gut erkennbare Zustandswechsel ersetzt.
 
+
+### Visuelle Anordnung der Session-Steuerung
+- **Pause / Resume:** Die primäre Timeraktion ist der größte und auffälligste Button. Sie befindet sich unmittelbar unter oder neben der Zeitanzeige und ist mit einem Klick erreichbar.
+- **Complete Session:** Bleibt gut sichtbar, ist aber visuell gegenüber Pause/Resume nachrangig. Die Aktion schließt die Session erfolgreich ab.
+- **Interrupt:** Wird als eigenständige Aktion dargestellt und klar von **Complete Session** unterschieden, damit eine Unterbrechung nicht mit einem erfolgreichen Abschluss verwechselt wird.
+- **Reset:** Wird zurückhaltender gestaltet und räumlich von den regulären Hauptaktionen getrennt. Vor dem Zurücksetzen ist eine Sicherheitsabfrage erforderlich.
+- **Skip Break:** Wird nur während einer laufenden oder manuell pausierten Pause angeboten.
+- **Verwerfen:** Wird ausschließlich für eine unterbrochene Session angeboten und erfordert eine separate Sicherheitsabfrage.
+- Die verfügbaren Aktionen richten sich jederzeit nach dem aktuellen Session-Status. Nicht zulässige oder nicht sinnvolle Aktionen werden nicht angezeigt bzw. sind nicht bedienbar.
+- Die visuelle Hierarchie macht die wichtigste Aktion sofort erkennbar, verhindert Verwechslungen und reduziert das Risiko versehentlicher Datenverluste.
+
 ### Timersteuerung und Ablauf
 - Die primären Aktionen sind direkt im Focus-Fenster erreichbar. Sichtbarkeit und Verfügbarkeit richten sich nach dem aktuellen Session-Status.
 - Verfügbare Aktionen je Zustand:
