@@ -1104,6 +1104,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jeder Button zeigt klar die Fokusdauer und die zugehörige Pausenzeit.
 - Die Auswahl des eigenen „Custom“-Presets bleibt ebenfalls schlicht und konsistent.
 
+
+### Individuelle Fokus- und Pausendauer
+- Beim Preset „Custom“ können Fokusdauer und Pausendauer in zwei separaten Eingabefeldern frei eingestellt werden.
+- Auch bei allen festen Presets bleibt die Pausendauer individuell änderbar; die voreingestellte Pausenzeit dient jeweils nur als Startwert.
+- Die Fokusdauer der festen Presets bleibt durch die Preset-Auswahl vorgegeben. Für eine frei wählbare Fokusdauer wird „Custom“ verwendet.
+- Änderungen gelten für die neu vorbereitete Session und verändern nicht die gespeicherten Preset-Standardwerte.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
