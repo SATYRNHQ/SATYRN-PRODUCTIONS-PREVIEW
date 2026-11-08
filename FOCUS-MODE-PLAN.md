@@ -1189,6 +1189,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Stunden und Minuten sind direkt bearbeitbar; die Eingabe bleibt auch für kurze Dauern gut lesbar.
 - Bei Auswahl „Keine Pause“ wird die Pauseneingabe deaktiviert beziehungsweise ausgeblendet.
 
+
+### Minuten-Schritte bei der Zeiteingabe
+- Minutenwerte für Fokus- und Pausendauer werden in 5-Minuten-Schritten eingestellt.
+- Die Stunden bleiben separat einstellbar; die Zeitanzeige verwendet weiterhin das kompakte HH:MM-Format.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
