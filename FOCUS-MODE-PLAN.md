@@ -1275,6 +1275,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Hervorhebung verwendet einen farblich passenden Rahmen und ein kleines Häkchen.
 - Bei eigenen Presets orientiert sich die Hervorhebung an der individuell gewählten Preset-Farbe; bei Standard-Presets an deren Gestaltung.
 
+
+### Hover-Effekt für Preset-Buttons
+- Beim Darüberfahren mit der Maus erhalten Preset-Buttons einen dezenten Hover-Effekt und werden leicht heller.
+- Der Effekt bleibt zurückhaltend und passt zur jeweiligen Preset-Farbe.
+- Auf Touch-Geräten wird kein Hover-Zustand vorausgesetzt; Auswahl und Hervorhebung funktionieren dort direkt über Antippen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
