@@ -250,3 +250,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Drei-Punkte-Menü (⋯) mit den Aktionen **Bearbeiten** und **Löschen** wird optisch und in seiner Bedienung **genau wie das entsprechende Menü im Important-Fenster** gestaltet. Calendar übernimmt hierfür die bestehende Darstellung und Interaktion, statt ein eigenes Menüdesign einzuführen.
 
 - 2026-11-09: Das Drei-Punkte-Menü der Termin-Detailansicht (Bearbeiten/Löschen) wird exakt wie das entsprechende Menü im Important-Fenster gestaltet und bedient.
+
+
+## Ergänzung — Sicherheitsabfrage beim Löschen
+
+- Die Sicherheitsabfrage vor dem endgültigen Löschen eines Kalendereintrags wird **genau wie auf den anderen Seiten** gestaltet und bedient. Es wird kein abweichender, nur für Calendar geltender Bestätigungsdialog eingeführt.
+
+- 2026-11-09: Die Lösch-Sicherheitsabfrage in Calendar übernimmt exakt den seitenübergreifend bereits verwendeten Dialog.
