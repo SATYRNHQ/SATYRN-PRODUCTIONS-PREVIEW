@@ -895,11 +895,17 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Wechsel auf eine andere SATYRN-HQ-Seite wird er wieder eingeblendet, solange die zugehörige Session offen ist.
 
 
-### Darstellung der Session-Vorbereitung
-- Die Session-Vorbereitung erscheint als eigenes Modal/Fenster innerhalb der Focus-Seite – nach demselben Interaktionsprinzip wie das Erstellen einer neuen Aufgabe auf der Important-Seite.
+### Darstellung und Schließverhalten der Session-Vorbereitung
+- Die Session-Vorbereitung erscheint als eigenes Modal/Fenster innerhalb der Focus-Seite – nach demselben Interaktions- und Schließverhalten wie das Erstellen einer neuen Aufgabe auf der Important-Seite.
 - Die Vorbereitung ist kein dauerhaft eingeblendeter Seitenbereich.
 - Das Fenster enthält die für die Session relevanten Einstellungen und übernommenen Aufgabendaten; der Timer startet erst nach ausdrücklicher Bestätigung.
 - Gestaltung und Bedienung orientieren sich an der bestehenden Important-Erstellungsmaske, bleiben aber auf die Focus-Session zugeschnitten.
+- Ein Klick auf den Hintergrund außerhalb des Modals schließt es nicht.
+- `Esc` und die Schaltfläche „Abbrechen“ lösen denselben Schließvorgang aus.
+- Wenn seit dem Öffnen Änderungen vorgenommen wurden, erscheint vor dem Schließen eine Sicherheitsabfrage zum Verwerfen der Änderungen.
+- Wenn keine Änderungen vorgenommen wurden, schließt sich das Modal direkt ohne zusätzliche Abfrage.
+- In der Sicherheitsabfrage kann das Verwerfen abgebrochen werden; dann bleibt das Modal mit allen Eingaben geöffnet. Erst die ausdrückliche Bestätigung verwirft die Änderungen und schließt das Modal.
+- Das Starten bestätigt die Vorbereitung und startet die Session; es ist kein Schließvorgang mit Verwerfen.
 
 ## 8. Umsetzungsregeln
 
