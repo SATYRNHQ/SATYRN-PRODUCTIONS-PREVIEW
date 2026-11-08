@@ -149,7 +149,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 ### Daily Statistics
 - Gesamte Fokuszeit heute.
 - Anzahl erfolgreich abgeschlossener Sessions.
-- Anzahl abgebrochener Sessions.
+- Anzahl unterbrochener, weiterhin offener Sessions.
+- Anzahl endgültig verworfener Sessions.
 - Produktivste Kategorie des Tages.
 
 
@@ -165,8 +166,24 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Fokuszeit pro Tag von Montag bis Sonntag.
 - Balkendiagramm zum Vergleich der Tage.
 - Gesamtfokuszeit der Woche.
-- Erfolgreiche und abgebrochene Sessions.
+- Anzahl abgeschlossener, unterbrochener und endgültig verworfener Sessions.
 - Produktivster Wochentag.
+
+### Monthly Statistics
+- Gesamte Fokuszeit des ausgewählten Monats.
+- Fokuszeit pro Tag im Monatsverlauf mit übersichtlicher Vergleichsansicht.
+- Anzahl abgeschlossener, unterbrochener und endgültig verworfener Sessions.
+- Produktivste Kategorie des Monats.
+- Produktivster Tag des Monats.
+- Navigation zwischen Monaten; die Monatsstatistik passt zur Monthly Focus Map.
+
+### Overall Statistics
+- Gesamte jemals erfasste Fokuszeit.
+- Gesamtanzahl abgeschlossener, unterbrochener und endgültig verworfener Sessions.
+- Produktivste Kategorie über den gesamten erfassten Zeitraum.
+- Durchschnittliche Fokuszeit pro Tag mit Aktivität.
+- Durchschnittliche Dauer abgeschlossener Sessions.
+- Die Gesamtstatistik berücksichtigt alle gespeicherten Sessions und wird nach Änderungen an Sessions automatisch aktualisiert.
 
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
