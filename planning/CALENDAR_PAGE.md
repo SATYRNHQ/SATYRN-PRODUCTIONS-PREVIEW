@@ -168,3 +168,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Aktive Suchbegriffe und Prioritätsfilter bleiben beim Wechsel zwischen Monaten erhalten; sie werden nicht automatisch zurückgesetzt.
 
 - 2026-11-08: Beim Verlassen der Calendar-Seite werden aktive Suchbegriffe und Prioritätsfilter zurückgesetzt. Beim erneuten Öffnen startet Calendar ohne zuvor gesetzte Suche oder Filter; innerhalb der geöffneten Seite bleiben sie beim Monatswechsel weiterhin aktiv.
+
+- 2026-11-08: Suchleiste und Prioritätsfilter sind in der Calendar-Ansicht standardmäßig dauerhaft sichtbar; sie werden nicht erst über ein separates Filter-Symbol geöffnet.
