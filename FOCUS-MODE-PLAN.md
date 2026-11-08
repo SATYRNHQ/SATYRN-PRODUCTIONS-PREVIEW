@@ -435,6 +435,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ungeklärte Tage werden in der Kalenderübersicht eindeutig und barrierearm von erreichten, verfehlten, heutigen und zukünftigen Tagen unterschieden. Die Anzeige erklärt knapp, dass die Wertung wegen unvollständiger Daten noch aussteht.
 - Daten dürfen nicht stillschweigend als null Fokuszeit interpretiert oder verworfen werden, nur weil ein Synchronisations- oder Wiederherstellungsproblem vorliegt. Konflikte müssen erhalten bleiben, bis sie zuverlässig aufgelöst sind.
 
+- Bei widersprüchlichen Datenständen aus lokalem Speicher, Synchronisierung oder Backup werden zunächst alle betroffenen Versionen erhalten; keine Version wird stillschweigend überschrieben.
+- Fokusdaten werden anhand eindeutiger Session- und Fokussegment-IDs abgeglichen. Bereits vorhandene Segmente dürfen bei wiederholter Synchronisierung oder erneutem Backup-Import nicht doppelt gezählt werden.
+- Fehlende, eindeutig identifizierbare Segmente dürfen ergänzt werden. Zeitüberschneidungen und identische Segmente werden erkannt und nur einmal berücksichtigt.
+- Wenn zwei Versionen für dasselbe Datenelement tatsächlich unterschiedliche, nicht automatisch auflösbare Werte enthalten, wird der Konflikt sichtbar zur Klärung gestellt. Bis dahin bleiben beide Versionen erhalten und der betroffene Tag bzw. die davon abhängige Streak-Wertung bleibt „Ungeklärt“ bzw. vorläufig.
+- Erst nach zuverlässiger Konfliktauflösung werden Tageswerte, Zielerreichung und Streak endgültig berechnet. Die ursprünglichen Datenstände und die erfolgte Klärung bleiben nachvollziehbar.
+
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
 - Farbintensität richtet sich nach der täglichen Fokuszeit.
