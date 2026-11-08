@@ -384,6 +384,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei einer Übererfüllung bleibt die grafische Fortschrittsleiste bei 100 % gedeckelt, während die Prozentanzeige den tatsächlichen Wert über 100 % hinaus ausweist (z. B. 150 %).
 - Die Anzeige nennt zusätzlich die tatsächlich erfasste Fokuszeit im Verhältnis zum Ziel (z. B. 3 h / 2 h), damit die Übererfüllung nachvollziehbar bleibt.
 - Die gesamte tatsächlich erfasste Fokuszeit zählt weiter: Auch der Anteil oberhalb von 100 % wird vollständig dem Wochenziel, den Statistiken und den persönlichen Rekorden nach deren jeweiligen Regeln angerechnet.
+- Tages- und Wochenziele haben jeweils einen Mindestwert von 5 Minuten.
+- Für Tages- und Wochenziele gibt es keine künstliche maximale Dauer. Auch Werte oberhalb der theoretisch verfügbaren Zeit eines Tages bzw. einer Woche dürfen bewusst eingestellt werden; sie bleiben dann gegebenenfalls unerreichbar, werden aber korrekt als Ziel und Fortschritt dargestellt.
+- Leere, nicht numerische, negative oder anderweitig ungültige Eingaben dürfen nicht gespeichert werden. Die Eingabe wird vor dem Speichern validiert und bei einem Fehler verständlich gekennzeichnet; der zuletzt gültige Zielwert bleibt erhalten.
 ### Rekord für längste zusammenhängende Fokuszeit
 - In den Overall Statistics wird die längste zusammenhängende Fokuszeit als persönlicher Rekord angezeigt.
 - Angezeigt werden die erreichte Dauer und das Datum, an dem der Rekord erzielt wurde.
