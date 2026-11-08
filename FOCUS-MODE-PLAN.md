@@ -974,6 +974,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bisherige Hauptaufgabe wird dadurch zur zusätzlichen Aufgabe; Reihenfolge und Aufgabendaten bleiben erhalten.
 - Die Auswahl ändert keine Priorität und verändert nicht die ursprünglichen Important-Aufgabendaten.
 
+
+### Sicherheitsabfrage beim Wechsel der Hauptaufgabe vor dem Start
+- Das Ändern der Hauptaufgabe in der Session-Vorbereitung erfordert eine Sicherheitsabfrage.
+- Die Abfrage verwendet denselben Bestätigungsstil und Ablauf wie beim Wechsel der Hauptaufgabe während einer laufenden Focus-Session.
+- Erst nach ausdrücklicher Bestätigung wird die neue Hauptaufgabe übernommen; bei Abbruch bleibt die bisherige Zuordnung unverändert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
