@@ -48,7 +48,7 @@
   if(!Array.isArray(state.sessions))state.sessions=[];
   if(!Array.isArray(state.queue))state.queue=[];
   let activeId=state.activeId||null, tickHandle=null, countdownHandle=null, countdownValue=0, countdownTarget=null, editingPreparedId=null, historySearchTimer=null, historyPage=1, pageSize=20, historyQuery='', historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]}, historyOpen=false, historyDetailId=null, historyDraftId=null, taskDragId=null, savingTimer=null, lastRenderedSecond=-1;
-  let audioContext=null;
+  let audioContext=null,lastClockWall=Date.now(),lastClockMono=performance.now();
   const focusPage=$('page-focus');
   if(!focusPage)return;
   const toast=msg=>{if(window.showToast)window.showToast(msg);else{const t=$('toast');if(t){t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}}};
@@ -130,7 +130,21 @@
     if(s.phase==='focus')focusEnd(s,s.deadline);else breakEnd(s,s.deadline);
   };
   const stopTick=()=>{if(tickHandle){clearInterval(tickHandle);tickHandle=null;}};
-  const ensureTick=()=>{stopTick();if(current()?.status==='RUNNING'){tickHandle=setInterval(()=>{const s=current();if(!s)return;reconcile(s);const sec=Math.ceil(remain(s,Date.now())/1000);if(sec!==lastRenderedSecond){lastRenderedSecond=sec;renderCurrent();}if(s.status!=='RUNNING'){stopTick();persist();renderAll();}},250);}};
+  const detectSystemSleep=s=>{
+    const now=Date.now(),mono=performance.now(),wallGap=now-lastClockWall,monoGap=mono-lastClockMono;
+    const slept=wallGap-monoGap>5000;
+    lastClockWall=now;lastClockMono=mono;
+    if(slept&&s?.status==='RUNNING'){
+      const cutoff=Math.max(lastClockWall-wallGap,s.phaseStartedAt||0);
+      if(s.phase==='focus')appendCurrentFocus(s,cutoff);
+      s.remainingMs=Math.min(s.phaseDurationMs||s.originalFocusMs,Math.max(0,(s.deadline||cutoff)-cutoff));
+      s.deadline=null;s.phaseStartedAt=null;s.status='PAUSED';s.lastActiveAt=cutoff;
+      event(s,'system-sleep','System-Ruhezustand erkannt · Session automatisch pausiert',cutoff);
+      setDistractionFree(false);stopTick();persist();renderAll();return true;
+    }
+    return false;
+  };
+  const ensureTick=()=>{stopTick();if(current()?.status==='RUNNING'){lastClockWall=Date.now();lastClockMono=performance.now();tickHandle=setInterval(()=>{const s=current();if(!s)return;if(detectSystemSleep(s))return;reconcile(s);const sec=Math.ceil(remain(s,Date.now())/1000);if(sec!==lastRenderedSecond){lastRenderedSecond=sec;renderCurrent();}if(s.status!=='RUNNING'){stopTick();persist();renderAll();}},250);}};
   const pauseSession=(s,kind='pause',now=Date.now())=>{
     if(!s||s.status!=='RUNNING')return;
     reconcile(s,now);
@@ -142,7 +156,7 @@
   };
   const resumeSession=(s)=>{
     if(!s||!['PAUSED','INTERRUPTED'].includes(s.status))return;
-    const now=Date.now();s.status='RUNNING';s.phaseStartedAt=s.phase==='focus'?now:null;s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;
+    const now=Date.now();s.status='RUNNING';s.phaseStartedAt=s.phase==='focus'?now:null;s.deadline=now+Math.max(0,s.remainingMs||0);s.lastActiveAt=now;lastClockWall=now;lastClockMono=performance.now();
     event(s,'resume','Session fortgesetzt',now);persist();setDistractionFree(true);ensureTick();renderAll();
   };
   const createSession=(config,status='PREPARED')=>{
@@ -166,7 +180,7 @@
       clearInterval(countdownHandle);countdownHandle=null;countdownTarget=null;
       const live=state.sessions.find(x=>x.id===s.id);if(!live)return;
       const now=Date.now();live.status='RUNNING';live.phase='focus';live.phaseDurationMs=live.originalFocusMs;live.remainingMs=live.originalFocusMs;live.phaseStartedAt=now;live.deadline=now+live.originalFocusMs;live.lastActiveAt=now;
-      event(live,'focus-start','Fokusphase gestartet',now);persist();setDistractionFree(true);ensureTick();renderAll();
+      event(live,'focus-start','Fokusphase gestartet',now);persist();lastClockWall=now;lastClockMono=performance.now();setDistractionFree(true);ensureTick();renderAll();
     },1000);
   };
   const setDistractionFree=on=>{
@@ -270,7 +284,7 @@
     const now=new Date(),todayStart=dayStart(now),tomorrow=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1).getTime(),thisWeek=weekStart(now),nextWeek=thisWeek+7*86400000,prevWeek=thisWeek-7*86400000,monthStart=new Date(now.getFullYear(),now.getMonth(),1).getTime(),nextMonth=new Date(now.getFullYear(),now.getMonth()+1,1).getTime(),prevMonth=new Date(now.getFullYear(),now.getMonth()-1,1).getTime();
     const daySeg=segmentsInRange(todayStart,tomorrow),weekSeg=segmentsInRange(thisWeek,nextWeek),prevSeg=segmentsInRange(prevWeek,thisWeek),monthSeg=segmentsInRange(monthStart,nextMonth),prevMonthSeg=segmentsInRange(prevMonth,monthStart);
     const sum=list=>list.reduce((n,x)=>n+Math.max(0,Math.min(x.end,list===daySeg?tomorrow:list===weekSeg?nextWeek:list===prevSeg?thisWeek:list===monthSeg?nextMonth:monthStart)-Math.max(x.start,list===daySeg?todayStart:list===weekSeg?thisWeek:list===prevSeg?prevWeek:list===monthSeg?monthStart:prevMonth)),0);
-    const live=current();const liveStart=live&&live.status==='RUNNING'&&live.phase==='focus'?(live.phaseStartedAt||now.getTime()):now.getTime(),liveEnd=now.getTime();const overlap=(a,b)=>Math.max(0,Math.min(liveEnd,b)-Math.max(liveStart,a));const liveDay=overlap(todayStart,tomorrow),liveWeek=overlap(thisWeek,nextWeek),liveMonth=overlap(monthStart,nextMonth);const dayMs=sum(daySeg)+liveDay,weekMs=sum(weekSeg)+liveWeek,prevWeekMs=sum(prevSeg),monthMs=sum(monthSeg)+liveMonth,prevMonthMs=sum(prevMonthSeg);
+    const live=current();const liveStart=live&&live.status==='RUNNING'&&live.phase==='focus'?(live.phaseStartedAt||now.getTime()):now.getTime(),liveEnd=now.getTime();const overlap=(a,b)=>Math.max(0,Math.min(liveEnd,b)-Math.max(liveStart,a));const liveAll=Math.max(0,liveEnd-liveStart),liveDay=overlap(todayStart,tomorrow),liveWeek=overlap(thisWeek,nextWeek),liveMonth=overlap(monthStart,nextMonth);const dayMs=sum(daySeg)+liveDay,weekMs=sum(weekSeg)+liveWeek,prevWeekMs=sum(prevSeg),monthMs=sum(monthSeg)+liveMonth,prevMonthMs=sum(prevMonthSeg);
     const completedToday=state.sessions.filter(s=>s.status==='COMPLETED'&&(s.completedAt||0)>=todayStart&&(s.completedAt||0)<tomorrow),interruptedToday=state.sessions.filter(s=>s.status==='INTERRUPTED'&&(s.lastActiveAt||0)>=todayStart&&(s.lastActiveAt||0)<tomorrow);
     const avgToday=completedToday.length?completedToday.reduce((n,x)=>n+totalFocus(x),0)/completedToday.length:0;
     $('fmStatToday').textContent=duration(dayMs);$('fmStatWeek').textContent=duration(weekMs);$('fmStatMonth').textContent=duration(monthMs);
@@ -280,7 +294,7 @@
     const days=[];for(let i=6;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()-i),a=dayStart(d),b=a+86400000;let ms=segmentsInRange(a,b).reduce((n,x)=>n+Math.max(0,Math.min(x.end,b)-Math.max(x.start,a)),0);if(live&&live.status==='RUNNING'&&live.phase==='focus')ms+=overlap(a,b);days.push({label:d.toLocaleDateString('de-DE',{weekday:'short'}),ms});}
     const max=Math.max(1,...days.map(x=>x.ms));
     $('fmWeekChart').innerHTML=days.map(x=>'<div class="fm-chart-col"><span>'+duration(x.ms)+'</span><i><b style="height:'+Math.max(2,x.ms/max*100)+'%"></b></i><small>'+x.label+'</small></div>').join('');
-    const categoryData=CATEGORIES.map(c=>({c,ms:state.sessions.flatMap(s=>(s.focusSegments||[]).map(seg=>({category:s.category,ms:seg.durationMs}))).filter(x=>x.category===c.id).reduce((n,x)=>n+x.ms,0)+(live&&live.status==='RUNNING'&&live.phase==='focus'&&live.category===c.id?liveExtra:0)})).filter(x=>x.ms>0).sort((a,b)=>b.ms-a.ms);
+    const categoryData=CATEGORIES.map(c=>({c,ms:state.sessions.flatMap(s=>(s.focusSegments||[]).map(seg=>({category:s.category,ms:seg.durationMs}))).filter(x=>x.category===c.id).reduce((n,x)=>n+x.ms,0)+(live&&live.status==='RUNNING'&&live.phase==='focus'&&live.category===c.id?liveAll:0)})).filter(x=>x.ms>0).sort((a,b)=>b.ms-a.ms);
     const catTotal=categoryData.reduce((n,x)=>n+x.ms,0);
     $('fmCategoryStats').innerHTML=categoryData.length?categoryData.map(x=>'<div class="fm-category-stat"><span><i style="background:'+x.c.color+'"></i>'+esc(x.c.name)+'</span><b>'+duration(x.ms)+'</b><small>'+Math.round(x.ms/catTotal*100)+' %</small></div>').join(''):'<p class="fm-empty">Kategorien-Auswertung erscheint nach den ersten Fokusabschnitten.</p>';
   };
@@ -573,7 +587,7 @@
   document.addEventListener('visibilitychange',()=>{
     const s=current();if(!s)return;
     if(document.hidden){if(s.status==='RUNNING')persist();return;}
-    reconcile(s);if(s.status!=='RUNNING')stopTick();else ensureTick();persist();renderAll();
+    if(detectSystemSleep(s))return;reconcile(s);if(s.status!=='RUNNING')stopTick();else ensureTick();persist();renderAll();
   });
   window.addEventListener('pagehide',()=>{
     const s=current();if(s?.status==='RUNNING'){const now=Date.now();pauseSession(s,'pause',now);persist();}
