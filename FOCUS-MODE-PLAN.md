@@ -1689,3 +1689,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der aktive Modus ist jederzeit eindeutig sichtbar.
 - Der Wechsel zwischen Demo- und Echtmodus verändert, löscht oder überschreibt keine echten Nutzerdaten.
 - Demo-Daten und Demo-Aktionen bleiben vollständig getrennt von echten Sessions, Important-Aufgaben, Notizen, Verlauf und Statistiken.
+
+
+### Demo-Modus zurücksetzen
+- Beim erneuten Wechsel in den Demo-Modus werden die Demo-Daten standardmäßig auf den ursprünglichen Beispielzustand zurückgesetzt.
+- Demo-Aktionen dürfen die Beispieldaten während der aktuellen Demo-Sitzung verändern, damit Funktionen realistisch ausprobiert werden können.
+- Beim Verlassen und erneuten Öffnen des Demo-Modus startet die Demo wieder sauber mit den vorbereiteten Beispieldaten.
+- Echte Nutzerdaten bleiben davon vollständig unberührt.
