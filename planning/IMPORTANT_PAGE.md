@@ -54,7 +54,7 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 - Das Ereignisdatum ist optional und bezeichnet, wann das Ereignis stattfindet; es ist kein Erstellungsdatum.
 - Einträge sollen nach dem Erstellen jederzeit bearbeitet werden können.
 - Einträge sollen gelöscht werden können.
-- **Vor dem endgültigen Löschen eines Eintrags soll eine Sicherheitsabfrage erscheinen.** Diese wird als kleines, zentriertes Bestätigungsfenster innerhalb des zentralen Inhaltsbereichs dargestellt. Sie bietet die Aktionen **„Abbrechen“** und einen deutlich roten **„Endgültig löschen“**-Button. Die genaue Formulierung der Abfrage wird später festgelegt.
+- **Vor dem endgültigen Löschen eines Eintrags soll eine Sicherheitsabfrage erscheinen.** Diese wird als kleines, zentriertes Bestätigungsfenster innerhalb des zentralen Inhaltsbereichs dargestellt. Sie bietet die Aktionen **„Abbrechen“** und einen deutlich roten **„Endgültig löschen“**-Button. Die Abfrage verwendet den Titel **„Eintrag endgültig löschen?“** und den Hinweis **„Möchtest du diesen Important-Eintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.“**
 - Ereignisse und Termine, die als Kalendertermine geführt werden, gehören in den Calendar und sollen nicht als eigene Kategorie in Important dupliziert werden.
 - Die fünf Kategorien und ihre inhaltlichen Abgrenzungen sind festgelegt: Unternehmensinformationen; Geschäftspartner & Kooperationen; Strategic Moves; Future Blueprints; Sonstiges.
 - Unternehmensinformationen umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.

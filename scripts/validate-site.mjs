@@ -71,6 +71,8 @@ for (const target of new Set([...html.matchAll(/data-page="([^"]+)"/g)].map(m =>
 }
 assert.ok(app.includes('function showPage') && globalCss.includes('.hq-top-nav') && globalCss.includes('.hq-side-nav'), 'Shared navigation flow/styles missing');
 assert.ok(/--hq-card-radius\s*:\s*14px/.test(globalCss), 'Shared card radius must remain 14px');
+assert.ok(/\.imp-modal\s*\{[^}]*border-radius:14px/.test(globalCss), 'Important modal radius must be 14px');
+assert.ok(/\.important-page \.important-card:hover\s*\{[^}]*transform:none/.test(globalCss), 'Important cards must not lift on hover');
 
 assert.ok(focus.includes('syncPresetCards'), 'Preset card synchronization is missing');
 assert.ok(focus.includes('t.isTask===true') && focus.includes('data-fm-complete'), 'Focus Queue task integration is missing');
@@ -80,6 +82,6 @@ assert.ok(important.includes('BEISPIEL') && important.includes('getAvailableLink
 assert.ok(important.includes('building-2') && important.includes('handshake') && important.includes('landmark') && important.includes('telescope') && important.includes('layers'), 'Important category icons are incomplete');
 assert.ok(important.includes('requestAnimationFrame') && important.includes('replaceWith(nextCard)'), 'Important card expand/collapse animation is missing');
 assert.ok(important.includes('getAvailableLinks().find'), 'Important links must show current target names');
-assert.ok(sw.includes('satyrn-hq-shell-v110'), 'Service worker cache version was not incremented');
+assert.ok(sw.includes('satyrn-hq-shell-v111'), 'Service worker cache version was not incremented');
 
 console.log('SATYRN HQ validation passed: IDs, assets, cache versions, typography, navigation, Focus and Important invariants.');
