@@ -377,6 +377,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Klare Trennung in der Kalenderdarstellung:** Die einzelnen Kalendertage zeigen weiterhin ausschließlich ihren jeweiligen Tagesziel-Status (erreicht, verfehlt, heute/offen oder zukünftig). Das Wochenziel erhält eine separate Wochenübersicht mit eigenem Zielwert, tatsächlicher Fokuszeit, Fortschrittsanzeige, verbleibender Zeit und eigenem Erreichungsstatus.
 - Tages- und Wochenstatus dürfen visuell nicht miteinander verwechselt oder voneinander abgeleitet werden. Eine Woche kann ihr Ziel erreichen, obwohl einzelne Tagesziele verfehlt wurden; ebenso können alle bisher abgeschlossenen Tagesziele erreicht sein, während das Wochenziel noch offen oder verfehlt ist.
 
+- **Streak bleibt unabhängig vom Wochenziel:** Eine erreichte oder verfehlte Wochenzielwertung verändert, rettet, verlängert oder unterbricht niemals die Tages-Streak. Die Streak wird ausschließlich anhand der gültigen Tagesziel-Wertungen der jeweiligen lokalen Kalendertage berechnet. Das Wochenziel bleibt eine separate Kennzahl.
+
+
 
 
 - Die Kalenderwoche für das Wochenziel beginnt am Montag um 00:00 Uhr und endet mit Beginn des folgenden Montags um 00:00 Uhr (Endzeitpunkt exklusiv). Maßgeblich ist jeweils die für den betreffenden Zeitpunkt geltende lokale Zeitzone.
