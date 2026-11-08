@@ -204,11 +204,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 ### Kategorie-Filter für Statistiken
-- In den Daily, Weekly, Monthly und Overall Statistics kann nach einer einzelnen Kategorie gefiltert werden.
+- In den Daily, Weekly, Monthly und Overall Statistics kann nach einer einzelnen Kategorie oder nach mehreren Kategorien gleichzeitig gefiltert werden.
 - Zusätzlich gibt es die Ansicht „Alle Kategorien“ als Standard.
+- Mehrfachauswahl ermöglicht beispielsweise die gemeinsame Analyse von Music Production und Mixing & Mastering.
+- Bei mehreren ausgewählten Kategorien werden Fokuszeiten und Session-Anzahlen dieser Kategorien gemeinsam ausgewertet; jede Session wird dabei nur einmal gezählt.
 - Die Filteroptionen übernehmen automatisch die Kategorien aus dem gemeinsamen SATYRN-Kategoriensystem einschließlich eigener Dashboard-Kategorien.
-- Bei Auswahl einer Kategorie beziehen sich Fokuszeiten, Session-Anzahlen, Produktivitätswerte, Rekorde und Zeitvergleiche auf diese Kategorie.
-- Zeitvergleiche bleiben auf denselben Zeitraum und dieselbe Kategorie bezogen; die Vergleichsperiode verwendet also denselben Kategorie-Filter.
+- Bei Auswahl einer oder mehrerer Kategorien beziehen sich Fokuszeiten, Session-Anzahlen, Produktivitätswerte und Rekorde auf die ausgewählten Kategorien.
+- Zeitvergleiche bleiben auf denselben Zeitraum und dieselbe Kategorieauswahl bezogen; die Vergleichsperiode verwendet also exakt dieselben ausgewählten Kategorien.
 - Die Kategorieauswahl ist in allen Statistik-Zeiträumen konsistent und ohne Seitenwechsel erreichbar.
 
 ### Visuelle Kennzeichnung der Zeitvergleiche
