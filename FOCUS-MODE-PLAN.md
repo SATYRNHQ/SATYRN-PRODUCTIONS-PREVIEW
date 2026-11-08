@@ -1305,6 +1305,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Löschen erfordert die bereits festgelegte Sicherheitsbestätigung.
 - Standard-Presets erhalten kein solches Menü und bleiben unveränderbar.
 
+
+### Sichtbarkeit des Drei-Punkte-Menüs
+- Das Drei-Punkte-Menü eigener Presets wird auf Desktop-Geräten erst beim Darüberfahren mit der Maus sichtbar.
+- Auf Touch-Geräten ohne Hover bleibt das Menü über eine klar erkennbare, kompakte Aktion erreichbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
