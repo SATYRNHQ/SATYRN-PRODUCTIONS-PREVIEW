@@ -484,3 +484,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ohne aktive Zeitraum-Auswahl werden Sessions aus dem gesamten verfügbaren Verlauf angezeigt.
 - Der Zeitraum-Filter lässt sich mit Kategorie-, Status- und Prioritätsfiltern kombinieren.
 - Die gewählte Zeitspanne und alle weiteren aktiven Filter bleiben sichtbar, damit jederzeit nachvollziehbar ist, welche Sessions gerade angezeigt werden.
+
+### Kategorie-Filter
+- Der Kategorie-Filter verwendet exakt dieselben Kategorienamen und Farben wie das bestehende System der Important-Seite.
+- Die aktuell vorgesehenen Kategorien sind **Music Production**, **Mixing & Mastering**, **Content Creation**, **Business**, **Learning** und **Organisation**. Später ergänzte eigene Kategorien werden automatisch ebenfalls im Filter berücksichtigt.
+- Es können mehrere Kategorien gleichzeitig ausgewählt werden. Eine Session wird angezeigt, wenn sie zu mindestens einer der ausgewählten Kategorien gehört.
+- **Alle Kategorien** ist die Standardauswahl und zeigt den vollständigen Verlauf unabhängig von der Kategorie.
+- Aktive Kategorieauswahlen werden oberhalb der Ergebnisliste sichtbar angezeigt und können dort einzeln wieder entfernt werden.
+- Der Kategorie-Filter lässt sich mit Zeitraum-, Status- und Prioritätsfiltern kombinieren.
