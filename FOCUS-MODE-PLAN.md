@@ -1,6 +1,6 @@
 # SATYRN PRODUCTIONS HQ – Focus Mode Plan
 
-> Status: Konzeptionsphase – noch keine Umsetzung freigegeben.
+ > Status: Umsetzung freigegeben – Focus Mode ist in der Preview implementiert; technische Abweichungen und offene Infrastrukturpunkte sind dokumentiert.
 > Dieses Dokument sammelt die bisher gemeinsam bestätigten Anforderungen. Der bestehende Website-Code bleibt während der Planung unangetastet.
 
 ## 1. Grundaufbau und Seitenlayout
