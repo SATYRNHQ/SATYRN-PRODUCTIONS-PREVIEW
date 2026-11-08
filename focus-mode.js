@@ -231,7 +231,7 @@
     const s=current(),now=Date.now();
     const status=$('fmTimerStatus'),time=$('fmTimerTime'),elapsed=$('fmElapsed'),goal=$('fmCurrentGoal'),name=$('fmCurrentName'),ring=$('fmTimerRing'),hint=$('fmSessionHint'),actions=$('fmTimerActions'),start=$('fmStartPrepared');
     if(!s){
-      status.textContent='READY';status.dataset.state='ready';time.textContent='00:00:00';elapsed.textContent='0min Fokuszeit';goal.value='Noch kein Fokusziel ausgewählt';name.textContent='Keine aktive Session';$('fmCurrentCategory').value='music';$('fmCurrentPriority').value='important';ring.style.setProperty('--fm-progress',0);hint.textContent=sessionHint(null);
+      status.textContent='READY';status.dataset.state='ready';time.textContent='00:00:00';elapsed.textContent='0min Fokuszeit';goal.value='Noch kein Fokusziel ausgewählt';goal.disabled=true;name.textContent='Keine aktive Session';$('fmCurrentCategory').value='music';$('fmCurrentPriority').value='important';$('fmCurrentCategory').disabled=true;$('fmCurrentPriority').disabled=true;$('fmCurrentLink').textContent='Eigenes Fokusziel';$('fmNextBreak').textContent='Der Countdown startet erst nach deiner ausdrücklichen Freigabe.';$('fmNotes').value='';$('fmDistractionCount').textContent='0 Einträge';$('fmDistractionToggle').disabled=true;ring.style.setProperty('--fm-progress',0);hint.textContent=sessionHint(null);
       actions.innerHTML='';start.hidden=true;
     }else{
       reconcile(s,now);
@@ -239,7 +239,7 @@
       const left=countdownTarget===s.id?countdownValue*1000:remain(s,now);
       time.textContent=countdownTarget===s.id?'00:00:0'+countdownValue:clock(left);
       elapsed.textContent=duration(focusElapsed(s,now))+' Fokuszeit';
-      if(document.activeElement!==goal)goal.value=s.goal;name.textContent=s.name;$('fmCurrentCategory').value=s.category;$('fmCurrentPriority').value=s.priority;
+      if(document.activeElement!==goal)goal.value=s.goal;goal.disabled=!['RUNNING','PAUSED'].includes(s.status);name.textContent=s.name;$('fmCurrentCategory').value=s.category;$('fmCurrentPriority').value=s.priority;$('fmCurrentCategory').disabled=!['RUNNING','PAUSED'].includes(s.status);$('fmCurrentPriority').disabled=!['RUNNING','PAUSED'].includes(s.status);$('fmDistractionToggle').disabled=s.status==='COMPLETED';
       const progress=s.phase==='break'?1-(left/Math.max(1,s.breakDurationMs)):1-(left/Math.max(1,s.phaseDurationMs||s.originalFocusMs));
       ring.style.setProperty('--fm-progress',Math.max(0,Math.min(1,progress)));
       hint.textContent=sessionHint(s);
@@ -260,10 +260,10 @@
       const catLabel=$('fmCurrentCategory');catLabel.style.setProperty('--fm-cat',cat(s.category).color);
       const priLabel=$('fmCurrentPriority');priLabel.style.setProperty('--fm-pri',pri(s.priority).color);
       const note=$('fmNotes');if(note&&document.activeElement!==note)note.value=s.notes||'';
-      renderDistractions();
       const linked=s.linkedTaskSnapshot;const stillExists=linked&&(linked.source==='task'?getLegacyTasks().some(x=>String(x.id)===String(linked.id)):getImportant().some(x=>String(x.id)===String(linked.id)));$('fmCurrentLink').textContent=linked?(stillExists?'Verknüpft: '+linked.title:'Nicht mehr verfügbar · Snapshot: '+linked.title):'Eigenes Fokusziel';
       $('fmDistractionCount').textContent=(s.distractions||[]).length+' Einträge';
     }
+    renderDistractions();
     renderOpenSessions();
     if(start)start.textContent=countdownTarget===s?.id?'Countdown läuft…':s?.status==='EXPIRED'?'Nächste Fokusphase starten':'Session starten';
   };
@@ -285,7 +285,7 @@
     const doneTasks=allLegacy.filter(t=>t.done);$('fmQueueDoneSummary').textContent='Erledigte Aufgaben · '+doneTasks.length;$('fmQueueDoneList').innerHTML=doneTasks.length?doneTasks.map(t=>'<div class="fm-queue-done-row"><span>✓</span><b>'+esc(t.title)+'</b><small>'+esc(t.priority==='urgent'?'Dringend':t.priority==='high'?'Wichtig':'Normal')+'</small></div>').join(''):'<p class="fm-empty">Noch keine erledigten Aufgaben.</p>';
     target.innerHTML=list.length?list.map(t=>{
       const linked=current()?.linkedTaskSnapshot?.id===t.id;
-      const categoryName=t.source==='important'?(IMPORTANT_CATEGORIES[t.category]?.name||'Important'):t.category||'';const planned=t.estimatedMinutes?'<small>Geplant · '+duration(t.estimatedMinutes*60000)+'</small>':'';const lastWork=t.focusHistory?.slice().sort((a,b)=>b.at-a.at)[0];const work=t.focusSessions?'<small class="fm-task-work">Worked on in Focus Mode · '+t.focusSessions+' Sessions · '+duration(t.focusTimeMs)+' focused'+(lastWork?' · zuletzt '+dateLabel(lastWork.localDate||dateKey(lastWork.at)):'')+'</small>':'';
+      const categoryName=t.source==='important'?(IMPORTANT_CATEGORIES[t.category]?.name||'Important'):t.category||'';const planned=t.estimatedMinutes?'<small>Geplant · '+duration(t.estimatedMinutes*60000)+'</small>':'';const lastWork=t.focusHistory?.slice().sort((a,b)=>b.at-a.at)[0];const work=t.focusSessions?'<details class="fm-task-activity"><summary>Worked on in Focus Mode · '+t.focusSessions+' Sessions · '+duration(t.focusTimeMs)+' focused'+(lastWork?' · zuletzt '+dateLabel(lastWork.localDate||dateKey(lastWork.at)):'')+'</summary><div>'+(t.focusHistory||[]).slice().sort((a,b)=>b.at-a.at).map(h=>'<small>'+dateLabel(h.localDate||dateKey(h.at))+' · '+duration(h.durationMs)+'</small>').join('')+'</div></details>':'';
       return '<div class="fm-queue-row" draggable="true" data-fm-drag="'+esc(t.id)+'"><span class="fm-drag-handle" aria-hidden="true">⠿</span><span class="fm-queue-copy"><b>'+esc(t.title)+'</b><small>'+esc(t.source==='important'?'Important':'Task Queue')+(categoryName?' · '+esc(categoryName):'')+' · '+esc(pri(t.priority).name)+'</small>'+planned+work+'</span><button type="button" class="fm-queue-assign '+(linked?'is-linked':'')+'" data-fm-assign="'+esc(t.id)+'" data-fm-source="'+t.source+'">'+(linked?'Zugeordnet':'Als Fokusziel')+'</button></div>';
     }).join(''):'<p class="fm-empty">Keine offenen Aufgaben gefunden. Du kannst unten ein eigenes Fokusziel vorbereiten oder auf Important Aufgaben ergänzen.</p>';
   };
@@ -379,10 +379,10 @@
     const snap=s.linkedTaskSnapshot;
     if(snap.source==='task'){
       const list=getLegacyTasks(),task=list.find(t=>String(t.id)===String(snap.id));
-      if(task){const at=s.completedAt||Date.now(),ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];task.focusHistory.push({sessionId:s.id,at,localDate:dateInZone(at,zone()),durationMs:ms,timezone:zone()});try{localStorage.setItem(TASKS,JSON.stringify(list))}catch{}}
+      if(task){const ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];const byDay=new Map();(s.focusSegments||[]).forEach(seg=>{const key=seg.localDate||dateKey(seg.start),old=byDay.get(key)||{at:seg.start,durationMs:0,timezone:seg.timezone||zone()};old.at=Math.min(old.at,seg.start);old.durationMs+=seg.durationMs;byDay.set(key,old);});byDay.forEach((h,localDate)=>task.focusHistory.push({sessionId:s.id,at:h.at,localDate,durationMs:h.durationMs,timezone:h.timezone}));try{localStorage.setItem(TASKS,JSON.stringify(list))}catch{}}
     }else if(snap.source==='important'){
       const raw=read(IMPORTANT,{entries:[]}),entries=Array.isArray(raw)?raw:(raw.entries||[]),task=entries.find(t=>String(t.id)===String(snap.id));
-      if(task){const at=s.completedAt||Date.now(),ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];task.focusHistory.push({sessionId:s.id,at,localDate:dateInZone(at,zone()),durationMs:ms,timezone:zone()});try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}))}catch{}}
+      if(task){const ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];const byDay=new Map();(s.focusSegments||[]).forEach(seg=>{const key=seg.localDate||dateKey(seg.start),old=byDay.get(key)||{at:seg.start,durationMs:0,timezone:seg.timezone||zone()};old.at=Math.min(old.at,seg.start);old.durationMs+=seg.durationMs;byDay.set(key,old);});byDay.forEach((h,localDate)=>task.focusHistory.push({sessionId:s.id,at:h.at,localDate,durationMs:h.durationMs,timezone:h.timezone}));try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}))}catch{}}
     }
   };
   const finish=(s,now=Date.now())=>{
@@ -446,7 +446,7 @@
   const useTemplate=s=>{
     const config={name:s.name,goal:s.goal,category:s.category,priority:s.priority,preset:s.preset,focusMs:s.originalFocusMs,breakMs:s.breakDurationMs,linkedTask:null};
     if(categoryCount(config.category)>=2){toast('In dieser Kategorie sind bereits zwei offene Sessions vorhanden.');return;}
-    const next=createSession(config,'PREPARED');activeId=next.id;state.activeId=activeId;leaveHistory();renderAll();toast('Neue vorbereitete Session aus Vorlage erstellt.');
+    const next=createSession(config,'PREPARED');activeId=next.id;state.activeId=activeId;refreshLinkedOptions();loadSetup(next);leaveHistory();renderAll();toast('Neue vorbereitete Session aus Vorlage erstellt.');
   };
   const resetSession=s=>{
     if(!s||s.phase!=='focus'||!['RUNNING','PAUSED'].includes(s.status))return;
