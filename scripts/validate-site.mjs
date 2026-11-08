@@ -77,7 +77,9 @@ assert.ok(focus.includes('t.isTask===true') && focus.includes('data-fm-complete'
 assert.ok(focus.includes('tone();') && focus.includes('Notification.requestPermission'), 'Focus sound/notification controls are missing');
 assert.ok(focus.includes("setDistractionFree(s.phase==='focus')"), 'Distraction-Free must follow the active phase');
 assert.ok(important.includes('BEISPIEL') && important.includes('getAvailableLinks') && important.includes('removeTarget'), 'Important archive/link integration is missing');
+assert.ok(important.includes('building-2') && important.includes('handshake') && important.includes('landmark') && important.includes('telescope') && important.includes('layers'), 'Important category icons are incomplete');
+assert.ok(important.includes('requestAnimationFrame') && important.includes('replaceWith(nextCard)'), 'Important card expand/collapse animation is missing');
 assert.ok(important.includes('getAvailableLinks().find'), 'Important links must show current target names');
-assert.ok(sw.includes('satyrn-hq-shell-v109'), 'Service worker cache version was not incremented');
+assert.ok(sw.includes('satyrn-hq-shell-v110'), 'Service worker cache version was not incremented');
 
 console.log('SATYRN HQ validation passed: IDs, assets, cache versions, typography, navigation, Focus and Important invariants.');

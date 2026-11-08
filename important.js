@@ -4,12 +4,22 @@
   const $ = id => document.getElementById(id);
   const KEY='satyrn-important-v1';
   const categories=[
-    {id:'company',name:'Unternehmensinformationen',color:'steel',icon:'▦'},
-    {id:'partners',name:'Geschäftspartner & Kooperationen',color:'gold',icon:'◇'},
-    {id:'moves',name:'Strategic Moves',color:'violet',icon:'⚑'},
-    {id:'blueprints',name:'Future Blueprints',color:'teal',icon:'⌖'},
-    {id:'other',name:'Sonstiges',color:'silver',icon:'▱'}
+    {id:'company',name:'Unternehmensinformationen',color:'steel',icon:'building-2'},
+    {id:'partners',name:'Geschäftspartner & Kooperationen',color:'gold',icon:'handshake'},
+    {id:'moves',name:'Strategic Moves',color:'violet',icon:'landmark'},
+    {id:'blueprints',name:'Future Blueprints',color:'teal',icon:'telescope'},
+    {id:'other',name:'Sonstiges',color:'silver',icon:'layers'}
   ];
+  const iconSvg=name=>{
+    const paths={
+      'building-2':'<path d="M3 21h18"/><path d="M5 21V5l7-3 7 3v16"/><path d="M9 8h.01M15 8h.01M9 12h.01M15 12h.01M9 16h.01M15 16h.01"/>',
+      'handshake':'<path d="m8 12 2-2 3 2 2-1 5 4-3 4-4-2-2 1-5-4 2-2 2 1 2-2"/><path d="m13 12 2-2 3 2"/><path d="m8 12-3-2-3 3 4 4 2-1"/>',
+      'landmark':'<path d="M3 21h18"/><path d="M4 10h16"/><path d="m12 3 9 5H3l9-5Z"/><path d="M6 10v11M10 10v11M14 10v11M18 10v11"/>',
+      'telescope':'<path d="m4 17 8-8 4 4-8 8-4-4Z"/><path d="m12 9 2-2 5 5-2 2"/><path d="m16 13 4 4"/><path d="m7 20-2 2"/>',
+      'layers':'<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/>'
+    };
+    return '<svg class="imp-category-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+(paths[name]||'')+'</svg>';
+  };
   const priorities=[
     {id:'urgent',name:'Dringend',color:'red',rank:0},
     {id:'important',name:'Wichtig',color:'orange',rank:1},
@@ -65,7 +75,7 @@
     const c=cat(e.category),p=pri(e.priority),open=expanded.has(e.id),links=e.links||[],isNew=newItems.has(e.id);
     const preview=(e.description||'').length>230&&!open?(e.description.slice(0,230).trimEnd()+'…'):e.description||'';
     return '<article class="important-card imp-pri-border-'+p.color+(open?' is-expanded':'')+(isNew?' is-new':'')+(e.example?' is-example':'')+(e.done&&e.isTask?' is-done':'')+'" data-card="'+esc(e.id)+'" tabindex="0" aria-expanded="'+open+'">'+
-      '<div class="imp-card-main"><div class="imp-card-title-row"><h3>'+(p.id==='urgent'?'<span class="imp-warning" aria-label="Dringend">!</span>':'')+esc(e.title)+'</h3><span class="imp-category-badge imp-cat-'+c.color+'"><i>'+c.icon+'</i>'+esc(c.name)+'</span></div>'+
+      '<div class="imp-card-main"><div class="imp-card-title-row"><h3>'+(p.id==='urgent'?'<span class="imp-warning" aria-label="Dringend">!</span>':'')+esc(e.title)+'</h3><span class="imp-category-badge imp-cat-'+c.color+'"><i>'+iconSvg(c.icon)+'</i>'+esc(c.name)+'</span></div>'+
       '<span class="imp-priority-badge imp-pri-'+p.color+'">'+esc(p.name)+'</span>'+
       (e.isTask?'<span class="imp-focus-task-badge">FOCUS TASK</span>':'')+
       (e.description?'<p class="imp-description">'+esc(preview)+'</p>':'')+
@@ -168,10 +178,26 @@
     if(cardEl){cardEl.classList.add('is-removing');setTimeout(commit,180)}else commit();
   }
   function toggleCard(id){
-    const e=entries.find(x=>x.id===id);if(!e)return;
-    if(newItems.has(id)){expanded.add(id);const nextEntries=entries.map(x=>x.id===id?{...x,isNew:false}:x);if(store(nextEntries)){entries=nextEntries;newItems.delete(id);}}
-    else if(expanded.has(id))expanded.delete(id);else expanded.add(id);
-    render();
+    let entry=entries.find(x=>x.id===id);if(!entry)return;
+    const cardEl=root.querySelector('[data-card="'+CSS.escape(id)+'"]');
+    const oldHeight=cardEl?.getBoundingClientRect().height||0;
+    const opening=!expanded.has(id);
+    if(opening)expanded.add(id);else expanded.delete(id);
+    if(opening&&newItems.has(id)){
+      const nextEntries=entries.map(x=>x.id===id?{...x,isNew:false}:x);
+      if(store(nextEntries)){entries=nextEntries;newItems.delete(id);}
+    }
+    entry=entries.find(x=>x.id===id)||entry;
+    const wrapper=document.createElement('div');wrapper.innerHTML=card(entry);
+    const nextCard=wrapper.firstElementChild;
+    if(!cardEl||!nextCard){render();return;}
+    nextCard.style.height=oldHeight+'px';
+    nextCard.style.overflow='hidden';
+    nextCard.style.transition='height 280ms cubic-bezier(.2,.7,.2,1)';
+    cardEl.replaceWith(nextCard);
+    requestAnimationFrame(()=>{nextCard.style.height=nextCard.scrollHeight+'px';});
+    setTimeout(()=>{nextCard.style.height='';nextCard.style.overflow='';nextCard.style.transition='';},310);
+    freshId=null;
   }
   const removeTarget=(area,id)=>{
     const nextEntries=entries.map(e=>({...e,links:(e.links||[]).filter(l=>!(l.area===area&&String(l.id)===String(id)))}));

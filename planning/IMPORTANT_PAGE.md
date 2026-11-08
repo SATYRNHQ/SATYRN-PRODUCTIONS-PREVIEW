@@ -45,7 +45,7 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 - Zukünftige Ereignisse stehen vor bereits vergangenen Ereignissen. Unter den zukünftigen Ereignissen steht das nächstliegende Datum zuerst. Beispiel: Ist heute der 7., steht ein Ereignis am 10. vor einem Ereignis am 12. Die Sortierung wird dynamisch anhand des aktuellen Datums bestimmt.
 - Bereits vergangene Ereignisse bleiben sichtbar und werden so sortiert, dass das am längsten zurückliegende Ereignis zuerst erscheint; je länger ein Ereignis zurückliegt, desto weiter oben steht es innerhalb der Gruppe vergangener Ereignisse.
 - Einträge ohne Ereignisdatum stehen innerhalb ihrer jeweiligen Prioritätsstufe ganz unten.
-- **Dringend** und **Wichtig** müssen auf einen Blick klar unterscheidbar sein. Bestätigte Gestaltungsrichtung: Dringend erhält einen deutlich kräftigeren roten Akzent und ein Ausrufezeichen als Warnsymbol. Wichtig erhält einen orangefarbenen Akzent, aber ohne Warnsymbol und mit zurückhaltenderer Wirkung. Die genauen visuellen Details werden beim späteren Seitendesign festgelegt.
+- **Dringend** und **Wichtig** sind klar unterscheidbar: Dringend verwendet den kräftigen roten Prioritätsstreifen und ein Ausrufezeichen direkt neben dem Titel. Wichtig verwendet einen zurückhaltenderen orangefarbenen Akzent ohne Warnsymbol.
 - Das Ausblenden von Kategorien über den Filter ändert weder die Kategorie noch die Priorität der Einträge. Die Prioritätssortierung bleibt innerhalb der jeweils sichtbaren Einträge wirksam.
 - Die Einträge werden als rechteckige Karten untereinander dargestellt, nicht als kompakte Tabellen- oder Listenzeilen.
 - Die Karten sollen Titel, Kategorie und Priorität auf einen Blick erkennen lassen. Eine Beschreibung wird als Vorschau angezeigt, sofern vorhanden; ein Ereignisdatum erscheint nur, wenn eines hinterlegt wurde.
@@ -92,10 +92,10 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 
 - Suchleiste sowie Kategorien- und Prioritätsfilter sind direkt oben auf der Important-Seite sichtbar und nicht erst in einem separaten Filter-Menü verborgen.
 
-- Important-Einträge sollen später mit passenden anderen HQ-Bereichen (z. B. Projects oder Network) verknüpft werden können. Die konkrete Auswahl der verknüpfbaren Bereiche und die Darstellung der Verknüpfungen werden noch festgelegt.
+- Important-Einträge können mit den Bereichen Projects und Network sowie mit konkreten Tasks bzw. Kontakten aus diesen Bereichen verknüpft werden.
 
-- Die Verknüpfungen zu anderen HQ-Bereichen können direkt beim Erstellen und Bearbeiten eines Important-Eintrags über ein eigenes Auswahlfeld hinzugefügt bzw. geändert werden. Die konkrete Auswahl der Bereiche und die Bedienung des Auswahlfeldes werden später definiert.
-- Pro Important-Eintrag können mehrere Verknüpfungen gleichzeitig bestehen, auch zu mehreren Einträgen desselben HQ-Bereichs (z. B. zwei Projects und ein Business-Bereich), sofern diese später als auswählbare Ziele angeboten werden.
+- Verknüpfungen werden direkt beim Erstellen und Bearbeiten über das Auswahlfeld gesucht, ausgewählt und entfernt. Die Suche bietet die Bereichsziele Projects/Network und alle tatsächlich vorhandenen Tasks bzw. Kontakte an.
+- Pro Important-Eintrag können mehrere Verknüpfungen gleichzeitig bestehen, auch zu mehreren Einträgen desselben HQ-Bereichs. Die Verknüpfung speichert die stabile Ziel-ID; ein Klick öffnet den Bereich und springt bei konkreten Einträgen zum Datensatz.
 - Wenn noch keine Important-Einträge vorhanden sind, wird statt einer leeren Fläche eine dezente Willkommens-/Empty-State-Ansicht angezeigt. Sie enthält den Hinweis „Noch keine wichtigen Informationen vorhanden“ und eine Möglichkeit, direkt den ersten Eintrag zu erstellen.
 - Zum ersten Verständnis und zur Demonstration der Oberfläche werden zunächst einige klar als Beispiele gekennzeichnete Beispieldatensätze angezeigt; sie dürfen nicht wie echte Unternehmensinformationen wirken.
 - Sobald der Nutzer den ersten eigenen Important-Eintrag erstellt, verschwinden die Beispieldatensätze automatisch. Sie werden nicht mit echten Einträgen vermischt.
@@ -105,10 +105,10 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 - Zusätzlich zum farbigen Prioritätsstreifen wird die jeweilige Priorität auf jeder Eintragskarte ausdrücklich als Textlabel angezeigt (z. B. „Dringend“, „Wichtig“, „Vorläufig“ oder „Unbefristet“). Das Label verwendet die zugehörige Prioritätsfarbe und bleibt klar vom Kategorie-Label unterscheidbar.
 - Das Prioritäts-Textlabel wird auf der Eintragskarte in einer eigenen Zeile direkt unter dem Titel angezeigt, nicht neben dem Kategorie-Label.
 - Das Prioritäts-Textlabel wird als kleines farbiges Badge mit dezentem, zur jeweiligen Prioritätsfarbe passendem Hintergrund gestaltet; es steht in der eigenen Zeile direkt unter dem Titel.
-- Die Kategorie wird zusätzlich als kleines farbiges Label direkt neben dem Eintragstitel angezeigt. Die Kategorie-Farbe dient der schnellen Orientierung und bleibt visuell klar von der Prioritätsfarbe des linken Kartenstreifens unterscheidbar; die konkrete Farbpalette und das Label-Design werden später festgelegt.
+- Die Kategorie wird als kleines farbiges Label direkt neben dem Titel angezeigt. Die festgelegten Farben sind Stahlblau, Gold, Violett, Türkis und Silbergrau; sie bleiben klar von den Prioritätsfarben unterscheidbar.
 - Das Kategorie-Label direkt neben dem Titel wird ebenfalls als kleines Badge mit dezentem, zur jeweiligen Kategorie-Farbe passendem Hintergrund gestaltet. Es bleibt optisch klar vom Prioritäts-Badge in der Zeile darunter unterscheidbar.
 - Kategorie- und Prioritäts-Badges erhalten abgerundete Ecken statt einer kantigen, technischen Form.
-- Jede Eintragskarte erhält zusätzlich zum farbigen Kategorie-Label ein kleines, zur jeweiligen Kategorie passendes Symbol. Symbol und Label unterstützen gemeinsam die schnelle visuelle Orientierung; die konkreten Symbole werden bei der späteren Designausarbeitung festgelegt.
+- Jede Eintragskarte zeigt zusätzlich ein kleines SVG-Symbol passend zur Kategorie: building-2, handshake, landmark, telescope oder layers.
 
 ## Bestätigte Kategorie-Farben und Symbole
 - **Unternehmensinformationen:** Stahlblau, Symbol `building-2`.
@@ -175,7 +175,7 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 
 - Die Empty-State-Ansicht erhält zusätzlich eine dezente, hochwertige Grafik passend zum dunklen SATYRN-HQ-Design. Die Grafik soll den leeren Informations-/Archivbereich visuell unterstützen, aber zurückhaltend bleiben und die Überschrift, Erklärung sowie die Möglichkeit zum Erstellen des ersten Eintrags nicht überlagern oder davon ablenken.
 
-- **Empty-State-Grafik — Stilrichtung bestätigt:** Die Grafik „The Digital Archive“ orientiert sich am tatsächlichen SATYRN-HQ-Farbschema **Gold, Grün und Schwarz** statt an Stahlblau/Türkis. Vorgesehene Optik: tiefschwarzer bzw. anthrazitfarbener Hintergrund, hochwertige rauchglasartige und metallische Archiv-Elemente, dezente goldene Highlights und gezielte grüne Lichtakzente. Das Motiv bleibt abstrakt, minimalistisch und luxuriös-futuristisch, ohne Menschen, Schrift oder überladene Details. Die konkrete Ausarbeitung erfolgt in der späteren Designphase.
+- **Empty-State-Grafik — Stilrichtung bestätigt:** Die Grafik „The Digital Archive“ orientiert sich am tatsächlichen SATYRN-HQ-Farbschema **Gold, Grün und Schwarz** statt an Stahlblau/Türkis. Vorgesehene Optik: tiefschwarzer bzw. anthrazitfarbener Hintergrund, hochwertige rauchglasartige und metallische Archiv-Elemente, dezente goldene Highlights und gezielte grüne Lichtakzente. Das Motiv bleibt abstrakt, minimalistisch und luxuriös-futuristisch, ohne Menschen, Schrift oder überladene Details. Die Preview verwendet bereits eine zurückhaltende CSS-Grafik mit dunklem Archiv-Hintergrund, goldenen Highlights und grünen Lichtakzenten.
 
 - Beim Darüberfahren mit der Maus leuchtet die Eintragskarte ausschließlich ganz leicht auf. Der dezente Hover-Effekt orientiert sich an der SATYRN-HQ-Farbwelt Gold und Grün; die Karte wird dabei nicht angehoben oder verschoben. Der Effekt darf weder vom Inhalt ablenken noch die Prioritäts- und Kategoriekennzeichnung überlagern.
 
@@ -288,7 +288,7 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 
 ## Kartenanimation beim Öffnen und Ausklappen
 - Beim erstmaligen Öffnen der Important-Seite erscheinen die Karten direkt vollständig sichtbar; sie erhalten keine zusätzliche Einblendanimation.
-- Beim Ausklappen und Einklappen einer Karte wird die Höhenänderung dagegen sauber und flüssig animiert. Die Inhalte entfalten sich ohne Springen oder Überlappen; darunterliegende Karten verschieben sich ebenfalls flüssig an ihre neue Position.
+- Beim Ausklappen und Einklappen einer Karte wird die Höhenänderung über eine dezente Höhenanimation sauber und flüssig ausgeführt; darunterliegende Karten verschieben sich mit.
 - Die Animation bleibt dezent und funktional, ohne übertriebene Effekte.
 
 ## Position neu erstellter Einträge
@@ -363,3 +363,5 @@ Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; stati
 - Important-Einträge erscheinen nicht automatisch als Tasks. Die Aufnahme in Focus Queue erfordert das explizite Kontrollfeld **„Als Fokusaufgabe in der Task Queue anzeigen“**.
 
 - Wird ein verknüpfter Eintrag umbenannt, wird der angezeigte Verknüpfungsname beim nächsten Rendern aus dem aktuellen Zieleintrag aktualisiert; die stabile ID bleibt unverändert.
+
+- Die Kategorie-SVG-Symbole sind in den Karten umgesetzt. Das Aus- und Einklappen einzelner Karten animiert die Kartenhöhe, ohne die übrigen geöffneten Karten zu schließen.
