@@ -499,3 +499,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Auswahl kann direkt im Bereich der Session-History-Filter geändert werden.
 - Der aktive Statusfilter bleibt sichtbar und lässt sich zusammen mit Zeitraum-, Kategorie- und Prioritätsfiltern verwenden.
 - Status wird immer zusätzlich durch eine eindeutige Textbezeichnung dargestellt; Farbe allein vermittelt den Status nicht.
+
+### Prioritäts-Filter
+- Der Prioritäts-Filter übernimmt exakt dieselben Prioritätsstufen und Farben wie das bestehende Important-System.
+- **Alle Prioritäten** ist die Standardauswahl und zeigt Sessions unabhängig von ihrer Priorität.
+- Es können mehrere Prioritätsstufen gleichzeitig ausgewählt werden. Angezeigt werden Sessions, die mindestens einer der ausgewählten Stufen entsprechen.
+- Aktive Prioritätsauswahlen werden oberhalb der Ergebnisliste sichtbar angezeigt und können einzeln entfernt werden.
+- Der Prioritäts-Filter lässt sich mit Zeitraum-, Kategorie- und Statusfiltern kombinieren.
+- Priorität wird immer auch durch eine eindeutige Textbezeichnung vermittelt; Farbe allein reicht nicht aus.
