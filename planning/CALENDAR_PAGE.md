@@ -22,6 +22,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 ## Bestätigte Entscheidungen — Tagesfenster
 - Ein Klick auf einen Tag in der Monatsansicht öffnet ein kleines Fenster mit den Terminen und Ereignissen dieses Tages.
 - Innerhalb dieses Fensters können Einträge hinzugefügt werden.
+- Zusätzlich gibt es oben rechts in der Calendar-Ansicht ein kleines **Plus-Symbol (+)** zum Hinzufügen eines neuen Eintrags. Das Symbol und seine Platzierung orientieren sich am Hinzufügen-Symbol im Important-Fenster.
 - Ein Klick auf einen bestehenden Termineintrag öffnet zunächst dessen **Detailansicht**. Er wechselt nicht direkt in den Bearbeitungsmodus.
 - In der Detailansicht befindet sich ein **Drei-Punkte-Menü (⋯)** mit den Aktionen **Bearbeiten** und **Löschen**.
 - **Bearbeiten** öffnet das Bearbeitungsformular für den ausgewählten Eintrag.
@@ -35,7 +36,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
 
 ## Bestätigte Entscheidungen — Wichtigkeit / Priorität
-- Beim Anlegen eines Kalendertermins bzw. Ereignisses soll eine Wichtigkeit/Priorität festgelegt werden können.
+- Beim Anlegen eines Kalendertermins bzw. Ereignisses kann optional eine Wichtigkeit/Priorität festgelegt werden. Ein Eintrag darf auch ohne Priorität gespeichert werden und wird dann neutral dargestellt.
 - Calendar übernimmt dafür das bereits in Important verwendete vierstufige Prioritätssystem. Es soll kein zweites, abweichendes Wichtigkeitssystem entstehen.
 - Die Stufen und Farben entsprechen exakt Important:
   1. **Dringend** — Rot
@@ -46,7 +47,6 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Die sichtbaren Einträge bleiben textlich auf den Titel beschränkt; die Prioritätsfarbe liefert die zusätzliche visuelle Orientierung.
 
 ## Noch nicht festgelegt
-- Ob die Priorität beim Erstellen verpflichtend sein muss oder optional bleibt.
 - Die genaue Form der farblichen Kennzeichnung im Tagesfeld (z. B. farbiger Punkt, schmaler Streifen oder dezente Titel-Akzentfarbe).
 - Die genauen Formularfelder zum Erstellen und Bearbeiten eines Eintrags.
 - Die genaue Gestaltung des Tagesfensters und seiner Empty-State-Darstellung.
@@ -72,3 +72,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Ganztägige Termine ohne Uhrzeitangabe werden ebenfalls unterstützt.
 - 2026-11-08: Wiederkehrende Termine werden unterstützt; wöchentliche, monatliche und jährliche Wiederholung sind vorgesehen. Sie laufen ohne verpflichtendes Enddatum weiter, bis sie manuell gelöscht werden.
 - 2026-11-08: Bei einer Wiederholungsserie kann ein einzelnes Vorkommen unabhängig von der Serie gelöscht oder bearbeitet werden. Beim Löschen bzw. Bearbeiten wird jeweils zwischen dem einzelnen Termin und der gesamten Serie unterschieden.
+- 2026-11-08: Die Priorität ist optional. Einträge ohne Priorität werden neutral dargestellt.
+- 2026-11-08: Zusätzlich zum Hinzufügen im Tagesfenster gibt es oben rechts in der Calendar-Ansicht ein kleines Plus-Symbol (+), angelehnt an das Important-Fenster.
