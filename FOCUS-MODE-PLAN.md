@@ -411,6 +411,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Pausen- und Unterbrechungszeiten zählen nicht. Tatsächlich erfasste Fokuszeit aus später unterbrochenen oder endgültig verworfenen Sessions bleibt enthalten.
 - Anzeige der produktivsten Tageszeit und Vergleich der Fokuszeit zwischen allen fünf Zeitfenstern.
 - Die Auswertung berücksichtigt die aktiven Datums- und Kategorienfilter sowie die jeweilige Statistikperiode.
+- Eine feinere Analyse einzelner Stunden (z. B. produktivste Stunde oder wiederkehrende stündliche Leistungsspitzen) gehört ausschließlich in die spätere Dashboard-Planung und wird im Focus Mode nicht doppelt umgesetzt.
 
 ### Personal Records
 - Längste Fokus-Session.
