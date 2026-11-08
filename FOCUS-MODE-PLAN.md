@@ -278,6 +278,7 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Wenn der Nutzer den Browser schließen möchte, während eine Session läuft, erscheint vorher eine Warnung mit dem Hinweis **„Deine Focus-Session läuft noch.“**
 - Die Warnung bietet die Möglichkeit, den Schließvorgang abzubrechen und zur Session zurückzukehren oder den Browser trotzdem zu schließen. Beim Fortfahren wird die Session automatisch pausiert und später als **PAUSED** wiederhergestellt.
 - Die Warnung erscheint nicht, wenn die Session bereits pausiert, unterbrochen oder abgeschlossen ist.
+- Wird die Seite während einer laufenden Session neu geladen, erscheint dieselbe Warnung. Der Nutzer kann das Neuladen abbrechen und zur Session zurückkehren oder fortfahren. Beim Fortfahren wird die Session automatisch pausiert und nach dem Neuladen als **PAUSED** wiederhergestellt.
 - Die Zeit, in der der Browser geschlossen bzw. Focus Mode nicht verfügbar ist, wird nicht als Fokuszeit gezählt. Alle zuletzt erfolgreich lokal gespeicherten Session-Daten bleiben erhalten.
 - Die wiederhergestellte Session startet nicht automatisch; die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
 - Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand, wird die Session ebenfalls automatisch pausiert und nicht abgebrochen oder abgeschlossen.
