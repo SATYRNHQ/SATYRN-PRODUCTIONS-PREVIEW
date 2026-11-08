@@ -1200,6 +1200,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Minuten-Schaltflächen verändern den Wert in 5-Minuten-Schritten; die Stunden lassen sich separat anpassen.
 - Die Eingabe bleibt zusätzlich direkt editierbar.
 
+
+### Automatische Wiederholung bei Plus-/Minus-Schaltflächen
+- Werden die Plus- und Minus-Schaltflächen gedrückt gehalten, verändert sich die Dauer automatisch fortlaufend.
+- Jeder Schritt verändert die Minuten um 5 Minuten; Stunden können entsprechend über die Stundeneingabe bzw. deren Steuerelement angepasst werden.
+- Ein kurzer Klick verändert den Wert ebenfalls einmalig.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
