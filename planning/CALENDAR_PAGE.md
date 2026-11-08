@@ -166,3 +166,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Mehrtägige Terminbalken unterliegen ebenfalls der aktiven Suche und den Prioritätsfiltern. Wenn ein mehrtägiger Termin die Filterkriterien nicht erfüllt, wird sein Balken in der Monatsansicht ausgeblendet.
 
 - 2026-11-08: Aktive Suchbegriffe und Prioritätsfilter bleiben beim Wechsel zwischen Monaten erhalten; sie werden nicht automatisch zurückgesetzt.
+
+- 2026-11-08: Beim Verlassen der Calendar-Seite werden aktive Suchbegriffe und Prioritätsfilter zurückgesetzt. Beim erneuten Öffnen startet Calendar ohne zuvor gesetzte Suche oder Filter; innerhalb der geöffneten Seite bleiben sie beim Monatswechsel weiterhin aktiv.
