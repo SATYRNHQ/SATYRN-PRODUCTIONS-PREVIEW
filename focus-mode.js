@@ -556,8 +556,6 @@
     </div>
     <div class="fm-dialog-backdrop" id="fmHistoryDetailDialog" hidden><section class="fm-dialog fm-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryDetailTitle"><div class="fm-dialog-head"><div><span class="fm-kicker">SESSION DETAILS</span><h2 id="fmHistoryDetailTitle"></h2><p id="fmHistoryDetailGoal"></p><p id="fmHistoryDetailMeta"></p></div><button type="button" class="fm-dialog-close" data-fm-close-dialog>×</button></div><div class="fm-detail-stats" id="fmHistoryDetailStats"></div><h3>Zeitlicher Verlauf</h3><div class="fm-timeline" id="fmHistoryTimeline"></div><details class="fm-disclosure"><summary>Session Notes</summary><p id="fmHistoryDetailNotes"></p></details><details class="fm-disclosure"><summary>Distraction Log</summary><div id="fmHistoryDetailDistractions"></div></details><div class="fm-history-linked"><small>VERKNÜPFTE AUFGABE</small><b id="fmHistoryDetailLink">Keine Aufgabenverknüpfung</b><button type="button" id="fmHistoryOpenLinked" hidden>Aufgabe öffnen ↗</button></div><div class="fm-dialog-actions"><button type="button" class="fm-button" id="fmHistoryUseTemplate">Als Vorlage verwenden</button><button type="button" class="fm-button fm-subtle" id="fmHistoryEdit">Details bearbeiten</button><button type="button" class="fm-button fm-danger-ghost" id="fmHistoryDelete">Session löschen</button><button type="button" class="fm-button fm-subtle" data-fm-close-dialog>Schließen</button></div></section></div>
     <div class="fm-dialog-backdrop" id="fmHistoryEditDialog" hidden><section class="fm-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryEditHeading"><div class="fm-dialog-head"><div><span class="fm-kicker">EDIT SESSION</span><h2 id="fmHistoryEditHeading">Details bearbeiten</h2></div><button type="button" class="fm-dialog-close" data-fm-close-edit>×</button></div><form id="fmHistoryEditForm"><label class="fm-label" for="fmHistoryEditName">Session-Name</label><input id="fmHistoryEditName" class="fm-input" required><label class="fm-label" for="fmHistoryEditGoal">Fokusziel</label><input id="fmHistoryEditGoal" class="fm-input" required><div class="fm-form-two"><div><label class="fm-label" for="fmHistoryEditCategory">Kategorie</label><select id="fmHistoryEditCategory" class="fm-input"><option value="music" selected>Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></div><div><label class="fm-label" for="fmHistoryEditPriority">Priorität</label><select id="fmHistoryEditPriority" class="fm-input"><option value="urgent">Dringend</option><option value="important" selected>Wichtig</option><option value="provisional">Vorläufig</option><option value="indefinite">Unbefristet</option></select></div></div><label class="fm-label" for="fmHistoryEditNotes">Notizen</label><textarea id="fmHistoryEditNotes" class="fm-input" rows="5"></textarea><div class="fm-dialog-actions"><button class="fm-button fm-primary" type="submit">Änderungen speichern</button><button type="button" class="fm-button fm-subtle" data-fm-close-edit>Abbrechen</button></div></form></section></div>`;
-    const placeholder=focusPage.innerHTML;
-    const marker=placeholder.indexOf('<div class="page-intro">');
     focusPage.innerHTML=html;
   };
   buildMarkup();
@@ -636,6 +634,7 @@
     if(e.key==='['||e.key===']'){const list=sortedOpen(),idx=list.findIndex(x=>x.id===s.id),next=list[(idx+(e.key==='['?-1:1)+list.length)%list.length];if(next)switchSession(next.id);}
   });
   document.addEventListener('visibilitychange',()=>{
+    if(!document.hidden){refreshLinkedOptions();renderQueue();}
     const s=current();if(!s)return;
     if(document.hidden){if(s.status==='RUNNING')persist();return;}
     if(detectSystemSleep(s))return;reconcile(s);if(s.status!=='RUNNING')stopTick();else ensureTick();persist();renderAll();
@@ -659,7 +658,6 @@
     if(historyOpen)leaveHistory();
   },true);
   window.addEventListener('storage',e=>{if(e.key===IMPORTANT||e.key===TASKS){refreshLinkedOptions();renderQueue();}});
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshLinkedOptions();renderQueue();}});
   // Recover an interrupted browser/device lifecycle as PAUSED; downtime is never focus time.
   const recovered=state.sessions.find(s=>s.id===activeId);
   if(!recovered||!OPEN.has(recovered.status))activeId=sortedOpen()[0]?.id||null;
