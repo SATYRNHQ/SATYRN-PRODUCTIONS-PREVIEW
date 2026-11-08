@@ -1881,3 +1881,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Unterbrochene, lediglich pausierte oder endgültig verworfene Sessions zählen nicht als erfolgreich abgeschlossene Sessions.
 - Maßgeblich ist der lokale Kalendertag, an dem die jeweilige Session erfolgreich abgeschlossen wurde.
 - Der Rekord zeigt die höchste Anzahl und das zugehörige Datum und wird automatisch aktualisiert, sobald ein neuer Bestwert erreicht wird.
+
+
+### Rekord: meiste erfolgreich abgeschlossene Sessions in einer Woche
+- Zusätzlich wird die höchste Anzahl erfolgreich abgeschlossener Focus-Sessions innerhalb einer lokalen Kalenderwoche von Montag bis Sonntag erfasst.
+- Als erfolgreich abgeschlossen gelten regulär beendete Sessions sowie Sessions, die bewusst vorzeitig mit „Complete Session“ abgeschlossen wurden.
+- Unterbrochene, lediglich pausierte oder endgültig verworfene Sessions zählen nicht als erfolgreich abgeschlossene Sessions.
+- Maßgeblich ist der lokale Kalendertag des erfolgreichen Abschlusses; die Session wird der Kalenderwoche zugeordnet, in der sie abgeschlossen wurde.
+- Der Rekord zeigt die höchste Anzahl und den zugehörigen Wochenzeitraum und wird automatisch aktualisiert, sobald ein neuer Bestwert erreicht wird.
