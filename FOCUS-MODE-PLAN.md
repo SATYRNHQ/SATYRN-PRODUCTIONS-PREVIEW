@@ -1182,6 +1182,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eine Synchronisierung eigener Presets zwischen verschiedenen Geräten ist nicht erforderlich.
 - Die Presets bleiben bei erneutem Öffnen von SATYRN HQ im selben Browser verfügbar, solange dessen lokale Website-Daten nicht gelöscht werden.
 
+
+### Zeiteingabe im Format Stunden und Minuten
+- Fokus- und Pausendauer werden in einer kompakten digitalen Zeitdarstellung eingegeben, mit getrennten Stunden- und Minutenwerten im Format „HH:MM“.
+- Beispiele: Fokusdauer „03:00 h“ für drei Stunden und Pausendauer „00:20“ für zwanzig Minuten.
+- Stunden und Minuten sind direkt bearbeitbar; die Eingabe bleibt auch für kurze Dauern gut lesbar.
+- Bei Auswahl „Keine Pause“ wird die Pauseneingabe deaktiviert beziehungsweise ausgeblendet.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
