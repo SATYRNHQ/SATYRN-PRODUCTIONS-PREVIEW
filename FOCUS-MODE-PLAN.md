@@ -1269,6 +1269,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eigene Presets erscheinen alphabetisch sortiert im separaten Bereich „Meine Presets“ unterhalb der Standard-Presets.
 - Auswahl und Aktivierung funktionieren genauso wie bei den Standard-Presets.
 
+
+### Visuelle Hervorhebung des ausgewählten Presets
+- Das aktuell ausgewählte Preset wird deutlich, aber dezent hervorgehoben.
+- Die Hervorhebung verwendet einen farblich passenden Rahmen und ein kleines Häkchen.
+- Bei eigenen Presets orientiert sich die Hervorhebung an der individuell gewählten Preset-Farbe; bei Standard-Presets an deren Gestaltung.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
