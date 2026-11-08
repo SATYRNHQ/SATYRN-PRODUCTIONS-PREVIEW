@@ -950,6 +950,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Modal passt Breite und Höhe an den verfügbaren Bildschirmplatz an; Inhalte bleiben intern scrollbar und die Aktionsleiste bleibt erreichbar.
 - Die Darstellung bleibt klar als überlagerndes Fenster erkennbar und berücksichtigt sichere Bildschirmabstände.
 
+
+### Animation des Vorbereitungsfensters
+- Öffnen und Schließen des Session-Vorbereitungsmodals verwenden dieselbe Animation und dasselbe Timing wie das Modal auf der Important-Seite.
+- Bewegungsablauf und Übergänge bleiben konsistent mit dem bestehenden SATYRN-HQ-Modalverhalten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
