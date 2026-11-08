@@ -17,6 +17,7 @@
     {id:'learning',name:'Learning',color:'#8fc58d'},
     {id:'organisation',name:'Organisation',color:'#c1c6c4'}
   ];
+  const IMPORTANT_CATEGORIES={company:{name:'Unternehmensinformationen',color:'#8db5d0'},partners:{name:'Geschäftspartner & Kooperationen',color:'#d4b46e'},moves:{name:'Strategic Moves',color:'#b69ae2'},blueprints:{name:'Future Blueprints',color:'#78c9c1'},other:{name:'Sonstiges',color:'#c1c6c4'}};
   const PRIORITIES = [
     {id:'urgent',name:'Dringend',rank:0,color:'#ed7772'},
     {id:'important',name:'Wichtig',rank:1,color:'#e7a45d'},
@@ -273,18 +274,19 @@
   };
   const renderQueue=()=>{
     const target=$('fmQueueList');if(!target)return;
-    const tasks=getLegacyTasks().filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,priority:t.priority==='urgent'?'urgent':t.priority==='high'?'important':'provisional',source:'task',done:false,createdAt:Number(t.id)||0,focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0}));
-    const important=getImportant().map(t=>({id:String(t.id),title:t.title,priority:t.priority||'provisional',source:'important',category:t.category,done:false,createdAt:new Date(t.created||Date.now()).getTime(),focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0}));
+    const allLegacy=getLegacyTasks();const tasks=allLegacy.filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,priority:t.priority==='urgent'?'urgent':t.priority==='high'?'important':'provisional',source:'task',done:false,createdAt:Number(t.id)||0,focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0,focusHistory:t.focusHistory||[],category:t.category||'',estimatedMinutes:t.estimatedMinutes||t.durationMinutes||0}));
+    const important=getImportant().map(t=>({id:String(t.id),title:t.title,priority:t.priority||'provisional',source:'important',category:t.category,done:false,createdAt:new Date(t.created||Date.now()).getTime(),focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0,focusHistory:t.focusHistory||[],estimatedMinutes:t.estimatedMinutes||t.durationMinutes||0}));
     let list=[...tasks,...important];
     if(state.queueManual){
       const order=new Map(state.queue.map(x=>[String(x.id),Number(x.order)||0]));
       list.sort((a,b)=>(order.has(a.id)?order.get(a.id):Number.MAX_SAFE_INTEGER)-(order.has(b.id)?order.get(b.id):Number.MAX_SAFE_INTEGER)||pri(a.priority).rank-pri(b.priority).rank);
     }else list.sort((a,b)=>pri(a.priority).rank-pri(b.priority).rank||(a.createdAt||0)-(b.createdAt||0));
-    $('fmQueueCount').textContent=list.length+' verfügbare Einträge';
+    $('fmQueueCount').textContent=list.length+' offene Aufgaben';
+    const doneTasks=allLegacy.filter(t=>t.done);$('fmQueueDoneSummary').textContent='Erledigte Aufgaben · '+doneTasks.length;$('fmQueueDoneList').innerHTML=doneTasks.length?doneTasks.map(t=>'<div class="fm-queue-done-row"><span>✓</span><b>'+esc(t.title)+'</b><small>'+esc(t.priority==='urgent'?'Dringend':t.priority==='high'?'Wichtig':'Normal')+'</small></div>').join(''):'<p class="fm-empty">Noch keine erledigten Aufgaben.</p>';
     target.innerHTML=list.length?list.map(t=>{
       const linked=current()?.linkedTaskSnapshot?.id===t.id;
-      const work=t.focusSessions?'<small class="fm-task-work">Worked in Focus · '+t.focusSessions+' Sessions · '+duration(t.focusTimeMs)+'</small>':'';
-      return '<div class="fm-queue-row" draggable="true" data-fm-drag="'+esc(t.id)+'"><span class="fm-drag-handle" aria-hidden="true">⠿</span><span class="fm-queue-copy"><b>'+esc(t.title)+'</b><small>'+esc(t.source==='important'?'Important':'Task Queue')+' · '+esc(pri(t.priority).name)+'</small>'+work+'</span><button type="button" class="fm-queue-assign '+(linked?'is-linked':'')+'" data-fm-assign="'+esc(t.id)+'" data-fm-source="'+t.source+'">'+(linked?'Zugeordnet':'Als Fokusziel')+'</button></div>';
+      const categoryName=t.source==='important'?(IMPORTANT_CATEGORIES[t.category]?.name||'Important'):t.category||'';const planned=t.estimatedMinutes?'<small>Geplant · '+duration(t.estimatedMinutes*60000)+'</small>':'';const lastWork=t.focusHistory?.slice().sort((a,b)=>b.at-a.at)[0];const work=t.focusSessions?'<small class="fm-task-work">Worked on in Focus Mode · '+t.focusSessions+' Sessions · '+duration(t.focusTimeMs)+' focused'+(lastWork?' · zuletzt '+dateLabel(lastWork.localDate||dateKey(lastWork.at)):'')+'</small>':'';
+      return '<div class="fm-queue-row" draggable="true" data-fm-drag="'+esc(t.id)+'"><span class="fm-drag-handle" aria-hidden="true">⠿</span><span class="fm-queue-copy"><b>'+esc(t.title)+'</b><small>'+esc(t.source==='important'?'Important':'Task Queue')+(categoryName?' · '+esc(categoryName):'')+' · '+esc(pri(t.priority).name)+'</small>'+planned+work+'</span><button type="button" class="fm-queue-assign '+(linked?'is-linked':'')+'" data-fm-assign="'+esc(t.id)+'" data-fm-source="'+t.source+'">'+(linked?'Zugeordnet':'Als Fokusziel')+'</button></div>';
     }).join(''):'<p class="fm-empty">Keine offenen Aufgaben gefunden. Du kannst unten ein eigenes Fokusziel vorbereiten oder auf Important Aufgaben ergänzen.</p>';
   };
   const addDaysKey=(key,n)=>{const d=new Date(key+'T12:00:00');d.setDate(d.getDate()+n);return localISO(d);};
@@ -377,10 +379,10 @@
     const snap=s.linkedTaskSnapshot;
     if(snap.source==='task'){
       const list=getLegacyTasks(),task=list.find(t=>String(t.id)===String(snap.id));
-      if(task){task.focusTimeMs=(task.focusTimeMs||0)+totalFocus(s);task.focusSessions=(task.focusSessions||0)+1;try{localStorage.setItem(TASKS,JSON.stringify(list))}catch{}}
+      if(task){const at=s.completedAt||Date.now(),ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];task.focusHistory.push({sessionId:s.id,at,localDate:dateInZone(at,zone()),durationMs:ms,timezone:zone()});try{localStorage.setItem(TASKS,JSON.stringify(list))}catch{}}
     }else if(snap.source==='important'){
       const raw=read(IMPORTANT,{entries:[]}),entries=Array.isArray(raw)?raw:(raw.entries||[]),task=entries.find(t=>String(t.id)===String(snap.id));
-      if(task){task.focusTimeMs=(task.focusTimeMs||0)+totalFocus(s);task.focusSessions=(task.focusSessions||0)+1;try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}))}catch{}}
+      if(task){const at=s.completedAt||Date.now(),ms=totalFocus(s);task.focusTimeMs=(task.focusTimeMs||0)+ms;task.focusSessions=(task.focusSessions||0)+1;task.focusHistory=task.focusHistory||[];task.focusHistory.push({sessionId:s.id,at,localDate:dateInZone(at,zone()),durationMs:ms,timezone:zone()});try{localStorage.setItem(IMPORTANT,JSON.stringify(Array.isArray(raw)?entries:{...raw,entries}))}catch{}}
     }
   };
   const finish=(s,now=Date.now())=>{
@@ -491,7 +493,7 @@
           <section class="fm-panel glass-card fm-queue-panel" id="fmQueuePanel">
             <div class="fm-panel-heading"><div><span class="fm-kicker">03 · TASK QUEUE</span><h2>Als Nächstes</h2></div><span class="fm-count" id="fmQueueCount">0 Aufgaben</span></div>
             <p class="fm-panel-intro">Offene Aufgaben aus deiner Task Queue und Important. Ziehe Einträge, um eine eigene Reihenfolge zu speichern.</p>
-            <div id="fmQueueList" class="fm-queue-list"></div>
+            <div id="fmQueueList" class="fm-queue-list"></div><details class="fm-queue-done"><summary id="fmQueueDoneSummary">Erledigte Aufgaben · 0</summary><div id="fmQueueDoneList"></div></details>
             <div class="fm-queue-footer"><button type="button" id="fmQueueDefault" class="fm-text-button">Nach Priorität sortieren</button><button type="button" id="fmQueueAdd" class="fm-text-button">Eigenes Ziel vorbereiten ＋</button></div>
           </section>
         </div>
@@ -564,7 +566,7 @@
   });
   $('fmQueueList').addEventListener('dragend',()=>{taskDragId=null;$('fmQueueList').querySelectorAll('.is-dragging,.is-drop-target').forEach(x=>x.classList.remove('is-dragging','is-drop-target'));});
   $('fmQueueDefault').addEventListener('click',()=>{state.queueManual=false;state.queue=[];persist();renderQueue();});
-  $('fmQueueAdd').addEventListener('click',()=>{leaveHistory();$('fmGoal').focus();$('fmGoal').scrollIntoView({behavior:'smooth',block:'center'});});
+  $('fmQueueAdd').addEventListener('click',()=>{leaveHistory();$('fmSetupNew').click();$('fmGoal').focus();$('fmGoal').scrollIntoView({behavior:'smooth',block:'center'});});
   $('fmHistoryOpen').addEventListener('click',openHistory);$('fmHistoryBack').addEventListener('click',leaveHistory);
   $('fmHistorySearch').addEventListener('input',e=>{historyQuery=e.target.value;historyPage=1;clearTimeout(historySearchTimer);historySearchTimer=setTimeout(renderHistory,160);});
   $('fmHistorySearchClear').addEventListener('click',()=>{historyQuery='';historyPage=1;renderHistoryControls();renderHistory();});
