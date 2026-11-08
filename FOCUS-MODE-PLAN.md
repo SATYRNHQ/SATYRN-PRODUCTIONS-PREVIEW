@@ -103,6 +103,15 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Beim erneuten Aktivieren des Tabs werden Timerstatus, verbleibende Zeit und verfügbare Aktionen mit dem tatsächlichen Session-Zustand abgeglichen.
 - Der Wechsel zwischen Focus Mode und anderen Programmen (z. B. FL Studio) darf den Timer weder pausieren noch zurücksetzen.
 
+### Nutzung mit mehreren Monitoren
+- Focus Mode kann unabhängig davon genutzt werden, auf welchem Monitor das Browserfenster geöffnet ist.
+- Eine typische Nutzung ist Focus Mode auf einem zweiten Bildschirm und die jeweilige Arbeitssoftware (z. B. FL Studio) auf dem Hauptbildschirm.
+- Das Verschieben des Browserfensters zwischen Monitoren darf Timer, Session-Zustand, Notizen oder Speicherstatus nicht zurücksetzen oder verändern.
+- Die Oberfläche passt sich an die tatsächlich verfügbare Fenstergröße und den Viewport an, nicht an eine fest angenommene Monitorauflösung.
+- Timer, Status und wichtigste Aktionen bleiben bei üblichen Fenstergrößen gut lesbar und erreichbar. Bei schmalem oder teilweise verdecktem Fenster darf das Layout sinnvoll umbrechen bzw. scrollen, ohne Funktionen zu verlieren.
+- Es wird keine bestimmte Monitoranzahl, Auflösung oder Anordnung vorausgesetzt. Es gibt keine automatische Fensterpositionierung oder erzwungene Vollbilddarstellung.
+- Die Bedienung und Zeitmessung bleiben auch dann zuverlässig, wenn Focus Mode auf einem Monitor geöffnet ist und der Nutzer auf einem anderen Monitor arbeitet.
+
 ### Pausen-Erinnerung
 - Zum Beginn einer Pause gibt es einen kurzen, angenehmen Doppelton.
 - Beim Ende der Pause gibt es ebenfalls einen kurzen Doppelton.
