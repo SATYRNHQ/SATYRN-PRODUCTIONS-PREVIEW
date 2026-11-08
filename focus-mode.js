@@ -339,7 +339,7 @@
       let previous='';
       target.innerHTML=shown.map(s=>{
         const latest=(s.timeline||[]).slice().sort((a,b)=>b.at-a.at)[0],at=latest?.at||s.createdAt||0,date=latest?.localDate||dateKey(at),heading=date!==previous?'<div class="fm-history-date">'+dateLabel(date)+'</div>':'';previous=date;
-        return heading+'<button type="button" class="fm-history-row" data-fm-history-detail="'+esc(s.id)+'"><span class="fm-history-state '+s.status.toLowerCase()+'">'+(s.status==='COMPLETED'?'✓':'Ⅱ')+'</span><span class="fm-history-copy"><b>'+esc(s.name)+'</b><small>'+esc(s.goal)+' · '+esc(cat(s.category).name)+' · '+dateLabel(date)+'</small></span><span class="fm-history-duration">'+duration(totalFocus(s))+'</span><span class="fm-history-badge">'+s.status+'</span></button>';
+        return heading+'<button type="button" class="fm-history-row" data-fm-history-detail="'+esc(s.id)+'"><span class="fm-history-state '+s.status.toLowerCase()+'">'+(s.status==='COMPLETED'?'✓':'Ⅱ')+'</span><span class="fm-history-copy"><b>'+esc(s.name)+'</b><small>'+esc(s.goal)+' · '+esc(cat(s.category).name)+' · '+esc(pri(s.priority).name)+' · geplant '+duration(s.originalFocusMs)+' · '+(s.focusSegments||[]).length+' Fokusabschnitte · '+dateLabel(date)+'</small></span><span class="fm-history-duration">'+duration(totalFocus(s))+'</span><span class="fm-history-badge">'+s.status+'</span></button>';
       }).join('');
     }
     $('fmHistoryPageLabel').textContent='Seite '+historyPage+' / '+pages;$('fmHistoryFilterSummary').textContent='Neueste zuerst · '+list.length+' Treffer';
