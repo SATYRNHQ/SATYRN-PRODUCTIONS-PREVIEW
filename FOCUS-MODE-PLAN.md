@@ -349,6 +349,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Fehlerbehandlung:** Schlägt Vorschau, Erstellung, Download oder Druckvorbereitung fehl, erscheint eine verständliche Fehlermeldung mit einer Möglichkeit zum erneuten Versuch. Es wird kein unvollständiger Export als erfolgreich angezeigt.
 - **Keine Datenänderung:** Exportieren und Drucken sind reine Lesevorgänge und verändern weder Sessions noch Statistikdaten oder Filter.
 
+
+### Kein integrierter E-Mail-Versand für Statistikberichte
+- Focus Mode erhält keine eigene E-Mail-Versandfunktion für CSV- oder PDF-Exporte.
+- Nutzer laden den Bericht herunter und können ihn anschließend selbst über ihr gewünschtes E-Mail- oder Freigabeprogramm teilen.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
