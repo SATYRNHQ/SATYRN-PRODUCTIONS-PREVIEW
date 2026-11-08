@@ -1773,3 +1773,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Läuft eine Pause beim Schließen der Website, zählt auch während der Schließzeit die reale verstrichene Zeit weiter. Ist die Pause beim Wiederöffnen bereits abgelaufen, wird keine neue Fokusphase automatisch gestartet. Focus Mode zeigt den abgelaufenen Pausenzustand und wartet auf die ausdrückliche Bestätigung des Nutzers, bevor die nächste Fokusphase beginnt. Während die Website geschlossen ist, werden keine Browser-Töne oder sichtbaren Website-Benachrichtigungen vorausgesetzt.
 
 - Bei einer ausdrücklich unterbrochenen Session wird die Fokus-Restzeit eingefroren. Die Zeit seit der Unterbrechung wird separat als Unterbrechungsdauer angezeigt und zählt weder als aktive Fokuszeit noch wird sie bei einer späteren Wiederaufnahme nachträglich zur Fokuszeit addiert. Beim Fortsetzen wird mit der gespeicherten Restzeit weitergearbeitet.
+
+
+### Reset während einer Pause
+- Wird Reset während einer laufenden oder pausierten Pause ausgelöst, wird ausschließlich die aktuelle Pausenphase auf die ursprünglich für diese Session eingestellte Pausendauer zurückgesetzt.
+- Bereits erfasste Fokuszeitabschnitte bleiben unverändert erhalten und werden weder gelöscht noch erneut gezählt.
+- Session-Ziel, Notizen, Distraction Log, Unteraufgaben, Verknüpfungen, Kategorie, Priorität und weitere Session-Einstellungen bleiben erhalten.
+- Vor dem Reset erscheint die bestehende Sicherheitsabfrage.
