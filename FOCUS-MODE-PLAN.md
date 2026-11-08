@@ -1128,6 +1128,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Öffnen der Session-Vorbereitung wird standardmäßig wieder das festgelegte Standard-Preset vorausgewählt, statt automatisch die zuletzt verwendete Dauer zu übernehmen.
 - Individuelle Presets können separat erstellt und gespeichert werden; sie bleiben unabhängig von der Standardauswahl verfügbar.
 
+
+### Eigene Presets benennen
+- Nutzerdefinierte Session-Presets können einen frei wählbaren Namen erhalten, zum Beispiel „Morning Grind“, „Beatmaking“ oder „Deep Focus“.
+- Name, Fokusdauer und Pauseneinstellung werden gemeinsam im Preset gespeichert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
