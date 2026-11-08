@@ -986,6 +986,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Reihenfolge wird für die Session übernommen und bestimmt auch, welche offene zusätzliche Aufgabe bei Abschluss der Hauptaufgabe als Nächstes zur Hauptaufgabe wird.
 - Das Sortieren verändert weder Prioritäten noch die Quelldaten der verknüpften Important-Aufgaben.
 
+
+### Zusätzliche Aufgaben aus der Vorbereitung entfernen
+- Einzelne zusätzliche Aufgaben können im Session-Vorbereitungsfenster aus der geplanten Session entfernt werden.
+- Das Entfernen löst nur die Verknüpfung mit dieser Session; die ursprüngliche Important-Aufgabe bleibt bestehen und unverändert.
+- Die übrigen Aufgaben und ihre Reihenfolge bleiben erhalten; eine entfernte Aufgabe wird nicht automatisch gelöscht oder anderweitig verändert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
