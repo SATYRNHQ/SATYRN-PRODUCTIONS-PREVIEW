@@ -1023,6 +1023,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Gibt es keine Hauptaufgabe, wird die Kategorie für die Focus-Session manuell ausgewählt.
 - Die Kategorie kann während der Session-Vorbereitung vor dem Start angepasst werden; die Änderung überschreibt nicht die Kategorie der ursprünglichen Important-Aufgabe.
 
+
+### Priorität der Focus-Session bei mehreren Verknüpfungen
+- Bei einer oder mehreren verknüpften Important-Aufgaben übernimmt die Focus-Session automatisch die höchste aktuelle Priorität aller verknüpften offenen Aufgaben.
+- Ändern sich Prioritäten oder Verknüpfungen während der Vorbereitung, wird die Session-Priorität entsprechend neu berechnet.
+- Die Priorität der ursprünglichen Important-Aufgaben wird dadurch nicht verändert.
+- Ohne verknüpfte Important-Aufgabe wird die Priorität der Focus-Session manuell ausgewählt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
