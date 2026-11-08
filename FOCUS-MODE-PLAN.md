@@ -201,6 +201,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wenn im Vormonat keine Fokuszeit erfasst wurde, wird statt einer irreführenden Prozentangabe ein neutraler Hinweis angezeigt.
 - Der Vergleich aktualisiert sich automatisch beim Wechsel des ausgewählten Monats.
 
+
+### Visuelle Kennzeichnung der Zeitvergleiche
+- Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
+- Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
+- Die absolute und prozentuale Veränderung bleibt zusätzlich als Text sichtbar; die Bedeutung ist also nicht allein von der Farbe abhängig.
+- Bei fehlender Vergleichsbasis wird der neutrale Hinweis ohne irreführenden Richtungspfeil angezeigt.
+
 ### Overall Statistics
 - Gesamte jemals erfasste Fokuszeit.
 - Gesamtanzahl abgeschlossener, unterbrochener und endgültig verworfener Sessions.
