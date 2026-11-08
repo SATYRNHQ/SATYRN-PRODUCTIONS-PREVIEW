@@ -1222,6 +1222,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Für Fokus- und Pausendauer gibt es keine feste maximale Eingabegrenze.
 - Die Dauer kann über die Plus-Schaltfläche bzw. direkte Eingabe beliebig weit erhöht werden.
 
+
+### Automatische Normalisierung der Zeiteingabe
+- Fokus- und Pausendauer werden bei der Eingabe automatisch auf ein gültiges Stunden-Minuten-Format normalisiert.
+- Minutenwerte ab 60 werden in Stunden umgerechnet, z. B. 75 Minuten zu 01:15.
+- Die Umrechnung erfolgt ohne Änderung der tatsächlich eingestellten Gesamtdauer.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
