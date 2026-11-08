@@ -367,6 +367,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wesentliche Timer-Steuerungen bleiben schnell erreichbar.
 - Am oberen Seitenbereich wird wieder die größere Timer-Ansicht dargestellt.
 
+
+### Interaktion mit dem kompakten Sticky Timer
+- Ein Klick bzw. Tippen auf die kompakte Sticky-Leiste klappt die vollständige Timer-Ansicht wieder aus, auch wenn die Seite weiter unten gescrollt ist.
+- Die ausgeklappte Ansicht bleibt am oberen Bildschirmrand erreichbar; die übrigen Inhalte scrollen weiterhin darunter.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
