@@ -213,6 +213,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Zeitvergleiche bleiben auf denselben Zeitraum und dieselbe Kategorieauswahl bezogen; die Vergleichsperiode verwendet also exakt dieselben ausgewählten Kategorien.
 - Die Kategorieauswahl ist in allen Statistik-Zeiträumen konsistent und ohne Seitenwechsel erreichbar.
 
+
+### Bedienung der Kategorie-Mehrfachauswahl
+- Die Kategorie-Mehrfachauswahl in den Statistiken übernimmt die Bedienlogik und das visuelle Auswahlverhalten des Important-Tabs.
+- Kategorien werden als farbige Auswahl-Chips bzw. Auswahl-Elemente mit eindeutig erkennbarem ausgewähltem Zustand dargestellt.
+- Mehrere Kategorien können unabhängig voneinander aktiviert und deaktiviert werden.
+- Die Auswahl unterstützt auch „Alle Kategorien“ als Standardansicht; die Bedienung bleibt über Daily, Weekly, Monthly und Overall konsistent.
+
 ### Visuelle Kennzeichnung der Zeitvergleiche
 - Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
 - Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
