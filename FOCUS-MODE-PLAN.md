@@ -36,11 +36,14 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Kreisförmiger Fortschrittsindikator mit flüssiger Animation.
 - Verbleibende Zeit ist die Hauptanzeige.
 - Zusätzlich kleine Anzeige der bereits vergangenen Zeit.
-- Dynamischer Status oberhalb der Zeitanzeige:
-  - `FOCUS SESSION`
-  - `SHORT BREAK`
-  - `LONG BREAK`
-  - `PAUSED`
+- Dynamischer Status oberhalb der Zeitanzeige, jederzeit eindeutig sichtbar:
+  - `FOCUS` – eine Fokusphase läuft aktiv.
+  - `BREAK` – die konfigurierte Pause läuft; es wird nicht zwischen Short Break und Long Break unterschieden.
+  - `PAUSED` – die Session wurde manuell pausiert und kann fortgesetzt werden.
+  - `INTERRUPTED` – die Session wurde unterbrochen und bleibt wiederaufnehmbar.
+  - `COMPLETED` – die Session wurde erfolgreich abgeschlossen.
+  - `EXPIRED` – die aktuelle Fokus- oder Pausenzeit ist abgelaufen und wartet auf die vorgesehene nächste Aktion.
+- Die Statusdarstellung unterscheidet aktive, pausierte, unterbrochene und abgeschlossene Zustände auch optisch klar voneinander.
 - Das aktuelle Fokusziel wird direkt im Timerbereich angezeigt und kann bei Bedarf während der Session geändert werden.
 
 ### Timersteuerung und Ablauf
