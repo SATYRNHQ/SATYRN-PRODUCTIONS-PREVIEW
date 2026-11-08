@@ -364,16 +364,6 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nutzer laden den Bericht herunter und können ihn anschließend selbst über ihr gewünschtes E-Mail- oder Freigabeprogramm teilen.
 
 
-### Responsiver Sticky Timer für Smartphone und Tablet
-- Auf Smartphones und Tablets bleibt der Timer beim Scrollen am oberen Bildschirmrand sichtbar und klappt automatisch zu einer kleinen, platzsparenden Leiste zusammen.
-- Die kompakte Leiste zeigt die wichtigsten Zeitinformationen, den Session-Status und wesentliche Timer-Steuerungen.
-- Durch Antippen der Leiste kann die vollständige Timer-Ansicht auch dann ausgeklappt werden, wenn die Seite weiter unten steht.
-- Wird danach weiter nach unten gescrollt, klappt die Ansicht automatisch und flüssig wieder zur kompakten Leiste zusammen.
-- Am oberen Seitenbereich wird die große Timer-Ansicht dargestellt.
-- Das Verhalten funktioniert im Hoch- und Querformat. Größe und Anordnung passen sich automatisch an die verfügbare Bildschirmgröße und den geringeren vertikalen Platz an.
-- Lesbarkeit und Erreichbarkeit der wichtigsten Steuerungen haben Vorrang; Inhalte und Bedienelemente dürfen nicht unnötig verdeckt werden.
-
-
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
@@ -524,6 +514,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Touch-Bedienung, ausreichende Abstände und gut erreichbare Bedienelemente werden berücksichtigt.
 
 
+### Responsiver Sticky Timer für Smartphone und Tablet
+- Auf Smartphones und Tablets bleibt der Timer beim Scrollen am oberen Bildschirmrand sichtbar und klappt automatisch zu einer kleinen, platzsparenden Leiste zusammen.
+- Die kompakte Leiste zeigt die wichtigsten Zeitinformationen, den Session-Status und wesentliche Timer-Steuerungen.
+- Durch Antippen der Leiste kann die vollständige Timer-Ansicht auch dann ausgeklappt werden, wenn die Seite weiter unten steht.
+- Wird danach weiter nach unten gescrollt, klappt die Ansicht automatisch und flüssig wieder zur kompakten Leiste zusammen.
+- Am oberen Seitenbereich wird die große Timer-Ansicht dargestellt.
+- Das Verhalten funktioniert im Hoch- und Querformat. Größe und Anordnung passen sich automatisch an die verfügbare Bildschirmgröße und den geringeren vertikalen Platz an.
+- Lesbarkeit und Erreichbarkeit der wichtigsten Steuerungen haben Vorrang; Inhalte und Bedienelemente dürfen nicht unnötig verdeckt werden.
+
 ### Tastaturkürzel
 - Focus Mode unterstützt Tastaturkürzel für häufige Timer-Aktionen.
 - Leertaste: laufende Fokus- oder Pausenphase pausieren bzw. fortsetzen.
@@ -610,8 +609,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 ### Benachrichtigungsübersicht
-- Automatisch ausgeblendete Focus-Mode-Erinnerungen bleiben in einer Benachrichtigungsübersicht erhalten.
-- Die Übersicht ist über ein kleines Glocken-Symbol erreichbar und kann von jeder SATYRN-HQ-Seite geöffnet werden.
+- Focus-Mode-Erinnerungen werden in einer zentralen, websiteweiten Benachrichtigungsübersicht gespeichert und angezeigt.
+- Die Übersicht wird nicht als separates Focus-Mode-System umgesetzt, sondern als gemeinsamer Bestandteil von SATYRN HQ geplant.
+- Sie ist über ein kleines Glocken-Symbol erreichbar und kann von jeder SATYRN-HQ-Seite geöffnet werden.
 - Einzelne Benachrichtigungen können dort erneut geöffnet bzw. aufgerufen werden.
 - Einzelne Benachrichtigungen können vom Nutzer gelöscht werden.
 - Das automatische Ausblenden nach 10 Sekunden löscht eine Benachrichtigung nicht.
