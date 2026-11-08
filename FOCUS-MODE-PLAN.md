@@ -492,3 +492,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Alle Kategorien** ist die Standardauswahl und zeigt den vollständigen Verlauf unabhängig von der Kategorie.
 - Aktive Kategorieauswahlen werden oberhalb der Ergebnisliste sichtbar angezeigt und können dort einzeln wieder entfernt werden.
 - Der Kategorie-Filter lässt sich mit Zeitraum-, Status- und Prioritätsfiltern kombinieren.
+
+### Status-Filter
+- Der Status-Filter bietet die Auswahl **Alle**, **Abgeschlossen** und **Unterbrochen**.
+- **Alle** ist die Standardauswahl und zeigt abgeschlossene sowie unterbrochene Sessions.
+- Die Auswahl kann direkt im Bereich der Session-History-Filter geändert werden.
+- Der aktive Statusfilter bleibt sichtbar und lässt sich zusammen mit Zeitraum-, Kategorie- und Prioritätsfiltern verwenden.
+- Status wird immer zusätzlich durch eine eindeutige Textbezeichnung dargestellt; Farbe allein vermittelt den Status nicht.
