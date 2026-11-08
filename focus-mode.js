@@ -119,15 +119,16 @@
   };
   const focusEnd=(s,now)=>{
     appendCurrentFocus(s,now);
+    s.phase='focus';s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;s.lastActiveLocalDate=dateInZone(now,zone());
     event(s,'focus-end','Fokusphase abgeschlossen',now);
-    if(s.breakDurationMs>0){
-      s.phase='break';s.status='RUNNING';s.phaseDurationMs=s.breakDurationMs;s.remainingMs=s.breakDurationMs;s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+s.breakDurationMs;
-      event(s,'break-start','Pause gestartet',now);tone();notify('SATYRN Focus · Pause','Deine Fokusphase ist abgeschlossen. Zeit für eine Pause.');
-    }else{
-      s.phase='focus';s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;setDistractionFree(false);
-      event(s,'expired','Fokuszeit abgelaufen · nächste Fokusphase manuell starten',now);notify('SATYRN Focus · Fokusphase beendet','Starte die nächste Fokusphase, wenn du bereit bist.');
-    }
-    s.lastActiveAt=now;
+    event(s,'expired','Fokusphase beendet · Pause wartet auf deine Bestätigung',now);
+    setDistractionFree(false);
+    notify('SATYRN Focus · Fokusphase beendet',s.breakDurationMs>0?'Deine Fokusphase ist abgeschlossen. Starte die Pause, wenn du bereit bist.':'Deine Fokusphase ist abgeschlossen. Du kannst die nächste Fokusphase manuell starten.');
+  };
+  const startBreak=(s)=>{
+    if(!s||s.status!=='EXPIRED'||s.phase!=='focus'||s.breakDurationMs<=0)return;
+    const now=Date.now();s.phase='break';s.status='RUNNING';s.phaseDurationMs=s.breakDurationMs;s.remainingMs=s.breakDurationMs;s.phaseStartedAt=now;s.phaseStartTimezone=zone();s.phaseStartLocalDate=dateInZone(now,s.phaseStartTimezone);s.deadline=now+s.breakDurationMs;s.lastActiveAt=now;
+    event(s,'break-start','Pause nach Bestätigung gestartet',now);persist();setDistractionFree(true);ensureTick();renderAll();
   };
   const breakEnd=(s,now)=>{
     if(s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
@@ -252,8 +253,9 @@
       if(s.status==='INTERRUPTED')buttons.push('<button class="fm-button fm-primary" data-fm-action="resume">Resume</button>');
       if(s.status==='PREPARED'||s.status==='EXPIRED')start.hidden=false;else start.hidden=true;start.disabled=countdownTarget===s.id;
       if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break')buttons.push('<button class="fm-button" data-fm-action="skip">Skip Break</button>');
+      if(s.status==='EXPIRED'&&s.phase==='focus'&&s.breakDurationMs>0)buttons.push('<button class="fm-button fm-primary" data-fm-action="start-break">Pause starten</button>');
       if(s.status==='RUNNING'&&s.phase==='focus'||s.status==='PAUSED'&&s.phase==='focus')buttons.push('<button class="fm-button fm-subtle" data-fm-action="reset">Reset</button>');
-      if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='focus')buttons.push('<button class="fm-button fm-subtle" data-fm-action="complete">Complete Session</button>');
+      if(['RUNNING','PAUSED','INTERRUPTED'].includes(s.status))buttons.push('<button class="fm-button fm-subtle" data-fm-action="complete">Session abschließen</button>');
       if(['RUNNING','PAUSED'].includes(s.status))buttons.push('<button class="fm-button fm-danger-ghost" data-fm-action="interrupt">Interrupt</button>');
       if(s.status==='INTERRUPTED')buttons.push('<button class="fm-button fm-danger-ghost" data-fm-action="discard">Verwerfen</button>');
       actions.innerHTML=buttons.join('');
@@ -268,7 +270,7 @@
     }
     renderDistractions();
     renderOpenSessions();
-    if(start)start.textContent=countdownTarget===s?.id?'Countdown läuft…':s?.status==='EXPIRED'?'Nächste Fokusphase starten':'Session starten';
+    if(start)start.textContent=countdownTarget===s?.id?'Countdown läuft…':s?.status==='EXPIRED'?(s.phase==='break'?'Nächste Fokusphase starten':s.breakDurationMs>0?'Ohne Pause weiter':'Nächste Fokusphase starten'):'Session starten';
   };
   const renderDistractions=()=>{
     const s=current(),target=$('fmDistractionList');if(!target)return;
@@ -392,8 +394,11 @@
   const finish=(s,now=Date.now())=>{
     if(!s)return;
     reconcile(s,now);
-    if(!['RUNNING','PAUSED'].includes(s.status)||s.phase!=='focus')return;
-    if(s.status==='RUNNING')appendCurrentFocus(s,now);
+    if(!['RUNNING','PAUSED','INTERRUPTED'].includes(s.status))return;
+    if(s.status==='RUNNING'){
+      if(s.phase==='focus')appendCurrentFocus(s,now);
+      else if(s.phase==='break'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
+    }
     s.status='COMPLETED';s.deadline=null;s.phaseStartedAt=null;s.remainingMs=0;s.completedAt=now;s.completedLocalDate=dateInZone(now,zone());s.lastActiveAt=now;s.lastActiveLocalDate=s.completedLocalDate;
     event(s,'completed','Session erfolgreich abgeschlossen',now);
     updateTaskTime(s);
@@ -470,6 +475,7 @@
     if(action==='discard'){if(confirm('Diese unterbrochene Session endgültig verwerfen? Sie wird aus den offenen Sessions entfernt, bleibt aber in der History dokumentiert.')){updateTaskTime(s);s.status='INTERRUPTED';s.discarded=true;s.discardedAt=Date.now();event(s,'discarded','Session verworfen',s.discardedAt);activeId=sortedOpen()[0]?.id||null;state.activeId=activeId;persist();renderAll();}}
     if(action==='reset'){if(confirm('Fokusphase auf die ursprüngliche Dauer zurücksetzen? Die bereits geleistete Fokuszeit bleibt als eigener Abschnitt erhalten.'))resetSession(s);}
     if(action==='complete'){if(confirm('Session jetzt erfolgreich abschließen?'))finish(s);}
+    if(action==='start-break'){startBreak(s);}
     if(action==='skip'){const now=Date.now();if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break'){if(s.status==='RUNNING'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;event(s,'skip-break','Pause übersprungen · nächste Fokusphase manuell starten',now);setDistractionFree(false);stopTick();persist();renderAll();}}
   };
   const buildMarkup=()=>{
