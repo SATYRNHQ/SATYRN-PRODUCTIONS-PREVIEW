@@ -462,6 +462,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 - **Fehlende Daten sind nicht gleich null Fokuszeit:** Ein vergangener Tag darf nur dann als Tag ohne Aktivität (0 Minuten) dargestellt werden, wenn verlässliche, vollständige Daten dies bestätigen. Fehlen Daten, sind sie unvollständig oder ist ihre Integrität nicht bestätigt, wird der Tag als „Ungeklärt“ dargestellt – niemals stillschweigend als neutraler Tag ohne Aktivität.
 - Diese Unterscheidung gilt auch beim Wechsel zwischen Monaten sowie für rückwirkend angezeigte Monatskalender. Monatsgesamtwerte und Vergleiche müssen ungeklärte Daten kenntlich machen und dürfen fehlende Werte nicht als bestätigte 0 Minuten einrechnen.
+
+- **Vorläufige Monatsvergleiche bei Datenlücken:** Enthält der ausgewählte Monat oder der Vergleichsmonat ungeklärte bzw. unvollständige Tagesdaten, wird der Monatsvergleich sichtbar als „Vorläufig“ gekennzeichnet.
+- Solange die Datengrundlage unvollständig ist, werden absolute und prozentuale Veränderungen nicht als verlässliche Ergebnisse ausgegeben. Stattdessen erscheint ein verständlicher Hinweis auf die betroffenen ungeklärten Daten.
+- Sobald die fehlenden Daten zuverlässig wiederhergestellt oder geklärt wurden, wird der Vergleich neu berechnet und die Vorläufig-Kennzeichnung entfernt, sofern beide Vergleichszeiträume vollständig und belastbar sind.
+
 - Sobald Daten zuverlässig wiederhergestellt oder abgeglichen wurden, wird der betroffene Tag und die davon abhängige Monatsauswertung aktualisiert. Bis dahin bleiben ursprüngliche Daten erhalten und betroffene Ergebnisse als vorläufig gekennzeichnet.
 
 - Die Zustände müssen nicht allein über Farbe unterscheidbar sein; ergänzende Symbole oder Textkennzeichnungen gewährleisten Verständlichkeit und Barrierearmut.
