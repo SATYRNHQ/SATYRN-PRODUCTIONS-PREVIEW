@@ -42,6 +42,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - **Mehrtägige Termine sind möglich.** Ein Termin kann daher über ein Start- und Enddatum laufen und wird in der Monatsansicht über die betroffenen Tage hinweg berücksichtigt.
 - Zusätzlich gibt es **ganztägige Termine ohne erforderliche Uhrzeitangabe**. Das gilt auch für mehrtägige ganztägige Termine.
 - Termine können **wiederkehrend** angelegt werden, mindestens mit den Wiederholungen wöchentlich, monatlich und jährlich.
+- Mehrtägige Termine können ebenfalls wiederkehrend angelegt werden. Die festgelegte Dauer wird auf jedes Vorkommen der Wiederholungsserie angewendet (z. B. jährlich vom 8. bis zum 10. November).
 - Wiederholungen benötigen standardmäßig kein festgelegtes Enddatum. Sie laufen weiter, bis der Nutzer sie manuell löscht.
 - Die Beschreibung ist freiwillig; die übrigen genannten Angaben gehören zur regulären Terminansicht.
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
@@ -90,6 +91,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Bei wöchentlicher Wiederholung können ein oder mehrere Wochentage individuell ausgewählt werden, z. B. Montag und Donnerstag.
 - 2026-11-08: Bei monatlicher Wiederholung kann zwischen einem festen Monatstag (z. B. dem 8.) und einer relativen Wochentagsposition (z. B. dem ersten Montag des Monats) gewählt werden.
 - 2026-11-08: Bei jährlicher Wiederholung kann zwischen einem festen Kalenderdatum (z. B. dem 8. November) und einer relativen Wochentagsposition innerhalb eines Monats (z. B. dem zweiten Montag im November) gewählt werden.
+- 2026-11-08: Mehrtägige Termine können wiederkehrend angelegt werden; die festgelegte Dauer gilt für jedes Vorkommen der Serie.
 - 2026-11-08: Die drei Formularabschnitte wurden festgelegt: **Allgemeines** (Titel, optionale Beschreibung, Priorität), **Datum & Uhrzeit** (Startdatum, Enddatum, Uhrzeit bzw. Ganztägig) und **Wiederholung** (keine, wöchentlich, monatlich, jährlich).
 - 2026-11-08: Der Abschnitt **Wiederholung** ist im Formular standardmäßig eingeklappt und wird erst geöffnet, wenn eine Wiederholung aktiviert bzw. eingerichtet werden soll.
 - 2026-11-08: Beim Erstellen eines neuen Termins ist das Startdatum standardmäßig auf heute gesetzt. Das optionale Enddatum bleibt zunächst leer; ohne Enddatum gilt der Termin als eintägig am Startdatum.
