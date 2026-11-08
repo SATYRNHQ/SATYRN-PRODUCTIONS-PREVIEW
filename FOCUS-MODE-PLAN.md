@@ -524,3 +524,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach dem Zurücksetzen werden wieder alle verfügbaren Sessions angezeigt; die Standardsortierung **Neueste zuerst** bleibt bestehen.
 - Die Schaltfläche wird nur dann aktiv bzw. angeboten, wenn mindestens ein Filter vom Standard abweicht.
 - Die Filtersteuerung einschließlich der Zurücksetzen-Schaltfläche bleibt innerhalb der Session-History im zentralen Workspace und berücksichtigt jederzeit die globale HEADBAR und beide Sidebars.
+
+### Seitennavigation der Session-History
+- Die Session-History verwendet eine klassische Seitennavigation statt automatischem Nachladen beim Scrollen.
+- Unterhalb der Ergebnisliste stehen **Zurück** und **Weiter** sowie anklickbare Seitenzahlen zur Verfügung.
+- Die aktuelle Seite ist eindeutig hervorgehoben; nicht verfügbare Navigationsaktionen sind klar deaktiviert.
+- Beim Wechsel der Seite bleiben die aktuell gesetzten Suchbegriffe, Filter und die Sortierung erhalten.
+- Nach einer Änderung der Filter oder des Suchbegriffs wird die Ergebnisliste aktualisiert und auf eine gültige Ergebnisseite zurückgesetzt, damit keine leere Seite außerhalb der verfügbaren Treffer angezeigt wird.
+- Die Seitennavigation ist kompakt gestaltet und fügt sich in den zentralen Workspace zwischen HEADBAR und den beiden Sidebars ein.
