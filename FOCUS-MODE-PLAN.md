@@ -1946,3 +1946,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Tooltips zeigen Zeitraum, Erfolgsquote sowie Anzahl erfolgreicher und endgültig verworfener Sessions. Prozentwerte und Datenlücken bleiben auch ohne Farberkennung verständlich.
 - Die Verlaufsdiagramme erscheinen in Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum; Daily zeigt keine Wochen- oder Monatsverlaufslinie.
 - Die Diagramme aktualisieren sich automatisch, wenn Sessions endgültig abgeschlossen oder verworfen werden oder sich Zeitraum bzw. Kategorie-Filter ändern.
+### Abgrenzung: Focus-Statistiken und Dashboard-Analytics
+- Focus Mode enthält die unmittelbar aus Focus-Sessions abgeleiteten Kennzahlen und persönlichen Rekorde: tatsächlich erfasste Fokuszeit, zusammenhängende Fokusphasen, Session-Dauer, aktive Fokus-Tage/-Wochen, erfolgreiche Session-Abschlüsse und deren Erfolgsquoten.
+- Übergreifende Produktivitätsanalysen, bereichsübergreifende Vergleiche, Aufgabenleistung und langfristige Entwicklungen werden im späteren Dashboard geplant und nicht als zusätzliche Focus-Mode-Kennzahlen vorweggenommen.
+- Das Dashboard darf Focus-Daten später wiederverwenden und mit Daten anderer Website-Bereiche kombinieren. Dafür soll eine gemeinsame, konsistente Datenbasis genutzt werden; Berechnungslogik und Datenerfassung sollen nicht unabhängig doppelt implementiert werden.
+- Konkrete Dashboard-Kennzahlen, Visualisierungen und Auswertungsregeln werden erst während der separaten Dashboard-Planung festgelegt.
