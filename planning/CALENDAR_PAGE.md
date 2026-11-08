@@ -20,7 +20,8 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Termine und Ereignisse werden direkt im jeweiligen Tagesfeld dargestellt.
 - Die sichtbaren Kalendereinträge zeigen ausschließlich ihren **Titel**.
 - Wenn an einem Tag mehrere Einträge liegen, werden ihre Titel untereinander angezeigt.
-- Pro Tagesfeld werden höchstens **drei Termineinträge** direkt angezeigt. Gibt es weitere Einträge, erscheint darunter ein Hinweis mit der Anzahl, z. B. **„+2 weitere“**. Über das Tagesfenster lassen sich alle Einträge des Tages ansehen.
+- Pro Tagesfeld werden höchstens **drei Termineinträge** direkt angezeigt.
+- Mehrtägige Terminbalken zählen beim Platzlimit eines Tagesfeldes wie andere Kalendereinträge. Wenn mehr Einträge vorhanden sind, als direkt angezeigt werden können, werden auch überzählige mehrtägige Balken hinter dem Hinweis **„+ weitere“** zusammengefasst; alle Einträge bleiben über das Tagesfenster erreichbar. Gibt es weitere Einträge, erscheint darunter ein Hinweis mit der Anzahl, z. B. **„+2 weitere“**. Über das Tagesfenster lassen sich alle Einträge des Tages ansehen.
 - Termine innerhalb eines Tages werden chronologisch sortiert: **Ganztägige Termine stehen zuerst**, danach folgen Termine mit Uhrzeit vom frühesten zum spätesten.
 - Termine, die sich zeitlich überschneiden, erhalten eine **dezente visuelle Kennzeichnung**, damit die Überschneidung erkennbar ist, ohne die Monatsansicht zu überladen.
 - Eine Schaltfläche mit der exakten Beschriftung **„Aktuelles Datum“** springt jederzeit zum heutigen Datum bzw. in den Monat, in dem das heutige Datum liegt.
@@ -102,6 +103,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Mehrtägige Terminbalken zählen zum Platzlimit des Tagesfeldes und können bei zu vielen Einträgen ebenfalls hinter „+ weitere“ verborgen werden; sie bleiben im Tagesfenster zugänglich.
 - 2026-11-08: Zeitlich überlappende mehrtägige Termine werden in separaten Zeilen untereinander dargestellt, damit alle Balken klar erkennbar bleiben.
 - 2026-11-08: Mehrtägige Terminbalken bleiben auch bei weiteren Terminen innerhalb ihres Zeitraums durchgehend; zusätzliche Termine werden separat angezeigt und unterbrechen den Balken nicht.
 - 2026-11-08: Ein Klick auf einen mehrtägigen Terminbalken öffnet unabhängig von der angeklickten Stelle dieselbe Detailansicht des gesamten Termins.
