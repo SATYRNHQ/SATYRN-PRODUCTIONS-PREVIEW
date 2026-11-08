@@ -1780,3 +1780,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bereits erfasste Fokuszeitabschnitte bleiben unverändert erhalten und werden weder gelöscht noch erneut gezählt.
 - Session-Ziel, Notizen, Distraction Log, Unteraufgaben, Verknüpfungen, Kategorie, Priorität und weitere Session-Einstellungen bleiben erhalten.
 - Vor dem Reset erscheint die bestehende Sicherheitsabfrage.
+
+
+### Reset nach abgelaufener Fokusphase bei ausstehender Pausenbestätigung
+- Wird Reset ausgelöst, nachdem die Fokusphase abgelaufen ist, aber bevor der Nutzer den Beginn der Pause bestätigt hat, wird die Fokusphase auf ihre ursprünglich für diese Session eingestellte Fokusdauer zurückgesetzt.
+- Die bis zum Ablauf bereits erfasste Fokuszeit bleibt als eigener Zeitabschnitt innerhalb derselben Session erhalten und wird nicht gelöscht oder doppelt gezählt.
+- Die Pause beginnt durch Reset nicht automatisch; der Timer startet gemäß der bestehenden Reset-Regel im zurückgesetzten Fokuszustand.
+- Die bestehende Sicherheitsabfrage vor dem Reset bleibt bestehen.
