@@ -1257,6 +1257,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach erfolgreichem Speichern eines eigenen Presets erscheint eine kurze Bestätigung, z. B. „Preset erfolgreich gespeichert“.
 - Die Bestätigung wird dezent im bestehenden SATYRN-HQ-Benachrichtigungsstil angezeigt.
 
+
+### Preset-Editor nach erfolgreichem Speichern schließen
+- Nach erfolgreichem Speichern eines eigenen Presets schließt sich der Preset-Editor automatisch.
+- Die kurze Erfolgsmeldung „Preset erfolgreich gespeichert“ bleibt sichtbar, auch wenn der Editor geschlossen wurde.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
