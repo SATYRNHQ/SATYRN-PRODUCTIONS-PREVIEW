@@ -233,6 +233,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Aktion verändert keine Sessions oder gespeicherten Daten, sondern ausschließlich den aktiven Statistik-Filter.
 - Sie ist in Daily, Weekly, Monthly und Overall konsistent verfügbar.
 
+
+### Frei wählbarer Statistik-Zeitraum
+- Zusätzlich zu Daily, Weekly, Monthly und Overall gibt es einen frei wählbaren Zeitraum mit Start- und Enddatum.
+- Der Zeitraum wird über eine Datumsbereich-Auswahl festgelegt; das Enddatum darf nicht vor dem Startdatum liegen.
+- Alle passenden Statistikwerte, Diagramme, Kategorieauswertungen und Session-Anzahlen werden auf den gewählten Zeitraum begrenzt.
+- Die bestehende Kategorie-Mehrfachauswahl bleibt auch für den frei wählbaren Zeitraum nutzbar und wird beim Wechsel zwischen den Statistik-Ansichten nicht zurückgesetzt.
+- Der frei gewählte Zeitraum verändert keine gespeicherten Sessions oder die vordefinierten Daily-, Weekly-, Monthly- und Overall-Ansichten.
+
 ### Visuelle Kennzeichnung der Zeitvergleiche
 - Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
 - Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
