@@ -919,6 +919,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Synchronisierung bzw. Übernahme in die aktive Verknüpfung mit Important wird erst durch ausdrückliches Starten der Session wirksam.
 - Wird die Vorbereitung abgebrochen, werden keine Änderungen an der ursprünglichen Important-Aufgabe vorgenommen.
 
+
+### Zusammenfassung vor dem endgültigen Session-Start
+- Nach Abschluss der Session-Vorbereitung wird vor dem tatsächlichen Start eine kompakte Zusammenfassung der übernommenen und geänderten Daten angezeigt.
+- Die Zusammenfassung dient als letzte Kontrolle; erst die ausdrückliche Bestätigung startet die Session und aktiviert die Verknüpfung/Synchronisierung mit Important.
+- Bei Rückkehr zur Bearbeitung bleiben die Eingaben der Vorbereitung erhalten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
