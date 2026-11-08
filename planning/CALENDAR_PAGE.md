@@ -46,6 +46,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Wiederholungen benötigen standardmäßig kein festgelegtes Enddatum. Sie laufen weiter, bis der Nutzer sie manuell löscht.
 - Für jede Wiederholungsserie kann optional ein **Enddatum** festgelegt werden (z. B. „jeden Montag bis zum 31. Dezember“). Ohne ein solches Enddatum läuft die Serie unbegrenzt weiter, bis sie manuell gelöscht wird.
 - Einzelne Vorkommen einer Wiederholungsserie können als **Ausnahme übersprungen** werden, ohne die übrige Serie zu verändern. Das ausgelassene Vorkommen wird dann nicht im Kalender angezeigt; alle anderen Termine der Serie bleiben bestehen.
+- Ein einzelnes Vorkommen kann außerdem **individuell bearbeitet** werden, ohne die übrige Wiederholungsserie zu verändern. Dazu gehören insbesondere Datum und Uhrzeit; die Änderung gilt ausschließlich für dieses Vorkommen.
 - Während der Einrichtung einer Wiederholung wird eine kurze, verständliche **Zusammenfassung der gewählten Regel** angezeigt (z. B. „Jeden Montag und Donnerstag bis zum 31. Dezember“).
 - Die Beschreibung ist freiwillig; die übrigen genannten Angaben gehören zur regulären Terminansicht.
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
@@ -91,6 +92,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Ein einzelnes Vorkommen einer Wiederholungsserie kann unabhängig von der Serie individuell bearbeitet werden, insbesondere hinsichtlich Datum und Uhrzeit.
 - 2026-11-08: Einzelne Vorkommen einer Wiederholungsserie können als Ausnahme übersprungen werden, ohne die übrige Serie zu verändern.
 - 2026-11-08: Beim Einrichten einer Wiederholung wird eine kurze verständliche Zusammenfassung der gewählten Regel angezeigt, einschließlich der ausgewählten Wochentage bzw. Wiederholungsart und eines optionalen Enddatums.
 - 2026-11-08: Für Wiederholungsserien kann optional ein Enddatum festgelegt werden. Ohne Enddatum läuft die Serie unbegrenzt weiter, bis sie manuell gelöscht wird.
