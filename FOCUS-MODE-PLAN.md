@@ -1636,3 +1636,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bis zum Reset geleistete Fokuszeit bleibt als eigener Zeitabschnitt bzw. Eintrag innerhalb derselben Session erhalten.
 - Nach dem Reset neu geleistete Fokuszeit wird zusätzlich erfasst.
 - Statistiken und Session-Gesamtzeit berücksichtigen alle erfassten Fokuszeitabschnitte; reguläre Pausen zählen weiterhin nicht als Fokuszeit.
+
+
+### Wiederaufnahme nach Schließen der Website
+- Wird eine unterbrochene oder pausierte Session nach dem Schließen der Website wieder aufgenommen, wird die verbleibende Fokuszeit anhand der tatsächlich vergangenen Zeit korrekt berechnet.
+- Die Session wird nicht automatisch fortgesetzt; die Wiederaufnahme erfolgt erst nach ausdrücklicher Auswahl durch den Nutzer.
+- Bereits erfasste Fokuszeitabschnitte bleiben erhalten und werden nicht doppelt gezählt.
