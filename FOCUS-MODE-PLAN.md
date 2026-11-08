@@ -415,6 +415,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Für diese Nachberechnung sind keine laufenden Hintergrundprozesse, geöffneten Browser-Tabs oder Benachrichtigungen erforderlich. Die Auswertung erfolgt spätestens beim nächsten Öffnen des Focus Mode und wird anschließend dauerhaft gespeichert.
 - Die Nachberechnung darf bereits endgültig bewertete Tage nicht aufgrund späterer Zeitzonenwechsel oder geänderter Tagesziele rückwirkend verschieben oder umwerten. Maßgeblich bleiben die für den jeweiligen Tag gespeicherten Regeln und Daten.
 
+- Die Kalenderübersicht unterscheidet die Tageszustände eindeutig und barrierearm:
+  - **Erreicht:** Tagesziel wurde für den betreffenden lokalen Kalendertag erfüllt.
+  - **Verfehlt:** Der lokale Kalendertag ist abgeschlossen und das damalige Tagesziel wurde nicht erfüllt.
+  - **Heute/offen:** Der aktuelle lokale Tag läuft noch; das Tagesziel wird bis zum Tageswechsel nicht als verfehlt gewertet.
+  - **Zukünftig:** Der Kalendertag liegt noch in der Zukunft und besitzt noch keine endgültige Wertung.
+- Tage mit erfasster Fokuszeit, an denen das Tagesziel nicht erreicht wurde, erhalten zusätzlich eine dezente Aktivitätsanzeige. Diese Aktivitätsanzeige ist von der Zielwertung getrennt, damit Fokusaktivität nicht mit Zielerreichung verwechselt wird.
+- Farben werden durch eindeutige Symbole bzw. Beschriftungen ergänzt, sodass die Zustände auch ohne Farberkennung unterscheidbar bleiben.
+
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
 - Farbintensität richtet sich nach der täglichen Fokuszeit.
