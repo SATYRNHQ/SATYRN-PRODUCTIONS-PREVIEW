@@ -18,10 +18,10 @@
     {id:'organisation',name:'Organisation',color:'#a7aeb5'}
   ];
   const PRIORITIES = [
-    {id:'urgent',name:'Critical',rank:0,color:'#d97869'},
-    {id:'important',name:'High',rank:1,color:'#d6a16c'},
-    {id:'provisional',name:'Normal',rank:2,color:'#80a9c9'},
-    {id:'indefinite',name:'Low',rank:3,color:'#85aa8a'}
+    {id:'urgent',name:'Dringend',rank:0,color:'#d97869'},
+    {id:'important',name:'Wichtig',rank:1,color:'#d6a16c'},
+    {id:'provisional',name:'Vorläufig',rank:2,color:'#80a9c9'},
+    {id:'indefinite',name:'Unbefristet',rank:3,color:'#85aa8a'}
   ];
   const PRESETS = [
     {id:'pomodoro',name:'Pomodoro',focus:25,break:5},
@@ -72,7 +72,7 @@
   const getImportant=()=>{const raw=read(IMPORTANT,{entries:[]});return Array.isArray(raw)?raw:(raw.entries||[]);};
   const getLegacyTasks=()=>{const t=read(TASKS,[]);return Array.isArray(t)?t:[];};
   const totalFocus=s=>moneyless((s.focusSegments||[]).reduce((n,x)=>n+(Number(x.durationMs)||0),0));
-  const openSessions=()=>state.sessions.filter(s=>OPEN.has(s.status));
+  const openSessions=()=>state.sessions.filter(s=>OPEN.has(s.status)&&!s.discarded);
   const sortedOpen=()=>openSessions().slice().sort((a,b)=>{
     const order={RUNNING:0,PAUSED:1,INTERRUPTED:2,EXPIRED:3,PREPARED:4};
     const d=(order[a.status]??9)-(order[b.status]??9);if(d)return d;
@@ -223,7 +223,7 @@
       if(s.status==='PAUSED')buttons.push('<button class="fm-button fm-primary" data-fm-action="resume">Resume</button>');
       if(s.status==='INTERRUPTED')buttons.push('<button class="fm-button fm-primary" data-fm-action="resume">Resume</button>');
       if(s.status==='PREPARED'||s.status==='EXPIRED')start.hidden=false;else start.hidden=true;
-      if(s.status==='RUNNING'&&s.phase==='break')buttons.push('<button class="fm-button" data-fm-action="skip">Skip Break</button>');
+      if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break')buttons.push('<button class="fm-button" data-fm-action="skip">Skip Break</button>');
       if(s.status==='RUNNING'&&s.phase==='focus'||s.status==='PAUSED'&&s.phase==='focus')buttons.push('<button class="fm-button fm-subtle" data-fm-action="reset">Reset</button>');
       if(['RUNNING','PAUSED'].includes(s.status))buttons.push('<button class="fm-button fm-subtle" data-fm-action="complete">Complete Session</button>');
       if(['RUNNING','PAUSED'].includes(s.status))buttons.push('<button class="fm-button fm-danger-ghost" data-fm-action="interrupt">Interrupt</button>');
@@ -357,7 +357,7 @@
     updateTaskTime(s);
     setDistractionFree(false);persist();stopTick();renderAll();toast('Session erfolgreich abgeschlossen.');
   };
-  const interrupt=(s)=>{pauseSession(s,'interrupt');setDistractionFree(false);stopTick();renderAll();};
+  const interrupt=(s)=>{if(!s)return;if(s.status==='RUNNING')pauseSession(s,'interrupt');else if(s.status==='PAUSED'){s.status='INTERRUPTED';s.lastActiveAt=Date.now();event(s,'interrupt','Session unterbrochen',s.lastActiveAt);persist();}setDistractionFree(false);stopTick();renderAll();};
   const switchSession=id=>{
     if(id===activeId)return;
     const old=current();if(old&&old.status==='RUNNING')pauseSession(old,'pause');
@@ -407,20 +407,20 @@
     if(action==='pause'){pauseSession(s,'pause');stopTick();renderAll();}
     if(action==='resume')resumeSession(s);
     if(action==='interrupt'){if(confirm('Session unterbrechen? Sie bleibt gespeichert und kann später fortgesetzt werden.'))interrupt(s);}
-    if(action==='discard'){if(confirm('Diese unterbrochene Session endgültig verwerfen? Die bisherige Fokuszeit bleibt in der History erhalten.')){s.status='INTERRUPTED';s.discarded=true;s.discardedAt=Date.now();event(s,'discarded','Session verworfen',s.discardedAt);activeId=null;state.activeId=null;persist();renderAll();}}
+    if(action==='discard'){if(confirm('Diese unterbrochene Session endgültig verwerfen? Sie wird aus den offenen Sessions entfernt, bleibt aber in der History dokumentiert.')){s.status='INTERRUPTED';s.discarded=true;s.discardedAt=Date.now();event(s,'discarded','Session verworfen',s.discardedAt);activeId=null;state.activeId=null;persist();renderAll();}}
     if(action==='reset'){if(confirm('Fokusphase auf die ursprüngliche Dauer zurücksetzen? Die bereits geleistete Fokuszeit bleibt als eigener Abschnitt erhalten.'))resetSession(s);}
     if(action==='complete'){if(confirm('Session jetzt erfolgreich abschließen?'))finish(s);}
-    if(action==='skip'){const now=Date.now();if(s.status==='RUNNING'&&s.phase==='break'){s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;event(s,'skip-break','Pause übersprungen · nächste Fokusphase manuell starten',now);stopTick();persist();renderAll();}}
+    if(action==='skip'){const now=Date.now();if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break'){s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;event(s,'skip-break','Pause übersprungen · nächste Fokusphase manuell starten',now);stopTick();persist();renderAll();}}
   };
   const buildMarkup=()=>{
     const html = String.raw`<div class="fm-page-head"><div><div class="eyebrow">SATYRN HQ · DEEP WORK CENTER</div><h1>Focus <em>Mode.</em></h1><p>Ein klarer Arbeitsblock. Ein konkretes Ziel. Dein Fortschritt bleibt nachvollziehbar.</p></div><div class="fm-head-actions"><button type="button" class="fm-history-open" id="fmHistoryOpen">◷ <span>History</span></button><span class="fm-storage-pill" id="fmStorageState" data-state="saved">SAVED</span></div></div>
       <div class="fm-main-view" id="fmMainView">
         <section class="fm-current glass-card" aria-labelledby="fmCurrentHeading">
-          <div class="fm-current-top"><div><span class="fm-kicker">01 · CURRENT SESSION</span><h2 id="fmCurrentHeading">Dein Fokus im Mittelpunkt</h2></div><div class="fm-current-meta"><span id="fmCurrentCategory" class="fm-meta-chip">Music Production</span><span id="fmCurrentPriority" class="fm-meta-chip">High</span></div></div>
+          <div class="fm-current-top"><div><span class="fm-kicker">01 · CURRENT SESSION</span><h2 id="fmCurrentHeading">Dein Fokus im Mittelpunkt</h2></div><div class="fm-current-meta"><label class="fm-current-select-label">Kategorie<select id="fmCurrentCategory" class="fm-meta-select"><option value="music">Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></label><label class="fm-current-select-label">Priorität<select id="fmCurrentPriority" class="fm-meta-select"><option value="urgent">Dringend</option><option value="important">Wichtig</option><option value="provisional">Vorläufig</option><option value="indefinite">Unbefristet</option></select></label></div></div>
           <div class="fm-current-grid">
             <div class="fm-timer-column">
               <div class="fm-timer-ring" id="fmTimerRing" style="--fm-progress:0"><div class="fm-timer-core"><span id="fmTimerStatus" data-state="ready">READY</span><strong id="fmTimerTime">00:00:00</strong><small id="fmElapsed">0min Fokuszeit</small></div></div>
-              <div class="fm-session-identity"><small id="fmCurrentName">Keine aktive Session</small><h3 id="fmCurrentGoal">Noch kein Fokusziel ausgewählt</h3><span id="fmCurrentLink">Eigenes Fokusziel</span></div>
+              <div class="fm-session-identity"><small id="fmCurrentName">Keine aktive Session</small><input id="fmCurrentGoal" class="fm-current-goal-input" aria-label="Aktuelles Fokusziel" value="Noch kein Fokusziel ausgewählt"><span id="fmCurrentLink">Eigenes Fokusziel</span></div>
               <p class="fm-session-hint" id="fmSessionHint">Bereite eine Session vor oder wähle eine offene Session.</p>
               <div class="fm-timer-actions" id="fmTimerActions"></div>
               <button type="button" class="fm-button fm-primary fm-start" id="fmStartPrepared" hidden>Session starten</button>
@@ -465,7 +465,7 @@
             <article><small>DIESE WOCHE</small><b id="fmStatWeek">0min</b><span id="fmStatWeekCompare">Vorwochenvergleich</span></article>
             <article><small>DIESER MONAT</small><b id="fmStatMonth">0min</b><span id="fmStatMonthCompare">Vormonatsvergleich</span></article>
             <article><small>COMPLETED</small><b id="fmStatCompleted">0</b><span>Abgeschlossene Sessions</span></article>
-            <article><small>INTERRUPTED</small><b id="fmStatInterrupted">0</b><span>Unterbrochene Sessions</span></article>
+            <article><small>INTERRUPTED</small><b id="fmStatInterrupted">0</b><span>Heute unterbrochen</span></article><article><small>Ø COMPLETED</small><b id="fmStatAverage">0min</b><span>Ø Dauer heute</span></article>
           </div>
           <div class="fm-stats-lower"><div><div class="fm-panel-heading"><h3>Letzte 7 Tage</h3><span>pro Tag</span></div><div id="fmWeekChart" class="fm-week-chart"></div></div><div><div class="fm-panel-heading"><h3>Kategorien</h3><span>Gesamter Verlauf</span></div><div id="fmCategoryStats" class="fm-category-stats"></div></div></div>
         </section>
@@ -481,7 +481,7 @@
           <div class="fm-history-filter-actions"><button type="button" class="fm-text-button" id="fmHistoryReset">Filter zurücksetzen</button><span id="fmHistoryFilterSummary">Neueste zuerst</span></div>
         </div>
         <div class="fm-history-results" id="fmHistoryList"></div>
-        <div class="fm-history-pagination"><button type="button" id="fmHistoryPrev" class="fm-button fm-subtle">Zurück</button><span id="fmHistoryPageLabel">Seite 1 / 1</span><button type="button" id="fmHistoryNext" class="fm-button fm-subtle">Weiter</button></div>
+        <div class="fm-history-pagination"><button type="button" id="fmHistoryPrev" class="fm-button fm-subtle">Zurück</button><span id="fmHistoryPageNumbers"></span><span id="fmHistoryPageLabel">Seite 1 / 1</span><button type="button" id="fmHistoryNext" class="fm-button fm-subtle">Weiter</button></div>
       </section>
     </div>
     <div class="fm-dialog-backdrop" id="fmHistoryDetailDialog" hidden><section class="fm-dialog fm-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryDetailTitle"><div class="fm-dialog-head"><div><span class="fm-kicker">SESSION DETAILS</span><h2 id="fmHistoryDetailTitle"></h2><p id="fmHistoryDetailMeta"></p></div><button type="button" class="fm-dialog-close" data-fm-close-dialog>×</button></div><div class="fm-detail-stats" id="fmHistoryDetailStats"></div><h3>Zeitlicher Verlauf</h3><div class="fm-timeline" id="fmHistoryTimeline"></div><details class="fm-disclosure"><summary>Session Notes</summary><p id="fmHistoryDetailNotes"></p></details><details class="fm-disclosure"><summary>Distraction Log</summary><div id="fmHistoryDetailDistractions"></div></details><div class="fm-dialog-actions"><button type="button" class="fm-button" id="fmHistoryUseTemplate">Als Vorlage verwenden</button><button type="button" class="fm-button fm-subtle" id="fmHistoryEdit">Details bearbeiten</button><button type="button" class="fm-button fm-danger-ghost" id="fmHistoryDelete">Session löschen</button><button type="button" class="fm-button fm-subtle" data-fm-close-dialog>Schließen</button></div></section></div>
