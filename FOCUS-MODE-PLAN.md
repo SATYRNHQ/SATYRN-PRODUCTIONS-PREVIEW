@@ -389,6 +389,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Leiste passt ihre Höhe und Anordnung an den geringeren vertikalen Platz an.
 - Timer-Informationen und wesentliche Steuerungen bleiben gut erreichbar, ohne Inhalte unnötig zu verdecken.
 
+
+### Responsive Größe der Sticky Timer-Leiste
+- Die kompakte Timer-Leiste passt ihre Größe und Anordnung automatisch an die verfügbare Bildschirmgröße an.
+- Lesbarkeit und Erreichbarkeit der wichtigsten Timer-Informationen und Steuerungen haben Vorrang.
+- Das Verhalten gilt für Smartphones und Tablets im Hoch- und Querformat.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
