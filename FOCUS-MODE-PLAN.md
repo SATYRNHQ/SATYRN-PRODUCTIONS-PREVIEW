@@ -270,6 +270,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim frei gewählten Zeitraum wird kein zusätzlicher Vergleich mit einem vorherigen Zeitraum ergänzt.
 - Der PDF-Export verändert keine gespeicherten Sessions oder Statistikdaten.
 
+
+### PDF-Bericht: SATYRN-Branding und Metadaten
+- Jeder PDF-Statistikbericht enthält automatisch das SATYRN-Logo und den Schriftzug im bestehenden SATYRN-HQ-Design.
+- Das Erstellungsdatum des Berichts wird gut lesbar ausgewiesen.
+- Branding und Metadaten werden konsistent in das druckfreundliche PDF-Layout integriert, ohne die Kennzahlen und Diagramme zu überladen.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
