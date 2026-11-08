@@ -1030,6 +1030,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Priorität der ursprünglichen Important-Aufgaben wird dadurch nicht verändert.
 - Ohne verknüpfte Important-Aufgabe wird die Priorität der Focus-Session manuell ausgewählt.
 
+
+### Sichtbare Session-Priorität in der Vorbereitung
+- Die aktuelle Priorität der Focus-Session wird im Vorbereitungsfenster sichtbar direkt neben der Session-Kategorie angezeigt.
+- Die Darstellung verwendet den bestehenden Prioritätsindikator und die zugehörige Farbe aus Important.
+- Bei verknüpften Aufgaben aktualisiert sich die Anzeige entsprechend der höchsten aktuellen Priorität; ohne Verknüpfung zeigt sie die manuell ausgewählte Priorität.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
