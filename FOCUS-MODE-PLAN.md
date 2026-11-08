@@ -151,6 +151,16 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Noch nicht zentral synchronisierte, aber lokal gesicherte Änderungen werden nach Wiederherstellung erneut zur Synchronisierung vorgemerkt.
 - Die Wiederherstellung darf keine doppelten Sessions, doppelten Zeitabschnitte oder widersprüchlichen Timerzustände erzeugen.
 
+
+### Fehler bei vollem oder nicht verfügbarem lokalem Speicher
+- Focus Mode erkennt, wenn der lokale Speicher voll ist, das Speicherlimit erreicht wurde oder der Browser den Zugriff auf den lokalen Speicher verweigert.
+- In diesem Fall erscheint eine deutliche, verständliche Warnung. Der Speicherstatus darf betroffene Änderungen nicht fälschlich als **SAVED** anzeigen.
+- Solange die Seite geöffnet ist, bleiben neue Änderungen soweit technisch möglich im Arbeitsspeicher erhalten; die Anwendung versucht die Speicherung nach Behebung des Problems erneut.
+- Ist eine Internetverbindung verfügbar, darf Focus Mode zusätzlich versuchen, Änderungen direkt zentral zu synchronisieren. Eine zentrale Synchronisierung gilt erst nach bestätigter erfolgreicher Speicherung als abgeschlossen.
+- Bereits lokal oder zentral erfolgreich gespeicherte Sessions, History-Einträge und Nutzerdaten werden nicht automatisch gelöscht, um Speicherplatz freizugeben.
+- Die Warnung erklärt in verständlicher Sprache, dass lokal nicht dauerhaft gesicherte Änderungen bei einem Schließen oder Absturz der Seite verloren gehen können, und nennt geeignete nächste Schritte (z. B. Speicherplatz freigeben oder Browserzugriff auf den Speicher wieder ermöglichen).
+- Sobald der Speicher wieder verfügbar ist, werden ausstehende Änderungen erneut gespeichert und synchronisiert; der Status wechselt erst nach bestätigter Sicherung zurück auf **SAVED**.
+
 ### Bedienbarkeit des Focus-Fensters
 - Das Focus-Fenster übernimmt die allgemeinen Responsive- und Bedienungsstandards der Website und stellt sicher, dass seine zentralen Funktionen auf Desktop, Tablet und Smartphone erreichbar bleiben.
 - **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar.
