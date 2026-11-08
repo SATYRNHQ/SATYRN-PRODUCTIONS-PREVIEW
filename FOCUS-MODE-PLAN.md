@@ -375,6 +375,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Tages- und Wochenziele werden unabhängig voneinander berechnet: Das Verfehlen eines Tagesziels verhindert nicht automatisch die Erreichung des Wochenziels; umgekehrt ersetzt ein erreichtes Wochenziel keine verfehlten Tagesziele.
 
 
+- Die Kalenderwoche für das Wochenziel beginnt am Montag um 00:00 Uhr und endet mit Beginn des folgenden Montags um 00:00 Uhr (Endzeitpunkt exklusiv). Maßgeblich ist jeweils die für den betreffenden Zeitpunkt geltende lokale Zeitzone.
+- Wochenfortschritt wird anhand der tatsächlich erfassten Fokuszeit innerhalb dieser lokalen Kalenderwoche berechnet. Fokussegmente, die eine Wochengrenze überschreiten, werden anhand ihrer tatsächlichen Zeitstempel anteilig den betroffenen Wochen zugeordnet; Pausen- und Unterbrechungszeiten zählen nicht.
+- Bei einem Zeitzonenwechsel bleiben bereits abgeschlossene Kalenderwochen und ihre damaligen Zielwerte sowie Wertungen unverändert. Die laufende Woche wird anhand der gespeicherten Zeitstempel und der ab dem Wechsel geltenden lokalen Zeitgrenzen fortgeführt; bereits erfasste Fokuszeit wird nicht verschoben oder doppelt gezählt.
 ### Rekord für längste zusammenhängende Fokuszeit
 - In den Overall Statistics wird die längste zusammenhängende Fokuszeit als persönlicher Rekord angezeigt.
 - Angezeigt werden die erreichte Dauer und das Datum, an dem der Rekord erzielt wurde.
