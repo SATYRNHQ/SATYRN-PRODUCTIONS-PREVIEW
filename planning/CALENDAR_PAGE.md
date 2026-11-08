@@ -183,3 +183,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Search normalizes German umlauts and common transliterations: „ä“ matches „ae“, „ö“ matches „oe“, „ü“ matches „ue“, and „ß“ matches „ss“ (e.g. „Munchen“ finds „München“).
 - Multiple search terms are supported: entries match when they contain all entered terms, even if the terms are not adjacent (e.g. „Geburt Mama“ finds „Geburtstag Mama“).
 - Title search uses partial matching: entering part of a title (e.g. „Geburts“) also finds matching entries such as „Geburtstag Mama“.
+
+## Global search standard — collected for the central closing phase
+
+The following search behaviors are intended as a shared standard for every page that has a search function, not as Calendar-only behavior. They are recorded here as a source decision and must be consolidated with the other cross-page topics during the central closing phase. Do not implement the shared rollout during page-specific work.
