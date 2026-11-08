@@ -21,7 +21,11 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 
 ## Bestätigte Entscheidungen — Tagesfenster
 - Ein Klick auf einen Tag in der Monatsansicht öffnet ein kleines Fenster mit den Terminen und Ereignissen dieses Tages.
-- Innerhalb dieses Fensters können Einträge hinzugefügt und bestehende Einträge bearbeitet werden.
+- Innerhalb dieses Fensters können Einträge hinzugefügt werden.
+- Ein Klick auf einen bestehenden Termineintrag öffnet zunächst dessen **Detailansicht**. Er wechselt nicht direkt in den Bearbeitungsmodus.
+- In der Detailansicht befindet sich ein **Drei-Punkte-Menü (⋯)** mit den Aktionen **Bearbeiten** und **Löschen**.
+- **Bearbeiten** öffnet das Bearbeitungsformular für den ausgewählten Eintrag.
+- **Löschen** erfordert eine Sicherheitsbestätigung, bevor der Eintrag endgültig entfernt wird.
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
 
 ## Bestätigte Entscheidungen — Wichtigkeit / Priorität
@@ -38,7 +42,8 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 ## Noch nicht festgelegt
 - Ob die Priorität beim Erstellen verpflichtend sein muss oder optional bleibt.
 - Die genaue Form der farblichen Kennzeichnung im Tagesfeld (z. B. farbiger Punkt, schmaler Streifen oder dezente Titel-Akzentfarbe).
-- Die genaue Gestaltung des Tagesfensters sowie seine Formularfelder, Sicherheitsabfragen und Empty-State-Darstellung.
+- Die genauen Formularfelder zum Erstellen und Bearbeiten eines Eintrags.
+- Die genaue Gestaltung des Tagesfensters und seiner Empty-State-Darstellung.
 - Suche, Filter und weitere Ansichten sind noch nicht beschlossen.
 
 ## Umsetzungsregeln
@@ -52,4 +57,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Monatsansicht als einzige Hauptansicht bestätigt; Montag als Wochenbeginn; Einträge zeigen nur Titel; mehrere Einträge erscheinen untereinander.
 - 2026-11-08: Wichtigkeit/Priorität soll pro Kalendereintrag festgelegt werden können; die vier Stufen und Farben werden aus Important übernommen.
 - 2026-11-08: Deadlines ausdrücklich aus dem aktuellen Calendar-Umfang ausgeschlossen und auf einen späteren Zeitpunkt verschoben.
-- 2026-11-08: Klick auf einen Kalendertag öffnet ein kompaktes Tagesfenster mit den Einträgen dieses Tages; Einträge können dort hinzugefügt und bearbeitet werden.
+- 2026-11-08: Klick auf einen Kalendertag öffnet ein kompaktes Tagesfenster mit den Einträgen dieses Tages; Einträge können dort hinzugefügt werden.
+- 2026-11-08: Klick auf einen bestehenden Eintrag öffnet zunächst Details; Bearbeiten und Löschen liegen im Drei-Punkte-Menü; Löschen wird durch eine Sicherheitsabfrage geschützt.
