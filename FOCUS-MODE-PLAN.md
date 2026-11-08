@@ -22,6 +22,15 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 
 ## 2. Current Session und Timer
 
+
+
+### Kategorieänderung bei maximal zwei offenen Sessions
+- Die Begrenzung von maximal zwei offenen Sessions gilt anhand der aktuell eingestellten Kategorie der Focus-Session.
+- Die Kategorien der verknüpften Important-Aufgaben beeinflussen diese Begrenzung nicht.
+- Wird die Kategorie einer offenen Session geändert, prüft Focus Mode vor dem Übernehmen, ob in der Zielkategorie bereits zwei andere offene Sessions existieren.
+- Ist das Limit erreicht, wird die Kategorieänderung verhindert und die bisherige Kategorie bleibt unverändert.
+- Die Änderung wird erst möglich, wenn in der Zielkategorie wieder ein Platz frei ist.
+
 ### Timerdarstellung
 - Große, gut lesbare Zeitanzeige.
 - Kreisförmiger Fortschrittsindikator mit flüssiger Animation.
