@@ -490,7 +490,7 @@
           </div>
           <div class="fm-notes-grid">
             <details class="fm-disclosure" open><summary>Session Notes <span>Automatisch gespeichert</span></summary><textarea id="fmNotes" class="fm-input fm-notes" rows="4" placeholder="Gedanken, Ideen und wichtige Zwischenschritte …"></textarea></details>
-            <details class="fm-disclosure"><summary>Distraction Log <span id="fmDistractionCount">0 Einträge</span></summary><form id="fmDistractionForm" class="fm-distraction-form"><input id="fmDistractionInput" class="fm-input" maxlength="240" placeholder="Ablenkung kurz festhalten …"><button class="fm-button" type="submit">＋ Notieren</button></form><div id="fmDistractionList"></div></details>
+            <details class="fm-disclosure"><summary>Distraction Log <span id="fmDistractionCount">0 Einträge</span></summary><form id="fmDistractionForm" class="fm-distraction-form"><input id="fmDistractionInput" class="fm-input" maxlength="240" placeholder="Ablenkung kurz festhalten …"><button class="fm-button" id="fmDistractionAdd" type="submit">＋ Notieren</button></form><div id="fmDistractionList"></div></details>
           </div>
           <div class="fm-storage-note" id="fmStorageNote">Lokal im Browser gespeichert · Cloud-Synchronisierung ist noch nicht eingerichtet.</div>
         </section>
