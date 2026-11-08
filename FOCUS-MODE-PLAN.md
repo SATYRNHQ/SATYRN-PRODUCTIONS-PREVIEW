@@ -1696,3 +1696,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Demo-Aktionen dürfen die Beispieldaten während der aktuellen Demo-Sitzung verändern, damit Funktionen realistisch ausprobiert werden können.
 - Beim Verlassen und erneuten Öffnen des Demo-Modus startet die Demo wieder sauber mit den vorbereiteten Beispieldaten.
 - Echte Nutzerdaten bleiben davon vollständig unberührt.
+
+
+### Umfang der Demo-Preview
+- Keine geführte Einführung, kein Tutorial und keine zusätzlichen Erklärungsdialoge.
+- Der Demo-Modus bleibt eine kleine, kompakte Vorschau mit wenigen realistischen Beispieldaten und direkt erkennbaren Funktionen.
+- Die Oberfläche soll für sich selbst sprechen; keine überladene Demo und keine dauerhaft eingeblendeten Hilfetexte.
