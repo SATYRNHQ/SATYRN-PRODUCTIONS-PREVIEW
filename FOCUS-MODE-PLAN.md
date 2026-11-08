@@ -1935,3 +1935,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Berechnung berücksichtigt die aktive Kategorieauswahl. Jede Session wird nur einmal berücksichtigt; die Zuordnung erfolgt nach dem Zeitpunkt ihres endgültigen Abschlusses oder ihrer endgültigen Verwerfung.
 - Beide Durchschnittswerte werden in Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum angezeigt. Daily zeigt weiterhin nur die Erfolgsquote des ausgewählten Tages.
 - Die Werte werden bei Änderungen an Session-Status, Zeitraum oder Kategorie-Filter automatisch neu berechnet. Gibt es keine Woche bzw. keinen Monat mit endgültig beendeten Sessions als Berechnungsgrundlage, wird „–“ angezeigt.
+### Verlaufsdiagramme der Erfolgsquoten
+- Die Erfolgsquoten erhalten zusätzlich Verlaufsdiagramme, damit Veränderungen über die Zeit erkennbar sind.
+- **Wochenverlauf:** zeigt die Erfolgsquote jeder Kalenderwoche als chronologische Datenpunkte bzw. Linie.
+- **Monatsverlauf:** zeigt die Erfolgsquote jedes Kalendermonats als chronologische Datenpunkte bzw. Linie.
+- Die Diagramme verwenden dieselbe Erfolgsquoten-Definition wie die Kennzahlen: erfolgreich abgeschlossene Sessions geteilt durch alle endgültig beendeten Sessions (erfolgreich abgeschlossen + endgültig verworfen), multipliziert mit 100.
+- Wochen bzw. Monate ohne endgültig beendete Sessions werden als Datenlücke dargestellt und nicht als 0 % interpretiert oder mit einer Linie verbunden.
+- Angefangene Wochen und Monate werden als laufende Zeiträume kenntlich gemacht; ihre Quote basiert nur auf den bis zum aktuellen Zeitpunkt endgültig beendeten Sessions.
+- Die Diagramme berücksichtigen den aktiven Kategorie-Filter und den ausgewählten Statistik-Zeitraum. Bei benutzerdefinierten Zeiträumen werden nur die berührten Wochen bzw. Monate und nur die innerhalb des gewählten Bereichs beendeten Sessions berücksichtigt.
+- Tooltips zeigen Zeitraum, Erfolgsquote sowie Anzahl erfolgreicher und endgültig verworfener Sessions. Prozentwerte und Datenlücken bleiben auch ohne Farberkennung verständlich.
+- Die Verlaufsdiagramme erscheinen in Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum; Daily zeigt keine Wochen- oder Monatsverlaufslinie.
+- Die Diagramme aktualisieren sich automatisch, wenn Sessions endgültig abgeschlossen oder verworfen werden oder sich Zeitraum bzw. Kategorie-Filter ändern.
