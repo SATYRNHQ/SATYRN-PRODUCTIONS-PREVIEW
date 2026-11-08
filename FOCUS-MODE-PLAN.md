@@ -1234,6 +1234,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Warnung folgt dem bereits festgelegten Bestätigungsablauf für ungespeicherte Änderungen: Weiter bearbeiten oder Änderungen verwerfen.
 - Beim Weiterbearbeiten bleiben die eingegebenen Werte erhalten; beim Verwerfen werden nicht übernommene Änderungen verworfen.
 
+
+### Einheitliche Zeiteingabe in eigenen Presets
+- Beim Erstellen und Bearbeiten eigener Presets funktionieren die Zeiteingaben identisch zur Session-Vorbereitung.
+- Direkte Eingabe, Plus-/Minus-Schaltflächen, 5-Minuten-Schritte, automatische Wiederholung mit Beschleunigung, Untergrenze 00:00, unbegrenzte Obergrenze und automatische Normalisierung gelten auch dort.
+- Nicht übernommene Änderungen werden beim Verlassen des Preset-Editors nach dem bestehenden Bestätigungsablauf behandelt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
