@@ -22,6 +22,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Wenn an einem Tag mehrere Einträge liegen, werden ihre Titel untereinander angezeigt.
 - Pro Tagesfeld werden höchstens **drei Termineinträge** direkt angezeigt. Gibt es weitere Einträge, erscheint darunter ein Hinweis mit der Anzahl, z. B. **„+2 weitere“**. Über das Tagesfenster lassen sich alle Einträge des Tages ansehen.
 - Termine innerhalb eines Tages werden chronologisch sortiert: **Ganztägige Termine stehen zuerst**, danach folgen Termine mit Uhrzeit vom frühesten zum spätesten.
+- Termine, die sich zeitlich überschneiden, erhalten eine **dezente visuelle Kennzeichnung**, damit die Überschneidung erkennbar ist, ohne die Monatsansicht zu überladen.
 - Eine Schaltfläche mit der exakten Beschriftung **„Aktuelles Datum“** springt jederzeit zum heutigen Datum bzw. in den Monat, in dem das heutige Datum liegt.
 - Die Monatsansicht bleibt bewusst schlicht und übersichtlich.
 - Beim Öffnen der Calendar-Seite wird immer automatisch der **aktuelle Monat** angezeigt; ein zuvor manuell aufgerufener anderer Monat wird nicht als Startmonat beibehalten.
@@ -78,6 +79,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Der heutige Tag erhält zusätzlich eine dezente farbige Hervorhebung in der Monatsansicht.
 - 2026-11-08: In einem Tagesfeld werden maximal drei Einträge direkt angezeigt; zusätzliche Einträge werden über einen Hinweis wie „+2 weitere“ kenntlich gemacht und können im Tagesfenster vollständig eingesehen werden.
 - 2026-11-08: Termine eines Tages werden chronologisch sortiert; ganztägige Termine stehen vor den Terminen mit Uhrzeit, die anschließend vom frühesten zum spätesten folgen.
+- 2026-11-08: Zeitlich überschneidende Termine erhalten eine dezente visuelle Kennzeichnung.
 - 2026-11-08: Beim Öffnen der Calendar-Seite startet die Ansicht stets im aktuellen Monat. Eine Schaltfläche „Aktuelles Datum“ springt jederzeit zurück zum heutigen Datum bzw. dessen Monat.
 - 2026-11-08: Wichtigkeit/Priorität soll pro Kalendereintrag festgelegt werden können; die vier Stufen und Farben werden aus Important übernommen.
 - 2026-11-08: Deadlines ausdrücklich aus dem aktuellen Calendar-Umfang ausgeschlossen und auf einen späteren Zeitpunkt verschoben.
