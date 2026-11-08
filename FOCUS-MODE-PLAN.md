@@ -496,11 +496,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Ablenkungsreduktion erfolgt über den bereits geplanten Distraction-Free-Modus und nicht über ein zusätzliches Theme.
 
 ### Smartphone- und Tablet-Unterstützung
-- Focus Mode soll grundsätzlich auch auf Smartphones nutzbar sein.
-- Die mobile Optimierung ist sinnvoll, aber keine zwingende Voraussetzung für jede einzelne Funktion.
-- Priorität haben eine gut lesbare Timeranzeige sowie einfach erreichbare Start-, Pause- und Fortsetzen-Steuerungen.
-- Komplexere Bereiche wie Statistiken, Task Queue und History dürfen auf kleineren Displays kompakter oder in aufklappbaren Ansichten dargestellt werden.
-- Die Desktop-Version bleibt die primäre und vollständigste Ansicht.
+- Focus Mode soll auf Smartphones und Tablets responsiv nutzbar sein; die Desktop-Version bleibt die primäre und vollständigste Ansicht.
+- Auf Smartphones wird ein einspaltiges Layout verwendet.
+- Current Session mit gut lesbarer Timeranzeige steht ganz oben.
+- Start-, Pause- und Fortsetzen-Steuerungen sind direkt und bequem erreichbar.
+- Session Setup folgt darunter.
+- Task Queue, Statistiken und History werden auf schmalen Displays kompakt oder in aufklappbaren Bereichen dargestellt.
+- Auf Tablets passt sich das Layout an die verfügbare Breite an und nutzt bei ausreichendem Platz mehrere Spalten.
+- Es darf keine horizontale Scrollleiste für die normale Bedienung entstehen.
+- Touch-Bedienung, ausreichende Abstände und gut erreichbare Bedienelemente werden berücksichtigt.
 
 
 ### Tastaturkürzel
