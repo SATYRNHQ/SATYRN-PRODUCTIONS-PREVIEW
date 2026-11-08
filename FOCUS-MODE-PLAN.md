@@ -432,3 +432,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Filter lassen sich kombinieren, damit auch größere Verlaufsdaten übersichtlich durchsuchbar bleiben.
 - Ohne aktive Filter gilt weiterhin die chronologische Standardsortierung mit den neuesten Sessions zuerst.
 
+### Aktionen innerhalb der Session History
+- **Session erneut öffnen:** Ein History-Eintrag kann in einer Detailansicht vollständig angesehen werden. Eine vergangene Session kann außerdem als Grundlage für eine neue Session verwendet werden; dadurch wird eine neue Session angelegt und der ursprüngliche Verlauf nicht verändert.
+- **Details bearbeiten:** Session-Name, Fokusziel, Kategorie und Priorität können nachträglich angepasst werden.
+- **Notizen bearbeiten:** Gespeicherte Session-Notizen können ergänzt oder korrigiert werden.
+- **Distraction Log verwalten:** Frühere Einträge können nachträglich bearbeitet oder gelöscht werden.
+- **Session löschen:** Das endgültige Löschen einer Session erfordert eine separate, eindeutige Sicherheitsabfrage.
+- **Verknüpfte Aufgabe öffnen:** Eine mit der Session verbundene Important-Aufgabe kann direkt aus der History geöffnet werden.
+- Nachträgliche Änderungen an Session-Details verändern nicht die bereits gespeicherten Fokuszeiten, Zeitabschnitte oder den historischen Zeitverlauf.
