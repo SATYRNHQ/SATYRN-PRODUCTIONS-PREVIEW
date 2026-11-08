@@ -196,7 +196,6 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Session-Wechsel per Tastatur folgt denselben Regeln wie per Maus: Eine laufende Session wird pausiert; die ausgewählte Session startet nicht automatisch.
 - Tastaturkürzel werden nicht ausgelöst, solange in einem Text- oder Eingabefeld geschrieben wird oder ein anderes Bedienelement die Eingabe verarbeitet.
 - Alle PC-Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
-- Alle PC-Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
 - Statusanzeigen, Beschriftungen und Bedienelemente müssen ausreichend kontrastreich und eindeutig erkennbar sein. Der aktuelle Tastaturfokus muss sichtbar sein.
 - Aktionen dürfen nicht durch Doppelklicks oder schnelle Mehrfachbetätigung unbeabsichtigt mehrfach ausgeführt werden. Während eine Aktion verarbeitet wird, wird eine weitere identische Auslösung zuverlässig verhindert.
 - Die allgemeinen Website-Regeln für Responsive Layout, Tastaturbedienung und Barrierefreiheit werden wiederverwendet; es werden keine widersprüchlichen Sonderregeln nur für das Focus-Fenster eingeführt.
