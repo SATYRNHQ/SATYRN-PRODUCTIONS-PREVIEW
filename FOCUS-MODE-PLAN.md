@@ -556,3 +556,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 **Zurücksetzen beim Verlassen:** Sobald die Session History verlassen wird, werden der aktuelle Suchbegriff sowie sämtliche aktiven Filter zurückgesetzt. Beim erneuten Öffnen wird wieder die vollständige Session History angezeigt. Die feste Sortierung „Neueste zuerst“ und die gewählte Seitengröße (Standard: 20 Sessions) bleiben davon unberührt.
+
+### Datumsgruppen über mehrere History-Seiten
+- Jede History-Seite zeigt ausschließlich die Sessions, die zu dieser Seite gehören.
+- Wenn Sessions desselben Datums auf mehreren Seiten vorkommen, wird die passende Datumsüberschrift auf jeder betroffenen Seite erneut angezeigt.
+- Datumsüberschriften erscheinen nur, wenn ihnen auf der jeweiligen Seite mindestens eine Session zugeordnet ist.
+- Die chronologische Reihenfolge der Sessions bleibt über alle Seiten hinweg durchgehend erhalten.
