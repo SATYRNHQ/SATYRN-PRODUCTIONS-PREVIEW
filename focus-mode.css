@@ -224,3 +224,10 @@
 #page-focus .fm-history-reset[hidden]{display:none}
 #page-focus #fmHistoryReset[hidden]{display:none}
 #page-focus #fmHistoryDetailGoal{font-size:12px;color:#c0d4c8;line-height:1.6;margin:6px 0}
+
+#page-focus .fm-task-activity{margin-top:4px}
+#page-focus .fm-task-activity summary{font-size:9px;color:#8fb9a9;cursor:pointer;list-style:none}
+#page-focus .fm-task-activity summary::-webkit-details-marker{display:none}
+#page-focus .fm-task-activity>div{display:grid;gap:4px;padding:6px 0 2px}
+#page-focus .fm-task-activity>div small{font-size:9px;color:#81958a}
+#page-focus .fm-distraction-toggle:disabled{opacity:.4;cursor:not-allowed}
