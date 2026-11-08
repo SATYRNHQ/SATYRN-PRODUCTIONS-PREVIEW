@@ -38,9 +38,9 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Timer ist jederzeit pausierbar und kann an derselben Stelle fortgesetzt werden.
 - Ein Reset-Button ist vorhanden. Vor dem Zurücksetzen erscheint eine Sicherheitsabfrage.
 - Eine Session kann vorzeitig mit **Complete Session** erfolgreich abgeschlossen werden. Die tatsächliche Dauer wird gespeichert und in History sowie Statistiken berücksichtigt.
-- Eine Session kann unterbrochen bzw. abgebrochen werden, ohne sie endgültig abzuschließen. Sie bleibt als offene, wiederaufnehmbare Session erhalten und wird zusätzlich in der History als unterbrochen dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten.
+- Eine Session kann unterbrochen werden, ohne sie endgültig abzuschließen. Sie bleibt als offene, wiederaufnehmbare Session erhalten und wird in der History als unterbrochen dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten. Das endgültige Verwerfen ist eine getrennte Aktion.
 - **Complete Session** ist davon getrennt: Damit kann eine Session auch vor Ablauf des Timers bewusst erfolgreich beendet werden. Sie verschwindet dann aus der offenen Liste und wird in History sowie Statistiken übernommen.
-- Wenn eine Fokusphase endet, wechselt der Timer automatisch in die Pause.
+- Wenn eine Fokusphase endet, wechselt der Timer automatisch in die eingestellte Pause. Bei der bewusst gewählten Option „Keine Pause“ wird keine Pause gestartet; der Timer wartet stattdessen auf den manuellen Start der nächsten Fokusphase.
 - Nach Ende der Pause wartet der Timer auf einen manuellen Start der nächsten Fokusphase.
 - Die Pause kann über **Skip Break** übersprungen werden. Danach wartet der Timer auf den manuellen Start der nächsten Fokusphase.
 - Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`.
@@ -355,45 +355,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nutzer laden den Bericht herunter und können ihn anschließend selbst über ihr gewünschtes E-Mail- oder Freigabeprogramm teilen.
 
 
-### Sticky Timer auf Smartphones
-- Auf Smartphones bleibt der Timer beim Scrollen sichtbar am oberen Bildschirmrand.
-- Die Sticky-Ansicht bleibt kompakt und verdeckt keine wichtigen Inhalte oder Bedienelemente.
-- Die übrigen Bereiche der Focus-Mode-Seite scrollen normal darunter.
+### Responsiver Sticky Timer für Smartphone und Tablet
+- Auf Smartphones und Tablets bleibt der Timer beim Scrollen am oberen Bildschirmrand sichtbar und klappt automatisch zu einer kleinen, platzsparenden Leiste zusammen.
+- Die kompakte Leiste zeigt die wichtigsten Zeitinformationen, den Session-Status und wesentliche Timer-Steuerungen.
+- Durch Antippen der Leiste kann die vollständige Timer-Ansicht auch dann ausgeklappt werden, wenn die Seite weiter unten steht.
+- Wird danach weiter nach unten gescrollt, klappt die Ansicht automatisch und flüssig wieder zur kompakten Leiste zusammen.
+- Am oberen Seitenbereich wird die große Timer-Ansicht dargestellt.
+- Das Verhalten funktioniert im Hoch- und Querformat. Größe und Anordnung passen sich automatisch an die verfügbare Bildschirmgröße und den geringeren vertikalen Platz an.
+- Lesbarkeit und Erreichbarkeit der wichtigsten Steuerungen haben Vorrang; Inhalte und Bedienelemente dürfen nicht unnötig verdeckt werden.
 
-
-### Kompakter Sticky Timer auf Smartphones
-- Beim Scrollen klappt der Sticky Timer zu einer kleinen, platzsparenden Leiste zusammen.
-- Die Leiste zeigt weiterhin die wichtigsten Zeitinformationen und den aktuellen Session-Status.
-- Wesentliche Timer-Steuerungen bleiben schnell erreichbar.
-- Am oberen Seitenbereich wird wieder die größere Timer-Ansicht dargestellt.
-
-
-### Interaktion mit dem kompakten Sticky Timer
-- Ein Klick bzw. Tippen auf die kompakte Sticky-Leiste klappt die vollständige Timer-Ansicht wieder aus, auch wenn die Seite weiter unten gescrollt ist.
-- Die ausgeklappte Ansicht bleibt am oberen Bildschirmrand erreichbar; die übrigen Inhalte scrollen weiterhin darunter.
-
-
-### Automatisches Einklappen des Sticky Timers
-- Wenn der Nutzer nach dem Ausklappen weiter nach unten scrollt, klappt der Timer automatisch wieder zur kompakten Sticky-Leiste zusammen.
-- Das Ein- und Ausklappen erfolgt flüssig und ohne den Scrollfluss zu unterbrechen.
-
-
-### Sticky Timer auf Tablets
-- Auch auf Tablets bleibt der Timer beim Scrollen sichtbar und klappt zu einer kompakten Leiste zusammen.
-- Antippen klappt die vollständige Timer-Ansicht wieder aus.
-- Beim weiteren Scrollen klappt sie automatisch wieder kompakt zusammen.
-
-
-### Sticky Timer im Querformat
-- Der kompakte Sticky Timer funktioniert auf Smartphones und Tablets auch im Querformat.
-- Die Leiste passt ihre Höhe und Anordnung an den geringeren vertikalen Platz an.
-- Timer-Informationen und wesentliche Steuerungen bleiben gut erreichbar, ohne Inhalte unnötig zu verdecken.
-
-
-### Responsive Größe der Sticky Timer-Leiste
-- Die kompakte Timer-Leiste passt ihre Größe und Anordnung automatisch an die verfügbare Bildschirmgröße an.
-- Lesbarkeit und Erreichbarkeit der wichtigsten Timer-Informationen und Steuerungen haben Vorrang.
-- Das Verhalten gilt für Smartphones und Tablets im Hoch- und Querformat.
 
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
@@ -446,8 +416,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 ## 6. Session History
 
 - Alle Sessions werden chronologisch dokumentiert.
-- Erfolgreiche und abgebrochene Sessions erhalten unterschiedliche Statusanzeigen.
-- Unterbrochene bzw. pausierte Sessions sollen nachvollziehbar sein.
+- Abgeschlossene, unterbrochene, endgültig verworfene und pausierte Sessions erhalten klar getrennte Statusanzeigen.
+- Unterbrochene Sessions bleiben offen und wiederaufnehmbar; endgültig verworfene Sessions sind nicht mehr fortsetzbar.
+- Pausierte Sessions bleiben offen und werden getrennt von unterbrochenen Sessions dargestellt.
 - Die tatsächliche Fokusdauer wird gespeichert.
 - History wird über die kleine Leiste oben rechts neben dem Seitentitel geöffnet, nicht als dauerhaft großer Bereich auf der Hauptseite.
 - Jede Session ist anklickbar und öffnet eine Detailansicht.
@@ -466,7 +437,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Search works together with the status, category, and time-period filters.
 
 ### History filters
-- Filter by session status: **All Sessions**, **Completed**, **Interrupted**, **Abandoned**, and **Paused**.
+- Filter by session status: **All Sessions**, **Completed**, **Interrupted**, **Abandoned** (endgültig verworfen) und **Paused**.
 - Filter by category.
 - Filter by time period/date range.
 - Filters can be combined so sessions can be narrowed down by status, category, and period together.
@@ -1368,7 +1339,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 ### Option „Keine Pause“
 - Bei jedem Preset kann die vorgesehene Pause auf „Keine Pause“ gestellt werden.
 - Das ist eine bewusst auswählbare Option und nicht nur ein numerischer Wert von 0 Minuten.
-- Wird „Keine Pause“ gewählt, startet nach Ende der Fokusdauer keine automatische Pause; die Session wartet entsprechend dem bestehenden Ablauf auf die nächste bewusste Aktion.
+- Wird „Keine Pause“ gewählt, startet nach Ende der Fokusdauer keine automatische Pause und es entsteht keine zusätzliche Wartephase. Der Nutzer entscheidet selbst, wann die nächste Fokusphase manuell gestartet wird.
 
 
 ### Standardauswahl beim Öffnen der Session-Vorbereitung
@@ -1591,12 +1562,6 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Es gibt keine horizontale Scrollleiste für die Preset-Auswahl.
 
 
-### Responsive Anordnung der Preset-Auswahl
-- Die Preset-Auswahl passt sich automatisch an die verfügbare Bildschirmbreite an.
-- Auf Desktop werden die Preset-Schaltflächen in mehreren übersichtlichen Spalten dargestellt; auf Tablet und Smartphone reduziert sich die Spaltenzahl automatisch.
-- Auf Smartphones bleiben die Schaltflächen gut antippbar und zeigen Name, Fokusdauer sowie Pausendauer weiterhin lesbar an.
-- Standard-Presets und eigene Presets verwenden dasselbe responsive Raster; die Trennlinie und der Bereich „Meine Presets“ bleiben erhalten.
-- Kein horizontales Scrollen für die Preset-Auswahl; bei geringer Breite werden die Schaltflächen in weitere Zeilen umgebrochen.
 
 ## 8. Umsetzungsregeln
 
