@@ -1322,6 +1322,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Layout, Aufbau und Bedienung sind identisch; beim Bearbeiten werden die aktuell gespeicherten Preset-Werte vorausgefüllt.
 - Änderungen werden erst nach ausdrücklichem Klick auf „Speichern“ übernommen.
 
+
+### Alphabetische Neusortierung nach Preset-Bearbeitung
+- Wird beim Bearbeiten der Name eines eigenen Presets geändert und gespeichert, wird es automatisch an seiner neuen alphabetischen Position im Bereich „Meine Presets“ einsortiert.
+- Die Sortierung wird direkt nach erfolgreichem Speichern aktualisiert.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
