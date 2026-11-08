@@ -1654,3 +1654,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eine laufende Focus-Session bleibt beim Wechsel auf andere SATYRN-Seiten aktiv und läuft ohne Neustart oder automatische Pause weiter.
 - Timerstatus und Sessiondaten bleiben seitenübergreifend synchron.
 - Die kompakte Rückkehr-zur-Session-Funktion ermöglicht den direkten Sprung zurück zur richtigen offenen Session.
+
+
+### Mehrere Browser-Tabs
+- Sind mehrere Tabs mit SATYRN HQ geöffnet, zeigen alle denselben aktuellen Focus-Session- und Timerstatus.
+- Timeraktionen und Sessionänderungen werden zeitnah zwischen den Tabs synchronisiert.
+- Es darf nur eine Instanz gleichzeitig Timeraktionen ausführen; konkurrierende Aktionen und doppelte Zeitmessung werden verhindert.
+- Die zuletzt ausgeführte gültige Aktion wird konsistent übernommen, ohne bereits gespeicherte Sessiondaten stillschweigend zu überschreiben.
