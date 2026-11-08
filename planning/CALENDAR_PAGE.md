@@ -290,3 +290,11 @@ The following search behaviors are intended as a shared standard for every page 
 
 ### Create/edit form initial focus
 - When the create/edit form opens, automatically focus the Title field so the user can start typing immediately.
+
+
+### Create/edit form — unsaved changes protection
+- If the user attempts to close the create/edit form while it contains unsaved changes, show a confirmation dialog before discarding them.
+- The user must be able to choose whether to keep editing or discard the unsaved changes and close the form.
+- Closing without unsaved changes continues to work directly through the X button, Escape key, or outside-overlay click.
+
+- 2026-11-09: Confirmed a safety prompt whenever the create/edit form is closed with unsaved changes, allowing the user to keep editing or discard changes.
