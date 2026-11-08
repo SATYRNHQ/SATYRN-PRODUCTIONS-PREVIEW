@@ -185,8 +185,9 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 
 ### Session-Wechsel direkt im Focus-Fenster
 - Im Focus-Fenster ist eine kompakte Liste aller offenen Sessions direkt erreichbar; zum Wechseln muss nicht erst eine andere Website-Seite geöffnet werden.
-- Jede Session zeigt ihren Namen bzw. ihr Fokusziel und einen klar erkennbaren Status: laufend, pausiert oder unterbrochen.
-- Die Liste übernimmt die bereits festgelegte Sortierung: laufende Session zuerst, danach pausierte und anschließend unterbrochene Sessions; innerhalb eines Status steht die zuletzt aktive Session weiter oben.
+- Jede Session zeigt ihren Namen bzw. ihr Fokusziel und einen klar erkennbaren Status: laufend, pausiert, unterbrochen oder vorbereitet.
+- Die Liste übernimmt folgende feste Sortierung: **RUNNING** zuerst, danach **PAUSED**, **INTERRUPTED** und zuletzt **PREPARED**.
+- Innerhalb der Statusgruppen **RUNNING**, **PAUSED** und **INTERRUPTED** steht jeweils die zuletzt aktive Session weiter oben. **PREPARED**-Sessions werden innerhalb ihrer Gruppe nach Erstellungsdatum sortiert, neueste zuerst.
 - Beim Auswählen einer anderen Session wird die bisher laufende Session automatisch pausiert, bevor die ausgewählte Session geladen wird.
 - Das bloße Auswählen bzw. Laden einer pausierten oder unterbrochenen Session startet ihren Timer nicht automatisch. Eine solche Session wird erst durch die ausdrückliche Aktion **Resume** fortgesetzt.
 - Beim Wechsel werden der gespeicherte Timerstand und sämtliche Session-Daten wiederhergestellt, insbesondere Notizen, Distraction Log, Unteraufgaben und Verknüpfungen.
