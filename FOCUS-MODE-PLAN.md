@@ -1710,3 +1710,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Geprüft werden außerdem Navigation, Verknüpfungen zwischen Seiten, gemeinsame Daten, Zustände, responsive Darstellung und die wichtigsten Nutzerabläufe.
 - Exportvorschauen werden dabei anhand realistischer Beispieldaten kontrolliert; sie müssen zum tatsächlich erzeugten Export passen.
 - Dieser Punkt ist eine abschließende Testaufgabe für alle Seiten und wird nicht als zusätzliche dauerhafte Demo-Funktion umgesetzt.
+
+
+### Sicherheits-Backup vor vollständigem JSON-Import
+- Vor jedem JSON-Import mit der Option „Vollständig ersetzen“ wird automatisch ein vollständiges Sicherheits-Backup des aktuell gespeicherten Focus-Mode-Datenbestands erstellt.
+- Das Backup wird vor jeder Änderung erfolgreich erstellt und geprüft; schlägt dies fehl, wird der Ersetzungsvorgang abgebrochen.
+- Das Sicherheits-Backup bleibt verfügbar, damit der vorherige Datenstand bei Bedarf wiederhergestellt werden kann.
+- Der Nutzer muss das Backup nicht manuell anstoßen.
