@@ -1286,6 +1286,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die fest eingebauten Standard-Presets und der Bereich „Meine Presets“ werden durch eine dezente horizontale Trennlinie voneinander abgegrenzt.
 - Die Trennlinie fügt sich unauffällig in das dunkle SATYRN-HQ-Design ein.
 
+
+### Preset-Erstellung über Plus-Symbol
+- Neben der Überschrift „Meine Presets“ befindet sich ein kleines Plus-Symbol zum Erstellen eines eigenen Presets.
+- Das Plus-Symbol öffnet den bereits geplanten Preset-Editor.
+- Die Erstellung und Speicherung folgen dem festgelegten Ablauf mit explizitem Klick auf „Speichern“.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
