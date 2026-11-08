@@ -999,6 +999,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Verknüpfung und Synchronisierung werden erst beim ausdrücklichen Start der Session wirksam; bei Abbruch bleiben die ursprünglichen Important-Aufgaben unverändert.
 - Diese Möglichkeit gilt nur während der Vorbereitung. Nach dem Start können keine neuen Important-Aufgaben zu dieser Session hinzugefügt werden.
 
+
+### Suche beim Hinzufügen von Important-Aufgaben
+- Beim Hinzufügen weiterer Important-Aufgaben steht direkt im Auswahlbereich eine Suchfunktion zur Verfügung.
+- Die Suche filtert bestehende offene Important-Aufgaben live anhand ihres Aufgabennamens.
+- Bereits zur geplanten Session hinzugefügte Aufgaben werden nicht erneut als auswählbare Treffer angeboten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
