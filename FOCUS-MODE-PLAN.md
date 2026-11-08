@@ -395,6 +395,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eine Änderung am laufenden Tag gilt ab dem Änderungszeitpunkt für diesen aktuellen Tag. Die bis dahin erfasste Fokuszeit bleibt vollständig angerechnet; der aktuelle Tagesfortschritt wird anhand des neuen Zielwerts neu berechnet.
 - Eine Erhöhung des Ziels kann daher die aktuelle Tagesmarkierung bis zur erneuten Erreichung zurücknehmen; eine Senkung kann das Ziel bereits erfüllen. Die endgültige Tageswertung erfolgt weiterhin erst beim lokalen Tageswechsel.
 - Die längste Streak als persönlicher Rekord bleibt bei Zieländerungen erhalten und wird nicht rückwirkend neu bewertet. Abgeschlossene Tage und deren damalige Wertungen werden nicht verändert.
+- Bei einem Wechsel der lokalen Zeitzone werden bereits abgeschlossene Tage, ihre Zielwerte und ihre Streak-Wertungen nicht nachträglich verschoben oder neu berechnet.
+- Ab dem Zeitpunkt des Zeitzonenwechsels werden neue Fokuszeit und Tagesgrenzen nach der neuen lokalen Zeitzone zugeordnet. Der laufende, noch nicht abgeschlossene Tag wird ab diesem Zeitpunkt nach der neuen lokalen Tagesgrenze weitergeführt; bereits erfasste Fokuszeit bleibt erhalten und wird nicht doppelt gezählt.
 
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
