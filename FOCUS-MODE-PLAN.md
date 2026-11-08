@@ -718,6 +718,18 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eine spätere Backup- oder Wiederherstellungsaktion, die aus Focus Mode erreichbar ist, verwendet ausschließlich das zentrale SATYRN-HQ-System.
 - Format, Vorschau, Zusammenführen, Ersetzen und Sicherheitsprüfungen werden im abschließenden websiteweiten Backup-Konzept festgelegt.
 
+### Websiteweite Speicherarchitektur und eigener SATYRN-HQ-Ordner auf dem PC
+- Die Speicherarchitektur wird websiteweit einheitlich geplant und umgesetzt; einzelne Bereiche wie Focus Mode erhalten keine voneinander abweichenden Speicher- oder Backup-Systeme.
+- **Lokaler Anwendungsspeicher:** Die Website hält benötigte Daten zunächst in einem dauerhaft verfügbaren lokalen Browserspeicher vor. Dieser dient auch als Zwischenspeicher für Offline-Betrieb und Wiederherstellung.
+- **Zentraler Datenstand:** Sobald eine geeignete Backend-/Synchronisierungsinfrastruktur vorhanden ist, werden Daten geräteübergreifend mit dem zentralen SATYRN-HQ-Datenstand synchronisiert. Ein lokaler Browser-Speicher allein gilt nicht als geräteübergreifendes Backup.
+- **Eigener PC-Ordner:** Nutzer können optional einen eigenen Ordner, beispielsweise `SATYRN-HQ`, auswählen. Dieser dient als zusätzlicher Ablageort für websiteweite Backups und Exporte, nicht als alleiniger Live-Speicher der Website.
+- Vorgeschlagene Unterordner: `Backups`, `Focus Mode`, `Settings`, `Statistics` und `Exports`. Die konkrete Dateiaufteilung und Backup-Struktur wird im zentralen websiteweiten Backup-Konzept festgelegt.
+- Eine normale Browser-Website darf nicht ohne ausdrückliche Nutzerfreigabe beliebige Dateien auf dem PC erstellen oder verändern. Der Zugriff auf den ausgewählten Ordner erfolgt nur über eine vom Browser unterstützte Dateischnittstelle und eine ausdrückliche Ordnerauswahl/-berechtigung.
+- Wenn die benötigte Dateischnittstelle im verwendeten Browser oder Gerät nicht verfügbar ist, muss ein sicherer alternativer Download-/Exportweg angeboten werden. Die Website darf nicht so tun, als hätte sie Dateien automatisch im PC-Ordner abgelegt.
+- Backups in den PC-Ordner erfolgen nur nach klar erkennbarer Freigabe und mit sichtbarem Ergebnis bzw. Fehlerstatus. Bestehende Dateien werden nicht stillschweigend überschrieben oder gelöscht; Versionierung bzw. Bestätigung wird im zentralen Backup-Konzept festgelegt.
+- Der PC-Ordner ist eine zusätzliche lokale Sicherung. Er ersetzt weder den lokalen Anwendungsspeicher noch – sofern eingerichtet – die zentrale Synchronisierung. Ein Defekt oder Verlust des PCs darf nicht die einzige Kopie der Website-Daten vernichten.
+- Berechtigungen, Browser-Kompatibilität, Wiederverbindung nach Berechtigungsentzug, Backup-Intervalle, Dateiformate, Versionierung und Wiederherstellung werden abschließend im websiteweiten Speicher- und Backup-Konzept spezifiziert, nicht separat in Focus Mode.
+
 ### Zentrale Backup-Erinnerungen
 - Eine Erinnerung an regelmäßige Backups wird nicht separat durch Focus Mode verwaltet.
 - Ob, wann und wie an websiteweite Backups erinnert wird, wird gemeinsam mit dem zentralen Backup- und Benachrichtigungssystem festgelegt.
