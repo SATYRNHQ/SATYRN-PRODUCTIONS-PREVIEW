@@ -1036,6 +1036,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Darstellung verwendet den bestehenden Prioritätsindikator und die zugehörige Farbe aus Important.
 - Bei verknüpften Aufgaben aktualisiert sich die Anzeige entsprechend der höchsten aktuellen Priorität; ohne Verknüpfung zeigt sie die manuell ausgewählte Priorität.
 
+
+### Manuelle Kategorie-Änderung trotz verknüpfter Hauptaufgabe
+- Die Kategorie der Focus-Session bleibt im Vorbereitungsfenster manuell änderbar, auch wenn eine Hauptaufgabe mit Important verknüpft ist.
+- Die manuelle Auswahl gilt nur für die Focus-Session und überschreibt nicht die Kategorie der ursprünglichen Important-Aufgabe.
+- Wird die Hauptaufgabe vor dem Start gewechselt, wird die Kategorie der Focus-Session zunächst aus der neuen Hauptaufgabe übernommen; eine danach vorgenommene manuelle Auswahl bleibt als Session-spezifische Einstellung bestehen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
