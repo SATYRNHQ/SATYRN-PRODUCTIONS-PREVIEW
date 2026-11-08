@@ -575,15 +575,22 @@ Eigene Kategorien sollen später ergänzt werden können.
 - The edit interface makes clear which fields are editable and that recorded session timing and status remain unchanged.
 
 ### History search
-- Search field to find sessions by task name or focus goal.
-- Search results update while typing.
-- Search works together with the status, category, and time-period filters.
+- Die History-Suche übernimmt die bereits websiteweit festgelegten allgemeinen Suchregeln und das einheitliche Suchfeld-Verhalten.
+- Gesucht wird mindestens nach Aufgabenname und Session-Ziel; vorhandene verknüpfte Aufgabennamen werden ebenfalls berücksichtigt.
+- Suchergebnisse aktualisieren sich live während der Eingabe.
+- Die Suche funktioniert gemeinsam mit sämtlichen aktiven History-Filtern und durchsucht den gesamten gespeicherten Verlauf, nicht nur bereits nachgeladene Listeneinträge.
+- Die Suche kann nach den allgemeinen Website-Regeln geleert bzw. zurückgesetzt werden; dadurch werden keine Sessions oder gespeicherten Daten verändert.
 
 ### History filters
+- Die History-Filter übernehmen die bereits websiteweit festgelegten allgemeinen Regeln für Auswahl, Mehrfachauswahl, Filterkombination, Beibehaltung und Zurücksetzen. Es wird keine abweichende Sonderbedienung nur für Focus Mode eingeführt.
 - Filter by session status: **All Sessions**, **Completed**, **Interrupted**, **Abandoned** (endgültig verworfen) und **Paused**.
-- Filter by category.
+- Filter by category; die Auswahl unterstützt mehrere Kategorien gleichzeitig und berücksichtigt auch gemeinsame benutzerdefinierte Dashboard-Kategorien sowie historische Kategoriezuordnungen.
 - Filter by time period/date range.
-- Filters can be combined so sessions can be narrowed down by status, category, and period together.
+- Ein zusätzlicher Favoritenfilter kann mit Suche, Status, Kategorie und Zeitraum kombiniert werden.
+- Alle aktiven Filter wirken gleichzeitig auf dieselbe Ergebnismenge. Änderungen an einem Filter setzen andere aktive Filter oder den Suchtext nicht unbeabsichtigt zurück.
+- Die gewählten Filter bleiben beim Nachladen älterer Sessions und beim Öffnen/Schließen einer Session-Detailansicht erhalten.
+- Eine zentrale Aktion zum Zurücksetzen der History-Filter stellt die Standardansicht wieder her; sie verändert ausschließlich die Such-/Filterauswahl und niemals Session-Daten.
+- Leere Such- oder Filterergebnisse werden mit einem klaren, passenden Hinweis dargestellt; die History bleibt bedienbar und Filter können gezielt angepasst oder zurückgesetzt werden.
 
 
 ### Sessions löschen
