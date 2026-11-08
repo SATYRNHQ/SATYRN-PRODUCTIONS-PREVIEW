@@ -1773,3 +1773,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Vor der Abmeldung kann eine dezente Warnung erscheinen, damit der Nutzer seine Sitzung bei Bedarf verlängern kann.
 - Nach der Abmeldung sind geschützte Bereiche erst nach erneuter Anmeldung zugänglich.
 - Nicht gespeicherte Änderungen sollen vor der Abmeldung geschützt werden: Speichern bzw. lokale Zwischenspeicherung wird zuerst versucht; bei nicht gesicherten Änderungen darf kein falscher Erfolg angezeigt werden.
+
+
+### Planungsprinzip: seitenrelevant vs. websiteübergreifend
+- Funktionen, die fachlich oder in ihrer Bedienung zu einer einzelnen Seite gehören, werden direkt im jeweiligen Seitenplan vollständig spezifiziert.
+- Funktionen und technische Grundlagen, die mehrere Seiten gemeinsam nutzen können, werden zunächst als zentrale Anforderungen gesammelt und später websiteübergreifend einheitlich geplant.
+- Beispiele für seitenrelevante Focus-Funktionen: Timer, Sessions, Session-Verknüpfungen, Focus-Statistiken und Focus-spezifische Filter.
+- Beispiele für websiteübergreifende Systeme: Anmeldung und Benutzerrechte, Backup/Wiederherstellung, Änderungsprotokoll, Benachrichtigungen, gemeinsame Datensynchronisierung und Sicherheitsgrundlagen.
+- Bei gemischten Funktionen werden die konkreten Anforderungen der Seite hier festgehalten; gemeinsame technische Umsetzung und einheitliche Regeln werden für die spätere zentrale Planung vorgemerkt.
+- Ziel ist, Doppelentwicklungen und widersprüchliche Regeln zwischen Seiten zu vermeiden.
