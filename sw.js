@@ -1,5 +1,5 @@
-const CACHE_NAME = 'satyrn-hq-shell-v102';
-const APP_SHELL = ['./','./index.html','./styles.css?v=93','./focus-mode.css?v=1','./focus-mode.js?v=1','./app.js?v=89','./important.js?v=95','./modules.js','./finance-tools.js','./finance-intelligence.js','./hq-tools.js?v=91','./command-center.js','./manifest.webmanifest'];
+const CACHE_NAME = 'satyrn-hq-shell-v103';
+const APP_SHELL = ['./','./index.html','./styles.css?v=93','./focus-mode.css?v=2','./focus-mode.js?v=2','./app.js?v=90','./important.js?v=96','./modules.js','./finance-tools.js','./finance-intelligence.js','./hq-tools.js?v=91','./command-center.js','./manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
