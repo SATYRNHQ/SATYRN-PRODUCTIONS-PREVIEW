@@ -1228,6 +1228,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Minutenwerte ab 60 werden in Stunden umgerechnet, z. B. 75 Minuten zu 01:15.
 - Die Umrechnung erfolgt ohne Änderung der tatsächlich eingestellten Gesamtdauer.
 
+
+### Nicht übernommene Zeiteingaben beim Schließen
+- Wird das Vorbereitungsfenster verlassen, während eine Zeiteingabe noch nicht übernommen wurde, erscheint eine Warnung.
+- Die Warnung folgt dem bereits festgelegten Bestätigungsablauf für ungespeicherte Änderungen: Weiter bearbeiten oder Änderungen verwerfen.
+- Beim Weiterbearbeiten bleiben die eingegebenen Werte erhalten; beim Verwerfen werden nicht übernommene Änderungen verworfen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
