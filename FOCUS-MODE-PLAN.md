@@ -1117,6 +1117,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Pausendauer bleibt wie festgelegt individuell änderbar.
 - Der Focus-Modus bleibt auf konzentrierte Arbeitszeit ausgerichtet; zusätzliche oder wechselnde Pausenmodelle werden bewusst vermieden.
 
+
+### Option „Keine Pause“
+- Bei jedem Preset kann die vorgesehene Pause auf „Keine Pause“ gestellt werden.
+- Das ist eine bewusst auswählbare Option und nicht nur ein numerischer Wert von 0 Minuten.
+- Wird „Keine Pause“ gewählt, startet nach Ende der Fokusdauer keine automatische Pause; die Session wartet entsprechend dem bestehenden Ablauf auf die nächste bewusste Aktion.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
