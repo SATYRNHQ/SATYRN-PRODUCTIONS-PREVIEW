@@ -1042,6 +1042,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die manuelle Auswahl gilt nur für die Focus-Session und überschreibt nicht die Kategorie der ursprünglichen Important-Aufgabe.
 - Wird die Hauptaufgabe vor dem Start gewechselt, wird die Kategorie der Focus-Session zunächst aus der neuen Hauptaufgabe übernommen; eine danach vorgenommene manuelle Auswahl bleibt als Session-spezifische Einstellung bestehen.
 
+
+### Gemeinsame benutzerdefinierte Kategorien aus dem Dashboard
+- Benutzerdefinierte Kategorien, die später im Dashboard erstellt werden, erscheinen automatisch auch in der Kategorie-Auswahl von Focus.
+- Focus verwendet dieselben Kategoriebezeichnungen, Icons und Farben wie die übrigen Bereiche.
+- Das Erstellen, Bearbeiten oder Entfernen einer gemeinsamen Kategorie wird zentral übernommen; bestehende historische Sessions behalten ihre gespeicherte Kategorie-Darstellung, soweit dies für korrekte Statistiken erforderlich ist.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
