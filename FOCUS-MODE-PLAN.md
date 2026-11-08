@@ -274,6 +274,8 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 
 
 ### Automatische Pausierung bei PC-Herunterfahren oder Ausfall
+- Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand, wird die Session ebenfalls automatisch pausiert und nicht abgebrochen oder abgeschlossen.
+- Die Zeit im Energiesparmodus oder Ruhezustand wird nicht als Fokuszeit gezählt. Beim Aufwachen bzw. erneuten Öffnen bleibt die Session im Status **PAUSED** und kann ausschließlich durch die bewusste Aktion **Resume** fortgesetzt werden.
 - Wird der PC regulär heruntergefahren, wird eine laufende Session automatisch pausiert, statt abgebrochen oder abgeschlossen zu werden.
 - Bei einem unerwarteten Stromausfall, PC-Absturz oder vergleichbaren Ausfall wird beim nächsten Öffnen erkannt, dass die Session zuvor noch lief, und als **PAUSED** wiederhergestellt.
 - Die verbleibende Zeit des aktiven Fokus- oder Pausenabschnitts wird gesichert. Die Zeit, in der der PC ausgeschaltet oder die Anwendung nicht verfügbar war, wird nicht als Fokuszeit gezählt.
