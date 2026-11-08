@@ -225,3 +225,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Die Karten sollen kompakt bleiben, damit auch mehrere Termine im Tagesfenster übersichtlich sichtbar sind.
 
 - Die Uhrzeit wird in den Terminkarten wie in der besprochenen Veranschaulichung angeordnet; keine abweichende alternative Darstellung.
+
+
+## Termin-Detailansicht
+- Die Detailansicht eines Termins öffnet sich als **großes Pop-up**.
+- Das Pop-up liegt über dem Kalender; der Kalender im Hintergrund bleibt unverändert und wird nicht durch eine Seitenansicht oder ein neues Layout ersetzt.
+- Im Pop-up werden Titel, Datum und Uhrzeit, Priorität sowie eine vorhandene Beschreibung angezeigt.
+- Das Drei-Punkte-Menü (⋯) oben rechts bietet weiterhin **Bearbeiten** und **Löschen**.
