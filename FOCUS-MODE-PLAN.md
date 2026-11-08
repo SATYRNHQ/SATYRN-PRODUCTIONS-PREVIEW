@@ -661,6 +661,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 
 ### Wiederherstellung einer laufenden Session
+- Läuft eine Fokusphase während des Schließens der Website weiter, wird beim erneuten Öffnen die gesamte tatsächlich vergangene Zeit berücksichtigt. Beispiel: Bei einer 50-Minuten-Fokusphase und 20 bereits verstrichenen Minuten ist sie nach weiteren zwei Stunden beim Wiederöffnen abgelaufen.
+- Der Timerzustand wird entsprechend als abgelaufen bzw. zur nächsten vorgesehenen Aktion bereit angezeigt; es erfolgt kein automatischer Start einer neuen Fokus- oder Pausenphase.
+- Während SATYRN HQ geschlossen ist, werden keine Browser-Benachrichtigungstöne oder sichtbaren Website-Benachrichtigungen vorausgesetzt.
 - Laufende Focus Sessions werden bei Seitenneuladen, versehentlichem Schließen des Tabs oder Schließen des Browsers automatisch mit ihrem aktuellen Zustand gespeichert.
 - Beim erneuten Öffnen von SATYRN HQ werden Session-Zustand, gewähltes Fokusziel und zugehörige Session-Daten wiederhergestellt und im Wiederaufnahme-Hinweis angeboten.
 - Die verbleibende Zeit wird anhand der tatsächlichen verstrichenen Zeit berechnet, damit ein geschlossenes Fenster den Timer nicht künstlich anhält.
