@@ -106,6 +106,18 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Einträge können später bearbeitet und gelöscht werden.
 - Das Distraction Log bleibt auch nachträglich über die Session History zugänglich.
 
+### Speicherstatus im Focus-Fenster
+- Im Focus-Fenster ist jederzeit ein kompakter, gut erkennbarer Speicherstatus sichtbar.
+- Der Status unterscheidet eindeutig:
+  - `SAVED` – alle Änderungen sind erfolgreich gespeichert und synchronisiert.
+  - `SAVING` – Änderungen werden gerade gespeichert bzw. synchronisiert.
+  - `UNSAVED` – Änderungen warten noch auf die Speicherung oder Synchronisierung.
+  - `SAVE ERROR` – die Speicherung oder Synchronisierung ist fehlgeschlagen.
+- Notizen, Distraction-Log-Einträge und Änderungen an der offenen Session werden automatisch gespeichert.
+- Bei Verbindungsproblemen bleiben Änderungen lokal erhalten und werden nach Wiederherstellung der Verbindung erneut synchronisiert.
+- Ein Session-Wechsel darf keine noch nicht gespeicherten Änderungen verlieren; der Speicherstatus muss dabei korrekt berücksichtigt werden.
+- Bei einem Speicherfehler wird eine verständliche Meldung angezeigt. Betroffene Änderungen bleiben, soweit technisch möglich, lokal erhalten und können erneut gespeichert werden.
+
 ### Distraction-Free-Modus
 - Wird beim Start einer Fokusphase automatisch aktiviert.
 - Timer steht im Mittelpunkt.
