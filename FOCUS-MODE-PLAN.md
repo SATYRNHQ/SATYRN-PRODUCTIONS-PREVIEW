@@ -1717,3 +1717,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Backup wird vor jeder Änderung erfolgreich erstellt und geprüft; schlägt dies fehl, wird der Ersetzungsvorgang abgebrochen.
 - Das Sicherheits-Backup bleibt verfügbar, damit der vorherige Datenstand bei Bedarf wiederhergestellt werden kann.
 - Der Nutzer muss das Backup nicht manuell anstoßen.
+
+
+### Backup gezielt wiederherstellen
+- Nutzer können ein vorhandenes JSON-Backup gezielt auswählen und wiederherstellen.
+- Vor der Wiederherstellung werden Backup-Datum und enthaltene Daten kurz angezeigt.
+- Die Wiederherstellung erfolgt erst nach ausdrücklicher Bestätigung.
+- Vor dem Einspielen wird automatisch ein Sicherheits-Backup des aktuellen Datenstands erstellt; schlägt dies fehl, wird die Wiederherstellung abgebrochen.
+- Die Wiederherstellung bietet eine klare Auswahl zwischen Zusammenführen und vollständigem Ersetzen; beim Ersetzen gelten zusätzlich die bestehenden Schutz- und Bestätigungsregeln.
