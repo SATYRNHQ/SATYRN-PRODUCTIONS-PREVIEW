@@ -1297,6 +1297,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Plus-Symbol neben „Meine Presets“ bleibt immer sichtbar, auch wenn noch keine eigenen Presets vorhanden sind.
 - Der Bereich zeigt in diesem Fall weiterhin die Möglichkeit, direkt das erste eigene Preset anzulegen.
 
+
+### Preset-Aktionen über Drei-Punkte-Menü
+- Jedes eigene Preset erhält in der Auswahl ein kleines Drei-Punkte-Menü.
+- Darüber kann das Preset direkt bearbeitet oder gelöscht werden.
+- Bearbeiten öffnet den bestehenden Preset-Editor mit den gespeicherten Werten.
+- Löschen erfordert die bereits festgelegte Sicherheitsbestätigung.
+- Standard-Presets erhalten kein solches Menü und bleiben unveränderbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
