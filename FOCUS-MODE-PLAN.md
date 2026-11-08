@@ -456,6 +456,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Klick auf einen Tag öffnet dessen Tagesstatistiken.
 - Navigation zwischen Monaten.
 
+- **Gemeinsame Monatsnavigation:** Monthly Statistics und Monthly Focus Map verwenden denselben ausgewählten Monat. Ein Monatswechsel in einer der beiden Ansichten aktualisiert die andere Ansicht synchron.
+- **Tagesnavigation:** Ein Klick auf einen Kalendertag öffnet die zugehörigen Tagesstatistiken für genau dieses Datum.
+- **Kategorie-Filter für Aktivitätsfarben:** Die farbliche Aktivitätsintensität der Monthly Focus Map berücksichtigt die aktuell ausgewählten Kategorien und zeigt damit die Fokusaktivität des aktiven Filters.
+- **Tagesziel-Markierung unabhängig vom Filter:** Die Markierung, ob das Tagesziel erreicht wurde, basiert immer auf der gesamten gültigen Tagesfokuszeit und dem für diesen Tag geltenden Tagesziel – nicht auf der gefilterten Teilmenge. So wird ein erreichtes Tagesziel durch einen Kategorienfilter nicht fälschlich als verfehlt dargestellt.
+- **Gemeinsamer Filterzustand:** Monatsstatistik und Fokus-Kalender übernehmen dieselbe aktive Kategorieauswahl. Beim Wechsel des Monats oder beim Öffnen der Tagesstatistik bleibt diese Auswahl erhalten, soweit sie für die jeweilige Ansicht gilt.
+
+
 ### Category Breakdown
 - Fokuszeit pro Kategorie und prozentualer Anteil.
 - Kreisdiagramm mit Legende.
