@@ -1927,3 +1927,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Zuordnung zum Zeitraum erfolgt anhand des Zeitpunkts, an dem die Session endgültig abgeschlossen oder verworfen wurde.
 - Die Erfolgsquote erscheint in Daily, Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum und wird bei Änderungen automatisch neu berechnet.
 - Wenn im ausgewählten Zeitraum keine endgültig beendeten Sessions vorliegen, wird „–“ statt 0 % angezeigt.
+### Durchschnittliche Erfolgsquote pro Woche und pro Monat
+- Zusätzlich zur Erfolgsquote des gesamten ausgewählten Zeitraums werden längerfristige Durchschnittswerte der Erfolgsquote pro Kalenderwoche und pro Kalendermonat angezeigt.
+- Für jede Kalenderwoche bzw. jeden Kalendermonat wird zunächst die Erfolgsquote nach derselben Definition berechnet: erfolgreich abgeschlossene Sessions geteilt durch alle endgültig beendeten Sessions (erfolgreich abgeschlossen + endgültig verworfen), multipliziert mit 100.
+- Der Wochen- bzw. Monatsdurchschnitt ist anschließend der arithmetische Mittelwert der einzelnen Wochen- bzw. Monatsquoten. Wochen oder Monate ohne endgültig beendete Sessions werden nicht als 0 % gewertet und nicht in den Mittelwert aufgenommen.
+- Bei einem benutzerdefinierten Zeitraum werden nur die darin berührten Kalenderwochen bzw. Kalendermonate berücksichtigt; angeschnittene Zeiträume fließen mit den innerhalb des ausgewählten Datumsbereichs endgültig beendeten Sessions ein.
+- Die Berechnung berücksichtigt die aktive Kategorieauswahl. Jede Session wird nur einmal berücksichtigt; die Zuordnung erfolgt nach dem Zeitpunkt ihres endgültigen Abschlusses oder ihrer endgültigen Verwerfung.
+- Beide Durchschnittswerte werden in Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum angezeigt. Daily zeigt weiterhin nur die Erfolgsquote des ausgewählten Tages.
+- Die Werte werden bei Änderungen an Session-Status, Zeitraum oder Kategorie-Filter automatisch neu berechnet. Gibt es keine Woche bzw. keinen Monat mit endgültig beendeten Sessions als Berechnungsgrundlage, wird „–“ angezeigt.
