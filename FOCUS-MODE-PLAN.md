@@ -980,6 +980,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Abfrage verwendet denselben Bestätigungsstil und Ablauf wie beim Wechsel der Hauptaufgabe während einer laufenden Focus-Session.
 - Erst nach ausdrücklicher Bestätigung wird die neue Hauptaufgabe übernommen; bei Abbruch bleibt die bisherige Zuordnung unverändert.
 
+
+### Zusätzliche Aufgaben in der Vorbereitung sortieren
+- Zusätzliche Aufgaben können bereits im Session-Vorbereitungsfenster per Drag & Drop sortiert werden.
+- Die Reihenfolge wird für die Session übernommen und bestimmt auch, welche offene zusätzliche Aufgabe bei Abschluss der Hauptaufgabe als Nächstes zur Hauptaufgabe wird.
+- Das Sortieren verändert weder Prioritäten noch die Quelldaten der verknüpften Important-Aufgaben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
