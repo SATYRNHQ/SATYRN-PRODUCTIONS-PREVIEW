@@ -100,6 +100,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Ein Klick auf einen mehrtägigen Terminbalken öffnet unabhängig von der angeklickten Stelle dieselbe Detailansicht des gesamten Termins.
 - 2026-11-08: Die Prioritätsfarbe eines mehrtägigen Termins bleibt über die gesamte Länge des zusammenhängenden Balkens einheitlich.
 - 2026-11-08: Der Titel eines mehrtägigen Terminbalkens wird nur am ersten Tag angezeigt und auf den folgenden Tagen nicht wiederholt.
 - 2026-11-08: Mehrtägige Termine werden innerhalb einer Kalenderwoche als durchgehender Balken über die betroffenen Tagesfelder dargestellt; an Wochen- und Monatsgrenzen wird der Balken passend aufgeteilt und der Zusammenhang bleibt erkennbar.
