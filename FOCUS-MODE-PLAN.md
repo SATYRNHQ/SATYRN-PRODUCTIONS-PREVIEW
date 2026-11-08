@@ -292,6 +292,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Export übernimmt die aktuell aktiven Zeitraum- und Kategorie-Filter.
 - Das Auswahlfenster folgt dem bestehenden SATYRN-HQ-Design und lässt sich ohne Export schließen.
 
+
+### Vorschau vor dem Statistik-Export
+- Vor dem Herunterladen kann eine Vorschau des gewählten Exports geöffnet werden.
+- Die Vorschau zeigt die tatsächlich enthaltenen Kennzahlen, Diagramme, den ausgewählten Zeitraum, die aktiven Kategorien sowie das SATYRN-Branding.
+- Bei PDF wird die Vorschau im gewählten Umfang (kompakt oder ausführlich) dargestellt.
+- Bei CSV werden die enthaltenen Spalten und ein übersichtlicher Ausschnitt der exportierten Datensätze angezeigt.
+- Aus der Vorschau kann der Nutzer den Export bestätigen oder zurückkehren, um Format bzw. Berichtsumfang zu ändern.
+- Die Vorschau verändert keine gespeicherten Sessions oder Statistikdaten.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
