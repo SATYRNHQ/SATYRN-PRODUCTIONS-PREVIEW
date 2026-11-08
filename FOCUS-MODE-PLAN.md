@@ -400,9 +400,17 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Es werden dieselben Kategorienfarben wie auf der Important-Seite verwendet.
 
 ### Productivity by Time
-- Auswertung der Fokuszeit nach Tageszeiten: morgens, mittags, nachmittags und abends.
-- Anzeige der produktivsten Tageszeit.
-- Vergleich der Fokuszeit zwischen diesen Zeiträumen.
+- Auswertung der erfassten Fokuszeit in fünf klar definierten Tageszeitfenstern anhand der lokalen Zeitzone:
+  - Nacht: 00:00 bis 06:00 Uhr.
+  - Morgens: 06:00 bis 11:00 Uhr.
+  - Mittags: 11:00 bis 14:00 Uhr.
+  - Nachmittags: 14:00 bis 18:00 Uhr.
+  - Abends: 18:00 bis 24:00 Uhr.
+- Die Zeitgrenzen sind eindeutig: Beginn inklusive, Ende exklusive; 24:00 Uhr entspricht dem Beginn des nächsten lokalen Kalendertages.
+- Fokuszeit wird anhand der tatsächlichen Zeitstempel den Zeitfenstern zugeordnet. Segmente, die eine Zeitfenstergrenze oder Mitternacht überschreiten, werden anteilig auf die betroffenen Zeitfenster aufgeteilt.
+- Pausen- und Unterbrechungszeiten zählen nicht. Tatsächlich erfasste Fokuszeit aus später unterbrochenen oder endgültig verworfenen Sessions bleibt enthalten.
+- Anzeige der produktivsten Tageszeit und Vergleich der Fokuszeit zwischen allen fünf Zeitfenstern.
+- Die Auswertung berücksichtigt die aktiven Datums- und Kategorienfilter sowie die jeweilige Statistikperiode.
 
 ### Personal Records
 - Längste Fokus-Session.
