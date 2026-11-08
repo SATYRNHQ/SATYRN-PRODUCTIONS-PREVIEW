@@ -537,8 +537,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Meiste Fokuszeit an einem Tag.
 - Meiste Fokuszeit in einer Woche.
 - Meiste erfolgreich abgeschlossene Sessions an einem Tag.
-- Datum des jeweiligen Rekords.
-- Automatische Aktualisierung.
+- Meiste erfolgreich abgeschlossene Sessions in einer Woche.
+- Jeder Rekord zeigt neben dem Bestwert das zugehörige Datum.
+- Bei Wochenrekorden wird zusätzlich der vollständige Zeitraum von Montag bis Sonntag angezeigt.
+- Tagesrekorde beziehen sich auf den lokalen Kalendertag; Wochenrekorde auf die lokale Kalenderwoche von Montag 00:00 Uhr bis zum folgenden Montag 00:00 Uhr (Ende exklusiv).
+- Die Zeit- und Erfolgsdefinitionen der jeweiligen Rekordart entsprechen den bereits festgelegten Statistikregeln; Pausen zählen nicht als Fokuszeit und nicht erfolgreich abgeschlossene Sessions zählen nicht als erfolgreich abgeschlossene Sessions.
+- Rekorde werden bei relevanten Datenänderungen automatisch neu berechnet und aktualisiert.
 
 ## 6. Session History
 
