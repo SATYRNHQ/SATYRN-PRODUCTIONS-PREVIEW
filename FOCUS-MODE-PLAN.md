@@ -152,6 +152,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Anzahl abgebrochener Sessions.
 - Produktivste Kategorie des Tages.
 
+
+### Eindeutige Session-Status in den Statistiken
+- Die Statistik unterscheidet drei Statusgruppen:
+  1. **Abgeschlossen:** erfolgreich beendete Sessions, einschließlich vorzeitig mit „Complete Session“ abgeschlossener Sessions.
+  2. **Unterbrochen:** weiterhin offene Sessions, die später fortgesetzt werden können.
+  3. **Endgültig verworfen:** Sessions, die ausdrücklich verworfen wurden und nicht mehr fortgesetzt werden können.
+- Diese drei Werte werden getrennt in den Tages-, Wochen-, Monats- und Gesamtstatistiken angezeigt.
+- Eine nur pausierte Session wird nicht als unterbrochen oder verworfen gezählt; sie bleibt eine offene Session im Status „Pausiert“.
+
 ### Weekly Statistics
 - Fokuszeit pro Tag von Montag bis Sonntag.
 - Balkendiagramm zum Vergleich der Tage.
