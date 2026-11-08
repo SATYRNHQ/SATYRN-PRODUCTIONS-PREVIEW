@@ -331,6 +331,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Zoom verändert ausschließlich die Darstellung in der Vorschau, nicht das exportierte PDF.
 - Die Seitennavigation bleibt auch bei verändertem Zoom bedienbar.
 
+
+### Standard-Zoom beim Öffnen der PDF-Vorschau
+- Beim Öffnen der PDF-Vorschau wird automatisch „An Seite anpassen“ aktiviert.
+- Der Nutzer kann den Zoom anschließend jederzeit manuell verändern.
+- Beim erneuten Öffnen startet die Vorschau wieder mit „An Seite anpassen“.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
