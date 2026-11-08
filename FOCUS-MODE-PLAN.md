@@ -377,6 +377,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wenn der Nutzer nach dem Ausklappen weiter nach unten scrollt, klappt der Timer automatisch wieder zur kompakten Sticky-Leiste zusammen.
 - Das Ein- und Ausklappen erfolgt flüssig und ohne den Scrollfluss zu unterbrechen.
 
+
+### Sticky Timer auf Tablets
+- Auch auf Tablets bleibt der Timer beim Scrollen sichtbar und klappt zu einer kompakten Leiste zusammen.
+- Antippen klappt die vollständige Timer-Ansicht wieder aus.
+- Beim weiteren Scrollen klappt sie automatisch wieder kompakt zusammen.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
