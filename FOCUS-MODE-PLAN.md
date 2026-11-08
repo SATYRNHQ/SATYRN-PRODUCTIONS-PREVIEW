@@ -925,6 +925,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Zusammenfassung dient als letzte Kontrolle; erst die ausdrückliche Bestätigung startet die Session und aktiviert die Verknüpfung/Synchronisierung mit Important.
 - Bei Rückkehr zur Bearbeitung bleiben die Eingaben der Vorbereitung erhalten.
 
+
+### Platzierung der Start-Zusammenfassung
+- Die abschließende Zusammenfassung erscheint direkt im bestehenden Session-Vorbereitungsfenster und nicht in einem separaten Bestätigungs-Popup.
+- Die Start-Schaltfläche befindet sich bei dieser Zusammenfassung; erst ihre ausdrückliche Betätigung startet die Session.
+- Die Vorbereitung bleibt bis zur Bestätigung im selben Fenster bearbeitbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
