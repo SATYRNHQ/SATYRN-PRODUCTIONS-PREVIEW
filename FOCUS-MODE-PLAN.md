@@ -1614,3 +1614,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Gelöschte Kategorien werden in CSV- und PDF-Statistikexporten mit ihrer historischen Kennzeichnung übernommen.
 - Exporte unterscheiden gelöschte historische Kategorien eindeutig von neu angelegten Kategorien mit gleichem Namen.
 - Kategorieangaben und zugehörige historische Sessions bleiben entsprechend den aktiven Statistikfiltern nachvollziehbar.
+
+
+### Wiederaufnahme-Hinweis für alle offenen Sessions
+- Beim Öffnen von Focus Mode werden alle offenen Sessions berücksichtigt: laufende, regulär pausierte und unterbrochene Sessions.
+- Für pausierte und unterbrochene Sessions wird ein Hinweis mit Status und vergangener Zeit seit der letzten Aktivität angezeigt.
+- Laufende Sessions werden mit ihrem aktuellen Timerstatus angezeigt und nicht fälschlich als pausiert oder unterbrochen behandelt.
+- Der Nutzer entscheidet ausdrücklich, welche Session fortgesetzt, pausiert belassen oder endgültig verworfen wird; es erfolgt keine automatische Wiederaufnahme.
