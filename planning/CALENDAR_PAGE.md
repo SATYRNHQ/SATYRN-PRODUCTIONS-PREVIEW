@@ -243,3 +243,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Für die Anordnung der Inhalte im großen Termin-Detail-Pop-up wurde **Variante A – zweispaltig** gewählt: Der Titel steht oben über die gesamte Breite. Darunter werden die Angaben in zwei nebeneinanderliegenden Bereichen angeordnet: links **Datum & Uhrzeit** sowie **Priorität**, rechts die optionale **Beschreibung**. Dadurch wird die Breite des Pop-ups sinnvoll genutzt und die Detailansicht wirkt wie ein übersichtlicher Arbeitsbereich.
 
 - 2026-11-09: Für das große Termin-Detail-Pop-up wurde Variante A (zweispaltige Inhaltsanordnung) gewählt: Titel oben über volle Breite; darunter links Datum/Uhrzeit und Priorität, rechts die optionale Beschreibung.
+
+
+## Ergänzung — Menü der Termin-Detailansicht
+
+- Das Drei-Punkte-Menü (⋯) mit den Aktionen **Bearbeiten** und **Löschen** wird optisch und in seiner Bedienung **genau wie das entsprechende Menü im Important-Fenster** gestaltet. Calendar übernimmt hierfür die bestehende Darstellung und Interaktion, statt ein eigenes Menüdesign einzuführen.
+
+- 2026-11-09: Das Drei-Punkte-Menü der Termin-Detailansicht (Bearbeiten/Löschen) wird exakt wie das entsprechende Menü im Important-Fenster gestaltet und bedient.
