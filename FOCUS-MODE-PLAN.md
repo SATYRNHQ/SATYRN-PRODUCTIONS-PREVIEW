@@ -1725,3 +1725,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Wiederherstellung erfolgt erst nach ausdrücklicher Bestätigung.
 - Vor dem Einspielen wird automatisch ein Sicherheits-Backup des aktuellen Datenstands erstellt; schlägt dies fehl, wird die Wiederherstellung abgebrochen.
 - Die Wiederherstellung bietet eine klare Auswahl zwischen Zusammenführen und vollständigem Ersetzen; beim Ersetzen gelten zusätzlich die bestehenden Schutz- und Bestätigungsregeln.
+
+
+### Aufbewahrung mehrerer Backup-Versionen
+- Es werden die letzten vier wöchentlichen Backup-Versionen aufbewahrt, damit bei Bedarf auch auf ältere Datenstände zurückgegriffen werden kann.
+- Neuere Backups verdrängen ältere Versionen erst, wenn die neue Sicherung erfolgreich erstellt und geprüft wurde.
+- Sicherheits-Backups vor Import oder Wiederherstellung werden ebenfalls geschützt und nicht vorzeitig durch eine fehlgeschlagene Sicherung überschrieben.
+- Vor dem Löschen einer Backup-Version wird sichergestellt, dass die festgelegte Anzahl gültiger Wiederherstellungspunkte erhalten bleibt.
