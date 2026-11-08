@@ -94,6 +94,12 @@
     s.focusSegments.push(seg);
     return seg;
   };
+  const addBreakSegment=(s,start,end)=>{
+    if(!start||!end||end<=start)return;
+    s.breakSegments=s.breakSegments||[];
+    const seg={id:uid(),start,end,durationMs:end-start,localDate:dateKey(start),timezone:zone(),localStart:timeLabel(start),localEnd:timeLabel(end)};
+    s.breakSegments.push(seg);return seg;
+  };
   const appendCurrentFocus=(s,now)=>{
     if(s.phase==='focus'&&s.status==='RUNNING'&&s.phaseStartedAt){addFocusSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));}
     s.phaseStartedAt=null;
@@ -401,7 +407,7 @@
     $('fmHistoryDetailTitle').textContent=s.name;
     $('fmHistoryDetailMeta').textContent=statusText(s)+' · '+dateLabel(dateKey(Math.max(...(s.timeline||[]).map(e=>e.at||0),s.createdAt||0)))+' · '+cat(s.category).name+' · '+pri(s.priority).name;
     $('fmHistoryDetailStats').innerHTML='<div><small>FOKUSZEIT</small><b>'+duration(totalFocus(s))+'</b></div><div><small>GEPLANTE DAUER</small><b>'+duration(s.originalFocusMs)+'</b></div><div><small>FOKUSABSCHNITTE</small><b>'+(s.focusSegments||[]).length+'</b></div>';
-    $('fmHistoryTimeline').innerHTML=(s.timeline||[]).concat((s.focusSegments||[]).map(seg=>({type:'focus-segment',label:'Fokusabschnitt · '+duration(seg.durationMs),at:seg.start,end:seg.end,zone:seg.timezone}))).sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(dateKey(e.at))+' · '+timeLabel(e.at)+' · '+esc(e.zone||'')+'</small></span></div>').join('');
+    $('fmHistoryTimeline').innerHTML=(s.timeline||[]).concat((s.focusSegments||[]).map(seg=>({type:'focus-segment',label:'Fokusabschnitt · '+duration(seg.durationMs),at:seg.start,end:seg.end,zone:seg.timezone})),(s.breakSegments||[]).map(seg=>({type:'break-segment',label:'Pausenabschnitt · '+duration(seg.durationMs),at:seg.start,end:seg.end,zone:seg.timezone}))).sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(dateKey(e.at))+' · '+timeLabel(e.at)+(e.end?' – '+timeLabel(e.end):'')+' · '+esc(e.zone||'')+'</small></span></div>').join('');
     $('fmHistoryDetailNotes').textContent=s.notes||'Keine Notizen gespeichert.';
     $('fmHistoryDetailDistractions').innerHTML=(s.distractions||[]).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text)+'</b></span><span><button type="button" data-fm-history-edit-distraction="'+esc(d.id)+'">Bearbeiten</button><button type="button" data-fm-history-delete-distraction="'+esc(d.id)+'">×</button></span></div>').join('')||'<p class="fm-empty">Keine Ablenkungen protokolliert.</p>';
     $('fmHistoryDetailLink').textContent=s.linkedTaskSnapshot?(s.linkedTaskSnapshot.title+' · '+(s.linkedTaskSnapshot.source==='important'?'Important':'Task Queue')):'Kein Aufgabenlink';
@@ -437,7 +443,7 @@
     if(action==='discard'){if(confirm('Diese unterbrochene Session endgültig verwerfen? Sie wird aus den offenen Sessions entfernt, bleibt aber in der History dokumentiert.')){s.status='INTERRUPTED';s.discarded=true;s.discardedAt=Date.now();event(s,'discarded','Session verworfen',s.discardedAt);activeId=sortedOpen()[0]?.id||null;state.activeId=activeId;persist();renderAll();}}
     if(action==='reset'){if(confirm('Fokusphase auf die ursprüngliche Dauer zurücksetzen? Die bereits geleistete Fokuszeit bleibt als eigener Abschnitt erhalten.'))resetSession(s);}
     if(action==='complete'){if(confirm('Session jetzt erfolgreich abschließen?'))finish(s);}
-    if(action==='skip'){const now=Date.now();if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break'){s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;event(s,'skip-break','Pause übersprungen · nächste Fokusphase manuell starten',now);stopTick();persist();renderAll();}}
+    if(action==='skip'){const now=Date.now();if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break'){if(s.status==='RUNNING'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));s.status='EXPIRED';s.remainingMs=0;s.deadline=null;s.phaseStartedAt=null;s.lastActiveAt=now;event(s,'skip-break','Pause übersprungen · nächste Fokusphase manuell starten',now);setDistractionFree(false);stopTick();persist();renderAll();}}
   };
   const buildMarkup=()=>{
     const html = String.raw`<div class="fm-page-head"><div><div class="eyebrow">SATYRN HQ · DEEP WORK CENTER</div><h1>Focus <em>Mode.</em></h1><p>Ein klarer Arbeitsblock. Ein konkretes Ziel. Dein Fortschritt bleibt nachvollziehbar.</p></div><div class="fm-head-actions"><button type="button" class="fm-history-open" id="fmHistoryOpen">◷ <span>History</span></button><span class="fm-storage-pill" id="fmStorageState" data-state="saved">SAVED</span></div></div>
@@ -598,7 +604,12 @@
   });
   document.addEventListener('click',e=>{
     const nav=e.target.closest('[data-page]');
-    if(nav&&nav.dataset.page!=='focus'&&nav.closest('.main-area,.hq-side-nav,.hq-top-nav')){if(historyOpen)leaveHistory();}
+    if(!nav||nav.dataset.page==='focus'||!nav.closest('.main-area,.hq-side-nav,.hq-top-nav'))return;
+    if(focusPage.classList.contains('active-page')){
+      const ok=persist();
+      if(!ok&&!confirm('Änderungen konnten nicht lokal gespeichert werden. Trotzdem zur anderen Seite wechseln?')){e.preventDefault();e.stopImmediatePropagation();return;}
+    }
+    if(historyOpen)leaveHistory();
   },true);
   window.addEventListener('storage',e=>{if(e.key===IMPORTANT||e.key===TASKS){refreshLinkedOptions();renderQueue();}});
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshLinkedOptions();renderQueue();}});
