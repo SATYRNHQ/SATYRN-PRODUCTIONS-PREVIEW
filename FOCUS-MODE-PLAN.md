@@ -317,6 +317,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - „Weiter bearbeiten“ behält die vorgenommenen Einstellungen; „Änderungen verwerfen“ verwirft sie und kehrt zur Exportauswahl zurück.
 - Der eigentliche Export wird ausschließlich durch die ausdrückliche Bestätigung über „Exportieren“ gestartet.
 
+
+### Seitennavigation in der PDF-Vorschau
+- Die PDF-Vorschau bietet bei mehrseitigen Berichten eine Seitennavigation.
+- Nutzer können bequem zur vorherigen bzw. nächsten Seite wechseln und die aktuelle Seitenzahl im Verhältnis zur Gesamtseitenzahl sehen.
+- Die Navigation ist auch bei längeren ausführlichen Berichten gut erreichbar.
+- Bei einem einseitigen kompakten Bericht wird keine unnötige Seitennavigation eingeblendet.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
