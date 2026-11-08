@@ -1824,3 +1824,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Für Tages-, Wochen- und Monatsstatistiken wird die tatsächlich erfasste Fokuszeit anteilig den jeweiligen lokalen Kalendertagen bzw. Zeiträumen zugeordnet.
 - Pausen und Unterbrechungen zählen weiterhin nicht als aktive Fokuszeit; sie werden auch bei der Aufteilung über Kalendergrenzen hinweg nicht eingerechnet.
 - Die Aufteilung in Statistiken erzeugt keine zusätzlichen Sessions und verändert weder den Verlauf noch die gespeicherten Zeitabschnitte.
+
+
+### Fokusphase und Pause über Mitternacht hinweg
+- Endet eine Fokusphase vor Mitternacht und läuft die anschließende Pause nach Mitternacht weiter, wird die erfasste Fokuszeit vollständig dem Kalendertag zugeordnet, an dem sie tatsächlich stattgefunden hat.
+- Die Pause wird keinem Fokuszeitwert zugerechnet, unabhängig davon, ob sie am selben oder am folgenden Kalendertag endet.
+- Beginnt eine Fokusphase selbst vor Mitternacht und läuft nach Mitternacht weiter, wird ihre tatsächlich erfasste Fokuszeit entsprechend der lokalen Zeitgrenze auf beide Tage verteilt.
