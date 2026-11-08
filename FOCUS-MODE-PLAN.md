@@ -429,6 +429,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Tage mit erfasster Fokuszeit, an denen das Tagesziel nicht erreicht wurde, erhalten zusätzlich eine dezente Aktivitätsanzeige. Diese Aktivitätsanzeige ist von der Zielwertung getrennt, damit Fokusaktivität nicht mit Zielerreichung verwechselt wird.
 - Farben werden durch eindeutige Symbole bzw. Beschriftungen ergänzt, sodass die Zustände auch ohne Farberkennung unterscheidbar bleiben.
 
+- Wenn Fokusdaten für einen Tag fehlen, beschädigt, unvollständig oder noch nicht vollständig synchronisiert sind, erhält dieser Tag zunächst den Status **„Ungeklärt“** statt automatisch „Erreicht“ oder „Verfehlt“.
+- Ein ungeklärter Tag darf die Streak nicht automatisch verlängern oder unterbrechen. Solange ein für die Streak relevanter Tag ungeklärt ist, wird die aktuelle Streak bzw. deren Kontinuität als vorläufig gekennzeichnet; es darf kein irreführender endgültiger Stand angezeigt werden.
+- Sobald die fehlenden oder widersprüchlichen Daten wiederhergestellt bzw. zuverlässig abgeglichen sind, wird der Tag anhand des für ihn gespeicherten Zielwerts, der gespeicherten Fokuszeit und der damals geltenden lokalen Tages-/Zeitzonenregeln endgültig bewertet.
+- Ungeklärte Tage werden in der Kalenderübersicht eindeutig und barrierearm von erreichten, verfehlten, heutigen und zukünftigen Tagen unterschieden. Die Anzeige erklärt knapp, dass die Wertung wegen unvollständiger Daten noch aussteht.
+- Daten dürfen nicht stillschweigend als null Fokuszeit interpretiert oder verworfen werden, nur weil ein Synchronisations- oder Wiederherstellungsproblem vorliegt. Konflikte müssen erhalten bleiben, bis sie zuverlässig aufgelöst sind.
+
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
 - Farbintensität richtet sich nach der täglichen Fokuszeit.
