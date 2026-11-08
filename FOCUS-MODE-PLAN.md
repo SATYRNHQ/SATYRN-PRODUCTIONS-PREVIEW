@@ -455,3 +455,21 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Aktionen:** Am unteren Ende der Detailansicht stehen die bereits festgelegten Aktionen zur Verfügung: Session als Vorlage für eine neue Session verwenden, Details bearbeiten und Session löschen. Das Löschen erfordert weiterhin eine separate Sicherheitsabfrage.
 - Die Gestaltung bleibt ruhig, hochwertig und kompakt. Kennzahlen und Zeitverlauf sind schnell erfassbar; ausführlichere Inhalte können bei Bedarf aufgeklappt werden.
 - Die Detailansicht verwendet die bestehenden SATYRN-Farben, Kategorienfarben und Statuskennzeichnungen konsistent mit Focus Mode, Statistics und der Session-Übersicht.
+
+### Aufbau und visuelle Gestaltung der Session-History-Übersicht
+- Die History-Übersicht beginnt mit einer kompakten Kennzahlenzeile für die Gesamtzahl der Sessions, die gesamte tatsächliche Fokuszeit und die Anzahl abgeschlossener Sessions.
+- Darunter befinden sich die Suche und die Filter. Die Suche ist gut sichtbar und erlaubt die Suche nach Session-Name oder Fokusziel. Statusfilter sind direkt erreichbar; weitere Filter für Zeitraum, Kategorie und Priorität sind übersichtlich gruppiert und kombinierbar.
+- Die aktive Sortierung wird sichtbar angezeigt. Standardmäßig gilt: neueste Sessions zuerst.
+- Die Sessions werden als vertikale, kompakte Einträge dargestellt und nach Datum gruppiert. Jeder Eintrag zeigt:
+  - Session-Name als primäre Information,
+  - Status als klar erkennbare Kennzeichnung,
+  - Kategorie und Priorität,
+  - tatsächliche Fokuszeit und geplante Dauer,
+  - Anzahl der Fokusabschnitte,
+  - Fokusziel, sofern Platz und Lesbarkeit dies sinnvoll erlauben.
+- Abgeschlossene und unterbrochene Sessions sind durch die bereits festgelegten Statusfarben und zusätzliche Beschriftungen eindeutig unterscheidbar. Farbe ist nie der einzige Informationsträger.
+- Ein Klick auf einen Session-Eintrag öffnet die zugehörige Detailansicht. Die Einträge erhalten eine klare, dezente Hover- und Fokus-Rückmeldung, ohne wichtige Informationen oder Aktionen ausschließlich bei Hover anzuzeigen.
+- Die Übersicht verwendet eine ruhige, hochwertige Karten-/Listenoptik mit klarer Typografie, kompakten Abständen und den bestehenden SATYRN-Farben. Die Einträge sollen schnell scanbar sein und auch bei vielen Sessions übersichtlich bleiben.
+- Die Kennzahlen oben dienen der schnellen Orientierung; die vollständige Auswertung und Diagramme verbleiben im Bereich Statistics.
+- Bei vielen Einträgen wird die Liste in überschaubare Seiten bzw. Abschnitte aufgeteilt. Die Navigation zeigt die aktuelle Position und ermöglicht das Weiterblättern.
+- Alle dargestellten Kennzahlen und Einträge verwenden echte gespeicherte Daten; Beispielwerte aus Designvorlagen sind keine Produktivdaten.
