@@ -1682,3 +1682,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jede Funktion soll durch kurze Hinweise oder eine verständliche Beispielaktion auffindbar sein; die Preview soll dabei übersichtlich bleiben und nicht alle Erklärungen dauerhaft einblenden.
 - Demo-Daten müssen eindeutig als Beispiele gekennzeichnet und von echten Nutzerdaten getrennt sein. Das Ausprobieren oder Zurücksetzen des Demo-Modus darf keine echten Sessions, Aufgaben oder Statistiken verändern.
 - Die Preview soll auch leere Zustände zeigen, damit verständlich ist, wie die Oberfläche ohne vorhandene Daten aussieht.
+
+
+### Demo-Modus umschalten
+- Focus Mode erhält einen gut auffindbaren Schalter, mit dem zwischen der echten Arbeitsumgebung und dem separaten Demo-Modus gewechselt werden kann.
+- Der aktive Modus ist jederzeit eindeutig sichtbar.
+- Der Wechsel zwischen Demo- und Echtmodus verändert, löscht oder überschreibt keine echten Nutzerdaten.
+- Demo-Daten und Demo-Aktionen bleiben vollständig getrennt von echten Sessions, Important-Aufgaben, Notizen, Verlauf und Statistiken.
