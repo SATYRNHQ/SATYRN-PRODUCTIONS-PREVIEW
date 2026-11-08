@@ -55,6 +55,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
   3. **Vorläufig** — Blau
   4. **Unbefristet** — Grün
 - Die Priorität dient in der Monatsansicht zur farblichen Unterscheidung der Einträge.
+- Die Prioritätsfarbe wird durch einen **schmalen farbigen Streifen** am Termineintrag dargestellt. Der Titel selbst bleibt in der normalen Textfarbe.
 - Die sichtbaren Einträge bleiben textlich auf den Titel beschränkt; die Prioritätsfarbe liefert die zusätzliche visuelle Orientierung.
 
 ## Noch nicht festgelegt
@@ -93,6 +94,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Wiederkehrende Termine werden unterstützt; wöchentliche, monatliche und jährliche Wiederholung sind vorgesehen. Sie laufen ohne verpflichtendes Enddatum weiter, bis sie manuell gelöscht werden.
 - 2026-11-08: Bei einer Wiederholungsserie kann ein einzelnes Vorkommen unabhängig von der Serie gelöscht oder bearbeitet werden. Beim Löschen bzw. Bearbeiten wird jeweils zwischen dem einzelnen Termin und der gesamten Serie unterschieden.
 - 2026-11-08: Die Priorität ist optional. Einträge ohne Priorität werden neutral dargestellt.
+- 2026-11-08: Die Priorität wird in der Monatsansicht durch einen schmalen farbigen Streifen am Termineintrag kenntlich gemacht; der Titel bleibt in normaler Textfarbe.
 - 2026-11-08: Eine Suche nach Termintiteln wird ergänzt. Sie findet vergangene, aktuelle und zukünftige Einträge; Suchergebnisse lassen sich direkt öffnen und zeigen die Detailansicht des jeweiligen Eintrags.
 - 2026-11-08: Zusätzlich werden Prioritätsfilter für Dringend, Wichtig, Vorläufig, Unbefristet und Ohne Priorität angeboten. Mehrere Filter können gleichzeitig aktiv sein; Treffer aus den ausgewählten Kategorien werden gemeinsam angezeigt.
 - 2026-11-08: Suche und Prioritätsfilter werden kombiniert angewendet. Angezeigt werden nur Einträge, die sowohl zum Suchbegriff als auch zu mindestens einem der aktivierten Prioritätsfilter passen.
