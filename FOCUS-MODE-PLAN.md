@@ -459,6 +459,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Eindeutige Tageszustände im Monatskalender:** Tage ohne erfasste Fokuszeit bleiben neutral. Tage mit Fokusaktivität, aber verfehltem Tagesziel, zeigen eine dezente Aktivitätsmarkierung und bleiben klar als nicht erreicht erkennbar. Erreichte Tagesziele erhalten eine eigene, deutlich unterscheidbare Markierung.
 - **Zukünftige Tage:** Werden zurückhaltend dargestellt und nicht als verfehlt gewertet.
 - **Ungeklärte Tage:** Erhalten einen eigenen, klar beschrifteten bzw. ikonisch unterscheidbaren Zustand. Sie dürfen weder wie erreichte noch wie verfehlte Tage aussehen.
+
+- **Fehlende Daten sind nicht gleich null Fokuszeit:** Ein vergangener Tag darf nur dann als Tag ohne Aktivität (0 Minuten) dargestellt werden, wenn verlässliche, vollständige Daten dies bestätigen. Fehlen Daten, sind sie unvollständig oder ist ihre Integrität nicht bestätigt, wird der Tag als „Ungeklärt“ dargestellt – niemals stillschweigend als neutraler Tag ohne Aktivität.
+- Diese Unterscheidung gilt auch beim Wechsel zwischen Monaten sowie für rückwirkend angezeigte Monatskalender. Monatsgesamtwerte und Vergleiche müssen ungeklärte Daten kenntlich machen und dürfen fehlende Werte nicht als bestätigte 0 Minuten einrechnen.
+- Sobald Daten zuverlässig wiederhergestellt oder abgeglichen wurden, wird der betroffene Tag und die davon abhängige Monatsauswertung aktualisiert. Bis dahin bleiben ursprüngliche Daten erhalten und betroffene Ergebnisse als vorläufig gekennzeichnet.
+
 - Die Zustände müssen nicht allein über Farbe unterscheidbar sein; ergänzende Symbole oder Textkennzeichnungen gewährleisten Verständlichkeit und Barrierearmut.
 
 
