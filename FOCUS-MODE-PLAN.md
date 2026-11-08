@@ -1908,3 +1908,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Werte aktualisieren sich automatisch bei neuen Fokuszeitsegmenten, Session-Abschlüssen, Änderungen an Sessions sowie beim Wechsel von Zeitraum oder Kategorie-Filter.
 - Die bestehende Definition der jeweiligen Durchschnittswerte bleibt in jeder Ansicht identisch. Bei mehreren ausgewählten Kategorien wird keine Session und kein Zeitsegment doppelt gezählt.
 - Wenn für einen Wert im ausgewählten Zeitraum keine gültige Berechnungsgrundlage existiert, wird „–“ angezeigt.
+### Durchschnitt abgeschlossener Sessions pro aktivem Tag und pro aktiver Woche
+- Zusätzlich werden zwei Kennzahlen angezeigt: **durchschnittlich abgeschlossene Sessions pro aktivem Tag** und **durchschnittlich abgeschlossene Sessions pro aktiver Kalenderwoche**.
+- Als erfolgreich abgeschlossen zählen regulär beendete Sessions sowie Sessions, die vorzeitig über „Complete Session“ beendet wurden. Pausierte, unterbrochene und endgültig verworfene Sessions zählen nicht.
+- Für den Tagesdurchschnitt wird die Anzahl erfolgreich abgeschlossener Sessions durch die Anzahl der lokalen Kalendertage im ausgewählten Zeitraum geteilt, an denen tatsächlich Fokuszeit erfasst wurde.
+- Für den Wochendurchschnitt wird die Anzahl erfolgreich abgeschlossener Sessions durch die Anzahl der Kalenderwochen im ausgewählten Zeitraum geteilt, in denen tatsächlich Fokuszeit erfasst wurde. Kalenderwochen laufen von Montag bis Sonntag; angeschnittene Wochen am Anfang oder Ende eines benutzerdefinierten Zeitraums zählen als jeweilige Kalenderwoche, sofern darin Fokuszeit erfasst wurde.
+- Eine Session wird für diese Kennzahlen dem lokalen Kalendertag bzw. der Kalenderwoche ihres erfolgreichen Abschlusses zugeordnet. Maßgeblich ist der Abschlusszeitpunkt, nicht der Beginn der Session.
+- Beide Kennzahlen berücksichtigen den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Bei mehreren ausgewählten Kategorien wird jede Session nur einmal gezählt.
+- Die Kennzahlen erscheinen in Daily, Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum. Sie werden bei Änderungen an Sessions sowie beim Wechsel von Zeitraum oder Kategorie-Filter automatisch neu berechnet.
+- Gibt es im ausgewählten Zeitraum keinen aktiven Fokus-Tag bzw. keine aktive Kalenderwoche als Berechnungsgrundlage, wird „–“ angezeigt.
