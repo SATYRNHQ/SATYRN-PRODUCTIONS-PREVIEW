@@ -961,6 +961,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Sie wird optisch deutlich hervorgehoben und folgt derselben visuellen Hierarchie wie die Hauptaufgabe in der aktiven Focus-Ansicht.
 - Zusätzliche Aufgaben werden darunter nachgeordnet dargestellt.
 
+
+### Kompakte Liste zusätzlicher Aufgaben in der Vorbereitung
+- Zusätzliche Aufgaben erscheinen direkt unter der hervorgehobenen Hauptaufgabe als kompakte Liste.
+- Jeder Eintrag zeigt Kategorie-Icon, die aus Important übernommene Prioritätsfarbe und den Aufgabennamen.
+- Die Liste bleibt visuell der Hauptaufgabe untergeordnet und nutzt die bestehenden Kategorie- und Prioritätsdarstellungen von Important.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
