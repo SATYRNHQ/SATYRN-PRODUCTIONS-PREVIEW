@@ -257,3 +257,12 @@ The following search behaviors are intended as a shared standard for every page 
 - Die Sicherheitsabfrage vor dem endgültigen Löschen eines Kalendereintrags wird **genau wie auf den anderen Seiten** gestaltet und bedient. Es wird kein abweichender, nur für Calendar geltender Bestätigungsdialog eingeführt.
 
 - 2026-11-09: Die Lösch-Sicherheitsabfrage in Calendar übernimmt exakt den seitenübergreifend bereits verwendeten Dialog.
+
+
+## Ergänzung — Erstellungs- und Bearbeitungsformular
+
+- Das Formular zum Erstellen und Bearbeiten von Kalendereinträgen übernimmt **das bestehende Formular-Design und die vertraute Bedienung aus Important**.
+- Es wird um die bereits für Calendar festgelegten zusätzlichen Felder und Funktionen erweitert. Die drei Abschnitte bleiben: **Allgemeines**, **Datum & Uhrzeit** und **Wiederholung**.
+- Das bestehende Important-Formular dient als gestalterische und funktionale Grundlage; Calendar erhält kein vollständig eigenständiges Formularsystem.
+
+- 2026-11-09: Das Calendar-Erstellungs- und Bearbeitungsformular übernimmt das Formular aus Important und wird um die Calendar-spezifischen Felder und Wiederholungsfunktionen erweitert.
