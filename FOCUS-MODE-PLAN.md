@@ -167,6 +167,7 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Ein Reset-Button ist vorhanden. Vor dem Zurücksetzen erscheint eine Sicherheitsabfrage.
 - Eine Session kann vorzeitig mit **Complete Session** erfolgreich abgeschlossen werden. Die tatsächliche Dauer wird gespeichert und in History sowie Statistiken berücksichtigt.
 - Eine Session kann unterbrochen werden, ohne sie endgültig abzuschließen. Sie bleibt als offene, wiederaufnehmbare Session erhalten und wird in der History als unterbrochen dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten. Das endgültige Verwerfen ist eine getrennte Aktion.
+- Dieselbe Session kann beliebig oft unterbrochen und später fortgesetzt werden. Jede Unterbrechung und Wiederaufnahme wird als eigener Vorgang im zeitlichen Verlauf dokumentiert. Bereits erfasste Fokuszeit bleibt erhalten und wird bei weiteren Unterbrechungen oder Wiederaufnahmen weder gelöscht noch doppelt gezählt.
 - **Complete Session** ist davon getrennt: Damit kann eine Session auch vor Ablauf des Timers bewusst erfolgreich beendet werden. Sie verschwindet dann aus der offenen Liste und wird in History sowie Statistiken übernommen.
 - Wenn eine Fokusphase endet, wechselt der Timer automatisch in die eingestellte Pause. Bei der bewusst gewählten Option „Keine Pause“ wird keine Pause gestartet; der Timer wartet stattdessen auf den manuellen Start der nächsten Fokusphase.
 - Nach Ende der Pause wartet der Timer auf einen manuellen Start der nächsten Fokusphase.
