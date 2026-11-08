@@ -1732,3 +1732,18 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Neuere Backups verdrängen ältere Versionen erst, wenn die neue Sicherung erfolgreich erstellt und geprüft wurde.
 - Sicherheits-Backups vor Import oder Wiederherstellung werden ebenfalls geschützt und nicht vorzeitig durch eine fehlgeschlagene Sicherung überschrieben.
 - Vor dem Löschen einer Backup-Version wird sichergestellt, dass die festgelegte Anzahl gültiger Wiederherstellungspunkte erhalten bleibt.
+
+
+### Speicherprüfung und sichtbare Fehlerhinweise
+- Beim Speichern werden Daten auf erfolgreiche und vollständige Speicherung geprüft.
+- Wenn eine Speicherung fehlschlägt oder unvollständig ist, wird der Nutzer unmittelbar und verständlich darauf hingewiesen.
+- Nicht erfolgreich gespeicherte Änderungen bleiben nach Möglichkeit lokal erhalten und werden nicht als erfolgreich gespeichert angezeigt.
+- Nach einem fehlgeschlagenen Speichervorgang wird eine erneute Synchronisierung bzw. ein erneuter Speicherversuch ermöglicht.
+
+### Zentraler seitenweiter Backup-Ansatz
+- Das langfristige Backup-System wird am Ende zentral für die gesamte SATYRN-HQ-Website geplant und umgesetzt, nicht als voneinander getrennte Backup-Systeme pro Seite.
+- Ein seitenweites Backup soll die Daten aller relevanten SATYRN-HQ-Bereiche gemeinsam sichern und als zusammenhängenden Datenstand wiederherstellen können.
+- Die einzelnen Seiten liefern ihre Daten an dieses zentrale Backup-System; sie erhalten keine voneinander unabhängigen Backup-Archive oder getrennten Aufbewahrungsregeln.
+- Die bereits für Focus Mode geplanten Backup-Funktionen dienen bis zur seitenweiten Gesamtkonzeption als fachliche Anforderungen und müssen anschließend in das zentrale Backup-Konzept integriert werden.
+- Vor einer seitenweiten Wiederherstellung wird der gesamte aktuelle Website-Datenstand automatisch gesichert; bei fehlgeschlagener Sicherung wird die Wiederherstellung abgebrochen.
+- Die genaue Struktur, Versionierung, Aufbewahrungsdauer und Wiederherstellung einzelner Bereiche wird bei der abschließenden seitenweiten Backup-Planung festgelegt.
