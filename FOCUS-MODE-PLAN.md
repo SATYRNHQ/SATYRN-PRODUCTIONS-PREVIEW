@@ -1702,3 +1702,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Keine geführte Einführung, kein Tutorial und keine zusätzlichen Erklärungsdialoge.
 - Der Demo-Modus bleibt eine kleine, kompakte Vorschau mit wenigen realistischen Beispieldaten und direkt erkennbaren Funktionen.
 - Die Oberfläche soll für sich selbst sprechen; keine überladene Demo und keine dauerhaft eingeblendeten Hilfetexte.
+
+
+### Abschließende seitenübergreifende Preview- und Funktionstests
+- Am Ende der Planung und vor dem Abschluss der Preview werden alle SATYRN-HQ-Seiten gemeinsam auf Funktion und Zusammenspiel getestet.
+- Dazu gehören insbesondere Exportvorschauen und Beispieldateien (CSV/PDF), sofern die jeweilige Seite Exportfunktionen bietet.
+- Geprüft werden außerdem Navigation, Verknüpfungen zwischen Seiten, gemeinsame Daten, Zustände, responsive Darstellung und die wichtigsten Nutzerabläufe.
+- Exportvorschauen werden dabei anhand realistischer Beispieldaten kontrolliert; sie müssen zum tatsächlich erzeugten Export passen.
+- Dieser Punkt ist eine abschließende Testaufgabe für alle Seiten und wird nicht als zusätzliche dauerhafte Demo-Funktion umgesetzt.
