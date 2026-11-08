@@ -182,6 +182,13 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 
 ### Bedienbarkeit und Gerätepriorität
 - Der PC/Desktop ist die primäre Arbeitsumgebung für Focus Mode. Das vollständige Arbeiten mit Timer, Sessions, Task Queue, Notizen, Statistiken und History wird auf die PC-Bedienung ausgelegt.
+- **Mausbedienung am PC:**
+  - Die primäre Timeraktion (Pause/Resume) und die jeweils wichtigste nächste Aktion stehen direkt unter bzw. unmittelbar neben der Zeitanzeige.
+  - Offene Sessions können mit einem Klick über die kompakte Session-Liste gewechselt werden.
+  - Das Notizfeld ist direkt aus dem Current-Session-Bereich erreichbar, ohne eine andere Seite öffnen zu müssen.
+  - Aufgaben aus der Task Queue können direkt ausgewählt und der aktuellen Session zugeordnet werden.
+  - Wichtige Aktionen und Informationen dürfen nicht ausschließlich beim Darüberfahren mit der Maus (Hover) sichtbar oder erreichbar sein.
+  - Sicherheitsrelevante Aktionen wie Reset und endgültiges Verwerfen erfordern eine eindeutige, separate Bestätigung, damit versehentliche Klicks nicht zu Datenverlust führen.
 - **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar. Die gesamte Focus-Mode-Funktionalität steht zur Verfügung.
 - **Tablet:** Das Layout darf sich responsiv an den verfügbaren Platz anpassen. Eine vollständige Optimierung aller Focus-Mode-Funktionen für Tablets ist gegenüber der PC-Version nachrangig.
 - **Smartphone:** Eine vollständige Bedienung von Focus Mode ist ausdrücklich nicht vorgesehen. Keine Smartphone-spezifische Timersteuerung, Sticky-Timer-Ansicht oder Session-Verwaltung planen.
