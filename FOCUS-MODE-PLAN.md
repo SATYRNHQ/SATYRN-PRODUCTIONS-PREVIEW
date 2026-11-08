@@ -374,6 +374,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ziele können jederzeit angepasst werden.
 - Tages- und Wochenziele werden unabhängig voneinander berechnet: Das Verfehlen eines Tagesziels verhindert nicht automatisch die Erreichung des Wochenziels; umgekehrt ersetzt ein erreichtes Wochenziel keine verfehlten Tagesziele.
 
+- **Klare Trennung in der Kalenderdarstellung:** Die einzelnen Kalendertage zeigen weiterhin ausschließlich ihren jeweiligen Tagesziel-Status (erreicht, verfehlt, heute/offen oder zukünftig). Das Wochenziel erhält eine separate Wochenübersicht mit eigenem Zielwert, tatsächlicher Fokuszeit, Fortschrittsanzeige, verbleibender Zeit und eigenem Erreichungsstatus.
+- Tages- und Wochenstatus dürfen visuell nicht miteinander verwechselt oder voneinander abgeleitet werden. Eine Woche kann ihr Ziel erreichen, obwohl einzelne Tagesziele verfehlt wurden; ebenso können alle bisher abgeschlossenen Tagesziele erreicht sein, während das Wochenziel noch offen oder verfehlt ist.
+
+
 
 - Die Kalenderwoche für das Wochenziel beginnt am Montag um 00:00 Uhr und endet mit Beginn des folgenden Montags um 00:00 Uhr (Endzeitpunkt exklusiv). Maßgeblich ist jeweils die für den betreffenden Zeitpunkt geltende lokale Zeitzone.
 - Wochenfortschritt wird anhand der tatsächlich erfassten Fokuszeit innerhalb dieser lokalen Kalenderwoche berechnet. Fokussegmente, die eine Wochengrenze überschreiten, werden anhand ihrer tatsächlichen Zeitstempel anteilig den betroffenen Wochen zugeordnet; Pausen- und Unterbrechungszeiten zählen nicht.
