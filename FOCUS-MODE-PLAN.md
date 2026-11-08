@@ -348,6 +348,13 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Eine Aufgabe kann beliebig viele Focus-Sessions sammeln.
 - Die investierte Zeit und Session-Anzahl werden pro Aufgabe addiert und angezeigt, z. B. `4 Sessions · 2h 15min focused`.
 
+### Umgang mit geänderten oder gelöschten Important-Aufgaben
+- Eine Focus-Session speichert einen eigenen historischen Snapshot der verknüpften Important-Aufgabe, insbesondere Aufgabenname und den zum Zeitpunkt der Verknüpfung geltenden Aufgabenbezug.
+- Wird die Important-Aufgabe später umbenannt oder inhaltlich verändert, bleiben die ursprünglich gespeicherten Angaben in der Session und ihrer History erhalten. Die Session wird dadurch nicht nachträglich umgeschrieben.
+- Solange die Important-Aufgabe weiterhin existiert, bleibt die Verknüpfung erhalten und kann weiterhin zur aktuellen Aufgabe führen. Die ursprünglichen Snapshot-Angaben bleiben in der Session-History nachvollziehbar.
+- Wird die verknüpfte Important-Aufgabe gelöscht, bleiben Session, Fokuszeiten und historische Aufgabenangaben vollständig erhalten. Die Verknüpfung wird als **nicht mehr verfügbar** gekennzeichnet; es wird kein Ersatzlink und keine neue Aufgabe automatisch angelegt.
+- Das Löschen oder Ändern einer Important-Aufgabe darf keine Session-Daten, Zeitaufzeichnungen oder History-Einträge löschen oder verfälschen.
+
 ### Kategorie und Priorität
 Vorgesehene Kategorien:
 - Music Production
