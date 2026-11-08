@@ -262,6 +262,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Exportiert werden die relevanten Kennzahlen und zugrunde liegenden Auswertungswerte in einer strukturierten, tabellarisch nutzbaren CSV-Datei.
 - Der Export verändert keine gespeicherten Sessions oder Statistikdaten.
 
+
+### PDF-Export der Statistiken
+- Zusätzlich zum CSV-Export gibt es einen PDF-Export der aktuell angezeigten Statistik-Auswertung.
+- Der PDF-Bericht berücksichtigt den aktiven Statistik-Zeitraum und die ausgewählte Kategorie bzw. Kategorie-Kombination.
+- Der Bericht enthält die wichtigsten Kennzahlen, Vergleichswerte (sofern für die jeweilige Ansicht vorgesehen) und passende Diagramme in einem übersichtlichen, druckbaren Layout.
+- Beim frei gewählten Zeitraum wird kein zusätzlicher Vergleich mit einem vorherigen Zeitraum ergänzt.
+- Der PDF-Export verändert keine gespeicherten Sessions oder Statistikdaten.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
