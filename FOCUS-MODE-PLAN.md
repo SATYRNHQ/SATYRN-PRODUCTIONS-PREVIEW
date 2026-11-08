@@ -255,6 +255,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Durchschnittliche Dauer abgeschlossener Sessions.
 - Die Gesamtstatistik berücksichtigt alle gespeicherten Sessions und wird nach Änderungen an Sessions automatisch aktualisiert.
 
+
+### Statistik-Export
+- Die Statistiken erhalten eine Exportfunktion, mit der die aktuell ausgewerteten Daten als CSV-Datei heruntergeladen werden können.
+- Der Export berücksichtigt den aktiven Statistik-Zeitraum (Daily, Weekly, Monthly, Overall oder frei gewählter Zeitraum) sowie die aktuell ausgewählte Kategorie bzw. Kategorie-Kombination.
+- Exportiert werden die relevanten Kennzahlen und zugrunde liegenden Auswertungswerte in einer strukturierten, tabellarisch nutzbaren CSV-Datei.
+- Der Export verändert keine gespeicherten Sessions oder Statistikdaten.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
