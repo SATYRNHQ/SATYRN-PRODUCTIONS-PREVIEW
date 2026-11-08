@@ -274,6 +274,9 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 
 
 ### Automatische Pausierung bei PC-Herunterfahren oder Ausfall
+- Wird der Browser versehentlich geschlossen, bleibt die Session erhalten und wird beim erneuten Öffnen als **PAUSED** wiederhergestellt.
+- Die Zeit, in der der Browser geschlossen bzw. Focus Mode nicht verfügbar ist, wird nicht als Fokuszeit gezählt. Alle zuletzt erfolgreich lokal gespeicherten Session-Daten bleiben erhalten.
+- Die wiederhergestellte Session startet nicht automatisch; die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
 - Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand, wird die Session ebenfalls automatisch pausiert und nicht abgebrochen oder abgeschlossen.
 - Die Zeit im Energiesparmodus oder Ruhezustand wird nicht als Fokuszeit gezählt. Beim Aufwachen bzw. erneuten Öffnen bleibt die Session im Status **PAUSED** und kann ausschließlich durch die bewusste Aktion **Resume** fortgesetzt werden.
 - Wird der PC regulär heruntergefahren, wird eine laufende Session automatisch pausiert, statt abgebrochen oder abgeschlossen zu werden.
