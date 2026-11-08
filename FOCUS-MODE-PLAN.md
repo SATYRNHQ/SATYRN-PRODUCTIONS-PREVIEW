@@ -1152,6 +1152,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Während der Nutzer beim Erstellen oder Bearbeiten eines eigenen Presets eine Farbe aus der Palette auswählt, wird eine direkte Vorschau des Preset-Buttons beziehungsweise der Preset-Kachel mit dieser Farbe angezeigt.
 - Die Vorschau aktualisiert sich unmittelbar bei jeder Farbänderung und zeigt die Wirkung vor dem Speichern.
 
+
+### Icons für Session-Presets
+- Session-Presets erhalten zusätzlich zum Namen und zur Farbe ein eigenes Icon.
+- Die fest eingebauten Presets bekommen passende, einheitlich gestaltete Icons; das Marathon-Preset erhält beispielsweise ein Flammen-Icon.
+- Beim Erstellen und Bearbeiten eigener Presets kann der Nutzer ein Icon aus einer bereitgestellten Icon-Auswahl wählen.
+- Die Icon-Auswahl wird zusammen mit Name, Farbe, Fokusdauer und Pauseneinstellung gespeichert.
+- Die Live-Vorschau zeigt auch das aktuell ausgewählte Icon; Änderungen werden unmittelbar dargestellt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
