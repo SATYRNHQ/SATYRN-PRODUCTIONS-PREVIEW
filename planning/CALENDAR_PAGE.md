@@ -29,6 +29,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Die Detailansicht zeigt: **Titel, Datum, Uhrzeit, Priorität und eine optionale Beschreibung**.
 - **Mehrtägige Termine sind möglich.** Ein Termin kann daher über ein Start- und Enddatum laufen und wird in der Monatsansicht über die betroffenen Tage hinweg berücksichtigt.
 - Zusätzlich gibt es **ganztägige Termine ohne erforderliche Uhrzeitangabe**. Das gilt auch für mehrtägige ganztägige Termine.
+- Termine können **wiederkehrend** angelegt werden, mindestens mit den Wiederholungen wöchentlich, monatlich und jährlich.
 - Die Beschreibung ist freiwillig; die übrigen genannten Angaben gehören zur regulären Terminansicht.
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
 
@@ -48,6 +49,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Die genaue Form der farblichen Kennzeichnung im Tagesfeld (z. B. farbiger Punkt, schmaler Streifen oder dezente Titel-Akzentfarbe).
 - Die genauen Formularfelder zum Erstellen und Bearbeiten eines Eintrags.
 - Die genaue Gestaltung des Tagesfensters und seiner Empty-State-Darstellung.
+- Die genauen Optionen für Wiederholungsintervalle, ein Enddatum bzw. eine begrenzte Anzahl von Wiederholungen und die Bearbeitung einzelner Termine einer Serie sind noch nicht festgelegt.
 - Suche, Filter und weitere Ansichten sind noch nicht beschlossen.
 
 ## Umsetzungsregeln
@@ -66,3 +68,4 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Detailansicht zeigt Titel, Datum, Uhrzeit und Priorität sowie eine optionale Beschreibung.
 - 2026-11-08: Mehrtägige Termine werden unterstützt.
 - 2026-11-08: Ganztägige Termine ohne Uhrzeitangabe werden ebenfalls unterstützt.
+- 2026-11-08: Wiederkehrende Termine werden unterstützt; wöchentliche, monatliche und jährliche Wiederholung sind vorgesehen.
