@@ -337,6 +337,18 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Nutzer kann den Zoom anschließend jederzeit manuell verändern.
 - Beim erneuten Öffnen startet die Vorschau wieder mit „An Seite anpassen“.
 
+
+### Vollständiger Export- und Druckablauf
+- **PDF direkt drucken:** In der PDF-Vorschau gibt es neben „Exportieren“ auch die Aktion „Drucken“. Sie öffnet den Browser-Druckdialog für den angezeigten Bericht.
+- **Drucklayout:** PDF-Berichte sind für DIN A4 optimiert, mit passenden Seitenrändern, lesbarer Schrift und Diagrammen, die nicht abgeschnitten werden. Mehrseitige Inhalte werden möglichst sinnvoll auf Seiten verteilt.
+- **Druck ohne Bedienelemente:** Beim Drucken werden ausschließlich die Berichtsinhalte inklusive SATYRN-Branding und Erstellungsdatum ausgegeben; Vorschau-Steuerung, Zoom, Navigation und sonstige UI-Elemente erscheinen nicht auf dem Ausdruck.
+- **Dateiname:** Downloads erhalten automatisch einen aussagekräftigen Dateinamen mit SATYRN, Exporttyp, ausgewähltem Zeitraum und Erstellungsdatum. Der Nutzer kann den Dateinamen im Speichern-Dialog des Browsers bei Bedarf ändern.
+- **CSV-Kompatibilität:** CSV-Dateien werden mit Spaltenüberschriften und UTF-8-Kodierung exportiert. Das Format soll sich insbesondere in deutschen Tabellenkalkulationsprogrammen zuverlässig öffnen lassen; Sonderzeichen, Umlaute, Datums- und Zeitwerte müssen korrekt erhalten bleiben.
+- **Konsistente Daten:** CSV und PDF basieren auf demselben Datenstand und denselben aktiven Zeitraum- und Kategorie-Filtern. Die Vorschau zeigt den Inhalt, der anschließend exportiert bzw. gedruckt wird.
+- **Exportstatus:** Während der Erstellung wird ein klarer Ladezustand angezeigt und wiederholtes Auslösen desselben Exports verhindert. Nach erfolgreichem Download erscheint eine dezente Bestätigung.
+- **Fehlerbehandlung:** Schlägt Vorschau, Erstellung, Download oder Druckvorbereitung fehl, erscheint eine verständliche Fehlermeldung mit einer Möglichkeit zum erneuten Versuch. Es wird kein unvollständiger Export als erfolgreich angezeigt.
+- **Keine Datenänderung:** Exportieren und Drucken sind reine Lesevorgänge und verändern weder Sessions noch Statistikdaten oder Filter.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
