@@ -1098,6 +1098,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Kategorie- und Prioritäts-Auswahl bleiben im Session-Vorbereitungsfenster immer vollständig geöffnet.
 - Beide Bereiche sind nicht einklappbar, damit die Grundeinstellungen jederzeit sichtbar und direkt änderbar bleiben.
 
+
+### Darstellung der Session-Dauer-Presets
+- Die Session-Dauer-Presets werden schlicht und übersichtlich als Auswahlbuttons dargestellt, nicht als aufwendig gestaltete oder farbige Kacheln.
+- Jeder Button zeigt klar die Fokusdauer und die zugehörige Pausenzeit.
+- Die Auswahl des eigenen „Custom“-Presets bleibt ebenfalls schlicht und konsistent.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
