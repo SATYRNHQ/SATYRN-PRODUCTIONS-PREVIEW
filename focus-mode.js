@@ -5,8 +5,9 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const STORE = 'satyrn-focus-v1';
-  const TASKS = 'satyrn-tasks';
+  const DEMO_MODE = new URLSearchParams(location.search).has('demo');
+  const STORE = DEMO_MODE ? 'satyrn-focus-demo-v1' : 'satyrn-focus-v1';
+  const TASKS = DEMO_MODE ? 'satyrn-tasks-demo-v1' : 'satyrn-tasks';
   const IMPORTANT = 'satyrn-important-v1';
   const OPEN = new Set(['PREPARED','RUNNING','PAUSED','INTERRUPTED','EXPIRED']);
   const CATEGORIES = [
