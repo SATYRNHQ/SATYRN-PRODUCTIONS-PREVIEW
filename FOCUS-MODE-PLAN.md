@@ -1212,6 +1212,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach kurzer Haltezeit erhöht sich die Wiederholgeschwindigkeit automatisch, damit auch größere Zeiträume schnell eingestellt werden können.
 - Ein kurzer Klick verändert den Wert weiterhin nur einmalig.
 
+
+### Untergrenze der Zeiteingabe
+- Die Dauer kann nicht unter 00:00 sinken.
+- Beim Erreichen von 00:00 wird die Minus-Schaltfläche deaktiviert bzw. die Änderung gestoppt; negative Zeitwerte sind nicht möglich.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
