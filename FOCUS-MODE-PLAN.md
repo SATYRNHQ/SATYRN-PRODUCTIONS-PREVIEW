@@ -1160,6 +1160,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Icon-Auswahl wird zusammen mit Name, Farbe, Fokusdauer und Pauseneinstellung gespeichert.
 - Die Live-Vorschau zeigt auch das aktuell ausgewählte Icon; Änderungen werden unmittelbar dargestellt.
 
+
+### Minimalistischer Icon-Stil
+- Alle Preset-Icons verwenden einen schlichten, minimalistischen Linienstil passend zum Premium-Design von SATYRN HQ (Lucide-ähnlich).
+- Standard- und eigene Presets verwenden denselben Icon-Stil und eine einheitliche visuelle Größe.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
