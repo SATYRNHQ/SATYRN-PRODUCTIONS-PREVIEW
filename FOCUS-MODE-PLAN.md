@@ -162,15 +162,16 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Die Warnung erklärt in verständlicher Sprache, dass lokal nicht dauerhaft gesicherte Änderungen bei einem Schließen oder Absturz der Seite verloren gehen können, und nennt geeignete nächste Schritte (z. B. Speicherplatz freigeben oder Browserzugriff auf den Speicher wieder ermöglichen).
 - Sobald der Speicher wieder verfügbar ist, werden ausstehende Änderungen erneut gespeichert und synchronisiert; der Status wechselt erst nach bestätigter Sicherung zurück auf **SAVED**.
 
-### Bedienbarkeit des Focus-Fensters
-- Das Focus-Fenster übernimmt die allgemeinen Responsive- und Bedienungsstandards der Website und stellt sicher, dass seine zentralen Funktionen auf Desktop, Tablet und Smartphone erreichbar bleiben.
-- **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar.
-- **Tablet:** Die Anordnung passt sich dem verfügbaren Platz an; Timersteuerung, Session-Wechsel und Speicherstatus bleiben gut erreichbar.
-- **Smartphone:** Die Timeranzeige bleibt gut lesbar. Die wichtigsten Timer-Aktionen und der Wechsel zwischen offenen Sessions bleiben auch in der kompakten bzw. ausgeklappten Sticky-Timer-Ansicht erreichbar.
-- Bereits festgelegte Tastaturkürzel gelten auch im Focus-Fenster: Leertaste für Pause/Fortsetzen und `R` für Reset mit Sicherheitsabfrage. Sie werden nicht ausgelöst, während in einem Text- oder Eingabefeld geschrieben wird.
-- Alle Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
+### Bedienbarkeit und Gerätepriorität
+- Der PC/Desktop ist die primäre Arbeitsumgebung für Focus Mode. Das vollständige Arbeiten mit Timer, Sessions, Task Queue, Notizen, Statistiken und History wird auf die PC-Bedienung ausgelegt.
+- **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar. Die gesamte Focus-Mode-Funktionalität steht zur Verfügung.
+- **Tablet:** Das Layout darf sich responsiv an den verfügbaren Platz anpassen. Eine vollständige Optimierung aller Focus-Mode-Funktionen für Tablets ist gegenüber der PC-Version nachrangig.
+- **Smartphone:** Eine vollständige Bedienung von Focus Mode ist ausdrücklich nicht vorgesehen. Keine Smartphone-spezifische Timersteuerung, Sticky-Timer-Ansicht oder Session-Verwaltung planen.
+- Die spätere Smartphone-Nutzung der Website soll sich zunächst ausschließlich auf das schnelle Festhalten/Sammeln von Ideen beschränken. Diese Quick-Capture-Funktion wird als eigener, websiteweiter Mobil-Anwendungsfall geplant; Details gehören nicht in die Focus-Mode-Bedienung.
+- Auf dem Smartphone erfasste Ideen sollen später auch am PC verfügbar sein. Die konkrete Erfassung, Ablage und Synchronisierung wird im übergreifenden Konzept für Quick Capture festgelegt.
+- Bereits festgelegte Tastaturkürzel gelten im PC-Focus-Fenster: Leertaste für Pause/Fortsetzen und `R` für Reset mit Sicherheitsabfrage. Sie werden nicht ausgelöst, während in einem Text- oder Eingabefeld geschrieben wird.
+- Alle PC-Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
 - Statusanzeigen, Beschriftungen und Bedienelemente müssen ausreichend kontrastreich und eindeutig erkennbar sein. Der aktuelle Tastaturfokus muss sichtbar sein.
-- Touch-Flächen und Abstände sind ausreichend groß, damit Aktionen auf Touchscreens zuverlässig bedient werden können.
 - Aktionen dürfen nicht durch Doppelklicks oder schnelle Mehrfachbetätigung unbeabsichtigt mehrfach ausgeführt werden. Während eine Aktion verarbeitet wird, wird eine weitere identische Auslösung zuverlässig verhindert.
 - Die allgemeinen Website-Regeln für Responsive Layout, Tastaturbedienung und Barrierefreiheit werden wiederverwendet; es werden keine widersprüchlichen Sonderregeln nur für das Focus-Fenster eingeführt.
 
