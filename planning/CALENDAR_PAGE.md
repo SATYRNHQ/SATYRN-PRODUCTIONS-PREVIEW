@@ -101,6 +101,10 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Zusätzlich zur Suche werden Filter nach Priorität angeboten: **Dringend, Wichtig, Vorläufig, Unbefristet und Ohne Priorität**. Mehrere Prioritätsfilter können gleichzeitig ausgewählt werden; die Ergebnisse zeigen dann Einträge, die zu mindestens einer der ausgewählten Kategorien gehören.
 - Weitere Ansichten sind noch nicht beschlossen.
 
+## Ergänzung — leeres Tagesfenster
+
+- Wenn ein ausgewählter Tag keine Termine enthält, wird im Tagesfenster **keine erklärende Leerstandsmeldung** angezeigt. Die Ansicht bleibt schlicht; das Hinzufügen eines Eintrags ist weiterhin über die vorhandene Plus-Funktion möglich.
+
 ## Umsetzungsregeln
 - Die Seite muss innerhalb der bestehenden globalen App-Shell bleiben.
 - Keine eigene Headbar oder Sidebar und keine lokalen Kopien globaler Navigation.
@@ -187,3 +191,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 ## Global search standard — collected for the central closing phase
 
 The following search behaviors are intended as a shared standard for every page that has a search function, not as Calendar-only behavior. They are recorded here as a source decision and must be consolidated with the other cross-page topics during the central closing phase. Do not implement the shared rollout during page-specific work.
+
+- 2026-11-09: Für Tage ohne Termine wird im Tagesfenster auf eine erklärende Leerstandsmeldung verzichtet; die Ansicht bleibt schlicht und das Hinzufügen bleibt möglich.
