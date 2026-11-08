@@ -305,3 +305,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Show the confirmation only after the save operation succeeds; it must not imply success when saving fails.
 
 - 2026-11-09: Confirmed brief, subtle success feedback after a calendar entry has been saved successfully.
+
+
+### Success feedback after editing and deleting
+- After successfully editing an existing calendar entry, show the same brief, subtle success feedback, for example **„Änderungen gespeichert“**.
+- After successfully deleting a calendar entry, show the same style of feedback, for example **„Termin gelöscht“**.
+- As with creation, only show success feedback after the respective operation has actually succeeded.
+
+- 2026-11-09: Confirmed matching brief, subtle success feedback after successful editing and deletion, in addition to creation.
