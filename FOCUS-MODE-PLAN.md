@@ -125,6 +125,16 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Die verfügbaren Aktionen richten sich jederzeit nach dem aktuellen Session-Status. Nicht zulässige oder nicht sinnvolle Aktionen werden nicht angezeigt bzw. sind nicht bedienbar.
 - Die visuelle Hierarchie macht die wichtigste Aktion sofort erkennbar, verhindert Verwechslungen und reduziert das Risiko versehentlicher Datenverluste.
 
+### Darstellung der Session-Informationen
+- Das **Fokusziel** wird direkt im Current-Session-Bereich unterhalb der Zeitanzeige gut lesbar und prominent dargestellt.
+- Der **Session-Name** ist klar erkennbar, bleibt aber visuell dem Fokusziel und dem Timer untergeordnet.
+- Die **Kategorie** wird als dezentes, farbiges Label angezeigt. Die dafür verwendete Farbe entspricht dem bestehenden Kategoriensystem der Important-Seite.
+- Die **Priorität** wird als kleines, eindeutiges Symbol bzw. Label entsprechend dem bestehenden Prioritätssystem der Important-Seite dargestellt.
+- Der **aktuelle Session-Status** bleibt jederzeit sichtbar und verwendet die bereits festgelegte Statusbeschriftung und Zustandsfarbe.
+- Die kompakte Übersicht der offenen Sessions zeigt pro Eintrag mindestens Session-Name bzw. Fokusziel sowie den aktuellen Status. Kategorie und Priorität dürfen ergänzend erscheinen, sofern die Übersicht dadurch nicht überladen wird.
+- Fokusziel, Kategorie und Priorität bleiben während einer laufenden Session änderbar. Für Kategorieänderungen gelten unverändert die bestehende Begrenzung von maximal zwei offenen Sessions pro Kategorie und die dazugehörige Prüfung vor dem Übernehmen.
+- Die Informationsdarstellung bleibt ruhig und übersichtlich. Sie ergänzt den Timer, ohne mit der Zeitanzeige um Aufmerksamkeit zu konkurrieren.
+
 ### Timersteuerung und Ablauf
 - Die primären Aktionen sind direkt im Focus-Fenster erreichbar. Sichtbarkeit und Verfügbarkeit richten sich nach dem aktuellen Session-Status.
 - Verfügbare Aktionen je Zustand:
