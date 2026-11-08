@@ -48,6 +48,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Einzelne Vorkommen einer Wiederholungsserie können als **Ausnahme übersprungen** werden, ohne die übrige Serie zu verändern. Das ausgelassene Vorkommen wird dann nicht im Kalender angezeigt; alle anderen Termine der Serie bleiben bestehen.
 - Ein einzelnes Vorkommen kann außerdem **individuell bearbeitet** werden, ohne die übrige Wiederholungsserie zu verändern. Dazu gehören insbesondere Datum und Uhrzeit; die Änderung gilt ausschließlich für dieses Vorkommen.
 - Beim Bearbeiten der **gesamten Wiederholungsserie** können auch die Wiederholungseinstellungen geändert werden, z. B. von wöchentlich auf monatlich. Die neue Regel gilt für die Serie insgesamt; bereits festgelegte individuelle Ausnahmen bzw. Änderungen einzelner Vorkommen sollen dabei erhalten bleiben, soweit sie weiterhin sinnvoll zugeordnet werden können.
+- Im Bearbeitungsfenster einer Wiederholungsserie kann außerdem festgelegt werden, dass Änderungen an der Wiederholungsregel **erst ab einem bestimmten Datum bzw. ab einem ausgewählten Vorkommen** gelten (z. B. ab dem 1. Dezember dienstags statt montags). Diese Möglichkeit wird direkt in den bestehenden Bearbeitungsablauf integriert und nicht als separate Funktion außerhalb des Bearbeitungsfensters umgesetzt.
 - Während der Einrichtung einer Wiederholung wird eine kurze, verständliche **Zusammenfassung der gewählten Regel** angezeigt (z. B. „Jeden Montag und Donnerstag bis zum 31. Dezember“).
 - Die Beschreibung ist freiwillig; die übrigen genannten Angaben gehören zur regulären Terminansicht.
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
@@ -93,6 +94,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Änderungen an einer Wiederholungsserie können im Bearbeitungsfenster wahlweise erst ab einem festgelegten Datum bzw. einem ausgewählten Vorkommen gelten.
 - 2026-11-08: Beim Bearbeiten einer gesamten Wiederholungsserie können auch die Wiederholungseinstellungen geändert werden, z. B. von wöchentlich auf monatlich.
 - 2026-11-08: Ein einzelnes Vorkommen einer Wiederholungsserie kann unabhängig von der Serie individuell bearbeitet werden, insbesondere hinsichtlich Datum und Uhrzeit.
 - 2026-11-08: Einzelne Vorkommen einer Wiederholungsserie können als Ausnahme übersprungen werden, ohne die übrige Serie zu verändern.
