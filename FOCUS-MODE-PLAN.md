@@ -1668,3 +1668,17 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Timerstatus, Sessiondaten, Notizen und Änderungen werden lokal zwischengespeichert.
 - Nach Wiederherstellung der Verbindung werden lokale Änderungen automatisch synchronisiert.
 - Die Synchronisierung verhindert doppelte Einträge und den Verlust neuerer gültiger Änderungen.
+
+
+### Synchronisierungskonflikte
+- Bei der Synchronisierung werden Änderungen an unterschiedlichen Feldern automatisch zusammengeführt.
+- Bei echten widersprüchlichen Änderungen am selben Feld wird nichts stillschweigend überschrieben; der Nutzer erhält eine verständliche Konfliktanzeige und entscheidet, welche Version gelten soll.
+- Bis zur Entscheidung bleiben beide Versionen erhalten.
+
+### Preview mit Beispieldaten und Funktionsüberblick
+- Die Preview soll neben dem leeren Ausgangszustand einen klar erkennbaren Demo-/Beispielmodus enthalten, damit alle Focus-Mode-Funktionen vor der Nutzung nachvollziehbar sind.
+- Der Beispielmodus enthält realistische, unverbindliche Beispieldaten für Sessions, Important-Verknüpfungen, Kategorien, Prioritäten, Unteraufgaben, Notizen, Distraction Log, Presets, Verlauf und Statistiken.
+- Die Beispiele sollen zentrale Abläufe sichtbar machen, darunter Session vorbereiten und starten, pausieren und fortsetzen, unterbrechen und wiederaufnehmen, zurücksetzen, Aufgaben verknüpfen und abschließen, zwischen Sessions wechseln sowie Statistiken und Exporte ansehen.
+- Jede Funktion soll durch kurze Hinweise oder eine verständliche Beispielaktion auffindbar sein; die Preview soll dabei übersichtlich bleiben und nicht alle Erklärungen dauerhaft einblenden.
+- Demo-Daten müssen eindeutig als Beispiele gekennzeichnet und von echten Nutzerdaten getrennt sein. Das Ausprobieren oder Zurücksetzen des Demo-Modus darf keine echten Sessions, Aufgaben oder Statistiken verändern.
+- Die Preview soll auch leere Zustände zeigen, damit verständlich ist, wie die Oberfläche ohne vorhandene Daten aussieht.
