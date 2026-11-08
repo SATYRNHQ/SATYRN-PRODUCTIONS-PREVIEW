@@ -187,7 +187,15 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - **Smartphone:** Eine vollständige Bedienung von Focus Mode ist ausdrücklich nicht vorgesehen. Keine Smartphone-spezifische Timersteuerung, Sticky-Timer-Ansicht oder Session-Verwaltung planen.
 - Die spätere Smartphone-Nutzung der Website soll sich zunächst ausschließlich auf das schnelle Festhalten/Sammeln von Ideen beschränken. Diese Quick-Capture-Funktion wird als eigener, websiteweiter Mobil-Anwendungsfall geplant; Details gehören nicht in die Focus-Mode-Bedienung.
 - Auf dem Smartphone erfasste Ideen sollen später auch am PC verfügbar sein. Die konkrete Erfassung, Ablage und Synchronisierung wird im übergreifenden Konzept für Quick Capture festgelegt.
-- Bereits festgelegte Tastaturkürzel gelten im PC-Focus-Fenster: Leertaste für Pause/Fortsetzen und `R` für Reset mit Sicherheitsabfrage. Sie werden nicht ausgelöst, während in einem Text- oder Eingabefeld geschrieben wird.
+- Für die PC-Bedienung gelten folgende Tastaturkürzel:
+  - `Leertaste`: aktive Fokus- oder Pausenphase pausieren bzw. fortsetzen.
+  - `R`: Fokusphase zurücksetzen; die bestehende Sicherheitsabfrage bleibt verpflichtend.
+  - `N`: Notizfeld öffnen bzw. den Eingabefokus dorthin setzen.
+  - `[`: vorherige offene Session auswählen.
+  - `]`: nächste offene Session auswählen.
+- Session-Wechsel per Tastatur folgt denselben Regeln wie per Maus: Eine laufende Session wird pausiert; die ausgewählte Session startet nicht automatisch.
+- Tastaturkürzel werden nicht ausgelöst, solange in einem Text- oder Eingabefeld geschrieben wird oder ein anderes Bedienelement die Eingabe verarbeitet.
+- Alle PC-Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
 - Alle PC-Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
 - Statusanzeigen, Beschriftungen und Bedienelemente müssen ausreichend kontrastreich und eindeutig erkennbar sein. Der aktuelle Tastaturfokus muss sichtbar sein.
 - Aktionen dürfen nicht durch Doppelklicks oder schnelle Mehrfachbetätigung unbeabsichtigt mehrfach ausgeführt werden. Während eine Aktion verarbeitet wird, wird eine weitere identische Auslösung zuverlässig verhindert.
