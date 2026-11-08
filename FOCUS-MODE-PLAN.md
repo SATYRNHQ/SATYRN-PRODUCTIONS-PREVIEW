@@ -1140,6 +1140,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Löschen eines eigenen Presets erfordert eine Bestätigung, damit es nicht versehentlich entfernt wird.
 - Die fest eingebauten Standard-Presets bleiben davon unberührt.
 
+
+### Eigene Farbe für benutzerdefinierte Presets
+- Beim Erstellen eines eigenen Session-Presets kann der Nutzer eine Farbe selbst aus einer bereitgestellten Farbpalette auswählen.
+- Die ausgewählte Farbe wird zusammen mit Name, Fokusdauer und Pauseneinstellung gespeichert.
+- Die Farbe dient der visuellen Kennzeichnung des eigenen Presets und verändert keine Kategorie- oder Prioritätsfarben.
+- Die Preset-Farbe kann beim nachträglichen Bearbeiten geändert werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
