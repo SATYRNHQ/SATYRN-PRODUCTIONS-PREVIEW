@@ -30,6 +30,15 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Während einer Fokusphase gilt weiterhin der bereits definierte Distraction-Free-Modus: Der Timer steht im Mittelpunkt, Task Queue und Statistiken werden eingeklappt bzw. ausgeblendet; Notizen und Distraction Log bleiben erreichbar.
 - Die Desktop-Anordnung ist die maßgebliche Layoutvariante. Auf kleineren Bildschirmen darf sie sich responsiv anpassen, ohne eine vollständige Smartphone-Bedienung von Focus Mode vorzusehen.
 
+
+### Größenverhältnisse und Flächenaufteilung am PC
+- **Current Session:** nimmt im normalen Desktop-Layout die volle verfügbare Inhaltsbreite ein und erhält den größten visuellen Stellenwert. Der Timer steht innerhalb dieses Bereichs zentral und bekommt ausreichend Platz für Zeitanzeige, Status, Fokusziel und direkte Aktionen.
+- **Session Setup und Task Queue:** werden darunter nebeneinander in zwei Spalten dargestellt. Beide Bereiche erhalten grundsätzlich ungefähr gleich viel Platz. Wenn die Inhalte es erfordern, darf die Task Queue etwas mehr Breite erhalten, damit längere Aufgabennamen und Aufgabeninformationen gut lesbar bleiben.
+- **Statistics:** werden unterhalb der beiden Arbeitsbereiche kompakt dargestellt und sollen den Current-Session-Bereich nicht verdrängen.
+- **Session History:** bleibt über den separaten History-Zugang erreichbar und erhält keinen dauerhaft reservierten großen Platz im Hauptlayout.
+- Es werden keine starren Pixelbreiten festgelegt. Die Bereiche nutzen die verfügbare Fensterbreite sinnvoll und passen sich responsiv an unterschiedliche Desktop-Fenstergrößen an.
+- Die Anordnung soll unnötige Leerflächen vermeiden und zugleich ausreichend Abstand sowie gute Lesbarkeit gewährleisten.
+
 ## 2. Current Session und Timer
 
 
