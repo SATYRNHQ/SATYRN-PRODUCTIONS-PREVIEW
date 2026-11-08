@@ -967,6 +967,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jeder Eintrag zeigt Kategorie-Icon, die aus Important übernommene Prioritätsfarbe und den Aufgabennamen.
 - Die Liste bleibt visuell der Hauptaufgabe untergeordnet und nutzt die bestehenden Kategorie- und Prioritätsdarstellungen von Important.
 
+
+### Hauptaufgabe vor dem Start wechseln
+- In der Session-Vorbereitung kann die Hauptaufgabe vor dem Start geändert werden.
+- Eine andere bereits verknüpfte, offene zusätzliche Aufgabe kann als neue Hauptaufgabe ausgewählt werden.
+- Die bisherige Hauptaufgabe wird dadurch zur zusätzlichen Aufgabe; Reihenfolge und Aufgabendaten bleiben erhalten.
+- Die Auswahl ändert keine Priorität und verändert nicht die ursprünglichen Important-Aufgabendaten.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
