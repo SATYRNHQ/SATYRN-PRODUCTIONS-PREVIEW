@@ -1082,6 +1082,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Ausgewählte Kategorie- und Prioritäts-Kacheln zeigen zusätzlich einen kleinen Haken als eindeutige Auswahlmarkierung.
 - Die bestehende farbliche Hervorhebung der ausgewählten Kachel bleibt erhalten; der Haken ergänzt sie lediglich.
 
+
+### Standard-Priorität für freie Focus-Sessions
+- Für freie Focus-Sessions ohne verknüpfte Important-Aufgabe ist standardmäßig die blaue Prioritätsstufe „Vorläufig“ ausgewählt.
+- Die Priorität kann im Session-Vorbereitungsfenster manuell geändert werden.
+- Bei verknüpften Important-Aufgaben gelten weiterhin die dortigen Prioritätsregeln: höchste aktuelle Priorität der verknüpften Aufgaben; keine Überschreibung der Quellaufgaben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
