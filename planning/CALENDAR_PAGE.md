@@ -236,3 +236,5 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Termin-Detail-Pop-up lässt sich auf drei Arten schließen: Klick auf den abgedunkelten Bereich außerhalb des Fensters, Drücken der **Escape-Taste** oder Klick auf ein **X** im Pop-up.
 
 - Das Pop-up erhält beim Öffnen und Schließen eine **kleine, dezente Animation**; sie soll ruhig und kurz sein und den Ablauf nicht verzögern.
+
+- Für die Größe der Termin-Detailansicht wurde **Variante A – groß und breit** gewählt. Das Pop-up soll großzügigen Platz bieten und wie ein eigener Arbeitsbereich wirken, während der Kalender dahinter unverändert bleibt.
