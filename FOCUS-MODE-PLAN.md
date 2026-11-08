@@ -907,6 +907,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - In der Sicherheitsabfrage kann das Verwerfen abgebrochen werden; dann bleibt das Modal mit allen Eingaben geöffnet. Erst die ausdrückliche Bestätigung verwirft die Änderungen und schließt das Modal.
 - Das Starten bestätigt die Vorbereitung und startet die Session; es ist kein Schließvorgang mit Verwerfen.
 
+
+### Einheitliche Eingabefelder und Validierung
+- Die Eingabefelder in der Session-Vorbereitung verwenden dieselbe Gestaltung, Bedienlogik und Validierung wie die entsprechenden Felder auf der Important-Seite.
+- Wo Felder oder Daten zwischen Important und Focus verknüpft sind, werden gemeinsame Regeln und kompatible Datenstrukturen verwendet, damit Übernahme und Synchronisierung konsistent funktionieren.
+- Focus-spezifische Felder bleiben eigenständig und überschreiben keine Quelldaten der Important-Aufgabe.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
