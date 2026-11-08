@@ -375,7 +375,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 ### Rekord für längste zusammenhängende Fokuszeit
 - In den Overall Statistics wird die längste zusammenhängende Fokuszeit als persönlicher Rekord angezeigt.
 - Angezeigt werden die erreichte Dauer und das Datum, an dem der Rekord erzielt wurde.
-- Als zusammenhängend gilt die tatsächlich erfasste Fokuszeit einer Session; reguläre Pausen zählen nicht zur Fokuszeit und setzen den Rekord nicht künstlich herauf.
+- Als zusammenhängend gilt ausschließlich ein ununterbrochen erfasster Fokuszeitabschnitt. Eine reguläre Pause, Unterbrechung oder ein Timer-Reset beendet die aktuelle Fokusphase; nach Fortsetzung bzw. Reset beginnt ein neuer Abschnitt. Pausen- und Unterbrechungszeiten zählen nicht zur Rekorddauer.
 - Der Rekord wird automatisch aktualisiert, wenn eine Session einen neuen Höchstwert erreicht.
 
 ### Focus Streak
