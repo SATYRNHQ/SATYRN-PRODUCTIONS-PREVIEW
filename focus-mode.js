@@ -47,7 +47,7 @@
   if(!state || typeof state!=='object') state={version:1,sessions:[],queue:[],queueManual:false};
   if(!Array.isArray(state.sessions))state.sessions=[];
   if(!Array.isArray(state.queue))state.queue=[];
-  let activeId=state.activeId||null, tickHandle=null, countdownHandle=null, countdownValue=0, countdownTarget=null, historyPage=1, pageSize=20, historyQuery='', historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]}, historyOpen=false, historyDetailId=null, historyDraftId=null, taskDragId=null, savingTimer=null, lastRenderedSecond=-1;
+  let activeId=state.activeId||null, tickHandle=null, countdownHandle=null, countdownValue=0, countdownTarget=null, editingPreparedId=null, historySearchTimer=null, historyPage=1, pageSize=20, historyQuery='', historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]}, historyOpen=false, historyDetailId=null, historyDraftId=null, taskDragId=null, savingTimer=null, lastRenderedSecond=-1;
   let audioContext=null;
   const focusPage=$('page-focus');
   if(!focusPage)return;
@@ -206,7 +206,7 @@
     const s=current(),now=Date.now();
     const status=$('fmTimerStatus'),time=$('fmTimerTime'),elapsed=$('fmElapsed'),goal=$('fmCurrentGoal'),name=$('fmCurrentName'),ring=$('fmTimerRing'),hint=$('fmSessionHint'),actions=$('fmTimerActions'),start=$('fmStartPrepared');
     if(!s){
-      status.textContent='READY';status.dataset.state='ready';time.textContent='00:00:00';elapsed.textContent='0min Fokuszeit';goal.textContent='Noch kein Fokusziel ausgewählt';name.textContent='Keine aktive Session';ring.style.setProperty('--fm-progress',0);hint.textContent=sessionHint(null);
+      status.textContent='READY';status.dataset.state='ready';time.textContent='00:00:00';elapsed.textContent='0min Fokuszeit';goal.value='Noch kein Fokusziel ausgewählt';name.textContent='Keine aktive Session';$('fmCurrentCategory').value='music';$('fmCurrentPriority').value='important';ring.style.setProperty('--fm-progress',0);hint.textContent=sessionHint(null);
       actions.innerHTML='';start.hidden=true;
     }else{
       reconcile(s,now);
@@ -214,7 +214,7 @@
       const left=countdownTarget===s.id?countdownValue*1000:remain(s,now);
       time.textContent=countdownTarget===s.id?'00:00:0'+countdownValue:clock(left);
       elapsed.textContent=duration(focusElapsed(s,now))+' Fokuszeit';
-      goal.textContent=s.goal;name.textContent=s.name;
+      if(document.activeElement!==goal)goal.value=s.goal;name.textContent=s.name;$('fmCurrentCategory').value=s.category;$('fmCurrentPriority').value=s.priority;
       const progress=s.phase==='break'?1-(left/Math.max(1,s.breakDurationMs)):1-(left/Math.max(1,s.phaseDurationMs||s.originalFocusMs));
       ring.style.setProperty('--fm-progress',Math.max(0,Math.min(1,progress)));
       hint.textContent=sessionHint(s);
@@ -232,11 +232,12 @@
       if(s.status==='RUNNING'&&s.phase==='focus'&&s.breakDurationMs>0)$('fmNextBreak').textContent='Danach '+duration(s.breakDurationMs)+' Pause';
       else if(s.status==='RUNNING'&&s.phase==='break')$('fmNextBreak').textContent='Erholung · danach manuell weiter';
       else $('fmNextBreak').textContent=s.status==='PREPARED'?'Countdown startet erst nach Session starten':'Tatsächliche Fokuszeit: '+duration(totalFocus(s));
-      const catLabel=$('fmCurrentCategory');catLabel.textContent=cat(s.category).name;catLabel.style.setProperty('--fm-cat',cat(s.category).color);
-      const priLabel=$('fmCurrentPriority');priLabel.textContent=pri(s.priority).name;priLabel.style.setProperty('--fm-pri',pri(s.priority).color);
+      const catLabel=$('fmCurrentCategory');catLabel.style.setProperty('--fm-cat',cat(s.category).color);
+      const priLabel=$('fmCurrentPriority');priLabel.style.setProperty('--fm-pri',pri(s.priority).color);
       const note=$('fmNotes');if(note&&document.activeElement!==note)note.value=s.notes||'';
       renderDistractions();
-      $('fmCurrentLink').textContent=s.linkedTaskSnapshot?'Verknüpft: '+s.linkedTaskSnapshot.title:'Eigenes Fokusziel';
+      const linked=s.linkedTaskSnapshot;const stillExists=linked&&(linked.source==='task'?getLegacyTasks().some(x=>String(x.id)===String(linked.id)):getImportant().some(x=>String(x.id)===String(linked.id)));$('fmCurrentLink').textContent=linked?(stillExists?'Verknüpft: '+linked.title:'Nicht mehr verfügbar · Snapshot: '+linked.title):'Eigenes Fokusziel';
+      $('fmDistractionCount').textContent=(s.distractions||[]).length+' Einträge';
     }
     renderOpenSessions();
     if(start)start.textContent=countdownTarget===s?.id?'Countdown läuft…':s?.status==='EXPIRED'?'Nächste Fokusphase starten':'Session starten';
@@ -244,7 +245,7 @@
   const renderDistractions=()=>{
     const s=current(),target=$('fmDistractionList');if(!target)return;
     const list=s?.distractions||[];
-    target.innerHTML=list.length?list.slice().sort((a,b)=>b.at-a.at).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text||'Ablenkung notiert')+'</b></span><span><button type="button" data-fm-edit-distraction="'+esc(d.id)+'">Bearbeiten</button><button type="button" data-fm-delete-distraction="'+esc(d.id)+'">×</button></span></div>').join(''):'<p class="fm-empty">Noch keine Ablenkungen festgehalten.</p>';
+    target.innerHTML=list.length?list.slice().sort((a,b)=>b.at-a.at).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text||'Ablenkung notiert')+'</b></span><span><button type="button" data-fm-edit-distraction="'+esc(d.id)+'">Bearbeiten</button><button type="button" data-fm-delete-distraction="'+esc(d.id)+'">×</button></span></div>').join(''):'<p class="fm-empty">Noch keine Ablenkungen festgehalten.</p>';$('fmDistractionCount').textContent=list.length+' Einträge';
   };
   const renderQueue=()=>{
     const target=$('fmQueueList');if(!target)return;
@@ -268,10 +269,11 @@
     const now=new Date(),todayStart=dayStart(now),tomorrow=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1).getTime(),thisWeek=weekStart(now),nextWeek=thisWeek+7*86400000,prevWeek=thisWeek-7*86400000,monthStart=new Date(now.getFullYear(),now.getMonth(),1).getTime(),nextMonth=new Date(now.getFullYear(),now.getMonth()+1,1).getTime(),prevMonth=new Date(now.getFullYear(),now.getMonth()-1,1).getTime();
     const daySeg=segmentsInRange(todayStart,tomorrow),weekSeg=segmentsInRange(thisWeek,nextWeek),prevSeg=segmentsInRange(prevWeek,thisWeek),monthSeg=segmentsInRange(monthStart,nextMonth),prevMonthSeg=segmentsInRange(prevMonth,monthStart);
     const sum=list=>list.reduce((n,x)=>n+Math.max(0,Math.min(x.end,list===daySeg?tomorrow:list===weekSeg?nextWeek:list===prevSeg?thisWeek:list===monthSeg?nextMonth:monthStart)-Math.max(x.start,list===daySeg?todayStart:list===weekSeg?thisWeek:list===prevSeg?prevWeek:list===monthSeg?monthStart:prevMonth)),0);
-    const live=current();const liveExtra=live&&live.status==='RUNNING'&&live.phase==='focus'?Math.max(0,now.getTime()-(live.phaseStartedAt||now.getTime())):0;const dayMs=sum(daySeg)+(live&&dateKey(live.phaseStartedAt||0)===localISO(now)?liveExtra:0),weekMs=sum(weekSeg)+liveExtra,prevWeekMs=sum(prevSeg),monthMs=sum(monthSeg)+liveExtra,prevMonthMs=sum(prevMonthSeg);
-    const completed=state.sessions.filter(s=>s.status==='COMPLETED'),interrupted=state.sessions.filter(s=>s.status==='INTERRUPTED');
+    const live=current();const liveStart=live&&live.status==='RUNNING'&&live.phase==='focus'?(live.phaseStartedAt||now.getTime()):now.getTime(),liveEnd=now.getTime();const overlap=(a,b)=>Math.max(0,Math.min(liveEnd,b)-Math.max(liveStart,a));const liveDay=overlap(todayStart,tomorrow),liveWeek=overlap(thisWeek,nextWeek),liveMonth=overlap(monthStart,nextMonth);const dayMs=sum(daySeg)+liveDay,weekMs=sum(weekSeg)+liveWeek,prevWeekMs=sum(prevSeg),monthMs=sum(monthSeg)+liveMonth,prevMonthMs=sum(prevMonthSeg);
+    const completedToday=state.sessions.filter(s=>s.status==='COMPLETED'&&(s.completedAt||0)>=todayStart&&(s.completedAt||0)<tomorrow),interruptedToday=state.sessions.filter(s=>s.status==='INTERRUPTED'&&(s.lastActiveAt||0)>=todayStart&&(s.lastActiveAt||0)<tomorrow);
+    const avgToday=completedToday.length?completedToday.reduce((n,x)=>n+totalFocus(x),0)/completedToday.length:0;
     $('fmStatToday').textContent=duration(dayMs);$('fmStatWeek').textContent=duration(weekMs);$('fmStatMonth').textContent=duration(monthMs);
-    $('fmStatCompleted').textContent=String(completed.length);$('fmStatInterrupted').textContent=String(interrupted.length);
+    $('fmStatCompleted').textContent=String(completedToday.length);$('fmStatInterrupted').textContent=String(interruptedToday.length);$('fmStatAverage').textContent=duration(avgToday);
     $('fmStatWeekCompare').textContent=(prevWeekMs?((weekMs-prevWeekMs)/prevWeekMs*100>=0?'+':'')+((weekMs-prevWeekMs)/prevWeekMs*100).toFixed(0)+' %':'Noch kein Vorwochenvergleich');
     $('fmStatMonthCompare').textContent=prevMonthMs?((monthMs-prevMonthMs)/prevMonthMs*100>=0?'+':'')+((monthMs-prevMonthMs)/prevMonthMs*100).toFixed(0)+' % zum Vormonat':'Noch kein Vormonatsvergleich';
     const days=[];for(let i=6;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth(),now.getDate()-i),a=dayStart(d),b=a+86400000;const ms=segmentsInRange(a,b).reduce((n,x)=>n+Math.max(0,Math.min(x.end,b)-Math.max(x.start,a)),0);days.push({label:d.toLocaleDateString('de-DE',{weekday:'short'}),ms});}
@@ -313,6 +315,7 @@
       }).join('');
     }
     $('fmHistoryPageLabel').textContent='Seite '+historyPage+' / '+pages;
+    $('fmHistoryPageNumbers').innerHTML=Array.from({length:pages},(_,i)=>i+1).map(n=>'<button type="button" class="fm-page-number '+(n===historyPage?'active':'')+'" data-fm-page="'+n+'">'+n+'</button>').join('');
     $('fmHistoryPrev').disabled=historyPage<=1;$('fmHistoryNext').disabled=historyPage>=pages;
     $('fmHistoryPageSize').value=String(pageSize);
   };
@@ -325,7 +328,7 @@
     if(!goal){toast('Bitte zuerst ein Fokusziel festlegen.');$('fmGoal').focus();return null;}
     if(!Number.isFinite(focusMin)||focusMin<1||focusMin>1440||!Number.isFinite(breakMin)||breakMin<0||breakMin>240){toast('Bitte gültige Fokus- und Pausendauern eintragen.');return null;}
     const category=$('fmCategory').value,priority=$('fmPriority').value;
-    if(categoryCount(category)>=2){toast('In dieser Kategorie sind bereits zwei offene Sessions vorhanden.');return null;}
+    if(categoryCount(category,editingPreparedId)>=2){toast('In dieser Kategorie sind bereits zwei offene Sessions vorhanden.');return null;}
     const linkedId=$('fmLinkedTask').value;
     let linkedTask=null;
     if(linkedId){const legacy=getLegacyTasks().find(x=>String(x.id)===linkedId);const important=getImportant().find(x=>String(x.id)===linkedId);const found=legacy||important;if(found)linkedTask={id:String(found.id),title:found.title,source:legacy?'task':'important',category:found.category||'',priority:found.priority||''};}
@@ -362,7 +365,7 @@
     if(id===activeId)return;
     const old=current();if(old&&old.status==='RUNNING')pauseSession(old,'pause');
     activeId=id;state.activeId=id;const next=current();if(next?.status==='RUNNING')pauseSession(next,'pause');
-    if(next)next.lastActiveAt=Date.now();
+    if(next)next.lastActiveAt=Date.now();if(next?.status==='PREPARED')loadSetup(next);else editingPreparedId=null;
     setDistractionFree(!!next?.distractionFree&&next.status==='RUNNING');persist();stopTick();renderAll();
   };
   const editHistory=(s)=>{
@@ -376,9 +379,10 @@
     $('fmHistoryDetailTitle').textContent=s.name;
     $('fmHistoryDetailMeta').textContent=statusText(s)+' · '+dateLabel(dateKey(Math.max(...(s.timeline||[]).map(e=>e.at||0),s.createdAt||0)))+' · '+cat(s.category).name+' · '+pri(s.priority).name;
     $('fmHistoryDetailStats').innerHTML='<div><small>FOKUSZEIT</small><b>'+duration(totalFocus(s))+'</b></div><div><small>GEPLANTE DAUER</small><b>'+duration(s.originalFocusMs)+'</b></div><div><small>FOKUSABSCHNITTE</small><b>'+(s.focusSegments||[]).length+'</b></div>';
-    $('fmHistoryTimeline').innerHTML=(s.timeline||[]).slice().sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(dateKey(e.at))+' · '+timeLabel(e.at)+' · '+esc(e.zone||'')+'</small></span></div>').join('');
+    $('fmHistoryTimeline').innerHTML=(s.timeline||[]).concat((s.focusSegments||[]).map(seg=>({type:'focus-segment',label:'Fokusabschnitt · '+duration(seg.durationMs),at:seg.start,zone:seg.timezone}))).sort((a,b)=>a.at-b.at).map(e=>'<div class="fm-timeline-item"><i class="'+esc(e.type)+'"></i><span><b>'+esc(e.label)+'</b><small>'+dateLabel(dateKey(e.at))+' · '+timeLabel(e.at)+' · '+esc(e.zone||'')+'</small></span></div>').join('');
     $('fmHistoryDetailNotes').textContent=s.notes||'Keine Notizen gespeichert.';
-    $('fmHistoryDetailDistractions').innerHTML=(s.distractions||[]).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text)+'</b></span></div>').join('')||'<p class="fm-empty">Keine Ablenkungen protokolliert.</p>';
+    $('fmHistoryDetailDistractions').innerHTML=(s.distractions||[]).map(d=>'<div class="fm-distraction-row"><span><small>'+timeLabel(d.at)+'</small><b>'+esc(d.text)+'</b></span><span><button type="button" data-fm-history-edit-distraction="'+esc(d.id)+'">Bearbeiten</button><button type="button" data-fm-history-delete-distraction="'+esc(d.id)+'">×</button></span></div>').join('')||'<p class="fm-empty">Keine Ablenkungen protokolliert.</p>';
+    $('fmHistoryDetailLink').textContent=s.linkedTaskSnapshot?(s.linkedTaskSnapshot.title+' · '+(s.linkedTaskSnapshot.source==='important'?'Important':'Task Queue')):'Kein Aufgabenlink';
     $('fmHistoryDetailDialog').hidden=false;
   };
   const resetHistoryFilters=()=>{historyQuery='';$('fmHistoryFrom').closest('.fm-history-date-fields').dataset.custom='false';historyFilters={range:'all',from:'',to:'',categories:[],statuses:[],priorities:[]};historyPage=1;renderHistoryControls();renderHistory();};
@@ -390,6 +394,7 @@
   };
   const leaveHistory=()=>{historyOpen=false;resetHistoryFilters();$('fmHistoryView').hidden=true;$('fmMainView').hidden=false;};
   const openHistory=()=>{historyOpen=true;historyPage=1;$('fmMainView').hidden=true;$('fmHistoryView').hidden=false;renderHistoryControls();renderHistory();window.scrollTo({top:0,behavior:'smooth'});};
+  const loadSetup=s=>{if(!s||s.status!=='PREPARED')return;editingPreparedId=s.id;$('fmGoal').value=s.goal;$('fmName').value=s.name;$('fmCategory').value=s.category;$('fmPriority').value=s.priority;$('fmPreset').value=s.preset||'custom';$('fmCustomDuration').hidden=$('fmPreset').value!=='custom';$('fmCustomFocus').value=Math.round(s.originalFocusMs/60000);$('fmCustomBreak').value=Math.round(s.breakDurationMs/60000);$('fmLinkedTask').value=s.linkedTaskSnapshot?.id||'';};
   const useTemplate=s=>{
     const config={name:s.name,goal:s.goal,category:s.category,priority:s.priority,preset:s.preset,focusMs:s.originalFocusMs,breakMs:s.breakDurationMs,linkedTask:null};
     if(categoryCount(config.category)>=2){toast('In dieser Kategorie sind bereits zwei offene Sessions vorhanden.');return;}
@@ -484,7 +489,7 @@
         <div class="fm-history-pagination"><button type="button" id="fmHistoryPrev" class="fm-button fm-subtle">Zurück</button><span id="fmHistoryPageNumbers"></span><span id="fmHistoryPageLabel">Seite 1 / 1</span><button type="button" id="fmHistoryNext" class="fm-button fm-subtle">Weiter</button></div>
       </section>
     </div>
-    <div class="fm-dialog-backdrop" id="fmHistoryDetailDialog" hidden><section class="fm-dialog fm-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryDetailTitle"><div class="fm-dialog-head"><div><span class="fm-kicker">SESSION DETAILS</span><h2 id="fmHistoryDetailTitle"></h2><p id="fmHistoryDetailMeta"></p></div><button type="button" class="fm-dialog-close" data-fm-close-dialog>×</button></div><div class="fm-detail-stats" id="fmHistoryDetailStats"></div><h3>Zeitlicher Verlauf</h3><div class="fm-timeline" id="fmHistoryTimeline"></div><details class="fm-disclosure"><summary>Session Notes</summary><p id="fmHistoryDetailNotes"></p></details><details class="fm-disclosure"><summary>Distraction Log</summary><div id="fmHistoryDetailDistractions"></div></details><div class="fm-dialog-actions"><button type="button" class="fm-button" id="fmHistoryUseTemplate">Als Vorlage verwenden</button><button type="button" class="fm-button fm-subtle" id="fmHistoryEdit">Details bearbeiten</button><button type="button" class="fm-button fm-danger-ghost" id="fmHistoryDelete">Session löschen</button><button type="button" class="fm-button fm-subtle" data-fm-close-dialog>Schließen</button></div></section></div>
+    <div class="fm-dialog-backdrop" id="fmHistoryDetailDialog" hidden><section class="fm-dialog fm-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryDetailTitle"><div class="fm-dialog-head"><div><span class="fm-kicker">SESSION DETAILS</span><h2 id="fmHistoryDetailTitle"></h2><p id="fmHistoryDetailMeta"></p></div><button type="button" class="fm-dialog-close" data-fm-close-dialog>×</button></div><div class="fm-detail-stats" id="fmHistoryDetailStats"></div><h3>Zeitlicher Verlauf</h3><div class="fm-timeline" id="fmHistoryTimeline"></div><details class="fm-disclosure"><summary>Session Notes</summary><p id="fmHistoryDetailNotes"></p></details><details class="fm-disclosure"><summary>Distraction Log</summary><div id="fmHistoryDetailDistractions"></div></details><div class="fm-history-linked"><small>VERKNÜPFTE AUFGABE</small><b id="fmHistoryDetailLink">Keine Aufgabenverknüpfung</b></div><div class="fm-dialog-actions"><button type="button" class="fm-button" id="fmHistoryUseTemplate">Als Vorlage verwenden</button><button type="button" class="fm-button fm-subtle" id="fmHistoryEdit">Details bearbeiten</button><button type="button" class="fm-button fm-danger-ghost" id="fmHistoryDelete">Session löschen</button><button type="button" class="fm-button fm-subtle" data-fm-close-dialog>Schließen</button></div></section></div>
     <div class="fm-dialog-backdrop" id="fmHistoryEditDialog" hidden><section class="fm-dialog" role="dialog" aria-modal="true" aria-labelledby="fmHistoryEditHeading"><div class="fm-dialog-head"><div><span class="fm-kicker">EDIT SESSION</span><h2 id="fmHistoryEditHeading">Details bearbeiten</h2></div><button type="button" class="fm-dialog-close" data-fm-close-edit>×</button></div><form id="fmHistoryEditForm"><label class="fm-label" for="fmHistoryEditName">Session-Name</label><input id="fmHistoryEditName" class="fm-input" required><label class="fm-label" for="fmHistoryEditGoal">Fokusziel</label><input id="fmHistoryEditGoal" class="fm-input" required><div class="fm-form-two"><div><label class="fm-label" for="fmHistoryEditCategory">Kategorie</label><select id="fmHistoryEditCategory" class="fm-input"><option value="music" selected>Music Production</option><option value="mixing">Mixing &amp; Mastering</option><option value="content">Content Creation</option><option value="business">Business</option><option value="learning">Learning</option><option value="organisation">Organisation</option></select></div><div><label class="fm-label" for="fmHistoryEditPriority">Priorität</label><select id="fmHistoryEditPriority" class="fm-input"><option value="urgent">Critical</option><option value="important" selected>High</option><option value="provisional">Normal</option><option value="indefinite">Low</option></select></div></div><label class="fm-label" for="fmHistoryEditNotes">Notizen</label><textarea id="fmHistoryEditNotes" class="fm-input" rows="5"></textarea><div class="fm-dialog-actions"><button class="fm-button fm-primary" type="submit">Änderungen speichern</button><button type="button" class="fm-button fm-subtle" data-fm-close-edit>Abbrechen</button></div></form></section></div>`;
     const placeholder=focusPage.innerHTML;
     const marker=placeholder.indexOf('<div class="page-intro">');
@@ -495,7 +500,8 @@
   $('fmPreset').addEventListener('change',()=>{$('fmCustomDuration').hidden=$('fmPreset').value!=='custom';});
   $('fmSetupForm').addEventListener('submit',e=>{
     e.preventDefault();const config=prepareConfig();if(!config)return;
-    const s=createSession(config,'PREPARED');state.activeId=s.id;activeId=s.id;renderAll();$('fmSetupForm').reset();$('fmPreset').value='pomodoro';$('fmCustomDuration').hidden=true;refreshLinkedOptions();toast('Session vorbereitet. Der Timer wurde noch nicht gestartet.');
+    if(editingPreparedId){const existing=state.sessions.find(x=>x.id===editingPreparedId&&x.status==='PREPARED');if(existing){existing.name=config.name;existing.goal=config.goal;existing.category=config.category;existing.priority=config.priority;existing.preset=config.preset;existing.originalFocusMs=config.focusMs;existing.phaseDurationMs=config.focusMs;existing.remainingMs=config.focusMs;existing.breakDurationMs=config.breakMs;existing.linkedTask=config.linkedTask;existing.linkedTaskSnapshot=config.linkedTask?{...config.linkedTask}:null;existing.updatedAt=Date.now();event(existing,'prepared-edited','Vorbereitete Session angepasst');persist();editingPreparedId=null;renderAll();toast('Vorbereitete Session aktualisiert.');return;}}
+    const created=createSession(config,'PREPARED');state.activeId=created.id;activeId=created.id;editingPreparedId=null;renderAll();$('fmSetupForm').reset();$('fmPreset').value='pomodoro';$('fmCustomDuration').hidden=true;refreshLinkedOptions();toast('Session vorbereitet. Der Timer wurde noch nicht gestartet.');
   });
   $('fmStartPrepared').addEventListener('click',()=>{
     const s=current();if(!s)return;
@@ -503,8 +509,11 @@
   });
   $('fmTimerActions').addEventListener('click',e=>{const b=e.target.closest('[data-fm-action]');if(b)handleAction(b.dataset.fmAction);});
   $('fmOpenSessions').addEventListener('click',e=>{const b=e.target.closest('[data-fm-select]');if(b)switchSession(b.dataset.fmSelect);});
-  $('fmDistractionToggle').addEventListener('click',()=>setDistractionFree(!current()?.distractionFree));
+  $('fmDistractionToggle').addEventListener('click',()=>{setDistractionFree(!current()?.distractionFree);persist();});
   $('fmNotes').addEventListener('input',e=>{const s=current();if(!s)return;s.notes=e.target.value;saveSoon();});
+  $('fmCurrentGoal').addEventListener('change',e=>{const s=current();if(!s)return;const value=e.target.value.trim();if(!value){e.target.value=s.goal;return;}s.goal=value;s.updatedAt=Date.now();saveSoon();renderOpenSessions();});
+  $('fmCurrentCategory').addEventListener('change',e=>{const s=current();if(!s)return;const next=e.target.value;if(categoryCount(next,s.id)>=2){toast('In dieser Kategorie sind bereits zwei andere offene Sessions.');e.target.value=s.category;return;}s.category=next;s.updatedAt=Date.now();persist();renderCurrent();renderStats();});
+  $('fmCurrentPriority').addEventListener('change',e=>{const s=current();if(!s)return;s.priority=e.target.value;s.updatedAt=Date.now();persist();renderCurrent();});
   $('fmDistractionForm').addEventListener('submit',e=>{e.preventDefault();const s=current(),input=$('fmDistractionInput'),text=input.value.trim();if(!s||!text){if(!s)toast('Bitte zuerst eine Session auswählen.');return;}s.distractions=s.distractions||[];s.distractions.unshift({id:uid(),at:Date.now(),text});event(s,'distraction','Ablenkung notiert');input.value='';persist();renderDistractions();});
   $('fmDistractionList').addEventListener('click',e=>{
     const edit=e.target.closest('[data-fm-edit-distraction]'),del=e.target.closest('[data-fm-delete-distraction]'),s=current();if(!s)return;
@@ -518,13 +527,13 @@
   $('fmQueueList').addEventListener('drop',e=>{
     const row=e.target.closest('[data-fm-drag]');if(!row||!taskDragId)return;e.preventDefault();
     const all=[...$('fmQueueList').querySelectorAll('[data-fm-drag]')].map(x=>x.dataset.fmDrag),from=all.indexOf(taskDragId),to=all.indexOf(row.dataset.fmDrag);if(from<0||to<0)return;
-    all.splice(to,0,all.splice(from,1)[0]);state.queueManual=true;state.queue=all.map((id,i)=>({id,order:i}));taskDragId=null;renderQueue();
+    all.splice(to,0,all.splice(from,1)[0]);state.queueManual=true;state.queue=all.map((id,i)=>({id,order:i}));taskDragId=null;persist();renderQueue();
   });
   $('fmQueueList').addEventListener('dragend',()=>{taskDragId=null;$('fmQueueList').querySelectorAll('.is-dragging,.is-drop-target').forEach(x=>x.classList.remove('is-dragging','is-drop-target'));});
   $('fmQueueDefault').addEventListener('click',()=>{state.queueManual=false;state.queue=[];persist();renderQueue();});
   $('fmQueueAdd').addEventListener('click',()=>{leaveHistory();$('fmGoal').focus();$('fmGoal').scrollIntoView({behavior:'smooth',block:'center'});});
   $('fmHistoryOpen').addEventListener('click',openHistory);$('fmHistoryBack').addEventListener('click',leaveHistory);
-  $('fmHistorySearch').addEventListener('input',e=>{historyQuery=e.target.value;historyPage=1;renderHistory();});
+  $('fmHistorySearch').addEventListener('input',e=>{historyQuery=e.target.value;historyPage=1;clearTimeout(historySearchTimer);historySearchTimer=setTimeout(renderHistory,160);});
   $('fmHistorySearchClear').addEventListener('click',()=>{historyQuery='';historyPage=1;renderHistoryControls();renderHistory();});
   $('fmHistoryRange').addEventListener('change',e=>{historyFilters.range=e.target.value;$('fmHistoryFrom').closest('.fm-history-date-fields').dataset.custom=String(e.target.value==='custom');historyPage=1;renderHistory();});
   ['fmHistoryFrom','fmHistoryTo'].forEach(id=>$(id).addEventListener('change',e=>{historyFilters[id==='fmHistoryFrom'?'from':'to']=e.target.value;historyPage=1;renderHistory();}));
@@ -535,8 +544,9 @@
   $('fmHistoryReset').addEventListener('click',resetHistoryFilters);
   $('fmHistoryPrev').addEventListener('click',()=>{historyPage=Math.max(1,historyPage-1);renderHistory();});
   $('fmHistoryNext').addEventListener('click',()=>{historyPage++;renderHistory();});
+  $('fmHistoryPageNumbers').addEventListener('click',e=>{const b=e.target.closest('[data-fm-page]');if(b){historyPage=Number(b.dataset.fmPage)||1;renderHistory();}});
   $('fmHistoryList').addEventListener('click',e=>{const b=e.target.closest('[data-fm-history-detail]');if(b)showHistoryDetail(b.dataset.fmHistoryDetail);});
-  $('fmHistoryDetailDialog').addEventListener('click',e=>{if(e.target===e.currentTarget||e.target.closest('[data-fm-close-dialog]'))closeHistoryDetail();});
+  $('fmHistoryDetailDialog').addEventListener('click',e=>{if(e.target===e.currentTarget||e.target.closest('[data-fm-close-dialog]')){closeHistoryDetail();return;}const edit=e.target.closest('[data-fm-history-edit-distraction]'),del=e.target.closest('[data-fm-history-delete-distraction]'),s=state.sessions.find(x=>x.id===historyDetailId);if(!s)return;if(edit){const d=s.distractions.find(x=>x.id===edit.dataset.fmHistoryEditDistraction);if(!d)return;const value=prompt('Ablenkung bearbeiten:',d.text);if(value===null)return;d.text=value.trim();persist();showHistoryDetail(s.id);}if(del&&confirm('Diesen Distraction-Log-Eintrag löschen?')){s.distractions=s.distractions.filter(x=>x.id!==del.dataset.fmHistoryDeleteDistraction);persist();showHistoryDetail(s.id);}});
   $('fmHistoryEditDialog').addEventListener('click',e=>{if(e.target===e.currentTarget||e.target.closest('[data-fm-close-edit]'))$('fmHistoryEditDialog').hidden=true;});
   $('fmHistoryEdit').addEventListener('click',()=>{const s=state.sessions.find(x=>x.id===historyDetailId);if(s)editHistory(s);});
   $('fmHistoryEditForm').addEventListener('submit',e=>{e.preventDefault();const s=state.sessions.find(x=>x.id===historyDraftId);if(!s)return;s.name=$('fmHistoryEditName').value.trim();s.goal=$('fmHistoryEditGoal').value.trim();s.category=$('fmHistoryEditCategory').value;s.priority=$('fmHistoryEditPriority').value;s.notes=$('fmHistoryEditNotes').value;event(s,'details-edited','Sessiondetails nachträglich bearbeitet');persist();$('fmHistoryEditDialog').hidden=true;showHistoryDetail(s.id);renderHistory();});
