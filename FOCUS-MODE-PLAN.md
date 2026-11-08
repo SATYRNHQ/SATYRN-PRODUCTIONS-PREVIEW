@@ -508,6 +508,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Kreisdiagramm mit Legende.
 - Zeitraum auswählbar: Woche, Monat oder Gesamtzeit.
 - Es werden dieselben Kategorienfarben wie auf der Important-Seite verwendet.
+- **Übereinstimmung von Diagramm und Legende:** Kreisdiagramm und Legende verwenden dieselben berechneten Kategorienwerte. Angezeigte Fokuszeiten und Prozentanteile müssen miteinander übereinstimmen; die Prozentanteile ergeben bei vollständiger, auswertbarer Datengrundlage zusammen 100 %.
+- **Aktive Filter berücksichtigen:** Die Auswertung verwendet dieselbe aktive Kategorieauswahl und denselben aktiven Zeitraum wie die übrigen Focus-Mode-Statistiken. Mehrfach ausgewählte Kategorien dürfen Fokuszeit nicht doppelt zählen.
+- **Benutzerdefinierte Kategorien:** Auch benutzerdefinierte Dashboard-Kategorien werden mit ihren zentral festgelegten Namen, Icons und Farben berücksichtigt. Historische Sessions behalten ihre gespeicherte Kategoriezuordnung.
+- **Unvollständige Datengrundlage:** Wenn im ausgewerteten Zeitraum ungeklärte oder unvollständige Fokusdaten vorliegen, wird die Kategorieauswertung als vorläufig gekennzeichnet. Fehlende Daten dürfen nicht stillschweigend als bestätigte Nullwerte behandelt werden.
+
 
 ### Productivity by Time
 - Auswertung der erfassten Fokuszeit in fünf klar definierten Tageszeitfenstern anhand der lokalen Zeitzone:
