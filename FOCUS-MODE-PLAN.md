@@ -229,6 +229,16 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Einträge können später bearbeitet und gelöscht werden.
 - Das Distraction Log bleibt auch nachträglich über die Session History zugänglich.
 
+### Anordnung und Bedienung von Notizen und Distraction Log
+- **Notizen** und **Distraction Log** sind direkt im Current-Session-Bereich erreichbar, ohne die Focus-Mode-Seite verlassen zu müssen.
+- Beide Funktionen werden als getrennte, aufklappbare Bereiche dargestellt, damit der Timer im normalen Layout übersichtlich bleibt.
+- Der Notizbereich enthält ein ausreichend großes Textfeld für Gedanken, Ideen und Arbeitsnotizen. Notizen werden automatisch gespeichert und bleiben dauerhaft mit der jeweiligen Session verknüpft.
+- Der Distraction Log ist ein eigener Bereich neben oder unter den Notizen. Eine Ablenkung kann mit einem Klick als neuer Eintrag hinzugefügt werden; eine kurze Beschreibung ist optional.
+- Jeder Distraction-Log-Eintrag erhält automatisch einen Zeitstempel und kann nachträglich bearbeitet oder gelöscht werden.
+- Notizen und Distraction-Log-Einträge bleiben in der Session History abrufbar.
+- Im Distraction-Free-Modus bleiben beide Bereiche erreichbar, verdrängen aber nicht den Timer als visuellen Mittelpunkt.
+- Für beide Funktionen gelten die bereits festgelegten Regeln zum automatischen Speichern, lokalen Zwischenspeichern und zur Synchronisierung. Ein Session-Wechsel darf keine Änderungen verlieren.
+
 ### Speicherstatus im Focus-Fenster
 - Im Focus-Fenster ist jederzeit ein kompakter, gut erkennbarer Speicherstatus sichtbar.
 - Der Status unterscheidet eindeutig:
