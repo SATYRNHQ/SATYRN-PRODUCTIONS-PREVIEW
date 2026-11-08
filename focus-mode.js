@@ -181,6 +181,7 @@
   };
   const startCountdown=s=>{
     if(!s||s.status!=='PREPARED'&&s.status!=='EXPIRED')return;
+    editingPreparedId=null;$('fmSetupSubmit').textContent='Session vorbereiten ＋';
     if(countdownHandle){clearInterval(countdownHandle);countdownHandle=null;}
     countdownTarget=s.id;countdownValue=3;renderCurrent();
     countdownHandle=setInterval(()=>{
@@ -196,7 +197,7 @@
     const s=current();if(s)s.distractionFree=!!on;
     focusPage.classList.toggle('focus-distraction-free',!!on);
     const toggle=$('fmDistractionToggle');if(toggle){toggle.setAttribute('aria-pressed',String(!!on));toggle.textContent=on?'Distraction-Free aktiv':'Distraction-Free-Modus';}
-    const setup=$('fmWorkGrid'),stats=$('fmStatsPanel');if(setup)setup.hidden=!!on;if(stats)stats.hidden=!!on;
+    const queue=$('fmQueuePanel'),stats=$('fmStatsPanel');if(queue)queue.hidden=!!on;if(stats)stats.hidden=!!on;
   };
   const renderStorage=()=>{
     const el=$('fmStorageState');if(!el)return;
@@ -248,7 +249,7 @@
       if(s.status==='PREPARED'||s.status==='EXPIRED')start.hidden=false;else start.hidden=true;start.disabled=countdownTarget===s.id;
       if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='break')buttons.push('<button class="fm-button" data-fm-action="skip">Skip Break</button>');
       if(s.status==='RUNNING'&&s.phase==='focus'||s.status==='PAUSED'&&s.phase==='focus')buttons.push('<button class="fm-button fm-subtle" data-fm-action="reset">Reset</button>');
-      if(['RUNNING','PAUSED'].includes(s.status))buttons.push('<button class="fm-button fm-subtle" data-fm-action="complete">Complete Session</button>');
+      if(['RUNNING','PAUSED'].includes(s.status)&&s.phase==='focus')buttons.push('<button class="fm-button fm-subtle" data-fm-action="complete">Complete Session</button>');
       if(['RUNNING','PAUSED'].includes(s.status))buttons.push('<button class="fm-button fm-danger-ghost" data-fm-action="interrupt">Interrupt</button>');
       if(s.status==='INTERRUPTED')buttons.push('<button class="fm-button fm-danger-ghost" data-fm-action="discard">Verwerfen</button>');
       actions.innerHTML=buttons.join('');
@@ -396,7 +397,7 @@
     if(id===activeId){if(current()?.status==='PREPARED')loadSetup(current());return;}
     const old=current();if(old&&old.status==='RUNNING')pauseSession(old,'pause');
     activeId=id;state.activeId=id;const next=current();if(next?.status==='RUNNING')pauseSession(next,'pause');
-    if(next)next.lastActiveAt=Date.now();if(next?.status==='PREPARED')loadSetup(next);else editingPreparedId=null;
+    if(next)next.lastActiveAt=Date.now();if(next?.status==='PREPARED')loadSetup(next);else{editingPreparedId=null;$('fmSetupSubmit').textContent='Session vorbereiten ＋';}
     setDistractionFree(!!next?.distractionFree&&next.status==='RUNNING');persist();stopTick();renderAll();
   };
   const editHistory=(s)=>{
@@ -487,7 +488,7 @@
               <div class="fm-setup-footer"><span>Die Session wird gespeichert, aber nicht gestartet.</span><div class="fm-setup-buttons"><button type="button" id="fmSetupNew" class="fm-text-button">Neue Session</button><button type="submit" id="fmSetupSubmit" class="fm-button fm-primary">Session vorbereiten <span>＋</span></button></div></div>
             </form>
           </section>
-          <section class="fm-panel glass-card fm-queue-panel">
+          <section class="fm-panel glass-card fm-queue-panel" id="fmQueuePanel">
             <div class="fm-panel-heading"><div><span class="fm-kicker">03 · TASK QUEUE</span><h2>Als Nächstes</h2></div><span class="fm-count" id="fmQueueCount">0 Aufgaben</span></div>
             <p class="fm-panel-intro">Offene Aufgaben aus deiner Task Queue und Important. Ziehe Einträge, um eine eigene Reihenfolge zu speichern.</p>
             <div id="fmQueueList" class="fm-queue-list"></div>
