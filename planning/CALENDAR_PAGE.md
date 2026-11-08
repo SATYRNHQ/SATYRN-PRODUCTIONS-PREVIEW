@@ -170,3 +170,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Beim Verlassen der Calendar-Seite werden aktive Suchbegriffe und Prioritätsfilter zurückgesetzt. Beim erneuten Öffnen startet Calendar ohne zuvor gesetzte Suche oder Filter; innerhalb der geöffneten Seite bleiben sie beim Monatswechsel weiterhin aktiv.
 
 - 2026-11-08: Suchleiste und Prioritätsfilter sind in der Calendar-Ansicht standardmäßig dauerhaft sichtbar; sie werden nicht erst über ein separates Filter-Symbol geöffnet.
+
+- 2026-11-08: Prioritätsfilter werden als neutrale Checkboxen mit kleinen farbigen Markierungen dargestellt. Die Checkboxen bleiben optisch zurückhaltend; die Markierungen verwenden die jeweiligen Prioritätsfarben (Dringend Rot, Wichtig Orange, Vorläufig Blau, Unbefristet Grün). „Ohne Priorität“ erhält keine zusätzliche Prioritätsfarbe.
