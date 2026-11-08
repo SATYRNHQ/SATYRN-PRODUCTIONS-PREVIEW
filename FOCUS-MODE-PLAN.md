@@ -1825,6 +1825,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 ### Abschließende seitenübergreifende Preview- und Funktionstests
 - Am Ende der Planung und vor dem Abschluss der Preview werden alle SATYRN-HQ-Seiten gemeinsam auf Funktion und Zusammenspiel getestet.
+- **Zurückgestellte Detailprüfung der Exporte:** Die weitergehende Prüfung von Sonderfällen rund um Exportvorschauen und Downloads (insbesondere Änderungen an Sessions, Datenständen oder Filtern bei bereits geöffneter Vorschau) wird bewusst bis zur abschließenden seitenübergreifenden Prüfung zurückgestellt. Sie wird dort gesammelt und systematisch geprüft, statt die Focus-Mode-Planung jetzt weiter in Exportdetails zu vertiefen.
+
 - Dazu gehören insbesondere Exportvorschauen und Beispieldateien (CSV/PDF), sofern die jeweilige Seite Exportfunktionen bietet.
 - Geprüft werden außerdem Navigation, Verknüpfungen zwischen Seiten, gemeinsame Daten, Zustände, responsive Darstellung und die wichtigsten Nutzerabläufe.
 - Exportvorschauen werden dabei anhand realistischer Beispieldaten kontrolliert; sie müssen zum tatsächlich erzeugten Export passen.
