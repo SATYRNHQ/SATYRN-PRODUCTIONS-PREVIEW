@@ -341,3 +341,29 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Farbsystem soll mit der Important-Seite übereinstimmen.
 - Kategorienfarben werden in Setup, History und Statistiken wiederverwendet.
 - Die Prioritätsstufen, Farben und Darstellung werden exakt von der Important-Seite übernommen.
+
+## 4. Task Queue
+
+### Aufgabenanzeige
+- Die Task Queue zeigt offene Aufgaben in einer klaren, kompakten und gut scannbaren Liste.
+- Der Aufgabenname ist die wichtigste Information.
+- Kategorie und Priorität werden als dezente Zusatzinformationen angezeigt und verwenden das bestehende Farbsystem der Important-Seite.
+- Eine geplante Dauer kann optional angezeigt werden, sofern für die Aufgabe eine Dauer hinterlegt ist.
+- Erledigte Aufgaben werden optisch eindeutig von offenen Aufgaben unterschieden und können in einem separaten, einklappbaren Bereich angezeigt werden.
+- Die Übersicht zeigt außerdem die aktuelle Anzahl offener Aufgaben.
+
+### Sortierung und Reihenfolge
+- Standardmäßig werden offene Aufgaben nach Priorität sortiert.
+- Aufgaben mit gleicher Priorität werden standardmäßig nach Erstellungsdatum sortiert.
+- Die Reihenfolge kann manuell per Drag & Drop angepasst werden.
+- Sobald eine manuelle Reihenfolge festgelegt wurde, bleibt sie gespeichert und wird bei späteren Aufrufen wiederhergestellt.
+- Die manuelle Reihenfolge hat Vorrang vor der automatischen Standardsortierung, bis der Nutzer die Standardsortierung erneut auswählt.
+
+### Aufgaben einer Session zuordnen
+- Eine Aufgabe kann direkt aus der Task Queue mit einem Klick ausgewählt und der aktuellen Session zugeordnet werden.
+- Die ausgewählte Aufgabe wird als Fokusziel im Current-Session-Bereich angezeigt.
+- Die Zuordnung einer Aufgabe zu einer Session markiert sie nicht als erledigt und entfernt sie nicht aus der Task Queue.
+- Eine Aufgabe bleibt in der offenen Liste, bis sie ausdrücklich als erledigt markiert oder entfernt wird.
+- Nach einer Focus-Session wird die investierte Zeit automatisch für die zugeordnete Aufgabe dokumentiert. Die Aufgabe wird dadurch nicht automatisch als erledigt markiert.
+- Die bereits festgelegte Aufgabenhistorie aus dem Session Setup gilt weiterhin: Datum, investierte Zeit und Anzahl der zugehörigen Focus-Sessions werden pro Aufgabe gesammelt und angezeigt.
+
