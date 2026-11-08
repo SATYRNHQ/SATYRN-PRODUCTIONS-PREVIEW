@@ -1769,3 +1769,5 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beispiele für websiteübergreifende Systeme: Anmeldung und Benutzerrechte, Backup/Wiederherstellung, Änderungsprotokoll, Benachrichtigungen, gemeinsame Datensynchronisierung und Sicherheitsgrundlagen.
 - Bei gemischten Funktionen werden die konkreten Anforderungen der Seite hier festgehalten; gemeinsame technische Umsetzung und einheitliche Regeln werden für die spätere zentrale Planung vorgemerkt.
 - Ziel ist, Doppelentwicklungen und widersprüchliche Regeln zwischen Seiten zu vermeiden.
+
+- Läuft eine Pause beim Schließen der Website, zählt auch während der Schließzeit die reale verstrichene Zeit weiter. Ist die Pause beim Wiederöffnen bereits abgelaufen, wird keine neue Fokusphase automatisch gestartet. Focus Mode zeigt den abgelaufenen Pausenzustand und wartet auf die ausdrückliche Bestätigung des Nutzers, bevor die nächste Fokusphase beginnt. Während die Website geschlossen ist, werden keine Browser-Töne oder sichtbaren Website-Benachrichtigungen vorausgesetzt.
