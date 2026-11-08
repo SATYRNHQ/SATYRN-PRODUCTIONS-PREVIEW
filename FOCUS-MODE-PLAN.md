@@ -716,6 +716,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Wiederöffnen werden weiterhin die tatsächliche verstrichene Zeit, der gespeicherte Status und die verfügbaren Aktionen korrekt angezeigt.
 
 
+### Kategoriegrenze für offene Sessions
+- Die maximale Anzahl von zwei offenen Sessions wird anhand der Kategorie der Focus-Session selbst geprüft.
+- Kategorien der verknüpften Important-Aufgaben beeinflussen diese Grenze nicht.
+- Maßgeblich ist die aktuell für die Focus-Session gespeicherte Kategorie, einschließlich einer vor dem Start manuell gewählten Session-Kategorie.
+
 ### Mehrere offene Sessions pro Kategorie
 - Mehrere offene bzw. unterbrochene Sessions dürfen gleichzeitig bestehen.
 - Pro Kategorie/Bereich sind maximal zwei offene Sessions erlaubt.
