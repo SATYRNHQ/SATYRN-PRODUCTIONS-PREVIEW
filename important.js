@@ -70,7 +70,7 @@
       (e.isTask?'<span class="imp-focus-task-badge">FOCUS TASK</span>':'')+
       (e.description?'<p class="imp-description">'+esc(preview)+'</p>':'')+
       (e.date?'<div class="imp-date-line"><span>▦ '+fmt(e.date)+'</span><b>'+relative(e.date)+'</b></div>':'')+
-      (links.length?'<div class="imp-link-row">'+links.slice(0,open?links.length:3).map(l=>'<button class="imp-link-chip" type="button" data-page="'+esc(l.page||(l.area==='Projects'?'projects':'network'))+'" data-link="'+esc(l.id)+'" data-link-area="'+esc(l.area)+'" title="Verknüpfung: '+esc(l.area)+'">'+(l.area==='Projects'?'◇':'◎')+' '+esc(l.name)+'</button>').join('')+(links.length>3&&!open?'<button class="imp-more-links" type="button" data-more-links>+'+(links.length-3)+' weitere</button>':'')+'</div>':'')+
+      (links.length?'<div class="imp-link-row">'+links.slice(0,open?links.length:3).map(l=>'<button class="imp-link-chip" type="button" data-page="'+esc(l.page||(l.area==='Projects'?'projects':'network'))+'" data-link="'+esc(l.id)+'" data-link-area="'+esc(l.area)+'" data-link-kind="'+esc(l.kind||'entry')+'" title="Verknüpfung: '+esc(l.area)+'">'+(l.area==='Projects'?'◇':'◎')+' '+esc(l.name)+'</button>').join('')+(links.length>3&&!open?'<button class="imp-more-links" type="button" data-more-links>+'+(links.length-3)+' weitere</button>':'')+'</div>':'')+
       (e.modified?'<div class="imp-modified">Zuletzt geändert: '+fmt(e.modified)+'</div>':'')+
       (e.done&&e.isTask?'<div class="imp-task-done-note">Als Fokusaufgabe erledigt</div>':'')+
       (e.description&&e.description.length>230?'<button class="imp-description-toggle" type="button" data-description-toggle>'+(open?'Weniger anzeigen':'Mehr anzeigen')+'</button>':'')+
@@ -124,9 +124,10 @@
   }
   const getAvailableLinks=()=>{
     const readArray=key=>{try{const value=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(value)?value:[]}catch{return[]}};
-    const tasks=readArray('satyrn-tasks').map(x=>({id:String(x.id),area:'Projects',page:'projects',name:x.title})).filter(x=>x.id&&x.name);
-    const contacts=readArray('satyrn-contacts-v1').map(x=>({id:String(x.id),area:'Network',page:'network',name:x.f0||x.name||'Unbenannter Kontakt'})).filter(x=>x.id&&x.name);
-    return [...tasks,...contacts];
+    const areas=[{id:'__area_projects__',area:'Projects',page:'projects',name:'Projects overview',kind:'area'},{id:'__area_network__',area:'Network',page:'network',name:'Network overview',kind:'area'}];
+    const tasks=readArray('satyrn-tasks').map(x=>({id:String(x.id),area:'Projects',page:'projects',name:x.title,kind:'entry'})).filter(x=>x.id&&x.name);
+    const contacts=readArray('satyrn-contacts-v1').map(x=>({id:String(x.id),area:'Network',page:'network',name:x.f0||x.name||'Unbenannter Kontakt',kind:'entry'})).filter(x=>x.id&&x.name);
+    return [...areas,...tasks,...contacts];
   };
   function renderLinkResults(){
     const q=$('importantLinkSearch').value.trim().toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -187,7 +188,7 @@
       if(action.dataset.edit){const id=action.dataset.edit;menuFor=null;openModal(id);return}
       if(action.dataset.delete){deleteEntry(action.dataset.delete);return}
       if(action.dataset.descriptionToggle||action.dataset.moreLinks){const id=action.closest('[data-card]')?.dataset.card;if(id)toggleCard(id);return}
-      if(action.dataset.link){const area=action.dataset.linkArea||'Projects',id=action.dataset.link;setTimeout(()=>{const selector=area==='Projects'?'[data-project-task="'+CSS.escape(id)+'"]':'[data-hq-record="'+CSS.escape(id)+'"]';const target=document.querySelector(selector);if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.classList.add('is-link-highlight');setTimeout(()=>target.classList.remove('is-link-highlight'),1800)}else toast('Dieses Beispielziel ist noch kein eigener HQ-Datensatz.')},180);return}
+      if(action.dataset.link){const area=action.dataset.linkArea||'Projects',id=action.dataset.link;if(action.dataset.linkKind==='area'||action.closest('.is-example'))return;setTimeout(()=>{const selector=area==='Projects'?'[data-project-task="'+CSS.escape(id)+'"]':'[data-hq-record="'+CSS.escape(id)+'"]';const target=document.querySelector(selector);if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.classList.add('is-link-highlight');setTimeout(()=>target.classList.remove('is-link-highlight'),1800)}else toast('Das verknüpfte Ziel ist nicht mehr vorhanden.')},180);return}
       if(action.dataset.cat){const id=action.dataset.cat;categoryOn.has(id)?categoryOn.delete(id):categoryOn.add(id);renderFilters();render();return}
       if(action.dataset.pri){const id=action.dataset.pri;priorityOn.has(id)?priorityOn.delete(id):priorityOn.add(id);renderFilters();render();return}
       if(action.dataset.filterAll){setAll(action.dataset.filterAll,true);return}

@@ -26,9 +26,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate JavaScript syntax
         run: |
-          node --check app.js
-          node --check important.js
-          node --check focus-mode.js
+          for file in app.js important.js focus-mode.js focus-demo.js focus-reminders.js modules.js finance-tools.js finance-intelligence.js hq-tools.js command-center.js sw.js; do node --check "$file"; done
+      - name: Validate site structure and asset versions
+        run: node scripts/validate-site.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Remove previous Pages artifacts

@@ -1,6 +1,6 @@
 # SATYRN PRODUCTIONS HQ – Focus Mode Plan
 
-   > Status: Clientseitige Focus-Mode-Implementierung in der Preview deployed; statische/CI-Prüfungen erfolgreich, Browser-QA noch ausstehend. Zentrale Synchronisierung und optionales Ordner-Backup sind noch offen.
+   > Status: Preview-Implementierung wird gegen dieses Dokument abgeglichen; statische/CI-Prüfungen laufen mit. Vollständige interaktive Browser-QA und zentrale Synchronisierung sind noch offen. Ein manuelles JSON-Backup ist im HQ vorhanden; eine PC-Ordner-Synchronisierung ist nicht implementiert.
 > Dieses Dokument sammelt die gemeinsam bestätigten Anforderungen. Die Umsetzung erfolgt ausschließlich in der Preview; die Live-Seite bleibt unverändert.
 
 ## 1. Grundaufbau und Seitenlayout
@@ -14,9 +14,10 @@ Die Focus-Mode-Seite besteht aus fünf Bereichen:
 5. **Session History** – vergangene Sessions und deren Details.
 
 Vorgesehene Anordnung:
-- Oben: Current Session mit zentralem Timer.
+- Oben: Current Session mit Timer und direkt daneben angeordneten Live-Statistics.
+- Darunter: kompakte Liste der offenen Sessions.
 - Mitte: Session Setup und Task Queue nebeneinander.
-- Unten: Statistics. Die vollständige Session History wird ausschließlich über den separaten History-Zugang geöffnet und erscheint nicht als dauerhafter Bereich auf der Hauptseite.
+- Die vollständige Session History wird ausschließlich über den separaten History-Zugang geöffnet und erscheint nicht als dauerhafter Bereich auf der Hauptseite.
 
 Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erscheinen. Stattdessen gibt es oben rechts neben dem Seitentitel eine kleine, dezente Leiste mit Uhr-/Verlauf-Icon und der Beschriftung **History**. Ein Klick öffnet die vollständige History.
 
@@ -24,7 +25,7 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - **Hauptebene – Current Session:** Der Bereich mit aktivem Timer, Session-Status und Fokusziel bildet den klaren visuellen Mittelpunkt. Die wichtigste Timeraktion und die jeweils relevante nächste Aktion sind unmittelbar erreichbar.
 - Session-Wechsel, Notizen und Distraction Log sind direkt aus dem Current-Session-Bereich erreichbar, ohne eine andere Seite öffnen zu müssen.
 - **Zweite Ebene – Arbeitsbereich:** Session Setup und Task Queue werden auf dem Desktop nebeneinander in zwei Spalten angeordnet. Session Setup enthält die Einstellungen für Ziel, Kategorie, Priorität und Dauer; die Task Queue zeigt kommende Aufgaben und Sessions.
-- **Dritte Ebene – Analyse:** Statistics werden darunter kompakt dargestellt. Die vollständige Session History bleibt über den separaten History-Zugang erreichbar und nimmt nicht dauerhaft einen großen Bereich der Hauptseite ein.
+- **Dritte Ebene – Analyse:** Die Live-Statistics stehen direkt neben dem Timer innerhalb von Current Session. Die vollständige Session History bleibt über den separaten History-Zugang erreichbar und nimmt nicht dauerhaft einen großen Bereich der Hauptseite ein.
 - Die Informationshierarchie vermeidet unnötige Leerflächen und hält häufig benötigte Informationen direkt sichtbar.
 - Weniger häufig benötigte Detailinformationen dürfen innerhalb ihres jeweiligen Bereichs aufklappbar sein; wichtige Aktionen und Statusinformationen dürfen dadurch nicht versteckt werden.
 - Während einer Fokusphase gilt weiterhin der bereits definierte Distraction-Free-Modus: Der Timer steht im Mittelpunkt, Task Queue und Statistiken werden eingeklappt bzw. ausgeblendet; Notizen und Distraction Log bleiben erreichbar.
@@ -34,7 +35,7 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 ### Größenverhältnisse und Flächenaufteilung am PC
 - **Current Session:** nimmt im normalen Desktop-Layout die volle verfügbare Inhaltsbreite ein und erhält den größten visuellen Stellenwert. Der Timer steht innerhalb dieses Bereichs zentral und bekommt ausreichend Platz für Zeitanzeige, Status, Fokusziel und direkte Aktionen.
 - **Session Setup und Task Queue:** werden darunter nebeneinander in zwei Spalten dargestellt. Beide Bereiche erhalten grundsätzlich ungefähr gleich viel Platz. Wenn die Inhalte es erfordern, darf die Task Queue etwas mehr Breite erhalten, damit längere Aufgabennamen und Aufgabeninformationen gut lesbar bleiben.
-- **Statistics:** werden unterhalb der beiden Arbeitsbereiche kompakt dargestellt und sollen den Current-Session-Bereich nicht verdrängen.
+- **Statistics:** stehen im Current-Session-Bereich direkt neben dem Timer. Sie bleiben kompakt und werden im Distraction-Free-Modus ausgeblendet.
 - **Session History:** bleibt über den separaten History-Zugang erreichbar und erhält keinen dauerhaft reservierten großen Platz im Hauptlayout.
 - Es werden keine starren Pixelbreiten festgelegt. Die Bereiche nutzen die verfügbare Fensterbreite sinnvoll und passen sich responsiv an unterschiedliche Desktop-Fenstergrößen an.
 - Die Anordnung soll unnötige Leerflächen vermeiden und zugleich ausreichend Abstand sowie gute Lesbarkeit gewährleisten.
@@ -157,7 +158,7 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
   | Unterbrochen | **Resume**, **Verwerfen** |
   | Fokuszeit ohne eingestellte Pause abgelaufen | **EXPIRED** – nächste Fokusphase manuell starten |
   | Pausenzeit abgelaufen | **EXPIRED** – nächste Fokusphase manuell starten |
-  | Fokuszeit mit eingestellter Pause abgelaufen | Automatischer Wechsel zu **BREAK**; keine Bestätigung erforderlich |
+  | Fokuszeit mit eingestellter Pause abgelaufen | **EXPIRED**; konfigurierte Pause erst nach bewusster Aktion „Pause starten“ |
 - Nicht zum aktuellen Zustand passende Aktionen werden nicht angeboten bzw. sind nicht bedienbar.
 - **Reset** und endgültiges **Verwerfen** erfordern jeweils eine separate Sicherheitsabfrage.
 - **Interrupt** bleibt klar von **Complete Session** und **Reset** getrennt: Eine Unterbrechung erhält die Session zur späteren Fortsetzung; Complete Session schließt sie erfolgreich ab.
@@ -172,14 +173,14 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Dieselbe Session kann beliebig oft unterbrochen und später fortgesetzt werden. Jede Unterbrechung und Wiederaufnahme wird als eigener Vorgang im zeitlichen Verlauf dokumentiert. Bereits erfasste Fokuszeit bleibt erhalten und wird bei weiteren Unterbrechungen oder Wiederaufnahmen weder gelöscht noch doppelt gezählt.
 - Beim Unterbrechen wird die verbleibende Zeit des gerade aktiven Fokus- oder Pausenabschnitts gesichert. Die Dauer der Unterbrechung wird separat im zeitlichen Verlauf erfasst und zählt nicht als Fokuszeit. Beim Fortsetzen läuft derselbe Zeitabschnitt mit der gesicherten Restzeit weiter.
 - **Complete Session** ist davon getrennt: Damit kann eine Session auch vor Ablauf des Timers bewusst erfolgreich beendet werden. Sie verschwindet dann aus der offenen Liste und wird in History sowie Statistiken übernommen.
-- Wenn eine Fokusphase endet, wechselt der Timer automatisch in die eingestellte Pause. Bei der bewusst gewählten Option „Keine Pause“ wird keine Pause gestartet; der Timer wartet stattdessen auf den manuellen Start der nächsten Fokusphase.
+- Wenn eine Fokusphase endet, wechselt der Timer in `EXPIRED`. Ist eine Pause konfiguriert, kann sie über **„Pause starten“** bewusst begonnen werden. Bei „Keine Pause“ wartet der Timer auf den manuellen Start der nächsten Fokusphase.
 - Nach Ende der Pause wartet der Timer auf einen manuellen Start der nächsten Fokusphase.
 - Die Pause kann über **Skip Break** übersprungen werden. Danach wartet der Timer auf den manuellen Start der nächsten Fokusphase.
 - Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`. Der Countdown zählt nicht zur Fokuszeit; die Zeitmessung beginnt erst nach seinem Abschluss mit dem tatsächlichen Start der Fokusphase.
 
 ### Sichtbare Timer-Endzustände im Focus-Fenster
 - Jeder Timer-Endzustand wird direkt im Focus-Fenster eindeutig angezeigt und mit einer kurzen, zum tatsächlichen Zustand passenden Handlungsaufforderung verbunden.
-- **Fokuszeit abgelaufen – Pause eingestellt:** Der Fokusabschnitt endet und der Timer wechselt direkt in den Status `BREAK`; der Übergang wird visuell deutlich angezeigt. `EXPIRED` wird für diesen automatischen Übergang nicht zwischengeschaltet.
+- **Fokuszeit abgelaufen – Pause eingestellt:** Der Fokusabschnitt endet mit `EXPIRED`. Die konfigurierte Pause beginnt erst nach der ausdrücklichen Aktion **„Pause starten“**; bis dahin läuft kein Timer.
 - **Fokuszeit abgelaufen – keine Pause:** Der Status wechselt auf `EXPIRED`; es wird keine Pause gestartet und das Focus-Fenster zeigt an, dass die nächste Fokusphase manuell gestartet werden kann.
 - **Pause abgelaufen:** Der Status wechselt auf `EXPIRED`; das Fenster zeigt klar an, dass die Pause beendet ist und auf den manuellen Start der nächsten Fokusphase wartet.
 - **Skip Break:** Nach dem Überspringen der Pause wird deutlich angezeigt, dass die nächste Fokusphase manuell gestartet werden kann.
@@ -201,7 +202,7 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Der Timer läuft zuverlässig weiter, wenn der Nutzer zu einem anderen Browser-Tab wechselt, den Browser minimiert oder in einem anderen Programm arbeitet.
 - Die Zeitmessung basiert auf verlässlichen Zeitstempeln bzw. einer absoluten Zeitreferenz und nicht darauf, dass eine Animation oder ein JavaScript-Intervall im Vordergrund kontinuierlich ausgeführt wird.
 - Beim Zurückkehren in den Focus-Tab wird der tatsächliche Timerstand unmittelbar korrekt dargestellt; Hintergrunddrosselung des Browsers darf die gemessene Dauer nicht verfälschen.
-- Timer-Ende und ein dadurch vorgesehener Wechsel in die konfigurierte Pause werden auch bei inaktivem Tab korrekt verarbeitet. Es startet dadurch keine neue Fokusphase automatisch.
+- Timer-Ende wird auch bei inaktivem Tab korrekt verarbeitet. Der Status wechselt zu `EXPIRED`; eine konfigurierte Pause beginnt erst nach ausdrücklicher Aktion. Es startet keine neue Fokusphase automatisch.
 - Benachrichtigungen über Timer-Ende oder Pausenwechsel werden pro Ereignis höchstens einmal ausgelöst. Ist der Tab im Hintergrund, wird eine geeignete Browser-Benachrichtigung verwendet, sofern der Nutzer die Berechtigung erteilt hat; andernfalls wird der Zustand beim Zurückkehren klar angezeigt.
 - Beim erneuten Aktivieren des Tabs werden Timerstatus, verbleibende Zeit und verfügbare Aktionen mit dem tatsächlichen Session-Zustand abgeglichen.
 - Der Wechsel zwischen Focus Mode und anderen Programmen (z. B. FL Studio) darf den Timer weder pausieren noch zurücksetzen.
@@ -232,7 +233,7 @@ Vordefinierte Modi:
 | Marathon | 3 Stunden | 30 Minuten |
 | Custom | frei einstellbar | frei einstellbar |
 
-Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach dem eingestellten Intervall automatisch.
+Auch längere Sessions sind pausierbar. Nach Ablauf der Fokuszeit wird die konfigurierte Pause erst nach ausdrücklicher Bestätigung gestartet.
 
 ### Notizen und Ablenkungen
 - Einklappbarer Notizbereich im Current Session-Bereich.
@@ -288,7 +289,7 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Focus Mode speichert Session-Zustand und Änderungen fortlaufend in einem dauerhaft verfügbaren lokalen Zwischenspeicher. Beim unerwarteten Browser-, Tab- oder Geräteabsturz bzw. Stromausfall wird beim nächsten Öffnen der letzte erfolgreich lokal gespeicherte Zustand wiederhergestellt.
 - Ist Focus Mode wegen eines geschlossenen Browsers, PC-Ruhezustands, Herunterfahrens, Absturzes oder Stromausfalls nicht verfügbar, wird eine zuvor laufende Session als `PAUSED` wiederhergestellt. Die Ausfallzeit zählt nicht als Fokuszeit; ein automatischer Neustart findet nicht statt.
 - Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand oder wird er regulär heruntergefahren, wird die Session ebenfalls pausiert, statt abgebrochen oder abgeschlossen zu werden.
-- Ein lediglich minimierter Browser, ein Hintergrund-Tab oder die Nutzung eines anderen Programms gilt dagegen nicht als Ausfall: Der Timer läuft weiter und verarbeitet auch Timer-Ende sowie den vorgesehenen automatischen Übergang von Fokus zu Pause.
+- Ein lediglich minimierter Browser, ein Hintergrund-Tab oder die Nutzung eines anderen Programms gilt dagegen nicht als Ausfall: Der Timer läuft weiter und verarbeitet Timer-Ende sowie den Status `EXPIRED`. Eine Pause startet erst nach manueller Bestätigung.
 - Timerstatus und verbleibende Zeit werden anhand der gespeicherten Zeitinformationen und der tatsächlich verstrichenen Zeit korrekt rekonstruiert. Die verbleibende Zeit des aktiven Fokus- oder Pausenabschnitts bleibt erhalten; die Zeit der Nichtverfügbarkeit wird nicht als Fokuszeit gezählt.
 - Bereits erfolgreich lokal gespeicherte Fokusabschnitte, Notizen, Distraction-Log-Einträge und übrige Session-Daten bleiben erhalten. Änderungen, die vor dem Ausfall noch nicht erfolgreich lokal gespeichert wurden, können nicht garantiert wiederhergestellt werden; der wiederhergestellte Stand muss als letzter lokal gesicherter Stand erkennbar sein.
 - Noch nicht zentral synchronisierte, aber lokal gesicherte Änderungen werden nach Wiederherstellung erneut zur Synchronisierung vorgemerkt.
@@ -621,3 +622,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Qualitätssicherung:** JavaScript-Syntax und statische Markup-/ID-Referenzen wurden geprüft. Ein vollständiger interaktiver Browser-/End-to-End-Test steht noch aus.
 - Der GitHub-Pages-Deploy-Workflow für den Preview-Commit `563bb614d740dae04cf8fd0adae3b7f6649a1efd` wurde erfolgreich abgeschlossen.
 - Die Preview-Implementierung ist daher noch nicht als vollständig produktionsreif oder geräteübergreifend synchronisiert zu betrachten.
+
+
+## Implementierungsabgleich
+- Important bleibt ein Wissensarchiv und keine zweite Aufgabenliste. Nur Einträge mit der ausdrücklichen Option **„Als Fokusaufgabe in der Task Queue anzeigen“** erscheinen als Important-Aufgaben im Focus Center.
+- Projects und Important verwenden dieselben vier Prioritätsstufen: Dringend, Wichtig, Vorläufig und Unbefristet. Ältere gespeicherte Task-Prioritäten werden beim Laden in diese Stufen überführt.
+- Die Reihenfolge der Task Queue speichert Quelle und Eintrags-ID gemeinsam, damit IDs verschiedener Bereiche nicht kollidieren.
+- Erledigte Tasks können direkt in der Focus Queue markiert werden und bleiben im einklappbaren Bereich „Erledigte Aufgaben“ sichtbar.

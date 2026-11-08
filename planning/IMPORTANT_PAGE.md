@@ -1,12 +1,12 @@
 # Important Page — Konzept
 
 ## Status
-Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutzer die Seite ausdrücklich freigibt.
+Preview-Implementierung freigegeben. Die Seite ist clientseitig umgesetzt; statische Prüfung läuft. Zentrale Synchronisierung und vollständige Browser-QA bleiben getrennte offene Punkte.
 
 ## Aktueller Repository-Stand (nur Bestandsaufnahme)
 - Navigationseintrag: `Important` (Seiten-ID: `page-important`).
-- Die Seite ist derzeit ein Platzhalter.
-- Im bestehenden lokalen Tool-Kontext sind mögliche Eingabefelder angelegt; diese sind keine bestätigten Produktentscheidungen.
+- Die Seite ist in der Preview als lokales Knowledge Archive umgesetzt.
+- Daten werden lokal im Browser gespeichert; eine zentrale Synchronisierung ist nicht eingerichtet.
 
 ## Kategorien — inhaltlich festgelegt
 1. **Unternehmensinformationen** — umfasst Unternehmensstruktur und interne Abläufe, Markenidentität und langfristige Ausrichtung, Geschäftsmodelle und Einnahmequellen sowie allgemeine Unternehmensgrundsätze.
@@ -38,6 +38,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 - Die Priorität ist beim Erstellen verpflichtend und kann beim späteren Bearbeiten geändert werden.
 - Die Kategorie wird im Erstellen-/Bearbeiten-Fenster über ein Dropdown-Menü ausgewählt, das alle fünf festgelegten Kategorien enthält. Die Kategorie ist verpflichtend.
 - Das Beschreibungsfeld ist ein größeres, mehrzeiliges Textfeld, damit auch ausführliche Informationen, Hintergründe und Entscheidungsgründe eingetragen werden können. Die Beschreibung bleibt optional.
+- Ein optionales Kontrollfeld **„Als Fokusaufgabe in der Task Queue anzeigen“** hält Important klar vom Aufgabenmanagement getrennt. Nur ausdrücklich markierte Einträge erscheinen in der Focus Task Queue; dort können sie als erledigt markiert werden.
 - Das optionale Ereignisdatum wird über einen normalen Datumsauswähler mit Kalender-Popup festgelegt.
 - Die Reihenfolge der Prioritätsstufen entspricht der oben aufgeführten Reihenfolge: Dringend vor Wichtig, Wichtig vor Vorläufig und Vorläufig vor Unbefristet.
 - Innerhalb derselben Prioritätsstufe werden Einträge anhand ihres **Ereignisdatums** sortiert, nicht anhand des Erstellungsdatums.
@@ -91,7 +92,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 - Suchleiste sowie Kategorien- und Prioritätsfilter sind direkt oben auf der Important-Seite sichtbar und nicht erst in einem separaten Filter-Menü verborgen.
 
-- Important-Einträge sollen später mit passenden anderen HQ-Bereichen (z. B. Projects oder Business) verknüpft werden können. Die konkrete Auswahl der verknüpfbaren Bereiche und die Darstellung der Verknüpfungen werden noch festgelegt.
+- Important-Einträge sollen später mit passenden anderen HQ-Bereichen (z. B. Projects oder Network) verknüpft werden können. Die konkrete Auswahl der verknüpfbaren Bereiche und die Darstellung der Verknüpfungen werden noch festgelegt.
 
 - Die Verknüpfungen zu anderen HQ-Bereichen können direkt beim Erstellen und Bearbeiten eines Important-Eintrags über ein eigenes Auswahlfeld hinzugefügt bzw. geändert werden. Die konkrete Auswahl der Bereiche und die Bedienung des Auswahlfeldes werden später definiert.
 - Pro Important-Eintrag können mehrere Verknüpfungen gleichzeitig bestehen, auch zu mehreren Einträgen desselben HQ-Bereichs (z. B. zwei Projects und ein Business-Bereich), sofern diese später als auswählbare Ziele angeboten werden.
@@ -139,7 +140,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 ## Verknüpfungsauswahl im Formular (bestätigt)
 - Im Abschnitt „Verknüpfungen“ gibt es ein Suchfeld mit Dropdown.
-- Über die Suche können sowohl HQ-Bereiche als auch konkrete Einträge gefunden werden.
+- Über die Suche werden die Bereiche **Projects** und **Network** sowie echte Einträge aus diesen Bereichen gefunden. Nicht vorhandene Beispielziele werden nicht als reale Datensätze angeboten.
 - Mehrere Verknüpfungen können gleichzeitig ausgewählt werden.
 - Mehrere Einträge aus demselben HQ-Bereich sind zulässig.
 - Ausgewählte Verknüpfungen bleiben sichtbar und können einzeln wieder entfernt werden.
@@ -154,11 +155,11 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 - Verknüpfungen werden intern über eine stabile, eindeutige ID des Zieleintrags gespeichert, nicht über dessen angezeigten Namen. Dadurch bleiben Verknüpfungen bei einer späteren Umbenennung bestehen. Wird ein Zieleintrag innerhalb des HQ verschoben, soll die Verknüpfung ebenfalls erhalten bleiben, solange seine ID unverändert bleibt.
 
-- Wird ein verknüpfter Zieleintrag endgültig gelöscht, werden seine Verknüpfungen automatisch aus allen anderen Einträgen entfernt. Es bleiben keine ungültigen Links oder leeren Verknüpfungs-Labels zurück; die übrigen Einträge bleiben unverändert erhalten und es erscheint dafür keine zusätzliche Fehlermeldung.
+- Wird ein verknüpfter Zieleintrag aus Projects oder Network endgültig gelöscht, werden seine Verknüpfungen automatisch aus allen anderen Important-Einträgen entfernt. Es bleiben keine ungültigen Links oder leeren Verknüpfungs-Labels zurück.
 
 - **Text der Löschbestätigung:** Überschrift „Eintrag endgültig löschen?“; Nachricht „Möchtest du diesen Important-Eintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.“; Aktionen „Abbrechen“ und „Endgültig löschen“, wobei „Endgültig löschen“ deutlich rot gestaltet wird.
 
-- Die Beispieldatensätze umfassen zunächst fünf realistische Beispiele, je eines pro Kategorie: „SATYRN Brand Identity“ (Unternehmensinformationen), „Potenzielle Artist-Kooperation“ (Geschäftspartner & Kooperationen), „Fokus auf Producer-Dienstleistungen“ (Strategic Moves), „Eigenes SATYRN Studio“ (Future Blueprints) und „Interne Unternehmensnotiz“ (Sonstiges). Jeder Beispieldatensatz trägt eine dezente, aber erkennbare Kennzeichnung „BEISPIEL“. Sobald der erste eigene Important-Eintrag gespeichert wird, verschwinden alle Beispieldatensätze automatisch.
+- Die Beispieldatensätze umfassen zunächst fünf realistische Beispiele, je eines pro Kategorie: „SATYRN Brand Identity“ (Unternehmensinformationen), „Potenzielle Artist-Kooperation“ (Geschäftspartner & Kooperationen), „Fokus auf Producer-Dienstleistungen“ (Strategic Moves), „Eigenes SATYRN Studio“ (Future Blueprints) und „Interne Unternehmensnotiz“ (Sonstiges). Jeder Beispieldatensatz trägt eine dezente, aber erkennbare Kennzeichnung „BEISPIEL“. Sobald der erste eigene Important-Eintrag gespeichert oder ein Beispieldatensatz in einen eigenen Eintrag umgewandelt wird, verschwinden alle übrigen Beispieldatensätze automatisch.
 
 - Die fünf Beispieldatensätze verwenden unterschiedliche Prioritäten, damit die Sortierung direkt sichtbar wird: **Dringend** — „Potenzielle Artist-Kooperation“; **Wichtig** — „SATYRN Brand Identity“; **Vorläufig** — „Fokus auf Producer-Dienstleistungen“; **Unbefristet** — „Eigenes SATYRN Studio“ und „Interne Unternehmensnotiz“. Damit sind alle vier Prioritätsstufen vertreten.
 
@@ -168,7 +169,7 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 
 - Die Beispieldatensätze demonstrieren auch die Änderungsinformation: **„SATYRN Brand Identity“** zeigt „Zuletzt geändert“ mit einem dynamisch berechneten Datum von vor 2 Tagen; **„Eigenes SATYRN Studio“** zeigt die Angabe mit einem dynamisch berechneten Datum von vor 7 Tagen. Die übrigen drei Beispieldatensätze zeigen keine Änderungsinformation. Die Datumsanzeige verwendet das Format `DD.MM.YYYY`.
 
-- Die Beispieldatensätze demonstrieren unterschiedliche Verknüpfungen zu ebenfalls klar als Beispieldaten gekennzeichneten Zielen: **„SATYRN Brand Identity“** wird mit einem Beispielprojekt verknüpft; **„Potenzielle Artist-Kooperation“** mit einem Beispielprojekt und einem Business-Beispieleintrag; **„Fokus auf Producer-Dienstleistungen“** mit zwei unterschiedlichen Beispielprojekten; **„Eigenes SATYRN Studio“** mit einem Business-Beispieleintrag; **„Interne Unternehmensnotiz“** erhält keine Verknüpfung. Die Beispieldaten dürfen nicht mit echten HQ-Datensätzen verwechselt werden.
+- Die Beispieldatensätze demonstrieren unterschiedliche Verknüpfungen zu ebenfalls klar als Beispieldaten gekennzeichneten Zielen: **„SATYRN Brand Identity“** wird mit einem Beispielprojekt verknüpft; **„Potenzielle Artist-Kooperation“** mit einem Beispielprojekt und einem Network-Beispieleintrag; **„Fokus auf Producer-Dienstleistungen“** mit zwei unterschiedlichen Beispielprojekten; **„Eigenes SATYRN Studio“** mit einem Network-Beispieleintrag; **„Interne Unternehmensnotiz“** erhält keine Verknüpfung. Die Beispieldaten dürfen nicht mit echten HQ-Datensätzen verwechselt werden.
 
 - Auch in der Empty-State-Ansicht bleibt das grüne Plus-Symbol oben rechts auf der Important-Seite dauerhaft sichtbar. Der Nutzer kann damit jederzeit einen neuen Eintrag starten; zusätzlich bietet die Empty-State-Ansicht eine direkte Möglichkeit, den ersten Eintrag zu erstellen.
 
@@ -350,3 +351,13 @@ Konzeptphase — keine Änderungen an der Website-Implementierung, bis der Nutze
 ## Kartenübersicht — Listenstruktur
 - Die Important-Einträge erscheinen als eine durchgehende, einspaltige Kartenliste im zentralen Inhaltsbereich.
 - Die Karten werden innerhalb dieser Liste nach der festgelegten Prioritätsreihenfolge sortiert: Dringend → Wichtig → Vorläufig → Unbefristet. Es gibt keine separaten Abschnittsüberschriften oder getrennten Listenblöcke pro Priorität; die farbigen Prioritätsstreifen und -Badges kennzeichnen die jeweilige Stufe.
+
+
+## Umsetzungsabgleich
+- Die Beispiele sind sichtbar mit **BEISPIEL** gekennzeichnet und werden nach dem ersten eigenen Eintrag vollständig aus der Liste entfernt.
+- Der Titel hat keine künstliche Zeichenbegrenzung.
+- Verknüpfungen werden aus den vorhandenen Projects-Tasks und Network-Kontakten geladen; zusätzlich können die Bereiche selbst verknüpft werden. Ein Klick öffnet den Bereich und springt bei konkreten Einträgen zum Datensatz.
+- Wird ein verknüpfter Task oder Kontakt gelöscht, werden seine Referenzen automatisch entfernt.
+- Speichern und Löschen sind transaktional: Bei einem lokalen Speicherfehler bleibt der bisherige Eintragsbestand erhalten.
+- Undatierte Einträge bleiben auch direkt nach dem Speichern am Ende ihrer Prioritätsgruppe.
+- Important-Einträge erscheinen nicht automatisch als Tasks. Die Aufnahme in Focus Queue erfordert das explizite Kontrollfeld **„Als Fokusaufgabe in der Task Queue anzeigen“**.
