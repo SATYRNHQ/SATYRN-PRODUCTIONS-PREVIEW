@@ -944,6 +944,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Auf kleineren Monitoren bleibt das Fenster innerhalb des sichtbaren Bereichs; der Inhaltsbereich wird entsprechend scrollbar.
 - Die feste Aktionsleiste mit Starten und Abbrechen bleibt erreichbar, ohne dass das Fenster die Headbar überlagert.
 
+
+### Mobile-Darstellung des Vorbereitungsfensters
+- Auch auf Smartphones wird die Session-Vorbereitung als Modal dargestellt und nicht als separate Vollbildseite.
+- Das Modal passt Breite und Höhe an den verfügbaren Bildschirmplatz an; Inhalte bleiben intern scrollbar und die Aktionsleiste bleibt erreichbar.
+- Die Darstellung bleibt klar als überlagerndes Fenster erkennbar und berücksichtigt sichere Bildschirmabstände.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
