@@ -372,6 +372,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Für Tages- und Wochenziele zählt jede tatsächlich erfasste Fokuszeit – auch aus später unterbrochenen oder endgültig verworfenen Sessions.
 - Pausen- und Unterbrechungszeiten zählen nicht zur Zielerreichung.
 - Ziele können jederzeit angepasst werden.
+- Tages- und Wochenziele werden unabhängig voneinander berechnet: Das Verfehlen eines Tagesziels verhindert nicht automatisch die Erreichung des Wochenziels; umgekehrt ersetzt ein erreichtes Wochenziel keine verfehlten Tagesziele.
 
 
 ### Rekord für längste zusammenhängende Fokuszeit
