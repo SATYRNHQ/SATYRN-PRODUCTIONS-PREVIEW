@@ -1,6 +1,6 @@
 # SATYRN PRODUCTIONS HQ – Focus Mode Plan
 
-  > Status: Clientseitige Focus-Mode-Implementierung in der Preview committed; Deployment und Browser-QA stehen noch aus. Zentrale Synchronisierung und optionales Ordner-Backup sind noch offen.
+   > Status: Clientseitige Focus-Mode-Implementierung in der Preview deployed; statische/CI-Prüfungen erfolgreich, Browser-QA noch ausstehend. Zentrale Synchronisierung und optionales Ordner-Backup sind noch offen.
 > Dieses Dokument sammelt die gemeinsam bestätigten Anforderungen. Die Umsetzung erfolgt ausschließlich in der Preview; die Live-Seite bleibt unverändert.
 
 ## 1. Grundaufbau und Seitenlayout
@@ -619,4 +619,5 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Optionales PC-Ordner-Backup:** Noch nicht umgesetzt. Es ist als websiteweite Backup-Funktion vorgesehen, nicht als separater Focus-Mode-JSON-Export.
 - **Browser-/System-Ruhezustand:** Erkennung und automatische Pause sind best-effort, da Browser-Lifecycle- und Betriebssystemereignisse nicht in jeder Situation zuverlässig ausgeliefert werden.
 - **Qualitätssicherung:** JavaScript-Syntax und statische Markup-/ID-Referenzen wurden geprüft. Ein vollständiger interaktiver Browser-/End-to-End-Test steht noch aus.
+- Der GitHub-Pages-Deploy-Workflow für den Preview-Commit `563bb614d740dae04cf8fd0adae3b7f6649a1efd` wurde erfolgreich abgeschlossen.
 - Die Preview-Implementierung ist daher noch nicht als vollständig produktionsreif oder geräteübergreifend synchronisiert zu betrachten.
