@@ -266,3 +266,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Das bestehende Important-Formular dient als gestalterische und funktionale Grundlage; Calendar erhält kein vollständig eigenständiges Formularsystem.
 
 - 2026-11-09: Das Calendar-Erstellungs- und Bearbeitungsformular übernimmt das Formular aus Important und wird um die Calendar-spezifischen Felder und Wiederholungsfunktionen erweitert.
+
+
+## Ergänzung — Größe des Erstellungs- und Bearbeitungsformulars
+
+- Das Formular zum Erstellen und Bearbeiten eines Kalendereintrags öffnet sich als **großes Pop-up (Variante A)** und bietet großzügigen Platz für die drei Formularabschnitte und die umfangreichen Wiederholungsoptionen.
+- Der Kalender bleibt dabei im Hintergrund erhalten; das Formular wirkt als fokussierter Arbeitsbereich.
+
+- 2026-11-09: Für das Calendar-Erstellungs- und Bearbeitungsformular wurde Variante A gewählt: ein großes Pop-up mit großzügigem Platz.
