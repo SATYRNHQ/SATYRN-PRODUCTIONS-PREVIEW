@@ -1856,3 +1856,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - **Längste gesamte Session:** Erfasst wird die höchste Summe aller tatsächlich erfassten Fokuszeitabschnitte innerhalb einer einzelnen Session. Mehrere Fokusphasen derselben Session werden addiert; Pausen und Unterbrechungszeiten zählen nicht mit.
 - Beide Rekorde zeigen jeweils die erreichte Dauer und das Datum.
 - Beide Werte werden automatisch aktualisiert, sobald eine Session bzw. ein Fokuszeitabschnitt einen neuen persönlichen Rekord erreicht.
+
+
+### Rekorde bei unterbrochenen oder verworfenen Sessions
+- Die bisher tatsächlich erfasste Fokuszeit einer unterbrochenen, weiterhin offenen Session zählt bereits für den Rekord „Längste gesamte Session“.
+- Der Rekord kann sich während einer noch offenen Session aktualisieren und wird bei späterer Fortsetzung anhand der zusätzlich erfassten Fokuszeit weiter geprüft.
+- Auch bei einer endgültig verworfenen Session bleiben die bis dahin tatsächlich erfassten Fokuszeitabschnitte für den persönlichen Rekord berücksichtigt; das Verwerfen löscht keine bereits geleistete Fokuszeit.
+- Pausen und Unterbrechungszeiten zählen weiterhin nicht zur Rekorddauer.
