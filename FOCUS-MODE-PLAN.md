@@ -1917,3 +1917,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beide Kennzahlen berücksichtigen den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Bei mehreren ausgewählten Kategorien wird jede Session nur einmal gezählt.
 - Die Kennzahlen erscheinen in Daily, Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum. Sie werden bei Änderungen an Sessions sowie beim Wechsel von Zeitraum oder Kategorie-Filter automatisch neu berechnet.
 - Gibt es im ausgewählten Zeitraum keinen aktiven Fokus-Tag bzw. keine aktive Kalenderwoche als Berechnungsgrundlage, wird „–“ angezeigt.
+### Erfolgsquote abgeschlossener Sessions
+- Die Statistiken zeigen zusätzlich die **Erfolgsquote abgeschlossener Sessions** als Prozentwert.
+- Berechnung: erfolgreich abgeschlossene Sessions geteilt durch alle endgültig beendeten Sessions (erfolgreich abgeschlossen + endgültig verworfen), multipliziert mit 100.
+- Als erfolgreich abgeschlossen zählen regulär abgeschlossene Sessions und vorzeitige Abschlüsse über „Complete Session“.
+- Endgültig verworfene Sessions zählen als nicht erfolgreich und gehen in den Nenner ein.
+- Noch offene Sessions – laufende, pausierte oder unterbrochene Sessions – werden nicht berücksichtigt, da ihr endgültiger Ausgang noch nicht feststeht.
+- Die Kennzahl berücksichtigt den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Eine Session wird nur einmal gezählt.
+- Die Zuordnung zum Zeitraum erfolgt anhand des Zeitpunkts, an dem die Session endgültig abgeschlossen oder verworfen wurde.
+- Die Erfolgsquote erscheint in Daily, Weekly, Monthly, Overall und im benutzerdefinierten Zeitraum und wird bei Änderungen automatisch neu berechnet.
+- Wenn im ausgewählten Zeitraum keine endgültig beendeten Sessions vorliegen, wird „–“ statt 0 % angezeigt.
