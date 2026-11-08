@@ -1327,6 +1327,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Wird beim Bearbeiten der Name eines eigenen Presets geändert und gespeichert, wird es automatisch an seiner neuen alphabetischen Position im Bereich „Meine Presets“ einsortiert.
 - Die Sortierung wird direkt nach erfolgreichem Speichern aktualisiert.
 
+
+### Informationsanzeige beim Hover über Presets
+- Beim Darüberfahren mit der Maus über einen Preset-Button erscheint eine dezente Informationsanzeige.
+- Sie zeigt den vollständigen Preset-Namen sowie Fokus- und Pausendauer.
+- Die Anzeige ist rein informativ und verändert weder Auswahl noch Einstellungen des Presets.
+- Auf Touch-Geräten wird die Information über eine geeignete alternative Interaktion zugänglich gemacht, ohne die Preset-Auswahl zu erschweren.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
