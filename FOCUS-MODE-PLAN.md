@@ -1054,6 +1054,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jede Karte zeigt das Kategorie-Icon und den Kategorienamen und verwendet die gemeinsame Farbe aus dem Dashboard/Important.
 - Die aktuell ausgewählte Kategorie ist eindeutig hervorgehoben; die Auswahl bleibt auch bei benutzerdefinierten Kategorien einheitlich.
 
+
+### Responsives Raster der Kategorie-Kacheln
+- Die farbigen Kategorie-Kacheln werden in einem flexiblen Raster nebeneinander angeordnet.
+- Das Raster passt Spaltenzahl und Kachelbreite automatisch an die verfügbare Breite des Vorbereitungsfensters an.
+- Auf schmalen Bildschirmen ordnen sich die Kacheln passend um; Beschriftungen und Auswahlzustand bleiben gut erkennbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
