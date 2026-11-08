@@ -484,6 +484,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei vielen Einträgen wird die Liste in überschaubare Seiten bzw. Abschnitte aufgeteilt. Die Navigation zeigt die aktuelle Position und ermöglicht das Weiterblättern.
 - Alle dargestellten Kennzahlen und Einträge verwenden echte gespeicherte Daten; Beispielwerte aus Designvorlagen sind keine Produktivdaten.
 
+
+**Kennzahlen bei aktiver Suche und Filtern:** Die KPI-Zeile zeigt stets die Kennzahlen für die aktuell angezeigte Ergebnismenge. Aktive Suchbegriffe und Filter wirken sich daher auch auf Gesamtzahl der Sessions, tatsächliche Fokuszeit und Anzahl abgeschlossener Sessions aus.
 ### Zeitraum-Filter
 - Der Zeitraum-Filter bietet folgende Schnelloptionen:
   - **Heute**
