@@ -324,6 +324,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Navigation ist auch bei längeren ausführlichen Berichten gut erreichbar.
 - Bei einem einseitigen kompakten Bericht wird keine unnötige Seitennavigation eingeblendet.
 
+
+### Zoom in der PDF-Vorschau
+- Die PDF-Vorschau bietet einen Zoom-Regler, mit dem Texte und Diagramme vergrößert und verkleinert werden können.
+- Zusätzlich gibt es eine Aktion „An Seite anpassen“, um die aktuelle PDF-Seite wieder vollständig in den Vorschau-Bereich einzupassen.
+- Der Zoom verändert ausschließlich die Darstellung in der Vorschau, nicht das exportierte PDF.
+- Die Seitennavigation bleibt auch bei verändertem Zoom bedienbar.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
