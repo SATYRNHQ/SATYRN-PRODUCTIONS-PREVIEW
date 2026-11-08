@@ -40,6 +40,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - **Löschen** erfordert eine Sicherheitsbestätigung, bevor der Eintrag endgültig entfernt wird.
 - Die Detailansicht zeigt: **Titel, Datum, Uhrzeit, Priorität und eine optionale Beschreibung**.
 - **Mehrtägige Termine sind möglich.** Ein Termin kann daher über ein Start- und Enddatum laufen und wird in der Monatsansicht über die betroffenen Tage hinweg berücksichtigt.
+- Mehrtägige Termine werden in der Monatsansicht **als zusammenhängender Eintrag über die betroffenen Tage hinweg** dargestellt. Anfang und Ende des Eintrags sind visuell erkennbar, damit der durchgehende Zeitraum als ein einzelner Termin verständlich bleibt.
 - Zusätzlich gibt es **ganztägige Termine ohne erforderliche Uhrzeitangabe**. Das gilt auch für mehrtägige ganztägige Termine.
 - Termine können **wiederkehrend** angelegt werden, mindestens mit den Wiederholungen wöchentlich, monatlich und jährlich.
 - Mehrtägige Termine können ebenfalls wiederkehrend angelegt werden. Die festgelegte Dauer wird auf jedes Vorkommen der Wiederholungsserie angewendet (z. B. jährlich vom 8. bis zum 10. November).
@@ -95,6 +96,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Mehrtägige Termine werden in der Monatsansicht als zusammenhängender Eintrag über alle betroffenen Tage dargestellt; Anfang und Ende des Eintrags bleiben visuell erkennbar.
 - 2026-11-08: Das Wiederholungs-Symbol wird nicht nur in der Monatsansicht, sondern auch im Tagesfenster und in der Detailansicht angezeigt.
 - 2026-11-08: Wiederkehrende Termine erhalten in der Monatsansicht eine kleine, dezente Kennzeichnung, damit sie von Einzelterminen unterscheidbar sind.
 - 2026-11-08: Änderungen an einer Wiederholungsserie können im Bearbeitungsfenster wahlweise erst ab einem festgelegten Datum bzw. einem ausgewählten Vorkommen gelten.
