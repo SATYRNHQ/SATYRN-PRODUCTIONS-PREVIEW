@@ -570,6 +570,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Individual sessions can be edited after they have been recorded.
 - Editable details include notes, focus goal, and category.
 - Editing a historical session updates its saved record and relevant statistics consistently.
+- **Historical integrity:** Editing a historical session changes only the explicitly editable descriptive fields. The recorded focus-time segments, actual start/end timestamps, original session status and event history are not rewritten by these edits.
+- Any statistics that depend on an editable field, such as category totals, are recalculated consistently; time-based statistics and personal records remain based on the originally recorded focus-time data.
+- The edit interface makes clear which fields are editable and that recorded session timing and status remain unchanged.
 
 ### History search
 - Search field to find sessions by task name or focus goal.
