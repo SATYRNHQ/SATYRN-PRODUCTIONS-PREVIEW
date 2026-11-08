@@ -223,6 +223,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Zusätzlich gibt es die Ansicht „Alle Kategorien“ als Standard.
 - Mehrfachauswahl ermöglicht beispielsweise die gemeinsame Analyse von Music Production und Mixing & Mastering.
 - Bei mehreren ausgewählten Kategorien werden Fokuszeiten und Session-Anzahlen dieser Kategorien gemeinsam ausgewertet; jede Session wird dabei nur einmal gezählt.
+
+- **Konsistente Kategorie-Summen:** Bei einer oder mehreren ausgewählten Kategorien müssen die gefilterten Tages- und Monatswerte exakt aus den Fokuszeitsegmenten dieser Kategorien berechnet werden. Die Monatswerte müssen der Summe der entsprechenden gefilterten Tageswerte entsprechen.
+- **Keine Doppelzählung:** Jeder Fokuszeitabschnitt wird einer Session und deren zum jeweiligen Zeitpunkt gültigen Kategoriezuordnung zugeordnet und innerhalb einer Mehrfachauswahl höchstens einmal gezählt. Die Kombination mehrerer Kategorien darf keine Zeitabschnitte vervielfachen.
+- **Filterwechsel:** Beim Wechsel, Hinzufügen oder Entfernen von Kategorien werden Tageswerte, Monatsgesamtzeit, Kalender-Aktivitätsfarben und Vergleiche aus derselben Filterauswahl neu berechnet. Die zugrunde liegenden Fokuszeitdaten werden dadurch nicht verändert.
+- **Tagesziel bleibt ungefiltert:** Die bereits festgelegte Tagesziel-Markierung basiert weiterhin auf der gesamten gültigen Tagesfokuszeit und wird durch Kategorie- oder Zeitfilter nicht verändert.
+
 - Die Filteroptionen übernehmen automatisch die Kategorien aus dem gemeinsamen SATYRN-Kategoriensystem einschließlich eigener Dashboard-Kategorien.
 - Bei Auswahl einer oder mehrerer Kategorien beziehen sich Fokuszeiten, Session-Anzahlen, Produktivitätswerte und Rekorde auf die ausgewählten Kategorien.
 - Zeitvergleiche bleiben auf denselben Zeitraum und dieselbe Kategorieauswahl bezogen; die Vergleichsperiode verwendet also exakt dieselben ausgewählten Kategorien.
