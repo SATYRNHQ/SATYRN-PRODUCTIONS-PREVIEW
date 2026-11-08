@@ -39,6 +39,16 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Es werden keine starren Pixelbreiten festgelegt. Die Bereiche nutzen die verfügbare Fensterbreite sinnvoll und passen sich responsiv an unterschiedliche Desktop-Fenstergrößen an.
 - Die Anordnung soll unnötige Leerflächen vermeiden und zugleich ausreichend Abstand sowie gute Lesbarkeit gewährleisten.
 
+
+### Abstände und Innenabstände am PC
+- Zwischen den Hauptbereichen wird ein einheitlicher, gut erkennbarer Abstand verwendet. Die Bereiche sollen klar voneinander getrennt sein, ohne dass die Seite unnötig auseinandergezogen wirkt.
+- Innerhalb der einzelnen Bereiche gibt es konsistente Innenabstände zwischen Überschrift, Inhalt und Bedienelementen.
+- **Current Session:** erhält etwas großzügigere Innenabstände, damit Timer, Status, Fokusziel und Aktionen ausreichend Raum haben und nicht eingeengt wirken.
+- **Session Setup und Task Queue:** verwenden aufeinander abgestimmte Innenabstände und beginnen auf derselben visuellen Höhe.
+- **Statistics:** werden kompakter gehalten, bleiben aber gut lesbar und bedienbar.
+- Für die gesamte PC-Ansicht gilt ein einheitliches Abstandssystem. Einzelne Abstände werden nicht willkürlich voneinander abweichend festgelegt.
+- Abstände passen sich bei veränderter Fensterbreite sinnvoll an. Dabei bleiben klare Gruppierung, Lesbarkeit und eine effiziente Flächennutzung erhalten.
+
 ## 2. Current Session und Timer
 
 
