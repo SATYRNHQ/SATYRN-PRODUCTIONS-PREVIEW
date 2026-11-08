@@ -1060,6 +1060,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Raster passt Spaltenzahl und Kachelbreite automatisch an die verfügbare Breite des Vorbereitungsfensters an.
 - Auf schmalen Bildschirmen ordnen sich die Kacheln passend um; Beschriftungen und Auswahlzustand bleiben gut erkennbar.
 
+
+### Manuelle Prioritätsauswahl ohne Important-Verknüpfung
+- Wenn eine Focus-Session mit keiner Important-Aufgabe verknüpft ist, kann die Priorität manuell ausgewählt werden.
+- Die Auswahl verwendet dieselben farbigen Prioritäts-Kacheln und dieselbe Bedienlogik wie auf der Important-Seite.
+- Die ausgewählte Priorität wird in der Session angezeigt und verändert keine Important-Aufgaben.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
