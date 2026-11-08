@@ -456,6 +456,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Klick auf einen Tag öffnet dessen Tagesstatistiken.
 - Navigation zwischen Monaten.
 
+- **Eindeutige Tageszustände im Monatskalender:** Tage ohne erfasste Fokuszeit bleiben neutral. Tage mit Fokusaktivität, aber verfehltem Tagesziel, zeigen eine dezente Aktivitätsmarkierung und bleiben klar als nicht erreicht erkennbar. Erreichte Tagesziele erhalten eine eigene, deutlich unterscheidbare Markierung.
+- **Zukünftige Tage:** Werden zurückhaltend dargestellt und nicht als verfehlt gewertet.
+- **Ungeklärte Tage:** Erhalten einen eigenen, klar beschrifteten bzw. ikonisch unterscheidbaren Zustand. Sie dürfen weder wie erreichte noch wie verfehlte Tage aussehen.
+- Die Zustände müssen nicht allein über Farbe unterscheidbar sein; ergänzende Symbole oder Textkennzeichnungen gewährleisten Verständlichkeit und Barrierearmut.
+
+
 - **Gemeinsame Monatsnavigation:** Monthly Statistics und Monthly Focus Map verwenden denselben ausgewählten Monat. Ein Monatswechsel in einer der beiden Ansichten aktualisiert die andere Ansicht synchron.
 - **Tagesnavigation:** Ein Klick auf einen Kalendertag öffnet die zugehörigen Tagesstatistiken für genau dieses Datum.
 - **Kategorie-Filter für Aktivitätsfarben:** Die farbliche Aktivitätsintensität der Monthly Focus Map berücksichtigt die aktuell ausgewählten Kategorien und zeigt damit die Fokusaktivität des aktiven Filters.
