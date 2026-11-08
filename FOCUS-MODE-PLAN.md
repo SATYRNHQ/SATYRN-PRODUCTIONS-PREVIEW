@@ -262,6 +262,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bestehende Kategorie-Mehrfachauswahl bleibt auch für den frei wählbaren Zeitraum nutzbar und wird beim Wechsel zwischen den Statistik-Ansichten nicht zurückgesetzt.
 - Der frei gewählte Zeitraum verändert keine gespeicherten Sessions oder die vordefinierten Daily-, Weekly-, Monthly- und Overall-Ansichten.
 
+- **Kombination von Datums- und Kategorienfiltern:** Der frei gewählte Start-/Enddatum-Zeitraum und die aktive Kategorie-Mehrfachauswahl werden gemeinsam angewendet. Alle Kennzahlen, Diagramme, Tageswerte, Kategorieauswertungen und Session-Anzahlen beziehen sich exakt auf die Schnittmenge aus gewähltem Zeitraum und ausgewählten Kategorien.
+- **Konsistenz in allen Ausgaben:** Statistikansichten und CSV-/PDF-Exporte verwenden dieselbe Kombination aus Datumsbereich und Kategorieauswahl. Keine Ansicht und kein Export darf unbemerkt einen der beiden Filter ignorieren.
+- **Monatsnavigation bei eigenem Zeitraum:** Ein aktiver frei gewählter Datumsbereich darf durch die Monatsnavigation der Monthly Statistics oder Monthly Focus Map nicht stillschweigend verändert werden. Während der freie Zeitraum aktiv ist, wird die Monatsnavigation für diesen Ansichtsmodus deaktiviert bzw. klar als nicht anwendbar gekennzeichnet. Zurück zur Monatsansicht gelangt der Nutzer nur durch eine bewusste Auswahl von „Monthly“; dabei wird der frei gewählte Zeitraum nicht gelöscht, sondern bleibt für eine erneute Auswahl erhalten.
+- **Filterzustand erhalten:** Änderungen an Zeitraum oder Kategorien erfolgen nur durch bewusste Nutzerauswahl. Ein Wechsel der Statistikansicht darf die jeweils andere Filterdimension nicht unbeabsichtigt zurücksetzen.
+
+
 ### Visuelle Kennzeichnung der Zeitvergleiche
 - Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
 - Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
