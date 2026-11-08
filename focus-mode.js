@@ -375,7 +375,7 @@
     if(!found)return;
     let s=current();
     if(!s||s.status==='COMPLETED'||s.discarded){toast('Wähle zuerst eine vorbereitete oder offene Session.');return;}
-    s.linkedTask={id:String(found.id),source,title:found.title};s.linkedTaskSnapshot={id:String(found.id),source,title:found.title,category:found.category||'',priority:found.priority||''};s.goal=found.title;s.name=s.name||found.title;s.lastActiveAt=Date.now();persist();renderAll();toast('Fokusziel zugeordnet.');
+    s.linkedTask={id:String(found.id),source,title:found.title};s.linkedTaskSnapshot={id:String(found.id),source,title:found.title,category:found.category||'',priority:found.priority||''};s.goal=found.title;s.name=s.name||found.title;s.lastActiveAt=Date.now();$('fmGoal').value=found.title;$('fmLinkedTask').value=source+':'+String(found.id);if(s.status==='PREPARED')loadSetup(s);persist();renderAll();toast('Fokusziel zugeordnet.');
   };
   const updateTaskTime= s=>{
     if(!s.linkedTaskSnapshot||s.taskTimeLogged)return;
