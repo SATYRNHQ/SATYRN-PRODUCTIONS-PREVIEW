@@ -1756,3 +1756,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Protokoll soll nachvollziehbar und durchsuchbar sein; sensible Inhalte wie vollständige Notiztexte oder private Inhalte werden nicht unnötig protokolliert.
 - Die genauen Aufbewahrungs-, Filter-, Export- und Datenschutzregeln werden bei der abschließenden websiteweiten Konzeption festgelegt.
 - Die für Focus Mode relevanten Aktionen werden als Anforderungen vorgemerkt und später in dieses gemeinsame Protokoll integriert.
+
+
+### Zentrale Zugriffssicherheit und Vorbereitung auf mehrere Benutzer
+- Die Zugriffssicherheit wird am Ende als gemeinsame Grundlage für die gesamte SATYRN-HQ-Website konzipiert, nicht als separates Login-System je Seite.
+- Zum Start nutzt der Eigentümer SATYRN HQ mit einem eigenen geschützten Benutzerkonto.
+- Die Architektur wird von Anfang an so vorbereitet, dass später weitere Benutzerkonten, z. B. für Mitarbeiter oder Teammitglieder, ergänzt werden können.
+- Jeder Benutzer erhält eine eigene Anmeldung und eine eindeutig zugeordnete Identität; private Daten und persönliche Einstellungen werden nicht versehentlich zwischen Benutzern vermischt.
+- Authentifizierung, Sitzungsverwaltung, Berechtigungen und Schutz der Website-Daten werden zentral umgesetzt und bei der späteren seitenweiten Sicherheitsplanung konkret festgelegt.
+- Die Vorbereitung auf mehrere Benutzer bedeutet nicht, dass zum Start bereits Teamfunktionen oder zusätzliche Konten eingerichtet werden müssen.
