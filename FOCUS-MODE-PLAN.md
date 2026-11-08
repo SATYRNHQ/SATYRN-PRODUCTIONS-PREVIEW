@@ -1072,6 +1072,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Raster passt sich automatisch an die verfügbare Fensterbreite an und ordnet die Kacheln auf kleineren Bildschirmen beziehungsweise Smartphones passend um.
 - Darstellung, Farben und Auswahlzustand bleiben an die Prioritätsauswahl auf der Important-Seite angelehnt.
 
+
+### Anordnung von Kategorie und Priorität
+- Kategorie-Auswahl und Prioritäts-Auswahl stehen im Session-Vorbereitungsfenster untereinander, nicht nebeneinander.
+- Beide Bereiche behalten jeweils ihr eigenes flexibles Kachelraster und passen sich unabhängig an die verfügbare Breite an.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
