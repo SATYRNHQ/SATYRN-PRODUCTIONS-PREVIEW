@@ -1176,6 +1176,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Eigene Presets im Bereich „Meine Presets“ werden alphabetisch nach ihrem Namen sortiert.
 - Die Sortierung aktualisiert sich automatisch, wenn ein Preset umbenannt oder neu erstellt wird.
 
+
+### Lokale Speicherung eigener Presets
+- Eigene Session-Presets werden lokal auf dem verwendeten Gerät beziehungsweise Browser gespeichert.
+- Eine Synchronisierung eigener Presets zwischen verschiedenen Geräten ist nicht erforderlich.
+- Die Presets bleiben bei erneutem Öffnen von SATYRN HQ im selben Browser verfügbar, solange dessen lokale Website-Daten nicht gelöscht werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
