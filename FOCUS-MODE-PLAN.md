@@ -178,14 +178,13 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`. Der Countdown zählt nicht zur Fokuszeit; die Zeitmessung beginnt erst nach seinem Abschluss mit dem tatsächlichen Start der Fokusphase.
 
 ### Sichtbare Timer-Endzustände im Focus-Fenster
-- Jeder Timer-Endzustand wird direkt im Focus-Fenster eindeutig angezeigt und mit einer kurzen, passenden Handlungsaufforderung verbunden.
+- Jeder Timer-Endzustand wird direkt im Focus-Fenster eindeutig angezeigt und mit einer kurzen, zum tatsächlichen Zustand passenden Handlungsaufforderung verbunden.
 - **Fokuszeit abgelaufen – Pause eingestellt:** Der Fokusabschnitt endet und der Timer wechselt direkt in den Status `BREAK`; der Übergang wird visuell deutlich angezeigt. `EXPIRED` wird für diesen automatischen Übergang nicht zwischengeschaltet.
 - **Fokuszeit abgelaufen – keine Pause:** Der Status wechselt auf `EXPIRED`; es wird keine Pause gestartet und das Focus-Fenster zeigt an, dass die nächste Fokusphase manuell gestartet werden kann.
 - **Pause abgelaufen:** Der Status wechselt auf `EXPIRED`; das Fenster zeigt klar an, dass die Pause beendet ist und auf den manuellen Start der nächsten Fokusphase wartet.
-- `EXPIRED` bedeutet im Focus-Fenster immer, dass ein Zeitabschnitt beendet ist und eine bewusste nächste Aktion erwartet wird. Bei einem automatischen Übergang von Fokus zu Pause wird `EXPIRED` nicht angezeigt.
 - **Skip Break:** Nach dem Überspringen der Pause wird deutlich angezeigt, dass die nächste Fokusphase manuell gestartet werden kann.
-- Eine abgelaufene Pause oder ein abgeschlossener Fokusabschnitt startet niemals selbstständig eine weitere Fokusphase.
-- Die visuelle Meldung und die angebotene Aktion müssen zum tatsächlichen Zustand passen; es darf keine mehrdeutige oder veraltete Aufforderung angezeigt werden.
+- `EXPIRED` kennzeichnet ausschließlich einen beendeten Zeitabschnitt, bei dem eine bewusste nächste Aktion erwartet wird. Eine abgelaufene Pause oder ein beendeter Fokusabschnitt startet niemals selbstständig eine weitere Fokusphase.
+- Die visuelle Meldung und die angebotene Aktion müssen jederzeit zum tatsächlichen Timerzustand passen; mehrdeutige oder veraltete Aufforderungen sind ausgeschlossen.
 
 ### Session-Wechsel direkt im Focus-Fenster
 - Im Focus-Fenster ist eine kompakte Liste aller offenen Sessions direkt erreichbar; zum Wechseln muss nicht erst eine andere Website-Seite geöffnet werden.
@@ -276,31 +275,25 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Ein erneuter Speicher- oder Synchronisierungsversuch darf vorhandene Änderungen nicht stillschweigend überschreiben oder doppelt anlegen.
 
 
-### Automatische Pausierung bei PC-Herunterfahren oder Ausfall
-- Wird der Browser versehentlich geschlossen, bleibt die Session erhalten und wird beim erneuten Öffnen als **PAUSED** wiederhergestellt.
+### Browser schließen oder Seite neu laden
+- Wird der Browser versehentlich geschlossen, bleibt die Session erhalten und wird beim erneuten Öffnen als `PAUSED` wiederhergestellt.
 - Wenn der Nutzer den Browser schließen möchte, während eine Session läuft, erscheint vorher eine Warnung mit dem Hinweis **„Deine Focus-Session läuft noch.“**
-- Die Warnung bietet die Möglichkeit, den Schließvorgang abzubrechen und zur Session zurückzukehren oder den Browser trotzdem zu schließen. Beim Fortfahren wird die Session automatisch pausiert und später als **PAUSED** wiederhergestellt.
+- Die Warnung bietet die Möglichkeit, den Schließvorgang abzubrechen und zur Session zurückzukehren oder den Browser trotzdem zu schließen. Beim Fortfahren wird die Session automatisch pausiert und später als `PAUSED` wiederhergestellt.
 - Die Warnung erscheint nicht, wenn die Session bereits pausiert, unterbrochen oder abgeschlossen ist.
-- Wird die Seite während einer laufenden Session neu geladen, erscheint dieselbe Warnung. Der Nutzer kann das Neuladen abbrechen und zur Session zurückkehren oder fortfahren. Beim Fortfahren wird die Session automatisch pausiert und nach dem Neuladen als **PAUSED** wiederhergestellt.
-- Die Zeit, in der der Browser geschlossen bzw. Focus Mode nicht verfügbar ist, wird nicht als Fokuszeit gezählt. Alle zuletzt erfolgreich lokal gespeicherten Session-Daten bleiben erhalten.
-- Ist Focus Mode wegen eines geschlossenen Browsers, PC-Ruhezustands, Herunterfahrens oder Absturzes nicht verfügbar, wird die Session pausiert bzw. beim nächsten Öffnen als **PAUSED** wiederhergestellt. Die Ausfallzeit zählt nicht zur Fokuszeit; ein automatischer Neustart findet nicht statt. Ein lediglich minimierter Browser oder ein Tab im Hintergrund gilt dagegen nicht als Ausfall: Der Timer läuft weiter und verarbeitet auch Timer-Ende sowie den vorgesehenen automatischen Übergang von Fokus zu Pause.
-- Die wiederhergestellte Session startet nicht automatisch; die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
-- Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand, wird die Session ebenfalls automatisch pausiert und nicht abgebrochen oder abgeschlossen.
-- Die Zeit im Energiesparmodus oder Ruhezustand wird nicht als Fokuszeit gezählt. Beim Aufwachen bzw. erneuten Öffnen bleibt die Session im Status **PAUSED** und kann ausschließlich durch die bewusste Aktion **Resume** fortgesetzt werden.
-- Wird der PC regulär heruntergefahren, wird eine laufende Session automatisch pausiert, statt abgebrochen oder abgeschlossen zu werden.
-- Bei einem unerwarteten Stromausfall, PC-Absturz oder vergleichbaren Ausfall wird beim nächsten Öffnen erkannt, dass die Session zuvor noch lief, und als **PAUSED** wiederhergestellt.
-- Die verbleibende Zeit des aktiven Fokus- oder Pausenabschnitts wird gesichert. Die Zeit, in der der PC ausgeschaltet oder die Anwendung nicht verfügbar war, wird nicht als Fokuszeit gezählt.
-- Bereits gespeicherte Fokusabschnitte, Notizen, Distraction-Log-Einträge und übrige Session-Daten bleiben erhalten.
-- Eine wiederhergestellte Session startet niemals automatisch. Die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
+- Wird die Seite während einer laufenden Session neu geladen, erscheint dieselbe Warnung. Der Nutzer kann das Neuladen abbrechen und zur Session zurückkehren oder fortfahren. Beim Fortfahren wird die Session automatisch pausiert und nach dem Neuladen als `PAUSED` wiederhergestellt.
+- Die Browser-Warnung ist eine bestmögliche Schutzmaßnahme; sie darf nicht als garantierte Abfangmöglichkeit für jeden Browser- oder Geräteausfall dargestellt werden.
+- Alle zuletzt erfolgreich lokal gespeicherten Session-Daten bleiben erhalten. Ist bereits das lokale Zwischenspeichern fehlgeschlagen, gelten die gesonderten Hinweise zum Speicherfehler; nicht dauerhaft lokal gespeicherte Änderungen sind nicht garantiert wiederherstellbar.
 
-### Wiederherstellung nach unerwartetem Absturz oder Stromausfall
-- Focus Mode speichert den Session-Zustand und Änderungen fortlaufend in einem dauerhaft verfügbaren lokalen Zwischenspeicher.
-- Nach einem unerwarteten Browser-, Tab- oder Geräteabsturz bzw. Stromausfall wird beim nächsten Öffnen automatisch der letzte erfolgreich lokal gespeicherte Zustand wiederhergestellt.
-- Timerstatus und verbleibende Zeit werden anhand der gespeicherten Zeitinformationen und der tatsächlich verstrichenen Zeit korrekt rekonstruiert; es erfolgt kein automatischer Neustart einer Fokus- oder Pausenphase.
-- Änderungen, die vor dem Absturz noch nicht erfolgreich lokal gespeichert wurden, können nicht garantiert wiederhergestellt werden. Der wiederhergestellte Stand wird deshalb klar als letzter lokal gesicherter Stand erkennbar gemacht.
+### Pausierung und Wiederherstellung bei Ausfall
+- Focus Mode speichert Session-Zustand und Änderungen fortlaufend in einem dauerhaft verfügbaren lokalen Zwischenspeicher. Beim unerwarteten Browser-, Tab- oder Geräteabsturz bzw. Stromausfall wird beim nächsten Öffnen der letzte erfolgreich lokal gespeicherte Zustand wiederhergestellt.
+- Ist Focus Mode wegen eines geschlossenen Browsers, PC-Ruhezustands, Herunterfahrens, Absturzes oder Stromausfalls nicht verfügbar, wird eine zuvor laufende Session als `PAUSED` wiederhergestellt. Die Ausfallzeit zählt nicht als Fokuszeit; ein automatischer Neustart findet nicht statt.
+- Wechselt der PC während einer laufenden Session in den Energiesparmodus oder Ruhezustand oder wird er regulär heruntergefahren, wird die Session ebenfalls pausiert, statt abgebrochen oder abgeschlossen zu werden.
+- Ein lediglich minimierter Browser, ein Hintergrund-Tab oder die Nutzung eines anderen Programms gilt dagegen nicht als Ausfall: Der Timer läuft weiter und verarbeitet auch Timer-Ende sowie den vorgesehenen automatischen Übergang von Fokus zu Pause.
+- Timerstatus und verbleibende Zeit werden anhand der gespeicherten Zeitinformationen und der tatsächlich verstrichenen Zeit korrekt rekonstruiert. Die verbleibende Zeit des aktiven Fokus- oder Pausenabschnitts bleibt erhalten; die Zeit der Nichtverfügbarkeit wird nicht als Fokuszeit gezählt.
+- Bereits erfolgreich lokal gespeicherte Fokusabschnitte, Notizen, Distraction-Log-Einträge und übrige Session-Daten bleiben erhalten. Änderungen, die vor dem Ausfall noch nicht erfolgreich lokal gespeichert wurden, können nicht garantiert wiederhergestellt werden; der wiederhergestellte Stand muss als letzter lokal gesicherter Stand erkennbar sein.
 - Noch nicht zentral synchronisierte, aber lokal gesicherte Änderungen werden nach Wiederherstellung erneut zur Synchronisierung vorgemerkt.
+- Die wiederhergestellte Session startet niemals automatisch. Die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
 - Die Wiederherstellung darf keine doppelten Sessions, doppelten Zeitabschnitte oder widersprüchlichen Timerzustände erzeugen.
-
 
 ### Fehler bei vollem oder nicht verfügbarem lokalem Speicher
 - Focus Mode erkennt, wenn der lokale Speicher voll ist, das Speicherlimit erreicht wurde oder der Browser den Zugriff auf den lokalen Speicher verweigert.
