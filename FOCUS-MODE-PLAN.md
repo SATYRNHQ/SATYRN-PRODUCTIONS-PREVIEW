@@ -367,3 +367,39 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach einer Focus-Session wird die investierte Zeit automatisch für die zugeordnete Aufgabe dokumentiert. Die Aufgabe wird dadurch nicht automatisch als erledigt markiert.
 - Die bereits festgelegte Aufgabenhistorie aus dem Session Setup gilt weiterhin: Datum, investierte Zeit und Anzahl der zugehörigen Focus-Sessions werden pro Aufgabe gesammelt und angezeigt.
 
+## 5. Statistics
+
+### Tagesstatistik
+- Gesamte Fokuszeit des aktuellen Tages.
+- Anzahl erfolgreich abgeschlossener Sessions.
+- Durchschnittliche Dauer abgeschlossener Sessions.
+- Anzahl unterbrochener Sessions.
+- Die Tageswerte beziehen sich auf den lokalen Kalendertag des Nutzers.
+
+### Wochenstatistik
+- Fokuszeit pro Tag innerhalb der aktuellen Woche.
+- Gesamte Fokuszeit der Woche.
+- Anzahl erfolgreich abgeschlossener Sessions.
+- Vergleich der Fokuszeit mit der Vorwoche.
+- Die tägliche Verteilung wird in einem übersichtlichen Diagramm dargestellt.
+
+### Monatsstatistik
+- Gesamte Fokuszeit des aktuellen Monats.
+- Anzahl erfolgreich abgeschlossener Sessions.
+- Durchschnittliche Fokuszeit pro Tag.
+- Vergleich der Fokuszeit mit dem Vormonat.
+- Der Monatsverlauf wird bei Bedarf als Diagramm dargestellt.
+
+### Kategorien-Auswertung
+- Fokuszeit wird pro Kategorie ausgewertet.
+- Der prozentuale Anteil jeder Kategorie an der gesamten erfassten Fokuszeit wird angezeigt.
+- Die Auswertung macht sichtbar, auf welche Kategorien die meiste Fokuszeit entfällt.
+- Es werden dieselben Kategorienamen und Farben wie auf der Important-Seite und im Session Setup verwendet.
+
+### Darstellung und Bedienung
+- Die wichtigsten Kennzahlen erscheinen kompakt im Statistics-Bereich unterhalb von Session Setup und Task Queue.
+- Wochen- und Monatsverläufe werden durch gut lesbare Diagramme ergänzt.
+- Ausführlichere Auswertungen und Detailwerte können bei Bedarf aufgeklappt werden.
+- Die Darstellung folgt dem bestehenden SATYRN-Farbsystem und verwendet die festgelegten Kategorienfarben konsistent.
+- Statistiken berücksichtigen die tatsächlich erfasste Fokuszeit. Pausenzeit wird nicht als Fokuszeit gezählt.
+- Erfolgreich abgeschlossene und unterbrochene Sessions bleiben in den jeweils passenden Kennzahlen unterscheidbar.
