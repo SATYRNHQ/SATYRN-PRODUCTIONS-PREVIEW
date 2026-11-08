@@ -101,6 +101,11 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Zusätzlich zur Suche werden Filter nach Priorität angeboten: **Dringend, Wichtig, Vorläufig, Unbefristet und Ohne Priorität**. Mehrere Prioritätsfilter können gleichzeitig ausgewählt werden; die Ergebnisse zeigen dann Einträge, die zu mindestens einer der ausgewählten Kategorien gehören.
 - Weitere Ansichten sind noch nicht beschlossen.
 
+
+## Ergänzung — Plus-Button im Tagesfenster
+
+- Auch im geöffneten Tagesfenster gibt es oben rechts einen kleinen **Plus-Button**. Er öffnet direkt das Formular zum Erstellen eines neuen Termins; das Datum des ausgewählten Tages ist dabei vorausgewählt.
+
 ## Ergänzung — leeres Tagesfenster
 
 - Wenn ein ausgewählter Tag keine Termine enthält, wird im Tagesfenster **keine erklärende Leerstandsmeldung** angezeigt. Die Ansicht bleibt schlicht; das Hinzufügen eines Eintrags ist weiterhin über die vorhandene Plus-Funktion möglich.
