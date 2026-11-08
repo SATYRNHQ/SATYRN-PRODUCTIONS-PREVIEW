@@ -1334,6 +1334,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Anzeige ist rein informativ und verändert weder Auswahl noch Einstellungen des Presets.
 - Auf Touch-Geräten wird die Information über eine geeignete alternative Interaktion zugänglich gemacht, ohne die Preset-Auswahl zu erschweren.
 
+
+### Responsives Raster für die Preset-Auswahl
+- Die Preset-Auswahl passt ihr Raster automatisch an die verfügbare Bildschirmbreite an.
+- Desktop: mehrere Preset-Buttons nebeneinander.
+- Tablet: entsprechend weniger Spalten, mit weiterhin gut lesbaren Buttons.
+- Smartphone: standardmäßig zwei Spalten; bei sehr schmalen Displays eine Spalte.
+- Der Bereich „Meine Presets“ verwendet dieselbe responsive Anordnung.
+- Es gibt keine horizontale Scrollleiste für die Preset-Auswahl.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
