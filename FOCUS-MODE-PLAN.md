@@ -154,6 +154,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Produktivste Kategorie des Tages.
 
 
+
+### Vergleich mit dem Vortag
+- Die Daily Statistics vergleichen die heutige gesamte Fokuszeit automatisch mit der des vorherigen Kalendertages.
+- Anzeige der Fokuszeit beider Tage sowie der absoluten und prozentualen Veränderung.
+- Bei weniger Fokuszeit wird der Rückgang entsprechend dargestellt.
+- Wenn am Vortag keine Fokuszeit erfasst wurde, erscheint ein neutraler Hinweis statt einer irreführenden Prozentangabe.
+- Der Vergleich aktualisiert sich automatisch im Tagesverlauf.
+
 ### Eindeutige Session-Status in den Statistiken
 - Die Statistik unterscheidet drei Statusgruppen:
   1. **Abgeschlossen:** erfolgreich beendete Sessions, einschließlich vorzeitig mit „Complete Session“ abgeschlossener Sessions.
