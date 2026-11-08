@@ -1840,3 +1840,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Vergleichszeiträume verwenden dieselben Kategorie-Filter und dieselbe lokale Zeitzone wie die angezeigte Auswertung.
 - Die Anzeige macht kenntlich, wenn ein Vergleich nur einen bisher verstrichenen Teil des Zeitraums umfasst. Dadurch werden unvollständige Tage, Wochen oder Monate nicht irreführend mit vollständigen Zeiträumen verglichen.
 - Für den frei gewählten Statistik-Zeitraum bleibt die bereits bestätigte Regel bestehen: Es wird kein Vergleich mit einem vorherigen Zeitraum ergänzt.
+
+
+### Kennzeichnung laufender Statistik-Zeiträume
+- Daily, Weekly und Monthly Statistics kennzeichnen klar und dezent, wenn der aktuell ausgewählte Zeitraum noch läuft bzw. unvollständig ist.
+- Die Kennzeichnung nennt den Zeitraum und den aktuellen Auswertungsstand, z. B. „Laufender Tag · Stand 15:30 Uhr“, „Laufende Woche · Stand Sonntag, 15:30 Uhr“ oder „Laufender Monat · Stand 8. November, 15:30 Uhr“.
+- Die Uhrzeit und das Datum richten sich nach der lokalen Zeitzone des Nutzers.
+- Bei vollständig vergangenen Zeiträumen wird keine Kennzeichnung für einen laufenden Zeitraum angezeigt.
+- Die Kennzeichnung ergänzt die Vergleichswerte und macht transparent, bis zu welchem Zeitpunkt die Daten berücksichtigt wurden.
