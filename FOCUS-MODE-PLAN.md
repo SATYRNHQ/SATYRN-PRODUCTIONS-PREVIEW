@@ -1661,3 +1661,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Timeraktionen und Sessionänderungen werden zeitnah zwischen den Tabs synchronisiert.
 - Es darf nur eine Instanz gleichzeitig Timeraktionen ausführen; konkurrierende Aktionen und doppelte Zeitmessung werden verhindert.
 - Die zuletzt ausgeführte gültige Aktion wird konsistent übernommen, ohne bereits gespeicherte Sessiondaten stillschweigend zu überschreiben.
+
+
+### Offline-Betrieb während einer Focus-Session
+- Focus Mode läuft bei vorübergehendem Verlust der Internetverbindung lokal weiter.
+- Timerstatus, Sessiondaten, Notizen und Änderungen werden lokal zwischengespeichert.
+- Nach Wiederherstellung der Verbindung werden lokale Änderungen automatisch synchronisiert.
+- Die Synchronisierung verhindert doppelte Einträge und den Verlust neuerer gültiger Änderungen.
