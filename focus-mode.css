@@ -217,3 +217,10 @@
 #page-focus .fm-queue-done-row>b{font-size:10px;color:#a8b5ab;text-decoration:line-through;flex:1}
 #page-focus .fm-queue-done-row>span{color:#8fc58d}
 #page-focus .fm-queue-done-row>small{font-size:8px;color:#89998f}
+
+#page-focus .fm-history-active-filters{display:flex;flex-wrap:wrap;gap:6px}
+#page-focus .fm-filter-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(88,200,184,.18);border-radius:30px;background:rgba(88,200,184,.055);color:#a9d4c8;padding:6px 9px;font-size:9px;cursor:pointer}
+#page-focus .fm-filter-chip span{font-size:13px;line-height:9px;color:#d2e7de}
+#page-focus .fm-history-reset[hidden]{display:none}
+#page-focus #fmHistoryReset[hidden]{display:none}
+#page-focus #fmHistoryDetailGoal{font-size:12px;color:#c0d4c8;line-height:1.6;margin:6px 0}
