@@ -1016,6 +1016,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - In diesem Fall wird keine Aufgabe automatisch zur Hauptaufgabe gemacht; die zusätzlichen Aufgaben bleiben in ihrer festgelegten Reihenfolge sichtbar.
 - Eine Hauptaufgabe kann bei Bedarf vor dem Start oder später während der Session nach dem bestehenden Bestätigungsablauf festgelegt werden.
 
+
+### Kategorie der Focus-Session
+- Wenn eine Hauptaufgabe mit Important-Verknüpfung vorhanden ist, übernimmt die Focus-Session grundsätzlich deren Kategorie.
+- Zusätzliche Aufgaben dürfen anderen Kategorien angehören; sie ändern die Session-Kategorie nicht.
+- Gibt es keine Hauptaufgabe, wird die Kategorie für die Focus-Session manuell ausgewählt.
+- Die Kategorie kann während der Session-Vorbereitung vor dem Start angepasst werden; die Änderung überschreibt nicht die Kategorie der ursprünglichen Important-Aufgabe.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
