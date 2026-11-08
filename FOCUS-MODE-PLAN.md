@@ -1765,3 +1765,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Jeder Benutzer erhält eine eigene Anmeldung und eine eindeutig zugeordnete Identität; private Daten und persönliche Einstellungen werden nicht versehentlich zwischen Benutzern vermischt.
 - Authentifizierung, Sitzungsverwaltung, Berechtigungen und Schutz der Website-Daten werden zentral umgesetzt und bei der späteren seitenweiten Sicherheitsplanung konkret festgelegt.
 - Die Vorbereitung auf mehrere Benutzer bedeutet nicht, dass zum Start bereits Teamfunktionen oder zusätzliche Konten eingerichtet werden müssen.
+
+
+### Automatische Abmeldung bei Inaktivität
+- SATYRN HQ kann Benutzer nach einer längeren Phase ohne Aktivität automatisch abmelden.
+- Die Inaktivitätsdauer ist in den zentralen Sicherheitseinstellungen einstellbar; ein sinnvoller Standardwert wird bei der seitenweiten Sicherheitsplanung festgelegt.
+- Vor der Abmeldung kann eine dezente Warnung erscheinen, damit der Nutzer seine Sitzung bei Bedarf verlängern kann.
+- Nach der Abmeldung sind geschützte Bereiche erst nach erneuter Anmeldung zugänglich.
+- Nicht gespeicherte Änderungen sollen vor der Abmeldung geschützt werden: Speichern bzw. lokale Zwischenspeicherung wird zuerst versucht; bei nicht gesicherten Änderungen darf kein falscher Erfolg angezeigt werden.
