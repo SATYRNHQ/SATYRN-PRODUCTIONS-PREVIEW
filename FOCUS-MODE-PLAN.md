@@ -1262,6 +1262,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nach erfolgreichem Speichern eines eigenen Presets schließt sich der Preset-Editor automatisch.
 - Die kurze Erfolgsmeldung „Preset erfolgreich gespeichert“ bleibt sichtbar, auch wenn der Editor geschlossen wurde.
 
+
+### Einheitliche Darstellung eigener und standardmäßiger Presets
+- Eigene Presets verwenden dieselbe Grundgestaltung und Button-Größe wie die fest eingebauten Standard-Presets.
+- Jedes eigene Preset zeigt seinen individuellen Namen, das gewählte Icon, die eigene Preset-Farbe sowie Fokus- und Pausendauer.
+- Eigene Presets erscheinen alphabetisch sortiert im separaten Bereich „Meine Presets“ unterhalb der Standard-Presets.
+- Auswahl und Aktivierung funktionieren genauso wie bei den Standard-Presets.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
