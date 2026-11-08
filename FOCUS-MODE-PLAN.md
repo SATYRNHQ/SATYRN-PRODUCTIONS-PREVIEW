@@ -308,6 +308,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Vorschau besitzt eine klare eigene Kopfzeile sowie gut erreichbare Aktionen zum Exportieren und Zurückkehren.
 - Das Fenster folgt dem SATYRN-HQ-Modalverhalten und bleibt innerhalb des verfügbaren Viewports bedienbar.
 
+
+### Verhalten des Export-Vorschaufensters
+- Das eigenständige Vorschaufenster übernimmt das Modalverhalten des Fensters zum Erstellen einer Aufgabe im Important-Tab.
+- Ein Klick außerhalb des Fensters schließt es nicht.
+- Esc und die Schließen-/Zurück-Aktion folgen dem entsprechenden Schließablauf des Important-Modals.
+- Falls innerhalb der Vorschau Änderungen an Exportoptionen vorgenommen wurden, die noch nicht bestätigt sind, erscheint vor dem Verwerfen eine Sicherheitsabfrage.
+- „Weiter bearbeiten“ behält die vorgenommenen Einstellungen; „Änderungen verwerfen“ verwirft sie und kehrt zur Exportauswahl zurück.
+- Der eigentliche Export wird ausschließlich durch die ausdrückliche Bestätigung über „Exportieren“ gestartet.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
