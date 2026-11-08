@@ -274,3 +274,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Der Kalender bleibt dabei im Hintergrund erhalten; das Formular wirkt als fokussierter Arbeitsbereich.
 
 - 2026-11-09: Für das Calendar-Erstellungs- und Bearbeitungsformular wurde Variante A gewählt: ein großes Pop-up mit großzügigem Platz.
+
+
+## Ergänzung — Schließen des Erstellungs- und Bearbeitungsformulars
+
+- Das große Calendar-Formular lässt sich auf dieselben drei Arten schließen wie das Termin-Detail-Pop-up: über das **X** im Fenster, durch Drücken der **Escape-Taste** oder durch einen Klick auf den abgedunkelten Bereich außerhalb des Fensters.
+- Der Kalender im Hintergrund bleibt dabei unverändert erhalten.
+
+- 2026-11-09: Das große Calendar-Erstellungs- und Bearbeitungsformular kann per X, Escape-Taste und Klick außerhalb auf den Overlay-Bereich geschlossen werden.
