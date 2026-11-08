@@ -387,6 +387,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Kalenderübersicht mit erreichten Tageszielen.
 - Ein nicht erreichtes Tagesziel unterbricht die Streak.
 - Das Tagesziel bleibt anpassbar.
+- Tagesgrenzen und Streak-Auswertung richten sich nach dem lokalen Kalendertag und der lokalen Zeitzone des Nutzers.
+- Das aktuelle Tagesziel gilt bis zum Ende des lokalen Tages als offen und wird vorher nicht als verfehlt gewertet.
+- Erst beim lokalen Tageswechsel wird der abgeschlossene Tag endgültig ausgewertet: Erreichtes Tagesziel verlängert die Streak; verfehltes Tagesziel unterbricht sie.
+- Wird das Tagesziel bereits vor Tagesende erreicht, wird der Tag als erreicht markiert; die Tagesauswertung bleibt bis zum Tageswechsel offen für weitere Fokuszeit.
 
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
