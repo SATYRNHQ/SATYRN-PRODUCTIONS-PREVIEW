@@ -23,6 +23,8 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Ein Klick auf einen Tag in der Monatsansicht öffnet ein kleines Fenster mit den Terminen und Ereignissen dieses Tages.
 - Innerhalb dieses Fensters können Einträge hinzugefügt werden.
 - Zusätzlich gibt es oben rechts in der Calendar-Ansicht ein kleines **Plus-Symbol (+)** zum Hinzufügen eines neuen Eintrags. Das Symbol und seine Platzierung orientieren sich am Hinzufügen-Symbol im Important-Fenster.
+- Beim schnellen Hinzufügen über das Plus-Symbol wird ein passendes Datum vorausgewählt: das aktuell ausgewählte Datum bzw. der ausgewählte Kalendertag; wenn kein Tag ausgewählt ist, standardmäßig das heutige Datum.
+- Das vorausgewählte Datum bleibt im Formular jederzeit änderbar. Über eine Datumsauswahl kann **jedes beliebige Datum** gewählt werden.
 - Ein Klick auf einen bestehenden Termineintrag öffnet zunächst dessen **Detailansicht**. Er wechselt nicht direkt in den Bearbeitungsmodus.
 - In der Detailansicht befindet sich ein **Drei-Punkte-Menü (⋯)** mit den Aktionen **Bearbeiten** und **Löschen**.
 - **Bearbeiten** öffnet das Bearbeitungsformular für den ausgewählten Eintrag.
@@ -73,4 +75,4 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Wiederkehrende Termine werden unterstützt; wöchentliche, monatliche und jährliche Wiederholung sind vorgesehen. Sie laufen ohne verpflichtendes Enddatum weiter, bis sie manuell gelöscht werden.
 - 2026-11-08: Bei einer Wiederholungsserie kann ein einzelnes Vorkommen unabhängig von der Serie gelöscht oder bearbeitet werden. Beim Löschen bzw. Bearbeiten wird jeweils zwischen dem einzelnen Termin und der gesamten Serie unterschieden.
 - 2026-11-08: Die Priorität ist optional. Einträge ohne Priorität werden neutral dargestellt.
-- 2026-11-08: Zusätzlich zum Hinzufügen im Tagesfenster gibt es oben rechts in der Calendar-Ansicht ein kleines Plus-Symbol (+), angelehnt an das Important-Fenster.
+- 2026-11-08: Zusätzlich zum Hinzufügen im Tagesfenster gibt es oben rechts in der Calendar-Ansicht ein kleines Plus-Symbol (+), angelehnt an das Important-Fenster. Das Datum wird passend zum aktuellen Kontext vorausgewählt (ausgewählter Tag, sonst heute), kann im Formular aber geändert werden; jedes beliebige Datum ist auswählbar.
