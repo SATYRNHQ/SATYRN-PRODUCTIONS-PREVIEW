@@ -133,6 +133,15 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Ein Session-Wechsel darf keine noch nicht gespeicherten Änderungen verlieren; der Speicherstatus muss dabei korrekt berücksichtigt werden.
 - Bei einem Speicherfehler wird eine verständliche Meldung angezeigt. Betroffene Änderungen bleiben, soweit technisch möglich, lokal erhalten und können erneut gespeichert werden.
 
+
+### Website schließen bei fehlgeschlagener Speicherung
+- Änderungen werden zunächst lokal dauerhaft zwischengespeichert, bevor bzw. während die Synchronisierung mit dem zentralen Datenstand erfolgt.
+- Schlägt die zentrale Speicherung oder Synchronisierung fehl, bleiben lokal erfolgreich gesicherte Änderungen beim Schließen und erneuten Öffnen der Website erhalten und werden später erneut synchronisiert.
+- Beim erneuten Öffnen wird sichtbar darauf hingewiesen, wenn noch nicht synchronisierte Änderungen vorhanden sind; der Speicherstatus bleibt bis zur erfolgreichen Synchronisierung entsprechend **UNSAVED** bzw. **SAVE ERROR**.
+- Ist bereits das lokale Zwischenspeichern fehlgeschlagen, wird dies ausdrücklich als kritischer Speicherfehler angezeigt. Solange die Seite geöffnet ist, bleiben die Änderungen soweit technisch möglich im Arbeitsspeicher erhalten; vor einer vom Nutzer ausgelösten Navigation wird nach Möglichkeit gewarnt.
+- Es wird nicht behauptet, dass Änderungen nach einem Browser- oder Geräteabsturz wiederherstellbar sind, wenn sie zuvor nicht dauerhaft lokal gespeichert werden konnten.
+- Ein erneuter Speicher- oder Synchronisierungsversuch darf vorhandene Änderungen nicht stillschweigend überschreiben oder doppelt anlegen.
+
 ### Bedienbarkeit des Focus-Fensters
 - Das Focus-Fenster übernimmt die allgemeinen Responsive- und Bedienungsstandards der Website und stellt sicher, dass seine zentralen Funktionen auf Desktop, Tablet und Smartphone erreichbar bleiben.
 - **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar.
