@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=93">
-  <link rel="stylesheet" href="focus-mode.css?v=4">
-  <link rel="stylesheet" href="focus-reminders.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=94">
+  <link rel="stylesheet" href="focus-mode.css?v=5">
+  <link rel="stylesheet" href="focus-reminders.css?v=2">
 </head>
 <body>
   <div class="background-slideshow" id="backgroundSlideshow" aria-hidden="true"><div class="background-slide active"></div><div class="background-slide"></div></div>
@@ -208,7 +208,7 @@
       <div class="imp-modal-head"><div><span class="imp-modal-kicker">SATYRN · IMPORTANT ARCHIVE</span><h2 id="importantModalHeading">Neuen Eintrag erstellen</h2></div><button class="imp-modal-close" type="button" data-modal-close aria-label="Fenster schließen">×</button></div>
       <form id="importantForm">
         <div class="imp-form-grid">
-          <section class="imp-form-section"><h3>01 · Grundinformationen</h3><div class="imp-form-field"><label for="importantTitle">Titel *</label><input id="importantTitle" type="text" required placeholder="Worum geht es?"></div><div class="imp-form-field"><label for="importantCategory">Kategorie *</label><select id="importantCategory" required><option value="">Kategorie auswählen</option><option value="company">Unternehmensinformationen</option><option value="partners">Geschäftspartner & Kooperationen</option><option value="moves">Strategic Moves</option><option value="blueprints">Future Blueprints</option><option value="other">Sonstiges</option></select></div></section>
+          <section class="imp-form-section"><h3>01 · Grundinformationen</h3><div class="imp-form-field"><label for="importantTitle">Titel *</label><input id="importantTitle" type="text" required placeholder="Worum geht es?"></div><div class="imp-form-field"><label for="importantCategory">Kategorie *</label><select id="importantCategory" required><option value="">Kategorie auswählen</option><option value="company">Unternehmensinformationen</option><option value="partners">Geschäftspartner & Kooperationen</option><option value="moves">Strategic Moves</option><option value="blueprints">Future Blueprints</option><option value="other">Sonstiges</option></select></div><label class="imp-focus-task-option"><input id="importantFocusTask" type="checkbox"><span>Als Fokusaufgabe in der Task Queue anzeigen</span></label></section>
           <section class="imp-form-section"><h3>02 · Priorität *</h3><div class="imp-priority-options"><label class="imp-priority-option imp-pri-red"><input type="radio" name="importantPriority" value="urgent" required> Dringend</label><label class="imp-priority-option imp-pri-orange"><input type="radio" name="importantPriority" value="important" required> Wichtig</label><label class="imp-priority-option imp-pri-blue"><input type="radio" name="importantPriority" value="provisional" required> Vorläufig</label><label class="imp-priority-option imp-pri-green"><input type="radio" name="importantPriority" value="indefinite" required> Unbefristet</label></div></section>
           <section class="imp-form-section imp-full"><h3>03 · Inhalt</h3><div class="imp-form-field"><label for="importantDescription">Beschreibung (optional)</label><textarea id="importantDescription" placeholder="Hintergründe, Details und wichtige Informationen …"></textarea></div><div class="imp-form-field"><label for="importantDate">Ereignisdatum (optional)</label><input id="importantDate" type="date"></div></section>
           <section class="imp-form-section imp-full"><h3>04 · Verknüpfungen</h3><div class="imp-form-field imp-link-picker"><label for="importantLinkSearch">HQ-Bereiche und Einträge suchen</label><div class="imp-link-search-row"><input id="importantLinkSearch" type="search" placeholder="Zum Beispiel Projects oder Business …" autocomplete="off"><button id="importantLinkClose" class="imp-link-close" type="button" aria-label="Verknüpfungsmenü schließen" title="Schließen" hidden>×</button></div><div class="imp-link-results" id="importantLinkResults" hidden></div><div class="imp-selected-links" id="importantSelectedLinks"></div></div></section>
@@ -361,7 +361,7 @@
 
       <section class="page" id="page-projects"><div class="page-intro"><div class="eyebrow">KEEP THE BIG PICTURE</div><h1>Projects & <em>Priorities.</em></h1><p>Decide what matters. Then make it happen.</p></div><div class="project-manager glass-card">
   <div class="project-manager-head"><div><span class="card-kicker">PERSONAL WORKSPACE</span><h2>Priority board</h2><p>Keep your next steps visible. Your entries stay on this device.</p></div><span class="tiny-tag">LOCAL MODE</span></div>
-  <form id="taskForm" class="task-form"><input id="taskInput" maxlength="100" placeholder="Add a task or milestone..." required><select id="taskPriority" aria-label="Priority"><option value="normal">Normal</option><option value="high">High priority</option><option value="urgent">Critical</option></select><button class="primary-button" type="submit">Add task <span>＋</span></button></form>
+  <form id="taskForm" class="task-form"><input id="taskInput" maxlength="100" placeholder="Add a task or milestone..." required><select id="taskPriority" aria-label="Priority"><option value="urgent">Dringend</option><option value="important">Wichtig</option><option value="provisional" selected>Vorläufig</option><option value="indefinite">Unbefristet</option></select><button class="primary-button" type="submit">Add task <span>＋</span></button></form>
   <div id="taskList" class="task-list" aria-live="polite"></div>
   <div class="task-footnote">Tasks are saved locally in this browser. Cloud sync and ARES-assisted planning will follow in a later phase.</div>
 </div></section>
@@ -391,15 +391,15 @@
 
 
   <div class="toast" id="toast" role="status"></div>
-  <script src="app.js?v=90"></script>
-  <script src="important.js?v=96"></script>
+  <script src="app.js?v=91"></script>
+  <script src="important.js?v=97"></script>
   <script src="focus-demo.js?v=2"></script>
-  <script src="focus-mode.js?v=8"></script>
+  <script src="focus-mode.js?v=9"></script>
   <script src="focus-reminders.js?v=2"></script>
   <script src="modules.js"></script>
   <script src="finance-tools.js"></script>
   <script src="finance-intelligence.js"></script>
-<script src="hq-tools.js?v=91"></script>
+<script src="hq-tools.js?v=92"></script>
 <script src="command-center.js"></script>
 </body>
 </html>

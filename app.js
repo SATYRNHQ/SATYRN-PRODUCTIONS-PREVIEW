@@ -214,19 +214,20 @@ const taskForm=document.getElementById('taskForm');
 const taskList=document.getElementById('taskList');
 const taskInput=document.getElementById('taskInput');
 const taskPriority=document.getElementById('taskPriority');
+const normalizeTaskPriority=value=>({high:'important',normal:'provisional'}[value]||(['urgent','important','provisional','indefinite'].includes(value)?value:'provisional'));
 let tasks=[];
-try{tasks=JSON.parse(localStorage.getItem('satyrn-tasks')||'[]')}catch{tasks=[]}
+try{tasks=JSON.parse(localStorage.getItem('satyrn-tasks')||'[]').map(task=>({...task,priority:normalizeTaskPriority(task.priority)}))}catch{tasks=[]}
 function saveTasks(){localStorage.setItem('satyrn-tasks',JSON.stringify(tasks))}
 function renderTasks(){
   if(!taskList)return;
   taskList.replaceChildren();
   if(!tasks.length){const empty=document.createElement('div');empty.className='task-empty';empty.textContent='Noch keine Aufgaben. Lege deinen ersten Schritt fest.';taskList.appendChild(empty);return}
   tasks.forEach(task=>{
-    const row=document.createElement('div');row.className='task-item'+(task.done?' done':'');
+    const row=document.createElement('div');row.className='task-item'+(task.done?' done':'');row.dataset.projectTask=String(task.id);
     const check=document.createElement('input');check.type='checkbox';check.checked=task.done;check.setAttribute('aria-label','Aufgabe erledigt');check.addEventListener('change',()=>{task.done=check.checked;saveTasks();renderTasks()});
     const label=document.createElement('span');label.className='task-item-text';label.textContent=task.title;
-    const priority=document.createElement('span');priority.className='task-priority '+task.priority;priority.textContent=task.priority==='urgent'?'Critical':task.priority==='high'?'High':'Normal';
-    const remove=document.createElement('button');remove.className='task-delete';remove.type='button';remove.textContent='×';remove.setAttribute('aria-label','Aufgabe löschen');remove.addEventListener('click',()=>{tasks=tasks.filter(item=>item.id!==task.id);saveTasks();renderTasks()});
+    const priority=document.createElement('span');priority.className='task-priority '+task.priority;priority.textContent=({urgent:'Dringend',important:'Wichtig',provisional:'Vorläufig',indefinite:'Unbefristet'})[task.priority]||'Vorläufig';
+    const remove=document.createElement('button');remove.className='task-delete';remove.type='button';remove.textContent='×';remove.setAttribute('aria-label','Aufgabe löschen');remove.addEventListener('click',()=>{tasks=tasks.filter(item=>item.id!==task.id);saveTasks();window.SATYRNImportantLinks?.removeTarget('Projects',task.id);renderTasks()});
     row.append(check,label,priority,remove);taskList.appendChild(row);
   });
 }
