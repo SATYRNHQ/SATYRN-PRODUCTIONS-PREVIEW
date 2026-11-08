@@ -96,6 +96,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Eine Suchfunktion für Kalendereinträge ist vorgesehen. Sie durchsucht die Titel von Terminen und Ereignissen und berücksichtigt **vergangene, aktuelle und zukünftige** Einträge. Suchergebnisse können direkt geöffnet werden und führen in die Detailansicht des jeweiligen Eintrags.
 - Eine gut erkennbare, aber optisch zurückhaltende Schaltfläche **„Alle zurücksetzen“** steht bei Suche und Prioritätsfiltern zur Verfügung. Sie leert den Suchbegriff und deaktiviert alle Prioritätsfilter gleichzeitig, sodass wieder sämtliche Termine angezeigt werden.
 - Die Schaltfläche **„Alle zurücksetzen“** ist nur sichtbar bzw. aktiv, wenn mindestens ein Suchbegriff oder Prioritätsfilter gesetzt ist; ohne aktive Suche und Filter wird sie ausgeblendet bzw. deaktiviert.
+- Aktivierte Prioritätsfilter werden gegenüber nicht ausgewählten Checkboxen etwas deutlicher hervorgehoben. Die Hervorhebung bleibt dezent und verwendet weiterhin die jeweilige Prioritätsfarbe, ohne die gesamte Filterfläche kräftig einzufärben.
 - Suche und Prioritätsfilter wirken **gleichzeitig**: Die Suche grenzt die Einträge nach Titel ein, während die aktivierten Prioritätsfilter die erlaubten Kategorien bestimmen. Angezeigt werden nur Einträge, die beide Bedingungen erfüllen.
 - Zusätzlich zur Suche werden Filter nach Priorität angeboten: **Dringend, Wichtig, Vorläufig, Unbefristet und Ohne Priorität**. Mehrere Prioritätsfilter können gleichzeitig ausgewählt werden; die Ergebnisse zeigen dann Einträge, die zu mindestens einer der ausgewählten Kategorien gehören.
 - Weitere Ansichten sind noch nicht beschlossen.
@@ -108,6 +109,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Aktivierte Prioritätsfilter werden dezent stärker hervorgehoben als nicht ausgewählte Checkboxen; die jeweilige Prioritätsfarbe bleibt erkennbar.
 - 2026-11-08: „Alle zurücksetzen“ wird nur bei aktiver Suche oder mindestens einem aktiven Prioritätsfilter angezeigt bzw. aktiviert.
 - 2026-11-08: Eine Schaltfläche „Alle zurücksetzen“ leert Suche und sämtliche Prioritätsfilter gleichzeitig.
 - 2026-11-08: Mehrtägige Terminbalken bleiben auch bei Überschreitung des normalen Platzlimits immer sichtbar und werden nicht hinter „+ weitere“ verborgen.
