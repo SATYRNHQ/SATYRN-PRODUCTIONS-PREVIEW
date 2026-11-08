@@ -1077,6 +1077,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Kategorie-Auswahl und Prioritäts-Auswahl stehen im Session-Vorbereitungsfenster untereinander, nicht nebeneinander.
 - Beide Bereiche behalten jeweils ihr eigenes flexibles Kachelraster und passen sich unabhängig an die verfügbare Breite an.
 
+
+### Sichtbare Auswahlmarkierung
+- Ausgewählte Kategorie- und Prioritäts-Kacheln zeigen zusätzlich einen kleinen Haken als eindeutige Auswahlmarkierung.
+- Die bestehende farbliche Hervorhebung der ausgewählten Kachel bleibt erhalten; der Haken ergänzt sie lediglich.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
