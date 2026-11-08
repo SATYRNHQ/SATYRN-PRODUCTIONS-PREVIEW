@@ -278,14 +278,14 @@
   const renderQueue=()=>{
     const target=$('fmQueueList');if(!target)return;
     const allLegacy=getLegacyTasks();const tasks=allLegacy.filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,priority:t.priority==='urgent'?'urgent':t.priority==='high'?'important':'provisional',source:'task',done:false,createdAt:Number(t.createdAt||t.id)||0,focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0,focusHistory:t.focusHistory||[],category:t.category||'',estimatedMinutes:t.estimatedMinutes||t.durationMinutes||0}));
-    const important=getImportant().map(t=>({id:String(t.id),title:t.title,priority:t.priority||'provisional',source:'important',category:t.category,done:false,createdAt:new Date(t.created||Date.now()).getTime(),focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0,focusHistory:t.focusHistory||[],estimatedMinutes:t.estimatedMinutes||t.durationMinutes||0}));
+    const allImportant=getImportant();const important=allImportant.filter(t=>!t.done&&!t.example).map(t=>({id:String(t.id),title:t.title,priority:t.priority||'provisional',source:'important',category:t.category,done:false,createdAt:new Date(t.created||Date.now()).getTime(),focusTimeMs:t.focusTimeMs||0,focusSessions:t.focusSessions||0,focusHistory:t.focusHistory||[],estimatedMinutes:t.estimatedMinutes||t.durationMinutes||0}));
     let list=[...tasks,...important];
     if(state.queueManual){
       const order=new Map(state.queue.map(x=>[String(x.id),Number(x.order)||0]));
       list.sort((a,b)=>(order.has(a.id)?order.get(a.id):Number.MAX_SAFE_INTEGER)-(order.has(b.id)?order.get(b.id):Number.MAX_SAFE_INTEGER)||pri(a.priority).rank-pri(b.priority).rank);
     }else list.sort((a,b)=>pri(a.priority).rank-pri(b.priority).rank||(a.createdAt||0)-(b.createdAt||0));
     $('fmQueueCount').textContent=list.length+' offene Aufgaben';
-    const doneTasks=allLegacy.filter(t=>t.done);$('fmQueueDoneSummary').textContent='Erledigte Aufgaben · '+doneTasks.length;$('fmQueueDoneList').innerHTML=doneTasks.length?doneTasks.map(t=>'<div class="fm-queue-done-row"><span>✓</span><b>'+esc(t.title)+'</b><small>'+esc(t.priority==='urgent'?'Dringend':t.priority==='high'?'Wichtig':'Normal')+'</small></div>').join(''):'<p class="fm-empty">Noch keine erledigten Aufgaben.</p>';
+    const doneTasks=[...allLegacy.filter(t=>t.done),...allImportant.filter(t=>t.done&&!t.example)];$('fmQueueDoneSummary').textContent='Erledigte Aufgaben · '+doneTasks.length;$('fmQueueDoneList').innerHTML=doneTasks.length?doneTasks.map(t=>'<div class="fm-queue-done-row"><span>✓</span><b>'+esc(t.title)+'</b><small>'+esc(pri(t.priority==='high'?'important':t.priority||'provisional').name)+'</small></div>').join(''):'<p class="fm-empty">Noch keine erledigten Aufgaben.</p>';
     target.innerHTML=list.length?list.map(t=>{
       const linked=current()?.linkedTaskSnapshot?.id===t.id&&current()?.linkedTaskSnapshot?.source===t.source;
       const categoryInfo=t.source==='important'?(IMPORTANT_CATEGORIES[t.category]||{name:'Important',color:'#c1c6c4'}):(t.category?{name:t.category,color:'#8db5d0'}:null);const categoryName=categoryInfo?.name||'';const planned=t.estimatedMinutes?'<small>Geplant · '+duration(t.estimatedMinutes*60000)+'</small>':'';const lastWork=t.focusHistory?.slice().sort((a,b)=>b.at-a.at)[0];const work=t.focusSessions?'<details class="fm-task-activity"><summary>Worked on in Focus Mode · '+t.focusSessions+' Sessions · '+duration(t.focusTimeMs)+' focused'+(lastWork?' · zuletzt '+dateLabel(lastWork.localDate||dateKey(lastWork.at)):'')+'</summary><div>'+(t.focusHistory||[]).slice().sort((a,b)=>b.at-a.at).map(h=>'<small>'+dateLabel(h.localDate||dateKey(h.at))+' · '+(h.timezone?timeInZone(h.at,h.timezone):timeLabel(h.at))+' · '+duration(h.durationMs)+'</small>').join('')+'</div></details>':'';
@@ -367,7 +367,7 @@
   };
   const fillLinkedOptions=()=>{
     const select=$('fmLinkedTask');if(!select)return;
-    const options=[...getLegacyTasks().filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,source:'task'})),...getImportant().map(t=>({id:String(t.id),title:t.title,source:'important'}))];
+    const options=[...getLegacyTasks().filter(t=>!t.done).map(t=>({id:String(t.id),title:t.title,source:'task'})),...getImportant().filter(t=>!t.done&&!t.example).map(t=>({id:String(t.id),title:t.title,source:'important'}))];
     select.innerHTML='<option value="">Eigenes Fokusziel</option>'+options.map(t=>'<option value="'+t.source+':'+esc(t.id)+'">'+esc(t.title)+' · '+(t.source==='task'?'Task Queue':'Important')+'</option>').join('');
   };
   const assignTask=(id,source)=>{
