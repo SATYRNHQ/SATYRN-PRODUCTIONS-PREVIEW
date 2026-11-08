@@ -202,6 +202,15 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Vergleich aktualisiert sich automatisch beim Wechsel des ausgewählten Monats.
 
 
+
+### Kategorie-Filter für Statistiken
+- In den Daily, Weekly, Monthly und Overall Statistics kann nach einer einzelnen Kategorie gefiltert werden.
+- Zusätzlich gibt es die Ansicht „Alle Kategorien“ als Standard.
+- Die Filteroptionen übernehmen automatisch die Kategorien aus dem gemeinsamen SATYRN-Kategoriensystem einschließlich eigener Dashboard-Kategorien.
+- Bei Auswahl einer Kategorie beziehen sich Fokuszeiten, Session-Anzahlen, Produktivitätswerte, Rekorde und Zeitvergleiche auf diese Kategorie.
+- Zeitvergleiche bleiben auf denselben Zeitraum und dieselbe Kategorie bezogen; die Vergleichsperiode verwendet also denselben Kategorie-Filter.
+- Die Kategorieauswahl ist in allen Statistik-Zeiträumen konsistent und ohne Seitenwechsel erreichbar.
+
 ### Visuelle Kennzeichnung der Zeitvergleiche
 - Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
 - Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
