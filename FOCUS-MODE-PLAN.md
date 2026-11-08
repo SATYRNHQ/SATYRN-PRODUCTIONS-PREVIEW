@@ -301,6 +301,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Aus der Vorschau kann der Nutzer den Export bestätigen oder zurückkehren, um Format bzw. Berichtsumfang zu ändern.
 - Die Vorschau verändert keine gespeicherten Sessions oder Statistikdaten.
 
+
+### Eigenständiges Vorschaufenster für Exporte
+- Die Export-Vorschau öffnet sich in einem eigenen Fenster bzw. Modal und nicht innerhalb des Export-Auswahlfensters.
+- Das Export-Auswahlfenster führt zur Vorschau; von dort kann der Nutzer den Export bestätigen oder zur Formatauswahl zurückkehren.
+- Die Vorschau besitzt eine klare eigene Kopfzeile sowie gut erreichbare Aktionen zum Exportieren und Zurückkehren.
+- Das Fenster folgt dem SATYRN-HQ-Modalverhalten und bleibt innerhalb des verfügbaren Viewports bedienbar.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
