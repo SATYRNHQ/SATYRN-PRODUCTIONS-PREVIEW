@@ -1712,27 +1712,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Dieser Punkt ist eine abschließende Testaufgabe für alle Seiten und wird nicht als zusätzliche dauerhafte Demo-Funktion umgesetzt.
 
 
-### Sicherheits-Backup vor vollständigem JSON-Import
-- Vor jedem JSON-Import mit der Option „Vollständig ersetzen“ wird automatisch ein vollständiges Sicherheits-Backup des aktuell gespeicherten Focus-Mode-Datenbestands erstellt.
-- Das Backup wird vor jeder Änderung erfolgreich erstellt und geprüft; schlägt dies fehl, wird der Ersetzungsvorgang abgebrochen.
-- Das Sicherheits-Backup bleibt verfügbar, damit der vorherige Datenstand bei Bedarf wiederhergestellt werden kann.
-- Der Nutzer muss das Backup nicht manuell anstoßen.
-
-
-### Backup gezielt wiederherstellen
-- Nutzer können ein vorhandenes JSON-Backup gezielt auswählen und wiederherstellen.
-- Vor der Wiederherstellung werden Backup-Datum und enthaltene Daten kurz angezeigt.
-- Die Wiederherstellung erfolgt erst nach ausdrücklicher Bestätigung.
-- Vor dem Einspielen wird automatisch ein Sicherheits-Backup des aktuellen Datenstands erstellt; schlägt dies fehl, wird die Wiederherstellung abgebrochen.
-- Die Wiederherstellung bietet eine klare Auswahl zwischen Zusammenführen und vollständigem Ersetzen; beim Ersetzen gelten zusätzlich die bestehenden Schutz- und Bestätigungsregeln.
-
-
-### Aufbewahrung mehrerer Backup-Versionen
-- Es werden die letzten vier wöchentlichen Backup-Versionen aufbewahrt, damit bei Bedarf auch auf ältere Datenstände zurückgegriffen werden kann.
-- Neuere Backups verdrängen ältere Versionen erst, wenn die neue Sicherung erfolgreich erstellt und geprüft wurde.
-- Sicherheits-Backups vor Import oder Wiederherstellung werden ebenfalls geschützt und nicht vorzeitig durch eine fehlgeschlagene Sicherung überschrieben.
-- Vor dem Löschen einer Backup-Version wird sichergestellt, dass die festgelegte Anzahl gültiger Wiederherstellungspunkte erhalten bleibt.
-
+### Anforderungen an die zentrale Backup-Funktion aus Sicht von Focus Mode
+- Focus Mode erhält kein eigenes, unabhängiges Backup-Archiv und keine separate Aufbewahrungs- oder Versionslogik.
+- Alle Focus-Mode-Daten, die für eine vollständige Sicherung und Wiederherstellung relevant sind, werden als Anforderungen an das zentrale websiteweite Backup-System vorgemerkt.
+- Dazu gehören insbesondere Sessions, Zeitabschnitte, Notizen, Distraction-Log-Einträge, Verknüpfungen, Session-History, Presets und Focus-spezifische Einstellungen, soweit sie zum zentralen Datenbestand gehören.
+- Wenn später aus Focus Mode heraus ein Backup oder eine Wiederherstellung gestartet werden kann, verwendet diese Bedienung ausschließlich das zentrale SATYRN-HQ-Backup-System.
+- Vor einer Wiederherstellung muss das zentrale System den gesamten aktuellen Website-Datenstand sichern; schlägt diese Sicherung fehl, wird die Wiederherstellung abgebrochen.
+- Umfang, Versionierung, Aufbewahrungsdauer, Zusammenführen und vollständiges Ersetzen werden ausschließlich bei der abschließenden websiteweiten Backup-Planung festgelegt.
+- Die bisherige Focus-spezifische Vorgabe zu vier wöchentlichen Backup-Versionen und eigenständigen JSON-Backup-Archiven wird nicht als separate technische Umsetzung weitergeführt.
 
 ### Speicherprüfung und sichtbare Fehlerhinweise
 - Beim Speichern werden Daten auf erfolgreiche und vollständige Speicherung geprüft.
