@@ -177,6 +177,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Produktivster Tag des Monats.
 - Navigation zwischen Monaten; die Monatsstatistik passt zur Monthly Focus Map.
 
+
+### Vergleich mit dem Vormonat
+- Die Monthly Statistics vergleichen die gesamte Fokuszeit des ausgewählten Monats automatisch mit dem direkten Vormonat.
+- Anzeige der Fokuszeit beider Monate sowie der absoluten und prozentualen Veränderung, z. B. „12 % mehr Fokuszeit als im Vormonat“.
+- Bei weniger Fokuszeit wird die Veränderung entsprechend als Rückgang dargestellt.
+- Wenn im Vormonat keine Fokuszeit erfasst wurde, wird statt einer irreführenden Prozentangabe ein neutraler Hinweis angezeigt.
+- Der Vergleich aktualisiert sich automatisch beim Wechsel des ausgewählten Monats.
+
 ### Overall Statistics
 - Gesamte jemals erfasste Fokuszeit.
 - Gesamtanzahl abgeschlossener, unterbrochener und endgültig verworfener Sessions.
