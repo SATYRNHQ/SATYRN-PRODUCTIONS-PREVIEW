@@ -1133,6 +1133,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Nutzerdefinierte Session-Presets können einen frei wählbaren Namen erhalten, zum Beispiel „Morning Grind“, „Beatmaking“ oder „Deep Focus“.
 - Name, Fokusdauer und Pauseneinstellung werden gemeinsam im Preset gespeichert.
 
+
+### Eigene Presets bearbeiten und löschen
+- Eigene gespeicherte Presets können nachträglich bearbeitet und gelöscht werden.
+- Beim Bearbeiten lassen sich Name, Fokusdauer und Pauseneinstellung ändern.
+- Das Löschen eines eigenen Presets erfordert eine Bestätigung, damit es nicht versehentlich entfernt wird.
+- Die fest eingebauten Standard-Presets bleiben davon unberührt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
