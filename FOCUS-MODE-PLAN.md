@@ -662,9 +662,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 
 ### Wiederherstellung einer laufenden Session
 - Laufende Focus Sessions werden bei Seitenneuladen, versehentlichem Schließen des Tabs oder Schließen des Browsers automatisch mit ihrem aktuellen Zustand gespeichert.
-- Beim erneuten Öffnen von SATYRN HQ wird die Session wiederhergestellt und kann an derselben Stelle fortgesetzt werden.
+- Beim erneuten Öffnen von SATYRN HQ werden Session-Zustand, gewähltes Fokusziel und zugehörige Session-Daten wiederhergestellt und im Wiederaufnahme-Hinweis angeboten.
 - Die verbleibende Zeit wird anhand der tatsächlichen verstrichenen Zeit berechnet, damit ein geschlossenes Fenster den Timer nicht künstlich anhält.
-- Auch Session-Status, gewähltes Fokusziel und zugehörige Session-Daten bleiben erhalten.
+- Die Wiederherstellung der Daten bedeutet keinen automatischen Neustart des Timers: Der Nutzer entscheidet ausdrücklich über Fortsetzen, Pausieren oder Verwerfen.
 
 
 ### Verhalten bei Verbindungsverlust
