@@ -992,6 +992,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Entfernen löst nur die Verknüpfung mit dieser Session; die ursprüngliche Important-Aufgabe bleibt bestehen und unverändert.
 - Die übrigen Aufgaben und ihre Reihenfolge bleiben erhalten; eine entfernte Aufgabe wird nicht automatisch gelöscht oder anderweitig verändert.
 
+
+### Weitere Important-Aufgaben in der Vorbereitung hinzufügen
+- Im Session-Vorbereitungsfenster können weitere bereits bestehende, offene Important-Aufgaben zur geplanten Session hinzugefügt werden.
+- Die hinzugefügten Aufgaben erscheinen zunächst als zusätzliche Aufgaben und können vor dem Start sortiert oder zur Hauptaufgabe gemacht werden.
+- Die Verknüpfung und Synchronisierung werden erst beim ausdrücklichen Start der Session wirksam; bei Abbruch bleiben die ursprünglichen Important-Aufgaben unverändert.
+- Diese Möglichkeit gilt nur während der Vorbereitung. Nach dem Start können keine neuen Important-Aufgaben zu dieser Session hinzugefügt werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
