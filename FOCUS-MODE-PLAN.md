@@ -398,6 +398,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Bei einem Wechsel der lokalen Zeitzone werden bereits abgeschlossene Tage, ihre Zielwerte und ihre Streak-Wertungen nicht nachträglich verschoben oder neu berechnet.
 - Ab dem Zeitpunkt des Zeitzonenwechsels werden neue Fokuszeit und Tagesgrenzen nach der neuen lokalen Zeitzone zugeordnet. Der laufende, noch nicht abgeschlossene Tag wird ab diesem Zeitpunkt nach der neuen lokalen Tagesgrenze weitergeführt; bereits erfasste Fokuszeit bleibt erhalten und wird nicht doppelt gezählt.
 
+- Die Streak-Berechnung ist nicht davon abhängig, ob die Website geöffnet ist. Beim erneuten Öffnen werden alle seit der letzten Berechnung vergangenen lokalen Kalendertage anhand der gespeicherten Fokuszeit, des für den jeweiligen Tag geltenden Tagesziels und der gespeicherten Zeitzonen-/Tagesgrenzen lückenlos nachberechnet.
+- Ein Tag, an dem das Tagesziel nicht erreicht wurde, unterbricht die Streak auch dann, wenn die Website während dieses Tages geschlossen war. Ein erreichter Tag zählt entsprechend auch bei geschlossener Website als erreicht, sofern die gespeicherten Fokusdaten das belegen.
+- Für diese Nachberechnung sind keine laufenden Hintergrundprozesse, geöffneten Browser-Tabs oder Benachrichtigungen erforderlich. Die Auswertung erfolgt spätestens beim nächsten Öffnen des Focus Mode und wird anschließend dauerhaft gespeichert.
+- Die Nachberechnung darf bereits endgültig bewertete Tage nicht aufgrund späterer Zeitzonenwechsel oder geänderter Tagesziele rückwirkend verschieben oder umwerten. Maßgeblich bleiben die für den jeweiligen Tag gespeicherten Regeln und Daten.
+
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
 - Farbintensität richtet sich nach der täglichen Fokuszeit.
