@@ -169,6 +169,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Anzahl abgeschlossener, unterbrochener und endgültig verworfener Sessions.
 - Produktivster Wochentag.
 
+
+### Vergleich mit der Vorwoche
+- Die Weekly Statistics vergleichen die gesamte Fokuszeit der ausgewählten Woche automatisch mit der direkten Vorwoche.
+- Anzeige der Fokuszeit beider Wochen sowie der absoluten und prozentualen Veränderung.
+- Bei weniger Fokuszeit wird der Rückgang entsprechend dargestellt.
+- Wenn in der Vorwoche keine Fokuszeit erfasst wurde, erscheint ein neutraler Hinweis statt einer irreführenden Prozentangabe.
+- Der Vergleich aktualisiert sich automatisch beim Wechsel der ausgewählten Woche.
+
 ### Monthly Statistics
 - Gesamte Fokuszeit des ausgewählten Monats.
 - Fokuszeit pro Tag im Monatsverlauf mit übersichtlicher Vergleichsansicht.
