@@ -63,7 +63,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
   4. **Unbefristet** — Grün
 - Die Priorität dient in der Monatsansicht zur farblichen Unterscheidung der Einträge.
 - Die Prioritätsfarbe wird durch einen **schmalen farbigen Streifen** am Termineintrag dargestellt. Der Titel selbst bleibt in der normalen Textfarbe.
-- Wiederkehrende Termine erhalten in der Monatsansicht zusätzlich eine **kleine, dezente Kennzeichnung** (z. B. ein Wiederholungs-Symbol), damit sie von einzelnen Terminen unterscheidbar sind. Die Kennzeichnung bleibt zurückhaltend und überlädt die kompakte Monatsansicht nicht.
+- Wiederkehrende Termine erhalten in der Monatsansicht zusätzlich eine **kleine, dezente Kennzeichnung** (z. B. ein Wiederholungs-Symbol), damit sie von einzelnen Terminen unterscheidbar sind. Die Kennzeichnung bleibt zurückhaltend und überlädt die kompakte Monatsansicht nicht. Das Wiederholungs-Symbol wird außerdem im **Tagesfenster** und in der **Detailansicht** des jeweiligen Termins angezeigt.
 - Die sichtbaren Einträge bleiben textlich auf den Titel beschränkt; die Prioritätsfarbe liefert die zusätzliche visuelle Orientierung.
 
 ## Noch nicht festgelegt
@@ -95,6 +95,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Das Wiederholungs-Symbol wird nicht nur in der Monatsansicht, sondern auch im Tagesfenster und in der Detailansicht angezeigt.
 - 2026-11-08: Wiederkehrende Termine erhalten in der Monatsansicht eine kleine, dezente Kennzeichnung, damit sie von Einzelterminen unterscheidbar sind.
 - 2026-11-08: Änderungen an einer Wiederholungsserie können im Bearbeitungsfenster wahlweise erst ab einem festgelegten Datum bzw. einem ausgewählten Vorkommen gelten.
 - 2026-11-08: Beim Bearbeiten einer gesamten Wiederholungsserie können auch die Wiederholungseinstellungen geändert werden, z. B. von wöchentlich auf monatlich.
