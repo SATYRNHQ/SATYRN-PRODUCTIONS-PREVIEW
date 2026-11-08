@@ -192,6 +192,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Anzeige der noch fehlenden Fokuszeit.
 - Ziele können jederzeit angepasst werden.
 
+
+### Rekord für längste zusammenhängende Fokuszeit
+- In den Overall Statistics wird die längste zusammenhängende Fokuszeit als persönlicher Rekord angezeigt.
+- Angezeigt werden die erreichte Dauer und das Datum, an dem der Rekord erzielt wurde.
+- Als zusammenhängend gilt die tatsächlich erfasste Fokuszeit einer Session; reguläre Pausen zählen nicht zur Fokuszeit und setzen den Rekord nicht künstlich herauf.
+- Der Rekord wird automatisch aktualisiert, wenn eine Session einen neuen Höchstwert erreicht.
+
 ### Focus Streak
 - Die Streak erhöht sich, wenn das selbst festgelegte Tagesziel erreicht wird.
 - Anzeige der aktuellen und längsten Streak.
