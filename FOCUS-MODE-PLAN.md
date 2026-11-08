@@ -1343,6 +1343,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Der Bereich „Meine Presets“ verwendet dieselbe responsive Anordnung.
 - Es gibt keine horizontale Scrollleiste für die Preset-Auswahl.
 
+
+### Responsive Anordnung der Preset-Auswahl
+- Die Preset-Auswahl passt sich automatisch an die verfügbare Bildschirmbreite an.
+- Auf Desktop werden die Preset-Schaltflächen in mehreren übersichtlichen Spalten dargestellt; auf Tablet und Smartphone reduziert sich die Spaltenzahl automatisch.
+- Auf Smartphones bleiben die Schaltflächen gut antippbar und zeigen Name, Fokusdauer sowie Pausendauer weiterhin lesbar an.
+- Standard-Presets und eigene Presets verwenden dasselbe responsive Raster; die Trennlinie und der Bereich „Meine Presets“ bleiben erhalten.
+- Kein horizontales Scrollen für die Preset-Auswahl; bei geringer Breite werden die Schaltflächen in weitere Zeilen umgebrochen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
