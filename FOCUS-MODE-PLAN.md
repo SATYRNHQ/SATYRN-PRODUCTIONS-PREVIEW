@@ -220,6 +220,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Mehrere Kategorien können unabhängig voneinander aktiviert und deaktiviert werden.
 - Die Auswahl unterstützt auch „Alle Kategorien“ als Standardansicht; die Bedienung bleibt über Daily, Weekly, Monthly und Overall konsistent.
 
+
+### Kategorieauswahl beim Wechsel der Statistik-Zeiträume
+- Die aktuell ausgewählte Kategorie bzw. Kategorie-Kombination bleibt beim Wechsel zwischen Daily, Weekly, Monthly und Overall erhalten.
+- Auch „Alle Kategorien“ bleibt als Auswahl erhalten, wenn diese Ansicht aktiv ist.
+- Die Auswahl wird nicht bei jedem Zeitraumwechsel zurückgesetzt; sie ändert sich nur durch eine bewusste neue Auswahl des Nutzers.
+
 ### Visuelle Kennzeichnung der Zeitvergleiche
 - Die Vergleichswerte in Daily, Weekly und Monthly Statistics erhalten eine dezente visuelle Kennzeichnung mit Richtungspfeil und Farbe.
 - Grün mit Pfeil nach oben bei mehr Fokuszeit, Rot mit Pfeil nach unten bei weniger Fokuszeit und eine neutrale Darstellung bei unveränderter Fokuszeit.
