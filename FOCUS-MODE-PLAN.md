@@ -284,6 +284,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beide Varianten enthalten das SATYRN-Branding und das Erstellungsdatum.
 - Beide Varianten berücksichtigen dieselben aktiven Zeitraum- und Kategorie-Filter.
 
+
+### Gemeinsamer Statistik-Export
+- CSV- und PDF-Export werden über einen gemeinsamen Button „Exportieren“ aufgerufen.
+- Der Button öffnet ein kompaktes Auswahlfenster mit den Formaten CSV und PDF.
+- Bei PDF kann im selben Ablauf zwischen kompaktem und ausführlichem Bericht gewählt werden.
+- Der Export übernimmt die aktuell aktiven Zeitraum- und Kategorie-Filter.
+- Das Auswahlfenster folgt dem bestehenden SATYRN-HQ-Design und lässt sich ohne Export schließen.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
