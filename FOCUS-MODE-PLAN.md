@@ -906,6 +906,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Vorhandene Zustände dürfen dabei nicht unbemerkt überschrieben werden; widersprüchliche Aktionen müssen konsistent aufgelöst werden.
 
 
+
+### Gleichzeitige Bearbeitung derselben Session-Daten
+- Timer- und Statusaktionen folgen weiterhin der Regel für die zuletzt ausgeführte gültige Aktion.
+- Werden dieselben Inhalte einer Session nahezu gleichzeitig in mehreren Tabs bearbeitet (z. B. Notizen, Fokusziel oder Distraction-Log-Einträge), dürfen Änderungen nicht unbemerkt gegenseitig überschrieben werden.
+- Gleichzeitige Änderungen werden als Konflikt erkannt; beide Änderungsstände bleiben bis zur Klärung erhalten.
+- Der Nutzer erhält eine verständliche Möglichkeit, die betroffenen Änderungen zu vergleichen und bewusst zu entscheiden, welche Inhalte übernommen bzw. zusammengeführt werden.
+- Eine erfolgreiche Synchronisierung darf keine der erfassten Änderungen stillschweigend verlieren.
+
 ### Wiederaufnahme-Hinweis beim Öffnen
 - Beim Öffnen von Focus Mode wird automatisch geprüft, ob eine gespeicherte laufende oder unterbrochene Session vorhanden ist.
 - Falls eine Session wiederaufgenommen werden kann, erscheint eine dezente Meldung mit der Möglichkeit, sie fortzusetzen.
