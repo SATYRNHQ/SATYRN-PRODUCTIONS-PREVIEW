@@ -206,3 +206,6 @@
 
 #page-focus .fm-setup-buttons{display:flex;align-items:center;gap:12px}
 #page-focus .fm-setup-buttons .fm-text-button{white-space:nowrap}
+
+#page-focus .focus-distraction-free .fm-work-grid{grid-template-columns:1fr}
+#page-focus .focus-distraction-free .fm-setup-panel{max-width:760px;margin-inline:auto}
