@@ -1292,6 +1292,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Plus-Symbol öffnet den bereits geplanten Preset-Editor.
 - Die Erstellung und Speicherung folgen dem festgelegten Ablauf mit explizitem Klick auf „Speichern“.
 
+
+### Plus-Symbol auch bei leerem Preset-Bereich
+- Das Plus-Symbol neben „Meine Presets“ bleibt immer sichtbar, auch wenn noch keine eigenen Presets vorhanden sind.
+- Der Bereich zeigt in diesem Fall weiterhin die Möglichkeit, direkt das erste eigene Preset anzulegen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
