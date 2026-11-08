@@ -1602,3 +1602,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Gelöschte Kategorien bleiben in Statistiken für historische Sessions weiterhin sichtbar, damit frühere Focus-Zeiten vollständig nachvollziehbar bleiben.
 - Sie werden als gelöscht bzw. historisch gekennzeichnet und nicht mit einer später neu erstellten Kategorie gleichen Namens zusammengeführt.
 - Neue Sessions können die gelöschte Kategorie nicht mehr auswählen.
+
+
+### Statistikfilter für gelöschte Kategorien
+- Gelöschte Kategorien bleiben als historische Filteroption in den Statistiken auswählbar, sofern ihnen historische Sessions zugeordnet sind.
+- Die Filteroption wird als gelöscht bzw. historisch gekennzeichnet.
+- Die Auswahl zeigt ausschließlich Sessions der ursprünglichen gelöschten Kategorie und schließt eine später neu erstellte Kategorie gleichen Namens aus.
