@@ -41,6 +41,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Die Detailansicht zeigt: **Titel, Datum, Uhrzeit, Priorität und eine optionale Beschreibung**.
 - **Mehrtägige Termine sind möglich.** Ein Termin kann daher über ein Start- und Enddatum laufen und wird in der Monatsansicht über die betroffenen Tage hinweg berücksichtigt.
 - Mehrtägige Termine werden in der Monatsansicht **als zusammenhängender Eintrag über die betroffenen Tage hinweg** dargestellt. Anfang und Ende des Eintrags sind visuell erkennbar, damit der durchgehende Zeitraum als ein einzelner Termin verständlich bleibt.
+- Diese zusammenhängende Darstellung bleibt auch **über Monatsgrenzen hinweg** erhalten. Liegt ein Termin beispielsweise vom 29. November bis zum 3. Dezember, wird er in beiden Monatsansichten jeweils mit dem passenden Abschnitt dargestellt; der Zusammenhang zwischen Anfang und Ende bleibt erkennbar.
 - Zusätzlich gibt es **ganztägige Termine ohne erforderliche Uhrzeitangabe**. Das gilt auch für mehrtägige ganztägige Termine.
 - Termine können **wiederkehrend** angelegt werden, mindestens mit den Wiederholungen wöchentlich, monatlich und jährlich.
 - Mehrtägige Termine können ebenfalls wiederkehrend angelegt werden. Die festgelegte Dauer wird auf jedes Vorkommen der Wiederholungsserie angewendet (z. B. jährlich vom 8. bis zum 10. November).
@@ -96,6 +97,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Die zusammenhängende Darstellung mehrtägiger Termine bleibt auch über Monatsgrenzen hinweg erhalten; der jeweilige Abschnitt erscheint in jeder betroffenen Monatsansicht.
 - 2026-11-08: Mehrtägige Termine werden in der Monatsansicht als zusammenhängender Eintrag über alle betroffenen Tage dargestellt; Anfang und Ende des Eintrags bleiben visuell erkennbar.
 - 2026-11-08: Das Wiederholungs-Symbol wird nicht nur in der Monatsansicht, sondern auch im Tagesfenster und in der Detailansicht angezeigt.
 - 2026-11-08: Wiederkehrende Termine erhalten in der Monatsansicht eine kleine, dezente Kennzeichnung, damit sie von Einzelterminen unterscheidbar sind.
