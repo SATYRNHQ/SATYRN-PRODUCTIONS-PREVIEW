@@ -162,3 +162,5 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Bei gleicher Startzeit werden normale Termine zusätzlich nach Priorität sortiert: Dringend, Wichtig, Vorläufig, Unbefristet, anschließend ohne Priorität.
 
 - 2026-11-08: Haben normale Termine dieselbe Startzeit und dieselbe Priorität, wird zusätzlich nach Erstellungszeit sortiert: Der älter erstellte Termin erscheint zuerst.
+
+- 2026-11-08: Mehrtägige Terminbalken unterliegen ebenfalls der aktiven Suche und den Prioritätsfiltern. Wenn ein mehrtägiger Termin die Filterkriterien nicht erfüllt, wird sein Balken in der Monatsansicht ausgeblendet.
