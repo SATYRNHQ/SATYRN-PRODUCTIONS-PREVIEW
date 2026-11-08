@@ -1889,3 +1889,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Unterbrochene, lediglich pausierte oder endgültig verworfene Sessions zählen nicht als erfolgreich abgeschlossene Sessions.
 - Maßgeblich ist der lokale Kalendertag des erfolgreichen Abschlusses; die Session wird der Kalenderwoche zugeordnet, in der sie abgeschlossen wurde.
 - Der Rekord zeigt die höchste Anzahl und den zugehörigen Wochenzeitraum und wird automatisch aktualisiert, sobald ein neuer Bestwert erreicht wird.
+
+### Genaue Berechnung der Durchschnittswerte
+- **Durchschnittliche Dauer abgeschlossener Sessions:** Summe der tatsächlich erfassten Fokuszeit aller erfolgreich abgeschlossenen Sessions geteilt durch deren Anzahl. Reguläre Abschlüsse und ein vorzeitiger Abschluss über „Complete Session“ zählen; Pausen und Unterbrechungszeiten werden ausgeschlossen.
+- Unterbrochene, pausierte und endgültig verworfene Sessions fließen nicht in den Durchschnitt der abgeschlossenen Session-Dauern ein.
+- **Durchschnittliche tägliche Fokuszeit:** Gesamte tatsächlich erfasste Fokuszeit des ausgewählten Zeitraums geteilt durch die Anzahl der lokalen Kalendertage dieses Zeitraums, an denen mindestens Fokuszeit erfasst wurde. Tage ohne Fokuszeit zählen nicht als aktive Tage.
+- Sessions und Fokuszeitsegmente über Mitternacht werden den jeweiligen lokalen Kalendertagen anteilig zugeordnet; Pausen und Unterbrechungszeiten zählen nicht.
+- Beide Durchschnittswerte berücksichtigen den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Bei mehreren ausgewählten Kategorien wird jede Session bzw. jedes Zeitsegment nur einmal berücksichtigt.
+- Wenn im ausgewählten Zeitraum keine abgeschlossene Session bzw. kein aktiver Fokus-Tag vorhanden ist, wird statt eines irreführenden Zahlenwerts „–“ angezeigt.
