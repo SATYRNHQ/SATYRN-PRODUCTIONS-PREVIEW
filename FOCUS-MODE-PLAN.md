@@ -1648,3 +1648,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Geht der PC während einer laufenden Focus-Session in den Energiesparmodus oder Standby, wird die Session beim Aufwachen anhand der tatsächlich vergangenen Zeit aktualisiert.
 - Die verstrichene Zeit wird korrekt berücksichtigt; bereits erfasste Fokuszeitabschnitte werden nicht doppelt gezählt.
 - Die Session wird nach dem Aufwachen nicht ungefragt neu gestartet; ihr zuvor gespeicherter Status bleibt erhalten und der Nutzer entscheidet über die Fortsetzung.
+
+
+### Seitenwechsel innerhalb von SATYRN HQ
+- Eine laufende Focus-Session bleibt beim Wechsel auf andere SATYRN-Seiten aktiv und läuft ohne Neustart oder automatische Pause weiter.
+- Timerstatus und Sessiondaten bleiben seitenübergreifend synchron.
+- Die kompakte Rückkehr-zur-Session-Funktion ermöglicht den direkten Sprung zurück zur richtigen offenen Session.
