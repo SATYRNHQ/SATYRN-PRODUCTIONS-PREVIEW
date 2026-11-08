@@ -44,6 +44,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Termine können **wiederkehrend** angelegt werden, mindestens mit den Wiederholungen wöchentlich, monatlich und jährlich.
 - Mehrtägige Termine können ebenfalls wiederkehrend angelegt werden. Die festgelegte Dauer wird auf jedes Vorkommen der Wiederholungsserie angewendet (z. B. jährlich vom 8. bis zum 10. November).
 - Wiederholungen benötigen standardmäßig kein festgelegtes Enddatum. Sie laufen weiter, bis der Nutzer sie manuell löscht.
+- Für jede Wiederholungsserie kann optional ein **Enddatum** festgelegt werden (z. B. „jeden Montag bis zum 31. Dezember“). Ohne ein solches Enddatum läuft die Serie unbegrenzt weiter, bis sie manuell gelöscht wird.
 - Die Beschreibung ist freiwillig; die übrigen genannten Angaben gehören zur regulären Terminansicht.
 - Das Tagesfenster ist eine kompakte Detail- und Bearbeitungsansicht; die Monatsansicht bleibt die zentrale Hauptansicht.
 
@@ -88,6 +89,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Für Wiederholungsserien kann optional ein Enddatum festgelegt werden. Ohne Enddatum läuft die Serie unbegrenzt weiter, bis sie manuell gelöscht wird.
 - 2026-11-08: Bei wöchentlicher Wiederholung können ein oder mehrere Wochentage individuell ausgewählt werden, z. B. Montag und Donnerstag.
 - 2026-11-08: Bei monatlicher Wiederholung kann zwischen einem festen Monatstag (z. B. dem 8.) und einer relativen Wochentagsposition (z. B. dem ersten Montag des Monats) gewählt werden.
 - 2026-11-08: Bei jährlicher Wiederholung kann zwischen einem festen Kalenderdatum (z. B. dem 8. November) und einer relativen Wochentagsposition innerhalb eines Monats (z. B. dem zweiten Montag im November) gewählt werden.
