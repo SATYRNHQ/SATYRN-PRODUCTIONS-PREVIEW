@@ -142,6 +142,15 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Es wird nicht behauptet, dass Änderungen nach einem Browser- oder Geräteabsturz wiederherstellbar sind, wenn sie zuvor nicht dauerhaft lokal gespeichert werden konnten.
 - Ein erneuter Speicher- oder Synchronisierungsversuch darf vorhandene Änderungen nicht stillschweigend überschreiben oder doppelt anlegen.
 
+
+### Wiederherstellung nach unerwartetem Absturz oder Stromausfall
+- Focus Mode speichert den Session-Zustand und Änderungen fortlaufend in einem dauerhaft verfügbaren lokalen Zwischenspeicher.
+- Nach einem unerwarteten Browser-, Tab- oder Geräteabsturz bzw. Stromausfall wird beim nächsten Öffnen automatisch der letzte erfolgreich lokal gespeicherte Zustand wiederhergestellt.
+- Timerstatus und verbleibende Zeit werden anhand der gespeicherten Zeitinformationen und der tatsächlich verstrichenen Zeit korrekt rekonstruiert; es erfolgt kein automatischer Neustart einer Fokus- oder Pausenphase.
+- Änderungen, die vor dem Absturz noch nicht erfolgreich lokal gespeichert wurden, können nicht garantiert wiederhergestellt werden. Der wiederhergestellte Stand wird deshalb klar als letzter lokal gesicherter Stand erkennbar gemacht.
+- Noch nicht zentral synchronisierte, aber lokal gesicherte Änderungen werden nach Wiederherstellung erneut zur Synchronisierung vorgemerkt.
+- Die Wiederherstellung darf keine doppelten Sessions, doppelten Zeitabschnitte oder widersprüchlichen Timerzustände erzeugen.
+
 ### Bedienbarkeit des Focus-Fensters
 - Das Focus-Fenster übernimmt die allgemeinen Responsive- und Bedienungsstandards der Website und stellt sicher, dass seine zentralen Funktionen auf Desktop, Tablet und Smartphone erreichbar bleiben.
 - **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar.
