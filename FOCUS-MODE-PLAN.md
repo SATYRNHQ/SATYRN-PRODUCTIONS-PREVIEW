@@ -127,6 +127,18 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Ein Session-Wechsel darf keine noch nicht gespeicherten Änderungen verlieren; der Speicherstatus muss dabei korrekt berücksichtigt werden.
 - Bei einem Speicherfehler wird eine verständliche Meldung angezeigt. Betroffene Änderungen bleiben, soweit technisch möglich, lokal erhalten und können erneut gespeichert werden.
 
+### Bedienbarkeit des Focus-Fensters
+- Das Focus-Fenster übernimmt die allgemeinen Responsive- und Bedienungsstandards der Website und stellt sicher, dass seine zentralen Funktionen auf Desktop, Tablet und Smartphone erreichbar bleiben.
+- **Desktop:** Timer, Session-Status und wichtigste Aktionen sind ohne unnötiges Scrollen erreichbar.
+- **Tablet:** Die Anordnung passt sich dem verfügbaren Platz an; Timersteuerung, Session-Wechsel und Speicherstatus bleiben gut erreichbar.
+- **Smartphone:** Die Timeranzeige bleibt gut lesbar. Die wichtigsten Timer-Aktionen und der Wechsel zwischen offenen Sessions bleiben auch in der kompakten bzw. ausgeklappten Sticky-Timer-Ansicht erreichbar.
+- Bereits festgelegte Tastaturkürzel gelten auch im Focus-Fenster: Leertaste für Pause/Fortsetzen und `R` für Reset mit Sicherheitsabfrage. Sie werden nicht ausgelöst, während in einem Text- oder Eingabefeld geschrieben wird.
+- Alle Aktionen bleiben zusätzlich über klar beschriftete, sichtbare Bedienelemente erreichbar; die Bedienung ist nicht ausschließlich von Tastaturkürzeln abhängig.
+- Statusanzeigen, Beschriftungen und Bedienelemente müssen ausreichend kontrastreich und eindeutig erkennbar sein. Der aktuelle Tastaturfokus muss sichtbar sein.
+- Touch-Flächen und Abstände sind ausreichend groß, damit Aktionen auf Touchscreens zuverlässig bedient werden können.
+- Aktionen dürfen nicht durch Doppelklicks oder schnelle Mehrfachbetätigung unbeabsichtigt mehrfach ausgeführt werden. Während eine Aktion verarbeitet wird, wird eine weitere identische Auslösung zuverlässig verhindert.
+- Die allgemeinen Website-Regeln für Responsive Layout, Tastaturbedienung und Barrierefreiheit werden wiederverwendet; es werden keine widersprüchlichen Sonderregeln nur für das Focus-Fenster eingeführt.
+
 ### Distraction-Free-Modus
 - Wird beim Start einer Fokusphase automatisch aktiviert.
 - Timer steht im Mittelpunkt.
