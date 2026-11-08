@@ -391,7 +391,8 @@
   const finish=(s,now=Date.now())=>{
     if(!s)return;
     reconcile(s,now);
-    if(s.status==='RUNNING'&&s.phase==='focus')appendCurrentFocus(s,now);else if(s.status==='RUNNING'&&s.phase==='break'&&s.phaseStartedAt)addBreakSegment(s,s.phaseStartedAt,Math.min(now,s.deadline||now));
+    if(!['RUNNING','PAUSED'].includes(s.status)||s.phase!=='focus')return;
+    if(s.status==='RUNNING')appendCurrentFocus(s,now);
     s.status='COMPLETED';s.deadline=null;s.phaseStartedAt=null;s.remainingMs=0;s.completedAt=now;s.completedLocalDate=dateInZone(now,zone());s.lastActiveAt=now;s.lastActiveLocalDate=s.completedLocalDate;
     event(s,'completed','Session erfolgreich abgeschlossen',now);
     updateTaskTime(s);
@@ -399,7 +400,8 @@
   };
   const interrupt=(s)=>{if(!s)return;if(s.status==='RUNNING')pauseSession(s,'interrupt');else if(s.status==='PAUSED'){s.status='INTERRUPTED';s.lastActiveAt=Date.now();s.lastActiveLocalDate=dateInZone(s.lastActiveAt,zone());s.lastInterruptedAt=s.lastActiveAt;event(s,'interrupt','Session unterbrochen',s.lastActiveAt);persist();}setDistractionFree(false);stopTick();persist();renderAll();};
   const switchSession=id=>{
-    if(id===activeId){if(current()?.status==='PREPARED')loadSetup(current());return;}
+    if(id===activeId){if(countdownTarget===id)return;if(current()?.status==='PREPARED')loadSetup(current());return;}
+    if(countdownHandle){clearInterval(countdownHandle);countdownHandle=null;countdownTarget=null;countdownValue=0;}
     const old=current();if(old&&old.status==='RUNNING')pauseSession(old,'pause');
     activeId=id;state.activeId=id;const next=current();if(next?.status==='RUNNING')pauseSession(next,'pause');
     if(next)next.lastActiveAt=Date.now();if(next?.status==='PREPARED')loadSetup(next);else{editingPreparedId=null;$('fmSetupSubmit').textContent='Session vorbereiten ＋';}
