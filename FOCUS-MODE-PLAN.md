@@ -53,13 +53,16 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
   |---|---|
   | Fokus läuft | **Pause**, **Reset**, **Complete Session**, **Interrupt** |
   | Manuell pausiert | **Resume**, **Reset**, **Complete Session**, **Interrupt** |
-  | Pause läuft | **Skip Break** |
+  | Pause läuft | **Pause**, **Skip Break**, **Interrupt** |
+  | Pause manuell pausiert | **Resume**, **Skip Break**, **Interrupt** |
   | Unterbrochen | **Resume**, **Verwerfen** |
   | Fokus- oder Pausenzeit abgelaufen | Die für diesen Endzustand vorgesehene nächste Aktion bestätigen bzw. die nächste Fokusphase starten |
 - Nicht zum aktuellen Zustand passende Aktionen werden nicht angeboten bzw. sind nicht bedienbar.
 - **Reset** und endgültiges **Verwerfen** erfordern jeweils eine separate Sicherheitsabfrage.
 - **Interrupt** bleibt klar von **Complete Session** und **Reset** getrennt: Eine Unterbrechung erhält die Session zur späteren Fortsetzung; Complete Session schließt sie erfolgreich ab.
-- Timer ist jederzeit pausierbar und kann an derselben Stelle fortgesetzt werden.
+- Fokus- und Pausentimer können jederzeit pausiert und an derselben Stelle fortgesetzt werden.
+- Während einer Pause beziehen sich **Pause** und **Resume** ausschließlich auf den Pausentimer. **Skip Break** beendet die Pause und wartet auf den manuellen Start der nächsten Fokusphase. **Interrupt** unterbricht die gesamte Session und erhält sie zur späteren Wiederaufnahme.
+- Ein Session-Reset ist während einer Pause nicht verfügbar; Reset bezieht sich auf die Fokusphase und kann nur in einem dafür vorgesehenen Fokuszustand ausgelöst werden.
 - Ein Reset-Button ist vorhanden. Vor dem Zurücksetzen erscheint eine Sicherheitsabfrage.
 - Eine Session kann vorzeitig mit **Complete Session** erfolgreich abgeschlossen werden. Die tatsächliche Dauer wird gespeichert und in History sowie Statistiken berücksichtigt.
 - Eine Session kann unterbrochen werden, ohne sie endgültig abzuschließen. Sie bleibt als offene, wiederaufnehmbare Session erhalten und wird in der History als unterbrochen dokumentiert; die tatsächlich investierte Fokuszeit bleibt erhalten. Das endgültige Verwerfen ist eine getrennte Aktion.
@@ -71,9 +74,11 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 
 ### Sichtbare Timer-Endzustände im Focus-Fenster
 - Jeder Timer-Endzustand wird direkt im Focus-Fenster eindeutig angezeigt und mit einer kurzen, passenden Handlungsaufforderung verbunden.
-- **Fokuszeit abgelaufen:** Wenn eine Pause konfiguriert ist, wechselt der Timer automatisch in diese Pause. Der Übergang wird visuell deutlich angezeigt.
+- **Fokuszeit abgelaufen – Pause eingestellt:** Der Fokusabschnitt endet und der Timer wechselt direkt in den Status `BREAK`; der Übergang wird visuell deutlich angezeigt. `EXPIRED` wird für diesen automatischen Übergang nicht zwischengeschaltet.
+- **Fokuszeit abgelaufen – keine Pause:** Der Status wechselt auf `EXPIRED`; das Fenster zeigt an, dass die nächste Fokusphase manuell gestartet werden kann.
 - **Fokuszeit abgelaufen – keine Pause:** Es wird keine Pause gestartet. Das Focus-Fenster zeigt an, dass die nächste Fokusphase manuell gestartet werden kann.
 - **Pause abgelaufen:** Der Status wechselt auf `EXPIRED`; das Fenster zeigt klar an, dass die Pause beendet ist und auf den manuellen Start der nächsten Fokusphase wartet.
+- `EXPIRED` bedeutet im Focus-Fenster immer, dass ein Zeitabschnitt beendet ist und eine bewusste nächste Aktion erwartet wird. Bei einem automatischen Übergang von Fokus zu Pause wird `EXPIRED` nicht angezeigt.
 - **Skip Break:** Nach dem Überspringen der Pause wird deutlich angezeigt, dass die nächste Fokusphase manuell gestartet werden kann.
 - Eine abgelaufene Pause oder ein abgeschlossener Fokusabschnitt startet niemals selbstständig eine weitere Fokusphase.
 - Die visuelle Meldung und die angebotene Aktion müssen zum tatsächlichen Zustand passen; es darf keine mehrdeutige oder veraltete Aufforderung angezeigt werden.
@@ -82,7 +87,8 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Im Focus-Fenster ist eine kompakte Liste aller offenen Sessions direkt erreichbar; zum Wechseln muss nicht erst eine andere Website-Seite geöffnet werden.
 - Jede Session zeigt ihren Namen bzw. ihr Fokusziel und einen klar erkennbaren Status: laufend, pausiert oder unterbrochen.
 - Die Liste übernimmt die bereits festgelegte Sortierung: laufende Session zuerst, danach pausierte und anschließend unterbrochene Sessions; innerhalb eines Status steht die zuletzt aktive Session weiter oben.
-- Beim Auswählen einer anderen Session wird die bisher laufende Session automatisch pausiert, bevor die ausgewählte Session geladen bzw. fortgesetzt wird.
+- Beim Auswählen einer anderen Session wird die bisher laufende Session automatisch pausiert, bevor die ausgewählte Session geladen wird.
+- Das bloße Auswählen bzw. Laden einer pausierten oder unterbrochenen Session startet ihren Timer nicht automatisch. Eine solche Session wird erst durch die ausdrückliche Aktion **Resume** fortgesetzt.
 - Beim Wechsel werden der gespeicherte Timerstand und sämtliche Session-Daten wiederhergestellt, insbesondere Notizen, Distraction Log, Unteraufgaben und Verknüpfungen.
 - Es darf weiterhin nur ein Timer gleichzeitig laufen. Ein Session-Wechsel setzt keine Session zurück und darf keine gespeicherten oder noch nicht synchronisierten Änderungen verlieren.
 - Die bestehenden Regeln für maximale Anzahl, Status, Sortierung und Wiederaufnahme offener Sessions gelten unverändert.
