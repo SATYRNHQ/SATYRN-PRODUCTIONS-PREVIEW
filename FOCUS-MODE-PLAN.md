@@ -479,20 +479,17 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Notizen und Distraction-Log-Einträge werden ebenfalls als eigene CSV-Felder aufgenommen, soweit vorhanden.
 - Der Export lädt eine Datei herunter und verändert oder löscht keine gespeicherten Sessions.
 
-### JSON-Backup und Wiederherstellung
-- Zusätzlich zum CSV-Export gibt es einen vollständigen JSON-Export der Focus-Mode-Daten.
-- Der JSON-Export dient als Backup und enthält Sessions sowie zugehörige Daten wie Notizen, Distraction-Log-Einträge, Unteraufgaben, Favoritenstatus und Session-Einstellungen.
-- Ein JSON-Import kann ein zuvor exportiertes Backup wiederherstellen.
-- Vor dem Import wird eine Vorschau angezeigt und ausdrücklich bestätigt, welche Daten importiert werden.
-- Beim Import werden vorhandene Daten nicht stillschweigend überschrieben. Es gibt eine klare Auswahl zwischen dem Zusammenführen mit vorhandenen Daten und dem vollständigen Ersetzen nach deutlicher Sicherheitsabfrage.
-- Importierte Datensätze werden auf gültige Struktur geprüft; ungültige Dateien werden mit verständlicher Fehlermeldung abgelehnt.
+### Focus-Daten im zentralen Backup
+- Focus Mode erhält keinen eigenen JSON-Backup- oder Import-/Wiederherstellungsablauf.
+- Die für eine vollständige Sicherung relevanten Focus-Daten werden dem zentralen websiteweiten Backup-System zugeordnet.
+- Dazu gehören Sessions, Zeitabschnitte, Notizen, Distraction-Log-Einträge, Unteraufgaben, Favoriten, Session-Einstellungen, Verlauf und Presets, soweit diese zum gespeicherten Website-Datenbestand gehören.
+- Eine spätere Backup- oder Wiederherstellungsaktion, die aus Focus Mode erreichbar ist, verwendet ausschließlich das zentrale SATYRN-HQ-System.
+- Format, Vorschau, Zusammenführen, Ersetzen und Sicherheitsprüfungen werden im abschließenden websiteweiten Backup-Konzept festgelegt.
 
-### Automatische Backup-Erinnerung
-- Focus Mode erinnert regelmäßig daran, ein JSON-Backup der Focus-Daten zu exportieren.
-- Standardintervall: einmal pro Woche.
-- Die Erinnerung erscheint dezent innerhalb der Website und startet keinen Export automatisch.
-- Nach einem erfolgreichen JSON-Export wird die Erinnerung als erledigt markiert und das nächste Erinnerungsintervall beginnt.
-- Die Erinnerung kann in den Focus-Mode-Einstellungen deaktiviert werden.
+### Zentrale Backup-Erinnerungen
+- Eine Erinnerung an regelmäßige Backups wird nicht separat durch Focus Mode verwaltet.
+- Ob, wann und wie an websiteweite Backups erinnert wird, wird gemeinsam mit dem zentralen Backup- und Benachrichtigungssystem festgelegt.
+- Focus Mode erhält dafür keine eigene Backup-Erinnerungslogik und kein separates Erinnerungsintervall.
 
 ### Focus-Mode-Einstellungen
 - Eigene Einstellungssektion innerhalb des Focus Mode.
@@ -500,7 +497,6 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Timer-Töne können aktiviert/deaktiviert werden; die Lautstärke bzw. Tonwiedergabe soll anpassbar sein, soweit technisch zuverlässig möglich.
 - Visuelle Benachrichtigungen und Pausen-Erinnerungen können angepasst werden.
 - Distraction-Free-Modus: automatischen Start bei Fokusbeginn ein-/ausschalten.
-- Backup-Erinnerung: aktivieren/deaktivieren und Erinnerungsintervall festlegen.
 - Tages- und Wochenziele können von hier aus angepasst werden.
 - Änderungen an Einstellungen gelten für zukünftige Sessions und verändern keine bereits gespeicherten historischen Sessions.
 
@@ -1679,7 +1675,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Preview soll neben dem leeren Ausgangszustand einen klar erkennbaren Demo-/Beispielmodus enthalten, damit alle Focus-Mode-Funktionen vor der Nutzung nachvollziehbar sind.
 - Der Beispielmodus enthält realistische, unverbindliche Beispieldaten für Sessions, Important-Verknüpfungen, Kategorien, Prioritäten, Unteraufgaben, Notizen, Distraction Log, Presets, Verlauf und Statistiken.
 - Die Beispiele sollen zentrale Abläufe sichtbar machen, darunter Session vorbereiten und starten, pausieren und fortsetzen, unterbrechen und wiederaufnehmen, zurücksetzen, Aufgaben verknüpfen und abschließen, zwischen Sessions wechseln sowie Statistiken und Exporte ansehen.
-- Jede Funktion soll durch kurze Hinweise oder eine verständliche Beispielaktion auffindbar sein; die Preview soll dabei übersichtlich bleiben und nicht alle Erklärungen dauerhaft einblenden.
+- Die Funktionen sollen direkt über die normale Oberfläche erkennbar und ausprobierbar sein. Es gibt keine zusätzlichen Funktionserklärungen, Tutorials oder dauerhaft eingeblendeten Hilfetexte.
 - Demo-Daten müssen eindeutig als Beispiele gekennzeichnet und von echten Nutzerdaten getrennt sein. Das Ausprobieren oder Zurücksetzen des Demo-Modus darf keine echten Sessions, Aufgaben oder Statistiken verändern.
 - Die Preview soll auch leere Zustände zeigen, damit verständlich ist, wie die Oberfläche ohne vorhandene Daten aussieht.
 
