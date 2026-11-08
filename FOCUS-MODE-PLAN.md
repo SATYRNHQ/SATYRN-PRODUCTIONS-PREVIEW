@@ -1048,6 +1048,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Focus verwendet dieselben Kategoriebezeichnungen, Icons und Farben wie die übrigen Bereiche.
 - Das Erstellen, Bearbeiten oder Entfernen einer gemeinsamen Kategorie wird zentral übernommen; bestehende historische Sessions behalten ihre gespeicherte Kategorie-Darstellung, soweit dies für korrekte Statistiken erforderlich ist.
 
+
+### Farbige Kategorie-Auswahl
+- Die Kategorie-Auswahl im Session-Vorbereitungsfenster wird als direkt sichtbare Auswahl mit farbigen Kategorie-Karten bzw. Kacheln dargestellt, nicht als Dropdown.
+- Jede Karte zeigt das Kategorie-Icon und den Kategorienamen und verwendet die gemeinsame Farbe aus dem Dashboard/Important.
+- Die aktuell ausgewählte Kategorie ist eindeutig hervorgehoben; die Auswahl bleibt auch bei benutzerdefinierten Kategorien einheitlich.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
