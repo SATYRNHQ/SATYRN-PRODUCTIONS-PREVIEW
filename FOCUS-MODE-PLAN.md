@@ -1088,6 +1088,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Priorität kann im Session-Vorbereitungsfenster manuell geändert werden.
 - Bei verknüpften Important-Aufgaben gelten weiterhin die dortigen Prioritätsregeln: höchste aktuelle Priorität der verknüpften Aufgaben; keine Überschreibung der Quellaufgaben.
 
+
+### Dauerhaft sichtbare Kategorie und Priorität
+- Die ausgewählte Kategorie und Priorität bleiben im Session-Vorbereitungsfenster sichtbar, auch wenn der Nutzer weitere Einstellungen bearbeitet.
+- Beide Auswahlbereiche bleiben an ihrer festgelegten Position untereinander; die aktuelle Auswahl samt farblicher Hervorhebung und Haken bleibt erkennbar.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
