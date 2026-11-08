@@ -369,6 +369,8 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Individuell einstellbares Wochenziel.
 - Fortschrittsbalken und Prozentanzeige für beide Ziele.
 - Anzeige der noch fehlenden Fokuszeit.
+- Für Tages- und Wochenziele zählt jede tatsächlich erfasste Fokuszeit – auch aus später unterbrochenen oder endgültig verworfenen Sessions.
+- Pausen- und Unterbrechungszeiten zählen nicht zur Zielerreichung.
 - Ziele können jederzeit angepasst werden.
 
 
