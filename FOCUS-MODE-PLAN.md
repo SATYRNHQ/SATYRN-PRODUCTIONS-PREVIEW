@@ -1747,3 +1747,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die bereits für Focus Mode geplanten Backup-Funktionen dienen bis zur seitenweiten Gesamtkonzeption als fachliche Anforderungen und müssen anschließend in das zentrale Backup-Konzept integriert werden.
 - Vor einer seitenweiten Wiederherstellung wird der gesamte aktuelle Website-Datenstand automatisch gesichert; bei fehlgeschlagener Sicherung wird die Wiederherstellung abgebrochen.
 - Die genaue Struktur, Versionierung, Aufbewahrungsdauer und Wiederherstellung einzelner Bereiche wird bei der abschließenden seitenweiten Backup-Planung festgelegt.
+
+
+### Zentrales websiteweites Aktivitäts- und Änderungsprotokoll
+- Ein Änderungsprotokoll für wichtige Aktionen wird am Ende zentral für die gesamte SATYRN-HQ-Website geplant und umgesetzt, nicht separat pro Seite.
+- Es soll relevante Aktionen aus allen Bereichen erfassen, insbesondere Löschen, Zurücksetzen, Importieren, Wiederherstellen und wichtige Änderungen an Daten oder Einstellungen.
+- Einträge enthalten, soweit sinnvoll und verfügbar, Zeitpunkt, betroffenen Bereich, Aktion und Ergebnis.
+- Das Protokoll soll nachvollziehbar und durchsuchbar sein; sensible Inhalte wie vollständige Notiztexte oder private Inhalte werden nicht unnötig protokolliert.
+- Die genauen Aufbewahrungs-, Filter-, Export- und Datenschutzregeln werden bei der abschließenden websiteweiten Konzeption festgelegt.
+- Die für Focus Mode relevanten Aktionen werden als Anforderungen vorgemerkt und später in dieses gemeinsame Protokoll integriert.
