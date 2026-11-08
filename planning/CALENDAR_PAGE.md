@@ -44,6 +44,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Diese zusammenhängende Darstellung bleibt auch **über Monatsgrenzen hinweg** erhalten. Liegt ein Termin beispielsweise vom 29. November bis zum 3. Dezember, wird er in beiden Monatsansichten jeweils mit dem passenden Abschnitt dargestellt; der Zusammenhang zwischen Anfang und Ende bleibt erkennbar.
 - Innerhalb einer Kalenderwoche wird ein mehrtägiger Termin als **ein durchgehender Balken über die betroffenen Tagesfelder** dargestellt, statt an jedem Tag als separater Eintrag aufzutauchen. Die Darstellung wird an Wochen- bzw. Monatsgrenzen passend aufgeteilt, der Zusammenhang des Termins bleibt dabei visuell erhalten.
 - Der **Titel eines mehrtägigen Balkens erscheint nur am ersten Tag** des Termins. Auf den weiteren betroffenen Tagen wird der Titel nicht wiederholt; die Balkenfläche bleibt dort frei. Anfang und Ende des Balkens bleiben visuell erkennbar.
+- Die Prioritätsfarbe eines mehrtägigen Termins bleibt **über die gesamte Länge des Balkens einheitlich**. Der schmale farbige Prioritätsstreifen bzw. die entsprechende Farbcodierung wird nicht je Tag verändert.
 - Zusätzlich gibt es **ganztägige Termine ohne erforderliche Uhrzeitangabe**. Das gilt auch für mehrtägige ganztägige Termine.
 - Termine können **wiederkehrend** angelegt werden, mindestens mit den Wiederholungen wöchentlich, monatlich und jährlich.
 - Mehrtägige Termine können ebenfalls wiederkehrend angelegt werden. Die festgelegte Dauer wird auf jedes Vorkommen der Wiederholungsserie angewendet (z. B. jährlich vom 8. bis zum 10. November).
@@ -99,6 +100,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Die Prioritätsfarbe eines mehrtägigen Termins bleibt über die gesamte Länge des zusammenhängenden Balkens einheitlich.
 - 2026-11-08: Der Titel eines mehrtägigen Terminbalkens wird nur am ersten Tag angezeigt und auf den folgenden Tagen nicht wiederholt.
 - 2026-11-08: Mehrtägige Termine werden innerhalb einer Kalenderwoche als durchgehender Balken über die betroffenen Tagesfelder dargestellt; an Wochen- und Monatsgrenzen wird der Balken passend aufgeteilt und der Zusammenhang bleibt erkennbar.
 - 2026-11-08: Die zusammenhängende Darstellung mehrtägiger Termine bleibt auch über Monatsgrenzen hinweg erhalten; der jeweilige Abschnitt erscheint in jeder betroffenen Monatsansicht.
