@@ -238,3 +238,8 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Pop-up erhält beim Öffnen und Schließen eine **kleine, dezente Animation**; sie soll ruhig und kurz sein und den Ablauf nicht verzögern.
 
 - Für die Größe der Termin-Detailansicht wurde **Variante A – groß und breit** gewählt. Das Pop-up soll großzügigen Platz bieten und wie ein eigener Arbeitsbereich wirken, während der Kalender dahinter unverändert bleibt.
+
+
+- Für die Anordnung der Inhalte im großen Termin-Detail-Pop-up wurde **Variante A – zweispaltig** gewählt: Der Titel steht oben über die gesamte Breite. Darunter werden die Angaben in zwei nebeneinanderliegenden Bereichen angeordnet: links **Datum & Uhrzeit** sowie **Priorität**, rechts die optionale **Beschreibung**. Dadurch wird die Breite des Pop-ups sinnvoll genutzt und die Detailansicht wirkt wie ein übersichtlicher Arbeitsbereich.
+
+- 2026-11-09: Für das große Termin-Detail-Pop-up wurde Variante A (zweispaltige Inhaltsanordnung) gewählt: Titel oben über volle Breite; darunter links Datum/Uhrzeit und Priorität, rechts die optionale Beschreibung.
