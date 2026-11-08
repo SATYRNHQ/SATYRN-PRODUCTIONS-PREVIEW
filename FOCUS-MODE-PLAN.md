@@ -47,6 +47,18 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Das aktuelle Fokusziel wird direkt im Timerbereich angezeigt und kann bei Bedarf während der Session geändert werden.
 
 ### Timersteuerung und Ablauf
+- Die primären Aktionen sind direkt im Focus-Fenster erreichbar. Sichtbarkeit und Verfügbarkeit richten sich nach dem aktuellen Session-Status.
+- Verfügbare Aktionen je Zustand:
+  | Zustand | Direkt verfügbare Aktionen |
+  |---|---|
+  | Fokus läuft | **Pause**, **Reset**, **Complete Session**, **Interrupt** |
+  | Manuell pausiert | **Resume**, **Reset**, **Complete Session**, **Interrupt** |
+  | Pause läuft | **Skip Break** |
+  | Unterbrochen | **Resume**, **Verwerfen** |
+  | Fokus- oder Pausenzeit abgelaufen | Die für diesen Endzustand vorgesehene nächste Aktion bestätigen bzw. die nächste Fokusphase starten |
+- Nicht zum aktuellen Zustand passende Aktionen werden nicht angeboten bzw. sind nicht bedienbar.
+- **Reset** und endgültiges **Verwerfen** erfordern jeweils eine separate Sicherheitsabfrage.
+- **Interrupt** bleibt klar von **Complete Session** und **Reset** getrennt: Eine Unterbrechung erhält die Session zur späteren Fortsetzung; Complete Session schließt sie erfolgreich ab.
 - Timer ist jederzeit pausierbar und kann an derselben Stelle fortgesetzt werden.
 - Ein Reset-Button ist vorhanden. Vor dem Zurücksetzen erscheint eine Sicherheitsabfrage.
 - Eine Session kann vorzeitig mit **Complete Session** erfolgreich abgeschlossen werden. Die tatsächliche Dauer wird gespeichert und in History sowie Statistiken berücksichtigt.
