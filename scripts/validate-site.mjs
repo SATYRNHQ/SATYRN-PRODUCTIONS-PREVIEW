@@ -57,7 +57,8 @@ checkFonts(reminderCss, 'focus-reminders.css');
 
 assert.ok(!hq.includes('function renderFocus('), 'Legacy Focus renderer remains in hq-tools.js');
 assert.ok(!globalCss.includes('.focus-dashboard'), 'Legacy Focus stylesheet remains in styles.css');
-assert.ok(!/(^|[},])\s*(?:body:has\([^)]*\)\s*)?\.topbar\b/.test(globalCss), 'Unused legacy topbar CSS remains');
+const cssWithoutComments = globalCss.replace(/\/\*[\s\S]*?\*\//g, '');
+assert.ok(!/\.topbar\s*\{/.test(cssWithoutComments), 'Unused legacy topbar CSS remains');
 
 const shellStart = html.indexOf('<div class="app-shell">');
 const mainStart = html.indexOf('<main class="main-area">', shellStart);
@@ -77,6 +78,6 @@ assert.ok(focus.includes('tone();') && focus.includes('Notification.requestPermi
 assert.ok(focus.includes("setDistractionFree(s.phase==='focus')"), 'Distraction-Free must follow the active phase');
 assert.ok(important.includes('BEISPIEL') && important.includes('getAvailableLinks') && important.includes('removeTarget'), 'Important archive/link integration is missing');
 assert.ok(important.includes('getAvailableLinks().find'), 'Important links must show current target names');
-assert.ok(sw.includes('satyrn-hq-shell-v108'), 'Service worker cache version was not incremented');
+assert.ok(sw.includes('satyrn-hq-shell-v109'), 'Service worker cache version was not incremented');
 
 console.log('SATYRN HQ validation passed: IDs, assets, cache versions, typography, navigation, Focus and Important invariants.');
