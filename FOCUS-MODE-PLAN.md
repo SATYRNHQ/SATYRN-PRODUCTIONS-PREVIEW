@@ -1066,6 +1066,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Auswahl verwendet dieselben farbigen Prioritäts-Kacheln und dieselbe Bedienlogik wie auf der Important-Seite.
 - Die ausgewählte Priorität wird in der Session angezeigt und verändert keine Important-Aufgaben.
 
+
+### Flexible Anordnung der Prioritäts-Kacheln
+- Die Prioritäts-Kacheln werden in einem flexiblen Raster nebeneinander angeordnet.
+- Das Raster passt sich automatisch an die verfügbare Fensterbreite an und ordnet die Kacheln auf kleineren Bildschirmen beziehungsweise Smartphones passend um.
+- Darstellung, Farben und Auswahlzustand bleiben an die Prioritätsauswahl auf der Important-Seite angelehnt.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
