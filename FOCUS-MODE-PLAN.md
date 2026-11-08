@@ -407,6 +407,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Tageswerte beziehen sich auf den lokalen Kalendertag des Nutzers.
 - Fokuszeit wird abschnittsgenau dem lokalen Kalendertag zugeordnet, an dem der jeweilige Fokusabschnitt tatsächlich stattgefunden hat. Wird eine unterbrochene Session an einem späteren Tag fortgesetzt, zählt die danach geleistete Fokuszeit zu diesem neuen Tag; bereits an früheren Tagen erfasste Fokuszeit bleibt den ursprünglichen Tagen zugeordnet.
 - Diese tagesgenaue Zuordnung gilt entsprechend auch für Wochen- und Monatsauswertungen. Die Gesamtfokuszeit einer Session bleibt zusätzlich als zusammenhängender Gesamtwert erhalten; kein Fokusabschnitt wird gelöscht oder doppelt gezählt.
+- Für jeden Fokusabschnitt werden zusätzlich die lokale Uhrzeit und die Zeitzone des Ortes gespeichert, an dem dieser Abschnitt tatsächlich stattgefunden hat. Ein späterer Wechsel der Zeitzone verändert bereits gespeicherte Zeitabschnitte und deren historische Tageszuordnung nicht nachträglich.
 
 ### Wochenstatistik
 - Fokuszeit pro Tag innerhalb der aktuellen Woche.
