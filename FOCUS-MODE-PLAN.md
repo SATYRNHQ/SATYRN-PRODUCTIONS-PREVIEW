@@ -202,6 +202,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Produktivster Tag des Monats.
 - Navigation zwischen Monaten; die Monatsstatistik passt zur Monthly Focus Map.
 
+- **Konsistente Monatswerte:** Die Monatsgesamtzeit muss exakt der Summe der zugehörigen täglichen Fokuszeiten entsprechen. Jeder erfasste Fokuszeitabschnitt wird anhand seiner tatsächlichen Zeitstempel genau dem passenden lokalen Kalendertag zugeordnet und darf weder fehlen noch doppelt gezählt werden.
+- **Laufender Monat:** Im aktuell laufenden Monat werden Werte nur bis zum aktuellen Zeitpunkt berücksichtigt. Zukünftige Kalendertage tragen keine Fokuszeit bei und werden nicht als verfehlte Tage gewertet.
+- **Ungeklärte Tage separat ausweisen:** Tage mit fehlenden, unvollständigen oder widersprüchlichen Daten werden gesondert kenntlich gemacht. Sie dürfen nicht als bestätigte 0-Minuten-Tage in die Monatsgesamtzeit oder in Vergleiche einfließen. Die Vollständigkeit der Monatsauswertung wird entsprechend als vorläufig angezeigt.
+- **Abgleich der Ansichten:** Monatsgesamtzeit, tägliche Statistikwerte, Aktivitätsintensität im Monthly Focus Map und gefilterte Kategorieansichten müssen dieselbe zugrunde liegende Zeitzuordnung verwenden. Unterschiede durch Rundung dürfen keine abweichenden Summen erzeugen; intern wird mit ausreichend genauer Zeitauflösung gerechnet und erst für die Anzeige formatiert.
+
+
 
 ### Vergleich mit dem Vormonat
 - Die Monthly Statistics vergleichen die gesamte Fokuszeit des ausgewählten Monats automatisch mit dem direkten Vormonat.
