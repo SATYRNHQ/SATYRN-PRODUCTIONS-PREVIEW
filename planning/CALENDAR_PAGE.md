@@ -109,6 +109,10 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 
 - Auch im Tagesfenster werden Termine chronologisch sortiert: ganztägige Termine zuerst, danach Termine mit Uhrzeit vom frühesten zum spätesten.
 
+## Ergänzung — Anzeige mehrtägiger Termine im Tagesfenster
+
+- Im Tagesfenster wird ein mehrtägiger Termin nicht zusätzlich mit seinem vollständigen Zeitraum beschriftet; die Tagesansicht bleibt auf den ausgewählten Tag bezogen.
+
 ## Umsetzungsregeln
 - Die Seite muss innerhalb der bestehenden globalen App-Shell bleiben.
 - Keine eigene Headbar oder Sidebar und keine lokalen Kopien globaler Navigation.
@@ -199,3 +203,5 @@ The following search behaviors are intended as a shared standard for every page 
 - 2026-11-09: Für Tage ohne Termine wird im Tagesfenster auf eine erklärende Leerstandsmeldung verzichtet; die Ansicht bleibt schlicht und das Hinzufügen bleibt möglich.
 
 - 2026-11-09: Die chronologische Sortierung gilt auch im Tagesfenster: ganztägige Termine zuerst, anschließend nach Startzeit.
+
+- 2026-11-09: Mehrtägige Termine werden im Tagesfenster nicht zusätzlich mit ihrem vollständigen Zeitraum beschriftet.
