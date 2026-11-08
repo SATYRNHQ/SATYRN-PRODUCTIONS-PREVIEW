@@ -1590,3 +1590,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Kategorie bleibt dort mit ihrem gespeicherten Namen, Icon und ihrer Farbe sichtbar, damit Session-Anzeige und Statistiken konsistent bleiben.
 - Für neue Focus-Sessions wird die gelöschte Kategorie nicht mehr angeboten.
 - Bereits abgeschlossene Sessions behalten ebenfalls ihre gespeicherten Kategorieangaben.
+
+
+### Neu angelegte Kategorie mit gleichem Namen
+- Wird nach dem Löschen einer eigenen Kategorie eine neue Kategorie mit exakt demselben Namen erstellt, gilt sie als eigenständige neue Kategorie.
+- Bestehende offene und abgeschlossene Sessions behalten ihre ursprüngliche, gelöschte Kategorie einschließlich der gespeicherten Anzeigeangaben.
+- Die neue Kategorie wird nicht automatisch mit alten Sessions verknüpft; eine automatische Übernahme oder Zusammenführung findet nicht statt.
