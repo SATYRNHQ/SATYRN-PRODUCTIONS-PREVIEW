@@ -1316,6 +1316,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Erst nach bestätigter Löschung wird das Preset entfernt.
 - Wird der Löschdialog abgebrochen, bleibt das Preset unverändert erhalten.
 
+
+### Einheitlicher Editor für Erstellen und Bearbeiten
+- Das Bearbeiten eines eigenen Presets öffnet denselben Editor wie das Erstellen eines Presets.
+- Layout, Aufbau und Bedienung sind identisch; beim Bearbeiten werden die aktuell gespeicherten Preset-Werte vorausgefüllt.
+- Änderungen werden erst nach ausdrücklichem Klick auf „Speichern“ übernommen.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
