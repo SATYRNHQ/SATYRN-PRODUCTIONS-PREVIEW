@@ -276,6 +276,14 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das Erstellungsdatum des Berichts wird gut lesbar ausgewiesen.
 - Branding und Metadaten werden konsistent in das druckfreundliche PDF-Layout integriert, ohne die Kennzahlen und Diagramme zu überladen.
 
+
+### PDF-Export: Berichtsumfang
+- Vor dem PDF-Export kann zwischen zwei Berichtsumfängen gewählt werden:
+  - **Kompakter Bericht:** eine übersichtliche Seite mit den wichtigsten Kennzahlen und dem gewählten Zeitraum bzw. den ausgewählten Kategorien.
+  - **Ausführlicher Bericht:** mehrseitiger Bericht mit allen relevanten Kennzahlen, Diagrammen, Vergleichswerten (sofern für die jeweilige Ansicht vorgesehen) und Details der aktuellen Auswertung.
+- Beide Varianten enthalten das SATYRN-Branding und das Erstellungsdatum.
+- Beide Varianten berücksichtigen dieselben aktiven Zeitraum- und Kategorie-Filter.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
