@@ -43,6 +43,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Mehrtägige Termine werden in der Monatsansicht **als zusammenhängender Eintrag über die betroffenen Tage hinweg** dargestellt. Anfang und Ende des Eintrags sind visuell erkennbar, damit der durchgehende Zeitraum als ein einzelner Termin verständlich bleibt.
 - Diese zusammenhängende Darstellung bleibt auch **über Monatsgrenzen hinweg** erhalten. Liegt ein Termin beispielsweise vom 29. November bis zum 3. Dezember, wird er in beiden Monatsansichten jeweils mit dem passenden Abschnitt dargestellt; der Zusammenhang zwischen Anfang und Ende bleibt erkennbar.
 - Innerhalb einer Kalenderwoche wird ein mehrtägiger Termin als **ein durchgehender Balken über die betroffenen Tagesfelder** dargestellt, statt an jedem Tag als separater Eintrag aufzutauchen. Die Darstellung wird an Wochen- bzw. Monatsgrenzen passend aufgeteilt, der Zusammenhang des Termins bleibt dabei visuell erhalten.
+- Wenn sich mehrere mehrtägige Termine zeitlich überschneiden, werden ihre Balken in **unterschiedlichen Zeilen untereinander** dargestellt. Jeder Termin behält dadurch seinen eigenen, durchgehenden und eindeutig erkennbaren Balken.
 - Ein mehrtägiger Terminbalken bleibt über seinen gesamten Zeitraum durchgehend sichtbar, auch wenn an einzelnen Tagen innerhalb dieses Zeitraums weitere Termine stattfinden. Zusätzliche Termine werden separat dargestellt, ohne den mehrtägigen Balken zu unterbrechen.
 - Der **Titel eines mehrtägigen Balkens erscheint nur am ersten Tag** des Termins. Auf den weiteren betroffenen Tagen wird der Titel nicht wiederholt; die Balkenfläche bleibt dort frei. Anfang und Ende des Balkens bleiben visuell erkennbar.
 - Die Prioritätsfarbe eines mehrtägigen Termins bleibt **über die gesamte Länge des Balkens einheitlich**. Der schmale farbige Prioritätsstreifen bzw. die entsprechende Farbcodierung wird nicht je Tag verändert.
@@ -101,6 +102,7 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Offene globale Themen werden nicht vorgezogen, sondern für die zentrale Abschlussphase vorgemerkt.
 
 ## Änderungsprotokoll
+- 2026-11-08: Zeitlich überlappende mehrtägige Termine werden in separaten Zeilen untereinander dargestellt, damit alle Balken klar erkennbar bleiben.
 - 2026-11-08: Mehrtägige Terminbalken bleiben auch bei weiteren Terminen innerhalb ihres Zeitraums durchgehend; zusätzliche Termine werden separat angezeigt und unterbrechen den Balken nicht.
 - 2026-11-08: Ein Klick auf einen mehrtägigen Terminbalken öffnet unabhängig von der angeklickten Stelle dieselbe Detailansicht des gesamten Termins.
 - 2026-11-08: Die Prioritätsfarbe eines mehrtägigen Termins bleibt über die gesamte Länge des zusammenhängenden Balkens einheitlich.
