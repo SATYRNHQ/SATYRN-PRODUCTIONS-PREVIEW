@@ -527,6 +527,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Anzeige der produktivsten Tageszeit und Vergleich der Fokuszeit zwischen allen fünf Zeitfenstern.
 - Die Auswertung berücksichtigt die aktiven Datums- und Kategorienfilter sowie die jeweilige Statistikperiode.
 - Eine feinere Analyse einzelner Stunden (z. B. produktivste Stunde oder wiederkehrende stündliche Leistungsspitzen) gehört ausschließlich in die spätere Dashboard-Planung und wird im Focus Mode nicht doppelt umgesetzt.
+- **Absolute und relative Verteilung:** Für jedes der fünf Zeitfenster werden sowohl die tatsächlich erfasste Fokuszeit als auch ihr prozentualer Anteil an der gesamten auswertbaren Fokuszeit des aktiven Zeitraums angezeigt. Beide Angaben müssen rechnerisch übereinstimmen; die Anteile ergeben bei vollständiger Datengrundlage zusammen 100 %.
+- **Vergleichbarkeit:** Die prozentuale Verteilung bezieht sich auf die Summe der fünf Zeitfenster innerhalb derselben aktiven Statistikperiode und Filterkombination. Zeitfenster ohne Fokuszeit werden mit 0 Minuten bzw. 0 % eindeutig dargestellt.
+- **Ungeklärte Daten:** Bei fehlenden oder widersprüchlichen Fokusdaten wird die Auswertung als vorläufig gekennzeichnet; Prozentanteile werden nicht als endgültig vollständig dargestellt.
+
 
 ### Personal Records
 - Längste Fokus-Session.
