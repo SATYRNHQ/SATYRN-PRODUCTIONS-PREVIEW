@@ -1897,3 +1897,7 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Sessions und Fokuszeitsegmente über Mitternacht werden den jeweiligen lokalen Kalendertagen anteilig zugeordnet; Pausen und Unterbrechungszeiten zählen nicht.
 - Beide Durchschnittswerte berücksichtigen den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Bei mehreren ausgewählten Kategorien wird jede Session bzw. jedes Zeitsegment nur einmal berücksichtigt.
 - Wenn im ausgewählten Zeitraum keine abgeschlossene Session bzw. kein aktiver Fokus-Tag vorhanden ist, wird statt eines irreführenden Zahlenwerts „–“ angezeigt.
+- **Durchschnittliche Dauer einer zusammenhängenden Fokusphase:** Summe aller tatsächlich erfassten zusammenhängenden Fokuszeitsegmente geteilt durch die Anzahl dieser Segmente. Eine Phase endet durch eine reguläre Pause, eine Unterbrechung oder einen Timer-Reset; nach Fortsetzung bzw. Reset beginnt ein neues Segment.
+- Auch bereits erfasste Segmente aus später unterbrochenen oder endgültig verworfenen Sessions zählen. Pausen- und Unterbrechungszeiten selbst zählen weder zur Dauer noch als Fokusphase.
+- Der Durchschnitt berücksichtigt den aktiven Statistik-Zeitraum und die ausgewählten Kategorie-Filter. Segmente über Mitternacht werden für die Tageszuordnung aufgeteilt; für die durchschnittliche Phasendauer bleibt das ursprüngliche zusammenhängende Segment maßgeblich.
+- Gibt es im ausgewählten Zeitraum keine erfasste Fokusphase, wird „–“ angezeigt.
