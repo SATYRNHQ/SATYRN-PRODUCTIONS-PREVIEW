@@ -50,7 +50,8 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Die genaue Form der farblichen Kennzeichnung im Tagesfeld (z. B. farbiger Punkt, schmaler Streifen oder dezente Titel-Akzentfarbe).
 - Die genauen Formularfelder zum Erstellen und Bearbeiten eines Eintrags.
 - Die genaue Gestaltung des Tagesfensters und seiner Empty-State-Darstellung.
-- Die genaue Auswahl weiterer Wiederholungsintervalle sowie die Behandlung beim Löschen oder Bearbeiten einzelner Vorkommen einer Serie sind noch nicht festgelegt.
+- Bei wiederkehrenden Terminen kann beim Löschen zwischen **Nur diesen Termin löschen** und **Gesamte Serie löschen** gewählt werden.
+- Beim Bearbeiten eines einzelnen Vorkommens kann ebenfalls zwischen **Nur diesen Termin bearbeiten** und **Gesamte Serie bearbeiten** unterschieden werden.
 - Suche, Filter und weitere Ansichten sind noch nicht beschlossen.
 
 ## Umsetzungsregeln
@@ -70,3 +71,4 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - 2026-11-08: Mehrtägige Termine werden unterstützt.
 - 2026-11-08: Ganztägige Termine ohne Uhrzeitangabe werden ebenfalls unterstützt.
 - 2026-11-08: Wiederkehrende Termine werden unterstützt; wöchentliche, monatliche und jährliche Wiederholung sind vorgesehen. Sie laufen ohne verpflichtendes Enddatum weiter, bis sie manuell gelöscht werden.
+- 2026-11-08: Bei einer Wiederholungsserie kann ein einzelnes Vorkommen unabhängig von der Serie gelöscht oder bearbeitet werden. Beim Löschen bzw. Bearbeiten wird jeweils zwischen dem einzelnen Termin und der gesamten Serie unterschieden.
