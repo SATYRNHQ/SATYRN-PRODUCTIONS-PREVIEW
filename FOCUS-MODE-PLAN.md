@@ -273,6 +273,13 @@ Auch längere Sessions sind pausierbar. Der Wechsel in die Pause erfolgt nach de
 - Ein erneuter Speicher- oder Synchronisierungsversuch darf vorhandene Änderungen nicht stillschweigend überschreiben oder doppelt anlegen.
 
 
+### Automatische Pausierung bei PC-Herunterfahren oder Ausfall
+- Wird der PC regulär heruntergefahren, wird eine laufende Session automatisch pausiert, statt abgebrochen oder abgeschlossen zu werden.
+- Bei einem unerwarteten Stromausfall, PC-Absturz oder vergleichbaren Ausfall wird beim nächsten Öffnen erkannt, dass die Session zuvor noch lief, und als **PAUSED** wiederhergestellt.
+- Die verbleibende Zeit des aktiven Fokus- oder Pausenabschnitts wird gesichert. Die Zeit, in der der PC ausgeschaltet oder die Anwendung nicht verfügbar war, wird nicht als Fokuszeit gezählt.
+- Bereits gespeicherte Fokusabschnitte, Notizen, Distraction-Log-Einträge und übrige Session-Daten bleiben erhalten.
+- Eine wiederhergestellte Session startet niemals automatisch. Die Fortsetzung erfolgt ausschließlich durch die bewusste Aktion **Resume**.
+
 ### Wiederherstellung nach unerwartetem Absturz oder Stromausfall
 - Focus Mode speichert den Session-Zustand und Änderungen fortlaufend in einem dauerhaft verfügbaren lokalen Zwischenspeicher.
 - Nach einem unerwarteten Browser-, Tab- oder Geräteabsturz bzw. Stromausfall wird beim nächsten Öffnen automatisch der letzte erfolgreich lokal gespeicherte Zustand wiederhergestellt.
