@@ -101,6 +101,19 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Die Farbzuordnung bleibt in Focus Mode, Session History und Statistics konsistent.
 - Die SATYRN-Akzentfarbe für `FOCUS` wird mit dem bestehenden Website-Design abgestimmt, damit kein abweichendes Farbsystem entsteht.
 
+
+### Animationen und visuelle Übergänge
+- Der kreisförmige Timer-Fortschrittsring bewegt sich gleichmäßig und bildet den tatsächlichen Zeitfortschritt ab.
+- Beim automatischen Übergang von `FOCUS` zu `BREAK` erfolgt ein sanfter visueller Übergang einschließlich des Wechsels von Türkis zu Grün.
+- Beim Pausieren stoppt die Fortschrittsanimation unmittelbar; der Status wechselt sichtbar zu `PAUSED` und der zugehörigen Amber-Farbe.
+- Beim Fortsetzen wird die Animation flüssig anhand des tatsächlichen Timerstands weitergeführt.
+- `INTERRUPTED` erhält eine dezente visuelle Hervorhebung, die den unterbrochenen, weiterhin offenen Zustand klar erkennen lässt.
+- `COMPLETED` wird durch eine kurze, zurückhaltende Abschlussanimation kenntlich gemacht.
+- Bei `EXPIRED` erfolgt ein klarer, ruhiger visueller Übergang mit einem eindeutigen Hinweis auf die erwartete nächste Aktion.
+- Animationen bleiben insgesamt ruhig, hochwertig und zurückhaltend. Hektische, übermäßig auffällige oder dekorative Effekte werden vermieden.
+- Animationen dürfen Timersteuerung, Eingaben oder andere Bedienaktionen niemals verzögern. Die tatsächliche Zeitmessung und Zustandslogik sind unabhängig von Animationen.
+- Die Systemeinstellung für reduzierte Bewegung (`prefers-reduced-motion`) wird respektiert. Bei aktivierter Reduzierung werden Animationen minimiert oder durch unmittelbare, gut erkennbare Zustandswechsel ersetzt.
+
 ### Timersteuerung und Ablauf
 - Die primären Aktionen sind direkt im Focus-Fenster erreichbar. Sichtbarkeit und Verfügbarkeit richten sich nach dem aktuellen Session-Status.
 - Verfügbare Aktionen je Zustand:
