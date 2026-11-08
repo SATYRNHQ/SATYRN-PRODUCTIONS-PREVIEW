@@ -1147,6 +1147,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Farbe dient der visuellen Kennzeichnung des eigenen Presets und verändert keine Kategorie- oder Prioritätsfarben.
 - Die Preset-Farbe kann beim nachträglichen Bearbeiten geändert werden.
 
+
+### Live-Vorschau für die Preset-Farbe
+- Während der Nutzer beim Erstellen oder Bearbeiten eines eigenen Presets eine Farbe aus der Palette auswählt, wird eine direkte Vorschau des Preset-Buttons beziehungsweise der Preset-Kachel mit dieser Farbe angezeigt.
+- Die Vorschau aktualisiert sich unmittelbar bei jeder Farbänderung und zeigt die Wirkung vor dem Speichern.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
