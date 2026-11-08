@@ -383,6 +383,12 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Antippen klappt die vollständige Timer-Ansicht wieder aus.
 - Beim weiteren Scrollen klappt sie automatisch wieder kompakt zusammen.
 
+
+### Sticky Timer im Querformat
+- Der kompakte Sticky Timer funktioniert auf Smartphones und Tablets auch im Querformat.
+- Die Leiste passt ihre Höhe und Anordnung an den geringeren vertikalen Platz an.
+- Timer-Informationen und wesentliche Steuerungen bleiben gut erreichbar, ohne Inhalte unnötig zu verdecken.
+
 ### Fokusziele
 - Individuell einstellbares Tagesziel.
 - Individuell einstellbares Wochenziel.
