@@ -532,3 +532,9 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Beim Wechsel der Seite bleiben die aktuell gesetzten Suchbegriffe, Filter und die Sortierung erhalten.
 - Nach einer Änderung der Filter oder des Suchbegriffs wird die Ergebnisliste aktualisiert und auf eine gültige Ergebnisseite zurückgesetzt, damit keine leere Seite außerhalb der verfügbaren Treffer angezeigt wird.
 - Die Seitennavigation ist kompakt gestaltet und fügt sich in den zentralen Workspace zwischen HEADBAR und den beiden Sidebars ein.
+
+### Anzahl der Sessions pro History-Seite
+- Standardmäßig werden **20 Sessions pro Seite** angezeigt.
+- Optional kann die Anzahl auf **10**, **20** oder **50 Sessions pro Seite** umgestellt werden.
+- Die gewählte Anzahl bleibt beim Wechsel zwischen History-Seiten sowie beim Anwenden von Suche und Filtern erhalten.
+- Wird die Anzahl pro Seite geändert, beginnt die Anzeige wieder auf Seite 1, damit die Navigation eindeutig bleibt.
