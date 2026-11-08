@@ -75,6 +75,16 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Die Statusdarstellung unterscheidet aktive, pausierte, unterbrochene und abgeschlossene Zustände auch optisch klar voneinander.
 - Das aktuelle Fokusziel wird direkt im Timerbereich angezeigt und kann bei Bedarf während der Session geändert werden.
 
+
+### Visuelle Gestaltung des Timers
+- Die verbleibende Zeit wird sehr groß und zentral dargestellt und bildet den visuellen Schwerpunkt des Current-Session-Bereichs.
+- Ein klar erkennbarer kreisförmiger Fortschrittsring umgibt die Zeitanzeige und aktualisiert sich flüssig entsprechend dem tatsächlichen Timerfortschritt.
+- Der aktuelle Status (z. B. `FOCUS`, `BREAK`, `PAUSED`) steht gut sichtbar oberhalb der Zeitanzeige.
+- Das aktuelle Fokusziel wird direkt unterhalb der Zeitanzeige dargestellt, damit jederzeit klar ist, woran gearbeitet wird.
+- Die bereits vergangene Zeit wird kleiner und ergänzend angezeigt; sie konkurriert nicht mit der verbleibenden Zeit um Aufmerksamkeit.
+- Die primäre Aktion **Pause/Resume** befindet sich unmittelbar unter oder neben der Zeitanzeige. Weitere Aktionen wie **Reset**, **Complete Session** und **Interrupt** sind klar davon getrennt und übersichtlich angeordnet.
+- Die Gestaltung wirkt ruhig, hochwertig und aufgeräumt. Der Timer bleibt eindeutig der Mittelpunkt, ohne durch zusätzliche Anzeigen oder Bedienelemente überladen zu werden.
+
 ### Timersteuerung und Ablauf
 - Die primären Aktionen sind direkt im Focus-Fenster erreichbar. Sichtbarkeit und Verfügbarkeit richten sich nach dem aktuellen Session-Status.
 - Verfügbare Aktionen je Zustand:
