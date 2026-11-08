@@ -1217,6 +1217,11 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Die Dauer kann nicht unter 00:00 sinken.
 - Beim Erreichen von 00:00 wird die Minus-Schaltfläche deaktiviert bzw. die Änderung gestoppt; negative Zeitwerte sind nicht möglich.
 
+
+### Obergrenze der Zeiteingabe
+- Für Fokus- und Pausendauer gibt es keine feste maximale Eingabegrenze.
+- Die Dauer kann über die Plus-Schaltfläche bzw. direkte Eingabe beliebig weit erhöht werden.
+
 ## 8. Umsetzungsregeln
 
 - Dieses Dokument wird während der weiteren Planung fortlaufend ergänzt.
