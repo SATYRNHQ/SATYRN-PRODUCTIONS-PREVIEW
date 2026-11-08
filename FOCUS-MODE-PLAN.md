@@ -538,3 +538,13 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Optional kann die Anzahl auf **10**, **20** oder **50 Sessions pro Seite** umgestellt werden.
 - Die gewählte Anzahl bleibt beim Wechsel zwischen History-Seiten sowie beim Anwenden von Suche und Filtern erhalten.
 - Wird die Anzahl pro Seite geändert, beginnt die Anzeige wieder auf Seite 1, damit die Navigation eindeutig bleibt.
+
+### Suchfunktion der Session-History
+- Die Suche berücksichtigt Session-Name und Fokusziel.
+- Die Trefferliste aktualisiert sich während der Eingabe automatisch, ohne dass ein zusätzlicher Such-Button erforderlich ist.
+- Die Aktualisierung erfolgt mit einer kurzen Verzögerung nach der letzten Eingabe, damit die Suche flüssig bleibt und nicht bei jedem einzelnen Tastendruck unnötig viele Suchläufe auslöst.
+- Ein sichtbares Löschsymbol ermöglicht es, den Suchbegriff mit einem Klick zu entfernen. Ohne Suchbegriff werden alle Sessions angezeigt, die den übrigen aktiven Filtern entsprechen.
+- Suchbegriff und aktive Filter bleiben beim Wechsel zwischen History-Seiten erhalten. Ändert sich der Suchbegriff, beginnt die Ergebnisanzeige wieder auf Seite 1.
+- Gibt es keine passenden Treffer, erscheint ein klarer Hinweis, dass keine Sessions gefunden wurden. Die Filter können anschließend angepasst oder zurückgesetzt werden.
+- Die Suchfunktion bleibt im zentralen Workspace eingebettet und berücksichtigt das globale Layout mit HEADBAR sowie linker und rechter Sidebar.
+
