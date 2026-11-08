@@ -391,6 +391,10 @@ Eigene Kategorien sollen später ergänzt werden können.
 - Das aktuelle Tagesziel gilt bis zum Ende des lokalen Tages als offen und wird vorher nicht als verfehlt gewertet.
 - Erst beim lokalen Tageswechsel wird der abgeschlossene Tag endgültig ausgewertet: Erreichtes Tagesziel verlängert die Streak; verfehltes Tagesziel unterbricht sie.
 - Wird das Tagesziel bereits vor Tagesende erreicht, wird der Tag als erreicht markiert; die Tagesauswertung bleibt bis zum Tageswechsel offen für weitere Fokuszeit.
+- Änderungen am Tagesziel wirken nicht rückwirkend auf bereits abgeschlossene Tage: Deren damaliger Zielwert und erreichte/verfehlte Wertung bleiben unverändert.
+- Eine Änderung am laufenden Tag gilt ab dem Änderungszeitpunkt für diesen aktuellen Tag. Die bis dahin erfasste Fokuszeit bleibt vollständig angerechnet; der aktuelle Tagesfortschritt wird anhand des neuen Zielwerts neu berechnet.
+- Eine Erhöhung des Ziels kann daher die aktuelle Tagesmarkierung bis zur erneuten Erreichung zurücknehmen; eine Senkung kann das Ziel bereits erfüllen. Die endgültige Tageswertung erfolgt weiterhin erst beim lokalen Tageswechsel.
+- Die längste Streak als persönlicher Rekord bleibt bei Zieländerungen erhalten und wird nicht rückwirkend neu bewertet. Abgeschlossene Tage und deren damalige Wertungen werden nicht verändert.
 
 ### Monthly Focus Map
 - Monatskalender mit farblicher Darstellung der täglichen Fokusaktivität.
