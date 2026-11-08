@@ -69,6 +69,15 @@ Die History soll nicht dauerhaft als großer Bereich auf der Hauptseite erschein
 - Die Pause kann über **Skip Break** übersprungen werden. Danach wartet der Timer auf den manuellen Start der nächsten Fokusphase.
 - Vor Beginn einer Fokusphase gibt es einen kurzen Countdown: `3 – 2 – 1 – FOCUS`.
 
+### Session-Wechsel direkt im Focus-Fenster
+- Im Focus-Fenster ist eine kompakte Liste aller offenen Sessions direkt erreichbar; zum Wechseln muss nicht erst eine andere Website-Seite geöffnet werden.
+- Jede Session zeigt ihren Namen bzw. ihr Fokusziel und einen klar erkennbaren Status: laufend, pausiert oder unterbrochen.
+- Die Liste übernimmt die bereits festgelegte Sortierung: laufende Session zuerst, danach pausierte und anschließend unterbrochene Sessions; innerhalb eines Status steht die zuletzt aktive Session weiter oben.
+- Beim Auswählen einer anderen Session wird die bisher laufende Session automatisch pausiert, bevor die ausgewählte Session geladen bzw. fortgesetzt wird.
+- Beim Wechsel werden der gespeicherte Timerstand und sämtliche Session-Daten wiederhergestellt, insbesondere Notizen, Distraction Log, Unteraufgaben und Verknüpfungen.
+- Es darf weiterhin nur ein Timer gleichzeitig laufen. Ein Session-Wechsel setzt keine Session zurück und darf keine gespeicherten oder noch nicht synchronisierten Änderungen verlieren.
+- Die bestehenden Regeln für maximale Anzahl, Status, Sortierung und Wiederaufnahme offener Sessions gelten unverändert.
+
 ### Pausen-Erinnerung
 - Zum Beginn einer Pause gibt es einen kurzen, angenehmen Doppelton.
 - Beim Ende der Pause gibt es ebenfalls einen kurzen Doppelton.
