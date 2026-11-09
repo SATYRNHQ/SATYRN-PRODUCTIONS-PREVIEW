@@ -545,3 +545,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Der Heute-Kreis wird **nur dann angezeigt, wenn der heutige Tag im aktuell angezeigten Kalendermonat liegt**.
 - Beim Wechsel zu einem anderen Monat wird kein Heute-Kreis auf einem anderen Datum oder außerhalb des Monats angezeigt.
 - 2026-11-09: Bestätigt.
+
+
+## Ergänzung — Markierung des ausgewählten Tages
+- Ein angeklickter bzw. aktuell ausgewählter Tag erhält **Variante B: eine dezente Hintergrundfarbe für die gesamte Tageszelle**.
+- Diese Markierung unterscheidet sich von der Heute-Markierung: Heute behält seinen Akzentfarben-Kreis hinter der Tageszahl.
+- Beide Markierungen können gleichzeitig sichtbar sein, wenn der heutige Tag ausgewählt ist.
+- 2026-11-09: Variante B bestätigt.
