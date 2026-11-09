@@ -49,7 +49,7 @@ function overlay(type,content){const el=document.createElement('div');el.classNa
 function close(el){if(!el)return;el.classList.remove('open');setTimeout(()=>el.remove(),170)}
 function top(){return [...$('#calModalRoot').children].at(-1)}
 function closeAll(){[...$('#calModalRoot').children].forEach(x=>x.remove());selected='';render()}
-function openDay(k){selected=k;render();const list=sort(occurrences(date(k),date(k)).filter(e=>e.displayStart<=k&&e.displayEnd>=k));
+function openDay(k){const previous=[...$('#calModalRoot').children].find(x=>x.dataset.type==='day');if(previous)close(previous);selected=k;render();const list=sort(occurrences(date(k),date(k)).filter(e=>e.displayStart<=k&&e.displayEnd>=k));
 const cards=list.map(e=>'<button class="cal-day-card '+pc(e.priority)+'" data-event="'+esc(e.id)+'" data-occ="'+esc(e.occurrenceDate)+'"><span class="cal-card-time">'+(e.allDay?'Ganztägig':esc(e.startTime||'')+(e.endTime?' – '+esc(e.endTime):''))+'</span><span class="cal-card-main"><b>'+esc(e.title)+'</b><em class="cal-card-priority '+pc(e.priority)+'">'+labels[pc(e.priority)]+'</em>'+(e.description?'<small>'+esc(e.description.slice(0,140))+(e.description.length>140?'…':'')+'</small>':'')+'</span><i>›</i></button>').join('');
 overlay('day','<section class="cal-modal cal-day-modal" role="dialog" aria-modal="true"><header class="cal-modal-head"><div><small>DAY OVERVIEW · '+list.length+' '+(list.length===1?'EINTRAG':'EINTRÄGE')+'</small><h2>'+esc(fmt(k))+'</h2></div><button class="cal-x" data-close>×</button></header><div class="cal-day-list">'+cards+'</div><footer><span>Alle Termine dieses Tages</span><button class="cal-primary" data-add-date="'+k+'">＋ Termin hinzufügen</button></footer></section>')}
 function detail(event,k){const end=dateKey(add(date(k),Math.max(0,diff(date(event.startDate),date(event.endDate||event.startDate))))),period=k===end?fmt(k):fmt(k)+' – '+fmt(end),time=event.allDay?'Ganztägig':(event.startTime||'')+(event.endTime?' – '+event.endTime:'');
@@ -100,7 +100,7 @@ const cancel=ev.target.closest('[data-cancel]');if(cancel){close(el);return}
 const delConfirm=ev.target.closest('[data-delete-confirm]');if(delConfirm&&el._delete){const x=el._delete;removeEvent(x.event,x.k,x.scope);return}
 };
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&page.classList.contains('active-page')&&top()){ev.preventDefault();const el=top();if(el.dataset.type==='form')requestClose(el);else if(el.dataset.confirm==='unsaved')close(el);else{close(el);if(el.dataset.type==='day')selected='';render()}}});
-document.addEventListener('click',ev=>{if(!page.classList.contains('active-page'))return;if(!ev.target.closest('.calendar-workspace,.cal-modal-root')&&selected){const day=[...$('#calModalRoot').children].find(x=>x.dataset.type==='day');if(day){close(day);selected='';render()}}});
+document.addEventListener('click',ev=>{if(!page.classList.contains('active-page')||!selected||ev.target.closest('.cal-modal-root,.cal-day'))return;const day=[...$('#calModalRoot').children].find(x=>x.dataset.type==='day');if(day){close(day);selected='';render()}});
 render();
 new MutationObserver(()=>{if(page.classList.contains('active-page')){const n=new Date();n.setHours(0,0,0,0);month=new Date(n.getFullYear(),n.getMonth(),1);selected='';render()}}).observe(page,{attributes:true,attributeFilter:['class']});
 })();
