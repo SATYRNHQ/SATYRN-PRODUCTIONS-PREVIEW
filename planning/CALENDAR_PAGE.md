@@ -386,3 +386,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Automatic dismissal remains enabled (success: approximately 3 seconds; error: 5 seconds).
 
 - 2026-11-09: Confirmed manual dismissal via a small X for individual Calendar success and error notifications.
+
+
+### Mobile adaptation — deferred
+- Mobile-specific layout and responsive adaptation for the Calendar are **deferred until a much later project phase**.
+- Do not expand the current Calendar planning or implementation into mobile-specific behavior now; revisit it during the later mobile optimization phase.
+
+- 2026-11-09: User explicitly deferred mobile support/adaptation until much later in the SATYRN HQ project.
