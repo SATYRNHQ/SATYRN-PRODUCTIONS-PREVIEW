@@ -572,3 +572,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Ein Klick auf einen anderen Tag innerhalb des Kalenders verschiebt die Auswahl direkt auf diesen Tag; es bleibt weiterhin höchstens ein Tag ausgewählt.
 - Die Heute-Markierung (Akzentfarben-Kreis hinter der Tageszahl) bleibt unabhängig von der Auswahl bestehen.
 - 2026-11-09: Bestätigt.
+
+
+## Ergänzung — Tagesauswahl beim Monatswechsel
+
+- Beim Wechsel zum vorherigen oder nächsten Monat wird eine bestehende Tagesauswahl aufgehoben.
+- Im neu angezeigten Monat ist zunächst kein Tag ausgewählt. Erst ein erneuter Klick auf einen Tag setzt eine neue Auswahl.
+- Die Heute-Markierung bleibt unabhängig davon bestehen, sofern der aktuelle Monat angezeigt wird.
+- 2026-11-09: Variante A bestätigt.
