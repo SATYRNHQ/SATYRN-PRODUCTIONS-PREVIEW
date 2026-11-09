@@ -393,3 +393,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Do not expand the current Calendar planning or implementation into mobile-specific behavior now; revisit it during the later mobile optimization phase.
 
 - 2026-11-09: User explicitly deferred mobile support/adaptation until much later in the SATYRN HQ project.
+
+
+### Desktop window responsiveness
+- The Calendar desktop layout flexibly adapts to different desktop browser/window sizes and grows or contracts to use the available space.
+- This decision applies to desktop layouts only; mobile-specific adaptation remains deferred to the later mobile phase.
+
+- 2026-11-09: Confirmed that the Calendar layout should flexibly adapt to available desktop window space.
