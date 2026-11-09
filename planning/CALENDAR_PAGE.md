@@ -526,3 +526,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Für den heutigen Tag wird **Variante A: ein dezenter farbiger Kreis hinter der Tageszahl** verwendet.
 - Die Tageszahl sitzt **exakt horizontal und vertikal zentriert** im Kreis; der Kreis ist gleichmäßig um die Zahl ausgerichtet.
 - 2026-11-09: Farbiger Kreis (Variante A) mit exakt mittig zentrierter Tageszahl bestätigt.
+
+
+## Ergänzung — Größe des Heute-Kreises
+- Der farbige Kreis um die heutige Tageszahl erhält **Variante B: mittlere Größe**.
+- Er bietet etwas gleichmäßigen Abstand rund um die Zahl, bleibt aber dezent.
+- Die Tageszahl bleibt horizontal und vertikal exakt zentriert.
+- 2026-11-09: Mittlere Kreisgröße (Variante B) bestätigt.
