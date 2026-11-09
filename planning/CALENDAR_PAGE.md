@@ -533,3 +533,9 @@ The following search behaviors are intended as a shared standard for every page 
 - Er bietet etwas gleichmäßigen Abstand rund um die Zahl, bleibt aber dezent.
 - Die Tageszahl bleibt horizontal und vertikal exakt zentriert.
 - 2026-11-09: Mittlere Kreisgröße (Variante B) bestätigt.
+
+
+## Ergänzung — Farbe des Heute-Kreises
+- Der Kreis hinter der heutigen Tageszahl verwendet die **jeweils aktive Akzentfarbe der SATYRN-Oberfläche**.
+- Die mittlere Kreisgröße und die exakt horizontale und vertikale Zentrierung der Tageszahl bleiben bestehen.
+- 2026-11-09: Verwendung der aktiven Akzentfarbe bestätigt.
