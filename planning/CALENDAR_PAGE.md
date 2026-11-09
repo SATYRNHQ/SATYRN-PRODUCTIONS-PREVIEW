@@ -32,6 +32,10 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Samstage und Sonntage werden optisch exakt wie die übrigen Wochentage behandelt: keine abweichende Hintergrundfarbe und keine besondere Hervorhebung. Termine und Prioritäten werden unabhängig vom Wochentag gleich dargestellt.
 - Beim Öffnen der Calendar-Seite wird immer automatisch der **aktuelle Monat** angezeigt; ein zuvor manuell aufgerufener anderer Monat wird nicht als Startmonat beibehalten.
 
+## Bestätigte Entscheidungen — Abstände zwischen Termineinträgen
+- Normale Termine innerhalb eines Tagesfeldes erhalten **Variante B: einen moderaten Abstand**. Dadurch bleiben einzelne Einträge klar unterscheidbar, ohne unnötig viel Platz zu verbrauchen.
+- Die Abstände sollen über alle Tagesfelder hinweg konsistent sein.
+
 ## Bestätigte Entscheidungen — Höhe der Tagesfelder
 - Die Tagesfelder in der Monatsansicht verwenden **Variante B: eine etwas höhere, gleichmäßige Höhe**. So bleibt das Raster ruhig und einheitlich, bietet aber mehr Platz für Termine als eine sehr kompakte Darstellung.
 - Die Tagesfelder wachsen nicht individuell abhängig von der Anzahl der Termine; für normale Termine gilt weiterhin die festgelegte Begrenzung mit dem Hinweis „+ weitere“. Mehrtägige Terminbalken bleiben gemäß der bestehenden Sonderregel immer sichtbar.
