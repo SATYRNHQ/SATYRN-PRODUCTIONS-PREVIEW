@@ -465,3 +465,8 @@ The following search behaviors are intended as a shared standard for every page 
 - Alle Balken bleiben innerhalb eines Tagesfeldes gleich breit und verwenden denselben seitlichen Abstand.
 
 - 2026-11-09: Mittlerer seitlicher Randabstand (Variante B) für normale Terminbalken gewählt.
+
+
+## Ergänzung — Rundung normaler Terminbalken
+- Normale Terminbalken erhalten **Variante A: leicht abgerundete Ecken**. Sie wirken dadurch weich, bleiben aber klar als kompakte Balken erkennbar.
+- 2026-11-09: Leichte Rundung (Variante A) für normale Terminbalken gewählt.
