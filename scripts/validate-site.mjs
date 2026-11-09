@@ -58,6 +58,8 @@ checkFonts(reminderCss, 'focus-reminders.css');
 checkFonts(calendarCss, 'calendar.css');
 
 assert.ok(!hq.includes('function renderFocus('), 'Legacy Focus renderer remains in hq-tools.js');
+assert.ok(!hq.includes("calendar:['Calendar'") && !hq.includes("calendar:[ 'Calendar'"), 'Legacy generic Calendar renderer must not overwrite the dedicated Calendar page');
+assert.ok(hq.includes("if(id==='calendar')return;"), 'Dedicated Calendar page must be protected from generic HQ rendering');
 assert.ok(!globalCss.includes('.focus-dashboard'), 'Legacy Focus stylesheet remains in styles.css');
 const cssWithoutComments = globalCss.replace(/\/\*[\s\S]*?\*\//g, '');
 assert.ok(!/\.topbar\s*\{/.test(cssWithoutComments), 'Unused legacy topbar CSS remains');
@@ -84,7 +86,7 @@ assert.ok(important.includes('BEISPIEL') && important.includes('getAvailableLink
 assert.ok(important.includes('building-2') && important.includes('handshake') && important.includes('landmark') && important.includes('telescope') && important.includes('layers'), 'Important category icons are incomplete');
 assert.ok(important.includes('requestAnimationFrame') && important.includes('replaceWith(nextCard)'), 'Important card expand/collapse animation is missing');
 assert.ok(important.includes('getAvailableLinks().find'), 'Important links must show current target names');
-assert.ok(sw.includes("satyrn-hq-shell-v115"), 'Service worker cache version must match the current shell release');
+assert.ok(sw.includes("satyrn-hq-shell-v116"), 'Service worker cache version must match the current shell release');
 assert.ok(html.includes('id="calGrid"') && html.includes('calendar.js?v=4') && html.includes('calendar.css?v=4'), 'Calendar page implementation or asset version is missing');
 assert.ok(sw.includes("'./calendar.js?v=4'") && sw.includes("'./calendar.css?v=4'"), 'Service worker must precache the current Calendar assets');
 assert.ok((html.match(/id="page-calendar"/g) || []).length === 1, 'Calendar page must exist exactly once');
