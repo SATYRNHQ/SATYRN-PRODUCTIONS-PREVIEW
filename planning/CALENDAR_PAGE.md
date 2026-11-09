@@ -558,3 +558,9 @@ The following search behaviors are intended as a shared standard for every page 
 - Der Hintergrund der ausgewählten Tageszelle verwendet ebenfalls die **aktive Akzentfarbe**, jedoch mit deutlich geringerer Deckkraft als der Heute-Kreis.
 - Dadurch bleibt die Auswahl dezent und unterscheidbar von der Heute-Markierung.
 - 2026-11-09: Bestätigt.
+
+
+## Ergänzung — Anzahl ausgewählter Tage
+- Es kann immer nur **ein Tag gleichzeitig** ausgewählt sein.
+- Wird ein anderer Tag angeklickt, wechselt die Auswahl direkt auf diesen Tag; die vorherige Tageszelle verliert ihre Auswahlmarkierung.
+- 2026-11-09: Bestätigt.
