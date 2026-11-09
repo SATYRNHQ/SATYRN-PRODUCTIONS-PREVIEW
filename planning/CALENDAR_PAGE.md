@@ -349,3 +349,10 @@ The following search behaviors are intended as a shared standard for every page 
 - This is slightly longer than the 3-second success notifications so the user has more time to read the error.
 
 - 2026-11-09: Confirmed automatic dismissal of Calendar error notifications after 5 seconds.
+
+
+### Error notification actions
+- Calendar error notifications do **not** include an „Erneut versuchen“ button.
+- They remain informational; the user can correct the issue and initiate the action again through the normal interface.
+
+- 2026-11-09: Confirmed that Calendar error notifications do not offer a retry button.
