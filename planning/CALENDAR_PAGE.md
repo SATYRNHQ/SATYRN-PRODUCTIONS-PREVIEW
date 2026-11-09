@@ -607,3 +607,9 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Klick innerhalb des Kalenders außerhalb des Tagesfensters
 - Wird bei geöffnetem Tagesfenster innerhalb des Kalenderbereichs außerhalb des Tagesfensters geklickt, schließt sich das Tagesfenster und die bisherige Tagesauswahl wird aufgehoben.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Tagesfenster per Escape schließen
+- Das geöffnete Tagesfenster kann zusätzlich mit der Escape-Taste geschlossen werden.
+- Das Schließen per Escape hebt die aktuelle Tagesauswahl ebenfalls auf.
+- 2026-11-09: Variante A bestätigt.
