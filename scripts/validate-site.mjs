@@ -73,6 +73,9 @@ const pageIds = new Set([...html.matchAll(/id="page-([^"]+)"/g)].map(m => m[1]))
 for (const target of new Set([...html.matchAll(/data-page="([^"]+)"/g)].map(m => m[1]))) {
   assert.ok(pageIds.has(target), 'Navigation target missing page section: ' + target);
 }
+for (const match of hq.matchAll(/^([a-z][\\w-]*):\\[/gm)) {
+  assert.ok(pageIds.has(match[1]), 'Generic HQ renderer has no matching page section: ' + match[1]);
+}
 assert.ok(app.includes('function showPage') && globalCss.includes('.hq-top-nav') && globalCss.includes('.hq-side-nav'), 'Shared navigation flow/styles missing');
 assert.ok(/--hq-card-radius\s*:\s*14px/.test(globalCss), 'Shared card radius must remain 14px');
 assert.ok(/\.imp-modal\s*\{[^}]*border-radius:14px/.test(globalCss), 'Important modal radius must be 14px');
@@ -86,7 +89,7 @@ assert.ok(important.includes('BEISPIEL') && important.includes('getAvailableLink
 assert.ok(important.includes('building-2') && important.includes('handshake') && important.includes('landmark') && important.includes('telescope') && important.includes('layers'), 'Important category icons are incomplete');
 assert.ok(important.includes('requestAnimationFrame') && important.includes('replaceWith(nextCard)'), 'Important card expand/collapse animation is missing');
 assert.ok(important.includes('getAvailableLinks().find'), 'Important links must show current target names');
-assert.ok(sw.includes("satyrn-hq-shell-v116"), 'Service worker cache version must match the current shell release');
+assert.ok(sw.includes("satyrn-hq-shell-v117"), 'Service worker cache version must match the current shell release');
 assert.ok(html.includes('id="calGrid"') && html.includes('calendar.js?v=4') && html.includes('calendar.css?v=4'), 'Calendar page implementation or asset version is missing');
 assert.ok(sw.includes("'./calendar.js?v=4'") && sw.includes("'./calendar.css?v=4'"), 'Service worker must precache the current Calendar assets');
 assert.ok((html.match(/id="page-calendar"/g) || []).length === 1, 'Calendar page must exist exactly once');
