@@ -500,3 +500,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Abstand zwischen Tageszahl und erstem Termin
 - Zwischen der Tageszahl und dem ersten Terminbalken wird **Variante B: ein mittlerer Abstand** verwendet. So bleiben Datum und Termine klar unterscheidbar, ohne unnötig viel Platz zu verbrauchen.
 - 2026-11-09: Mittlerer Abstand (Variante B) gewählt.
+
+
+## Ergänzung — Position der Tageszahl
+- Die Tageszahl steht **Variante C: oben mittig** in der Tageszelle.
+- 2026-11-09: Oben mittige Position (Variante C) gewählt.
