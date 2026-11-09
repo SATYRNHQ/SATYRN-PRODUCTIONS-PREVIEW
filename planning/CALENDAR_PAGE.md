@@ -490,3 +490,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — vertikaler Innenabstand normaler Terminbalken
 - Normale Terminbalken erhalten **Variante B: einen mittleren vertikalen Innenabstand**. Der Titel bleibt vertikal mittig ausgerichtet; oberhalb und unterhalb des Textes ist etwas Luft, ohne dass die Balken unnötig hoch wirken.
 - 2026-11-09: Mittlerer vertikaler Innenabstand (Variante B) gewählt.
+
+
+## Ergänzung — Mindesthöhe normaler Terminbalken
+- Normale Terminbalken erhalten **Variante B: eine mittlere Mindesthöhe**. Sie bleiben kompakt, bieten aber ausreichend Platz für den Titel und den festgelegten mittleren vertikalen Innenabstand.
+- 2026-11-09: Mittlere Mindesthöhe (Variante B) gewählt.
