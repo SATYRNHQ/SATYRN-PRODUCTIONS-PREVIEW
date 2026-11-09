@@ -73,8 +73,11 @@ const pageIds = new Set([...html.matchAll(/id="page-([^"]+)"/g)].map(m => m[1]))
 for (const target of new Set([...html.matchAll(/data-page="([^"]+)"/g)].map(m => m[1]))) {
   assert.ok(pageIds.has(target), 'Navigation target missing page section: ' + target);
 }
-for (const match of hq.matchAll(/^([a-z][\\w-]*):\\[/gm)) {
-  assert.ok(pageIds.has(match[1]), 'Generic HQ renderer has no matching page section: ' + match[1]);
+for (const line of hq.split('\n')) {
+  const key = line.trim().split(':', 1)[0];
+  if (/^[a-z][a-z0-9-]*$/.test(key) && line.includes(':[')) {
+    assert.ok(pageIds.has(key), 'Generic HQ renderer has no matching page section: ' + key);
+  }
 }
 assert.ok(app.includes('function showPage') && globalCss.includes('.hq-top-nav') && globalCss.includes('.hq-side-nav'), 'Shared navigation flow/styles missing');
 assert.ok(/--hq-card-radius\s*:\s*14px/.test(globalCss), 'Shared card radius must remain 14px');
