@@ -580,3 +580,8 @@ The following search behaviors are intended as a shared standard for every page 
 - Im neu angezeigten Monat ist zunächst kein Tag ausgewählt. Erst ein erneuter Klick auf einen Tag setzt eine neue Auswahl.
 - Die Heute-Markierung bleibt unabhängig davon bestehen, sofern der aktuelle Monat angezeigt wird.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — erneuter Klick auf den ausgewählten Tag
+- Wird der bereits ausgewählte Tag erneut angeklickt, bleibt er ausgewählt (Variante A). Die Auswahl wird dadurch nicht aufgehoben.
+- 2026-11-09: Bestätigt.
