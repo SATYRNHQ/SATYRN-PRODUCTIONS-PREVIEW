@@ -363,3 +363,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Notifications must not overlap or cover one another; each error remains independently readable and follows the established 5-second automatic dismissal behavior.
 
 - 2026-11-09: Confirmed that simultaneous Calendar error notifications stack vertically without overlapping.
+
+
+### Shared success and error notification stack
+- Success and error notifications use the **same bottom-right notification stack**.
+- If both types occur simultaneously, they are stacked together vertically in the order they appear, without overlapping.
+- Each notification retains its own icon, message, and automatic dismissal duration (success: approximately 3 seconds; error: 5 seconds).
+
+- 2026-11-09: Confirmed that success and error notifications share one vertically stacked bottom-right area.
