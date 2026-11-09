@@ -313,3 +313,10 @@ The following search behaviors are intended as a shared standard for every page 
 - As with creation, only show success feedback after the respective operation has actually succeeded.
 
 - 2026-11-09: Confirmed matching brief, subtle success feedback after successful editing and deletion, in addition to creation.
+
+
+### Success feedback duration
+- Success messages after creating, editing, or deleting a calendar entry disappear automatically after approximately **3 seconds**.
+- The messages remain subtle and do not require the user to dismiss them manually.
+
+- 2026-11-09: Confirmed that calendar success messages automatically disappear after approximately 3 seconds.
