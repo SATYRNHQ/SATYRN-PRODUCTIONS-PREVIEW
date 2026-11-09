@@ -515,3 +515,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Schriftgewicht der Tageszahl
 - Die Tageszahl erhält **Variante B: Medium** – etwas kräftiger als normale Schrift, aber nicht fett. Die mittlere Schriftgröße und die Position oben mittig bleiben bestehen.
 - 2026-11-09: Schriftgewicht Medium (Variante B) gewählt.
+
+
+## Ergänzung — Farbgestaltung der Tageszahlen
+- Gewählt wurde eine **Kombination aus Variante B und C**: Die Tageszahlen des aktuell angezeigten Monats bleiben etwas kräftiger und klarer lesbar; Tage aus dem vorherigen bzw. nächsten Monat erscheinen dezenter. Der heutige Tag erhält zusätzlich eine dezente farbige Hervorhebung.
+- 2026-11-09: Kombination aus B und C für die Tageszahlen bestätigt.
