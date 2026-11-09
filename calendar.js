@@ -102,5 +102,5 @@ const delConfirm=ev.target.closest('[data-delete-confirm]');if(delConfirm&&el._d
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&page.classList.contains('active-page')&&top()){ev.preventDefault();const el=top();if(el.dataset.type==='form')requestClose(el);else if(el.dataset.confirm==='unsaved')close(el);else{close(el);if(el.dataset.type==='day')selected='';render()}}});
 document.addEventListener('click',ev=>{if(!page.classList.contains('active-page')||!selected||ev.target.closest('.cal-modal-root,.cal-day'))return;const day=[...$('#calModalRoot').children].find(x=>x.dataset.type==='day');if(day){close(day);selected='';render()}});
 render();
-new MutationObserver(()=>{if(page.classList.contains('active-page')){const n=new Date();n.setHours(0,0,0,0);month=new Date(n.getFullYear(),n.getMonth(),1);selected='';render()}}).observe(page,{attributes:true,attributeFilter:['class']});
+new MutationObserver(()=>{[...$('#calModalRoot').children].forEach(x=>x.remove());selected='';if(page.classList.contains('active-page')){const n=new Date();n.setHours(0,0,0,0);month=new Date(n.getFullYear(),n.getMonth(),1)}render()}).observe(page,{attributes:true,attributeFilter:['class']});
 })();
