@@ -591,3 +591,8 @@ The following search behaviors are intended as a shared standard for every page 
 - Wird im Monatsraster ein sichtbarer Tag aus dem vorherigen oder nächsten Monat angeklickt, wechselt die Monatsansicht direkt in den Monat dieses Datums.
 - Der angeklickte Tag wird anschließend als ausgewählter Tag markiert und sein Tagesfenster geöffnet.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Wechsel des Tages bei geöffnetem Tagesfenster
+- Wird bei geöffnetem Tagesfenster ein anderer Tag im Kalender angeklickt, schließt sich das bisherige Tagesfenster und das Tagesfenster des neu angeklickten Tages öffnet sich.
+- 2026-11-09: Variante A bestätigt.
