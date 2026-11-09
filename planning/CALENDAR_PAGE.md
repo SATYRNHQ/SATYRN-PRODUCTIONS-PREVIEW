@@ -495,3 +495,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Mindesthöhe normaler Terminbalken
 - Normale Terminbalken erhalten **Variante B: eine mittlere Mindesthöhe**. Sie bleiben kompakt, bieten aber ausreichend Platz für den Titel und den festgelegten mittleren vertikalen Innenabstand.
 - 2026-11-09: Mittlere Mindesthöhe (Variante B) gewählt.
+
+
+## Ergänzung — Abstand zwischen Tageszahl und erstem Termin
+- Zwischen der Tageszahl und dem ersten Terminbalken wird **Variante B: ein mittlerer Abstand** verwendet. So bleiben Datum und Termine klar unterscheidbar, ohne unnötig viel Platz zu verbrauchen.
+- 2026-11-09: Mittlerer Abstand (Variante B) gewählt.
