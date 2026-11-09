@@ -320,3 +320,10 @@ The following search behaviors are intended as a shared standard for every page 
 - The messages remain subtle and do not require the user to dismiss them manually.
 
 - 2026-11-09: Confirmed that calendar success messages automatically disappear after approximately 3 seconds.
+
+
+### Success notification position
+- Calendar success notifications always appear in the same fixed position: **bottom-right of the screen**.
+- Keep this placement consistent for successful creation, editing, and deletion.
+
+- 2026-11-09: Confirmed a consistent bottom-right screen position for all Calendar success notifications.
