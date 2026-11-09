@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d0d">
+  <meta name="description" content="SATYRN PRODUCTIONS HQ — your creative headquarters.">
+  <title>SATYRN HQ — Creative Headquarters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css?v=98">
+  <link rel="stylesheet" href="focus-mode.css?v=6">
+  <link rel="stylesheet" href="focus-reminders.css?v=2">
+  <link rel="stylesheet" href="calendar.css?v=1">
+</head>
+<body>
+  <div class="background-slideshow" id="backgroundSlideshow" aria-hidden="true"><div class="background-slide active"></div><div class="background-slide"></div></div>
+  <div class="ambient"></div>
+  <div class="grain"></div>
+  <div class="app-shell">
+    <nav class="hq-top-nav" aria-label="Globale Navigation">
+      <div class="headbar-group headbar-left">
+        <button class="nav-item edge-nav-item" data-page="dashboard"><span class="nav-icon">▦</span><span class="nav-label">Dashboard</span></button>
+        <button class="nav-item edge-nav-item" data-page="dreams"><span class="nav-icon">✧</span><span class="nav-label">Dreams</span></button>
+        <button class="nav-item edge-nav-item" data-page="opportunities"><span class="nav-icon">✳</span><span class="nav-label">Opportunities</span></button>
+      </div>
+      <button class="nav-item edge-nav-item home-palm" data-page="home" aria-label="Home">
+        <span class="nav-icon" aria-hidden="true">🌴</span><span class="nav-label">Home</span>
+      </button>
+      <div class="headbar-group headbar-right">
+        <button class="nav-item edge-nav-item" data-page="projects"><span class="nav-icon">◇</span><span class="nav-label">Projects</span></button>
+        <button class="nav-item edge-nav-item" data-page="network"><span class="nav-icon">◎</span><span class="nav-label">Network</span></button>
+        <button class="nav-item edge-nav-item" data-page="settings"><span class="nav-icon">⚙</span><span class="nav-label">Settings</span></button>
+      </div>
+    </nav>
+    <nav class="hq-side-nav hq-time-nav" aria-label="Zeit und Planung">
+      <button class="nav-item edge-nav-item" data-page="calendar"><span class="nav-icon">▦</span><span class="nav-label">Calendar</span></button>
+      <button class="nav-item edge-nav-item" data-page="time-tracking"><span class="nav-icon">◷</span><span class="nav-label">Time Tracking</span></button>
+      <button class="nav-item edge-nav-item" data-page="deadlines"><span class="nav-icon">⧖</span><span class="nav-label">Deadlines</span></button>
+      <button class="nav-item edge-nav-item" data-page="focus"><span class="nav-icon">◎</span><span class="nav-label">Focus Mode</span></button>
+      <button class="nav-item edge-nav-item" data-page="important"><span class="nav-icon">✦</span><span class="nav-label">Important</span></button>
+    </nav>
+    <nav class="hq-side-nav hq-money-nav" aria-label="Finanzen">
+      <button class="nav-item edge-nav-item" data-page="savings"><span class="nav-icon">◈</span><span class="nav-label">Savings</span></button>
+      <button class="nav-item edge-nav-item" data-page="finance"><span class="nav-icon">↗</span><span class="nav-label">Income</span></button>
+      <button class="nav-item edge-nav-item" data-page="expenses"><span class="nav-icon">↘</span><span class="nav-label">Expenses</span></button>
+      <button class="nav-item edge-nav-item" data-page="net-worth"><span class="nav-icon">◇</span><span class="nav-label">Net Worth</span></button>
+      <button class="nav-item edge-nav-item" data-page="budget"><span class="nav-icon">▤</span><span class="nav-label">Budget</span></button>
+    </nav>
+    <main class="main-area">
+
+
+      <section class="page edge-placeholder" id="page-dashboard">
+        <div class="page-intro"><div class="eyebrow">SATYRN HQ · EXECUTIVE OVERVIEW</div><h1>Dashboard <em>.</em></h1><p>Dein zentraler Überblick über Fortschritt, Prioritäten und den aktuellen Status von SATYRN.</p></div>
+        <div class="edge-module-card glass-card"><span class="card-kicker">DASHBOARD FOUNDATION</span><h2>Executive Dashboard</h2><p>Dieser Bereich wird als eigenständiges Dashboard vorbereitet. Die bestehende Home-Seite bleibt dein zentraler Home Hub.</p><p class="edge-status">Erste Interface-Version · Inhalte und Kennzahlen werden in einem späteren Schritt gemeinsam festgelegt.</p><button class="primary-button" type="button" data-page="home">Zurück zu Home <span>↗</span></button></div>
+      </section>
+
+      <section class="page active-page" id="page-home">
+
+        <div class="cc-mini-wrap" id="ccMiniWrap">
+          <button class="cc-mini-card" id="ccMiniButton" type="button" aria-expanded="false" aria-controls="ccExpandedCard">
+            <span class="cc-mini-top"><span class="cc-mini-eyebrow">COMMAND CENTER</span><span class="cc-status-dot" id="ccStatusDot" aria-label="Neue wichtige Information"></span></span>
+            <span class="cc-mini-focus"><span class="cc-mini-label">CURRENT FOCUS</span><strong>HQ Dashboard finalisieren</strong></span>
+            <span class="cc-mini-bottom"><span>Daily progress</span><strong>50%</strong></span>
+            <span class="cc-mini-progress"><i></i></span>
+          </button>
+        </div>
+  <div class="cc-expanded-backdrop" id="ccExpandedBackdrop" aria-hidden="true"></div>
+  <section class="cc-expanded-card" id="ccExpandedCard" aria-hidden="true" aria-labelledby="ccExpandedTitle">
+    <div class="cc-expanded-head"><div><span class="cc-kicker">SATYRN · EXECUTIVE OVERVIEW</span><h2 id="ccExpandedTitle">Command <em>Center.</em></h2><p>Dein aktueller Überblick – live synchronisiert, sobald Daten gepflegt sind.</p></div><button class="cc-close" id="ccExpandedClose" type="button" aria-label="Command Center schließen">×</button></div>
+    <div class="cc-expanded-primary">
+      <article class="cc-panel cc-panel-feature"><span class="cc-kicker">01 · CURRENT FOCUS</span><h3>HQ Dashboard finalisieren</h3><p>Die Executive-Home-Ansicht abschließen und die neue Command-Center-Interaktion gemeinsam testen.</p><div class="cc-inline-meta"><span>Aktuelle Priorität</span><strong>Design-Review</strong></div><div class="cc-inline-meta"><span>Nächster Meilenstein</span><strong>Preview testen</strong></div></article>
+      <article class="cc-panel cc-panel-feature"><span class="cc-kicker">02 · TODAY'S PROGRESS</span><div class="cc-progress-number">50<span>%</span></div><p>3 von 5 Aufgaben · 1 von 2 Arbeitsblöcken</p><div class="cc-progress-track"><i></i></div><div class="cc-progress-foot"><span>3 / 6 eindeutige Arbeitseinheiten</span><strong>In Bewegung</strong></div><small>Verknüpfte Aufgabe und Arbeitsblock werden nur einmal gezählt.</small></article>
+    </div>
+    <div class="cc-expanded-secondary">
+      <details class="cc-panel cc-panel-compact" data-cc-detail="welcome"><summary><span class="cc-kicker">03 · WELCOME BACK</span><strong>Willkommen zurück</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p id="ccExpandedDate"></p><p>Dein HQ ist bereit. Der heutige Schwerpunkt ist der gemeinsame Preview-Check.</p></div></details>
+      <details class="cc-panel cc-panel-compact" data-cc-detail="finance"><summary><span class="cc-kicker">04 · FINANCIAL SNAPSHOT</span><strong>Finanzübersicht</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p>Gemeinsamer Sparstand, Einnahmen und Ausgaben werden aus den jeweiligen Finanzbereichen übernommen – keine doppelte Datenhaltung.</p><span class="cc-data-note">Noch keine Finanzdaten hinterlegt</span></div></details>
+      <details class="cc-panel cc-panel-compact" data-cc-detail="next"><summary><span class="cc-kicker">05 · NEXT UP</span><strong>Termine, Deadlines & Experiences</strong><span class="cc-summary-arrow">＋</span></summary><div class="cc-detail-copy"><p>Der nächste Schritt: Command Center Preview gemeinsam testen.</p><span class="cc-data-note">Keine weiteren Einträge in dieser Demo</span></div></details>
+    </div>
+    <div class="cc-expanded-foot"><span class="cc-preview-tag">PREVIEW · BEISPIELDATEN</span><span>ESC zum Schließen</span></div>
+  </section>
+
+
+        <section class="hq-overview" aria-label="SATYRN command center">
+          <section class="ares-dock" id="aresDock" role="button" tabindex="0" aria-label="ARES Chat öffnen">
+            <div class="ares-dock-identity">
+              <span class="ares-dock-helmet"><svg class="helmet-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 31c0-12 6-21 15-24 1 5 5 8 11 10l-2 7 5 5-7 2-2 7H16l-2-5-4-2Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M22 8c-1 8-5 13-11 16M16 38h20M23 26h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+              <div><span class="card-kicker">CENTRAL INTELLIGENCE</span><h2>ARES</h2></div>
+            </div>
+            <form class="ares-dock-chat" id="aresDockForm">
+              <input id="aresDockInput" type="text" readonly placeholder="Nachricht an ARES..." autocomplete="off" aria-label="Nachricht an ARES">
+              <button type="submit" aria-label="Chat öffnen und Nachricht senden">↑</button>
+            </form>
+            <button class="ares-dock-open" id="aresDockOpen" type="button">Chat öffnen <span>↗</span></button>
+          </section>
+        </section>
+
+        <section class="home-showcase" aria-label="Home Dashboard Beispielansicht">
+          <div class="home-welcome">
+            <div>
+              <span class="home-kicker">SATYRN PRODUCTIONS · CREATIVE HEADQUARTERS</span>
+              <h1>Build something<br><em>that lasts.</em></h1>
+              <p>Dein kreatives Hauptquartier für Musik, Projekte, Wachstum und tägliche Umsetzung.</p>
+            </div>
+            <div class="home-welcome-side">
+              <span class="home-live-dot"></span>
+              <span>WORKSPACE PREVIEW</span>
+              <strong>Ein klarer Fokus.<br>Ein Schritt nach dem anderen.</strong>
+              <button class="home-outline-button" type="button" data-page="projects">Projekte ansehen <span>↗</span></button>
+            </div>
+          </div>
+
+          <div class="home-section-heading">
+            <div><span class="home-kicker">AT A GLANCE</span><h2>Workspace overview</h2></div>
+            <span class="home-demo-label">ALLE WERTE SIND BEISPIELDATEN</span>
+          </div>
+          <div class="home-metric-grid">
+            <article class="home-metric"><span class="home-metric-icon">◇</span><span class="home-metric-label">ACTIVE PROJECTS</span><strong>04</strong><small><i class="home-positive">+1</i> dieses Monats</small></article>
+            <article class="home-metric"><span class="home-metric-icon">♫</span><span class="home-metric-label">BEATS THIS MONTH</span><strong>12</strong><small>8 fertig · 4 in Arbeit</small></article>
+            <article class="home-metric"><span class="home-metric-icon">◷</span><span class="home-metric-label">FOCUS HOURS</span><strong>28.5<span>h</span></strong><small>Diese Woche</small></article>
+            <article class="home-metric"><span class="home-metric-icon">↗</span><span class="home-metric-label">MONTHLY REVENUE</span><strong>€640</strong><small>Demo · manuell gepflegt</small></article>
+          </div>
+
+          <div class="home-dashboard-grid">
+            <section class="home-card home-focus-card">
+              <div class="home-card-head"><div><span class="home-kicker">01 · PRIORITY</span><h3>Today's focus</h3></div><span class="home-status-pill">IN PROGRESS</span></div>
+              <p class="home-focus-title">Finish the next sound.</p>
+              <p class="home-muted">Ein Demo-Tagesplan für eine fokussierte Producer-Session.</p>
+              <div class="home-focus-progress"><div><span>Daily progress</span><strong>70%</strong></div><span class="home-progress-track"><i style="width:70%"></i></span></div>
+              <ul class="home-check-list">
+                <li class="is-done"><span>✓</span> Melodie und Soundauswahl</li>
+                <li class="is-done"><span>✓</span> Drum-Pattern arrangieren</li>
+                <li><span>○</span> 808 und Übergänge finalisieren</li>
+                <li><span>○</span> Rough Mix exportieren</li>
+              </ul>
+              <button class="home-text-link" type="button" data-page="focus">Fokus öffnen <span>↗</span></button>
+            </section>
+
+            <section class="home-card home-schedule-card">
+              <div class="home-card-head"><div><span class="home-kicker">02 · DAILY FLOW</span><h3>Today's schedule</h3></div><button class="home-small-link" type="button" data-page="calendar">Calendar ↗</button></div>
+              <div class="home-timeline">
+                <div class="home-time-row"><time>09:00</time><span class="home-time-mark"></span><div><strong>Creative warm-up</strong><small>Ideen sammeln · 30 min</small></div><b>DONE</b></div>
+                <div class="home-time-row is-current"><time>10:00</time><span class="home-time-mark"></span><div><strong>Beat production</strong><small>Melody, drums & arrangement</small></div><b>NOW</b></div>
+                <div class="home-time-row"><time>13:00</time><span class="home-time-mark"></span><div><strong>Mix & sound design</strong><small>Projekt: SUNSET DRIVE</small></div><b>UP NEXT</b></div>
+                <div class="home-time-row"><time>15:30</time><span class="home-time-mark"></span><div><strong>Content session</strong><small>Short-form video & upload</small></div><b>PLANNED</b></div>
+              </div>
+            </section>
+
+            <section class="home-card home-projects-card">
+              <div class="home-card-head"><div><span class="home-kicker">03 · IN THE WORKS</span><h3>Featured projects</h3></div><button class="home-small-link" type="button" data-page="projects">All projects ↗</button></div>
+              <div class="home-project-list">
+                <article class="home-project"><div class="home-project-art home-art-one"><span>SY</span></div><div class="home-project-info"><strong>SUNSET DRIVE</strong><small>Melodic trap beat · Production</small><span class="home-project-bar"><i style="width:78%"></i></span></div><b>78%</b></article>
+                <article class="home-project"><div class="home-project-art home-art-two"><span>02</span></div><div class="home-project-info"><strong>AFTER HOURS</strong><small>Visual identity · Brand project</small><span class="home-project-bar"><i style="width:46%"></i></span></div><b>46%</b></article>
+                <article class="home-project"><div class="home-project-art home-art-three"><span>HQ</span></div><div class="home-project-info"><strong>SATYRN HQ</strong><small>Workspace · Interface build</small><span class="home-project-bar"><i style="width:65%"></i></span></div><b>65%</b></article>
+              </div>
+            </section>
+
+            <section class="home-card home-goals-card">
+              <div class="home-card-head"><div><span class="home-kicker">04 · LONG GAME</span><h3>Goals & milestones</h3></div><button class="home-small-link" type="button" data-page="dreams">View goals ↗</button></div>
+              <div class="home-goal"><div><strong>First 3 beat sales / month</strong><span>Producer business · Demo progress</span></div><b>2 / 3</b><span class="home-goal-track"><i style="width:66%"></i></span></div>
+              <div class="home-goal"><div><strong>Build a consistent content routine</strong><span>Publishing · Demo progress</span></div><b>4 / 5</b><span class="home-goal-track"><i style="width:80%"></i></span></div>
+              <div class="home-goal"><div><strong>Complete the HQ foundation</strong><span>Systems · Demo progress</span></div><b>7 / 10</b><span class="home-goal-track"><i style="width:70%"></i></span></div>
+            </section>
+
+            <section class="home-card home-finance-card">
+              <div class="home-card-head"><div><span class="home-kicker">05 · FINANCIAL SNAPSHOT</span><h3>Money overview</h3></div><button class="home-small-link" type="button" data-page="finance">Open finance ↗</button></div>
+              <div class="home-finance-total"><span>Example balance this month</span><strong>€640,00</strong><small>Nur illustrative demo values – keine echten Kontodaten</small></div>
+              <div class="home-finance-lines"><div><span>Beat licenses</span><b>€420</b></div><div><span>Editing services</span><b>€220</b></div><div><span>Software & tools</span><b class="home-expense">−€58</b></div></div>
+            </section>
+
+            <section class="home-card home-activity-card">
+              <div class="home-card-head"><div><span class="home-kicker">06 · LATEST MOVEMENT</span><h3>Recent activity</h3></div><button class="home-small-link" type="button" data-page="important">See all ↗</button></div>
+              <div class="home-activity-list">
+                <div><span class="home-activity-icon">♫</span><p><strong>New beat draft created</strong><small>SUNSET DRIVE · Music production</small></p><time>10:42</time></div>
+                <div><span class="home-activity-icon">◇</span><p><strong>Project milestone updated</strong><small>AFTER HOURS · Brand identity</small></p><time>Yesterday</time></div>
+                <div><span class="home-activity-icon">↗</span><p><strong>Weekly goal reached</strong><small>Four content pieces completed</small></p><time>Mon</time></div>
+              </div>
+            </section>
+          </div>
+          <div class="home-bottom-note"><span>✳</span><p><strong>Built for the long run.</strong> Kleine, konsequente Schritte bauen langfristig etwas Großes auf.</p><span class="home-bottom-demo">DEMO WORKSPACE · SAMPLE CONTENT</span></div>
+        </section>
+
+        <footer class="page-footer"><span>© 2026 SATYRN PRODUCTIONS</span><span>BUILT FOR THE LONG RUN <b>✳</b></span></footer>
+      </section>
+
+
+
+
+
+<section class="page edge-placeholder" id="page-dreams"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Dreams <em>.</em></h1><p>Langfristige Visionen, messbare Meilensteine und deine großen SATYRN-Ziele.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Dreams</h2><p>Langfristige Visionen, messbare Meilensteine und deine großen SATYRN-Ziele.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page edge-placeholder" id="page-opportunities"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Opportunities <em>.</em></h1><p>Ideen, Chancen und mögliche nächste Schritte – erst bewerten, dann entscheiden.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Opportunities</h2><p>Ideen, Chancen und mögliche nächste Schritte – erst bewerten, dann entscheiden.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page edge-placeholder" id="page-network"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Network <em>.</em></h1><p>Kontakte, Artists, Kunden und mögliche Kollaborationen.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Network</h2><p>Kontakte, Artists, Kunden und mögliche Kollaborationen.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page calendar-page" id="page-calendar">
+  <div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Calendar <em>.</em></h1><p>Deine Termine und Ereignisse – übersichtlich an einem Ort.</p></div>
+  <div class="calendar-workspace">
+    <div class="calendar-toolbar"><div class="calendar-month-title"><span class="cal-kicker">MONTHLY OVERVIEW</span><h2 id="calMonthTitle">—</h2></div>
+      <div class="calendar-actions"><button class="cal-quiet-button" id="calToday" type="button">Aktuelles Datum</button><div class="cal-month-nav"><button id="calPrev" type="button" aria-label="Vorheriger Monat">‹</button><button id="calNext" type="button" aria-label="Nächster Monat">›</button></div><button class="cal-add-button" id="calAdd" type="button" aria-label="Termin hinzufügen">+</button></div></div>
+    <div class="calendar-filters"><label class="cal-search-wrap"><span aria-hidden="true">⌕</span><input id="calSearch" type="search" placeholder="Termine suchen …" autocomplete="off"><button id="calSearchClear" type="button" aria-label="Suche leeren">×</button></label>
+      <div class="cal-filter-row" aria-label="Prioritätsfilter"><label class="cal-filter urgent"><input type="checkbox" value="urgent" checked>Dringend</label><label class="cal-filter important"><input type="checkbox" value="important" checked>Wichtig</label><label class="cal-filter provisional"><input type="checkbox" value="provisional" checked>Vorläufig</label><label class="cal-filter indefinite"><input type="checkbox" value="indefinite" checked>Unbefristet</label><label class="cal-filter none"><input type="checkbox" value="none" checked>Ohne Priorität</label><button id="calReset" type="button" hidden>Alle zurücksetzen</button></div><div id="calSearchResults" class="cal-search-results" hidden></div></div>
+    <div class="cal-grid-scroll"><div class="cal-grid" id="calGrid" aria-label="Monatskalender"><div class="cal-weekdays"><span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span></div><div id="calWeeks"></div></div></div>
+  </div><div id="calModalRoot" class="cal-modal-root"></div><div id="calNotifications" class="cal-notifications" aria-live="polite"></div>
+</section><section class="page edge-placeholder" id="page-time-tracking"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Time <em>Tracking</em></h1><p>Arbeitszeit und Sessions lokal erfassen; echte Zeitmessung startet nur auf deine Eingabe.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Time Tracking</h2><p>Arbeitszeit und Sessions lokal erfassen; echte Zeitmessung startet nur auf deine Eingabe.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page edge-placeholder" id="page-deadlines"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Deadlines <em>.</em></h1><p>Fälligkeiten und wichtige Zeitpunkte im Blick behalten.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Deadlines</h2><p>Fälligkeiten und wichtige Zeitpunkte im Blick behalten.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page" id="page-focus"></section><section class="page important-page" id="page-important">
+  <div class="page-intro"><div class="eyebrow">SATYRN HQ · KNOWLEDGE ARCHIVE</div><h1>Important <em>.</em></h1><p>Wichtige Informationen, strategische Entscheidungen und langfristige Vorhaben – zentral gesammelt und jederzeit wieder auffindbar.</p></div>
+  <div id="importantApp">
+    <button class="imp-create-button" type="button" aria-label="Important-Eintrag erstellen" data-imp-create>+</button>
+    <section class="imp-controls" aria-label="Suche und Filter">
+      <div class="imp-search-row"><div class="imp-search-wrap"><input id="importantSearch" type="search" placeholder="Einträge, Beschreibungen oder Verknüpfungen durchsuchen …" autocomplete="off"><button id="importantSearchClear" class="imp-search-clear" type="button" aria-label="Suche löschen">×</button></div><button class="imp-reset-button" type="button" data-reset>Filter zurücksetzen</button></div>
+      <div class="imp-filter-grid">
+        <section class="imp-filter-panel"><div class="imp-filter-heading"><i>▦</i> Kategorien <span class="imp-filter-actions"><button type="button" data-filter-all="cat">Alle</button><button type="button" data-filter-none="cat">Keine</button></span></div><div class="imp-filter-options" id="importantCategoryFilters"></div></section>
+        <section class="imp-filter-panel"><div class="imp-filter-heading"><i>⚑</i> Priorität <span class="imp-filter-actions"><button type="button" data-filter-all="pri">Alle</button><button type="button" data-filter-none="pri">Keine</button></span></div><div class="imp-filter-options" id="importantPriorityFilters"></div></section>
+      </div>
+    </section>
+    <div class="imp-count" id="importantCount" aria-live="polite"></div>
+    <div class="imp-cards" id="importantCards"></div>
+    <section class="imp-empty" id="importantWelcome" hidden><div class="imp-empty-art"><div class="imp-archive-orb"><span>✦</span></div></div><h2>Noch keine wichtigen Informationen vorhanden</h2><p>Dein SATYRN-Archiv ist bereit. Lege deinen ersten Eintrag an, um wichtige Informationen langfristig festzuhalten.</p><button class="imp-create-inline" type="button" data-imp-create>Ersten Eintrag erstellen <span>＋</span></button></section>
+    <section class="imp-empty" id="importantNoResults" hidden><div class="imp-empty-art"><div class="imp-archive-orb"><span>⌕</span></div></div><h2>Keine Einträge gefunden</h2><p>Passe deine Suche oder Filter an, um Ergebnisse zu finden.</p><button class="imp-reset-button" type="button" data-reset>Filter zurücksetzen</button></section>
+    <div class="imp-modal-backdrop" id="importantModalBackdrop" hidden></div>
+    <section class="imp-modal" id="importantModal" role="dialog" aria-modal="true" aria-labelledby="importantModalHeading" hidden>
+      <div class="imp-modal-head"><div><span class="imp-modal-kicker">SATYRN · IMPORTANT ARCHIVE</span><h2 id="importantModalHeading">Neuen Eintrag erstellen</h2></div><button class="imp-modal-close" type="button" data-modal-close aria-label="Fenster schließen">×</button></div>
+      <form id="importantForm">
+        <div class="imp-form-grid">
+          <section class="imp-form-section"><h3>01 · Grundinformationen</h3><div class="imp-form-field"><label for="importantTitle">Titel *</label><input id="importantTitle" type="text" required placeholder="Worum geht es?"></div><div class="imp-form-field"><label for="importantCategory">Kategorie *</label><select id="importantCategory" required><option value="">Kategorie auswählen</option><option value="company">Unternehmensinformationen</option><option value="partners">Geschäftspartner & Kooperationen</option><option value="moves">Strategic Moves</option><option value="blueprints">Future Blueprints</option><option value="other">Sonstiges</option></select></div><label class="imp-focus-task-option"><input id="importantFocusTask" type="checkbox"><span>Als Fokusaufgabe in der Task Queue anzeigen</span></label></section>
+          <section class="imp-form-section"><h3>02 · Priorität *</h3><div class="imp-priority-options"><label class="imp-priority-option imp-pri-red"><input type="radio" name="importantPriority" value="urgent" required> Dringend</label><label class="imp-priority-option imp-pri-orange"><input type="radio" name="importantPriority" value="important" required> Wichtig</label><label class="imp-priority-option imp-pri-blue"><input type="radio" name="importantPriority" value="provisional" required> Vorläufig</label><label class="imp-priority-option imp-pri-green"><input type="radio" name="importantPriority" value="indefinite" required> Unbefristet</label></div></section>
+          <section class="imp-form-section imp-full"><h3>03 · Inhalt</h3><div class="imp-form-field"><label for="importantDescription">Beschreibung (optional)</label><textarea id="importantDescription" placeholder="Hintergründe, Details und wichtige Informationen …"></textarea></div><div class="imp-form-field"><label for="importantDate">Ereignisdatum (optional)</label><input id="importantDate" type="date"></div></section>
+          <section class="imp-form-section imp-full"><h3>04 · Verknüpfungen</h3><div class="imp-form-field imp-link-picker"><label for="importantLinkSearch">HQ-Bereiche und Einträge suchen</label><div class="imp-link-search-row"><input id="importantLinkSearch" type="search" placeholder="Zum Beispiel Projects oder Business …" autocomplete="off"><button id="importantLinkClose" class="imp-link-close" type="button" aria-label="Verknüpfungsmenü schließen" title="Schließen" hidden>×</button></div><div class="imp-link-results" id="importantLinkResults" hidden></div><div class="imp-selected-links" id="importantSelectedLinks"></div></div></section>
+        </div>
+        <div class="imp-modal-actions"><button class="imp-cancel" id="importantCancel" type="button">Abbrechen</button><button class="imp-save" type="submit">Speichern</button></div>
+      </form>
+    </section>
+    <section class="imp-prompt" id="importantDiscardPrompt" hidden><div class="imp-prompt-card" role="alertdialog" aria-modal="true"><h3>Änderungen verwerfen?</h3><p>Du hast ungespeicherte Änderungen. Möchtest du weiter bearbeiten oder die Änderungen verwerfen und schließen?</p><div class="imp-prompt-actions"><button class="imp-discard" type="button" data-cancel-discard>Weiter bearbeiten</button><button class="imp-danger" type="button" data-confirm-discard>Verwerfen und schließen</button></div></div></section>
+    <section class="imp-prompt" id="importantDeletePrompt" hidden><div class="imp-prompt-card" role="alertdialog" aria-modal="true"><h3>Eintrag endgültig löschen?</h3><p>Möchtest du diesen Important-Eintrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</p><input id="importantDeleteTarget" type="hidden"><div class="imp-prompt-actions"><button class="imp-discard" type="button" data-cancel-delete>Abbrechen</button><button class="imp-danger" type="button" data-confirm-delete>Endgültig löschen</button></div></div></section>
+  </div>
+</section><section class="page edge-placeholder" id="page-savings"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Savings <em>.</em></h1><p>Zentrale manuelle Sparsumme. Keine Bankverbindung oder automatische Übertragung.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Savings</h2><p>Zentrale manuelle Sparsumme. Keine Bankverbindung oder automatische Übertragung.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page edge-placeholder" id="page-expenses"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Expenses <em>.</em></h1><p>Ausgaben werden derzeit im Finance Center lokal erfasst.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Expenses</h2><p>Ausgaben werden derzeit im Finance Center lokal erfasst.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page edge-placeholder" id="page-net-worth"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Net <em>Worth</em></h1><p>Vermögensübersicht mit manuellen Werten; keine Konten verbunden.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Net Worth</h2><p>Vermögensübersicht mit manuellen Werten; keine Konten verbunden.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section><section class="page edge-placeholder" id="page-budget"><div class="page-intro"><div class="eyebrow">SATYRN HQ · LOCAL WORKSPACE</div><h1>Budget <em>.</em></h1><p>Monatsbudget auf Basis deiner manuell erfassten Einnahmen und Ausgaben.</p></div><div class="edge-module-card glass-card"><span class="card-kicker">FREE LOCAL FOUNDATION</span><h2>Budget</h2><p>Monatsbudget auf Basis deiner manuell erfassten Einnahmen und Ausgaben.</p><p class="edge-status">Dieser Bereich ist als Navigationsziel angelegt. Die nächste Ausbaustufe ergänzt die dazugehörigen lokalen Werkzeuge. Keine externe Verbindung ist aktiv.</p><button class="primary-button" type="button" data-page="home">Zurück zum Home Hub <span>↗</span></button></div></section>      <section class="page finance-page" id="page-finance">
+        <div class="page-intro finance-intro">
+          <div class="eyebrow">SATYRN BUSINESS INTELLIGENCE · LOCAL PREVIEW</div>
+          <h1>Finance <em>Center.</em></h1>
+          <p>Dein Umsatz, deine Kunden und deine Ziele – an einem Ort. Alle Einträge werden zunächst lokal in diesem Browser gespeichert. Die drei Zielwerte legst du selbst fest; wir erfinden keine Umsatzziele.</p>
+        </div>
+        <div class="finance-toolbar">
+          <div><span class="finance-live-dot"></span><span>LOCAL FINANCE DATA</span></div>
+          <label class="finance-period">Zeitraum
+            <select id="financePeriod"><option value="month">Dieser Monat</option><option value="quarter">Dieses Quartal</option><option value="year">Dieses Jahr</option><option value="all">Gesamte Zeit</option></select>
+          </label>
+        </div>
+        <div class="finance-kpis">
+          <article class="finance-kpi"><span>UMSATZ · ZEITRAUM</span><strong id="financeRevenue">0,00 €</strong><small id="financeRevenueHint">Bestätigte und offene Einnahmen</small></article>
+          <article class="finance-kpi"><span>EINGEGANGEN</span><strong id="financeReceived">0,00 €</strong><small>Bereits als bezahlt markiert</small></article>
+          <article class="finance-kpi"><span>OFFENE FORDERUNGEN</span><strong id="financeOpen">0,00 €</strong><small id="financeOpenHint">Noch nicht bezahlt</small></article>
+          <article class="finance-kpi"><span>ERFASSTE AUFTRÄGE</span><strong id="financeOrders">0</strong><small id="financeCustomers">0 Kunden erfasst</small></article>
+          <article class="finance-kpi"><span>DURCHSCHNITT PRO AUFTRAG</span><strong id="financeAverageOrder">—</strong><small>Durchschnittlicher erfasster Auftragsumsatz</small></article>
+          <article class="finance-kpi"><span>DURCHSCHNITT PRO KUNDE</span><strong id="financeAverageCustomer">—</strong><small>Umsatz je eindeutigem Kundennamen</small></article>
+          <article class="finance-kpi"><span>UMSATZ PRO ARBEITSSTUNDE</span><strong id="financePerHour">—</strong><small id="financePerHourHint">Nur Aufträge mit erfasster Arbeitszeit</small></article>
+          <article class="finance-kpi"><span>DECKUNGSBEITRAG PRO STUNDE</span><strong id="financeMarginPerHour">—</strong><small>Nur bei erfassten Stunden und direkten Kosten</small></article>
+        </div>
+        <div class="finance-main-grid">
+          <section class="finance-panel finance-chart-panel">
+            <div class="finance-panel-head"><div><span class="eyebrow">REVENUE DEVELOPMENT</span><h2>Umsatzentwicklung</h2></div><span class="finance-tag">LETZTE 6 MONATE</span></div>
+            <div class="finance-chart" id="financeChart" aria-label="Umsatzdiagramm der letzten sechs Monate"></div>
+            <div class="finance-chart-foot"><span>Monatliche erfasste Einnahmen</span><span id="financeChartTotal">0,00 €</span></div>
+          </section>
+          <section class="finance-panel finance-goals-panel">
+            <div class="finance-panel-head"><div><span class="eyebrow">MONTHLY TARGETS</span><h2>Deine Umsatzziele</h2></div><span class="finance-tag">MONAT</span></div>
+            <div class="finance-goal-progress"><div class="finance-goal-copy"><span>Mindestziel</span><b id="goalMinimumLabel">0 €</b></div><div class="finance-progress"><i id="goalMinimumBar"></i></div></div>
+            <div class="finance-goal-progress"><div class="finance-goal-copy"><span>Solides Ziel</span><b id="goalSolidLabel">0 €</b></div><div class="finance-progress"><i id="goalSolidBar"></i></div></div>
+            <div class="finance-goal-progress"><div class="finance-goal-copy"><span>Traumziel</span><b id="goalDreamLabel">0 €</b></div><div class="finance-progress"><i id="goalDreamBar"></i></div></div>
+            <div class="finance-goal-foot"><strong id="goalGap">Noch 0 € bis zum Mindestziel</strong><span id="goalPercent">0 % erreicht</span></div>
+            <button class="finance-text-button" id="editFinanceGoals" type="button">Monatsziele bearbeiten ↗</button>
+          </section>
+        </div>
+        <div class="finance-lower-grid">
+          <section class="finance-panel">
+            <div class="finance-panel-head"><div><span class="eyebrow">REVENUE MIX</span><h2>Einnahmen nach Bereich</h2></div></div>
+            <div id="financeCategories" class="finance-categories"><p class="finance-empty">Noch keine Einnahmen erfasst.</p></div>
+          </section>
+          <section class="finance-panel">
+            <div class="finance-panel-head"><div><span class="eyebrow">CUSTOMER OVERVIEW</span><h2>Kunden & Aufträge</h2></div><span class="finance-tag" id="financeCustomerCount">0 KUNDEN</span></div>
+            <div id="financeCustomerList" class="finance-customer-list"><p class="finance-empty">Kunden erscheinen hier nach der ersten Einnahmeerfassung.</p></div>
+          </section>
+        </div>
+        <section class="finance-panel finance-entry-panel">
+          <div class="finance-panel-head"><div><span class="eyebrow">RECORD A TRANSACTION</span><h2>Einnahme erfassen</h2><p>Erfasse Verkäufe, Services und Aufträge. Offene Beträge werden getrennt von Zahlungseingängen angezeigt.</p></div><span class="finance-tag">MANUELL</span></div>
+          <form id="financeEntryForm" class="finance-entry-form">
+            <label>Bezeichnung<input id="financeTitle" maxlength="90" placeholder="z. B. Exclusive Beat License" required></label>
+            <label>Kunde<input id="financeCustomer" maxlength="70" placeholder="Kundenname (optional)"></label>
+            <label>Kategorie<select id="financeCategory"><option value="Beats">Beat-Verkäufe</option><option value="Custom Beats">Custom Beats</option><option value="Mixing & Mastering">Mixing & Mastering</option><option value="Artist Production">Artist-Produktion</option><option value="Content">YouTube / Content</option><option value="Other">Sonstiges</option></select></label>
+            <label>Betrag (€)<input id="financeAmount" type="number" min="0.01" max="10000000" step="0.01" placeholder="0,00" required></label>
+            <label>Datum<input id="financeDate" type="date" required></label>
+            <label>Zahlungsstatus<select id="financeStatus"><option value="paid">Bezahlt</option><option value="open">Offen</option><option value="partial">Teilweise bezahlt</option></select></label>
+            <label>Bereits bezahlt (€)<input id="financePaidAmount" type="number" min="0" max="10000000" step="0.01" placeholder="0,00"></label>
+            <label>Arbeitszeit (Std.)<input id="financeHours" type="number" min="0" max="10000" step="0.25" placeholder="optional"></label>
+            <label>Direkte Kosten (€)<input id="financeCost" type="number" min="0" max="10000000" step="0.01" placeholder="optional"></label>
+            <label>Fällig am<input id="financeDueDate" type="date"></label>
+            <div class="finance-entry-actions"><button class="primary-button" type="submit">Einnahme speichern <span>＋</span></button><span>Keine echten Bankdaten oder Konten verbunden.</span></div>
+          </form>
+        </section>
+        <section class="finance-panel finance-transactions-panel">
+          <div class="finance-panel-head"><div><span class="eyebrow">TRANSACTION HISTORY</span><h2>Erfasste Einnahmen</h2></div><button class="finance-text-button" id="exportFinanceCsv" type="button">CSV exportieren ↓</button></div>
+          <div class="finance-table-wrap"><table class="finance-table"><thead><tr><th>Auftrag</th><th>Kunde</th><th>Kategorie</th><th>Datum</th><th>Betrag</th><th>Status</th><th></th></tr></thead><tbody id="financeEntries"><tr><td colspan="7" class="finance-empty">Noch keine Einnahmen erfasst.</td></tr></tbody></table></div>
+        </section>
+
+        <div class="finance-tools-grid">
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">INVOICE WORKSPACE</span><h2>Rechnungsentwurf erstellen</h2><p>Entwürfe lokal verwalten und bei Bedarf über den Browser als PDF drucken.</p></div><span class="finance-tag">ENTWURF</span></div>
+            <form id="invoiceForm" class="finance-entry-form finance-tools-form"><label>Rechnungsnummer<input id="invoiceNumber" maxlength="40" placeholder="z. B. SAT-2026-001" required></label><label>Kunde / Empfänger<input id="invoiceCustomer" maxlength="100" required></label><label>Leistung<input id="invoiceService" maxlength="120" required placeholder="z. B. Beat-Lizenz"></label><label>Betrag (€)<input id="invoiceAmount" type="number" min="0.01" step="0.01" required></label><label>Rechnungsdatum<input id="invoiceDate" type="date" required></label><label>Fällig am<input id="invoiceDue" type="date" required></label><div class="finance-entry-actions"><button class="primary-button" type="submit">Entwurf speichern <span>＋</span></button></div></form><div id="invoiceList" class="finance-tool-list"></div>
+          </section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">EXPENSE TRACKER</span><h2>Ausgaben erfassen</h2><p>Erfasse betriebliche Kosten getrennt von privaten Ausgaben.</p></div></div>
+            <form id="expenseForm" class="finance-entry-form finance-tools-form"><label>Bezeichnung<input id="expenseTitle" maxlength="90" required placeholder="z. B. Plugin / Hosting"></label><label>Kategorie<select id="expenseCategory"><option>Software / Plugins</option><option>Hardware</option><option>Marketing</option><option>Studio</option><option>Gebühren</option><option>Sonstiges</option></select></label><label>Betrag (€)<input id="expenseAmount" type="number" min="0.01" step="0.01" required></label><label>Datum<input id="expenseDate" type="date" required></label><label>Wiederkehrend<select id="expenseRecurring"><option value="no">Einmalig</option><option value="yes">Monatlich</option></select></label><div class="finance-entry-actions"><button class="primary-button" type="submit">Ausgabe speichern <span>＋</span></button></div></form><div class="finance-tool-summary"><span>Erfasste Ausgaben gesamt</span><strong id="expenseTotal">0,00 €</strong></div><div id="expenseList" class="finance-tool-list"></div>
+          </section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">TAX RESERVE ESTIMATE</span><h2>Steuern & Rücklagen</h2><p>Nur eine frei einstellbare Planungsreserve – keine Steuerberechnung oder Steuerberatung.</p></div><span class="finance-tag">SCHÄTZUNG</span></div>
+            <form id="taxReserveForm" class="finance-entry-form finance-tools-form"><label>Reserve-Satz (%)<input id="taxReserveRate" type="number" min="0" max="100" step="0.5" placeholder="z. B. 25"></label><label>Berechnungsbasis<select id="taxReserveBasis"><option value="received">Bestätigte Zahlungseingänge</option><option value="revenue">Erfasster Auftragsumsatz</option></select></label><div class="finance-entry-actions"><button class="primary-button" type="submit">Schätzung aktualisieren</button></div></form><div class="finance-tool-summary"><span>Geschätzte Rücklage im aktuellen Monat</span><strong id="taxReserveEstimate">—</strong></div><p class="finance-disclaimer">Der Prozentsatz wird von dir festgelegt. Umsatzsteuer, Einkommensteuer, Rechtsform, Freibeträge und tatsächliche Steuerpflicht werden hier nicht automatisch ermittelt. Vor realen Rücklagenentscheidungen bitte steuerlich prüfen lassen.</p>
+          </section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">LIQUIDITY SAFETY</span><h2>Liquidität & Reichweite</h2><p>Manuelle Planungswerte für deine betriebliche Liquidität.</p></div><span class="finance-tag">MANUELLE DATEN</span></div>
+            <form id="liquidityForm" class="finance-entry-form finance-tools-form"><label>Verfügbare Betriebsmittel (€)<input id="liquidityCash" type="number" min="0" step="0.01" placeholder="Nach separater Rücklagenbildung"></label><label>Monatliche Betriebskosten (€)<input id="liquidityCosts" type="number" min="0" step="0.01" placeholder="z. B. 150"></label><div class="finance-entry-actions"><button class="primary-button" type="submit">Werte speichern</button></div></form><div class="finance-tool-summary"><span>Rechnerische Kostenreichweite</span><strong id="liquidityRunway">—</strong></div><p class="finance-disclaimer">Die Anzeige nutzt nur deine manuellen Angaben. Sie ist keine Bankkontoprüfung und berücksichtigt keine unbekannten Verpflichtungen oder unsicheren Zahlungseingänge.</p>
+          </section>
+        </div>
+
+
+        <div class="finance-intelligence-grid">
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">BUSINESS FORECAST</span><h2>Umsatzprognose</h2></div><span class="finance-tag">SZENARIEN</span></div><div id="fiForecast"></div></section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">FINANCIAL SAFETY</span><h2>Frühwarnsystem</h2></div><span class="finance-tag">MANUELLE BASIS</span></div><div id="fiSafety"></div></section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">PAYMENT CALENDAR</span><h2>Offene Forderungen</h2></div></div><div id="fiCalendar"></div></section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">REVENUE INTELLIGENCE</span><h2>Umsatzmix & Trend</h2></div></div><div id="fiSplit"></div><div id="fiTrend" class="fi-trend-block"></div></section>
+          <section class="finance-panel"><div class="finance-panel-head"><div><span class="eyebrow">PAYMENT FOLLOW-UP</span><h2>Überfällige Zahlungen</h2><p>Erinnerungen werden nur als Entwurf erstellt – kein automatischer Versand.</p></div></div><div id="fiAlerts"></div></section>
+        </div>
+
+        <div class="finance-disclaimer">Zwischenstand: lokale Erfassung und Auswertungen. Noch keine Bankanbindung, automatische Rechnungsstellung, Steuerberatung oder KI-Analyse. Umsatz ist nicht gleich Gewinn; optionale Kosten- und Stundenangaben werden nur ausgewertet, wenn du sie einträgst. Sichere deine Daten regelmäßig per CSV-Export.</div>
+      </section>
+
+
+      <section class="page module-page" id="page-studio">
+        <div class="page-intro"><div class="eyebrow">CREATE · EXPERIMENT · IMPROVE</div><h1>Studio <em>Workspace.</em></h1><p>Ideen, Sessions und dein Producer-Fortschritt an einem Ort.</p></div>
+        <div class="module-grid">
+          <section class="module-panel"><div class="module-head"><div><span class="eyebrow">IDEA VAULT</span><h2>Idee festhalten</h2></div><span class="module-tag">LOCAL</span></div>
+            <form id="studioIdeaForm" class="module-form"><label>Titel<input id="studioIdeaTitle" maxlength="90" required placeholder="z. B. Airy pluck loop"></label><label>Typ<select id="studioIdeaType"><option>Melodie</option><option>Sound Design</option><option>Drums</option><option>Arrangement</option><option>Vocal-Idee</option><option>Sonstiges</option></select></label><label class="wide">Notiz<textarea id="studioIdeaNote" rows="3" maxlength="1200" placeholder="Sound, Stimmung, BPM, nächste Schritte …"></textarea></label><button class="primary-button" type="submit">Idee speichern <span>＋</span></button></form><div id="studioIdeaList" class="module-list"></div>
+          </section>
+          <section class="module-panel"><div class="module-head"><div><span class="eyebrow">SESSION LOG</span><h2>Studio-Session</h2></div></div>
+            <form id="studioSessionForm" class="module-form"><label>Session<input id="studioSessionTitle" maxlength="90" required placeholder="z. B. Beat 014 – Melodie"></label><label>Datum<input id="studioSessionDate" type="date" required></label><label>Dauer (Min.)<input id="studioSessionMinutes" type="number" min="1" max="1440" required placeholder="120"></label><label>Ergebnis<input id="studioSessionResult" maxlength="180" placeholder="Was ist entstanden?"></label><button class="primary-button" type="submit">Session protokollieren <span>＋</span></button></form><div id="studioSessionList" class="module-list"></div>
+          </section>
+        </div>
+        <section class="module-panel"><div class="module-head"><div><span class="eyebrow">PRODUCER DEVELOPMENT</span><h2>24-Wochen Producer-Ausbildung</h2><p>Dein gespeicherter Lernpfad – Fortschritt kannst du selbst markieren.</p></div></div><div class="academy-grid" id="academyGrid"></div></section>
+      </section>
+
+      <section class="page module-page" id="page-beats">
+        <div class="page-intro"><div class="eyebrow">YOUR SOUND · YOUR CATALOG</div><h1>Beat <em>Library.</em></h1><p>Verwalte Beats mit Genre, BPM, Tonart, Status und Preisidee.</p></div>
+        <section class="module-panel"><div class="module-head"><div><span class="eyebrow">CATALOG MANAGEMENT</span><h2>Beat hinzufügen</h2></div><span class="module-tag">LOCAL LIBRARY</span></div>
+          <form id="beatForm" class="module-form module-form-6"><label>Beat-Titel<input id="beatTitle" maxlength="90" required placeholder="Beat name"></label><label>Genre<input id="beatGenre" maxlength="50" placeholder="Melodic Trap"></label><label>BPM<input id="beatBpm" type="number" min="30" max="300" placeholder="130"></label><label>Tonart<input id="beatKey" maxlength="12" placeholder="F# minor"></label><label>Status<select id="beatStatus"><option value="idea">Idee</option><option value="wip">In Arbeit</option><option value="ready">Fertig</option><option value="listed">Online</option><option value="sold">Verkauft</option></select></label><label>Preisidee (€)<input id="beatPrice" type="number" min="0" max="100000" step="0.01" placeholder="optional"></label><button class="primary-button" type="submit">Beat speichern <span>＋</span></button></form>
+          <div class="module-toolbar"><input id="beatSearch" placeholder="Beats durchsuchen …"><select id="beatFilter"><option value="all">Alle Status</option><option value="idea">Idee</option><option value="wip">In Arbeit</option><option value="ready">Fertig</option><option value="listed">Online</option><option value="sold">Verkauft</option></select></div><div id="beatList" class="module-list"></div>
+        </section>
+      </section>
+
+      <section class="page module-page" id="page-content">
+        <div class="page-intro"><div class="eyebrow">PLAN · CREATE · PUBLISH</div><h1>Content <em>Room.</em></h1><p>Plane Content für deine Musik- und Creator-Kanäle.</p></div>
+        <section class="module-panel"><div class="module-head"><div><span class="eyebrow">CONTENT PIPELINE</span><h2>Beitrag planen</h2></div><span class="module-tag">LOCAL PLANNER</span></div>
+          <form id="contentForm" class="module-form module-form-6"><label>Titel<input id="contentTitle" maxlength="100" required placeholder="z. B. Beat snippet #04"></label><label>Plattform<select id="contentPlatform"><option>TikTok</option><option>YouTube</option><option>Instagram</option><option>Twitch</option><option>Discord</option><option>Other</option></select></label><label>Format<select id="contentFormat"><option>Short / Reel</option><option>Longform Video</option><option>Livestream</option><option>Post</option><option>Story</option></select></label><label>Veröffentlichung<input id="contentDate" type="date" required></label><label>Status<select id="contentStatus"><option value="idea">Idee</option><option value="production">In Produktion</option><option value="ready">Bereit</option><option value="published">Veröffentlicht</option></select></label><label>Notiz<input id="contentNote" maxlength="180" placeholder="Hook, CTA, Link …"></label><button class="primary-button" type="submit">Content speichern <span>＋</span></button></form><div class="module-toolbar"><select id="contentPlatformFilter"><option value="all">Alle Plattformen</option><option>TikTok</option><option>YouTube</option><option>Instagram</option><option>Twitch</option><option>Discord</option><option>Other</option></select><select id="contentStatusFilter"><option value="all">Alle Status</option><option value="idea">Idee</option><option value="production">In Produktion</option><option value="ready">Bereit</option><option value="published">Veröffentlicht</option></select></div><div id="contentList" class="module-list"></div>
+        </section>
+      </section>
+
+      <section class="page module-page" id="page-lyrics">
+        <div class="page-intro"><div class="eyebrow">WRITE · EXPERIMENT · FIND YOUR VOICE</div><h1>Lyrics <em>Room.</em></h1><p>Songideen, Hooks und Verse – dein Text bleibt deiner. Speichere Varianten, ohne Originale zu überschreiben.</p></div>
+        <div class="module-grid lyrics-grid"><section class="module-panel"><div class="module-head"><div><span class="eyebrow">SONG PROJECT</span><h2>Neuen Song anlegen</h2></div></div>
+          <form id="lyricsMetaForm" class="module-form"><label>Songtitel<input id="lyricsTitle" maxlength="90" required placeholder="Untitled 01"></label><label>BPM<input id="lyricsBpm" type="number" min="30" max="300" placeholder="optional"></label><label>Tonart<input id="lyricsKey" maxlength="12" placeholder="optional"></label><button class="primary-button" type="submit">Song anlegen <span>＋</span></button></form><div id="lyricsSongList" class="module-list"></div>
+        </section><section class="module-panel"><div class="module-head"><div><span class="eyebrow">WRITING DESK</span><h2 id="lyricsEditorTitle">Wähle einen Song</h2></div><span class="module-tag">AUTOSAVE</span></div>
+          <div id="lyricsEditor" class="lyrics-editor"><p class="module-empty">Lege links einen Song an oder wähle einen bestehenden aus.</p></div>
+        </section></div>
+      </section>
+
+      <section class="page module-page" id="page-upgrades">
+        <div class="page-intro"><div class="eyebrow">TOOLS · INVESTMENTS · LEVERAGE</div><h1>Upgrade <em>Center.</em></h1><p>Bewerte mögliche Upgrades nach Nutzen, Kosten und kostenlosen Alternativen. Noch keine Käufe oder externen Verbindungen.</p></div>
+        <section class="module-panel"><div class="module-head"><div><span class="eyebrow">UPGRADE BACKLOG</span><h2>Upgrade-Kandidaten</h2><p>Priorität ist zunächst eine manuelle Einschätzung; Ares kann sie später anhand echter Nutzungsdaten bewerten.</p></div></div>
+          <form id="upgradeForm" class="module-form module-form-6"><label>Upgrade<input id="upgradeTitle" maxlength="90" required placeholder="z. B. Studio-Monitoring"></label><label>Kategorie<select id="upgradeCategory"><option>Hardware</option><option>Software</option><option>Plugins</option><option>Marketing</option><option>Studio</option><option>Sonstiges</option></select></label><label>Einmalkosten (€)<input id="upgradeCost" type="number" min="0" max="1000000" step="0.01" placeholder="0"></label><label>Monatlich (€)<input id="upgradeMonthly" type="number" min="0" max="100000" step="0.01" placeholder="0"></label><label>Nutzen<input id="upgradeBenefit" maxlength="180" placeholder="Was verbessert es?"></label><label>Kostenlose Alternative<input id="upgradeFree" maxlength="180" placeholder="z. B. vorhandenes Tool"></label><button class="primary-button" type="submit">Kandidat speichern <span>＋</span></button></form><div id="upgradeList" class="module-list"></div>
+        </section>
+      </section>
+
+      <section class="page" id="page-projects"><div class="page-intro"><div class="eyebrow">KEEP THE BIG PICTURE</div><h1>Projects & <em>Priorities.</em></h1><p>Decide what matters. Then make it happen.</p></div><div class="project-manager glass-card">
+  <div class="project-manager-head"><div><span class="card-kicker">PERSONAL WORKSPACE</span><h2>Priority board</h2><p>Keep your next steps visible. Your entries stay on this device.</p></div><span class="tiny-tag">LOCAL MODE</span></div>
+  <form id="taskForm" class="task-form"><input id="taskInput" maxlength="100" placeholder="Add a task or milestone..." required><select id="taskPriority" aria-label="Priority"><option value="urgent">Dringend</option><option value="important">Wichtig</option><option value="provisional" selected>Vorläufig</option><option value="indefinite">Unbefristet</option></select><button class="primary-button" type="submit">Add task <span>＋</span></button></form>
+  <div id="taskList" class="task-list" aria-live="polite"></div>
+  <div class="task-footnote">Tasks are saved locally in this browser. Cloud sync and ARES-assisted planning will follow in a later phase.</div>
+</div></section>
+
+      <section class="page" id="page-settings"><div class="page-intro"><div class="eyebrow">MAKE IT YOURS</div><h1>System <em>Settings.</em></h1><p>Control your workspace and how ARES works with you.</p></div><div class="settings-list glass-card"><div class="setting-row"><div><b>ARES notifications</b><small>Allow important updates from your assistant.</small></div><label class="switch"><input type="checkbox" id="notifyToggle"><span></span></label></div><div class="setting-row"><div><b>Focus reminders</b><small>Dezente Hinweise nach 5, 15 und 30 Minuten Inaktivität, danach stündlich. Während laufender Focus-Sessions pausiert.</small></div><label class="switch"><input type="checkbox" id="focusReminderToggle" checked><span></span></label></div><div class="setting-row"><div><b>Reduced motion</b><small>Keep transitions subtle and comfortable.</small></div><label class="switch"><input type="checkbox" id="motionToggle"><span></span></label></div><div class="setting-row"><div><b>Workspace appearance</b><small>Dark atmospheric theme.</small></div><span class="setting-value">NOCTURNE <span>✦</span></span></div><div class="setting-row"><div><b>Offline workspace</b><small>Local-first capabilities will be added in a later phase.</small></div><span class="setting-value">PLANNED</span></div></div></section>
+    </main>
+  </div>
+
+  <div class="ares-panel" id="aresPanel" aria-hidden="true">
+    <div class="ares-panel-top" id="aresDrag"><div class="panel-brand"><span class="panel-helmet"><svg class="helmet-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 31c0-12 6-21 15-24 1 5 5 8 11 10l-2 7 5 5-7 2-2 7H16l-2-5-4-2Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M22 8c-1 8-5 13-11 16M16 38h20M23 26h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><div><b>ARES</b><small>CREATIVE INTELLIGENCE</small></div></div><div class="panel-controls"><span class="online-label">ONLINE</span><button id="closeAres" aria-label="ARES schließen">×</button></div></div>
+    <div class="ares-panel-body"><div class="ares-greeting"><span class="ares-large-helmet"><svg class="helmet-svg" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 31c0-12 6-21 15-24 1 5 5 8 11 10l-2 7 5 5-7 2-2 7H16l-2-5-4-2Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M22 8c-1 8-5 13-11 16M16 38h20M23 26h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><div class="eyebrow">SYSTEM READY</div><h2>At your<br><em>command.</em></h2><p>I'm ARES. Your creative workspace assistant. This prototype gives us the interface foundation — intelligent features will be connected in later development.</p></div><div class="suggestion-label">QUICK PROMPTS</div><button class="prompt-chip" data-prompt="Help me prioritize my current projects.">↗ Help me prioritize my projects</button><button class="prompt-chip" data-prompt="Help me plan a productive studio session.">♫ Plan a studio session</button><button class="prompt-chip" data-prompt="Compare my next creative opportunities.">◇ Compare my next opportunities</button><div class="ares-chat-log" id="chatLog"></div><form class="ares-input-row" id="aresForm"><input id="aresInput" placeholder="Message ARES..." autocomplete="off"><button aria-label="Nachricht senden">↑</button></form><small class="prototype-note">ARES PROTOTYPE · CONNECTED FEATURES COMING LATER</small></div>
+  </div>
+  <button class="ares-notice" id="aresNotice" type="button" aria-live="polite"></button>\n  
+  <div class="cc-welcome-backdrop" id="ccWelcomeBackdrop" aria-hidden="true">
+    <section class="cc-welcome-window" role="dialog" aria-modal="true" aria-labelledby="ccWelcomeTitle">
+      <div class="cc-window-top"><div><span class="cc-kicker">SATYRN PRODUCTIONS HQ</span><h2 id="ccWelcomeTitle">Welcome <em>back.</em></h2><p id="ccWelcomeDate"></p></div><span class="cc-preview-tag">PREVIEW · BEISPIELDATEN</span></div>
+      <div class="cc-welcome-grid">
+        <article class="cc-panel cc-panel-feature cc-focus-panel"><span class="cc-kicker">01 · CURRENT FOCUS</span><h3>HQ Dashboard finalisieren</h3><p>Die Executive-Home-Ansicht abschließen und die neue Command-Center-Interaktion gemeinsam testen.</p><div class="cc-inline-meta"><span>Aktuelle Priorität</span><strong>Design-Review</strong></div><div class="cc-inline-meta"><span>Nächster Meilenstein</span><strong>Preview testen</strong></div></article>
+        <article class="cc-panel cc-panel-feature cc-progress-panel"><span class="cc-kicker">02 · TODAY'S PROGRESS</span><div class="cc-progress-number">50<span>%</span></div><p>3 von 5 Aufgaben · 1 von 2 Arbeitsblöcken</p><div class="cc-progress-track"><i></i></div><div class="cc-progress-foot"><span>3 / 6 eindeutige Arbeitseinheiten</span><strong>In Bewegung</strong></div><small>Verknüpfte Aufgabe und Arbeitsblock werden nur einmal gezählt.</small></article>
+        <article class="cc-panel cc-panel-compact"><span class="cc-kicker">03 · WELCOME BACK</span><h3>Schön, dass du da bist.</h3><p>Dein HQ ist bereit. Heute steht der gemeinsame Preview-Check im Mittelpunkt.</p></article>
+        <article class="cc-panel cc-panel-compact"><span class="cc-kicker">04 · FINANCIAL SNAPSHOT</span><h3>Finanzübersicht</h3><p>Gemeinsamer Sparstand, Einnahmen und Ausgaben erscheinen hier, sobald die Daten im HQ gepflegt sind.</p><span class="cc-data-note">Noch keine Finanzdaten hinterlegt</span></article>
+        <article class="cc-panel cc-panel-compact"><span class="cc-kicker">05 · NEXT UP</span><h3>Dein nächster Schritt</h3><p>Command Center Preview gemeinsam ausprobieren. Termine, Deadlines und Life Experiences werden hier gebündelt.</p><span class="cc-data-note">Keine weiteren Einträge in dieser Demo</span></article>
+      </div>
+      <div class="cc-welcome-footer"><span>Ein Überblick. Ein klarer nächster Schritt.</span><button class="cc-primary" id="ccWelcomeDismiss" type="button">Zum Dashboard <span>→</span></button></div>
+    </section>
+  </div>
+
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js?v=91"></script>
+  <script src="important.js?v=99"></script>
+  <script src="focus-demo.js?v=2"></script>
+  <script src="focus-mode.js?v=11"></script>
+  <script src="focus-reminders.js?v=2"></script>
+  <script src="modules.js"></script>
+  <script src="finance-tools.js"></script>
+  <script src="finance-intelligence.js"></script>
+<script src="hq-tools.js?v=92"></script>
+<script src="command-center.js"></script>
+  <script src="calendar.js?v=1"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 # Calendar — Konzept und Entscheidungsprotokoll
 
 ## Status
-Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgelegt; weitere Details werden schrittweise gemeinsam entschieden. Die Calendar-Seite ist im aktuellen Stand noch ein Platzhalter und wird erst nach Abschluss der Planung implementiert.
+Die Calendar-Seite ist in der offiziellen GitHub-Pages-Preview implementiert. Die vereinbarten seitenbezogenen Funktionen und Interaktionen sind in die bestehende SATYRN-HQ-App-Shell integriert. Globale Standards und spätere mobile Optimierungen bleiben wie vereinbart der zentralen Abschlussphase bzw. der späteren Mobile-Phase vorbehalten.
 
 ## Abgrenzung
 - Dieses Dokument beschreibt ausschließlich die Calendar-Seite.
@@ -632,3 +632,15 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Tagesfenster öffnet sich beim Anklicken eines Tages als **großes, großzügig gestaltetes Pop-up (Variante C)**, das ausreichend Platz für die Termine und Ereignisse des ausgewählten Tages bietet.
 - Das Pop-up erscheint zentriert im Kalenderbereich; der Kalender bleibt im Hintergrund sichtbar und wird nicht verschoben.
 - 2026-11-09: Variante C für die Größe des Tages-Pop-ups bestätigt.
+
+
+## Implementierungsstand der offiziellen Preview — 2026-11-09
+
+- Die Calendar-Seite ist in `index.html` als eigenständiger Seitenbereich innerhalb der vorhandenen `.main-area` eingebunden. Die gemeinsame Headbar und beide Sidebars wurden nicht dupliziert oder seitenspezifisch verändert.
+- Die Monatsansicht, Monatsnavigation, Schaltfläche „Aktuelles Datum“, Tagesauswahl, heutige Markierung, Tagesfenster, Termin-Detailfenster und Erstellungs-/Bearbeitungsformular sind integriert.
+- Normale Termine und mehrtägige Termine werden getrennt dargestellt. Mehrtägige Termine bleiben als Wochenbalken sichtbar; normale Termine werden chronologisch sortiert und auf drei sichtbare Einträge pro Tag begrenzt.
+- Prioritätsfarben, Prioritätsfilter, Titelsuche, Überschneidungsmarkierung und die Wiederholungsmuster wöchentlich, monatlich und jährlich sind integriert.
+- Erstellen, Bearbeiten, Löschen, Einzelvorkommen und Serienaktionen sowie Bestätigungen bei ungespeicherten Änderungen sind integriert.
+- Termine werden derzeit lokal im Browser gespeichert. Es besteht keine externe Kalenderverbindung und keine zentrale Synchronisierung.
+- Die seitenspezifische Titelsuche unterstützt Teiltreffer und ignoriert Groß-/Kleinschreibung. Die weitergehende Normalisierung deutscher Schreibweisen und Tippfehlertoleranz bleibt Teil des globalen Suchstandards in `GLOBAL_FEATURES.md` und wird erst in der zentralen Abschlussphase vereinheitlicht.
+- Mobile-spezifische Calendar-Anpassungen bleiben ausdrücklich zurückgestellt.

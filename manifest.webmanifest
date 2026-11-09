@@ -1,0 +1,11 @@
+{
+  "name": "SATYRN PRODUCTIONS HQ",
+  "short_name": "SATYRN HQ",
+  "description": "Your creative headquarters.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0e0d",
+  "theme_color": "#0b0e0d",
+  "orientation": "any"
+}
