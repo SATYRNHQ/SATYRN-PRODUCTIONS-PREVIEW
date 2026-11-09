@@ -602,3 +602,8 @@ The following search behaviors are intended as a shared standard for every page 
 - Wird bei geöffnetem Tagesfenster über die Monatsnavigation der Monat gewechselt, schließt sich das Tagesfenster.
 - Die Kalenderansicht wechselt zum gewählten Monat; es ist anschließend kein Tag ausgewählt.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Klick innerhalb des Kalenders außerhalb des Tagesfensters
+- Wird bei geöffnetem Tagesfenster innerhalb des Kalenderbereichs außerhalb des Tagesfensters geklickt, schließt sich das Tagesfenster und die bisherige Tagesauswahl wird aufgehoben.
+- 2026-11-09: Variante A bestätigt.
