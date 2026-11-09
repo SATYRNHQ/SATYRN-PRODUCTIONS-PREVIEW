@@ -520,3 +520,9 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Farbgestaltung der Tageszahlen
 - Gewählt wurde eine **Kombination aus Variante B und C**: Die Tageszahlen des aktuell angezeigten Monats bleiben etwas kräftiger und klarer lesbar; Tage aus dem vorherigen bzw. nächsten Monat erscheinen dezenter. Der heutige Tag erhält zusätzlich eine dezente farbige Hervorhebung.
 - 2026-11-09: Kombination aus B und C für die Tageszahlen bestätigt.
+
+
+## Ergänzung — Hervorhebung des heutigen Datums
+- Für den heutigen Tag wird **Variante A: ein dezenter farbiger Kreis hinter der Tageszahl** verwendet.
+- Die Tageszahl sitzt **exakt horizontal und vertikal zentriert** im Kreis; der Kreis ist gleichmäßig um die Zahl ausgerichtet.
+- 2026-11-09: Farbiger Kreis (Variante A) mit exakt mittig zentrierter Tageszahl bestätigt.
