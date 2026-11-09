@@ -371,3 +371,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Each notification retains its own icon, message, and automatic dismissal duration (success: approximately 3 seconds; error: 5 seconds).
 
 - 2026-11-09: Confirmed that success and error notifications share one vertically stacked bottom-right area.
+
+
+### Notification animations
+- Calendar success and error notifications use a **subtle, short animation** when appearing and disappearing.
+- Keep the animation understated and consistent for both notification types; it must not delay the notification's message or automatic dismissal.
+
+- 2026-11-09: Confirmed subtle, short entrance and exit animations for Calendar success and error notifications.
