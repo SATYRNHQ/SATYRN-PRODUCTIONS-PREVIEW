@@ -436,3 +436,10 @@ The following search behaviors are intended as a shared standard for every page 
 
 ### Horizontal scrollbar visibility
 - The horizontal scrollbar appears only when needed: it is shown when the desktop calendar area overflows horizontally because the seven weekday columns cannot fit clearly; otherwise it remains hidden.
+
+
+## Ergänzung — lange Termintitel in der Monatsansicht
+- Wenn ein Termintitel nicht vollständig in den farbigen Terminbalken passt, wird er am Ende abgeschnitten und mit **„…“** gekennzeichnet (Variante A).
+- Die Balkenhöhe bleibt dadurch kompakt und einheitlich; der Kalender wird nicht durch mehrzeilige Titel aufgeweitet.
+
+- 2026-11-09: Für zu lange Termintitel in der Monatsansicht wurde das Abschneiden mit Auslassungszeichen („…“) gewählt.
