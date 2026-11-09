@@ -552,3 +552,9 @@ The following search behaviors are intended as a shared standard for every page 
 - Diese Markierung unterscheidet sich von der Heute-Markierung: Heute behält seinen Akzentfarben-Kreis hinter der Tageszahl.
 - Beide Markierungen können gleichzeitig sichtbar sein, wenn der heutige Tag ausgewählt ist.
 - 2026-11-09: Variante B bestätigt.
+
+
+## Ergänzung — Farbe des ausgewählten Tages
+- Der Hintergrund der ausgewählten Tageszelle verwendet ebenfalls die **aktive Akzentfarbe**, jedoch mit deutlich geringerer Deckkraft als der Heute-Kreis.
+- Dadurch bleibt die Auswahl dezent und unterscheidbar von der Heute-Markierung.
+- 2026-11-09: Bestätigt.
