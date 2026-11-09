@@ -443,3 +443,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Die Balkenhöhe bleibt dadurch kompakt und einheitlich; der Kalender wird nicht durch mehrzeilige Titel aufgeweitet.
 
 - 2026-11-09: Für zu lange Termintitel in der Monatsansicht wurde das Abschneiden mit Auslassungszeichen („…“) gewählt.
+
+
+## Ergänzung — vollständiger Titel bei langen Terminnamen
+- Beim Darüberfahren mit der Maus wird **kein zusätzlicher Tooltip** eingeblendet.
+- In der Monatsansicht bleibt ein zu langer Titel mit „…“ abgeschnitten.
+- Beim Anklicken des Termineintrags öffnet sich wie festgelegt das Termin-Detail-Pop-up; dort wird der **vollständige Titel** angezeigt.
+
+- 2026-11-09: Kein Tooltip für abgeschnittene Termintitel. Der vollständige Titel wird beim Öffnen des Termin-Detail-Pop-ups angezeigt.
