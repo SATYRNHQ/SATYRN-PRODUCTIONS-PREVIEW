@@ -408,3 +408,7 @@ The following search behaviors are intended as a shared standard for every page 
 - This is desktop behavior; mobile-specific adaptation remains deferred.
 
 - 2026-11-09: Confirmed horizontal scrolling for the Calendar when a desktop window is too narrow to show all seven weekday columns clearly.
+
+
+### Horizontal scrollbar visibility
+- The horizontal scrollbar appears only when needed: it is shown when the desktop calendar area overflows horizontally because the seven weekday columns cannot fit clearly; otherwise it remains hidden.
