@@ -1,5 +1,5 @@
-const CACHE_NAME = 'satyrn-hq-shell-v114';
-const APP_SHELL = ['./','./index.html','./styles.css?v=98','./focus-mode.css?v=6','./focus-reminders.css?v=2','./calendar.css?v=3','./calendar.js?v=3','./app.js?v=91','./important.js?v=99','./focus-demo.js?v=2','./focus-mode.js?v=11','./focus-reminders.js?v=2','./modules.js','./finance-tools.js','./finance-intelligence.js','./hq-tools.js?v=92','./command-center.js','./manifest.webmanifest'];
+const CACHE_NAME = 'satyrn-hq-shell-v115';
+const APP_SHELL = ['./','./index.html','./styles.css?v=98','./focus-mode.css?v=6','./focus-reminders.css?v=2','./calendar.css?v=4','./calendar.js?v=4','./app.js?v=91','./important.js?v=99','./focus-demo.js?v=2','./focus-mode.js?v=11','./focus-reminders.js?v=2','./modules.js','./finance-tools.js','./finance-intelligence.js','./hq-tools.js?v=92','./command-center.js','./manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(APP_SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
