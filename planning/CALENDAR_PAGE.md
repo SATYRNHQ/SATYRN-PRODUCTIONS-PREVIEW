@@ -596,3 +596,9 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Wechsel des Tages bei geöffnetem Tagesfenster
 - Wird bei geöffnetem Tagesfenster ein anderer Tag im Kalender angeklickt, schließt sich das bisherige Tagesfenster und das Tagesfenster des neu angeklickten Tages öffnet sich.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Monatswechsel bei geöffnetem Tagesfenster
+- Wird bei geöffnetem Tagesfenster über die Monatsnavigation der Monat gewechselt, schließt sich das Tagesfenster.
+- Die Kalenderansicht wechselt zum gewählten Monat; es ist anschließend kein Tag ausgewählt.
+- 2026-11-09: Variante A bestätigt.
