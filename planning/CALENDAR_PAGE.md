@@ -485,3 +485,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — vertikale Textausrichtung in normalen Terminbalken
 - Der Termintitel wird **vertikal mittig** im normalen Terminbalken ausgerichtet (Variante A).
 - 2026-11-09: Vertikale Mittelausrichtung des Titels (Variante A) gewählt.
+
+
+## Ergänzung — vertikaler Innenabstand normaler Terminbalken
+- Normale Terminbalken erhalten **Variante B: einen mittleren vertikalen Innenabstand**. Der Titel bleibt vertikal mittig ausgerichtet; oberhalb und unterhalb des Textes ist etwas Luft, ohne dass die Balken unnötig hoch wirken.
+- 2026-11-09: Mittlerer vertikaler Innenabstand (Variante B) gewählt.
