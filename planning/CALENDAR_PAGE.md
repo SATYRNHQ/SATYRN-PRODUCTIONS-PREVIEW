@@ -451,3 +451,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Beim Anklicken des Termineintrags öffnet sich wie festgelegt das Termin-Detail-Pop-up; dort wird der **vollständige Titel** angezeigt.
 
 - 2026-11-09: Kein Tooltip für abgeschnittene Termintitel. Der vollständige Titel wird beim Öffnen des Termin-Detail-Pop-ups angezeigt.
+
+
+## Ergänzung — Breite normaler Terminbalken
+- Alle normalen Terminbalken innerhalb eines Tagesfeldes erhalten **dieselbe einheitliche volle Breite** (Variante A), unabhängig von der Länge des Termintitels.
+- Die Titel werden innerhalb dieser festen Balkenbreite dargestellt und bei Bedarf gemäß der bestehenden Regel mit „…“ abgeschnitten.
+
+- 2026-11-09: Einheitliche volle Breite für alle normalen Terminbalken innerhalb eines Tagesfeldes bestätigt.
