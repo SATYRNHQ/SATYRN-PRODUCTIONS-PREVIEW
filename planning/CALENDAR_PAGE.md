@@ -625,3 +625,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Tagesfenster erscheint beim Öffnen immer **zentriert im Kalenderbereich** (Variante A).
 - Seine Position ist unabhängig davon, welcher Tag angeklickt wurde; es wird nicht neben dem angeklickten Datum positioniert.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Größe des Tages-Pop-ups
+
+- Das Tagesfenster öffnet sich beim Anklicken eines Tages als **großes, großzügig gestaltetes Pop-up (Variante C)**, das ausreichend Platz für die Termine und Ereignisse des ausgewählten Tages bietet.
+- Das Pop-up erscheint zentriert im Kalenderbereich; der Kalender bleibt im Hintergrund sichtbar und wird nicht verschoben.
+- 2026-11-09: Variante C für die Größe des Tages-Pop-ups bestätigt.
