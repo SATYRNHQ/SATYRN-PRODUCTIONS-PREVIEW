@@ -32,6 +32,13 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Samstage und Sonntage werden optisch exakt wie die übrigen Wochentage behandelt: keine abweichende Hintergrundfarbe und keine besondere Hervorhebung. Termine und Prioritäten werden unabhängig vom Wochentag gleich dargestellt.
 - Beim Öffnen der Calendar-Seite wird immer automatisch der **aktuelle Monat** angezeigt; ein zuvor manuell aufgerufener anderer Monat wird nicht als Startmonat beibehalten.
 
+## Bestätigte Entscheidungen — obere Kalenderleiste
+- Die obere Kalenderleiste folgt **Variante C**: Der Monatstitel steht links; Monatsnavigation (Zurück/Vor), die Schaltfläche **„Aktuelles Datum“** und das Plus-Symbol stehen rechts in derselben oberen Zeile.
+- Direkt darunter befindet sich eine eigene Such- und Filterleiste: zuerst das Suchfeld, darunter die Prioritätsfilter.
+- Die Prioritätsfilter bleiben direkt sichtbar und verwenden die bereits festgelegten fünf Kategorien.
+- Unter der Such- und Filterleiste beginnt das Kalender-Raster. Die Wochentagskürzel **Mo, Di, Mi, Do, Fr, Sa, So** stehen jeweils exakt über der zugehörigen Datumsspalte; die Datumszahlen sind innerhalb ihrer Spalten ausgerichtet.
+- Die vereinbarte Anordnung ist bewusst klar getrennt: Navigation oben, Suche und Prioritäten darunter, Monatsraster anschließend.
+
 ## Bestätigte Entscheidungen — Tagesfenster
 - Ein Klick auf einen Tag in der Monatsansicht öffnet ein kleines Fenster mit den Terminen und Ereignissen dieses Tages.
 - Innerhalb dieses Fensters können Einträge hinzugefügt werden.
