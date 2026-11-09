@@ -342,3 +342,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Keep the visual style consistent with the success notifications while making the error state clearly distinguishable.
 
 - 2026-11-09: Confirmed that Calendar error notifications appear bottom-right with a subtle red warning icon.
+
+
+### Error notification duration
+- Calendar error notifications remain visible for **5 seconds** and then disappear automatically.
+- This is slightly longer than the 3-second success notifications so the user has more time to read the error.
+
+- 2026-11-09: Confirmed automatic dismissal of Calendar error notifications after 5 seconds.
