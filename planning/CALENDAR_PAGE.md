@@ -619,3 +619,9 @@ The following search behaviors are intended as a shared standard for every page 
 - Das Tagesfenster erhält beim Öffnen und Schließen eine **kleine, dezente Animation** mit sanftem Einblenden und leichtem Bewegungseffekt.
 - Die Animation bleibt kurz und unaufdringlich und beeinträchtigt nicht die Bedienbarkeit.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Position des Tagesfensters
+- Das Tagesfenster erscheint beim Öffnen immer **zentriert im Kalenderbereich** (Variante A).
+- Seine Position ist unabhängig davon, welcher Tag angeklickt wurde; es wird nicht neben dem angeklickten Datum positioniert.
+- 2026-11-09: Variante A bestätigt.
