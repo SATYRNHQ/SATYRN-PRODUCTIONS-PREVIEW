@@ -400,3 +400,11 @@ The following search behaviors are intended as a shared standard for every page 
 - This decision applies to desktop layouts only; mobile-specific adaptation remains deferred to the later mobile phase.
 
 - 2026-11-09: Confirmed that the Calendar layout should flexibly adapt to available desktop window space.
+
+
+### Narrow desktop window behavior
+- If the available desktop window becomes too narrow to display the seven calendar columns clearly, provide **horizontal scrolling** for the calendar area.
+- Preserve the seven-column month grid and its readability rather than squeezing the weekday columns too tightly.
+- This is desktop behavior; mobile-specific adaptation remains deferred.
+
+- 2026-11-09: Confirmed horizontal scrolling for the Calendar when a desktop window is too narrow to show all seven weekday columns clearly.
