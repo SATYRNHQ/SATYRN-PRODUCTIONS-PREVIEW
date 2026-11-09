@@ -480,3 +480,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Textausrichtung in normalen Terminbalken
 - Der Titel in normalen Terminbalken ist **Variante A: linksbündig mit etwas Innenabstand** ausgerichtet.
 - 2026-11-09: Linksbündige Textausrichtung mit Innenabstand (Variante A) gewählt.
+
+
+## Ergänzung — vertikale Textausrichtung in normalen Terminbalken
+- Der Termintitel wird **vertikal mittig** im normalen Terminbalken ausgerichtet (Variante A).
+- 2026-11-09: Vertikale Mittelausrichtung des Titels (Variante A) gewählt.
