@@ -505,3 +505,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Position der Tageszahl
 - Die Tageszahl steht **Variante C: oben mittig** in der Tageszelle.
 - 2026-11-09: Oben mittige Position (Variante C) gewählt.
+
+
+## Ergänzung — Schriftgröße der Tageszahl
+- Die Tageszahl erhält **Variante B: eine mittlere, gut lesbare Schriftgröße**. Die Zahl bleibt oben mittig positioniert und klar erkennbar, ohne übermäßig hervorzustechen.
+- 2026-11-09: Mittlere Schriftgröße (Variante B) gewählt.
