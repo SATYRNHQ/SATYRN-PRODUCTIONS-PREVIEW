@@ -84,7 +84,18 @@ assert.ok(important.includes('BEISPIEL') && important.includes('getAvailableLink
 assert.ok(important.includes('building-2') && important.includes('handshake') && important.includes('landmark') && important.includes('telescope') && important.includes('layers'), 'Important category icons are incomplete');
 assert.ok(important.includes('requestAnimationFrame') && important.includes('replaceWith(nextCard)'), 'Important card expand/collapse animation is missing');
 assert.ok(important.includes('getAvailableLinks().find'), 'Important links must show current target names');
-assert.ok(sw.includes('satyrn-hq-shell-v112'), 'Service worker cache version was not incremented');
-assert.ok(html.includes('id="calGrid"') && html.includes('calendar.js?v=1'), 'Calendar page implementation is missing');
+assert.ok(sw.includes("satyrn-hq-shell-v113"), 'Service worker cache version must match the current shell release');
+assert.ok(html.includes('id="calGrid"') && html.includes('calendar.js?v=2') && html.includes('calendar.css?v=2'), 'Calendar page implementation or asset version is missing');
+assert.ok(sw.includes("'./calendar.js?v=2'") && sw.includes("'./calendar.css?v=2'"), 'Service worker must precache the current Calendar assets');
+assert.ok((html.match(/id="page-calendar"/g) || []).length === 1, 'Calendar page must exist exactly once');
+assert.ok((html.match(/calendar\\.js\\?v=2/g) || []).length === 1, 'Calendar JavaScript must be included exactly once');
+assert.ok((html.match(/calendar\\.css\\?v=2/g) || []).length === 1, 'Calendar stylesheet must be included exactly once');
+
+const calendar = read('calendar.js');
+for (const className of ['cal-day-modal', 'cal-detail-modal', 'cal-form-modal']) {
+  assert.ok(calendar.includes('class="cal-modal ' + className + '"'), 'Calendar modal class is missing: ' + className);
+  assert.ok(calendarCss.includes('.' + className), 'Calendar modal styles are missing: ' + className);
+}
+assert.ok(calendar.includes("ev.key==='Enter'||ev.key===' '") && calendar.includes("month=new Date(d.getFullYear(),d.getMonth(),1)"), 'Keyboard day selection must also switch to adjacent months');
 
 console.log('SATYRN HQ validation passed: IDs, assets, cache versions, typography, navigation, Focus and Important invariants.');
