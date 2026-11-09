@@ -585,3 +585,9 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — erneuter Klick auf den ausgewählten Tag
 - Wird der bereits ausgewählte Tag erneut angeklickt, bleibt er ausgewählt (Variante A). Die Auswahl wird dadurch nicht aufgehoben.
 - 2026-11-09: Bestätigt.
+
+
+## Ergänzung — Klick auf Tage außerhalb des angezeigten Monats
+- Wird im Monatsraster ein sichtbarer Tag aus dem vorherigen oder nächsten Monat angeklickt, wechselt die Monatsansicht direkt in den Monat dieses Datums.
+- Der angeklickte Tag wird anschließend als ausgewählter Tag markiert und sein Tagesfenster geöffnet.
+- 2026-11-09: Variante A bestätigt.
