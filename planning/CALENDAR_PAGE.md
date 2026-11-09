@@ -564,3 +564,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Es kann immer nur **ein Tag gleichzeitig** ausgewählt sein.
 - Wird ein anderer Tag angeklickt, wechselt die Auswahl direkt auf diesen Tag; die vorherige Tageszelle verliert ihre Auswahlmarkierung.
 - 2026-11-09: Bestätigt.
+
+
+## Ergänzung — Aufheben der Tagesauswahl
+
+- Die Markierung des ausgewählten Tages wird aufgehoben, wenn außerhalb des Kalenderbereichs geklickt wird.
+- Ein Klick auf einen anderen Tag innerhalb des Kalenders verschiebt die Auswahl direkt auf diesen Tag; es bleibt weiterhin höchstens ein Tag ausgewählt.
+- Die Heute-Markierung (Akzentfarben-Kreis hinter der Tageszahl) bleibt unabhängig von der Auswahl bestehen.
+- 2026-11-09: Bestätigt.
