@@ -356,3 +356,10 @@ The following search behaviors are intended as a shared standard for every page 
 - They remain informational; the user can correct the issue and initiate the action again through the normal interface.
 
 - 2026-11-09: Confirmed that Calendar error notifications do not offer a retry button.
+
+
+### Multiple simultaneous error notifications
+- If multiple Calendar errors occur at the same time, their notifications are **stacked vertically** in the bottom-right notification area.
+- Notifications must not overlap or cover one another; each error remains independently readable and follows the established 5-second automatic dismissal behavior.
+
+- 2026-11-09: Confirmed that simultaneous Calendar error notifications stack vertically without overlapping.
