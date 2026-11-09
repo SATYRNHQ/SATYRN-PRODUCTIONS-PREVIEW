@@ -475,3 +475,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Vertikaler Abstand zwischen normalen Terminbalken
 - Zwischen mehreren normalen Terminbalken gilt **Variante B: mittlerer vertikaler Abstand**. Die Einträge bleiben kompakt, sind aber klar voneinander getrennt.
 - 2026-11-09: Mittlerer vertikaler Abstand (Variante B) gewählt.
+
+
+## Ergänzung — Textausrichtung in normalen Terminbalken
+- Der Titel in normalen Terminbalken ist **Variante A: linksbündig mit etwas Innenabstand** ausgerichtet.
+- 2026-11-09: Linksbündige Textausrichtung mit Innenabstand (Variante A) gewählt.
