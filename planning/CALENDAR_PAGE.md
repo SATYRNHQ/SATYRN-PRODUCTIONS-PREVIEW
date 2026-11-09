@@ -458,3 +458,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Die Titel werden innerhalb dieser festen Balkenbreite dargestellt und bei Bedarf gemäß der bestehenden Regel mit „…“ abgeschnitten.
 
 - 2026-11-09: Einheitliche volle Breite für alle normalen Terminbalken innerhalb eines Tagesfeldes bestätigt.
+
+
+## Ergänzung — seitlicher Randabstand normaler Terminbalken
+- Normale Terminbalken erhalten **Variante B: einen mittleren, gut sichtbaren Abstand** zum linken und rechten Rand des Tagesfeldes.
+- Alle Balken bleiben innerhalb eines Tagesfeldes gleich breit und verwenden denselben seitlichen Abstand.
+
+- 2026-11-09: Mittlerer seitlicher Randabstand (Variante B) für normale Terminbalken gewählt.
