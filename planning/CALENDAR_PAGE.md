@@ -510,3 +510,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Schriftgröße der Tageszahl
 - Die Tageszahl erhält **Variante B: eine mittlere, gut lesbare Schriftgröße**. Die Zahl bleibt oben mittig positioniert und klar erkennbar, ohne übermäßig hervorzustechen.
 - 2026-11-09: Mittlere Schriftgröße (Variante B) gewählt.
+
+
+## Ergänzung — Schriftgewicht der Tageszahl
+- Die Tageszahl erhält **Variante B: Medium** – etwas kräftiger als normale Schrift, aber nicht fett. Die mittlere Schriftgröße und die Position oben mittig bleiben bestehen.
+- 2026-11-09: Schriftgewicht Medium (Variante B) gewählt.
