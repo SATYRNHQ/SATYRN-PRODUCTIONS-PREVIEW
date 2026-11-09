@@ -32,6 +32,9 @@ Planung begonnen. Die Monatsansicht und die Prioritätsdarstellung sind festgele
 - Samstage und Sonntage werden optisch exakt wie die übrigen Wochentage behandelt: keine abweichende Hintergrundfarbe und keine besondere Hervorhebung. Termine und Prioritäten werden unabhängig vom Wochentag gleich dargestellt.
 - Beim Öffnen der Calendar-Seite wird immer automatisch der **aktuelle Monat** angezeigt; ein zuvor manuell aufgerufener anderer Monat wird nicht als Startmonat beibehalten.
 
+## Bestätigte Entscheidungen — Schriftgröße normaler Termineinträge
+- Die Termintitel innerhalb der farbigen Balken verwenden **eine mittelgroße Schrift (Variante B)**: gut lesbar, aber weiterhin platzsparend.
+
 ## Bestätigte Entscheidungen — Optik normaler Termineinträge
 - Normale Termine werden in der Monatsansicht als **kompakte, leicht abgerundete farbige Balken** mit dem Termintitel dargestellt (Variante A).
 - Die Balkenfarbe richtet sich nach der jeweiligen Priorität des Termins und verwendet exakt das bereits festgelegte Farbsystem: **Dringend = Rot, Wichtig = Orange, Vorläufig = Blau, Unbefristet = Grün**.
