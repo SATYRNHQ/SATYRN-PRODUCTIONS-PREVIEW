@@ -327,3 +327,10 @@ The following search behaviors are intended as a shared standard for every page 
 - Keep this placement consistent for successful creation, editing, and deletion.
 
 - 2026-11-09: Confirmed a consistent bottom-right screen position for all Calendar success notifications.
+
+
+### Success notification icon
+- Each successful Calendar action notification includes a small, subtle **green checkmark** icon.
+- Keep the icon consistent for successful creation, editing, and deletion.
+
+- 2026-11-09: Confirmed a small green checkmark icon in all Calendar success notifications.
