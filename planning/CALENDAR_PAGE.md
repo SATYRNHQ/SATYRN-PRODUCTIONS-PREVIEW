@@ -334,3 +334,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Keep the icon consistent for successful creation, editing, and deletion.
 
 - 2026-11-09: Confirmed a small green checkmark icon in all Calendar success notifications.
+
+
+### Error notification appearance
+- Calendar error notifications use the same fixed **bottom-right** position as success notifications.
+- They use a subtle **red warning icon** instead of the green success checkmark.
+- Keep the visual style consistent with the success notifications while making the error state clearly distinguishable.
+
+- 2026-11-09: Confirmed that Calendar error notifications appear bottom-right with a subtle red warning icon.
