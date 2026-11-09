@@ -539,3 +539,9 @@ The following search behaviors are intended as a shared standard for every page 
 - Der Kreis hinter der heutigen Tageszahl verwendet die **jeweils aktive Akzentfarbe der SATYRN-Oberfläche**.
 - Die mittlere Kreisgröße und die exakt horizontale und vertikale Zentrierung der Tageszahl bleiben bestehen.
 - 2026-11-09: Verwendung der aktiven Akzentfarbe bestätigt.
+
+
+## Ergänzung — Heute-Markierung beim Monatswechsel
+- Der Heute-Kreis wird **nur dann angezeigt, wenn der heutige Tag im aktuell angezeigten Kalendermonat liegt**.
+- Beim Wechsel zu einem anderen Monat wird kein Heute-Kreis auf einem anderen Datum oder außerhalb des Monats angezeigt.
+- 2026-11-09: Bestätigt.
