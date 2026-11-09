@@ -378,3 +378,11 @@ The following search behaviors are intended as a shared standard for every page 
 - Keep the animation understated and consistent for both notification types; it must not delay the notification's message or automatic dismissal.
 
 - 2026-11-09: Confirmed subtle, short entrance and exit animations for Calendar success and error notifications.
+
+
+### Manually dismissing notifications
+- Every Calendar success and error notification includes a small **X** control so the user can dismiss it manually before its automatic timeout.
+- Manual dismissal removes only the selected notification and does not affect the others in the shared stack.
+- Automatic dismissal remains enabled (success: approximately 3 seconds; error: 5 seconds).
+
+- 2026-11-09: Confirmed manual dismissal via a small X for individual Calendar success and error notifications.
