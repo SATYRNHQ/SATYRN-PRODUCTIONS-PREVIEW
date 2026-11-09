@@ -470,3 +470,8 @@ The following search behaviors are intended as a shared standard for every page 
 ## Ergänzung — Rundung normaler Terminbalken
 - Normale Terminbalken erhalten **Variante A: leicht abgerundete Ecken**. Sie wirken dadurch weich, bleiben aber klar als kompakte Balken erkennbar.
 - 2026-11-09: Leichte Rundung (Variante A) für normale Terminbalken gewählt.
+
+
+## Ergänzung — Vertikaler Abstand zwischen normalen Terminbalken
+- Zwischen mehreren normalen Terminbalken gilt **Variante B: mittlerer vertikaler Abstand**. Die Einträge bleiben kompakt, sind aber klar voneinander getrennt.
+- 2026-11-09: Mittlerer vertikaler Abstand (Variante B) gewählt.
