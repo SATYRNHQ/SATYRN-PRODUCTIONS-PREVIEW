@@ -613,3 +613,9 @@ The following search behaviors are intended as a shared standard for every page 
 - Das geöffnete Tagesfenster kann zusätzlich mit der Escape-Taste geschlossen werden.
 - Das Schließen per Escape hebt die aktuelle Tagesauswahl ebenfalls auf.
 - 2026-11-09: Variante A bestätigt.
+
+
+## Ergänzung — Animation des Tagesfensters
+- Das Tagesfenster erhält beim Öffnen und Schließen eine **kleine, dezente Animation** mit sanftem Einblenden und leichtem Bewegungseffekt.
+- Die Animation bleibt kurz und unaufdringlich und beeinträchtigt nicht die Bedienbarkeit.
+- 2026-11-09: Variante A bestätigt.
